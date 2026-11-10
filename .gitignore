@@ -1,0 +1,20 @@
+# Bộ công cụ / skill của AI agent — không thuộc tài liệu dự án
+.agents/
+.claude/
+
+# File rác hệ điều hành / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+
+# Môi trường build / runtime
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
