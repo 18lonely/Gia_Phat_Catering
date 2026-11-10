@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+<!-- Version 0.2.0 · Draft · 2026-11-11
+Revision history: 0.1.0 BA: wireframe thực đơn; 0.2.0 BA: cost theo cơ sở,
+quyền xem, thiếu giá/VAT, cảnh báo/chặn. Dữ liệu toàn bộ là minh hoạ. -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe SCR-MENU-10: Soạn thực đơn tuần (Low-Fi)</title>
+<style>
+:root{--bg:#F8F9FA;--card:#FFFFFF;--border:#D1D5DB;--line:#E5E7EB;--text:#111827;--sub:#6B7280;--strong:#1E293B;--err:#B91C1C;--errb:#EF4444}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.45}
+button{font:inherit;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:6px;padding:7px 12px}
+button:hover:not(:disabled){border-color:var(--strong)}
+button:disabled{cursor:not-allowed;color:#9CA3AF;background:#F3F4F6}
+button.primary{background:var(--strong);color:#fff;border-color:var(--strong);font-weight:600}
+button.primary:disabled{background:#9CA3AF;border-color:#9CA3AF;color:#fff}
+.wfbar{background:#111827;color:#fff;padding:8px 16px;font-size:12.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.wfbar b{letter-spacing:.03em}
+.wfbar button{background:#1F2937;color:#fff;border-color:#374151;padding:4px 9px;font-size:12px}
+.wfbar button.on{background:#fff;color:#111827}
+.wfbar .sp{flex:1}
+header.app{background:#fff;border-bottom:1px solid var(--border);padding:10px 16px;display:flex;gap:16px;align-items:center}
+.logo{width:34px;height:34px;border:2px dashed #9CA3AF;border-radius:6px;background:var(--line);font-size:10px;color:var(--sub);display:flex;align-items:center;justify-content:center}
+nav.top{display:flex;gap:14px;font-size:13px;color:var(--sub);flex-wrap:wrap}
+nav.top .cur{color:var(--text);font-weight:700;border-bottom:2px solid var(--strong)}
+.offline{display:none;background:#fff;border-bottom:2px solid var(--strong);padding:8px 16px;font-weight:600}
+main{padding:16px;max-width:1500px;margin:0 auto}
+.crumb{font-size:12.5px;color:var(--sub);margin-bottom:6px}
+.titlebar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.titlebar h1{font-size:19px}
+.badge{display:inline-block;border:1.5px solid var(--strong);border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700}
+.badge.fill{background:var(--strong);color:#fff}
+.meta{color:var(--sub);font-size:13px}
+.titlebar .sp{flex:1}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px}
+.card h2{font-size:14px;padding:10px 12px;border-bottom:1px solid var(--line)}
+table.grid{width:100%;border-collapse:collapse;table-layout:fixed}
+table.grid th,table.grid td{border:1px solid var(--line);padding:6px;vertical-align:top}
+table.grid thead th{background:#F3F4F6;font-size:12.5px;text-align:left}
+table.grid thead th small{display:block;font-weight:400;color:var(--sub)}
+table.grid th.slot{width:92px;background:#F3F4F6;font-size:12.5px;text-align:left}
+.cell{min-height:58px;border:1px dashed var(--border);border-radius:6px;padding:5px 6px;cursor:pointer;background:#fff;font-size:12.5px;position:relative}
+.cell:hover{border-color:var(--strong)}
+.cell.filled{border-style:solid}
+.cell.empty{color:#9CA3AF;display:flex;align-items:center;justify-content:center}
+.cell .nm{font-weight:600;color:var(--text);padding-right:14px}
+.cell .tg{color:var(--sub);font-size:11px}
+.cell .x{position:absolute;top:2px;right:4px;border:none;background:none;padding:0 3px;color:var(--sub);font-size:14px}
+.cell.hl{outline:3px solid var(--strong);outline-offset:1px}
+.cell.bad{border-color:var(--errb)}
+.cell .df{display:inline-block;margin-top:3px;font-size:10.5px;border:1px solid var(--strong);border-radius:4px;padding:0 4px;font-weight:700}
+.dfrow td{background:#FAFAFA;font-size:12px}
+.dfrow select{width:100%;font:inherit;font-size:12px;padding:4px;border:1px solid var(--border);border-radius:5px;background:#fff}
+.dfrow select.miss{border-color:var(--errb)}
+.cost-tools{display:flex;gap:12px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--line);font-size:12px}
+.cost-tools label{display:flex;gap:5px;align-items:center}
+.cost-tools select{font:inherit;max-width:220px;padding:4px}
+.costrow td{font-size:12px;background:#fafafa;overflow-wrap:anywhere}
+.costrow strong{display:block}.costrow small{display:block;color:var(--sub)}
+.daytabs{display:none;gap:4px;padding:8px;border-bottom:1px solid var(--line);overflow-x:auto}
+.daytabs button{padding:5px 10px;font-size:12.5px;white-space:nowrap}
+.daytabs button.on{background:var(--strong);color:#fff;border-color:var(--strong)}
+.score{display:flex;align-items:baseline;gap:8px;padding:12px}
+.score .n{font-size:34px;font-weight:700}
+.score .of{color:var(--sub)}
+.sumline{padding:0 12px 10px;font-size:12.5px;color:var(--sub)}
+.vlist{list-style:none;max-height:52vh;overflow:auto}
+.vlist li{border-top:1px solid var(--line);padding:9px 12px;cursor:pointer;font-size:12.8px}
+.vlist li:hover,.vlist li.on{background:#F3F4F6}
+.vlist .code{font-family:Consolas,monospace;font-size:11.5px;color:var(--sub)}
+.vlist .typ{display:inline-block;font-size:10.5px;font-weight:700;border-radius:4px;padding:0 5px;margin-left:4px;border:1px solid var(--strong)}
+.vlist .typ.hard{background:var(--err);border-color:var(--err);color:#fff}
+.vlist .typ.s3{border-style:solid}.vlist .typ.s2,.vlist .typ.s1{border-style:dashed;font-weight:600}
+.vlist textarea{width:100%;margin-top:6px;font:inherit;font-size:12.5px;padding:6px;border:1px solid var(--border);border-radius:5px;min-height:44px}
+.vlist textarea.miss{border-color:var(--errb)}
+.vlist .hint{font-size:11.5px;color:var(--sub);margin-top:2px}
+.emptymsg{padding:22px 14px;color:var(--sub);text-align:center}
+.checking{display:none;padding:8px 12px;font-size:12.5px;border-bottom:1px solid var(--line);font-weight:600}
+.msg{display:none;margin-bottom:12px;border:1.5px solid var(--errb);background:#fff;border-radius:8px;padding:10px 12px;color:var(--err);font-size:13px}
+.msg.ok{border-color:var(--strong);color:var(--text)}
+.msg ul{margin:4px 0 0 18px}
+.note{margin-top:14px;font-size:12px;color:var(--sub);border:1px dashed var(--border);border-radius:8px;padding:10px 12px;background:#fff}
+.note b{color:var(--text)}
+.note code{font-family:Consolas,monospace;font-size:11.5px}
+dialog{border:2px solid var(--strong);border-radius:10px;padding:0;width:min(680px,94vw);max-height:86vh;margin:auto}
+dialog::backdrop{background:rgba(17,24,39,.45)}
+.dhd{display:flex;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.dhd h3{font-size:15px;flex:1}
+.dbd{padding:12px 14px}
+.dbd input[type=search]{width:100%;padding:9px 10px;border:1px solid var(--border);border-radius:6px;font:inherit;margin-bottom:10px}
+.plist{list-style:none;max-height:52vh;overflow:auto;border:1px solid var(--line);border-radius:6px}
+.plist li{padding:9px 10px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;gap:10px;align-items:flex-start}
+.plist li:last-child{border-bottom:none}
+.plist li:hover{background:#F3F4F6}
+.plist li.dis{color:#9CA3AF;cursor:not-allowed;background:#FAFAFA}
+.plist .pn{font-weight:600;flex:1}
+.plist .pt{font-size:11.5px;color:var(--sub)}
+.plist .pp{font-size:12px;white-space:nowrap}
+.plist .used{font-size:11px;border:1px dashed var(--border);border-radius:4px;padding:0 4px;margin-left:4px}
+body.ro .cell{cursor:default}.body-ro-hide{}
+body.ro .cell .x,body.ro .dfrow select{pointer-events:none}
+body.off .cell,body.off .dfrow select{pointer-events:none;opacity:.55}
+@media (max-width:1100px){.layout{grid-template-columns:minmax(0,1fr)}.layout>.card{min-width:0}}
+@media (max-width:768px){
+ .daytabs{display:flex}
+ table.grid thead{display:none}
+ table.grid th.slot{width:84px}
+ table.grid td[data-d]{display:none}
+ table.grid td[data-d].show{display:table-cell}
+ .vlist{max-height:none}
+}
+</style>
+</head>
+<body>
+
+<div class="wfbar" role="note">
+ <b>WIREFRAME · SCR-MENU-10</b><span>Soạn thực đơn tuần — dữ liệu và con số quy tắc là <u>minh họa</u></span>
+ <span class="sp"></span><span>Xem trạng thái:</span>
+ <button data-st="normal" class="on">Bình thường</button>
+ <button data-st="empty">Rỗng</button>
+ <button data-st="checking">Đang kiểm</button>
+ <button data-st="offline">Mất kết nối</button>
+ <button data-st="reset">Nạp lại mẫu</button>
+</div>
+
+<header class="app">
+ <div class="logo">LOGO</div>
+ <nav class="top" aria-label="Điều hướng chính">
+  <span>Nguyên liệu</span><span>Món</span><span>Loại suất</span><span class="cur">Thực đơn</span><span>Chờ duyệt</span><span>Quy tắc</span><span>Nhập bảng tính</span>
+ </nav>
+</header>
+<div class="offline" id="offline" role="status">Mất kết nối. Các thay đổi chưa gửi được; hệ thống sẽ tự thử lại khi có mạng.</div>
+
+<main>
+ <div class="crumb">Thực đơn › Suất 40.000đ › Tuần 16/11/2026</div>
+ <section class="titlebar">
+  <h1>Thực đơn tuần 16/11 – 21/11/2026</h1>
+  <span class="badge" id="stBadge">NHÁP</span>
+  <span class="meta">Loại suất: <b>Suất 40.000đ</b> · 3 món chính (chọn 1) · 2 món phụ · rau · canh</span>
+  <span class="sp"></span>
+  <button id="btnCopy" title="FR-MENU-MNU-005">Sao chép từ tuần khác</button>
+  <button id="btnCancel" title="FR-MENU-MNU-009">Huỷ thực đơn</button>
+  <button class="primary" id="btnSubmit" title="FR-MENU-APV-001">Gửi duyệt</button>
+ </section>
+
+ <div class="msg" id="msg" role="alert"></div>
+
+ <section class="cost-tools card" aria-label="Mô phỏng cost">
+  <label>Cơ sở <select id="costKitchen"><option value="A">Hoàng Đạo Thành</option><option value="B">Phúc Diễn</option></select></label>
+  <label>Kiểm cost <select id="costMode"><option value="CANH_BAO">Chỉ cảnh báo</option><option value="CHAN">Chặn vượt ngưỡng</option></select></label>
+  <label>Quyền (mô phỏng) <select id="costPermission"><option value="yes">Có quyền xem cost</option><option value="no">Không xem con số cost</option></select></label>
+  <label>Dữ liệu (mô phỏng) <select id="costScenario"><option value="ready">Đủ giá · VAT mẫu 8%</option><option value="missing">Thiếu giá T3</option><option value="vat">Chưa cấu hình VAT</option></select></label>
+ </section>
+ <p class="meta" style="margin:8px 0">Cost minh họa theo món chính đắt nhất; kiểm cả hai cơ sở. Đổi cơ sở để xem chi tiết.</p>
+ <div class="layout">
+  <section class="card" aria-label="Lưới thực đơn">
+   <div class="daytabs" id="daytabs"></div>
+   <table class="grid" id="grid"></table>
+  </section>
+
+  <aside class="card" aria-label="Bảng kiểm quy tắc">
+   <h2>Bảng kiểm quy tắc</h2>
+   <div class="checking" id="checking">Đang kiểm… (kết quả cũ hiển thị mờ)</div>
+   <div id="panel">
+    <div class="score"><span class="n" id="score">100</span><span class="of">/ 100 điểm</span></div>
+    <div class="sumline" id="sumline"></div>
+    <ul class="vlist" id="vlist"></ul>
+   </div>
+  </aside>
+ </div>
+
+ <div class="note">
+  <b>Ghi chú wireframe.</b> Bấm một ô để chọn món (<code>SCR-MENU-11</code>). Bấm một vi phạm để tô sáng ngày và món liên quan. Vi phạm mềm mức nặng cần lý do từ 10 ký tự mới gửi duyệt được.
+  Tham chiếu: <code>UC-MENU-007</code>, <code>008</code>, <code>009</code> · <code>FR-MENU-MNU-002</code>, <code>003</code>, <code>004</code> · <code>FR-MENU-RUL-001</code>, <code>003</code>, <code>004</code> · <code>FR-MENU-APV-001</code>.<br>
+  <b>Cost v0.2.0:</b> dòng cost theo từng cơ sở cập nhật khi đổi món; kiểm cả hai cơ sở khi gửi duyệt. Giá cost giả lập độc lập với giá bán, VAT 8% chỉ là dữ liệu thử. Chưa kết nối giá nhập/công thức thật, không thay quyết định O-01. Trạng thái thiếu giá/VAT luôn chặn; vượt ngưỡng chỉ chặn ở chế độ CHAN. Nút đổi quyền chỉ mô phỏng trình bày; hệ thống thật phải lọc dữ liệu tại API theo <code>NFR-COST-005</code>.<br>
+  <b>Minh họa, chưa duyệt:</b> danh sách món, giá bán, và con số của 14 quy tắc mẫu (chờ DL-01). Số cột ngày chờ <code>E2-Q3</code>. Cách kiểm ngưỡng giá chờ <code>E2-Q1</code>. Bố cục ưu tiên máy tính; dưới 768 px chuyển sang xem từng ngày.
+ </div>
+</main>
+
+<dialog id="picker" aria-labelledby="pkTitle">
+ <div class="dhd"><h3 id="pkTitle">Chọn món</h3><button id="pkClose">Đóng ✕</button></div>
+ <div class="dbd">
+  <input type="search" id="pkSearch" placeholder="Tìm theo tên món…" aria-label="Tìm món">
+  <ul class="plist" id="pkList"></ul>
+  <div class="emptymsg" id="pkEmpty" style="display:none">Chưa có món đang dùng cho vị trí này. <u>Tạo món</u></div>
+ </div>
+</dialog>
+
+<script>
+'use strict';
+/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+const DAYS=[['T2','16/11'],['T3','17/11'],['T4','18/11'],['T5','19/11'],['T6','20/11'],['T7','21/11']];
+const SLOTS=[['M1','Món chính 1','MAIN'],['M2','Món chính 2','MAIN'],['M3','Món chính 3','MAIN'],['S1','Món phụ 1','SIDE'],['S2','Món phụ 2','SIDE'],['V','Rau','VEG'],['C','Canh','SOUP']];
+const CAP=40000;
+// id, tên, vai trò, nhóm NL chính, phương pháp, healthy, chua, giá bán (minh họa), 4 tuần gần nhất
+const D=[
+ ['m01','Thịt kho trứng cút','MAIN','Lợn','Kho',0,0,22000,'T3 02/11'],
+ ['m02','Thịt rang tôm','MAIN','Lợn','Rang',0,0,22000,''],
+ ['m03','Sườn sốt chua ngọt','MAIN','Sườn','Sốt',0,1,24000,'T5 05/11'],
+ ['m04','Bò sốt vang','MAIN','Bò','Sốt',0,0,24000,''],
+ ['m05','Bò xào','MAIN','Bò','Xào',0,0,24000,'T2 09/11'],
+ ['m06','Ếch chiên','MAIN','Ếch','Chiên',0,0,23000,''],
+ ['m07','Cá kho','MAIN','Cá','Kho',0,0,22000,'T4 11/11'],
+ ['m08','Cá rán','MAIN','Cá','Chiên',0,0,22000,''],
+ ['m09','Cá sốt cà chua','MAIN','Cá','Sốt',0,1,22000,''],
+ ['m10','Gà kho gừng','MAIN','Gà','Kho',0,0,23000,'T6 13/11'],
+ ['m11','Gà rán','MAIN','Gà','Chiên',0,0,22000,''],
+ ['m12','Gà luộc','MAIN','Gà','Luộc',1,0,23000,'T2 02/11'],
+ ['m13','Thịt lợn luộc','MAIN','Lợn','Luộc',1,0,21000,'T3 10/11'],
+ ['m14','Cá hấp','MAIN','Cá','Hấp',1,0,22000,''],
+ ['m15','Tôm luộc','MAIN','Tôm','Luộc',1,0,24000,''],
+ ['m16','Đậu sốt cà chua','MAIN','Đậu','Sốt',0,1,18000,''],
+ ['s01','Đậu rán','SIDE','Đậu','Chiên',0,0,5000,'T2 09/11'],
+ ['s02','Trứng cuộn','SIDE','Trứng','Chiên',0,0,5000,''],
+ ['s03','Trứng đúc thịt','SIDE','Trứng','Chiên',0,0,5000,''],
+ ['s04','Lạc rang','SIDE','Khác','Rang',0,0,4000,'T4 04/11'],
+ ['s05','Cá cơm rang','SIDE','Cá','Rang',0,0,5000,''],
+ ['s06','Giò lụa','SIDE','Giò chả','Luộc',0,0,7000,''],
+ ['s07','Khoai tây xào thịt','SIDE','Củ quả','Xào',0,0,5000,''],
+ ['s08','Su su xào thịt','SIDE','Củ quả','Xào',0,0,6000,''],
+ ['s09','Nem rán','SIDE','Lợn','Chiên',0,0,6000,''],
+ ['s10','Nộm','SIDE','Khác','Trộn',0,1,5000,''],
+ ['s11','Dưa chua','SIDE','Khác','Muối',0,1,3000,''],
+ ['v01','Bắp cải luộc','VEG','Rau','Luộc',0,0,3000,'T2 09/11'],
+ ['v02','Cải thảo luộc','VEG','Rau','Luộc',0,0,3000,''],
+ ['v03','Rau muống luộc','VEG','Rau','Luộc',0,0,3000,'T5 12/11'],
+ ['v04','Đậu đũa xào','VEG','Rau','Xào',0,0,3500,''],
+ ['v05','Cải chíp luộc','VEG','Rau','Luộc',0,0,3000,''],
+ ['v06','Củ quả luộc','VEG','Rau','Luộc',0,0,3000,''],
+ ['c01','Canh chua','SOUP','Rau','Nấu',0,1,3000,''],
+ ['c02','Canh rau cải','SOUP','Rau','Nấu',0,0,2500,'T3 10/11'],
+ ['c03','Canh bí','SOUP','Rau','Nấu',0,0,2500,''],
+ ['c04','Canh mồng tơi','SOUP','Rau','Nấu',0,0,2500,''],
+ ['c05','Canh cà chua trứng','SOUP','Trứng','Nấu',0,1,3000,''],
+ ['c06','Canh khoai','SOUP','Củ quả','Nấu',0,0,2500,'']
+].map(a=>({id:a[0],name:a[1],role:a[2],grp:a[3],mth:a[4],healthy:!!a[5],sour:!!a[6],price:a[7],used:a[8]}));
+const BY={};D.forEach(d=>BY[d.id]=d);
+const CONFLICT=[['s09','s10']];
+const SAMPLE={
+ T2:{M1:'m01',M2:'m07',M3:'m12',S1:'s01',S2:'s04',V:'v01',C:'c02',def:'m01'},
+ T3:{M1:'m02',M2:'m11',M3:'m14',S1:'s02',S2:'s07',V:'v03',C:'c03',def:'m02'},
+ T4:{M1:'m13',M2:'m05',M3:'m08',S1:'s09',S2:'s10',V:'v02',C:'c01',def:'m05'},
+ T5:{M1:'m04',M2:'m06',M3:'m15',S1:'s05',S2:'s03',V:'v01',C:'c04',def:'m04'},
+ T6:{M1:'m09',M2:'m10',M3:'m13',S1:'s06',S2:'s11',V:'v05',C:'c05',def:''},
+ T7:{M1:'m03',M2:'',M3:'',S1:'',S2:'',V:'',C:'',def:''}
+};
+let menu, waiver={}, readOnly=false, curDay='T2', pick=null, lastRes=[];
+const $=id=>document.getElementById(id);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const fmt=n=>n.toLocaleString('vi-VN')+'đ';
+
+/* Cost giả lập: số nguyên đồng độc lập giá bán; không phải engine cost production. */
+const COST_DEMO={};
+D.forEach((x,i)=>COST_DEMO[x.id]=({MAIN:8000,SIDE:2100,VEG:1200,SOUP:900}[x.role])+(i%4)*600);
+const canReadCost=()=>$('costPermission').value==='yes';
+function dayCost(day,kitchen){
+ const selected=SLOTS.map(s=>BY[menu[day][s[0]]]).filter(Boolean);
+ if(!selected.length)return {state:'EMPTY'};
+ if($('costScenario').value==='vat')return {state:'VAT'};
+ if($('costScenario').value==='missing'&&day==='T3')return {state:'MISSING'};
+ const main=selected.filter(x=>x.role==='MAIN'),other=selected.filter(x=>x.role!=='MAIN');
+ const unit=x=>COST_DEMO[x.id]+(kitchen==='B'?700:0);
+ const value=(main.length?Math.max(...main.map(unit)):0)+other.reduce((a,x)=>a+unit(x),0)+1500;
+ // basis points = cost / (40000 / 1.08) * 10000; half-up bằng số nguyên BigInt.
+ const numerator=BigInt(value)*10800n, denominator=40000n;
+ const bp=Number((2n*numerator+denominator)/(2n*denominator));
+ return {state:selected.length===SLOTS.length?'READY':'PARTIAL',bp,value,over:bp>5200};
+}
+function costCell(day){
+ const result=dayCost(day,$('costKitchen').value);
+ const label={EMPTY:'Chưa xếp món',VAT:'Chưa cấu hình VAT',MISSING:'Thiếu giá'}[result.state];
+ if(label)return `<strong>${label}</strong><small>Chưa xác định</small>`;
+ const number=canReadCost()?`${(result.bp/100).toLocaleString('vi-VN',{minimumFractionDigits:2,maximumFractionDigits:2})}% · `:'';
+ if(result.state==='PARTIAL')return `<strong>${number}Chưa đủ món</strong><small>Cost phần đã xếp; chưa kết luận đạt</small>`;
+ return `<strong>${number}${result.over?'Vượt ngân sách':'Đạt'}</strong><small>${result.over?($('costMode').value==='CHAN'?'Chặn gửi duyệt':'Chỉ cảnh báo'):'Trong ngân sách'}</small>`;
+}
+
+/* ====== BỘ KIỂM (14 quy tắc mẫu; con số minh họa, chờ DL-01) ====== */
+function check(){
+ const R=[];const add=(code,name,type,pen,day,cells,detail)=>R.push({code,name,type,pen,day,cells,detail,key:code+'|'+(day||'W')});
+ const dishes=(d,role)=>SLOTS.filter(s=>!role||s[2]===role).map(s=>[s[0],BY[menu[d][s[0]]]]).filter(x=>x[1]);
+ DAYS.forEach(([d])=>{
+  const all=dishes(d),mains=dishes(d,'MAIN'),sides=dishes(d,'SIDE');
+  if(!all.length)return;
+  const cs=a=>a.map(x=>d+':'+x[0]);
+  if(mains.length!==3)add('BR-MENU-001','Đủ 3 món chính','HARD',0,d,['M1','M2','M3'].map(s=>d+':'+s),`${d}: có ${mains.length}/3 món chính`);
+  const h=mains.filter(x=>x[1].healthy);
+  if(mains.length===3&&h.length!==1)add('BR-MENU-002','Đúng 1 món chính Healthy','HARD',0,d,cs(mains),`${d}: có ${h.length} món Healthy (cần đúng 1)`);
+  if(!menu[d].V||!menu[d].C)add('BR-MENU-004','Đủ rau và canh','HARD',0,d,[d+':V',d+':C'],`${d}: thiếu ${!menu[d].V?'rau':''}${!menu[d].V&&!menu[d].C?' và ':''}${!menu[d].C?'canh':''}`);
+  if(sides.length!==2)add('BR-MENU-005','Đủ 2 món phụ','HARD',0,d,[d+':S1',d+':S2'],`${d}: có ${sides.length}/2 món phụ`);
+  const g={};mains.forEach(x=>(g[x[1].grp]=g[x[1].grp]||[]).push(x));
+  Object.keys(g).filter(k=>g[k].length>1).forEach(k=>add('BR-MENU-010','Món chính không trùng nhóm nguyên liệu','HARD',0,d,cs(g[k]),`${d}: ${g[k].map(x=>x[1].name).join(', ')} cùng nhóm ${k}`));
+  const nh=mains.filter(x=>!x[1].healthy),m={};nh.forEach(x=>(m[x[1].mth]=m[x[1].mth]||[]).push(x));
+  Object.keys(m).filter(k=>m[k].length>1).forEach(k=>add('BR-MENU-020','2 món chính không cùng phương pháp','SOFT',3,d,cs(m[k]),`${d}: ${m[k].map(x=>x[1].name).join(', ')} cùng ${k.toLowerCase()}`));
+  const fs=sides.filter(x=>x[1].mth==='Chiên');
+  if(fs.length>1)add('BR-MENU-021','Tối đa 1 món phụ chiên','SOFT',3,d,cs(fs),`${d}: ${fs.length} món phụ chiên (giới hạn 1)`);
+  const fa=all.filter(x=>x[1].mth==='Chiên');
+  if(fa.length>2)add('BR-MENU-022','Tối đa 2 món chiên trong ngày','SOFT',3,d,cs(fa),`${d}: ${fa.length} món chiên (giới hạn 2)`);
+  const so=all.filter(x=>x[1].sour);
+  if(so.length>1)add('BR-MENU-030','Tối đa 1 món vị chua','SOFT',3,d,cs(so),`${d}: ${so.map(x=>x[1].name).join(', ')} cùng vị chua (giới hạn 1)`);
+  CONFLICT.forEach(([a,b])=>{const xa=all.find(x=>x[1].id===a),xb=all.find(x=>x[1].id===b);if(xa&&xb)add('BR-MENU-034','Không xếp cặp món kỵ nhau','HARD',0,d,cs([xa,xb]),`${d}: ${xa[1].name} và ${xb[1].name} không xếp cùng ngày`);});
+  const rest=all.filter(x=>x[1].role!=='MAIN').reduce((s,x)=>s+x[1].price,0);
+  mains.filter(x=>x[1].price+rest>CAP).forEach(x=>add('BR-COST-012','Giá suất không vượt ngưỡng','HARD',0,d,[d+':'+x[0]],`${d}: chọn ${x[1].name} thì suất ${fmt(x[1].price+rest)}, vượt ${fmt(x[1].price+rest-CAP)}`));
+ });
+ // Kiểm cost cả hai cơ sở; người không có quyền không thấy số trong bảng kiểm.
+ DAYS.forEach(([d])=>{
+  const results=['A','B'].map(k=>dayCost(d,k));
+  if(results.some(r=>['VAT','MISSING'].includes(r.state))){
+   add('COST-INPUT','Chưa đủ dữ liệu cost','HARD',0,d,[],`${d}: thiếu giá hoặc chưa cấu hình VAT`);
+  }else if(results.some(r=>r.state==='READY'&&r.over)){
+   add('BR-COST-001','Cost vượt ngân sách',$('costMode').value==='CHAN'?'HARD':'SOFT',0,d,[],`${d}: vượt ngân sách ở ít nhất một cơ sở`);
+  }
+ });
+ // cấp tuần
+ const seq=DAYS.map(([d])=>new Set(SLOTS.filter(s=>s[2]==='MAIN').map(s=>BY[menu[d][s[0]]]).filter(Boolean).map(x=>x.grp)));
+ const groups=new Set();seq.forEach(s=>s.forEach(g=>groups.add(g)));
+ groups.forEach(g=>{let run=[];const flush=()=>{if(run.length>2){const cells=[];run.forEach(d=>SLOTS.filter(s=>s[2]==='MAIN').forEach(s=>{const x=BY[menu[d][s[0]]];if(x&&x.grp===g)cells.push(d+':'+s[0]);}));add('BR-MENU-012','Nhóm nguyên liệu không quá 2 ngày liền','SOFT',3,null,cells,`${g} ở món chính ${run.length} ngày liền (${run.join(', ')}) · giới hạn 2`);}run=[];};
+  DAYS.forEach(([d],i)=>{if(seq[i].has(g))run.push(d);else flush();});flush();});
+ const cnt={};DAYS.forEach(([d])=>SLOTS.forEach(s=>{const x=BY[menu[d][s[0]]];if(x&&(x.role==='MAIN'||x.role==='SIDE'))(cnt[x.id]=cnt[x.id]||[]).push(d+':'+s[0]);}));
+ Object.keys(cnt).filter(k=>BY[k].role==='MAIN'&&cnt[k].length>1).forEach(k=>add('BR-MENU-013','Món không lặp trong tuần','SOFT',3,null,cnt[k],`${BY[k].name} xuất hiện ${cnt[k].length} lần (${cnt[k].map(c=>c.split(':')[0]).join(', ')}) · giới hạn 1`));
+ [['V','BR-MENU-016','Rau'],['C','BR-MENU-017','Canh']].forEach(([s,code,lb])=>{for(let i=0;i<DAYS.length;i++)for(let j=i+1;j<Math.min(i+2,DAYS.length);j++){const a=menu[DAYS[i][0]][s],b=menu[DAYS[j][0]][s];if(a&&a===b)add(code,lb+' không lặp ngày liền kề','SOFT',2,null,[DAYS[i][0]+':'+s,DAYS[j][0]+':'+s],`${BY[a].name} lặp ${DAYS[i][0]} và ${DAYS[j][0]}`);}});
+ const filledDays=DAYS.filter(([d])=>SLOTS.some(s=>menu[d][s[0]])).length;
+ if(filledDays>=4&&groups.size<4)add('BR-MENU-015','Tối thiểu 4 nhóm nguyên liệu ở món chính','SOFT',2,null,[],`Tuần mới có ${groups.size} nhóm: ${[...groups].join(', ')}`);
+ return R;
+}
+
+/* ====== HIỂN THỊ ====== */
+function renderGrid(){
+ let h='<thead><tr><th class="slot">Vị trí</th>'+DAYS.map(([d,dt])=>`<th>${d}<small>${dt}</small></th>`).join('')+'</tr></thead><tbody>';
+ SLOTS.forEach(([s,lb])=>{h+=`<tr><th class="slot" scope="row">${lb}</th>`+DAYS.map(([d])=>{const x=BY[menu[d][s]];const isDef=x&&menu[d].def===x.id;
+  return `<td data-d="${d}"${d===curDay?' class="show"':''}><div class="cell ${x?'filled':'empty'}" data-c="${d}:${s}" tabindex="0" role="button" aria-label="${lb} ${d}">${x?`<div class="nm">${x.name}</div><div class="tg">${x.grp} · ${x.mth}${x.healthy?' · Healthy':''}${x.sour?' · chua':''}</div>${isDef?'<span class="df">MẶC ĐỊNH</span>':''}${readOnly?'':'<button class="x" data-x="1" aria-label="Bỏ món">×</button>'}`:'+ Chọn món'}</div></td>`;}).join('')+'</tr>';});
+ h+='<tr class="dfrow"><th class="slot" scope="row">Món mặc định</th>'+DAYS.map(([d])=>{const mains=SLOTS.filter(s=>s[2]==='MAIN').map(s=>BY[menu[d][s[0]]]).filter(Boolean);
+  return `<td data-d="${d}"${d===curDay?' class="show"':''}><select data-def="${d}" aria-label="Món mặc định ${d}"${readOnly?' disabled':''} class="${mains.length&&!menu[d].def?'miss':''}"><option value="">— chưa chọn —</option>${mains.map(x=>`<option value="${x.id}"${menu[d].def===x.id?' selected':''}>${x.name}</option>`).join('')}</select></td>`;}).join('')+'</tr>';
+ h+='<tr class="costrow"><th class="slot" scope="row">Cost / suất</th>'+DAYS.map(([d])=>`<td data-d="${d}"${d===curDay?' class="show"':''}>${costCell(d)}</td>`).join('')+'</tr></tbody>';
+ $('grid').innerHTML=h;
+ $('daytabs').innerHTML=DAYS.map(([d,dt])=>`<button data-day="${d}" class="${d===curDay?'on':''}">${d} ${dt}</button>`).join('');
+}
+function renderPanel(){
+ lastRes=check();
+ const hard=lastRes.filter(r=>r.type==='HARD'),soft=lastRes.filter(r=>r.type==='SOFT');
+ const score=Math.max(0,100-soft.reduce((s,r)=>s+r.pen,0));
+ $('score').textContent=score;
+ const any=DAYS.some(([d])=>SLOTS.some(s=>menu[d][s[0]]));
+ if(!any){$('sumline').textContent='';$('vlist').innerHTML='<li class="emptymsg" style="cursor:default">Xếp món để bắt đầu kiểm.</li>';}
+ else{
+  $('sumline').textContent=`${hard.length} vi phạm bắt buộc · ${soft.length} cảnh báo`+(score<80?' · điểm dưới 80: cần 2 người duyệt':'');
+  $('vlist').innerHTML=lastRes.length?[...hard,...soft].map(r=>`<li data-k="${r.key}"><span class="code">${r.code}</span><span class="typ ${r.type==='HARD'?'hard':'s'+r.pen}">${r.type==='HARD'?'BẮT BUỘC':(r.pen?'CẢNH BÁO −'+r.pen:'CẢNH BÁO')}</span><div><b>${r.name}</b></div><div>${r.detail}</div>${r.type==='SOFT'&&r.pen===3?`<textarea data-w="${r.key}" placeholder="Lý do chấp nhận (từ 10 ký tự) — hoặc đổi món"${readOnly?' disabled':''}>${waiver[r.key]||''}</textarea><div class="hint">Cảnh báo mức nặng cần lý do mới gửi duyệt được (BR-MNU-006)</div>`:''}</li>`).join(''):'<li class="emptymsg" style="cursor:default">Không có vi phạm.</li>';
+ }
+ Object.keys(waiver).forEach(k=>{if(!lastRes.some(r=>r.key===k))delete waiver[k];}); // UC-MENU-008 9a
+ document.querySelectorAll('.cell').forEach(c=>c.classList.remove('bad','hl'));
+ hard.forEach(r=>r.cells.forEach(c=>{const e=document.querySelector(`.cell[data-c="${c}"]`);if(e)e.classList.add('bad');}));
+ updateStatus();
+}
+function complete(){return DAYS.every(([d])=>SLOTS.every(s=>menu[d][s[0]])&&menu[d].def);}
+function updateStatus(){
+ if(readOnly)return;
+ const ok=complete()&&!lastRes.some(r=>r.type==='HARD');
+ $('stBadge').textContent=ok?'ĐÃ KIỂM':'NHÁP';$('stBadge').classList.toggle('fill',ok);
+}
+function render(){renderGrid();renderPanel();}
+function showMsg(html,ok){const m=$('msg');m.className='msg'+(ok?' ok':'');m.innerHTML=html;m.style.display=html?'block':'none';}
+
+/* ====== TƯƠNG TÁC ====== */
+['costKitchen','costMode','costPermission','costScenario'].forEach(id=>$(id).addEventListener('change',()=>{showMsg('');render();}));
+$('grid').addEventListener('click',e=>{
+ if(readOnly||document.body.classList.contains('off'))return;
+ const cell=e.target.closest('.cell');if(!cell)return;
+ const [d,s]=cell.dataset.c.split(':');
+ if(e.target.dataset.x){if(menu[d].def===menu[d][s])menu[d].def='';menu[d][s]='';showMsg('');render();return;}
+ openPicker(d,s);
+});
+$('grid').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.classList.contains('cell'))e.target.click();});
+$('grid').addEventListener('change',e=>{const d=e.target.dataset.def;if(!d)return;menu[d].def=e.target.value;render();});
+$('daytabs').addEventListener('click',e=>{const d=e.target.dataset.day;if(!d)return;curDay=d;renderGrid();renderPanel();});
+$('vlist').addEventListener('click',e=>{
+ if(e.target.tagName==='TEXTAREA')return;
+ const li=e.target.closest('li[data-k]');if(!li)return;
+ document.querySelectorAll('.vlist li').forEach(x=>x.classList.remove('on'));li.classList.add('on');
+ document.querySelectorAll('.cell').forEach(c=>c.classList.remove('hl'));
+ const r=lastRes.find(x=>x.key===li.dataset.k);if(!r)return;
+ r.cells.forEach(c=>{const el=document.querySelector(`.cell[data-c="${c}"]`);if(el)el.classList.add('hl');});
+ if(r.cells.length){const d=r.cells[0].split(':')[0];if(d!==curDay&&window.innerWidth<=768){curDay=d;renderGrid();renderPanel();document.querySelector(`.vlist li[data-k="${r.key}"]`)?.click();}}
+});
+$('vlist').addEventListener('input',e=>{const k=e.target.dataset.w;if(k){waiver[k]=e.target.value;e.target.classList.remove('miss');}});
+
+function openPicker(d,s){
+ pick={d,s};const slot=SLOTS.find(x=>x[0]===s);
+ $('pkTitle').textContent=`Chọn ${slot[1].toLowerCase()} — ${d}`;$('pkSearch').value='';fillPicker();$('picker').showModal();$('pkSearch').focus();
+}
+function fillPicker(){
+ const slot=SLOTS.find(x=>x[0]===pick.s),q=$('pkSearch').value.trim().toLowerCase();
+ const inDay=new Set(SLOTS.map(x=>menu[pick.d][x[0]]).filter(Boolean));
+ const list=D.filter(x=>x.role===slot[2]&&(!q||x.name.toLowerCase().includes(q)));
+ $('pkList').innerHTML=list.map(x=>{const dis=inDay.has(x.id)&&menu[pick.d][pick.s]!==x.id;
+  return `<li data-id="${x.id}" class="${dis?'dis':''}"><div class="pn">${x.name}${dis?' <span class="used">đã có trong ngày</span>':''}<div class="pt">${x.grp} · ${x.mth}${x.healthy?' · Healthy':''}${x.sour?' · vị chua':''}${x.used?' · đã dùng: '+x.used:' · chưa dùng 4 tuần gần nhất'}</div></div><div class="pp">${fmt(x.price)}</div></li>`;}).join('');
+ $('pkList').style.display=list.length?'block':'none';$('pkEmpty').style.display=list.length?'none':'block';
+}
+$('pkSearch').addEventListener('input',fillPicker);
+$('pkList').addEventListener('click',e=>{const li=e.target.closest('li');if(!li||li.classList.contains('dis'))return;
+ const old=menu[pick.d][pick.s];if(old&&menu[pick.d].def===old)menu[pick.d].def='';
+ menu[pick.d][pick.s]=li.dataset.id;$('picker').close();showMsg('');render();});
+$('pkClose').addEventListener('click',()=>$('picker').close());
+
+$('btnSubmit').addEventListener('click',()=>{
+ if(readOnly)return;renderPanel();const errs=[];
+ const emptyCells=[],noDef=[];
+ DAYS.forEach(([d])=>{SLOTS.forEach(s=>{if(!menu[d][s[0]])emptyCells.push(d+' · '+s[1]);});if(!menu[d].def)noDef.push(d);});
+ if(emptyCells.length||noDef.length)errs.push(`<b>ERR-MENU-422-17</b> Thực đơn chưa đủ:<ul>${emptyCells.length?`<li>${emptyCells.length} ô chưa có món: ${emptyCells.slice(0,6).join('; ')}${emptyCells.length>6?'…':''}</li>`:''}${noDef.length?`<li>Chưa có món mặc định: ${noDef.join(', ')}</li>`:''}</ul>`);
+ const hard=lastRes.filter(r=>r.type==='HARD'&&!['BR-MENU-001','BR-MENU-004','BR-MENU-005'].includes(r.code));
+ if(hard.length)errs.push(`<b>ERR-MENU-422-18</b> Thực đơn còn ${hard.length} vi phạm quy tắc bắt buộc.`);
+ const need=lastRes.filter(r=>r.type==='SOFT'&&r.pen===3&&(waiver[r.key]||'').trim().length<10);
+ if(need.length){errs.push(`<b>ERR-MENU-422-19</b> Cần ghi lý do cho ${need.length} cảnh báo mức nặng.`);need.forEach(r=>document.querySelector(`textarea[data-w="${r.key}"]`)?.classList.add('miss'));}
+ if(errs.length){showMsg(errs.join('<br>'));window.scrollTo({top:0,behavior:'smooth'});return;}
+ const score=+$('score').textContent,n=score<80?2:1;
+ readOnly=true;document.body.classList.add('ro');
+ $('stBadge').textContent=`CHỜ DUYỆT 0/${n}`;$('stBadge').classList.add('fill');
+ ['btnSubmit','btnCopy','btnCancel'].forEach(b=>$(b).disabled=true);
+ render();showMsg(`Đã gửi duyệt. Thực đơn chuyển sang chỉ đọc (<code>SCR-MENU-12</code>); cần ${n} người duyệt. Người duyệt đã nhận thông báo.`,true);
+});
+$('btnCopy').addEventListener('click',()=>showMsg('Wireframe: mở hộp chọn thực đơn nguồn và tuần đích (FR-MENU-MNU-005, ưu tiên P1).',true));
+$('btnCancel').addEventListener('click',()=>showMsg('Wireframe: mở hộp nhập lý do huỷ, từ 10 ký tự (FR-MENU-MNU-009).',true));
+
+/* ====== BỘ CHUYỂN TRẠNG THÁI (chỉ có ở wireframe) ====== */
+function reset(empty){
+ menu=clone(SAMPLE);if(empty)DAYS.forEach(([d])=>{SLOTS.forEach(s=>menu[d][s[0]]='');menu[d].def='';});
+ waiver={};readOnly=false;document.body.classList.remove('ro','off');
+ ['btnSubmit','btnCopy','btnCancel'].forEach(b=>$(b).disabled=false);
+ $('offline').style.display='none';$('checking').style.display='none';$('panel').style.opacity=1;showMsg('');render();
+}
+document.querySelector('.wfbar').addEventListener('click',e=>{
+ const st=e.target.dataset.st;if(!st)return;
+ document.querySelectorAll('.wfbar button').forEach(b=>b.classList.toggle('on',b===e.target&&st!=='reset'));
+ if(st==='reset'||st==='normal'){reset(false);document.querySelector('.wfbar button[data-st=normal]').classList.add('on');}
+ else if(st==='empty')reset(true);
+ else if(st==='checking'){reset(false);$('checking').style.display='block';$('panel').style.opacity=.4;$('btnSubmit').disabled=true;}
+ else if(st==='offline'){reset(false);$('offline').style.display='block';document.body.classList.add('off');['btnSubmit','btnCopy','btnCancel'].forEach(b=>$(b).disabled=true);}
+});
+reset(false);
+</script>
+</body>
+</html>

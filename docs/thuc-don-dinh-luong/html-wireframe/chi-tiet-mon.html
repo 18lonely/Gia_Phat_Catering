@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe SCR-MENU-05/06/02: Chi tiết món, Soạn công thức, Form nguyên liệu (Low-Fi)</title>
+<style>
+:root{--bg:#F8F9FA;--card:#FFFFFF;--border:#D1D5DB;--line:#E5E7EB;--text:#111827;--sub:#6B7280;--strong:#1E293B;--err:#B91C1C;--errb:#EF4444}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.45}
+button{font:inherit;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:6px;padding:8px 13px}
+button:hover:not(:disabled){border-color:var(--strong)}
+button:disabled{cursor:not-allowed;color:#9CA3AF;background:#F3F4F6}
+button.primary{background:var(--strong);color:#fff;border-color:var(--strong);font-weight:600}
+button.primary:disabled{background:#9CA3AF;border-color:#9CA3AF}
+button.sm{padding:4px 9px;font-size:12.5px}
+input[type=text],input[type=number],input[type=date],select,textarea{font:inherit;width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;background:#fff;color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--strong);outline-offset:-1px}
+input:disabled,select:disabled,textarea:disabled{background:#F3F4F6;color:var(--sub)}
+.bad{border-color:var(--errb)!important}
+.wfbar{background:#111827;color:#fff;padding:8px 16px;font-size:12.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.wfbar button{background:#1F2937;color:#fff;border-color:#374151;padding:4px 9px;font-size:12px}
+.wfbar button.on{background:#fff;color:#111827}
+.wfbar .sp{flex:1}
+header.app{background:#fff;border-bottom:1px solid var(--border);padding:10px 16px;display:flex;gap:16px;align-items:center}
+.logo{width:34px;height:34px;border:2px dashed #9CA3AF;border-radius:6px;background:var(--line);font-size:10px;color:var(--sub);display:flex;align-items:center;justify-content:center;flex:none}
+nav.top{display:flex;gap:14px;font-size:13px;color:var(--sub);flex-wrap:wrap}
+nav.top .cur{color:var(--text);font-weight:700;border-bottom:2px solid var(--strong)}
+main{padding:16px;max-width:1100px;margin:0 auto}
+.crumb{font-size:12.5px;color:var(--sub);margin-bottom:6px}
+.titlebar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.titlebar h1{font-size:19px}
+.titlebar .sp{flex:1}
+.badge{display:inline-block;border:1.5px solid var(--strong);border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700}
+.badge.fill{background:var(--strong);color:#fff}
+.badge.dash{border-style:dashed}
+.msg{display:none;margin-bottom:12px;border:1.5px solid var(--strong);background:#fff;border-radius:8px;padding:10px 12px;font-size:13px}
+.msg.err{border-color:var(--errb);color:var(--err)}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);overflow-x:auto}
+.tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:10px 14px;font-weight:600;color:var(--sub);white-space:nowrap}
+.tabs button.on{color:var(--text);border-bottom-color:var(--strong)}
+.card{background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;padding:14px}
+.panel{display:none}.panel.on{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.full{grid-column:1/-1}
+label.f{display:block;font-size:13px;font-weight:600;margin-bottom:4px}
+.help{font-size:11.8px;color:var(--sub);margin-top:3px}
+.e{display:none;font-size:12.3px;color:var(--err);margin-top:3px}
+.rule{font-size:10.5px;font-weight:700;border:1px dashed var(--border);border-radius:4px;padding:0 4px;color:var(--sub);margin-left:4px}
+fieldset{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+legend{font-size:12.5px;font-weight:700;padding:0 6px;color:var(--sub)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px 14px}
+.ck{display:flex;gap:8px;align-items:flex-start}
+.ck input{width:17px;height:17px;margin-top:2px;flex:none}
+.ck b{font-weight:600}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.bar .sp{flex:1}
+.bar .hint{font-size:12.3px;color:var(--sub)}
+.pend{border:1.5px dashed var(--strong);border-radius:8px;padding:10px 12px;margin-bottom:12px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:middle}
+th{background:#F3F4F6;font-size:12.5px}
+td.c{text-align:center}
+.tblwrap{overflow-x:auto}
+table.rc td input,table.rc td select{padding:6px 7px}
+table.rc td.q{width:92px}table.rc td.u{width:60px;color:var(--sub)}table.rc td.x{width:40px;text-align:center}
+.vers{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.vers button.on{background:var(--strong);color:#fff;border-color:var(--strong)}
+.empty{padding:30px 14px;text-align:center;color:var(--sub);border:1px dashed var(--border);border-radius:8px}
+.drawer{position:fixed;top:0;right:0;height:100vh;width:min(440px,96vw);background:#fff;border-left:2px solid var(--strong);box-shadow:-8px 0 24px rgba(17,24,39,.15);transform:translateX(105%);transition:transform .18s;z-index:30;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.drawer .hd{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.drawer .hd h3{flex:1;font-size:15px}
+.drawer .bd{padding:14px;overflow:auto;display:grid;gap:12px}
+.drawer .ft{margin-top:auto;padding:12px 14px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
+.scrim{position:fixed;inset:0;background:rgba(17,24,39,.35);display:none;z-index:20}.scrim.on{display:block}
+dialog{border:2px solid var(--strong);border-radius:10px;padding:14px;width:min(520px,94vw);margin:auto}
+dialog::backdrop{background:rgba(17,24,39,.45)}
+dialog h3{font-size:15px;margin-bottom:10px}
+dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.note{margin-top:14px;font-size:12px;color:var(--sub);border:1px dashed var(--border);border-radius:8px;padding:10px 12px;background:#fff}
+.note b{color:var(--text)}
+code{font-family:Consolas,monospace;font-size:11.5px}
+@media (max-width:700px){.grid2{grid-template-columns:1fr}nav.top{display:none}}
+</style>
+</head>
+<body>
+
+<div class="wfbar" role="note">
+ <b>WIREFRAME · SCR-MENU-05 / 06 / 02</b><span>Chi tiết món — dữ liệu là <u>minh họa</u></span>
+ <span class="sp"></span><span>Xem tình huống:</span>
+ <button data-st="new" class="on">Món mới (nháp)</button>
+ <button data-st="active">Món đang dùng</button>
+ <button data-st="view">Chỉ xem (bếp trưởng)</button>
+</div>
+
+<header class="app">
+ <div class="logo">LOGO</div>
+ <nav class="top" aria-label="Điều hướng chính"><span>Nguyên liệu</span><span class="cur">Món</span><span>Loại suất</span><span>Thực đơn</span><span>Chờ duyệt</span><span>Quy tắc</span></nav>
+</header>
+
+<main>
+ <div class="crumb">Món › <span id="crumb"></span></div>
+ <section class="titlebar"><h1 id="title"></h1><span class="badge" id="stBadge"></span><span class="badge dash" id="pendBadge" style="display:none">CHỜ DUYỆT THAY ĐỔI</span><span class="sp"></span><button id="btnDeact" class="sm">Ngừng dùng</button></section>
+ <div class="msg" id="msg" role="alert"></div>
+
+ <div class="tabs" role="tablist" id="tabs">
+  <button data-t="attr" class="on" role="tab">Thuộc tính</button>
+  <button data-t="rcp" role="tab">Công thức</button>
+  <button data-t="prc" role="tab">Giá bán</button>
+  <button data-t="log" role="tab">Lịch sử thay đổi</button>
+ </div>
+ <div class="card">
+
+  <!-- ================= Thuộc tính ================= -->
+  <section class="panel on" id="p-attr">
+   <div class="pend" id="pendBox" style="display:none"></div>
+   <form id="fAttr" novalidate>
+    <div class="grid2">
+     <div class="full"><label class="f" for="aName">Tên món</label><input type="text" id="aName" maxlength="160"><div class="e" id="eName"></div></div>
+     <div class="full"><label class="f" for="aDesc">Mô tả</label><textarea id="aDesc" rows="2"></textarea><div class="help">Hiển thị cho khách ở cổng chọn món. Sửa mô tả không cần duyệt.</div></div>
+     <div><label class="f" for="aRole">Vai trò <span class="rule">quy tắc</span></label><select id="aRole" data-r="Vai trò"><option value="MAIN">Món chính</option><option value="SIDE">Món phụ</option><option value="VEG">Rau</option><option value="SOUP">Canh</option></select><div class="help">Quyết định món xếp được vào ô nào của thực đơn.</div></div>
+     <div><label class="f" for="aGrp">Nhóm nguyên liệu chính <span class="rule">quy tắc</span></label><select id="aGrp" data-r="Nhóm nguyên liệu chính"></select><div class="help">Dùng để so trùng giữa các món. Ví dụ: Thịt kho trứng cút → Lợn.</div></div>
+     <div><label class="f" for="aMth">Phương pháp chế biến <span class="rule">quy tắc</span></label><select id="aMth" data-r="Phương pháp chế biến"></select><div class="help">Phương pháp chính của món. Ví dụ: Bò sốt vang → Sốt.</div></div>
+     <div><label class="f" for="aBase">Món gốc <span class="rule">quy tắc</span></label><select id="aBase" data-r="Món gốc"></select><div class="help">Chọn nếu món này là biến thể đổi tên hoặc cách trình bày của món khác; hai món sẽ được đếm là một khi kiểm lặp.</div><div class="e" id="eBase"></div></div>
+     <div><label class="f" for="aTex">Kết cấu <span class="rule">quy tắc</span></label><select id="aTex" data-r="Kết cấu"><option value="NEUTRAL">Trung tính</option><option value="DRY">Khô</option><option value="SAUCE">Có nước sốt</option></select><div class="help">Khô: rang, chiên giòn. Có nước sốt: sốt vang, sốt cà chua.</div></div>
+     <div><label class="f" for="aTier">Nhóm cost <span class="rule">quy tắc</span></label><select id="aTier" data-r="Nhóm cost"><option value="LOW">Thấp</option><option value="HIGH">Cao</option></select><div class="help">Thấp: đậu phụ, trứng, lạc. Cao: cá cơm, giò chả, củ quả xào thịt, bò, tôm, cá.</div></div>
+     <fieldset class="full"><legend>Thuộc tính có / không</legend><div class="checks">
+      <label class="ck"><input type="checkbox" id="aHealthy" data-r="Healthy"><span><b>Healthy</b> <span class="rule">quy tắc</span><div class="help">Chỉ gắn được khi phương pháp chế biến ít dầu mỡ.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aSour" data-r="Vị chua"><span><b>Vị chua</b> <span class="rule">quy tắc</span><div class="help">Ví dụ: sốt cà chua, dưa chua, canh chua.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aLight" data-r="Thanh nhẹ"><span><b>Thanh nhẹ</b> <span class="rule">quy tắc</span><div class="help">Ít gia vị, ít dầu. Ví dụ: món luộc, hấp.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aComplex" data-r="Cầu kỳ"><span><b>Cầu kỳ</b> <span class="rule">quy tắc</span><div class="help">Nhiều công đoạn sơ chế. Ví dụ: nộm, cuốn, nem.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aTrans" data-r="Chịu vận chuyển"><span><b>Chịu vận chuyển</b> <span class="rule">quy tắc</span><div class="help">Giữ được chất lượng sau đóng gói và chờ đến giờ ăn.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aBulk" data-r="Phù hợp bếp lớn"><span><b>Phù hợp bếp lớn</b> <span class="rule">quy tắc</span><div class="help">Làm được với số lượng lớn, dễ chia suất.</div></span></label>
+      <label class="ck"><input type="checkbox" id="aSpecial" data-r="Đặc thù"><span><b>Đặc thù</b> <span class="rule">quy tắc</span><div class="help">Nguyên liệu giá cao (bò, tôm, cá…): cần bảng tính cost riêng trước khi vào thực đơn.</div></span></label>
+     </div><div class="e" id="eHealthy"></div></fieldset>
+     <div class="full"><label class="f" for="aAllergen">Chất gây dị ứng</label><input type="text" id="aAllergen" placeholder="Ví dụ: Cá, Trứng, Đậu nành"><div class="help">Hiển thị cho khách. Sửa không cần duyệt.</div></div>
+     <div class="full" id="reasonWrap" style="display:none"><label class="f" for="aReason">Lý do thay đổi (bắt buộc, từ 10 ký tự)</label><textarea id="aReason" rows="2"></textarea><div class="e" id="eReason"></div></div>
+    </div>
+    <div class="bar"><span class="hint" id="attrHint"></span><span class="sp"></span><button type="button" id="btnSaveAttr">Lưu nháp</button><button type="button" class="primary" id="btnSendDish">Gửi duyệt món</button></div>
+   </form>
+  </section>
+
+  <!-- ================= Công thức ================= -->
+  <section class="panel" id="p-rcp">
+   <div class="vers" id="vers"></div>
+   <div id="rcpEmpty" class="empty" style="display:none"><b>Món chưa có công thức.</b><br>Món cần có công thức trước khi gửi duyệt.<br><br><button class="primary" id="btnNewRcp">Thêm công thức</button></div>
+   <div id="rcpEditor">
+    <div class="grid2" style="margin-bottom:10px">
+     <div><label class="f" for="rFrom">Hiệu lực từ</label><input type="date" id="rFrom"></div>
+     <div><label class="f">Cỡ định lượng</label><input type="text" value="Chuẩn (STD)" disabled><div class="help">Nhiều cỡ định lượng: chờ điểm mở O-02.</div></div>
+    </div>
+    <div class="tblwrap"><table class="rc"><thead><tr><th>Nguyên liệu</th><th>Chính</th><th>Tối thiểu</th><th>Chuẩn</th><th>Tối đa</th><th>Đơn vị</th><th></th></tr></thead><tbody id="rRows"></tbody></table></div>
+    <div class="help" style="margin-top:6px">Định lượng <b>sống</b> cho 1 suất. "Chuẩn" là giá trị dùng để tính cost và dinh dưỡng. Đơn vị lấy theo nguyên liệu.</div>
+    <div class="e" id="eRcp" style="margin-top:8px"></div>
+    <div class="bar"><button type="button" id="btnAddRow" class="sm">+ Thêm dòng</button><button type="button" id="btnNewIng" class="sm">+ Nguyên liệu mới</button><span class="sp"></span><span class="hint" id="rcpHint"></span><button type="button" id="btnSaveRcp">Lưu nháp</button><button type="button" class="primary" id="btnSendRcp">Gửi duyệt công thức</button><button type="button" id="btnNewVer" style="display:none">Tạo phiên bản mới</button></div>
+   </div>
+  </section>
+
+  <!-- ================= Giá bán ================= -->
+  <section class="panel" id="p-prc">
+   <div id="prcEmpty" class="empty" style="display:none;margin-bottom:12px"><b>Món chưa có giá bán.</b><br>Món cần có giá bán hiệu lực mới xếp được vào thực đơn.</div>
+   <div class="tblwrap" id="prcTblWrap"><table><thead><tr><th>Hiệu lực từ</th><th>Giá bán (gồm VAT)</th><th>Trạng thái</th><th>Người duyệt</th></tr></thead><tbody id="prcRows"></tbody></table></div>
+   <form id="fPrc" novalidate style="margin-top:14px">
+    <fieldset><legend>Đặt giá mới</legend><div class="grid2">
+     <div><label class="f" for="pVal">Giá bán (đồng, đã gồm VAT)</label><input type="number" id="pVal" step="100" min="0" inputmode="numeric"><div class="help">Bội số của 100 đồng.</div><div class="e" id="eVal"></div></div>
+     <div><label class="f" for="pFrom">Hiệu lực từ</label><input type="date" id="pFrom"><div class="help">Từ ngày mai trở đi. Giá đã hiệu lực không sửa được.</div><div class="e" id="eFrom"></div></div>
+    </div><div class="bar"><span class="sp"></span><button type="button" class="primary" id="btnSendPrc">Gửi duyệt giá</button></div></fieldset>
+   </form>
+  </section>
+
+  <!-- ================= Lịch sử ================= -->
+  <section class="panel" id="p-log">
+   <div class="tblwrap"><table><thead><tr><th>Thời điểm</th><th>Người</th><th>Hành động</th><th>Thay đổi</th><th>Lý do</th></tr></thead><tbody id="logRows"></tbody></table></div>
+  </section>
+ </div>
+
+ <div class="note">
+  <b>Ghi chú wireframe.</b> Tham chiếu: <code>UC-MENU-002</code>, <code>003</code>, <code>004</code>, <code>005</code>, <code>001</code> · <code>FR-MENU-DISH-001</code> → <code>005</code>, <code>RCP-001</code> → <code>004</code>, <code>PRC-001</code>, <code>ING-001</code>.
+  Thử: đặt tên "Cá kho" (trùng) · tích Healthy khi phương pháp là Chiên · gửi duyệt món khi chưa có công thức · công thức không có nguyên liệu chính, hoặc tối thiểu lớn hơn chuẩn · tạo nguyên liệu mới giữa lúc soạn công thức · ở tình huống "Món đang dùng": đổi một thuộc tính có nhãn <span class="rule">quy tắc</span>.<br>
+  <b>Minh họa, chưa duyệt:</b> danh sách nhóm nguyên liệu (<code>H-3</code>), phương pháp chế biến (<code>H-8</code>), phương pháp nào là ít dầu mỡ (<code>H-1</code>), định lượng và giá mẫu. Ngày "hôm nay" trong wireframe cố định là 10/11/2026.
+ </div>
+</main>
+
+<!-- ============ SCR-MENU-02: ngăn trượt nguyên liệu ============ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Thêm nguyên liệu">
+ <div class="hd"><h3>Thêm nguyên liệu</h3><button class="sm" id="dwClose">Đóng ✕</button></div>
+ <div class="bd">
+  <div><label class="f" for="iName">Tên nguyên liệu</label><input type="text" id="iName"><div class="e" id="eIName"></div></div>
+  <div><label class="f" for="iGrp">Nhóm nguyên liệu</label><select id="iGrp"></select></div>
+  <div class="grid2">
+   <div><label class="f" for="iBuy">Đơn vị mua</label><select id="iBuy"><option>kg</option><option>bìa</option><option>quả</option><option>lít</option><option>bó</option></select></div>
+   <div><label class="f" for="iUse">Đơn vị dùng</label><select id="iUse"><option>g</option><option>bìa</option><option>quả</option><option>ml</option></select></div>
+  </div>
+  <div><label class="f" for="iConv">Hệ số quy đổi</label><input type="number" id="iConv" value="1000" min="0" step="any"><div class="help">Số đơn vị dùng trong 1 đơn vị mua. kg → g tự điền 1000.</div><div class="e" id="eConv"></div></div>
+  <div><label class="f" for="iSto">Loại bảo quản</label><select id="iSto"><option value="FRESH">Tươi</option><option value="FROZEN">Đông lạnh</option><option value="DRY">Khô</option></select></div>
+  <label class="ck"><input type="checkbox" id="iBone"><span><b>Có xương hoặc vỏ</b><div class="help">Khi tích, tỷ lệ hao hụt là bắt buộc.</div></span></label>
+  <div id="wasteWrap" style="display:none"><label class="f" for="iWaste">Tỷ lệ hao hụt (%)</label><input type="number" id="iWaste" min="0.01" max="99.99" step="0.01"><div class="e" id="eWaste"></div></div>
+  <label class="ck"><input type="checkbox" id="iStable" checked><span><b>Nguồn cung ổn định</b></span></label>
+ </div>
+ <div class="ft"><button id="dwCancel">Huỷ</button><button class="primary" id="dwSave">Lưu nguyên liệu</button></div>
+</aside>
+
+<dialog id="dlg"><h3 id="dlgT"></h3><label class="f" for="dlgR">Lý do (bắt buộc, từ 10 ký tự)</label><textarea id="dlgR" rows="3"></textarea><div class="e" id="dlgE">ERR-SYS-422-01 · Vui lòng nhập lý do (ít nhất 10 ký tự).</div><div class="row"><button id="dlgCancel">Huỷ</button><button class="primary" id="dlgOk">Xác nhận</button></div></dialog>
+
+<script>
+'use strict';
+/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+const TODAY='2026-11-10';
+const GROUPS=['Lợn','Gà','Bò','Ếch','Tôm','Cá','Sườn','Trứng','Đậu','Giò chả','Củ quả','Rau','Khác'];
+const METHODS=[['Luộc',1],['Hấp',1],['Kho',0],['Rang',0],['Xào',0],['Sốt',0],['Chiên',0],['Áp chảo',0],['Nướng',0],['Trộn',0],['Nấu',0]]; // [tên, ít dầu mỡ]
+const OTHER=[['Cá kho','MAIN'],['Cá rán','MAIN'],['Cá hấp','MAIN'],['Gà luộc','MAIN'],['Thịt kho trứng cút','MAIN'],['Đậu rán','SIDE'],['Trứng cuộn','SIDE'],['Bắp cải luộc','VEG'],['Canh chua','SOUP']];
+let ING=[['Cá trắm','Cá','g'],['Cà chua','Rau','g'],['Hành khô','Rau','g'],['Dầu ăn','Khác','ml'],['Thịt lợn nạc vai','Lợn','g'],['Trứng cút','Trứng','quả'],['Đậu phụ','Đậu','bìa'],['Gà ta','Gà','g']];
+const RULE_FIELDS=['aRole','aGrp','aMth','aBase','aTex','aTier','aHealthy','aSour','aLight','aComplex','aTrans','aBulk','aSpecial'];
+const NEWDISH={name:'',desc:'',role:'MAIN',grp:'Cá',mth:'Chiên',base:'',tex:'NEUTRAL',tier:'HIGH',healthy:false,sour:false,light:false,complex:false,trans:true,bulk:true,special:false,allergen:''};
+const ACTDISH={name:'Cá sốt cà chua',desc:'Cá trắm cắt khúc rán sơ, sốt cà chua.',role:'MAIN',grp:'Cá',mth:'Sốt',base:'',tex:'SAUCE',tier:'HIGH',healthy:false,sour:false,light:false,complex:false,trans:true,bulk:true,special:true,allergen:'Cá'};
+const ACTRCP=[{v:1,st:'SUPERSEDED',from:'2026-08-01',rows:[['Cá trắm',1,130,140,140],['Cà chua',0,30,30,35],['Dầu ăn',0,8,10,10]]},{v:2,st:'ACTIVE',from:'2026-10-01',rows:[['Cá trắm',1,130,135,140],['Cà chua',0,30,35,40],['Hành khô',0,3,3,5],['Dầu ăn',0,8,8,10]]}];
+const ACTPRC=[['2026-08-01',21000,'APPROVED','Người duyệt 1'],['2026-10-01',22000,'APPROVED','Người duyệt 1']];
+const ACTLOG=[['01/10/2026 08:02','Người duyệt 1','Duyệt','Công thức v2 → đang hiệu lực','—'],['28/09/2026 16:40','Dinh dưỡng viên','Tạo phiên bản','Công thức v2 từ v1','Điều chỉnh theo giá cà chua và bảng định lượng mới'],['28/09/2026 16:45','Dinh dưỡng viên','Tạo','Giá bán 22.000đ từ 01/10/2026','—'],['01/08/2026 07:55','Người duyệt 1','Duyệt','Món → đang dùng','—']];
+
+let mode='new', dish, saved=false, status='DRAFT', recipes=[], curV=null, prices=[], log=[], pending=null, dlgCb=null;
+const $=id=>document.getElementById(id);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const fmt=n=>Number(n).toLocaleString('vi-VN')+'đ';
+const dmy=s=>s.split('-').reverse().join('/');
+const ST={DRAFT:'NHÁP',PENDING:'CHỜ DUYỆT',ACTIVE:'ĐANG DÙNG',SUPERSEDED:'ĐÃ THAY THẾ',APPROVED:'ĐÃ DUYỆT',INACTIVE:'NGỪNG DÙNG'};
+function showMsg(h,err){const m=$('msg');m.className='msg'+(err?' err':'');m.innerHTML=h;m.style.display=h?'block':'none';if(h)window.scrollTo({top:0,behavior:'smooth'});}
+function err(id,t,field){const e=$(id);e.textContent=t||'';e.style.display=t?'block':'none';if(field)$(field).classList.toggle('bad',!!t);}
+function ask(title,cb){$('dlgT').textContent=title;$('dlgR').value='';$('dlgE').style.display='none';dlgCb=cb;$('dlg').showModal();}
+$('dlgCancel').onclick=()=>$('dlg').close();
+$('dlgOk').onclick=()=>{const r=$('dlgR').value.trim();if(r.length<10){$('dlgE').style.display='block';return;}$('dlg').close();dlgCb(r);};
+
+/* ====== Thuộc tính ====== */
+function fillSelects(){
+ $('aGrp').innerHTML=GROUPS.map(g=>`<option>${g}</option>`).join('');$('iGrp').innerHTML=$('aGrp').innerHTML;
+ $('aMth').innerHTML=METHODS.map(m=>`<option value="${m[0]}">${m[0]}${m[1]?' (ít dầu mỡ)':''}</option>`).join('');
+}
+function fillBase(){const r=$('aRole').value;$('aBase').innerHTML='<option value="">— Không có —</option>'+OTHER.filter(o=>o[1]===r&&o[0]!==dish.name).map(o=>`<option>${o[0]}</option>`).join('');}
+function readForm(){return {name:$('aName').value.trim(),desc:$('aDesc').value.trim(),role:$('aRole').value,grp:$('aGrp').value,mth:$('aMth').value,base:$('aBase').value,tex:$('aTex').value,tier:$('aTier').value,healthy:$('aHealthy').checked,sour:$('aSour').checked,light:$('aLight').checked,complex:$('aComplex').checked,trans:$('aTrans').checked,bulk:$('aBulk').checked,special:$('aSpecial').checked,allergen:$('aAllergen').value.trim()};}
+function writeForm(d){$('aName').value=d.name;$('aDesc').value=d.desc;$('aRole').value=d.role;fillBase();$('aGrp').value=d.grp;$('aMth').value=d.mth;$('aBase').value=d.base;$('aTex').value=d.tex;$('aTier').value=d.tier;
+ $('aHealthy').checked=d.healthy;$('aSour').checked=d.sour;$('aLight').checked=d.light;$('aComplex').checked=d.complex;$('aTrans').checked=d.trans;$('aBulk').checked=d.bulk;$('aSpecial').checked=d.special;$('aAllergen').value=d.allergen;}
+const KEYMAP={aRole:'role',aGrp:'grp',aMth:'mth',aBase:'base',aTex:'tex',aTier:'tier',aHealthy:'healthy',aSour:'sour',aLight:'light',aComplex:'complex',aTrans:'trans',aBulk:'bulk',aSpecial:'special'};
+const show=v=>v===true?'Có':v===false?'Không':v===''?'—':({MAIN:'Món chính',SIDE:'Món phụ',VEG:'Rau',SOUP:'Canh',NEUTRAL:'Trung tính',DRY:'Khô',SAUCE:'Có nước sốt',LOW:'Thấp',HIGH:'Cao'}[v]||v);
+function ruleDiff(f){return RULE_FIELDS.filter(id=>f[KEYMAP[id]]!==dish[KEYMAP[id]]).map(id=>[$(id).dataset.r,show(dish[KEYMAP[id]]),show(f[KEYMAP[id]]),KEYMAP[id]]);}
+function validateAttr(f){let ok=true;err('eName','','aName');err('eBase','','aBase');err('eHealthy','');
+ if(!f.name){err('eName','Vui lòng nhập tên món.','aName');ok=false;}
+ else if(OTHER.some(o=>o[0].toLowerCase()===f.name.toLowerCase())){err('eName','ERR-MENU-409-01 · Tên này đã tồn tại. Xem món "'+f.name+'".','aName');ok=false;}
+ if(f.healthy&&!METHODS.find(m=>m[0]===f.mth)[1]){err('eHealthy','ERR-MENU-422-04 · Món Healthy phải dùng phương pháp chế biến ít dầu mỡ. Phương pháp hiện tại: '+f.mth+'.');ok=false;}
+ return ok;}
+function refreshAttrUi(){
+ const ro=mode==='view'||status==='PENDING'||!!pending;
+ document.querySelectorAll('#fAttr input,#fAttr select,#fAttr textarea').forEach(e=>e.disabled=ro);
+ const act=status==='ACTIVE';
+ $('btnSaveAttr').style.display=mode==='view'?'none':'';$('btnSendDish').style.display=mode==='view'||act?'none':'';
+ $('btnSaveAttr').textContent=act?'Lưu thay đổi':'Lưu nháp';$('btnSaveAttr').classList.toggle('primary',act);
+ $('btnSaveAttr').disabled=ro;$('btnSendDish').disabled=status!=='DRAFT';
+ const d=act&&!ro?ruleDiff(readForm()):[];
+ $('reasonWrap').style.display=d.length?'block':'none';
+ $('attrHint').textContent=mode==='view'?'Bạn chỉ có quyền xem.':status==='PENDING'?'Món đang chờ duyệt nên không sửa được.':pending?'Đang có đề nghị chờ duyệt; rút đề nghị để sửa tiếp.':act?(d.length?`Đổi ${d.length} thuộc tính ảnh hưởng quy tắc → cần duyệt; món giữ giá trị cũ đến khi duyệt.`:'Sửa tên, mô tả, dị ứng được lưu ngay. Sửa thuộc tính có nhãn "quy tắc" cần duyệt.'):'';
+ $('pendBadge').style.display=pending?'':'none';
+ $('pendBox').style.display=pending?'block':'none';
+ if(pending)$('pendBox').innerHTML=`<b>Đề nghị thay đổi đang chờ duyệt</b> — gửi ${pending.at}. Món vẫn dùng giá trị cũ.<div class="tblwrap" style="margin:8px 0"><table><thead><tr><th>Thuộc tính</th><th>Hiện tại</th><th>Đề nghị</th></tr></thead><tbody>${pending.diff.map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td><td><b>${x[2]}</b></td></tr>`).join('')}</tbody></table></div><div class="help">Lý do: ${pending.reason}</div>${mode==='view'?'':'<div style="margin-top:8px"><button class="sm" id="btnWithdraw">Rút đề nghị</button></div>'}`;
+ $('title').textContent=dish.name||'Món mới';$('crumb').textContent=dish.name||'Món mới';
+ $('stBadge').textContent=ST[status];$('stBadge').classList.toggle('fill',status==='ACTIVE');
+ $('btnDeact').style.display=act&&mode!=='view'?'':'none';
+}
+$('fAttr').addEventListener('input',()=>{if(status==='ACTIVE')refreshAttrUi();});
+$('fAttr').addEventListener('change',e=>{if(e.target.id==='aRole')fillBase();if(status==='ACTIVE')refreshAttrUi();});
+$('btnSaveAttr').onclick=()=>{
+ const f=readForm();if(!validateAttr(f))return;
+ if(status!=='ACTIVE'){dish=f;saved=true;log.unshift(['10/11/2026 '+new Date().toTimeString().slice(0,5),'Dinh dưỡng viên','Lưu nháp','Thuộc tính món','—']);renderLog();refreshAttrUi();showMsg('Đã lưu nháp. Tiếp theo: thêm công thức ở thẻ <b>Công thức</b> rồi gửi duyệt.');return;}
+ const d=ruleDiff(f);
+ if(!d.length){dish=f;refreshAttrUi();showMsg('Đã lưu. Thay đổi không ảnh hưởng quy tắc nên có hiệu lực ngay.');return;}
+ const r=$('aReason').value.trim();if(r.length<10){err('eReason','ERR-SYS-422-01 · Vui lòng nhập lý do (ít nhất 10 ký tự).','aReason');return;}err('eReason','','aReason');
+ dish.name=f.name;dish.desc=f.desc;dish.allergen=f.allergen;
+ pending={diff:d,reason:r,at:'10/11/2026'};writeForm(dish);$('aReason').value='';refreshAttrUi();
+ showMsg(`Đã gửi đề nghị thay đổi ${d.length} thuộc tính. Món vẫn <b>đang dùng</b> với giá trị cũ cho đến khi được duyệt. Người duyệt đã nhận thông báo.`);
+};
+$('pendBox').addEventListener('click',e=>{if(e.target.id==='btnWithdraw'){pending=null;refreshAttrUi();showMsg('Đã rút đề nghị. Món không thay đổi.');}});
+$('btnSendDish').onclick=()=>{
+ const f=readForm();if(!validateAttr(f))return;dish=f;saved=true;
+ if(!recipes.some(r=>r.st==='PENDING'||r.st==='ACTIVE')){showMsg('ERR-MENU-422-06 · Món cần có công thức trước khi duyệt. Hãy thêm công thức và gửi duyệt công thức trước.',true);tab('rcp');return;}
+ status='PENDING';refreshAttrUi();refreshRcpUi();showMsg('Đã gửi duyệt món. Người duyệt đã nhận thông báo.');
+};
+$('btnDeact').onclick=()=>ask('Ngừng dùng món',()=>showMsg('ERR-SYS-409-01 · Không thể ngừng dùng vì món đang nằm trong 1 thực đơn đã công bố sắp phục vụ: Suất 40.000đ — tuần 16/11/2026.',true));
+
+/* ====== Công thức ====== */
+function unitOf(n){const i=ING.find(x=>x[0]===n);return i?i[2]:'';}
+function rowHtml(r,ro){return `<tr><td><select data-k="ing"${ro?' disabled':''}><option value="">— chọn —</option>${ING.map(i=>`<option${i[0]===r[0]?' selected':''}>${i[0]}</option>`).join('')}</select></td><td class="c"><input type="checkbox" data-k="main"${r[1]?' checked':''}${ro?' disabled':''} aria-label="Nguyên liệu chính"></td><td class="q"><input type="number" data-k="min" value="${r[2]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="std" value="${r[3]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="max" value="${r[4]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="u">${unitOf(r[0])}</td><td class="x">${ro?'':'<button type="button" class="sm" data-del="1" aria-label="Xoá dòng">×</button>'}</td></tr>`;}
+function readRows(){return [...$('rRows').children].map(tr=>{const g=k=>tr.querySelector(`[data-k=${k}]`);return [g('ing').value,g('main').checked?1:0,g('min').value===''?null:+g('min').value,g('std').value===''?null:+g('std').value,g('max').value===''?null:+g('max').value];});}
+function cur(){return recipes.find(r=>r.v===curV);}
+function refreshRcpUi(){
+ $('vers').innerHTML=recipes.map(r=>`<button class="sm ${r.v===curV?'on':''}" data-v="${r.v}">v${r.v} · ${r.st==='ACTIVE'?'ĐANG HIỆU LỰC':ST[r.st]}</button>`).join('');
+ const c=cur();$('rcpEmpty').style.display=c?'none':'block';$('rcpEditor').style.display=c?'block':'none';
+ $('btnNewRcp').style.display=mode==='view'?'none':'';
+ if(!c)return;
+ const ro=mode==='view'||c.st!=='DRAFT';
+ $('rFrom').value=c.from;$('rFrom').disabled=ro;$('rRows').innerHTML=c.rows.map(r=>rowHtml(r,ro)).join('');
+ ['btnAddRow','btnNewIng','btnSaveRcp','btnSendRcp'].forEach(b=>$(b).style.display=ro?'none':'');
+ $('btnNewVer').style.display=c.st==='ACTIVE'&&mode!=='view'&&!recipes.some(r=>r.st==='DRAFT'||r.st==='PENDING')?'':'none';
+ $('rcpHint').textContent=mode==='view'?'':c.st==='PENDING'?'Công thức đang chờ duyệt nên không sửa được.':c.st==='ACTIVE'?'Công thức đang hiệu lực không sửa được; hãy tạo phiên bản mới.':c.st==='SUPERSEDED'?'Phiên bản cũ, chỉ để xem.':'';
+ err('eRcp','');
+}
+function validateRcp(rows){
+ $('rRows').querySelectorAll('.bad').forEach(e=>e.classList.remove('bad'));
+ const used=rows.filter(r=>r[0]);const names=used.map(r=>r[0]);
+ if(!used.length||!used.some(r=>r[1])||new Set(names).size!==names.length||rows.some(r=>!r[0]))return 'ERR-MENU-422-08 · Công thức cần ít nhất một nguyên liệu chính, không lặp nguyên liệu và không có dòng trống.';
+ let badRow=-1;rows.forEach((r,i)=>{if(r[2]===null||r[3]===null||r[4]===null||!(r[2]>0)||r[2]>r[3]||r[3]>r[4])badRow=badRow<0?i:badRow;});
+ if(badRow>=0){$('rRows').children[badRow].querySelectorAll('input[type=number]').forEach(e=>e.classList.add('bad'));return `ERR-MENU-422-09 · Dòng ${badRow+1}: định lượng phải thoả 0 < tối thiểu ≤ chuẩn ≤ tối đa.`;}
+ if((dish.role==='MAIN'||dish.role==='SIDE')&&!used.some(r=>r[1]&&ING.find(i=>i[0]===r[0])[1]===dish.grp))return `ERR-MENU-422-10 · Công thức cần có nguyên liệu chính thuộc nhóm ${dish.grp} của món.`;
+ return '';}
+function saveRcp(){const c=cur();c.rows=readRows();c.from=$('rFrom').value;const e=validateRcp(c.rows);err('eRcp',e);return !e;}
+$('vers').addEventListener('click',e=>{const v=e.target.dataset.v;if(!v)return;const c=cur();if(c&&c.st==='DRAFT'){c.rows=readRows();c.from=$('rFrom').value;}curV=+v;refreshRcpUi();});
+$('btnNewRcp').onclick=()=>{recipes.push({v:1,st:'DRAFT',from:'2026-11-16',rows:[['',1,null,null,null]]});curV=1;refreshRcpUi();showMsg('');};
+$('btnAddRow').onclick=()=>{const c=cur();c.rows=readRows();c.rows.push(['',0,null,null,null]);refreshRcpUi();};
+$('rRows').addEventListener('click',e=>{if(!e.target.dataset.del)return;const c=cur();c.rows=readRows();c.rows.splice([...$('rRows').children].indexOf(e.target.closest('tr')),1);refreshRcpUi();});
+$('rRows').addEventListener('change',e=>{if(e.target.dataset.k==='ing')e.target.closest('tr').querySelector('.u').textContent=unitOf(e.target.value);});
+$('btnSaveRcp').onclick=()=>{if(saveRcp())showMsg('Đã lưu nháp công thức v'+curV+'.');};
+$('btnSendRcp').onclick=()=>{if(!saveRcp())return;cur().st='PENDING';refreshRcpUi();showMsg('Đã gửi duyệt công thức v'+curV+'. Người duyệt đã nhận thông báo.'+(status==='DRAFT'?' Giờ có thể gửi duyệt món ở thẻ <b>Thuộc tính</b>.':''));};
+$('btnNewVer').onclick=()=>ask('Tạo phiên bản mới từ v'+curV,reason=>{const c=cur(),v=Math.max(...recipes.map(r=>r.v))+1;recipes.push({v,st:'DRAFT',from:'2026-11-23',rows:clone(c.rows)});curV=v;refreshRcpUi();
+ log.unshift(['10/11/2026 '+new Date().toTimeString().slice(0,5),'Dinh dưỡng viên','Tạo phiên bản',`Công thức v${v} từ v${c.v}`,reason]);renderLog();showMsg(`Đã tạo công thức v${v} ở trạng thái nháp từ v${c.v}. Phiên bản v${c.v} vẫn đang hiệu lực cho đến khi v${v} được duyệt và đến ngày hiệu lực.`);});
+
+/* ====== Ngăn trượt nguyên liệu (SCR-MENU-02) ====== */
+function drawer(on){$('drawer').classList.toggle('on',on);$('scrim').classList.toggle('on',on);if(on){$('iName').value='';$('iConv').value=1000;$('iBuy').value='kg';$('iUse').value='g';$('iBone').checked=false;$('wasteWrap').style.display='none';$('iWaste').value='';['eIName','eConv','eWaste'].forEach(x=>err(x,''));['iName','iConv','iWaste'].forEach(x=>$(x).classList.remove('bad'));$('iGrp').value=dish.grp;$('iName').focus();}}
+$('btnNewIng').onclick=()=>{cur().rows=readRows();drawer(true);};
+$('dwClose').onclick=$('dwCancel').onclick=()=>drawer(false);$('scrim').onclick=()=>drawer(false);
+$('iBone').onchange=()=>$('wasteWrap').style.display=$('iBone').checked?'block':'none';
+function autoConv(){if($('iBuy').value==='kg'&&$('iUse').value==='g')$('iConv').value=1000;else if($('iBuy').value===$('iUse').value)$('iConv').value=1;}
+$('iBuy').onchange=$('iUse').onchange=autoConv;
+$('dwSave').onclick=()=>{let ok=true;const n=$('iName').value.trim(),cv=+$('iConv').value;
+ err('eIName','','iName');err('eConv','','iConv');err('eWaste','','iWaste');
+ if(!n){err('eIName','Vui lòng nhập tên nguyên liệu.','iName');ok=false;}else if(ING.some(i=>i[0].toLowerCase()===n.toLowerCase())){err('eIName','ERR-MENU-409-01 · Tên này đã tồn tại.','iName');ok=false;}
+ if(!(cv>0)||($('iBuy').value==='kg'&&$('iUse').value==='g'&&cv!==1000)){err('eConv','ERR-MENU-422-01 · Hệ số quy đổi không hợp lệ.','iConv');ok=false;}
+ if($('iBone').checked){const w=+$('iWaste').value;if(!(w>=0.01&&w<=99.99)){err('eWaste','ERR-MENU-422-02 · Nguyên liệu có xương hoặc vỏ cần khai tỷ lệ hao hụt (0,01–99,99).','iWaste');ok=false;}}
+ if(!ok)return;ING.push([n,$('iGrp').value,$('iUse').value]);const c=cur();const blank=c.rows.find(r=>!r[0]);if(blank)blank[0]=n;else c.rows.push([n,0,null,null,null]);
+ drawer(false);refreshRcpUi();showMsg(`Đã tạo nguyên liệu <b>${n}</b> và đưa vào công thức. Các dòng đã nhập được giữ nguyên.`);};
+
+/* ====== Giá bán ====== */
+function refreshPrc(){$('prcEmpty').style.display=prices.length?'none':'block';$('prcTblWrap').style.display=prices.length?'block':'none';
+ $('prcRows').innerHTML=[...prices].sort((a,b)=>b[0].localeCompare(a[0])).map(p=>`<tr><td>${dmy(p[0])}</td><td>${fmt(p[1])}</td><td>${ST[p[2]]}${p[2]==='APPROVED'&&p[0]<=TODAY&&!prices.some(q=>q[2]==='APPROVED'&&q[0]<=TODAY&&q[0]>p[0])?' · <b>đang áp dụng</b>':''}</td><td>${p[3]||'—'}</td></tr>`).join('');
+ $('fPrc').style.display=mode==='view'?'none':'block';}
+$('btnSendPrc').onclick=()=>{const v=$('pVal').value,d=$('pFrom').value;let ok=true;err('eVal','','pVal');err('eFrom','','pFrom');
+ if(v===''||+v<0||+v%100!==0||!Number.isInteger(+v)){err('eVal','ERR-MENU-422-11 · Giá bán phải là số không âm, bội số của 100 đồng.','pVal');ok=false;}
+ if(!d||d<=TODAY){err('eFrom','ERR-MENU-422-11 · Ngày hiệu lực phải từ ngày mai (11/11/2026) trở đi.','pFrom');ok=false;}
+ else if(prices.some(p=>p[0]===d)){err('eFrom','ERR-MENU-409-04 · Đã có giá bán cho ngày hiệu lực này.','pFrom');ok=false;}
+ if(!ok)return;prices.push([d,+v,'PENDING','']);$('pVal').value='';$('pFrom').value='';refreshPrc();showMsg(`Đã gửi duyệt giá ${fmt(v)} hiệu lực từ ${dmy(d)}.`);};
+
+/* ====== Lịch sử, thẻ, tình huống ====== */
+function renderLog(){$('logRows').innerHTML=log.length?log.map(l=>`<tr>${l.map(c=>`<td>${c}</td>`).join('')}</tr>`).join(''):'<tr><td colspan="5" style="text-align:center;color:#6B7280;padding:18px">Chưa có thay đổi nào.</td></tr>';}
+function tab(t){document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+t));}
+$('tabs').addEventListener('click',e=>{const t=e.target.dataset.t;if(t)tab(t);});
+function load(m){mode=m;pending=null;showMsg('');
+ if(m==='new'){dish=clone(NEWDISH);status='DRAFT';recipes=[];curV=null;prices=[];log=[];}
+ else{dish=clone(ACTDISH);status='ACTIVE';recipes=clone(ACTRCP);curV=2;prices=clone(ACTPRC);log=clone(ACTLOG);}
+ fillSelects();writeForm(dish);$('aReason').value='';['eName','eBase','eHealthy','eReason'].forEach(x=>err(x,''));document.querySelectorAll('#fAttr .bad').forEach(e=>e.classList.remove('bad'));
+ const pt=document.querySelector('#tabs [data-t=prc]');pt.style.display=m==='view'?'none':'';
+ tab('attr');refreshAttrUi();refreshRcpUi();refreshPrc();renderLog();}
+document.querySelector('.wfbar').addEventListener('click',e=>{const st=e.target.dataset.st;if(!st)return;document.querySelectorAll('.wfbar button').forEach(b=>b.classList.toggle('on',b===e.target));load(st);});
+load('new');
+</script>
+</body>
+</html>

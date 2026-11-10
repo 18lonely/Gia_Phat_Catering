@@ -1,0 +1,542 @@
+[
+  {
+    "id": "API-MENU-001",
+    "method": "POST",
+    "path": "/v1/menu/ingredients",
+    "fr": [
+      "FR-MENU-ING-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-002",
+    "method": "PATCH",
+    "path": "/v1/menu/ingredients/{id}",
+    "fr": [
+      "FR-MENU-ING-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-003",
+    "method": "POST",
+    "path": "/v1/menu/ingredients/{id}/status-changes",
+    "fr": [
+      "FR-MENU-ING-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-004",
+    "method": "GET",
+    "path": "/v1/menu/ingredients",
+    "fr": [
+      "FR-MENU-ING-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-005",
+    "method": "GET",
+    "path": "/v1/menu/ingredient-groups",
+    "fr": [
+      "FR-MENU-ING-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-006",
+    "method": "POST",
+    "path": "/v1/menu/ingredient-groups",
+    "fr": [
+      "FR-MENU-ING-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-007",
+    "method": "PATCH",
+    "path": "/v1/menu/ingredient-groups/{id}",
+    "fr": [
+      "FR-MENU-ING-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-008",
+    "method": "PUT",
+    "path": "/v1/menu/ingredients/{id}/seasons",
+    "fr": [
+      "FR-MENU-ING-006"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-009",
+    "method": "POST",
+    "path": "/v1/menu/dishes",
+    "fr": [
+      "FR-MENU-DISH-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-010",
+    "method": "PATCH",
+    "path": "/v1/menu/dishes/{id}",
+    "fr": [
+      "FR-MENU-DISH-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-011",
+    "method": "POST",
+    "path": "/v1/menu/dishes/{id}/submissions",
+    "fr": [
+      "FR-MENU-DISH-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-012",
+    "method": "POST",
+    "path": "/v1/menu/dishes/{id}/decisions",
+    "fr": [
+      "FR-MENU-DISH-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-013",
+    "method": "POST",
+    "path": "/v1/menu/dishes/{id}/deactivations",
+    "fr": [
+      "FR-MENU-DISH-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-014",
+    "method": "GET",
+    "path": "/v1/menu/dishes",
+    "fr": [
+      "FR-MENU-DISH-006"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-015",
+    "method": "GET",
+    "path": "/v1/menu/cooking-methods",
+    "fr": [
+      "FR-MENU-DISH-007"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-016",
+    "method": "POST",
+    "path": "/v1/menu/cooking-methods",
+    "fr": [
+      "FR-MENU-DISH-007"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-017",
+    "method": "PATCH",
+    "path": "/v1/menu/cooking-methods/{id}",
+    "fr": [
+      "FR-MENU-DISH-007"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-018",
+    "method": "GET",
+    "path": "/v1/menu/dish-conflicts",
+    "fr": [
+      "FR-MENU-DISH-008"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-019",
+    "method": "POST",
+    "path": "/v1/menu/dish-conflicts",
+    "fr": [
+      "FR-MENU-DISH-008"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-020",
+    "method": "POST",
+    "path": "/v1/menu/dishes/{id}/images",
+    "fr": [
+      "FR-MENU-DISH-009"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-021",
+    "method": "POST",
+    "path": "/v1/menu/recipes",
+    "fr": [
+      "FR-MENU-RCP-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-022",
+    "method": "PATCH",
+    "path": "/v1/menu/recipes/{id}",
+    "fr": [
+      "FR-MENU-RCP-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-023",
+    "method": "POST",
+    "path": "/v1/menu/recipes/{id}/transitions",
+    "fr": [
+      "FR-MENU-RCP-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-024",
+    "method": "POST",
+    "path": "/v1/menu/recipes/{id}/versions",
+    "fr": [
+      "FR-MENU-RCP-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-025",
+    "method": "GET",
+    "path": "/v1/menu/effective-recipes",
+    "fr": [
+      "FR-MENU-RCP-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-026",
+    "method": "GET",
+    "path": "/v1/menu/recipe-comparisons",
+    "fr": [
+      "FR-MENU-RCP-006"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-027",
+    "method": "POST",
+    "path": "/v1/menu/dish-prices",
+    "fr": [
+      "FR-MENU-PRC-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-028",
+    "method": "POST",
+    "path": "/v1/menu/dish-prices/{id}/decisions",
+    "fr": [
+      "FR-MENU-PRC-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-029",
+    "method": "GET",
+    "path": "/v1/menu/effective-dish-prices",
+    "fr": [
+      "FR-MENU-PRC-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-030",
+    "method": "GET",
+    "path": "/v1/menu/dishes/{id}/price-history",
+    "fr": [
+      "FR-MENU-PRC-004"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-031",
+    "method": "POST",
+    "path": "/v1/menu/meal-types",
+    "fr": [
+      "FR-MENU-MTY-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-032",
+    "method": "POST",
+    "path": "/v1/menu/meal-types/{id}/status-changes",
+    "fr": [
+      "FR-MENU-MTY-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-033",
+    "method": "PATCH",
+    "path": "/v1/menu/meal-types/{id}",
+    "fr": [
+      "FR-MENU-MTY-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-034",
+    "method": "PATCH",
+    "path": "/v1/menu/meal-types/{id}/visibility",
+    "fr": [
+      "FR-MENU-MTY-004"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-035",
+    "method": "POST",
+    "path": "/v1/menu/menus",
+    "fr": [
+      "FR-MENU-MNU-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-036",
+    "method": "PUT",
+    "path": "/v1/menu/menu-days/{id}/items",
+    "fr": [
+      "FR-MENU-MNU-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-037",
+    "method": "PUT",
+    "path": "/v1/menu/menu-days/{id}/default-dish",
+    "fr": [
+      "FR-MENU-MNU-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-038",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/copies",
+    "fr": [
+      "FR-MENU-MNU-005"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-039",
+    "method": "GET",
+    "path": "/v1/menu/dish-usage",
+    "fr": [
+      "FR-MENU-MNU-006"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-040",
+    "method": "GET",
+    "path": "/v1/menu/menus",
+    "fr": [
+      "FR-MENU-MNU-007"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-041",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/exports",
+    "fr": [
+      "FR-MENU-MNU-008"
+    ],
+    "priority": "P1"
+  },
+  {
+    "id": "API-MENU-042",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/cancellations",
+    "fr": [
+      "FR-MENU-MNU-009"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-043",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/checks",
+    "fr": [
+      "FR-MENU-RUL-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-044",
+    "method": "POST",
+    "path": "/v1/menu/menu-validations",
+    "fr": [
+      "FR-MENU-RUL-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-045",
+    "method": "GET",
+    "path": "/v1/menu/menus/{id}/rule-results",
+    "fr": [
+      "FR-MENU-RUL-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-046",
+    "method": "PUT",
+    "path": "/v1/menu/rule-results/{id}/acceptance-reasons",
+    "fr": [
+      "FR-MENU-RUL-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-047",
+    "method": "GET",
+    "path": "/v1/menu/menu-rules",
+    "fr": [
+      "FR-MENU-RUL-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-048",
+    "method": "POST",
+    "path": "/v1/menu/menu-rule-changes",
+    "fr": [
+      "FR-MENU-RUL-006"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-049",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/submissions",
+    "fr": [
+      "FR-MENU-APV-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-050",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/decisions",
+    "fr": [
+      "FR-MENU-APV-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-051",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/publications",
+    "fr": [
+      "FR-MENU-APV-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-052",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/withdrawals",
+    "fr": [
+      "FR-MENU-APV-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-053",
+    "method": "POST",
+    "path": "/v1/menu/menus/{id}/reopenings",
+    "fr": [
+      "FR-MENU-APV-005"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-054",
+    "method": "GET",
+    "path": "/v1/menu/import-templates/{type}",
+    "fr": [
+      "FR-MENU-IMP-001"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-055",
+    "method": "POST",
+    "path": "/v1/menu/import-validations",
+    "fr": [
+      "FR-MENU-IMP-002"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-056",
+    "method": "POST",
+    "path": "/v1/menu/imports",
+    "fr": [
+      "FR-MENU-IMP-003"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-057",
+    "method": "GET",
+    "path": "/v1/menu/menus/{id}",
+    "fr": [
+      "FR-MENU-MNU-007"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-058",
+    "method": "GET",
+    "path": "/v1/menu/dishes/{id}",
+    "fr": [
+      "FR-MENU-DISH-006"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-059",
+    "method": "GET",
+    "path": "/v1/menu/ingredients/{id}",
+    "fr": [
+      "FR-MENU-ING-004"
+    ],
+    "priority": "P0"
+  },
+  {
+    "id": "API-MENU-060",
+    "method": "GET",
+    "path": "/v1/menu/recipes/{id}",
+    "fr": [
+      "FR-MENU-RCP-005"
+    ],
+    "priority": "P0"
+  }
+]

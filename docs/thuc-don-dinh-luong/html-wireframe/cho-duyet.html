@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe SCR-MENU-13/14: Chờ duyệt và Chi tiết duyệt (Low-Fi)</title>
+<style>
+:root{--bg:#F8F9FA;--card:#FFFFFF;--border:#D1D5DB;--line:#E5E7EB;--text:#111827;--sub:#6B7280;--strong:#1E293B;--err:#B91C1C;--errb:#EF4444}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.45}
+button{font:inherit;cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:6px;padding:8px 13px}
+button:hover:not(:disabled){border-color:var(--strong)}
+button:disabled{cursor:not-allowed;color:#9CA3AF;background:#F3F4F6}
+button.primary{background:var(--strong);color:#fff;border-color:var(--strong);font-weight:600}
+button.primary:disabled{background:#9CA3AF;border-color:#9CA3AF;color:#fff}
+.wfbar{background:#111827;color:#fff;padding:8px 16px;font-size:12.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.wfbar button{background:#1F2937;color:#fff;border-color:#374151;padding:4px 9px;font-size:12px}
+.wfbar button.on{background:#fff;color:#111827}
+.wfbar .sp{flex:1}
+header.app{background:#fff;border-bottom:1px solid var(--border);padding:10px 16px;display:flex;gap:16px;align-items:center}
+.logo{width:34px;height:34px;border:2px dashed #9CA3AF;border-radius:6px;background:var(--line);font-size:10px;color:var(--sub);display:flex;align-items:center;justify-content:center;flex:none}
+nav.top{display:flex;gap:14px;font-size:13px;color:var(--sub);flex-wrap:wrap;flex:1}
+nav.top .cur{color:var(--text);font-weight:700;border-bottom:2px solid var(--strong)}
+.who{font-size:12.5px;color:var(--sub);white-space:nowrap}
+.offline{display:none;background:#fff;border-bottom:2px solid var(--strong);padding:8px 16px;font-weight:600}
+main{padding:16px;max-width:1100px;margin:0 auto}
+h1{font-size:19px;margin-bottom:4px}
+.lead{color:var(--sub);font-size:13px;margin-bottom:12px}
+.msg{display:none;margin-bottom:12px;border:1.5px solid var(--strong);background:#fff;border-radius:8px;padding:10px 12px;font-size:13px}
+.msg.err{border-color:var(--errb);color:var(--err)}
+.msg ul{margin:4px 0 0 18px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chips button{padding:5px 11px;font-size:12.5px;border-radius:999px}
+.chips button.on{background:var(--strong);color:#fff;border-color:var(--strong)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px}
+.ghd{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.ghd h2{font-size:14px;flex:1}
+.ghd .cnt{font-size:12px;color:var(--sub)}
+.ghd button{padding:5px 10px;font-size:12.5px}
+ul.items{list-style:none}
+ul.items li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-bottom:1px solid var(--line)}
+ul.items li:last-child{border-bottom:none}
+ul.items input[type=checkbox]{margin-top:3px;width:17px;height:17px;flex:none}
+.it{flex:1;cursor:pointer;min-width:0}
+.it:hover .tt{text-decoration:underline}
+.tt{font-weight:600}
+.ds{font-size:12.5px;color:var(--sub)}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;border:1px solid var(--strong);border-radius:4px;padding:0 5px;margin-left:5px;vertical-align:1px}
+.tag.dash{border-style:dashed;font-weight:600}
+.tag.fill{background:var(--strong);color:#fff}
+.open{flex:none;padding:5px 10px;font-size:12.5px}
+.empty{padding:40px 16px;text-align:center;color:var(--sub);background:#fff;border:1px dashed var(--border);border-radius:8px}
+/* detail */
+.back{margin-bottom:10px;padding:5px 10px;font-size:12.5px}
+.dhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.sect{padding:12px}
+.sect h3{font-size:13px;margin-bottom:6px;color:var(--sub);text-transform:uppercase;letter-spacing:.03em}
+dl.kv{display:grid;grid-template-columns:170px 1fr;gap:4px 12px;font-size:13.5px}
+dl.kv dt{color:var(--sub)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#F3F4F6;font-size:12.5px}
+td.num{text-align:right;white-space:nowrap}
+.chg{font-weight:700}
+.del{text-decoration:line-through;color:var(--sub)}
+.tblwrap{overflow-x:auto}
+.warn{border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-top:6px;font-size:13px}
+.warn .code{font-family:Consolas,monospace;font-size:11.5px;color:var(--sub)}
+.warn .why{margin-top:4px;padding-left:8px;border-left:3px solid var(--border);color:#374151}
+.actions{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--border);padding:10px 12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-radius:0 0 8px 8px}
+.actions .why{flex:1;font-size:12.5px;color:var(--sub);min-width:180px}
+dialog{border:2px solid var(--strong);border-radius:10px;padding:0;width:min(520px,94vw);margin:auto}
+dialog::backdrop{background:rgba(17,24,39,.45)}
+.dlg{padding:14px}
+.dlg h3{font-size:15px;margin-bottom:8px}
+.dlg textarea{width:100%;min-height:90px;font:inherit;padding:8px;border:1px solid var(--border);border-radius:6px}
+.dlg textarea.miss{border-color:var(--errb)}
+.dlg .e{display:none;color:var(--err);font-size:12.5px;margin-top:4px}
+.dlg .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.note{margin-top:14px;font-size:12px;color:var(--sub);border:1px dashed var(--border);border-radius:8px;padding:10px 12px;background:#fff}
+.note b{color:var(--text)}
+code{font-family:Consolas,monospace;font-size:11.5px}
+body.off button:not([data-st]):not(.back):not(.open){pointer-events:none;opacity:.55}
+@media (max-width:640px){
+ nav.top{display:none}
+ dl.kv{grid-template-columns:1fr}
+ dl.kv dt{margin-top:6px}
+ .actions button{flex:1}
+ .actions .why{flex-basis:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="wfbar" role="note">
+ <b>WIREFRAME · SCR-MENU-13 / 14</b><span>Chờ duyệt — dữ liệu là <u>minh họa</u></span>
+ <span class="sp"></span><span>Xem trạng thái:</span>
+ <button data-st="normal" class="on">Bình thường</button>
+ <button data-st="empty">Rỗng</button>
+ <button data-st="offline">Mất kết nối</button>
+ <button data-st="reset">Nạp lại mẫu</button>
+</div>
+
+<header class="app">
+ <div class="logo">LOGO</div>
+ <nav class="top" aria-label="Điều hướng chính">
+  <span>Nguyên liệu</span><span>Món</span><span>Loại suất</span><span>Thực đơn</span><span class="cur">Chờ duyệt</span><span>Quy tắc</span>
+ </nav>
+ <span class="who">Đăng nhập: <b>Người duyệt 1</b></span>
+</header>
+<div class="offline" id="offline" role="status">Mất kết nối. Chưa gửi được quyết định; hệ thống sẽ tự thử lại khi có mạng.</div>
+
+<main>
+ <div class="msg" id="msg" role="alert"></div>
+
+ <!-- ============ SCR-MENU-13 ============ -->
+ <section id="vList">
+  <h1>Chờ duyệt</h1>
+  <p class="lead" id="lead"></p>
+  <div class="chips" id="chips" role="tablist" aria-label="Lọc theo loại"></div>
+  <div id="groups"></div>
+ </section>
+
+ <!-- ============ SCR-MENU-14 ============ -->
+ <section id="vDetail" style="display:none">
+  <button class="back" id="btnBack">← Về danh sách chờ duyệt</button>
+  <div class="dhead"><h1 id="dTitle"></h1><span id="dTags"></span></div>
+  <p class="lead" id="dMeta"></p>
+  <article class="card">
+   <div id="dBody"></div>
+   <footer class="actions">
+    <span class="why" id="dWhy"></span>
+    <button id="btnReject">Trả lại</button>
+    <button class="primary" id="btnApprove">Duyệt</button>
+   </footer>
+  </article>
+ </section>
+
+ <div class="note">
+  <b>Ghi chú wireframe.</b> Tham chiếu: <code>UC-MENU-010</code> · <code>FR-MENU-DISH-004</code>, <code>RCP-003</code>, <code>PRC-002</code>, <code>APV-002</code>, <code>RUL-006</code>, <code>RUL-007</code> · <code>BR-SEC-008</code>, <code>BR-CAT-009</code>, <code>BR-MNU-008</code>.
+  Tình huống có sẵn trong dữ liệu mẫu: tự duyệt bị chặn (Tôm luộc) · duyệt món khi công thức chưa duyệt (Gà rán) · thực đơn cần 2 người duyệt (Suất 35.000đ) · đề nghị đã lỗi thời (Đậu rán) · công thức phiên bản mới có so sánh (Thịt kho trứng cút).<br>
+  <b>Minh họa, chưa duyệt:</b> tên món, định lượng, giá, điểm quy tắc. Ai là người duyệt chờ <code>O-06</code>; người duyệt giá có tách riêng không chờ <code>E2-Q7</code>. Bố cục dùng được từ chiều rộng 360 px vì chưa biết người duyệt dùng máy tính hay điện thoại.
+ </div>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlgT">
+ <div class="dlg">
+  <h3 id="dlgT">Trả lại</h3>
+  <label for="reason" style="font-size:13px;font-weight:600;display:block;margin-bottom:6px">Lý do (bắt buộc, từ 10 ký tự)</label>
+  <textarea id="reason" placeholder="Người tạo sẽ nhận được lý do này"></textarea>
+  <div class="e" id="reasonErr">ERR-SYS-422-01 · Vui lòng nhập lý do (ít nhất 10 ký tự).</div>
+  <div class="row"><button id="dlgCancel">Huỷ</button><button class="primary" id="dlgOk">Xác nhận trả lại</button></div>
+ </div>
+</dialog>
+
+<script>
+'use strict';
+/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+const ME='Người duyệt 1';
+const TYPES=[['dish','Món'],['recipe','Công thức'],['price','Giá bán'],['change','Đề nghị thay đổi'],['menu','Thực đơn']];
+const SAMPLE=[
+ {id:'d1',type:'dish',title:'Cá hấp',by:'Dinh dưỡng viên',at:'09/11 14:20',desc:'Món chính · Cá · Hấp · Healthy',
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Cá'],['Phương pháp chế biến','Hấp (ít dầu mỡ)'],['Healthy','Có'],['Vị chua','Không'],['Kết cấu','Trung tính'],['Thanh nhẹ','Có'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Có — cần bảng tính cost riêng'],['Chất gây dị ứng','Cá']],recipe:'r0',recipeState:'ACTIVE'},
+ {id:'d2',type:'dish',title:'Gà rán',by:'Dinh dưỡng viên',at:'09/11 15:02',desc:'Món chính · Gà · Chiên',
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Gà'],['Phương pháp chế biến','Chiên'],['Healthy','Không'],['Vị chua','Không'],['Kết cấu','Khô'],['Thanh nhẹ','Không'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Không'],['Chất gây dị ứng','—']],recipe:'r1',recipeState:'PENDING'},
+ {id:'d3',type:'dish',title:'Tôm luộc',by:'Dinh dưỡng viên',editedBy:ME,at:'10/11 08:40',desc:'Món chính · Tôm · Luộc · Healthy',
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Tôm'],['Phương pháp chế biến','Luộc (ít dầu mỡ)'],['Healthy','Có'],['Nhóm cost','Cao'],['Đặc thù','Có — cần bảng tính cost riêng'],['Chất gây dị ứng','Giáp xác']],recipe:'r0',recipeState:'ACTIVE'},
+ {id:'r1',type:'recipe',title:'Gà rán — công thức v1',by:'Dinh dưỡng viên',at:'09/11 15:00',desc:'Phiên bản đầu tiên · hiệu lực từ 16/11/2026',dish:'Gà rán',
+  lines:[['Gà','Có','140','145','150','g'],['Dầu ăn','Không','10','10','12','ml'],['Bột chiên','Không','8','10','10','g']]},
+ {id:'r2',type:'recipe',title:'Thịt kho trứng cút — công thức v2',by:'Dinh dưỡng viên',at:'10/11 09:15',desc:'Thay v1 · hiệu lực từ 23/11/2026',dish:'Thịt kho trứng cút',reason:'Giá thịt lợn tăng; giảm định lượng thịt về mức sàn của bảng chuẩn.',
+  diff:[['Thịt lợn','Có','65–70 g · chuẩn 70','65–70 g · chuẩn 65','chg'],['Trứng cút','Không','3 quả','3 quả',''],['Hành khô','Không','—','3 g','add'],['Đường thắng','Không','5 g','—','del']]},
+ {id:'p1',type:'price',title:'Cá hấp — 22.000đ',by:'Dinh dưỡng viên',at:'09/11 14:25',desc:'Giá đầu tiên · hiệu lực từ 01/12/2026',cur:'Chưa có',next:'22.000đ',from:'01/12/2026'},
+ {id:'p2',type:'price',title:'Bò xào — 26.000đ',by:'Dinh dưỡng viên',at:'10/11 09:30',desc:'Đang 24.000đ · hiệu lực từ 01/12/2026',cur:'24.000đ (từ 01/10/2026)',next:'26.000đ',from:'01/12/2026'},
+ {id:'c1',type:'change',title:'Sườn sốt chua ngọt — đổi thuộc tính',by:'Dinh dưỡng viên',at:'10/11 10:05',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Sườn sốt chua ngọt',reason:'Gắn thiếu vị chua khi tạo món; bộ kiểm đang bỏ sót quy tắc BR-MENU-030.',
+  changes:[['Vị chua','Không','Có']],impact:'2 thực đơn nháp có món này sẽ được kiểm lại. Thực đơn đang chờ duyệt và đã duyệt giữ kết quả cũ.'},
+ {id:'c2',type:'change',title:'BR-MENU-012 — đổi tham số',by:'Dinh dưỡng viên',at:'10/11 10:20',desc:'Quy tắc · số ngày liên tiếp tối đa',target:'Quy tắc: Nhóm nguyên liệu không quá N ngày liền',reason:'Thịt lợn là nguyên liệu dùng nhiều nhất; giới hạn 2 ngày làm gần như mọi thực đơn bị cảnh báo.',
+  changes:[['max_consecutive_days','2','3']],impact:'Quy tắc được nới lỏng. Áp dụng cho mọi thực đơn nháp từ lần kiểm kế tiếp.'},
+ {id:'c3',type:'change',title:'Đậu rán — đổi thuộc tính',by:'Dinh dưỡng viên',at:'08/11 16:40',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Đậu rán',reason:'Sửa phương pháp chế biến cho đúng.',stale:true,
+  changes:[['Phương pháp chế biến','Rán','Chiên']],impact:''},
+ {id:'m1',type:'menu',title:'Suất 40.000đ — tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:00',desc:'Điểm 91 · 0 vi phạm bắt buộc · 3 cảnh báo',score:91,need:1,done:[],
+  warns:[['BR-MENU-012','−3','Lợn ở món chính 3 ngày liền (T2, T3, T4) · giới hạn 2','Khách yêu cầu có thịt lợn mỗi ngày đầu tuần; đã đổi cách chế biến mỗi ngày.'],['BR-MENU-030','−3','T5: Cá sốt cà chua, Dưa chua cùng vị chua · giới hạn 1','Dưa chua là món ăn kèm lượng nhỏ, bếp đề nghị giữ.'],['BR-MENU-016','−2','Bắp cải luộc lặp T2 và T3','']]},
+ {id:'m2',type:'menu',title:'Suất 35.000đ — tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:30',desc:'Điểm 74 · 0 vi phạm bắt buộc · 9 cảnh báo · cần 2 người duyệt',score:74,need:2,done:[],
+  warns:[['BR-MENU-013','−3','Thịt lợn luộc xuất hiện 2 lần (T3, T6) · giới hạn 1','Thiếu món Healthy đã duyệt trong mức giá này.'],['BR-MENU-020','−3','T2: Thịt kho đậu, Cá kho cùng kho','Hai món kho khác nhóm nguyên liệu, bếp chạy song song được.'],['BR-MENU-022','−3','T4: 3 món chiên · giới hạn 2','Sẽ thay Trứng cuộn bằng Giò lụa nếu người duyệt yêu cầu.']],more:6}
+];
+const GRID=[['Vị trí','T2','T3','T4','T5','T6','T7'],['Món chính 1','Thịt kho trứng cút','Thịt rang tôm','Thịt lợn luộc ★','Bò sốt vang','Cá sốt cà chua','Sườn sốt chua ngọt'],['Món chính 2','Cá kho','Gà rán','Bò xào','Ếch chiên','Gà kho gừng','Cá rán'],['Món chính 3','Gà luộc ★','Cá hấp','Cá rán','Tôm luộc','Thịt lợn luộc','Gà luộc'],['Món phụ 1','Đậu rán','Trứng cuộn','Giò lụa','Cá cơm rang','Lạc rang','Su su xào thịt'],['Món phụ 2','Lạc rang','Khoai tây xào thịt','Su su xào thịt','Trứng đúc thịt','Dưa chua','Đậu rán'],['Rau','Bắp cải luộc','Bắp cải luộc','Cải thảo luộc','Rau muống luộc','Cải chíp luộc','Củ quả luộc'],['Canh','Canh rau cải','Canh bí','Canh mồng tơi','Canh khoai','Canh rau cải','Canh bí']];
+
+let items, filter='all', cur=null, approvedRecipes=new Set();
+const $=id=>document.getElementById(id);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const pending=()=>items.filter(i=>!i.gone);
+const selfBlocked=i=>i.by===ME||i.editedBy===ME||(i.done||[]).includes(ME);
+
+function showMsg(html,err){const m=$('msg');m.className='msg'+(err?' err':'');m.innerHTML=html;m.style.display=html?'block':'none';if(html)window.scrollTo({top:0,behavior:'smooth'});}
+function tags(i){let t='';
+ if(i.stale)t+='<span class="tag dash">LỖI THỜI</span>';
+ if(i.type==='menu')t+=`<span class="tag${i.done.length?' fill':''}">ĐÃ DUYỆT ${i.done.length}/${i.need}</span>`;
+ if(i.by===ME||i.editedBy===ME)t+='<span class="tag dash">BẠN ĐÃ SỬA</span>';
+ return t;}
+
+/* ====== SCR-MENU-13 ====== */
+function renderList(){
+ const p=pending();
+ $('lead').textContent=p.length?`${p.length} nội dung đang chờ bạn duyệt.`:'';
+ $('chips').style.display=p.length?'flex':'none';
+ $('chips').innerHTML=[['all','Tất cả']].concat(TYPES).map(([k,lb])=>{const n=k==='all'?p.length:p.filter(i=>i.type===k).length;return `<button data-f="${k}" class="${filter===k?'on':''}" role="tab">${lb} (${n})</button>`;}).join('');
+ if(!p.length){$('groups').innerHTML='<div class="empty"><b>Không có nội dung chờ duyệt.</b><br>Khi dinh dưỡng viên gửi duyệt, nội dung sẽ xuất hiện ở đây và bạn nhận được thông báo.</div>';return;}
+ $('groups').innerHTML=TYPES.filter(([k])=>filter==='all'||filter===k).map(([k,lb])=>{const list=p.filter(i=>i.type===k);if(!list.length)return '';
+  return `<section class="card" data-g="${k}"><div class="ghd"><input type="checkbox" data-all="${k}" aria-label="Chọn tất cả ${lb}"><h2>${lb}</h2><span class="cnt">${list.length} mục</span><button data-bulk="${k}" disabled>Duyệt mục đã chọn</button></div><ul class="items">`+
+   list.map(i=>`<li><input type="checkbox" data-id="${i.id}" aria-label="Chọn ${i.title}"${i.stale?' disabled':''}><div class="it" data-open="${i.id}"><div class="tt">${i.title}${tags(i)}</div><div class="ds">${i.desc}</div><div class="ds">Gửi bởi ${i.by} · ${i.at}</div></div><button class="open" data-open="${i.id}">Xem</button></li>`).join('')+'</ul></section>';}).join('');
+}
+$('chips').addEventListener('click',e=>{const f=e.target.dataset.f;if(!f)return;filter=f;renderList();});
+$('groups').addEventListener('click',e=>{
+ const o=e.target.closest('[data-open]');if(o){openDetail(o.dataset.open);return;}
+ const b=e.target.dataset.bulk;if(b)bulk(b);
+});
+$('groups').addEventListener('change',e=>{
+ const g=e.target.closest('section');if(!g)return;
+ if(e.target.dataset.all)g.querySelectorAll('input[data-id]:not(:disabled)').forEach(c=>c.checked=e.target.checked);
+ g.querySelector('[data-bulk]').disabled=!g.querySelector('input[data-id]:checked');
+});
+
+/* ====== Quyết định ====== */
+// trả về null nếu duyệt được, hoặc chuỗi lỗi
+function approveOne(i,batchIds){
+ if(i.stale)return 'Đề nghị đã lỗi thời; người đề nghị cần gửi lại.';
+ if(selfBlocked(i))return (i.done||[]).includes(ME)?'ERR-SYS-403-01 · Bạn đã duyệt thực đơn này; cần một người duyệt khác.':'ERR-SYS-403-01 · Bạn không thể duyệt nội dung do chính mình tạo hoặc sửa.';
+ if(i.type==='dish'&&i.recipeState!=='ACTIVE'&&!approvedRecipes.has(i.recipe)&&!(batchIds||[]).includes(i.recipe))return 'ERR-MENU-422-06 · Món cần có công thức đã duyệt. Hãy duyệt công thức trước hoặc cùng lúc.';
+ if(i.type==='menu'){i.done.push(ME);if(i.done.length<i.need)return '';} // '' = ghi nhận, chưa đủ người
+ if(i.type==='recipe')approvedRecipes.add(i.id);
+ i.gone=true;return null;
+}
+function bulk(type){
+ const ids=[...document.querySelectorAll(`section[data-g="${type}"] input[data-id]:checked`)].map(c=>c.dataset.id);
+ let ok=0,part=0;const errs=[];
+ ids.forEach(id=>{const i=items.find(x=>x.id===id);const r=approveOne(i,ids);if(r===null)ok++;else if(r==='')part++;else errs.push(`<li><b>${i.title}</b>: ${r}</li>`);});
+ renderList();
+ showMsg(`Đã duyệt ${ok} mục${part?`, ghi nhận ${part} mục chờ người duyệt thứ hai`:''}${errs.length?`; ${errs.length} mục lỗi:<ul>${errs.join('')}</ul>`:'.'}`,errs.length>0&&ok===0&&part===0);
+}
+
+/* ====== SCR-MENU-14 ====== */
+function tbl(head,rows,cls){return `<div class="tblwrap"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,j)=>`<td${cls&&cls[j]?` class="${cls[j]}"`:''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
+function body(i){
+ if(i.type==='dish')return `<div class="sect"><h3>Thuộc tính</h3><dl class="kv">${i.attrs.map(a=>`<dt>${a[0]}</dt><dd>${a[1]}</dd>`).join('')}</dl></div><div class="sect"><h3>Công thức đi kèm</h3>${i.recipeState==='ACTIVE'||approvedRecipes.has(i.recipe)?'Đã có công thức đang hiệu lực.':'Công thức <b>chưa duyệt</b> — đang nằm ở nhóm Công thức của danh sách chờ duyệt. Duyệt món sẽ bị chặn cho đến khi công thức được duyệt.'}</div>`;
+ if(i.type==='recipe'&&i.lines)return `<div class="sect"><h3>Định lượng sống cho 1 suất · ${i.dish}</h3>${tbl(['Nguyên liệu','Nguyên liệu chính','Tối thiểu','Chuẩn','Tối đa','Đơn vị'],i.lines,['','','num','num','num',''])}</div>`;
+ if(i.type==='recipe')return `<div class="sect"><h3>Lý do tạo phiên bản mới</h3>${i.reason}</div><div class="sect"><h3>So sánh với phiên bản đang hiệu lực · ${i.dish}</h3>${tbl(['Nguyên liệu','Nguyên liệu chính','v1 (đang hiệu lực)','v2 (đề nghị)','Thay đổi'],i.diff.map(d=>[d[0],d[1],d[4]==='add'?'—':`<span class="${d[4]==='del'?'del':''}">${d[2]}</span>`,d[4]==='del'?'—':`<span class="${d[4]?'chg':''}">${d[3]}</span>`,{chg:'Đổi định lượng',add:'Thêm',del:'Bỏ','':'—'}[d[4]]]))}</div>`;
+ if(i.type==='price')return `<div class="sect"><h3>Giá bán (đã gồm VAT)</h3><dl class="kv"><dt>Giá đang hiệu lực</dt><dd>${i.cur}</dd><dt>Giá đề nghị</dt><dd><b>${i.next}</b></dd><dt>Hiệu lực từ</dt><dd>${i.from}</dd></dl></div><div class="sect"><h3>Lưu ý</h3>Giá đã hiệu lực không sửa được; muốn đổi phải tạo giá mới (BR-CAT-016).</div>`;
+ if(i.type==='change')return `<div class="sect"><h3>Đối tượng</h3>${i.target}</div><div class="sect"><h3>Thay đổi đề nghị</h3>${tbl(['Trường','Giá trị hiện tại','Giá trị đề nghị'],i.changes.map(c=>[c[0],c[1],`<span class="chg">${c[2]}</span>`]))}</div><div class="sect"><h3>Lý do</h3>${i.reason}</div>${i.stale?'<div class="sect"><h3>Trạng thái</h3>Bản ghi gốc đã thay đổi sau khi đề nghị được gửi. Đề nghị này <b>không duyệt được</b>; người đề nghị đã được báo gửi lại.</div>':`<div class="sect"><h3>Ảnh hưởng</h3>${i.impact}</div>`}`;
+ return `<div class="sect"><h3>Kết quả kiểm quy tắc</h3><dl class="kv"><dt>Điểm quy tắc</dt><dd><b>${i.score} / 100</b>${i.score<80?' — dưới 80, cần 2 người duyệt (BR-MNU-008)':''}</dd><dt>Vi phạm bắt buộc</dt><dd>0</dd><dt>Người đã duyệt</dt><dd>${i.done.length?i.done.join(', '):'Chưa có'} (${i.done.length}/${i.need})</dd></dl></div>
+  <div class="sect"><h3>Thực đơn (★ = món mặc định)</h3>${tbl(GRID[0],GRID.slice(1))}</div>
+  <div class="sect"><h3>Cảnh báo và lý do chấp nhận của người dựng</h3>${i.warns.map(w=>`<div class="warn"><span class="code">${w[0]}</span> <span class="tag${w[1]==='−3'?'':' dash'}">CẢNH BÁO ${w[1]}</span><div>${w[2]}</div>${w[3]?`<div class="why">Lý do: ${w[3]}</div>`:'<div class="ds">Mức vừa — không bắt buộc lý do.</div>'}</div>`).join('')}${i.more?`<div class="ds" style="margin-top:6px">… và ${i.more} cảnh báo mức vừa và nhẹ khác.</div>`:''}</div>`;
+}
+function openDetail(id){
+ cur=items.find(x=>x.id===id);showMsg('');
+ $('vList').style.display='none';$('vDetail').style.display='block';
+ $('dTitle').textContent=cur.title;$('dTags').innerHTML=tags(cur);
+ $('dMeta').textContent=`${TYPES.find(t=>t[0]===cur.type)[1]} · gửi bởi ${cur.by} · ${cur.at}`+(cur.editedBy?` · sửa cuối bởi ${cur.editedBy}`:'');
+ $('dBody').innerHTML=body(cur);
+ const blocked=selfBlocked(cur);
+ $('btnApprove').disabled=blocked||!!cur.stale;$('btnReject').disabled=!!cur.stale||(cur.done||[]).includes(ME);
+ $('dWhy').textContent=cur.stale?'Đề nghị đã lỗi thời nên không duyệt hoặc trả lại được.':(cur.done||[]).includes(ME)?'Bạn đã duyệt; đang chờ người duyệt thứ hai.':blocked?'Bạn là người tạo hoặc người sửa cuối nên không duyệt được (BR-SEC-008).':cur.type==='menu'&&cur.need===2?`Thực đơn cần 2 người duyệt; hiện ${cur.done.length}/2.`:'';
+ window.scrollTo(0,0);
+}
+function backToList(){cur=null;$('vDetail').style.display='none';$('vList').style.display='block';renderList();}
+$('btnBack').addEventListener('click',()=>{showMsg('');backToList();});
+$('btnApprove').addEventListener('click',()=>{
+ const i=cur,r=approveOne(i);
+ if(r===null){backToList();showMsg(`Đã duyệt <b>${i.title}</b>. Người tạo đã nhận thông báo.`);}
+ else if(r===''){openDetail(i.id);showMsg(`Đã ghi nhận quyết định duyệt của bạn (${i.done.length}/${i.need}). Thực đơn vẫn chờ người duyệt thứ hai.`);}
+ else showMsg(r,true);
+});
+$('btnReject').addEventListener('click',()=>{$('dlgT').textContent='Trả lại: '+cur.title;$('reason').value='';$('reason').classList.remove('miss');$('reasonErr').style.display='none';$('dlg').showModal();$('reason').focus();});
+$('dlgCancel').addEventListener('click',()=>$('dlg').close());
+$('dlgOk').addEventListener('click',()=>{
+ if($('reason').value.trim().length<10){$('reason').classList.add('miss');$('reasonErr').style.display='block';return;}
+ const i=cur;i.gone=true;$('dlg').close();backToList();
+ const to={dish:'Món về trạng thái nháp.',recipe:'Công thức về trạng thái nháp.',menu:'Thực đơn về trạng thái nháp.',price:'Giá chuyển trạng thái bị từ chối.',change:'Đề nghị chuyển trạng thái bị từ chối; bản ghi gốc không đổi.'}[i.type];
+ showMsg(`Đã trả lại <b>${i.title}</b>. ${to} Người tạo đã nhận thông báo kèm lý do.`);
+});
+$('reason').addEventListener('input',()=>{$('reason').classList.remove('miss');$('reasonErr').style.display='none';});
+
+/* ====== BỘ CHUYỂN TRẠNG THÁI (chỉ có ở wireframe) ====== */
+function reset(empty){items=clone(SAMPLE);if(empty)items.forEach(i=>i.gone=true);approvedRecipes=new Set();filter='all';
+ document.body.classList.remove('off');$('offline').style.display='none';showMsg('');backToList();}
+document.querySelector('.wfbar').addEventListener('click',e=>{
+ const st=e.target.dataset.st;if(!st)return;
+ document.querySelectorAll('.wfbar button').forEach(b=>b.classList.toggle('on',b.dataset.st===(st==='reset'?'normal':st)));
+ if(st==='empty')reset(true);
+ else if(st==='offline'){reset(false);$('offline').style.display='block';document.body.classList.add('off');}
+ else reset(false);
+});
+reset(false);
+</script>
+</body>
+</html>
