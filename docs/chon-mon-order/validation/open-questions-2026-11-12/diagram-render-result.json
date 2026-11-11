@@ -1,0 +1,50 @@
+[
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/data-dictionary.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/erd.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/flows.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/flows.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/states.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/states.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "srs/usecase-diagram.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "chon-mon-order",
+    "source": "ui/user-flow.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  }
+]

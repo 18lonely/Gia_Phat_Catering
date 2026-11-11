@@ -1,0 +1,9 @@
+{
+  "kind": "DOCUMENT_COVERAGE_ONLY",
+  "dto_reviewed": 34,
+  "gap_groups": 14,
+  "gap_groups_closed": 0,
+  "protected_files_checked": 13,
+  "backend_tests_executed": 0,
+  "errors": []
+}

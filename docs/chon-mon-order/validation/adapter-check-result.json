@@ -1,0 +1,8 @@
+{
+  "kind": "STATIC_DOCUMENT_ORACLE_ONLY",
+  "routes_reviewed": 26,
+  "routes_executed": 0,
+  "oracle_variants": 6,
+  "protected_files_checked": 12,
+  "errors": []
+}

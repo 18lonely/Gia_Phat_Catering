@@ -1,0 +1,14 @@
+{
+  "kind": "WIREFRAME_ONLY",
+  "checks": [
+    "selection: quota equal/+1, swap counter, replay, offline/stale/empty",
+    "QR revoked, guest week denied, week gate/atomic/partial mock",
+    "T<S+C, confirmation/cancel, missing default, deadline guard, lock/replay, reminder gate",
+    "change request separation/gate/replay, old immutable plan, text escaping",
+    "proxy evidence/after lock, health gate has no form",
+    "13 screens x 1440/390/360px no page overflow",
+    "preview search/navigation, one visible section"
+  ],
+  "jsErrors": [],
+  "backendTests": 0
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "DOCUMENT_AND_SYNTHETIC_CHECK_ONLY",
+  "backend_tests_executed": 0,
+  "fixture_files_read": 4,
+  "json_fixtures_checked": 3,
+  "case_mappings": 22,
+  "case_counts": {
+    "test-cases.md": {
+      "cases": 10,
+      "NOT_RUN": 2,
+      "BLOCKED": 8
+    },
+    "system-test-cases.md": {
+      "cases": 12,
+      "NOT_RUN": 5,
+      "BLOCKED": 7
+    }
+  },
+  "protected_files_checked": 1194,
+  "changed_existing_files": [
+    "docs/chon-mon-order/gap-analysis.md",
+    "docs/chon-mon-order/preview.html",
+    "docs/chon-mon-order/review/contract-gap-register.md",
+    "docs/chon-mon-order/test/fixtures/README.md",
+    "docs/gia-phat/review/next-session-prompt.md",
+    "docs/gia-phat/review/progress-assessment.md",
+    "docs/project-dashboard.md"
+  ],
+  "new_files": [
+    "docs/chon-mon-order/validation/check-fixture-review.py",
+    "docs/chon-mon-order/validation/fixture-review-baseline-sha256.json",
+    "docs/chon-mon-order/validation/fixture-review-check-result.json",
+    "docs/chon-mon-order/validation/fixture-review-report.md"
+  ],
+  "errors": []
+}

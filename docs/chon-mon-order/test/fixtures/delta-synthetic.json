@@ -1,0 +1,72 @@
+{
+  "synthetic": true,
+  "purpose": "DOCUMENT_REVIEW_ONLY",
+  "baseline": [
+    {
+      "dishId": "95001",
+      "recipeId": "98001",
+      "portionCode": "STD",
+      "role": "MAIN",
+      "unit": "serving",
+      "qty": 60
+    },
+    {
+      "dishId": "95001",
+      "recipeId": "98002",
+      "portionCode": "LARGE",
+      "role": "MAIN",
+      "unit": "serving",
+      "qty": 40
+    }
+  ],
+  "target": [
+    {
+      "dishId": "95001",
+      "recipeId": "98003",
+      "portionCode": "STD",
+      "role": "MAIN",
+      "unit": "serving",
+      "qty": 60
+    },
+    {
+      "dishId": "95001",
+      "recipeId": "98002",
+      "portionCode": "LARGE",
+      "role": "MAIN",
+      "unit": "serving",
+      "qty": 40
+    }
+  ],
+  "expectedDelta": [
+    {
+      "recipeId": "98001",
+      "qtyDelta": -60
+    },
+    {
+      "recipeId": "98003",
+      "qtyDelta": 60
+    }
+  ],
+  "ambiguousRequest": {
+    "dishId": "95001",
+    "delta": 5
+  },
+  "mixedUnits": [
+    {
+      "dishId": "95001",
+      "recipeId": "98001",
+      "portionCode": "STD",
+      "role": "MAIN",
+      "unit": "serving",
+      "qty": 60
+    },
+    {
+      "dishId": "95001",
+      "recipeId": "98001",
+      "portionCode": "STD",
+      "role": "SIDE",
+      "unit": "g",
+      "qty": 6000
+    }
+  ]
+}

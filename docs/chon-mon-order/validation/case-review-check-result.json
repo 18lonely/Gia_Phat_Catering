@@ -1,0 +1,35 @@
+{
+  "kind": "DOCUMENT_PRESERVATION_ONLY",
+  "backend_tests_executed": 0,
+  "protected_files_checked": 1188,
+  "case_counts": {
+    "docs/chon-mon-order/test/test-cases.md": {
+      "cases": 10,
+      "NOT_RUN": 2,
+      "BLOCKED": 8
+    },
+    "docs/chon-mon-order/test/system-test-cases.md": {
+      "cases": 12,
+      "NOT_RUN": 5,
+      "BLOCKED": 7
+    }
+  },
+  "changed_existing_files": [
+    "docs/chon-mon-order/gap-analysis.md",
+    "docs/chon-mon-order/preview.html",
+    "docs/chon-mon-order/review/contract-gap-register.md",
+    "docs/chon-mon-order/test/system-test-cases.md",
+    "docs/chon-mon-order/test/test-cases.md",
+    "docs/gia-phat/review/next-session-prompt.md",
+    "docs/gia-phat/review/progress-assessment.md",
+    "docs/project-dashboard.md"
+  ],
+  "new_files": [
+    "docs/chon-mon-order/validation/case-review-baseline-sha256.json",
+    "docs/chon-mon-order/validation/case-review-check-result.json",
+    "docs/chon-mon-order/validation/case-review-original.json",
+    "docs/chon-mon-order/validation/case-review-report.md",
+    "docs/chon-mon-order/validation/check-case-review.py"
+  ],
+  "errors": []
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "DOCUMENT_CHECK_ONLY",
+  "features": 19,
+  "P0": 14,
+  "P1": 5,
+  "usecases": 19,
+  "AC": 57,
+  "new_test_cases": 57,
+  "legacy_tests": 10,
+  "NOT_RUN": 29,
+  "BLOCKED": 28,
+  "http_endpoints": 26,
+  "ports": 2,
+  "gate_features": [
+    "FEAT-046",
+    "FEAT-047"
+  ],
+  "wireframe_screens": 13,
+  "schema_tables": 65,
+  "schema_unchanged": true,
+  "backend_tests_executed": 0,
+  "errors": []
+}

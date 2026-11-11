@@ -1,0 +1,110 @@
+{
+  "synthetic": true,
+  "purpose": "BA_QA_REVIEW_ONLY_NOT_API_PAYLOAD",
+  "scope": {
+    "customerId": "91001",
+    "servicePointId": "92001",
+    "kitchenId": "93001",
+    "serviceDate": "2026-11-20",
+    "shift": "LUNCH"
+  },
+  "otherScope": {
+    "customerId": "91002",
+    "servicePointId": "92002",
+    "kitchenId": "93002"
+  },
+  "summary": {
+    "version": 41,
+    "total": null,
+    "remaining": null,
+    "selected": 2,
+    "coordinator": 0
+  },
+  "selections": [
+    {
+      "id": "94001",
+      "memberRef": "synthetic-member-a",
+      "dishId": "95001",
+      "version": 3
+    },
+    {
+      "id": "94002",
+      "memberRef": "synthetic-member-b",
+      "dishId": "95002",
+      "version": 1
+    }
+  ],
+  "counters": {
+    "95001": 1,
+    "95002": 1
+  },
+  "counterMismatch": {
+    "95001": 2,
+    "95002": 1
+  },
+  "order": {
+    "id": "96001",
+    "version": 8,
+    "revisionId": "97001",
+    "revisionNo": 2,
+    "capturedOrderVersion": 8
+  },
+  "plan": {
+    "revisionNo": 5,
+    "sources": [
+      {
+        "orderId": "96001",
+        "revisionId": "97001",
+        "revisionNo": 2,
+        "qty": 60
+      },
+      {
+        "orderId": "96002",
+        "revisionId": "97002",
+        "revisionNo": 1,
+        "qty": 40
+      }
+    ],
+    "expectedPointIds": [
+      "92001",
+      "92003",
+      "92004"
+    ],
+    "includedPointIds": [
+      "92001",
+      "92003"
+    ],
+    "missingPointIds": [
+      "92004"
+    ],
+    "excludedPointIds": []
+  },
+  "planReplacement": {
+    "orderId": "96001",
+    "revisionId": "97003",
+    "revisionNo": 3,
+    "qty": 65,
+    "expectedQty": 105
+  },
+  "retry": {
+    "key": "synthetic-operation-001",
+    "sameBodyHash": "synthetic-hash-a",
+    "changedBodyHash": "synthetic-hash-b",
+    "stages": [
+      "BEFORE_COMMIT",
+      "AFTER_COMMIT_BEFORE_RESPONSE",
+      "AFTER_OUTBOX_BEFORE_PLAN"
+    ]
+  },
+  "missingSourceVariants": [
+    "TOTAL_NULL",
+    "DEFAULT_MISSING",
+    "MENU_WITHDRAWN",
+    "EXPECTED_SCOPE_UNKNOWN"
+  ],
+  "policyScenarios": {
+    "C_TO_S": "BLOCKED_ORD_Q06",
+    "EXCEEDS_T": "BLOCKED_ORD_Q06",
+    "MULTI_CUSTOMER_COORDINATOR": "BLOCKED_ORD_Q11"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "synthetic": true,
+  "purpose": "ADAPTER_ORACLE_REVIEW_ONLY",
+  "cases": [
+    {
+      "id": "complete_zero",
+      "source": {
+        "kind": "DISH",
+        "totals": {
+          "energyKcal": "0.00",
+          "proteinG": "0.00",
+          "fatG": "0.00",
+          "carbG": "0.00"
+        },
+        "breakdown": [
+          {
+            "ingredientId": "99001",
+            "internalNote": "synthetic-private"
+          }
+        ]
+      },
+      "expectedNutrition": {
+        "energyKcal": "0.00",
+        "proteinG": "0.00",
+        "fatG": "0.00",
+        "carbG": "0.00",
+        "missing": []
+      }
+    },
+    {
+      "id": "missing_source",
+      "source": {
+        "error": {
+          "code": "ERR-NUTR-422-02",
+          "missing": [
+            {
+              "ingredientId": "99001",
+              "field": "gramsPerUnit"
+            }
+          ]
+        }
+      },
+      "expectedNutrition": {
+        "energyKcal": null,
+        "proteinG": null,
+        "fatG": null,
+        "carbG": null,
+        "missing": [
+          "Chưa đủ dữ liệu dinh dưỡng"
+        ]
+      }
+    },
+    {
+      "id": "dependency_timeout",
+      "expectedError": {
+        "code": "ERR-ORD-503-01",
+        "message": "Chức năng chưa sẵn sàng.",
+        "details": [
+          {
+            "field": "source",
+            "reason": "DEPENDENCY_UNAVAILABLE"
+          }
+        ],
+        "requestId": "synthetic-read-003"
+      }
+    },
+    {
+      "id": "out_of_scope",
+      "expectedError": {
+        "code": "ERR-ORD-404-01",
+        "message": "Không tìm thấy dữ liệu trong phạm vi của bạn.",
+        "details": [],
+        "requestId": "synthetic-read-004"
+      }
+    },
+    {
+      "id": "unknown_allergens",
+      "expectedAllergens": [],
+      "expectedAllergenStatus": "UNKNOWN"
+    },
+    {
+      "id": "authorized_empty_list",
+      "expectedList": {
+        "items": [],
+        "page": 1,
+        "pageSize": 20,
+        "total": 0
+      }
+    }
+  ]
+}

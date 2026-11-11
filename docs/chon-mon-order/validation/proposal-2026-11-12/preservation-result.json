@@ -1,0 +1,24 @@
+{
+  "kind": "DOCUMENT_PROPOSAL_AND_PRESERVATION_ONLY",
+  "backend_tests_executed": 0,
+  "baseline_files": 1224,
+  "protected_files_unchanged": 1218,
+  "changed_files": {
+    "docs/chon-mon-order/gap-analysis.md": "1a29000f8c64b4a793c53b386e02603e521b19b5cd0b6b68ae07b1af0ec6a74b",
+    "docs/chon-mon-order/preview.html": "856451c055371198354124e6947e2bdd81290fb73f3389f32b1195cb8c93d59d",
+    "docs/chon-mon-order/review/contract-gap-register.md": "1a67225693841517260d1939939ecc6b5ef321061ebdf60a972fc93988a8fed8",
+    "docs/gia-phat/review/next-session-prompt.md": "dd93a49f83796ae813257425012f74a04398b4fc7e347c1e9f00f14e9baf4b01",
+    "docs/gia-phat/review/progress-assessment.md": "de281a95878c58f24471b50acd6bc596eed0d57c48750ba7eca65920613c22e5",
+    "docs/project-dashboard.md": "f048482797b344ffdd10255e06184c7346515cbaad93045e4958f338211d9d40"
+  },
+  "new_files_excluding_this_result": {
+    "docs/chon-mon-order/validation/proposal-2026-11-12/baseline-sha256.json": "a31853484d70cadd7f31146c29528ef6645dbca35abbff9299f54b1fd3e08a24",
+    "docs/chon-mon-order/validation/proposal-2026-11-12/check-e6-result.json": "3d1e6f93748609d86e2e7a52ee463728a3dafdace2f9d1bea723c71bb688bd2c",
+    "docs/chon-mon-order/validation/proposal-2026-11-12/check-proposal.py": "72acb504408b227538a88b589de2ab2e05fde68a0df29a544c38efccf04a06fb",
+    "docs/chon-mon-order/validation/proposal-2026-11-12/diagram-render-result.json": "b6e9d3e724ed07c79c8b27979c247c49e3189f0053b302093382eed616fa9fe3"
+  },
+  "proposal_rows": 10,
+  "CG_OPEN": 14,
+  "CG_CLOSED": 0,
+  "errors": []
+}

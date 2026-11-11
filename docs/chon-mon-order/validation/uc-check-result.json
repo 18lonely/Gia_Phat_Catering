@@ -1,0 +1,9 @@
+{
+  "kind": "DOCUMENT_REVIEW_ONLY",
+  "date": "2026-11-12",
+  "uc_reviewed": 19,
+  "protected_files_checked": 24,
+  "test_rows_status_preserved": true,
+  "backend_tests_executed": 0,
+  "errors": []
+}

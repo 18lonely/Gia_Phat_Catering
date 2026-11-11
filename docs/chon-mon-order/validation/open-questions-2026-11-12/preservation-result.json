@@ -1,0 +1,19 @@
+{
+  "kind": "DOCUMENT_CHECK_ONLY",
+  "baseline_files": 1229,
+  "protected_files_unchanged": 1226,
+  "changed_files": {
+    "docs/chon-mon-order/preview.html": "ac4d768b1b751e21bedd82bef883d9816c2c4f00747c0c238ce75788527c3b29",
+    "docs/chon-mon-order/review/contract-gap-register.md": "d7fd5ac64795b009512c2a22bcb4d66311fb919a14aefaad5bc13d4d2e466d44",
+    "docs/gia-phat/review/next-session-prompt.md": "a9a8de65d872e4f2b5553c0520915faeb1ac1b3b870d13d6b9b4f88cfe259928"
+  },
+  "new_files": [
+    "docs/chon-mon-order/validation/open-questions-2026-11-12/baseline-sha256.json",
+    "docs/chon-mon-order/validation/open-questions-2026-11-12/check-e6-result.json",
+    "docs/chon-mon-order/validation/open-questions-2026-11-12/diagram-render-result.json"
+  ],
+  "open_questions": 4,
+  "answers_recorded": 0,
+  "backend_tests_executed": 0,
+  "errors": []
+}

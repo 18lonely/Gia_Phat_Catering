@@ -1,0 +1,192 @@
+[
+  {
+    "feature": "FEAT-030",
+    "priority": "P0",
+    "fr": "FR-AUTH-EXT-001",
+    "uc": "UC-ORD-001",
+    "story": "US-E6-001",
+    "api": "006,007",
+    "screen": "UI-ORD-01",
+    "gate": "ORD-Q01"
+  },
+  {
+    "feature": "FEAT-031",
+    "priority": "P0",
+    "fr": "FR-AUTH-QREG-001",
+    "uc": "UC-ORD-002",
+    "story": "US-E6-002",
+    "api": "008",
+    "screen": "UI-ORD-02",
+    "gate": "ORD-Q01"
+  },
+  {
+    "feature": "FEAT-032",
+    "priority": "P0",
+    "fr": "FR-AUTH-QSES-001",
+    "uc": "UC-ORD-003",
+    "story": "US-E6-003",
+    "api": "009",
+    "screen": "UI-ORD-02",
+    "gate": "ORD-Q01"
+  },
+  {
+    "feature": "FEAT-033",
+    "priority": "P0",
+    "fr": "FR-AUTH-QRM-001",
+    "uc": "UC-ORD-004",
+    "story": "US-E6-004",
+    "api": "010,011,012",
+    "screen": "UI-ORD-03",
+    "gate": "ORD-Q02"
+  },
+  {
+    "feature": "FEAT-034",
+    "priority": "P0",
+    "fr": "FR-CUS-SVC-001",
+    "uc": "UC-ORD-005",
+    "story": "US-E6-005",
+    "api": "013,014",
+    "screen": "UI-ORD-04",
+    "gate": "ORD-Q03"
+  },
+  {
+    "feature": "FEAT-035",
+    "priority": "P0",
+    "fr": "FR-ORD-QTA-001",
+    "uc": "UC-ORD-006",
+    "story": "US-E6-006",
+    "api": "015,016",
+    "screen": "UI-ORD-05",
+    "gate": "ORD-Q04"
+  },
+  {
+    "feature": "FEAT-036",
+    "priority": "P0",
+    "fr": "FR-ORD-SEL-001",
+    "uc": "UC-ORD-007",
+    "story": "US-E6-007",
+    "api": "001,002,017",
+    "screen": "UI-ORD-06",
+    "gate": "ORD-Q01, ORD-Q04"
+  },
+  {
+    "feature": "FEAT-037",
+    "priority": "P1",
+    "fr": "FR-ORD-WEEK-001",
+    "uc": "UC-ORD-008",
+    "story": "US-E6-008",
+    "api": "018",
+    "screen": "UI-ORD-07",
+    "gate": "ORD-Q05"
+  },
+  {
+    "feature": "FEAT-038",
+    "priority": "P0",
+    "fr": "FR-ORD-SUB-001",
+    "uc": "UC-ORD-009",
+    "story": "US-E6-009",
+    "api": "003,004,019",
+    "screen": "UI-ORD-08",
+    "gate": "ORD-Q06"
+  },
+  {
+    "feature": "FEAT-039",
+    "priority": "P0",
+    "fr": "FR-ORD-DEF-001",
+    "uc": "UC-ORD-010",
+    "story": "US-E6-010",
+    "api": "PORT-LOCK",
+    "screen": "UI-ORD-09",
+    "gate": "ORD-Q06, ORD-Q07"
+  },
+  {
+    "feature": "FEAT-040",
+    "priority": "P0",
+    "fr": "FR-ORD-LOCK-001",
+    "uc": "UC-ORD-011",
+    "story": "US-E6-011",
+    "api": "PORT-LOCK,020",
+    "screen": "UI-ORD-09",
+    "gate": "Q-16, ORD-Q07"
+  },
+  {
+    "feature": "FEAT-041",
+    "priority": "P0",
+    "fr": "FR-ORD-CHG-001",
+    "uc": "UC-ORD-012",
+    "story": "US-E6-012",
+    "api": "005,021,022",
+    "screen": "UI-ORD-10",
+    "gate": "Q-16, O-06, ORD-Q08"
+  },
+  {
+    "feature": "FEAT-042",
+    "priority": "P0",
+    "fr": "FR-ORD-PXY-001",
+    "uc": "UC-ORD-013",
+    "story": "US-E6-013",
+    "api": "003,004",
+    "screen": "UI-ORD-11",
+    "gate": "ORD-Q06"
+  },
+  {
+    "feature": "FEAT-043",
+    "priority": "P1",
+    "fr": "FR-ORD-REM-001",
+    "uc": "UC-ORD-014",
+    "story": "US-E6-014",
+    "api": "PORT-REM,023",
+    "screen": "UI-ORD-09",
+    "gate": "Q-14"
+  },
+  {
+    "feature": "FEAT-044",
+    "priority": "P1",
+    "fr": "FR-ORD-MODE-001",
+    "uc": "UC-ORD-015",
+    "story": "US-E6-015",
+    "api": "024",
+    "screen": "UI-ORD-05",
+    "gate": "ORD-Q09"
+  },
+  {
+    "feature": "FEAT-045",
+    "priority": "P0",
+    "fr": "FR-NUTR-DSP-001",
+    "uc": "UC-ORD-016",
+    "story": "US-E6-016",
+    "api": "001",
+    "screen": "UI-ORD-06",
+    "gate": "NUTR-Q03"
+  },
+  {
+    "feature": "FEAT-046",
+    "priority": "P1",
+    "fr": "FR-NUTR-PROF-001",
+    "uc": "UC-ORD-017",
+    "story": "US-E6-017",
+    "api": "GATE-046",
+    "screen": "UI-ORD-12",
+    "gate": "O-03"
+  },
+  {
+    "feature": "FEAT-047",
+    "priority": "P1",
+    "fr": "FR-NUTR-REC-001",
+    "uc": "UC-ORD-018",
+    "story": "US-E6-018",
+    "api": "GATE-047",
+    "screen": "UI-ORD-12",
+    "gate": "O-03"
+  },
+  {
+    "feature": "FEAT-048",
+    "priority": "P0",
+    "fr": "FR-PLAN-MEAL-001",
+    "uc": "UC-ORD-019",
+    "story": "US-E6-019",
+    "api": "020,025",
+    "screen": "UI-ORD-13",
+    "gate": "ORD-Q10"
+  }
+]

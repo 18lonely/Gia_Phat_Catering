@@ -1,0 +1,7 @@
+{
+  "kind": "DOCUMENT_AND_SYNTHETIC_CHECK_ONLY",
+  "backend_tests_executed": 0,
+  "invariant_cases": 12,
+  "protected_files_checked": 11,
+  "errors": []
+}
