@@ -1,0 +1,51 @@
+[
+  {
+    "id": "API-NUTR-001",
+    "method": "PUT",
+    "path": "/v1/nutrition/ingredients/{id}",
+    "fr": "FR-NUTR-REF-001",
+    "ui": "UI-NUTR-01"
+  },
+  {
+    "id": "API-NUTR-002",
+    "method": "POST",
+    "path": "/v1/nutrition/coverage-checks",
+    "fr": "FR-NUTR-REF-002",
+    "ui": "UI-NUTR-01"
+  },
+  {
+    "id": "API-NUTR-003",
+    "method": "POST",
+    "path": "/v1/nutrition/dish-calculations",
+    "fr": "FR-NUTR-CALC-001",
+    "ui": "UI-NUTR-02"
+  },
+  {
+    "id": "API-NUTR-004",
+    "method": "POST",
+    "path": "/v1/nutrition/meal-calculations",
+    "fr": "FR-NUTR-CALC-002",
+    "ui": "UI-NUTR-03"
+  },
+  {
+    "id": "API-NUTR-005",
+    "method": "GET",
+    "path": "/v1/nutrition/calculations/{id}",
+    "fr": "FR-NUTR-SNAP-001",
+    "ui": "UI-NUTR-02"
+  },
+  {
+    "id": "API-NUTR-006",
+    "method": "GET",
+    "path": "/v1/nutrition/ingredients",
+    "fr": "FR-NUTR-REF-001",
+    "ui": "UI-NUTR-01"
+  },
+  {
+    "id": "API-NUTR-007",
+    "method": "GET",
+    "path": "/v1/nutrition/ingredients/{id}/revisions",
+    "fr": "FR-NUTR-SNAP-001",
+    "ui": "UI-NUTR-02"
+  }
+]
