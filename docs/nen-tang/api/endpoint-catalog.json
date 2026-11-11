@@ -1,0 +1,277 @@
+[
+  {
+    "id": "API-CORE-001",
+    "method": "POST",
+    "path": "/v1/auth/sessions",
+    "fr": [
+      "FR-AUTH-LGN-001"
+    ],
+    "permission": "public rate-limited",
+    "request": "LoginInput",
+    "response": "201 Session"
+  },
+  {
+    "id": "API-CORE-002",
+    "method": "POST",
+    "path": "/v1/auth/session-refreshes",
+    "fr": [
+      "FR-AUTH-LGN-002"
+    ],
+    "permission": "refresh cookie + Origin/CSRF",
+    "request": "Cookie only",
+    "response": "200 Session"
+  },
+  {
+    "id": "API-CORE-003",
+    "method": "POST",
+    "path": "/v1/auth/session-revocations",
+    "fr": [
+      "FR-AUTH-LGN-003"
+    ],
+    "permission": "self",
+    "request": "{allSessions:boolean}",
+    "response": "200 {revoked:true}"
+  },
+  {
+    "id": "API-CORE-004",
+    "method": "POST",
+    "path": "/v1/auth/mfa-verifications",
+    "fr": [
+      "FR-AUTH-LGN-004"
+    ],
+    "permission": "preauth challenge",
+    "request": "{challengeId:Id,otp:string6}",
+    "response": "200 Session; gated N-04"
+  },
+  {
+    "id": "API-CORE-005",
+    "method": "PUT",
+    "path": "/v1/auth/me/password",
+    "fr": [
+      "FR-AUTH-PWD-001"
+    ],
+    "permission": "self kể cả mật khẩu tạm",
+    "request": "{oldPassword,newPassword}",
+    "response": "200 {changed:true}"
+  },
+  {
+    "id": "API-CORE-006",
+    "method": "POST",
+    "path": "/v1/auth/users/{id}/password-resets",
+    "fr": [
+      "FR-AUTH-PWD-002"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "DecisionInput",
+    "response": "201 {temporaryPassword,expiresAt}; một lần"
+  },
+  {
+    "id": "API-CORE-007",
+    "method": "POST",
+    "path": "/v1/auth/users",
+    "fr": [
+      "FR-AUTH-ACC-001"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "UserInput",
+    "response": "201 User"
+  },
+  {
+    "id": "API-CORE-008",
+    "method": "PATCH",
+    "path": "/v1/auth/users/{id}/status",
+    "fr": [
+      "FR-AUTH-ACC-002"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "{status:LOCKED/ACTIVE,version,reason}",
+    "response": "200 User"
+  },
+  {
+    "id": "API-CORE-009",
+    "method": "PUT",
+    "path": "/v1/auth/users/{id}/roles",
+    "fr": [
+      "FR-AUTH-ACC-003"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "{roles:RoleScope[],version,reason}",
+    "response": "200 User"
+  },
+  {
+    "id": "API-CORE-010",
+    "method": "GET",
+    "path": "/v1/auth/login-logs",
+    "fr": [
+      "FR-AUTH-ACC-004"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "userId?,from?,to?,result?,page,pageSize",
+    "response": "200 List LoginLog"
+  },
+  {
+    "id": "API-CORE-011",
+    "method": "GET",
+    "path": "/v1/auth/permission-matrix",
+    "fr": [
+      "FR-AUTH-RBAC-002"
+    ],
+    "permission": "authenticated internal",
+    "request": "none",
+    "response": "200 RolePermission[]"
+  },
+  {
+    "id": "API-CORE-012",
+    "method": "POST",
+    "path": "/v1/auth/delegations",
+    "fr": [
+      "FR-AUTH-RBAC-003"
+    ],
+    "permission": "quyền duyệt đang sở hữu",
+    "request": "DelegationInput",
+    "response": "201 Delegation; gated O-06"
+  },
+  {
+    "id": "API-CORE-013",
+    "method": "GET",
+    "path": "/v1/auth/me",
+    "fr": [
+      "FR-AUTH-RBAC-001"
+    ],
+    "permission": "self",
+    "request": "none",
+    "response": "200 User + effectivePermissions + scopes"
+  },
+  {
+    "id": "API-CORE-014",
+    "method": "GET",
+    "path": "/v1/auth/users",
+    "fr": [
+      "FR-AUTH-ACC-001"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "query?,status?,page,pageSize",
+    "response": "200 List User"
+  },
+  {
+    "id": "API-CORE-015",
+    "method": "GET",
+    "path": "/v1/sys/audit-logs",
+    "fr": [
+      "FR-SYS-AUD-002"
+    ],
+    "permission": "audit.read + entity scope",
+    "request": "entity?,entityId?,actorId?,from?,to?,page,pageSize",
+    "response": "200 List AuditEntry"
+  },
+  {
+    "id": "API-CORE-016",
+    "method": "GET",
+    "path": "/v1/sys/parameters",
+    "fr": [
+      "FR-SYS-PRM-001"
+    ],
+    "permission": "parameter.read",
+    "request": "code?,scopeType?,scopeId?,businessDate,page,pageSize",
+    "response": "200 List ParameterVersion"
+  },
+  {
+    "id": "API-CORE-017",
+    "method": "POST",
+    "path": "/v1/sys/parameter-changes",
+    "fr": [
+      "FR-SYS-PRM-001"
+    ],
+    "permission": "parameter.propose",
+    "request": "ParameterInput",
+    "response": "201 ParameterChange; PENDING nếu cần duyệt"
+  },
+  {
+    "id": "API-CORE-018",
+    "method": "POST",
+    "path": "/v1/sys/parameter-changes/{id}/decisions",
+    "fr": [
+      "FR-SYS-PRM-002"
+    ],
+    "permission": "GIAM_DOC + separation",
+    "request": "DecisionInput",
+    "response": "200 ParameterChange"
+  },
+  {
+    "id": "API-CORE-019",
+    "method": "GET",
+    "path": "/v1/sys/notifications",
+    "fr": [
+      "FR-SYS-NTF-002"
+    ],
+    "permission": "self",
+    "request": "status?,page,pageSize",
+    "response": "200 List Notification + unreadCount"
+  },
+  {
+    "id": "API-CORE-020",
+    "method": "PATCH",
+    "path": "/v1/sys/notifications/{id}",
+    "fr": [
+      "FR-SYS-NTF-002"
+    ],
+    "permission": "self owner",
+    "request": "{status:SEEN/RESOLVED,version}",
+    "response": "200 Notification"
+  },
+  {
+    "id": "API-CORE-021",
+    "method": "POST",
+    "path": "/v1/sys/files",
+    "fr": [
+      "FR-SYS-FILE-001"
+    ],
+    "permission": "file.upload + entity write",
+    "request": "multipart file,entity,entityId",
+    "response": "201 {fileId,mime,size}"
+  },
+  {
+    "id": "API-CORE-022",
+    "method": "POST",
+    "path": "/v1/sys/files/{id}/access-links",
+    "fr": [
+      "FR-SYS-FILE-001"
+    ],
+    "permission": "entity read",
+    "request": "none",
+    "response": "200 {url,expiresAt}; không cache"
+  },
+  {
+    "id": "API-CORE-023",
+    "method": "GET",
+    "path": "/v1/sys/jobs",
+    "fr": [
+      "FR-SYS-JOB-001"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "status?,page,pageSize",
+    "response": "200 List Job"
+  },
+  {
+    "id": "API-CORE-024",
+    "method": "POST",
+    "path": "/v1/sys/jobs/{id}/retries",
+    "fr": [
+      "FR-SYS-JOB-001"
+    ],
+    "permission": "QUAN_TRI",
+    "request": "DecisionInput",
+    "response": "202 Job; chỉ job failed"
+  },
+  {
+    "id": "API-CORE-025",
+    "method": "GET",
+    "path": "/v1/health",
+    "fr": [
+      "FR-SYS-HLT-001"
+    ],
+    "permission": "public minimal; internal detail",
+    "request": "none",
+    "response": "200/503 Health"
+  }
+]
