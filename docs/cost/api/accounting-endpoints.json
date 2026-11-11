@@ -1,0 +1,78 @@
+{
+  "version": "0.2.0",
+  "status": "draft-gated",
+  "endpoints": [
+    {
+      "id": "API-ACC-001",
+      "method": "POST",
+      "path": "/v1/cost/prices/normalizations",
+      "permission": "cost.price.write",
+      "request": "QuoteInput = quote/basis/VAT/evidence của PriceInput",
+      "response": "NormalizedQuote",
+      "mutation": "Không"
+    },
+    {
+      "id": "API-ACC-002",
+      "method": "GET",
+      "path": "/v1/orders/{orderId}/accounting-context",
+      "permission": "accounting.context.read",
+      "request": "Path orderId",
+      "response": "OrderAccountingContext",
+      "mutation": "Không"
+    },
+    {
+      "id": "API-ACC-003",
+      "method": "POST",
+      "path": "/v1/orders/{orderId}/discount-previews",
+      "permission": "accounting.discount.draft",
+      "request": "DiscountInput",
+      "response": "DiscountPreview",
+      "mutation": "Không"
+    },
+    {
+      "id": "API-ACC-004",
+      "method": "POST",
+      "path": "/v1/orders/{orderId}/discount-drafts",
+      "permission": "accounting.discount.draft",
+      "request": "DiscountInput + proposalKey",
+      "response": "DiscountDraft",
+      "mutation": "Tạo DRAFT và event nguyên tử"
+    },
+    {
+      "id": "API-ACC-005",
+      "method": "PATCH",
+      "path": "/v1/orders/{orderId}/discount-drafts/{id}",
+      "permission": "accounting.discount.draft",
+      "request": "DiscountInput + version + reason",
+      "response": "DiscountDraft",
+      "mutation": "Chỉ DRAFT/NEEDS_REVIEW; không tự xác nhận"
+    },
+    {
+      "id": "API-ACC-006",
+      "method": "GET",
+      "path": "/v1/orders/{orderId}/discount-drafts",
+      "permission": "accounting.discount.read",
+      "request": "page/pageSize theo API chung",
+      "response": "Page<DiscountDraft>",
+      "mutation": "Không"
+    },
+    {
+      "id": "API-ACC-007",
+      "method": "POST",
+      "path": "/v1/customers/{customerId}/price-term-drafts",
+      "permission": "accounting.terms.draft",
+      "request": "PriceTermDraftInput",
+      "response": "PriceTermDraft",
+      "mutation": "Chỉ DRAFT, không tự kích hoạt"
+    },
+    {
+      "id": "API-ACC-008",
+      "method": "GET",
+      "path": "/v1/customers/{customerId}/price-term-drafts",
+      "permission": "accounting.terms.read",
+      "request": "mealTypeId?,page,pageSize",
+      "response": "Page<PriceTermDraft>",
+      "mutation": "Không"
+    }
+  ]
+}

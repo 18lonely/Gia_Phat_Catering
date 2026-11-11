@@ -1,0 +1,677 @@
+{
+  "version": "0.2.0",
+  "status": "design-draft",
+  "endpoints": [
+    {
+      "id": "API-COST-001",
+      "method": "GET",
+      "path": "/v1/cost/suppliers",
+      "name": "Liệt kê NCC",
+      "permission": "cost.supplier.read",
+      "request": "Query: page,pageSize,q?,supplierType?,status?",
+      "response": "Page<Supplier>",
+      "fr": [
+        "FR-COST-SUP-003"
+      ],
+      "uc": "001",
+      "screen": "01",
+      "rule": "Lọc tên/loại/trạng thái; phân trang nền tảng.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-002",
+      "method": "POST",
+      "path": "/v1/cost/suppliers",
+      "name": "Tạo NCC",
+      "permission": "cost.supplier.write",
+      "request": "SupplierInput",
+      "response": "Supplier",
+      "fr": [
+        "FR-COST-SUP-001"
+      ],
+      "uc": "001",
+      "screen": "02",
+      "rule": "201; chuẩn hoá tên, trùng trả ERR-COST-409-01; ACTIVE; audit.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-003",
+      "method": "PATCH",
+      "path": "/v1/cost/suppliers/{id}",
+      "name": "Sửa hoặc ngừng NCC",
+      "permission": "cost.supplier.write",
+      "request": "SupplierPatch",
+      "response": "Supplier",
+      "fr": [
+        "FR-COST-SUP-001",
+        "FR-COST-SUP-002"
+      ],
+      "uc": "001",
+      "screen": "02",
+      "rule": "200; version bắt buộc; INACTIVE cần lý do, không huỷ giá; NCC ngừng và còn giá tham chiếu phải sinh cảnh báo.",
+      "gate": "FLOW-COST-Q03: cách lưu cảnh báo nguyên liệu"
+    },
+    {
+      "id": "API-COST-004",
+      "method": "GET",
+      "path": "/v1/cost/prices",
+      "name": "Bảng giá và lịch sử",
+      "permission": "cost.price.read",
+      "request": "Query: page,pageSize,ingredientId?,supplierId?,kitchenId?,effectiveFrom?,effectiveTo?,referenceOnly?",
+      "response": "Page<Price>",
+      "fr": [
+        "FR-COST-PRC-006"
+      ],
+      "uc": "002,005",
+      "screen": "03,07",
+      "rule": "kitchenId=GLOBAL chỉ giá chung; bỏ filter là danh sách trong quyền, không có nghĩa GLOBAL.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-005",
+      "method": "POST",
+      "path": "/v1/cost/prices",
+      "name": "Nhập một giá",
+      "permission": "cost.price.write",
+      "request": "PriceInput",
+      "response": "Price",
+      "fr": [
+        "FR-COST-PRC-001",
+        "FR-COST-PRC-010",
+        "FR-COST-PRC-011"
+      ],
+      "uc": "002",
+      "screen": "04",
+      "rule": "201; >0 nguyên đồng; ngày trong khoảng; giá lệch cần confirmationToken; không có bước duyệt; một tham chiếu/phạm vi/ngày. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-006",
+      "method": "POST",
+      "path": "/v1/cost/price-batches",
+      "name": "Lưu lưới giá",
+      "permission": "cost.price.write",
+      "request": "PriceBatchInput",
+      "response": "PriceBatchResult",
+      "fr": [
+        "FR-COST-PRC-004",
+        "FR-COST-PRC-010",
+        "FR-COST-PRC-011"
+      ],
+      "uc": "003",
+      "screen": "03",
+      "rule": "201; toàn lô nguyên tử, bỏ dòng không đổi; lỗi phải trả rowKey/path; không lưu một phần. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-007",
+      "method": "POST",
+      "path": "/v1/cost/price-confirmations",
+      "name": "Kiểm giá lệch trước lưu",
+      "permission": "cost.price.write",
+      "request": "PriceBatchInput không có confirmationToken",
+      "response": "PriceConfirmation",
+      "fr": [
+        "FR-COST-PRC-010"
+      ],
+      "uc": "002,003",
+      "screen": "03,04",
+      "rule": "200; kiểm payload nhưng chưa ghi giá; token đề xuất ràng buộc actor, hash dòng và giá nền, hết hạn 5 phút; giá nền đổi phải xác nhận lại. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-008",
+      "method": "POST",
+      "path": "/v1/cost/prices/{id}/reference-selections",
+      "name": "Chọn tham chiếu",
+      "permission": "cost.price.write",
+      "request": "VersionReason",
+      "response": "Price",
+      "fr": [
+        "FR-COST-PRC-002"
+      ],
+      "uc": "002",
+      "screen": "04",
+      "rule": "201; khoá nhóm giá, bỏ cờ cũ/đặt cờ mới cùng giao dịch; không sửa tiền.",
+      "gate": "E3-Q14: giá đã hiệu lực chưa chốt quyền đổi cờ"
+    },
+    {
+      "id": "API-COST-009",
+      "method": "POST",
+      "path": "/v1/cost/prices/{id}/cancellations",
+      "name": "Huỷ giá tương lai",
+      "permission": "cost.price.write",
+      "request": "VersionReason",
+      "response": "Price",
+      "fr": [
+        "FR-COST-PRC-007"
+      ],
+      "uc": "002",
+      "screen": "04",
+      "rule": "201; không DELETE; giá đã hiệu lực trả ERR-COST-409-03; giữ lịch sử.",
+      "gate": "FLOW-COST-Q01 nếu huỷ dòng tham chiếu còn báo giá khác"
+    },
+    {
+      "id": "API-COST-010",
+      "method": "GET",
+      "path": "/v1/cost/reference-prices",
+      "name": "Tra giá theo ngày/cơ sở",
+      "permission": "cost.price.read",
+      "request": "Query bắt buộc: ingredientId,kitchenId,date",
+      "response": "Price",
+      "fr": [
+        "FR-COST-PRC-003"
+      ],
+      "uc": "002,006",
+      "screen": "07,08",
+      "rule": "Ưu tiên giá riêng có ngày mới nhất ≤ date, rồi mới fallback GLOBAL; không có trả ERR-COST-404-02.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-011",
+      "method": "GET",
+      "path": "/v1/cost/price-health",
+      "name": "Theo dõi thiếu/cũ",
+      "permission": "cost.price.read",
+      "request": "Query: page,pageSize,kitchenId,kind=MISSING|STALE",
+      "response": "Page<PriceHealth>",
+      "fr": [
+        "FR-COST-PRC-008",
+        "FR-COST-PRC-009"
+      ],
+      "uc": "005",
+      "screen": "06",
+      "rule": "Chỉ nguyên liệu trong công thức ACTIVE, dùng hôm nay nghiệp vụ; API đọc không tự tạo cảnh báo; worker riêng.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-012",
+      "method": "GET",
+      "path": "/v1/cost/price-import-template",
+      "name": "Tải mẫu XLSX",
+      "permission": "cost.price.write",
+      "request": "Không body",
+      "response": "Tệp XLSX",
+      "fr": [
+        "FR-COST-PRC-005"
+      ],
+      "uc": "004",
+      "screen": "05",
+      "rule": "200 binary application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; mẫu giá nhập, không phải mẫu giá bán. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-013",
+      "method": "POST",
+      "path": "/v1/cost/price-import-validations",
+      "name": "Kiểm file nhập",
+      "permission": "cost.price.write",
+      "request": "multipart/form-data: file XLSX",
+      "response": "ImportValidation",
+      "fr": [
+        "FR-COST-PRC-005"
+      ],
+      "uc": "004",
+      "screen": "05",
+      "rule": "201 bản kiểm tạm; ≤2.000 dòng; chưa ghi giá; lỗi 422 ERR-MENU-422-20, 413/415 theo khung MENU; không dùng upload chứng từ SYS để từ chối XLSX hợp lệ. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-014",
+      "method": "POST",
+      "path": "/v1/cost/price-imports",
+      "name": "Thực hiện nhập",
+      "permission": "cost.price.write",
+      "request": "ImportCommit",
+      "response": "ImportResult",
+      "fr": [
+        "FR-COST-PRC-005"
+      ],
+      "uc": "004",
+      "screen": "05",
+      "rule": "201; kiểm lại dữ liệu và hash bản kiểm; hết lỗi mới ghi cả lô. Giá nhập không vào PENDING như giá bán E2. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-015",
+      "method": "POST",
+      "path": "/v1/cost/dish-calculations",
+      "name": "Tính/phân rã món",
+      "permission": "cost.cost.read; chi tiết giá yêu cầu cost.price.read",
+      "request": "DishQuery",
+      "response": "DishCost",
+      "fr": [
+        "FR-COST-DISH-001",
+        "FR-COST-DISH-002",
+        "FR-COST-DISH-003",
+        "FR-COST-DISH-004"
+      ],
+      "uc": "006",
+      "screen": "08",
+      "rule": "200; chỉ tính, không lưu; thiếu giá ERR-COST-422-03; dùng cỡ/ngày/cơ sở; API danh mục MENU gọi nội bộ cho cột cost, không N+1 bắt buộc phía client.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-016",
+      "method": "POST",
+      "path": "/v1/cost/recipe-comparisons",
+      "name": "So sánh công thức P1",
+      "permission": "cost.cost.read; chi tiết giá yêu cầu cost.price.read",
+      "request": "RecipeComparisonInput",
+      "response": "RecipeComparison",
+      "fr": [
+        "FR-COST-DISH-005"
+      ],
+      "uc": "006",
+      "screen": "08",
+      "rule": "200; cùng ngày/cơ sở; thiếu một bên không trả chênh lệch; chia 0 không tạo Infinity.",
+      "gate": "FLOW-COST-Q04: null tỷ lệ là đề xuất"
+    },
+    {
+      "id": "API-COST-017",
+      "method": "POST",
+      "path": "/v1/cost/dish-tier-suggestions",
+      "name": "Gợi ý nhóm cost P1",
+      "permission": "cost.cost.read",
+      "request": "DishQuery",
+      "response": "TierSuggestion",
+      "fr": [
+        "FR-COST-DISH-008"
+      ],
+      "uc": "006",
+      "screen": "08",
+      "rule": "200 chỉ gợi ý, không sửa món.",
+      "gate": "E3-Q7: ngưỡng chưa chốt, có thể trả NOT_CONFIGURED"
+    },
+    {
+      "id": "API-COST-018",
+      "method": "GET",
+      "path": "/v1/cost/sheets",
+      "name": "Danh sách bảng tính",
+      "permission": "cost.cost.read hoặc cost.sheet.approve trong phạm vi",
+      "request": "Query: page,pageSize,status?,dishId?,kitchenId?",
+      "response": "Page<SheetSummary>",
+      "fr": [
+        "FR-COST-DISH-006",
+        "FR-COST-DISH-007"
+      ],
+      "uc": "007",
+      "screen": "09,10",
+      "rule": "Danh sách không tự mở quyền đọc giá; chi tiết theo API kế tiếp.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-019",
+      "method": "GET",
+      "path": "/v1/cost/sheets/{id}",
+      "name": "Chi tiết bảng đã chụp",
+      "permission": "cost.cost.read và cost.price.read cho giá",
+      "request": "Không body",
+      "response": "Sheet",
+      "fr": [
+        "FR-COST-DISH-006",
+        "FR-COST-DISH-007"
+      ],
+      "uc": "007",
+      "screen": "09",
+      "rule": "200 dữ liệu chụp, không tính lại từ giá mới; scope cả món và cơ sở.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-020",
+      "method": "POST",
+      "path": "/v1/cost/sheets",
+      "name": "Lập và gửi bảng đặc thù",
+      "permission": "cost.sheet.write",
+      "request": "SheetInput",
+      "response": "Sheet",
+      "fr": [
+        "FR-COST-DISH-006"
+      ],
+      "uc": "007",
+      "screen": "09",
+      "rule": "201 PENDING; server tính rồi chụp, không tin total client; không phải đặc thù ERR-COST-422-04.",
+      "gate": "E3-Q16 chỉ ảnh hưởng kiểm hiệu lực khi dùng bảng"
+    },
+    {
+      "id": "API-COST-021",
+      "method": "POST",
+      "path": "/v1/cost/sheets/{id}/decisions",
+      "name": "Duyệt/trả lại bảng tính",
+      "permission": "cost.sheet.approve",
+      "request": "DecisionInput",
+      "response": "SheetSummary",
+      "fr": [
+        "FR-COST-DISH-007"
+      ],
+      "uc": "007",
+      "screen": "10",
+      "rule": "201; khoá trạng thái PENDING; người tạo/sửa không tự duyệt; REJECTED cần lý do; approvals + trạng thái cùng giao dịch.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-022",
+      "method": "GET",
+      "path": "/v1/cost/allowances",
+      "name": "Xem khoản khoán",
+      "permission": "Đề xuất: cost.allowance.write hoặc cost.allowance.approve; chưa chốt",
+      "request": "Query: page,pageSize,mealTypeId?,status?,date?",
+      "response": "Page<Allowance>",
+      "fr": [
+        "FR-COST-MEAL-004"
+      ],
+      "uc": "008",
+      "screen": "11",
+      "rule": "Không suy ra quyền quản trị danh mục từ cost.cost.read.",
+      "gate": "FLOW-COST-Q05: quyền đọc"
+    },
+    {
+      "id": "API-COST-023",
+      "method": "POST",
+      "path": "/v1/cost/allowances",
+      "name": "Đề nghị khoản khoán",
+      "permission": "cost.allowance.write",
+      "request": "AllowanceInput",
+      "response": "Allowance",
+      "fr": [
+        "FR-COST-MEAL-004"
+      ],
+      "uc": "008",
+      "screen": "11",
+      "rule": "201 PENDING, thêm phiên bản mới; tiền nguyên ≥0, ngày và lý do bắt buộc; không tự áp dụng.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-024",
+      "method": "POST",
+      "path": "/v1/cost/allowances/{id}/decisions",
+      "name": "Duyệt khoản khoán",
+      "permission": "cost.allowance.approve",
+      "request": "DecisionInput",
+      "response": "Allowance",
+      "fr": [
+        "FR-COST-MEAL-004"
+      ],
+      "uc": "008",
+      "screen": "11",
+      "rule": "201; không tự duyệt; check duy nhất tên chuẩn hoá/phạm vi/ngày của APPROVED; khoản riêng thắng chung.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-025",
+      "method": "POST",
+      "path": "/v1/cost/menu-calculations",
+      "name": "Kiểm ngân sách nội bộ",
+      "permission": "Quyền MENU xem nội dung; con số chỉ khi cost.cost.read",
+      "request": "MenuQuery",
+      "response": "MenuCost hoặc MenuCostRedacted",
+      "fr": [
+        "FR-COST-MEAL-001",
+        "FR-COST-MEAL-002",
+        "FR-COST-MEAL-003",
+        "FR-COST-RUL-001",
+        "FR-COST-RUL-002"
+      ],
+      "uc": "009",
+      "screen": "12",
+      "rule": "200 cho nội dung hợp lệ; kết quả theo ngày/cơ sở; clientRevision echo tránh hiển thị kết quả cũ. Thiếu giá/VAT trả 422 nếu không tính được tổng; phần hiển thị từng ngày có status. Không dành cho agent phía khách.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-026",
+      "method": "GET",
+      "path": "/v1/cost/menu-snapshots",
+      "name": "Xem cost lúc duyệt",
+      "permission": "cost.cost.read",
+      "request": "Query: menuId,kitchenId?,approvalRoundNo?",
+      "response": "List<MenuSnapshot>",
+      "fr": [
+        "FR-COST-MEAL-006"
+      ],
+      "uc": "010",
+      "screen": "12",
+      "rule": "Chỉ bản APPROVED đã ghi bởi hook MENU, không có POST cho client tự tạo snapshot; lọc quyền từng cơ sở.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-027",
+      "method": "POST",
+      "path": "/v1/cost/estimates",
+      "name": "Lập dự toán ngày",
+      "permission": "cost.estimate.write",
+      "request": "EstimateInput",
+      "response": "EstimateFull",
+      "fr": [
+        "FR-COST-EST-001",
+        "FR-COST-EST-002",
+        "FR-COST-EST-004",
+        "FR-COST-EST-006"
+      ],
+      "uc": "012",
+      "screen": "14,15",
+      "rule": "201; version_no mới theo ngày/cơ sở; server tính số lượng/giá; all-or-nothing một ngày; không ghi đè.",
+      "gate": "E3-Q15 khi main_pick >1"
+    },
+    {
+      "id": "API-COST-028",
+      "method": "POST",
+      "path": "/v1/cost/estimate-batches",
+      "name": "Lập tuần",
+      "permission": "cost.estimate.write",
+      "request": "EstimateBatchInput",
+      "response": "EstimateBatch",
+      "fr": [
+        "FR-COST-EST-003"
+      ],
+      "uc": "012",
+      "screen": "14",
+      "rule": "Hợp đồng body draft; không cam kết status thành công hay lưu một phần khi Q07 chưa chốt.",
+      "gate": "FLOW-COST-Q07: transaction/status toàn tuần"
+    },
+    {
+      "id": "API-COST-029",
+      "method": "GET",
+      "path": "/v1/cost/estimates",
+      "name": "Lịch sử dự toán",
+      "permission": "cost.estimate.read hoặc cost.estimate.qty",
+      "request": "Query: page,pageSize,menuDayId?,kitchenId?,batchKey?",
+      "response": "Page<EstimateSummary>",
+      "fr": [
+        "FR-COST-EST-006"
+      ],
+      "uc": "013",
+      "screen": "15",
+      "rule": "Chỉ metadata cho quyền qty: id, ngày, cơ sở, version, số suất, thời điểm/người lập; không tiền trong summary.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-030",
+      "method": "GET",
+      "path": "/v1/cost/estimates/{id}",
+      "name": "Xem phiên bản",
+      "permission": "cost.estimate.read hoặc cost.estimate.qty",
+      "request": "Không body",
+      "response": "EstimateFull hoặc EstimateQuantity",
+      "fr": [
+        "FR-COST-EST-004",
+        "FR-COST-EST-005"
+      ],
+      "uc": "013",
+      "screen": "15",
+      "rule": "Server chọn projection theo quyền; không nhận includePrices=true để mở quyền; snapshot không đổi.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-031",
+      "method": "GET",
+      "path": "/v1/cost/estimates/{id}/export",
+      "name": "Xuất dự toán P1",
+      "permission": "cost.estimate.read hoặc cost.estimate.qty",
+      "request": "Query: format=xlsx|pdf",
+      "response": "Tệp theo quyền",
+      "fr": [
+        "FR-COST-EST-007"
+      ],
+      "uc": "013",
+      "screen": "15",
+      "rule": "200 binary; kiểm lại quyền lúc tải; Cache-Control private,no-store; XLSX không chứa sheet/cột tiền ẩn ở bản qty; xuất không tính lại.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-032",
+      "method": "GET",
+      "path": "/v1/cost/alerts",
+      "name": "Liệt kê cảnh báo thực đơn",
+      "permission": "cost.alert.read",
+      "request": "Query: page,pageSize,status?,menuId?",
+      "response": "Page<CostAlert>",
+      "fr": [
+        "FR-COST-ALR-002",
+        "FR-COST-ALR-003"
+      ],
+      "uc": "014",
+      "screen": "16",
+      "rule": "Một đầu mục/ngày; cost chỉ theo quyền. Không dùng bảng này cho cảnh báo nguyên liệu thiếu/cũ.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-033",
+      "method": "GET",
+      "path": "/v1/cost/alerts/{id}",
+      "name": "Chi tiết cảnh báo",
+      "permission": "cost.alert.read; con số cost cần cost.cost.read",
+      "request": "Không body",
+      "response": "CostAlertDetail",
+      "fr": [
+        "FR-COST-ALR-002",
+        "FR-COST-ALR-003"
+      ],
+      "uc": "014",
+      "screen": "17",
+      "rule": "Có snapshot gốc và lần tính lại mới nhất từng cơ sở; không làm thay đổi cảnh báo.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-034",
+      "method": "POST",
+      "path": "/v1/cost/alerts/{id}/closures",
+      "name": "Đóng tay cảnh báo",
+      "permission": "cost.alert.read theo SRS hiện hành",
+      "request": "VersionReason",
+      "response": "CostAlert",
+      "fr": [
+        "FR-COST-ALR-003"
+      ],
+      "uc": "014",
+      "screen": "17",
+      "rule": "201; OPEN→CLOSED, audit lý do ≥10 ký tự; không thay cost thành DAT, không cho quyền sửa MENU.",
+      "gate": "—"
+    },
+    {
+      "id": "API-COST-035",
+      "method": "POST",
+      "path": "/v1/cost/price-simulations",
+      "name": "Mô phỏng giá P2",
+      "permission": "Đề xuất: cost.price.read + cost.cost.read",
+      "request": "SimulationInput",
+      "response": "SimulationResult",
+      "fr": [
+        "FR-COST-ALR-005"
+      ],
+      "uc": "016",
+      "screen": "18",
+      "rule": "200 không lưu nghiệp vụ; giá giả định tách bảng thật.",
+      "gate": "FLOW-COST-Q10: quyền/phạm vi ngày và trạng thái"
+    },
+    {
+      "id": "API-COST-036",
+      "method": "POST",
+      "path": "/v1/cost/budget-checks",
+      "name": "Dịch vụ ngân sách agent",
+      "permission": "Chỉ svc-agent-dinh-duong-vien; allowlist công cụ",
+      "request": "BudgetInput",
+      "response": "BudgetResult",
+      "fr": [
+        "FR-COST-RUL-003"
+      ],
+      "uc": "015",
+      "screen": "SVC-COST-01",
+      "rule": "200 đúng một trạng thái; không con số/ngày lỗi; ≤30 lời gọi/phiên do server xác thực, không tin session tự cấp từ client.",
+      "gate": "FLOW-COST-Q09 khi vừa vượt vừa thiếu dữ liệu"
+    },
+    {
+      "id": "API-COST-037",
+      "method": "GET",
+      "path": "/v1/cost/requests/{key}",
+      "name": "Đối soát lệnh ghi",
+      "permission": "Đúng actor đã gửi; kiểm lại quyền endpoint gốc",
+      "request": "Path key: Idempotency-Key",
+      "response": "RequestStatus",
+      "fr": [
+        "FR-COST-PRC-001",
+        "FR-COST-PRC-004",
+        "FR-COST-EST-006"
+      ],
+      "uc": "002,003,012",
+      "screen": "03,15",
+      "rule": "Đề xuất Q02: trả PENDING/COMPLETED/FAILED và resourceRefs đã lọc quyền; không lộ kết quả actor khác; ngoài cửa sổ lưu trả 404, không chứng minh lệnh chưa chạy.",
+      "gate": "—"
+    }
+  ],
+  "types": {
+    "SupplierInput": "name:string(1..160)!, supplierType:REGULAR|MARKET_VENDOR!, phone:string(≤15)?, note:string(≤1000)?",
+    "SupplierPatch": "version:int≥1!, name?,supplierType?,phone?,note?, status:INACTIVE?,reason:string≥10 nếu đổi trạng thái; không cho sửa id/code",
+    "Supplier": "id:Id, code:string, name:string, supplierType:enum, phone:string|null, note:string|null, status:ACTIVE|INACTIVE, version:int",
+    "PriceInput": "ingredientId:Id!, supplierId:Id!, kitchenId:Id|null!, quotedUnitPrice:Decimal!, priceBasis:INCLUSIVE|EXCLUSIVE|FINAL_CONFIRMED!, vatRatePct:Decimal? hoặc vatUnitAmount:Decimal? (EXCLUSIVE đúng một), pricingEvidence:string(1..1000)!, effectiveFrom:Date!, isReference:boolean!, sourceFileId:Id?, confirmationToken:string?; không nhận priceVnd từ client, server chuẩn hóa; kết quả phải nguyên đồng theo baseline, phần lẻ gate rounding",
+    "Price": "id:Id, ingredientId:Id, supplierId:Id, kitchenId:Id|null, priceVnd:IntegerMoney, effectiveFrom:Date, isReference:boolean, version:int, cancelledAt:Timestamp|null, sourceFileId:Id|null; quotedUnitPrice:Decimal|null, priceBasis:INCLUSIVE|EXCLUSIVE|FINAL_CONFIRMED|LEGACY_UNVERIFIED, vatRatePct:Decimal|null, vatUnitAmount:Decimal|null, pricingEvidence:string|null, pricingVerifiedAt:Timestamp|null, normalizationVersion:string|null; priceVnd=giá cost cuối gồm VAT phải trả",
+    "PriceBatchInput": "rows:Array<{rowKey:string!, ...PriceInput}>!, sourceFileId:Id?, confirmationToken:string?; rowKey duy nhất; body rỗng không tạo giá; giới hạn lô cần kiểm tải, chưa đặt con số mới",
+    "PriceBatchResult": "createdCount:int, skippedCount:int, items:Array<{rowKey:string,price:Price}>, batchId:Id",
+    "PriceConfirmation": "requiresConfirmation:boolean, token:string|null, expiresAt:Timestamp|null, deviations:Array<{rowKey,previousPriceId,oldPriceVnd,newPriceVnd,changePct:Decimal}>; chỉ người có quyền giá",
+    "VersionReason": "version:int≥1!, reason:string(10..500)!",
+    "PriceHealth": "ingredientId:Id, ingredientName:string, kitchenId:Id, kind:MISSING|STALE, affectedDishCount:int, effectiveFrom:Date|null, ageDays:int|null",
+    "ImportValidation": "id:Id, fileHash:string, expiresAt:Timestamp, rowCount:int, validCount:int, errors:Array<{row:int,column:string,code,message}>, confirmation:PriceConfirmation|null; không có error thì mới cho commit",
+    "ImportCommit": "validationId:Id!, fileHash:string!, confirmationToken:string?; không nhận dữ liệu thay thế bản kiểm",
+    "ImportResult": "id:Id, validationId:Id, createdCount:int, priceIds:Array<Id>",
+    "DishQuery": "dishId:Id!, portionCode:string(≤16)!, date:Date!, kitchenId:Id!",
+    "DishLine": "ingredientId:Id, ingredientName:string, isMain:boolean, qty:Decimal, unit:string, pricePerUseUnitVnd:Decimal, amountVnd:Decimal, sharePct:Decimal|null, supplierId:Id, priceEffectiveFrom:Date",
+    "DishCost": "dishId:Id, recipeId:Id, portionCode:string, date:Date, kitchenId:Id, totalCostVnd:Decimal, displayCostVnd:IntegerMoney, lines:Array<DishLine>, calculationVersion:string; không phải bản đã chụp",
+    "RecipeComparisonInput": "currentRecipeId:Id!, proposedRecipeId:Id!, date:Date!, kitchenId:Id!; hai công thức cùng món/cỡ",
+    "RecipeComparison": "current:DishCost, proposed:DishCost, deltaVnd:Decimal, deltaPct:Decimal|null; delta là số có dấu, null nếu mẫu số 0 (đề xuất Q04)",
+    "TierSuggestion": "status:READY|NOT_CONFIGURED, suggestedTier:LOW|HIGH|null, sourceRuleVersion:string|null",
+    "SheetInput": "dishId:Id!, portionCode:string!, calculationDate:Date!, kitchenId:Id!, note:string(≤1000)?; không nhận tổng tiền tính sẵn",
+    "SheetSummary": "id:Id, dishId:Id, kitchenId:Id, calculationDate:Date, status:PENDING|APPROVED|REJECTED, createdBy:Id, createdAt:Timestamp, version:int; version là đề xuất API concurrency cần bổ sung schema hoặc token trạng thái",
+    "Sheet": "SheetSummary + snapshot:DishCost, inputsSnapshot:object, decisions:Array<{actorId,decision,reason,at}>; version chỉ thay đổi metadata/trạng thái, nội dung snapshot bất biến",
+    "DecisionInput": "version:int≥1!, decision:APPROVED|REJECTED!, reason:string(10..500)! khi REJECTED; không nhận approverId, lấy từ token",
+    "AllowanceInput": "name:string(1..120)!, amountVnd:IntegerMoney≥0!, mealTypeId:Id|null!, effectiveFrom:Date!, reason:string(10..500)!",
+    "Allowance": "id:Id, name:string, amountVnd:IntegerMoney, mealTypeId:Id|null, effectiveFrom:Date, status:PENDING|APPROVED|REJECTED, createdBy:Id, version:int; yêu cầu concurrency tương tự SheetSummary",
+    "MenuQuery": "clientRevision:string!, kitchenIds:Array<Id>?, một trong menuId:Id hoặc draft:{mealTypeId:Id,weekStart:Date,days:Array<{date,items:Array<{dishId,portionCode,slot}>,defaultDishId:Id|null}>}; cơ sở kiểm phải do server xác định từ phạm vi thực đơn, client không được bỏ cơ sở bất lợi",
+    "MenuCost": "clientRevision:string, status:DAT|KHONG_DAT|KHONG_XAC_DINH, days:Array<{date,kitchenId,completeness:COMPLETE|PARTIAL,status,costPerServingVnd:Decimal|null,revenueExVatVnd:Decimal|null,costPct:Decimal|null,thresholdPct:Decimal,method,mode,lines,allowances,errors}>; tổng status hỗn hợp chờ Q09 nếu dùng cùng bộ tổng hợp",
+    "MenuCostRedacted": "clientRevision:string, days:Array<{date,kitchenId,status,completeness}>; không cost/price/threshold/inputs/detail; dùng ở MENU nội bộ, không phải BudgetResult",
+    "MenuSnapshot": "id:Id, menuDayId:Id, kitchenId:Id, approvalRoundNo:int, serviceDate:Date, costPct:Decimal, thresholdPct:Decimal, costPerServingVnd:Decimal, inputsSnapshot:object, capturedAt:Timestamp; không trường mutable",
+    "EstimateInput": "menuDayId:Id!, kitchenId:Id!, servings:Array<{dishId:Id!,count:int≥0!}>!; không trùng dishId, chỉ món chính của ngày, tổng>0; main_pick lấy từ loại suất; server tính toàn bộ giá và tổng",
+    "EstimateBatchInput": "menuId:Id!, kitchenId:Id!, days:Array<{menuDayId:Id,servings:Array<{dishId,count}>}>!; không trùng ngày, ngày phải thuộc menu; semantics commit chờ Q07",
+    "EstimateSummary": "id:Id, menuDayId:Id, kitchenId:Id, versionNo:int, batchKey:string, servings:int, computedBy:Id, computedAt:Timestamp; không tiền với quyền qty",
+    "EstimateQuantity": "EstimateSummary + lines:Array<{ingredientId,ingredientName,useUnit,buyUnit,totalUseQty:Decimal,buyQty:Decimal,components:Array<{dishName,qtyPerServing:Decimal,servings:int}>}>; allowlist nghiêm ngặt không trả inputsSnapshot hoặc khoản tiền",
+    "EstimateFull": "EstimateQuantity + lines bổ sung supplierName,priceEffectiveFrom,pricePerBuyUnitVnd:IntegerMoney,amountVnd:Decimal; allowances:Array<{name,amountVnd}>,totalCostVnd:Decimal,revenueExVatVnd:Decimal,costPct:Decimal,menuCostPct:Decimal,method:string,thresholdPct:Decimal,inputsSnapshot:object",
+    "EstimateBatch": "batchKey:string, items:Array<EstimateSummary>, totals theo cơ sở; trạng thái/atomicity cần Q07, chưa có ví dụ thành công tuần",
+    "CostAlert": "id:Id, menuDayId:Id, menuId:Id, status:OPEN|CLOSED, openedAt:Timestamp, version:int, closeReason:string|null; không con số trong summary",
+    "CostAlertDetail": "CostAlert + kitchens:Array<{kitchenId,snapshotId,recalculationId,result,originalCostPct:Decimal,currentCostPct:Decimal|null,triggerPrices}>; lọc con số/triggerPrices nếu thiếu quyền giá/cost; không cập nhật snapshot gốc",
+    "SimulationInput": "ingredientId:Id!, kitchenId:Id!, priceVnd:IntegerMoney!, dateFrom:Date!, dateTo:Date!; phạm vi trạng thái/day window chờ Q10",
+    "SimulationResult": "simulation:true, affectedDays:Array<{menuDayId,kitchenId,result,costPct:Decimal|null}>, unknownDays:Array<Id>; chỉ phạm vi được mô phỏng, không ghi bảng thật",
+    "BudgetInput": "conversationToken:string!, menu:{mealTypeId:Id,weekStart:Date,days:Array<{date,items:Array<{dishId,portionCode,slot}>,defaultDishId:Id|null}>}!; server xác thực phiên/quota, loại bỏ mọi trường cost client gửi",
+    "BudgetResult": "result:DAT|KHONG_DAT|KHONG_XAC_DINH; additional fields không cho phép, không nested breakdown",
+    "RequestStatus": "key:string, status:PENDING|COMPLETED|FAILED, originalStatus:int|null, resourceRefs:Array<{type,id}>, errorCode:string|null; không trả cached payload nhạy cảm nếu quyền đã đổi"
+  },
+  "internalMappings": {
+    "FR-COST-MEAL-005": "checkMenuCost",
+    "FR-COST-MEAL-006": "captureApprovedCost",
+    "FR-COST-MEAL-008": "Tham số SYS FR-SYS-PRM-001/002",
+    "FR-COST-ALR-001": "referencePrice.effective worker",
+    "FR-COST-PRC-009": "priceHealth.daily worker"
+  },
+  "deferred": [
+    "FR-COST-MEAL-007",
+    "FR-COST-ALR-004"
+  ],
+  "accountingExtension": "accounting-contract.md"
+}
