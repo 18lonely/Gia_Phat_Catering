@@ -1,0 +1,1324 @@
+// =====================================================================
+// Nền tảng Gia Phát — Schema CSDL (DBML)
+// Phiên bản 0.5.0 · 2026-11-11 · Trạng thái: Draft
+// Nguồn: docs/nen-tang/srs/erd.md v0.5.0
+// v0.5.0: E4/E5, 4 bảng bổ sung; chưa chạy migration; xem ERD phân hệ.
+// v0.3.0: đồng bộ SRS Cost; bản chụp theo cơ sở, khoản khoán, dự toán và cảnh báo.
+// v0.2.0: thêm change_requests, approvals (nhóm sys)
+// Phạm vi: AUTH, SYS, MENU, COST, NUTR (đợt Now) + CUS, ORD (R6)
+// Chưa gồm: PLAN, DLV, FIN, PUB, SALE, PUR, FB — viết ở epic tương ứng
+//
+// Quy ước (chi tiết ở erd.md mục 1):
+//  - MySQL 8, InnoDB, utf8mb4. Mọi cột bigint là BIGINT UNSIGNED.
+//  - Giá nhập/khoản khoán: bigint đồng; kết quả COST: decimal(24,8), xem ERD 5.4.
+//  - CHECK và unique có điều kiện nêu trong ERD 5.4 phải được triển khai trong migration SQL; DBML không tự thực thi note.
+//  - Thời điểm: datetime(3) lưu UTC; ngày nghiệp vụ: date theo giờ Việt Nam.
+//  - Giá trị liệt kê: varchar + CHECK (danh sách giá trị ghi trong note).
+//  - created_by / updated_by tham chiếu users.id; không vẽ ref để sơ đồ dễ đọc.
+//  - Không xoá cứng: huỷ bằng cancelled_at.
+// Điểm mở còn treo: O-01, O-02, O-03, O-06, N-01, N-03, H-1, H-3, H-8.
+// =====================================================================
+
+Project gia_phat {
+  database_type: 'MySQL'
+  Note: 'Nền tảng Gia Phát — bản nháp v0.5.0. Tên bảng, cột, kiểu, độ dài là đề xuất, chưa duyệt.'
+}
+
+// ============================ AUTH ============================
+
+Table kitchens {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(120) [not null]
+  address varchar(255)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  Note: 'Cơ sở (bếp): Hoàng Đạo Thành, Phúc Diễn'
+}
+
+Table users {
+  id bigint [pk, increment]
+  user_type varchar(24) [not null, note: 'STAFF | CUSTOMER | EATER | SERVICE']
+  username varchar(64) [not null, unique, note: 'Dạng tên đăng nhập: điểm mở N-01']
+  password_hash varchar(255) [note: 'Argon2id; null với SERVICE']
+  full_name varchar(120) [not null]
+  phone varchar(15)
+  email varchar(255)
+  status varchar(24) [not null, default: 'PENDING_PASSWORD', note: 'PENDING_PASSWORD | ACTIVE | TEMP_LOCKED | LOCKED']
+  failed_attempts tinyint [not null, default: 0, note: 'BR-SEC-002']
+  locked_until datetime(3)
+  temp_password_expires_at datetime(3) [note: 'BR-SEC-004']
+  customer_id bigint [ref: > customers.id, note: 'Bắt buộc khi user_type là CUSTOMER, EATER']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    customer_id
+    (user_type, status)
+  }
+  Note: 'Tài khoản — 4 loại định danh (SRS nền tảng mục 2.3)'
+}
+
+Table user_roles {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  role_code varchar(24) [not null, note: 'GIAM_DOC | DINH_DUONG_VIEN | QL_CO_SO | BEP_TRUONG | KT_MUA_HANG | KT_DOANH_THU | QUAN_TRI | NGUOI_DAT_TONG | NGUOI_NHAN | NGUOI_AN']
+  kitchen_id bigint [ref: > kitchens.id, note: 'Bắt buộc với QL_CO_SO, BEP_TRUONG (BR-SEC-007)']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (user_id, role_code, kitchen_id) [unique]
+  }
+}
+
+Table sessions {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  refresh_token_hash char(64) [not null, unique]
+  issued_at datetime(3) [not null]
+  expires_at datetime(3) [not null, note: 'BR-SEC-003: 7 ngày']
+  revoked_at datetime(3)
+  replaced_by_id bigint [note: 'Phiên thay thế khi xoay vòng refresh token']
+  ip varchar(45)
+  user_agent varchar(255)
+  indexes {
+    (user_id, revoked_at)
+  }
+}
+
+Table login_logs {
+  id bigint [pk, increment]
+  occurred_at datetime(3) [not null]
+  username varchar(64) [not null]
+  user_id bigint [ref: > users.id]
+  result varchar(24) [not null, note: 'SUCCESS | WRONG_PASSWORD | LOCKED | RATE_LIMITED']
+  ip varchar(45)
+  user_agent varchar(255)
+  indexes {
+    (user_id, occurred_at)
+    occurred_at
+  }
+  Note: 'Thời gian lưu: điểm mở N-03 (đề xuất 1 năm)'
+}
+
+Table delegations {
+  id bigint [pk, increment]
+  from_user_id bigint [not null, ref: > users.id]
+  to_user_id bigint [not null, ref: > users.id, note: 'Khác from_user_id']
+  permission_code varchar(64) [not null]
+  valid_from date [not null]
+  valid_to date [not null, note: '>= valid_from']
+  reason varchar(500) [not null]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (to_user_id, valid_from, valid_to)
+  }
+  Note: 'Uỷ quyền duyệt khi vắng (FR-AUTH-RBAC-003). Phụ thuộc điểm mở O-06'
+}
+
+// ============================ SYS ============================
+
+Table audit_logs {
+  id bigint [pk, increment]
+  occurred_at datetime(3) [not null]
+  actor_user_id bigint [not null, ref: > users.id]
+  on_behalf_user_id bigint [ref: > users.id, note: 'Người dùng đang dùng agent']
+  entity varchar(48) [not null]
+  entity_id bigint [not null]
+  action varchar(24) [not null, note: 'CREATE | UPDATE | CANCEL | APPROVE | REJECT | PUBLISH | LOCK | REOPEN']
+  changes json [note: 'Mảng {field, old, new}']
+  reason varchar(500) [note: '>= 10 ký tự với thao tác thuộc BR-AUD-001']
+  request_id char(36) [not null]
+  indexes {
+    (entity, entity_id, occurred_at)
+    (actor_user_id, occurred_at)
+    occurred_at
+  }
+  Note: 'Bất biến (BR-AUD-002): tài khoản ứng dụng chỉ có INSERT, SELECT. Phân vùng theo tháng. Thời gian lưu: điểm mở N-03'
+}
+
+Table parameters {
+  id bigint [pk, increment]
+  code varchar(48) [not null, note: 'Danh mục ở SRS nền tảng phụ lục 4.3']
+  scope_type varchar(24) [not null, note: 'GLOBAL | KITCHEN | CUSTOMER | SERVICE_POINT']
+  scope_id bigint [note: 'Null khi GLOBAL']
+  value varchar(255) [not null]
+  effective_from date [not null, note: 'BR-SYS-001: không sửa quá khứ']
+  status varchar(24) [not null, default: 'PENDING', note: 'PENDING | APPROVED | REJECTED']
+  approved_by bigint [ref: > users.id, note: 'Khác created_by (BR-SEC-008)']
+  approved_at datetime(3)
+  reason varchar(500) [not null]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (code, scope_type, scope_id, effective_from) [unique]
+  }
+}
+
+Table notifications {
+  id bigint [pk, increment]
+  user_id bigint [not null, ref: > users.id]
+  type varchar(48) [not null]
+  severity varchar(16) [not null, default: 'INFO', note: 'INFO | WARN | ALERT']
+  title varchar(200) [not null]
+  body varchar(1000)
+  entity varchar(48)
+  entity_id bigint
+  status varchar(16) [not null, default: 'NEW', note: 'NEW | SEEN | DONE']
+  created_at datetime(3) [not null]
+  seen_at datetime(3)
+  done_at datetime(3)
+  indexes {
+    (user_id, status, created_at)
+  }
+}
+
+Table files {
+  id bigint [pk, increment]
+  storage_key varchar(255) [not null, unique]
+  original_name varchar(255) [not null]
+  mime_type varchar(64) [not null, note: 'image/jpeg | image/png | image/webp | application/pdf']
+  size_bytes int [not null, note: '<= 10 MB (FR-SYS-FILE-001)']
+  is_public boolean [not null, default: false]
+  entity varchar(48)
+  entity_id bigint
+  created_at datetime(3) [not null]
+  created_by bigint
+  indexes {
+    (entity, entity_id)
+  }
+}
+
+Table agent_runs {
+  id bigint [pk, increment]
+  agent_code varchar(32) [not null, note: 'NOI_BO | DINH_DUONG_VIEN']
+  user_id bigint [ref: > users.id, note: 'Null với khách vãng lai']
+  session_ref varchar(64) [note: 'Phiên ẩn danh của khách vãng lai']
+  request_text text [not null]
+  tool_calls json [note: 'Công cụ đã gọi và tham số']
+  result_summary text
+  status varchar(16) [not null, note: 'QUEUED | RUNNING | DONE | FAILED | REJECTED']
+  input_tokens int
+  output_tokens int
+  cost_vnd bigint
+  started_at datetime(3)
+  finished_at datetime(3)
+  created_at datetime(3) [not null]
+  indexes {
+    (agent_code, created_at)
+    (user_id, created_at)
+  }
+  Note: 'Nhật ký lượt chạy agent (FEAT-023)'
+}
+
+Table change_requests {
+  id bigint [pk, increment]
+  entity varchar(48) [not null, note: 'Tên bảng nghiệp vụ, ví dụ dishes, menu_rules']
+  entity_key varchar(32) [not null, note: 'id dạng chuỗi, hoặc code với bảng có khoá chính là mã']
+  proposed_changes json [not null, note: 'Mảng {field, old, new}']
+  reason varchar(500) [not null, note: '>= 10 ký tự (BR-AUD-001)']
+  status varchar(24) [not null, default: 'PENDING', note: 'PENDING | APPROVED | REJECTED | WITHDRAWN | STALE']
+  requested_by bigint [not null, ref: > users.id]
+  requested_at datetime(3) [not null]
+  applied_at datetime(3)
+  indexes {
+    (entity, entity_key, status)
+    (status, requested_at)
+  }
+  Note: 'Giá trị đề nghị cho bản ghi đang hiệu lực, chờ duyệt (FR-MENU-DISH-002, FR-MENU-RUL-006). Tối đa 1 đề nghị PENDING mỗi bản ghi — kiểm ở tầng ứng dụng'
+}
+
+Table approvals {
+  id bigint [pk, increment]
+  entity varchar(48) [not null, note: 'menus, recipes, dishes, dish_prices, change_requests...']
+  entity_id bigint [not null]
+  round_no smallint [not null, default: 1, note: 'Tăng mỗi lần gửi duyệt lại']
+  approver_user_id bigint [not null, ref: > users.id, note: 'Khác người tạo và người sửa cuối (BR-SEC-008)']
+  delegation_id bigint [ref: > delegations.id, note: 'Khi duyệt bằng quyền được uỷ']
+  decision varchar(16) [not null, note: 'APPROVED | REJECTED']
+  reason varchar(500) [note: 'Bắt buộc khi REJECTED']
+  decided_at datetime(3) [not null]
+  indexes {
+    (entity, entity_id, round_no, approver_user_id) [unique]
+    (approver_user_id, decided_at)
+  }
+  Note: 'Mỗi dòng là một quyết định của một người duyệt; cho phép nhiều người duyệt (BR-MNU-008). Cột approved_by trên các bảng nghiệp vụ = người duyệt cuối, ghi cùng giao dịch'
+}
+
+// ============================ MENU ============================
+
+Table ingredient_groups {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(80) [not null, note: 'Lợn, gà, bò, ếch, tôm, cá... Danh sách: điểm mở H-3']
+  protein_source varchar(24) [note: 'MEAT | FISH | EGG | SEAFOOD | BEAN — dùng cho BR-MENU-050']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+}
+
+Table ingredients {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(120) [not null]
+  group_id bigint [not null, ref: > ingredient_groups.id]
+  buy_unit varchar(16) [not null, note: 'kg, bìa, quả, lít, bó...']
+  use_unit varchar(16) [not null, note: 'g, bìa, quả, ml']
+  conversion_factor decimal(12,4) [not null, note: 'Số đơn vị dùng trong 1 đơn vị mua; > 0']
+  waste_pct decimal(5,2) [note: 'Bắt buộc nếu has_bone_or_shell (BR-COST-010)']
+  has_bone_or_shell boolean [not null, default: false]
+  storage_type varchar(24) [not null, note: 'FRESH | FROZEN | DRY']
+  stable_supply boolean [not null, default: true, note: 'BR-MENU-044']
+  in_cost boolean [not null, default: true, note: 'Định nghĩa cost: điểm mở O-01']
+  status varchar(24) [not null, default: 'ACTIVE', note: 'ACTIVE | INACTIVE']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    group_id
+  }
+}
+
+Table ingredient_seasons {
+  id bigint [pk, increment]
+  ingredient_id bigint [not null, ref: > ingredients.id]
+  month_from tinyint [not null, note: '1-12']
+  month_to tinyint [not null, note: '1-12']
+  Note: 'Mùa vụ của rau (BR-MENU-018)'
+}
+
+Table cooking_methods {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(80) [not null, note: 'Luộc, hấp, kho, rang, xào, sốt, chiên... Danh sách: điểm mở H-8']
+  is_fried boolean [not null, default: false, note: 'BR-MENU-021, 022']
+  is_low_fat boolean [not null, default: false, note: 'Được dùng cho món Healthy: điểm mở H-1']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+}
+
+Table allergens {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(80) [not null]
+}
+
+Table dishes {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(160) [not null]
+  description varchar(1000)
+  role varchar(24) [not null, note: 'MAIN | SIDE | VEG | SOUP']
+  main_group_id bigint [not null, ref: > ingredient_groups.id, note: 'BR-MENU-010 -> 015']
+  cooking_method_id bigint [not null, ref: > cooking_methods.id, note: 'BR-MENU-020 -> 023']
+  base_dish_id bigint [ref: > dishes.id, note: 'Món gốc (BR-MENU-014)']
+  is_healthy boolean [not null, default: false, note: 'BR-MENU-002, 003']
+  is_sour boolean [not null, default: false, note: 'BR-MENU-030']
+  texture varchar(24) [not null, default: 'NEUTRAL', note: 'DRY | SAUCE | NEUTRAL (BR-MENU-031, 032)']
+  is_light boolean [not null, default: false, note: 'BR-MENU-033']
+  is_complex boolean [not null, default: false, note: 'BR-MENU-040, 041']
+  transport_ok boolean [not null, default: true, note: 'BR-MENU-042']
+  bulk_ok boolean [not null, default: true, note: 'BR-MENU-043']
+  cost_tier varchar(24) [not null, note: 'LOW | HIGH (BR-COST-006)']
+  is_special boolean [not null, default: false, note: 'BR-COST-007']
+  image_file_id bigint [ref: > files.id]
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | PENDING | ACTIVE | INACTIVE']
+  approved_by bigint [ref: > users.id, note: 'Khác created_by']
+  approved_at datetime(3)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (role, status)
+    main_group_id
+    base_dish_id
+  }
+}
+
+Table dish_allergens {
+  dish_id bigint [not null, ref: > dishes.id]
+  allergen_id bigint [not null, ref: > allergens.id]
+  indexes {
+    (dish_id, allergen_id) [pk]
+  }
+}
+
+Table dish_conflicts {
+  id bigint [pk, increment]
+  dish_a_id bigint [not null, ref: > dishes.id]
+  dish_b_id bigint [not null, ref: > dishes.id, note: 'dish_a_id < dish_b_id']
+  note varchar(255)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (dish_a_id, dish_b_id) [unique]
+  }
+  Note: 'Cặp món kỵ nhau, ví dụ nem - nộm (BR-MENU-034). Danh sách: điểm mở H-4'
+}
+
+Table recipes {
+  id bigint [pk, increment]
+  dish_id bigint [not null, ref: > dishes.id]
+  portion_code varchar(16) [not null, default: 'STD', note: 'Cỡ định lượng: điểm mở O-02']
+  version_no int [not null]
+  effective_from date [not null]
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | PENDING | ACTIVE | SUPERSEDED']
+  approved_by bigint [ref: > users.id, note: 'Khác created_by (BR-SEC-008)']
+  approved_at datetime(3)
+  note varchar(500)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (dish_id, portion_code, version_no) [unique]
+    (dish_id, portion_code, status, effective_from)
+  }
+  Note: 'Công thức ACTIVE không sửa; thay đổi tạo phiên bản mới'
+}
+
+Table recipe_items {
+  id bigint [pk, increment]
+  recipe_id bigint [not null, ref: > recipes.id]
+  ingredient_id bigint [not null, ref: > ingredients.id]
+  is_main boolean [not null, note: 'BR-COST-009']
+  qty_min decimal(10,3) [not null, note: '> 0']
+  qty_max decimal(10,3) [not null, note: '>= qty_min']
+  qty_std decimal(10,3) [not null, note: 'Trong [qty_min, qty_max]; dùng tính cost và dinh dưỡng']
+  unit varchar(16) [not null, note: 'Bằng ingredients.use_unit. Định lượng SỐNG theo docx']
+  indexes {
+    (recipe_id, ingredient_id) [unique]
+  }
+}
+
+Table dish_prices {
+  id bigint [pk, increment]
+  dish_id bigint [not null, ref: > dishes.id]
+  portion_code varchar(16) [not null, default: 'STD']
+  price_vnd bigint [not null, note: 'Giá bán, đã gồm VAT (D-15, D-18)']
+  effective_from date [not null]
+  status varchar(24) [not null, default: 'PENDING', note: 'PENDING | APPROVED']
+  approved_by bigint [ref: > users.id, note: 'Khác created_by']
+  approved_at datetime(3)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (dish_id, portion_code, effective_from) [unique]
+  }
+}
+
+Table meal_types {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(120) [not null]
+  price_cap_vnd bigint [not null, note: 'Ngưỡng giá suất, đã gồm VAT (BR-COST-012)']
+  main_offered tinyint [not null, default: 3, note: 'BR-MENU-001']
+  main_pick tinyint [not null, default: 1, note: 'D-04']
+  side_count tinyint [not null, note: 'BR-MENU-005']
+  has_veg boolean [not null, default: true]
+  has_soup boolean [not null, default: true]
+  is_public boolean [not null, default: false, note: 'Hiện trên website (D-10)']
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | ACTIVE | INACTIVE']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  Note: 'Loại suất do dinh dưỡng viên tự tạo (D-20)'
+}
+
+Table menus {
+  id bigint [pk, increment]
+  meal_type_id bigint [not null, ref: > meal_types.id]
+  customer_id bigint [ref: > customers.id, note: 'Null = thực đơn chung của loại suất']
+  week_start date [not null, note: 'Là thứ Hai']
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | CHECKED | PENDING | APPROVED | PUBLISHED | WITHDRAWN']
+  rule_score smallint [note: '0-100']
+  source varchar(24) [not null, default: 'MANUAL', note: 'MANUAL | AGENT_INTERNAL | AGENT_CUSTOMER']
+  agent_run_id bigint [ref: > agent_runs.id]
+  approved_by bigint [ref: > users.id, note: 'Khác created_by (BN-17)']
+  approved_at datetime(3)
+  published_at datetime(3)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (meal_type_id, customer_id, week_start)
+    (status, week_start)
+  }
+  Note: 'Duy nhất theo (meal_type_id, customer_id, week_start) trong các bản không huỷ — kiểm ở tầng ứng dụng'
+}
+
+Table menu_days {
+  id bigint [pk, increment]
+  menu_id bigint [not null, ref: > menus.id]
+  service_date date [not null]
+  default_dish_id bigint [ref: > dishes.id, note: 'Món mặc định (D-14); bắt buộc trước khi công bố']
+  indexes {
+    (menu_id, service_date) [unique]
+    service_date
+  }
+}
+
+Table menu_day_items {
+  id bigint [pk, increment]
+  menu_day_id bigint [not null, ref: > menu_days.id]
+  dish_id bigint [not null, ref: > dishes.id]
+  recipe_id bigint [not null, ref: > recipes.id, note: 'Phiên bản hiệu lực tại ngày phục vụ, chụp lại']
+  slot varchar(24) [not null, note: 'MAIN | SIDE | VEG | SOUP; khớp dishes.role']
+  sort_order tinyint [not null, default: 0]
+  indexes {
+    (menu_day_id, dish_id) [unique]
+    dish_id
+  }
+}
+
+Table menu_rules {
+  code varchar(16) [pk, note: 'BR-MENU-xxx, BR-COST-xxx']
+  name varchar(200) [not null]
+  rule_type varchar(24) [not null, note: 'HARD | SOFT']
+  penalty tinyint [not null, default: 0, note: '0 với HARD; 1, 2, 3 với SOFT']
+  scope varchar(16) [not null, note: 'DAY | WEEK']
+  params json [note: 'Con số được duyệt ở DL-01']
+  is_active boolean [not null, default: true]
+  updated_at datetime(3) [not null]
+  updated_by bigint
+}
+
+Table menu_rule_results {
+  id bigint [pk, increment]
+  menu_id bigint [not null, ref: > menus.id]
+  menu_day_id bigint [ref: > menu_days.id, note: 'Null với quy tắc cấp tuần']
+  rule_code varchar(16) [not null, ref: > menu_rules.code]
+  passed boolean [not null]
+  detail varchar(500)
+  waiver_reason varchar(500) [note: 'Bắt buộc với quy tắc mềm-nặng không đạt']
+  checked_at datetime(3) [not null]
+  indexes {
+    (menu_id, rule_code, menu_day_id)
+  }
+}
+
+// ============================ COST ============================
+// Tài khoản MySQL của Agent Dinh dưỡng viên KHÔNG có quyền SELECT
+// trên TẤT CẢ bảng thuộc TableGroup cost (BR-SEC-010, NFR-COST-006).
+
+Table suppliers {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(160) [not null]
+  phone varchar(15)
+  supplier_type varchar(24) [not null, note: 'REGULAR | MARKET_VENDOR']
+  status varchar(24) [not null, default: 'ACTIVE', note: 'ACTIVE | INACTIVE']
+  note varchar(1000) [note: 'Ghi chú nhà cung cấp']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+}
+
+Table ingredient_prices {
+  id bigint [pk, increment]
+  ingredient_id bigint [not null, ref: > ingredients.id]
+  supplier_id bigint [not null, ref: > suppliers.id]
+  kitchen_id bigint [ref: > kitchens.id, note: 'Null = áp dụng cả 2 cơ sở']
+  price_vnd bigint [not null, note: 'Gia cost cuoi cung gom VAT phai tra / buy_unit; server tinh. Legacy chua xac minh khong tu cong VAT']
+  quoted_unit_price decimal(18,6) [note: 'Gia bao goc; null voi legacy, khong suy dien nguoc']
+  price_basis varchar(24) [not null, default: 'LEGACY_UNVERIFIED', note: 'INCLUSIVE | EXCLUSIVE | FINAL_CONFIRMED | LEGACY_UNVERIFIED; new write khong nhan legacy']
+  vat_rate_pct decimal(9,6) [note: 'Nullable, khong mac dinh0; EXCLUSIVE can rate hoac amount, khong ca hai']
+  vat_unit_amount decimal(18,6) [note: 'VAT phai tra / buy_unit, nullable; neu co rate thi server tinh amount']
+  pricing_evidence varchar(1000) [note: 'Nguon xac nhan gia cuoi; FINAL_CONFIRMED bat buoc; khong phan loai thue phap ly']
+  pricing_verified_at datetime(3) [note: 'Chua xac minh thi null, khong suy ra tu created_at']
+  pricing_verified_by bigint [ref: > users.id]
+  normalization_version varchar(32) [note: 'Thuat toan chuan hoa gia; null voi legacy']
+  effective_from date [not null, note: 'BR-COST-004']
+  is_reference boolean [not null, default: false, note: 'Đặt bằng giao dịch theo BR-PRC-005; dòng đầu tiên tự được chọn']
+  source_file_id bigint [ref: > files.id]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (ingredient_id, kitchen_id, effective_from)
+    (ingredient_id, supplier_id, kitchen_id, effective_from) [unique]
+  }
+  Note: 'Giá nhập do nội bộ nhập (D-13). Không sửa đè: giá mới là dòng mới'
+}
+
+Table cost_estimates {
+  id bigint [pk, increment]
+  menu_day_id bigint [not null, ref: > menu_days.id]
+  kitchen_id bigint [not null, ref: > kitchens.id]
+  version_no int [not null, note: 'Tăng theo ngày thực đơn và cơ sở, không ghi đè bản cũ']
+  batch_key char(36) [not null, note: 'Cùng mã cho lần lập dự toán tuần; dùng gộp đúng bộ phiên bản']
+  servings int [not null, note: 'Tổng lượt chọn món chính / main_pick; nguyên > 0']
+  main_pick tinyint [not null, note: 'Số món chính chọn trên suất đã chụp; > 0']
+  main_cost_method varchar(24) [not null, note: 'DAT_NHAT | BINH_QUAN | MAC_DINH']
+  total_cost_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  cost_per_serving_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  revenue_ex_vat_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  cost_pct decimal(12,2) [not null, note: 'Theo số suất từng món, nửa lên 2 chữ số; có thể > 100']
+  menu_cost_pct decimal(12,2) [not null, note: 'Cost % theo phương pháp kiểm thực đơn; không nhầm cost_pct dự toán']
+  threshold_pct decimal(5,2) [not null]
+  price_as_of date [not null, note: 'Ngày lấy giá nhập']
+  inputs_snapshot json [not null, note: 'Bản chụp đầu vào theo hợp đồng JSON ở ERD mục 5.4; không đọc lại dữ liệu sống']
+  computed_at datetime(3) [not null]
+  computed_by bigint [not null, ref: > users.id]
+  indexes {
+    (menu_day_id, kitchen_id, version_no) [unique]
+    batch_key
+  }
+  Note: 'BR-EST-004: bất biến sau khi lưu; snapshot và các dòng con ghi trong cùng giao dịch.'
+}
+
+Table cost_estimate_lines {
+  id bigint [pk, increment]
+  estimate_id bigint [not null, ref: > cost_estimates.id]
+  ingredient_id bigint [not null, ref: > ingredients.id]
+  ingredient_price_id bigint [ref: > ingredient_prices.id, note: 'Null khi nguyên liệu ngoài cost']
+  supplier_id bigint [ref: > suppliers.id]
+  ingredient_name varchar(120) [not null]
+  supplier_name varchar(160)
+  price_effective_from date
+  in_cost boolean [not null]
+  use_unit varchar(16) [not null]
+  buy_unit varchar(16) [not null]
+  conversion_factor decimal(12,4) [not null, note: '> 0, đã chụp']
+  total_use_qty decimal(24,8) [not null, note: 'Tổng định lượng sau hao hụt từ các component']
+  buy_qty decimal(18,2) [not null, note: 'Làm tròn lên 2 chữ số sau gộp theo nguyên liệu']
+  price_per_buy_unit_vnd bigint [note: '> 0 khi in_cost; null khi ngoài cost']
+  amount_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  indexes {
+    (estimate_id, ingredient_id) [unique]
+  }
+  Note: 'FR-COST-EST-004: một dòng nguyên liệu/ngày/cơ sở; định lượng mỗi suất và số suất nằm ở cost_estimate_components. Nguyên liệu ngoài cost vẫn có lượng mua, amount_vnd = 0.'
+}
+
+Table cost_sheets {
+  id bigint [pk, increment]
+  dish_id bigint [not null, ref: > dishes.id, note: 'Món đặc thù']
+  recipe_id bigint [not null, ref: > recipes.id, note: 'Phiên bản công thức đã tính']
+  kitchen_id bigint [not null, ref: > kitchens.id, note: 'Cơ sở tính giá']
+  calculation_date date [not null, note: 'Ngày lấy công thức và giá']
+  status varchar(24) [not null, default: 'PENDING', note: 'PENDING | APPROVED | REJECTED']
+  total_cost_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  inputs_snapshot json [not null, note: 'Bản chụp đầu vào theo hợp đồng JSON ở ERD mục 5.4; không đọc lại dữ liệu sống']
+  note varchar(1000) [note: 'Ghi chú người lập']
+  approved_by bigint [ref: > users.id, note: 'Người duyệt cuối, khác người lập']
+  approved_at datetime(3) [note: 'Thời điểm duyệt UTC']
+  created_at datetime(3) [not null, note: 'Thời điểm tạo, UTC']
+  created_by bigint [not null, ref: > users.id, note: 'Người lập']
+  indexes {
+    (dish_id, kitchen_id, calculation_date, status)
+  }
+  Note: 'FR-COST-DISH-006/007: nội dung chụp bất biến từ khi gửi; quyết định duyệt dùng approvals.entity = cost_sheets. Bị trả lại thì lập bản mới.'
+}
+
+Table cost_sheet_lines {
+  id bigint [pk, increment]
+  sheet_id bigint [not null, ref: > cost_sheets.id, note: 'Bảng tính cha']
+  recipe_id bigint [not null, ref: > recipes.id, note: 'Công thức nguồn']
+  ingredient_id bigint [not null, ref: > ingredients.id, note: 'Nguyên liệu nguồn']
+  ingredient_price_id bigint [ref: > ingredient_prices.id, note: 'Null chỉ khi in_cost = false']
+  supplier_id bigint [ref: > suppliers.id, note: 'Nhà cung cấp đã chọn; null nếu không tính cost']
+  ingredient_name varchar(120) [not null, note: 'Tên nguyên liệu tại lúc chụp']
+  supplier_name varchar(160) [note: 'Tên nhà cung cấp tại lúc chụp']
+  price_effective_from date [note: 'Ngày hiệu lực của giá đã dùng']
+  in_cost boolean [not null, note: 'Cờ tính vào cost tại lúc chụp']
+  is_main boolean [not null, note: 'Nguyên liệu chính trong công thức']
+  qty_std decimal(10,3) [not null, note: 'Định lượng chuẩn trước hao hụt; > 0']
+  use_unit varchar(16) [not null, note: 'Đơn vị dùng đã chụp']
+  buy_unit varchar(16) [not null, note: 'Đơn vị mua đã chụp']
+  conversion_factor decimal(12,4) [not null, note: 'Số đơn vị dùng trên đơn vị mua; > 0']
+  waste_pct decimal(5,2) [not null, note: 'Hao hụt đã chụp, 0 <= giá trị < 100']
+  price_per_buy_unit_vnd bigint [note: 'Giá trên đơn vị mua; > 0 khi in_cost = true']
+  line_cost_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  indexes {
+    (sheet_id, ingredient_id) [unique]
+  }
+  Note: 'Bảng phân rã bất biến, BR-CALC-007. Công thức phải khớp cost_sheets.recipe_id; nguyên liệu ngoài cost có giá null, line_cost_vnd = 0.'
+}
+
+Table cost_allowances {
+  id bigint [pk, increment]
+  name varchar(120) [not null, note: 'Tên khoản khoán; chuẩn hoá như BR-CAT-001']
+  meal_type_id bigint [ref: > meal_types.id, note: 'Null = mọi loại suất']
+  amount_vnd bigint [not null, note: 'Số nguyên đồng trên suất; >= 0']
+  effective_from date [not null, note: 'Ngày bắt đầu hiệu lực']
+  status varchar(24) [not null, default: 'PENDING', note: 'PENDING | APPROVED | REJECTED']
+  reason varchar(500) [not null, note: 'Lý do đề nghị; ít nhất 10 ký tự']
+  approved_by bigint [ref: > users.id, note: 'Khác người lập']
+  approved_at datetime(3)
+  created_at datetime(3) [not null, note: 'Thời điểm tạo, UTC']
+  created_by bigint [not null, ref: > users.id, note: 'Người lập']
+  indexes {
+    (name, meal_type_id, effective_from)
+  }
+  Note: 'FR-COST-MEAL-004: mỗi thay đổi tạo bản đề nghị mới; duyệt qua approvals.entity = cost_allowances. Khoản riêng loại suất ưu tiên khoản chung cùng tên (BR-CALC-008).'
+}
+
+Table menu_cost_snapshots {
+  id bigint [pk, increment]
+  menu_day_id bigint [not null, ref: > menu_days.id, note: 'Ngày của thực đơn được duyệt']
+  kitchen_id bigint [not null, ref: > kitchens.id, note: 'Một bản cho mỗi cơ sở được kiểm']
+  approval_round_no smallint [not null, note: 'Vòng duyệt của menus, khớp approvals.round_no']
+  service_date date [not null, note: 'Ngày phục vụ được chụp']
+  cost_per_serving_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  revenue_ex_vat_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  cost_pct decimal(12,2) [not null, note: 'Làm tròn nửa lên 2 chữ số; >= 0, có thể > 100']
+  threshold_pct decimal(5,2) [not null, note: 'Ngưỡng đã dùng']
+  result varchar(24) [not null, note: 'DAT | KHONG_DAT; cảnh báo cho phép duyệt bản KHONG_DAT']
+  inputs_snapshot json [not null, note: 'Bản chụp đầu vào theo hợp đồng JSON ở ERD mục 5.4; không đọc lại dữ liệu sống']
+  created_at datetime(3) [not null, note: 'Thời điểm tạo, UTC']
+  created_by bigint [not null, ref: > users.id, note: 'Người lập']
+  indexes {
+    (menu_day_id, kitchen_id, approval_round_no) [unique]
+  }
+  Note: 'FR-COST-MEAL-006: INSERT cùng giao dịch chuyển menus sang APPROVED ở người duyệt cuối. Không UPDATE/DELETE nội dung, không ghi đè qua vòng duyệt.'
+}
+
+Table menu_cost_snapshot_lines {
+  id bigint [pk, increment]
+  snapshot_id bigint [not null, ref: > menu_cost_snapshots.id, note: 'Bản chụp ngày/cơ sở']
+  dish_id bigint [not null, ref: > dishes.id, note: 'Món đã dùng']
+  recipe_id bigint [not null, ref: > recipes.id, note: 'Công thức nguồn']
+  ingredient_id bigint [not null, ref: > ingredients.id, note: 'Nguyên liệu nguồn']
+  ingredient_price_id bigint [ref: > ingredient_prices.id, note: 'Null chỉ khi in_cost = false']
+  supplier_id bigint [ref: > suppliers.id, note: 'Nhà cung cấp đã chọn; null nếu không tính cost']
+  ingredient_name varchar(120) [not null, note: 'Tên nguyên liệu tại lúc chụp']
+  supplier_name varchar(160) [note: 'Tên nhà cung cấp tại lúc chụp']
+  price_effective_from date [note: 'Ngày hiệu lực của giá đã dùng']
+  in_cost boolean [not null, note: 'Cờ tính vào cost tại lúc chụp']
+  is_main boolean [not null, note: 'Nguyên liệu chính trong công thức']
+  qty_std decimal(10,3) [not null, note: 'Định lượng chuẩn trước hao hụt; > 0']
+  use_unit varchar(16) [not null, note: 'Đơn vị dùng đã chụp']
+  buy_unit varchar(16) [not null, note: 'Đơn vị mua đã chụp']
+  conversion_factor decimal(12,4) [not null, note: 'Số đơn vị dùng trên đơn vị mua; > 0']
+  waste_pct decimal(5,2) [not null, note: 'Hao hụt đã chụp, 0 <= giá trị < 100']
+  price_per_buy_unit_vnd bigint [note: 'Giá trên đơn vị mua; > 0 khi in_cost = true']
+  line_cost_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  indexes {
+    (snapshot_id, dish_id, ingredient_id) [unique]
+  }
+  Note: 'Lưu cả món chính không được chọn bởi DAT_NHAT để giải thích đầy đủ. Tổng cost dòng không phải cost suất; áp cách gộp món chính từ inputs_snapshot.'
+}
+
+Table cost_recalculations {
+  id bigint [pk, increment]
+  snapshot_id bigint [not null, ref: > menu_cost_snapshots.id, note: 'Bản duyệt gốc dùng so sánh']
+  event_key varchar(120) [not null, note: 'Khoá sự kiện giá để retry không trùng']
+  result varchar(24) [not null, note: 'DAT | KHONG_DAT | KHONG_XAC_DINH']
+  cost_per_serving_vnd decimal(24,8) [note: 'Null khi không tính được']
+  cost_pct decimal(12,2) [note: 'Null khi không tính được; không gán 0']
+  inputs_snapshot json [not null, note: 'Bản chụp đầu vào theo hợp đồng JSON ở ERD mục 5.4; không đọc lại dữ liệu sống']
+  missing_ingredient_ids json [note: 'Danh sách nguyên liệu thiếu giá nếu có']
+  computed_at datetime(3) [not null, note: 'Thời điểm tính lại UTC']
+  indexes {
+    (snapshot_id, event_key) [unique]
+  }
+  Note: 'FR-COST-ALR-001: kết quả mới lưu riêng bất biến; inputs_snapshot gồm dòng giá/công thức đã dùng, không cập nhật bản duyệt.'
+}
+
+Table cost_alerts {
+  id bigint [pk, increment]
+  menu_day_id bigint [not null, ref: > menu_days.id, note: 'Duy nhất một cảnh báo mở theo ngày thực đơn']
+  status varchar(16) [not null, default: 'OPEN', note: 'OPEN | CLOSED']
+  opened_at datetime(3) [not null]
+  updated_at datetime(3) [not null]
+  closed_at datetime(3)
+  closed_by bigint [ref: > users.id, note: 'Null nếu đóng tự động']
+  close_reason varchar(500) [note: 'Bắt buộc khi đóng tay; ít nhất 10 ký tự']
+  close_type varchar(24) [note: 'MENU_REVISED | PRICE_RECOVERED | MANUAL']
+  version int [not null, default: 1, note: 'Khoá lạc quan']
+  indexes {
+    (menu_day_id, status)
+  }
+  Note: 'FR-COST-ALR-002/003: một cảnh báo đầu mục/ngày; chi tiết nhiều cơ sở. Thông báo dùng notifications.entity = cost_alerts, entity_id = id.'
+}
+
+Table cost_alert_kitchens {
+  id bigint [pk, increment]
+  alert_id bigint [not null, ref: > cost_alerts.id, note: 'Cảnh báo ngày']
+  kitchen_id bigint [not null, ref: > kitchens.id, note: 'Cơ sở bị ảnh hưởng']
+  snapshot_id bigint [not null, ref: > menu_cost_snapshots.id, note: 'Cost lúc duyệt']
+  latest_recalculation_id bigint [not null, ref: > cost_recalculations.id, note: 'Cost hiện tại và giá gây thay đổi']
+  indexes {
+    (alert_id, kitchen_id) [unique]
+  }
+  Note: 'Hai cơ sở cùng vượt chỉ tạo một cảnh báo ngày với hai dòng; lấy cost cũ/mới từ FK, không chép số có thể lệch nhau.'
+}
+
+Table cost_estimate_servings {
+  id bigint [pk, increment]
+  estimate_id bigint [not null, ref: > cost_estimates.id]
+  dish_id bigint [not null, ref: > dishes.id, note: 'Món chính thuộc ngày dự toán']
+  dish_name varchar(160) [not null, note: 'Tên món đã chụp']
+  servings int [not null, note: 'Số lượt chọn món; nguyên >= 0']
+  indexes {
+    (estimate_id, dish_id) [unique]
+  }
+  Note: 'Lưu số suất từng món chính, BR-EST-001. Tổng lượt chọn / main_pick = số suất ngày; dữ liệu sau lưu bất biến.'
+}
+
+Table cost_estimate_components {
+  id bigint [pk, increment]
+  estimate_line_id bigint [not null, ref: > cost_estimate_lines.id]
+  dish_id bigint [not null, ref: > dishes.id]
+  recipe_id bigint [not null, ref: > recipes.id]
+  dish_name varchar(160) [not null, note: 'Tên món đã chụp']
+  qty_per_serving decimal(24,8) [not null, note: 'Định lượng sau áp hao hụt đúng một lần']
+  servings int [not null, note: 'Số suất món; >= 0']
+  total_use_qty decimal(24,8) [not null, note: 'qty_per_serving x servings']
+  recipe_item_snapshot json [not null, note: 'qty_std, use_unit, in_cost, waste_pct, conversion_factor đã dùng']
+  indexes {
+    (estimate_line_id, dish_id) [unique]
+  }
+  Note: 'Phân rã dòng nguyên liệu về từng món và phiên bản công thức; không làm tròn mua từng món.'
+}
+
+Table cost_estimate_allowances {
+  id bigint [pk, increment]
+  estimate_id bigint [not null, ref: > cost_estimates.id]
+  allowance_id bigint [not null, ref: > cost_allowances.id]
+  name varchar(120) [not null, note: 'Tên khoản tại lúc lập']
+  amount_per_serving_vnd bigint [not null, note: 'Đồng trên suất; >= 0']
+  total_amount_vnd decimal(24,8) [not null, note: 'Đồng, giá trị tính trước làm tròn hiển thị; >= 0']
+  indexes {
+    (estimate_id, allowance_id) [unique]
+  }
+  Note: 'Khoản khoán tách khỏi dòng nguyên liệu; không tính trùng khoản chung và riêng cùng tên.'
+}
+
+// ============================ NUTR ============================
+
+Table nutrient_values {
+  ingredient_id bigint [pk, ref: - ingredients.id]
+  energy_kcal decimal(7,2) [not null, note: 'Trên 100 g phần ăn được']
+  protein_g decimal(6,2) [not null]
+  fat_g decimal(6,2) [not null]
+  carb_g decimal(6,2) [not null]
+  edible_pct decimal(5,2) [not null, default: 100]
+  grams_per_unit decimal(8,2) [note: 'Bắt buộc khi use_unit không phải g']
+  source varchar(120) [not null, default: 'Bảng thành phần thực phẩm Việt Nam', note: 'D-17']
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  source_edition varchar(120) [not null, note: 'NUTR-Q01: phai co an ban, khong tu dien cho legacy']
+  source_locator varchar(120) [not null, note: 'Trang hoac ma thuc pham trong nguon']
+}
+
+Table eater_health_profiles {
+  user_id bigint [pk, ref: - users.id]
+  encrypted_payload blob [not null, note: 'AES-256 (NFR-SEC-003). Nội dung: điểm mở O-03']
+  consent_at datetime(3) [not null]
+  consent_version varchar(16) [not null]
+  updated_at datetime(3) [not null]
+  Note: 'Chỉ chính người ăn đọc được. Xoá cứng khi người ăn yêu cầu (NFR-PRIV-001) — ngoại lệ duy nhất của quy tắc không xoá cứng'
+}
+
+// ============================ CUS + ORD (R6) ============================
+
+Table customers {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  name varchar(200) [not null]
+  tax_code varchar(14)
+  lifecycle_status varchar(24) [not null, default: 'PROSPECT', note: 'PROSPECT | NEW | SERVING | AT_RISK | PAUSED | CHURNED | REACTIVATED']
+  eater_choice_enabled boolean [not null, default: true, note: 'FEAT-044']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+}
+
+Table service_points {
+  id bigint [pk, increment]
+  customer_id bigint [not null, ref: > customers.id]
+  kitchen_id bigint [not null, ref: > kitchens.id, note: 'Cơ sở mặc định']
+  name varchar(160) [not null]
+  address varchar(255) [not null]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    customer_id
+    kitchen_id
+  }
+}
+
+Table service_schedules {
+  id bigint [pk, increment]
+  service_point_id bigint [not null, ref: > service_points.id]
+  shift varchar(16) [not null, note: 'LUNCH | MORNING | AFTERNOON | DINNER']
+  weekday tinyint [not null, note: '1 = thứ Hai ... 7 = Chủ nhật']
+  delivery_time time [not null]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (service_point_id, shift, weekday) [unique]
+  }
+}
+
+Table customer_quotas {
+  id bigint [pk, increment]
+  customer_id bigint [not null, ref: > customers.id]
+  meal_type_id bigint [not null, ref: > meal_types.id]
+  effective_from date [not null]
+  approved_by bigint [ref: > users.id]
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (customer_id, effective_from) [unique]
+  }
+  Note: 'Định mức suất chung của công ty (D-21)'
+}
+
+Table customer_qr_codes {
+  id bigint [pk, increment]
+  customer_id bigint [not null, ref: > customers.id]
+  service_point_id bigint [ref: > service_points.id]
+  token_hash char(64) [not null, unique]
+  status varchar(16) [not null, default: 'ACTIVE', note: 'ACTIVE | ROTATED | REVOKED']
+  rotated_at datetime(3)
+  created_at datetime(3) [not null]
+  created_by bigint
+  Note: 'Mã QR công ty dùng để xác minh người ăn (D-19)'
+}
+
+Table eaters {
+  id bigint [pk, increment]
+  customer_id bigint [not null, ref: > customers.id]
+  service_point_id bigint [not null, ref: > service_points.id]
+  user_id bigint [unique, ref: - users.id, note: 'Null với người ăn qua QR']
+  display_name varchar(120)
+  status varchar(16) [not null, default: 'ACTIVE', note: 'ACTIVE | REMOVED']
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (customer_id, status)
+  }
+  Note: 'Cách định danh người ăn qua QR: chốt ở SRS R6'
+}
+
+Table meal_selections {
+  id bigint [pk, increment]
+  eater_id bigint [not null, ref: > eaters.id]
+  service_date date [not null]
+  shift varchar(16) [not null, default: 'LUNCH']
+  service_point_id bigint [not null, ref: > service_points.id]
+  menu_day_id bigint [not null, ref: > menu_days.id]
+  dish_id bigint [not null, ref: > dishes.id, note: 'Thuộc các món MAIN của menu_day_id (D-04)']
+  portion_code varchar(16) [not null, default: 'STD', note: 'Điểm mở O-02']
+  source varchar(24) [not null, default: 'SELF', note: 'SELF | DEFAULT | COORDINATOR']
+  idempotency_key char(36)
+  created_at datetime(3) [not null]
+  updated_at datetime(3) [not null]
+  version int [not null, default: 1]
+  indexes {
+    (eater_id, service_date, shift) [unique]
+    (service_point_id, service_date, shift, dish_id)
+  }
+  Note: 'Bảng chịu tải cao nhất. Phân vùng theo tháng của service_date'
+}
+
+Table selection_counters {
+  menu_day_id bigint [not null, ref: > menu_days.id]
+  service_point_id bigint [not null, ref: > service_points.id]
+  shift varchar(16) [not null]
+  dish_id bigint [not null, ref: > dishes.id]
+  qty int [not null, default: 0]
+  indexes {
+    (menu_day_id, service_point_id, shift, dish_id) [pk]
+  }
+  Note: 'Bộ đếm theo món, cập nhật cùng giao dịch với meal_selections'
+}
+
+Table orders {
+  id bigint [pk, increment]
+  code varchar(32) [not null, unique]
+  service_point_id bigint [not null, ref: > service_points.id]
+  service_date date [not null]
+  shift varchar(16) [not null, default: 'LUNCH']
+  meal_type_id bigint [not null, ref: > meal_types.id]
+  menu_day_id bigint [not null, ref: > menu_days.id]
+  total_servings int [not null, note: 'Do người đặt tổng chốt (D-14)']
+  unit_price_vnd bigint [not null, note: 'Giá suất chụp tại thời điểm order']
+  source varchar(24) [not null, default: 'PORTAL', note: 'PORTAL | ZALO | PHONE (nhập hộ)']
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | SUBMITTED | LOCKED | IN_PRODUCTION | DELIVERED | CONFIRMED | DISPUTED | RECONCILED']
+  locked_at datetime(3)
+  created_at datetime(3) [not null]
+  created_by bigint
+  updated_at datetime(3) [not null]
+  updated_by bigint
+  version int [not null, default: 1]
+  cancelled_at datetime(3)
+  cancelled_reason varchar(500)
+  indexes {
+    (service_point_id, service_date, shift) [unique]
+    (service_date, status)
+  }
+  Note: 'Một dòng mỗi điểm - ngày - ca; đặt, giao, nhận, tính tiền theo SUẤT'
+}
+
+Table order_dish_lines {
+  id bigint [pk, increment]
+  order_id bigint [not null, ref: > orders.id]
+  dish_id bigint [not null, ref: > dishes.id]
+  qty_selected int [not null, default: 0, note: 'Người ăn tự chọn']
+  qty_default int [not null, default: 0, note: 'Gán món mặc định']
+  qty_coordinator int [not null, default: 0, note: 'Người đặt tổng nhập']
+  indexes {
+    (order_id, dish_id) [unique]
+  }
+  Note: 'Phân rã theo MÓN cho kế hoạch sản xuất. Tổng 3 cột của mọi dòng = orders.total_servings'
+}
+
+// ============================ Nhóm bảng ============================
+
+TableGroup auth {
+  kitchens
+  users
+  user_roles
+  sessions
+  login_logs
+  delegations
+}
+
+TableGroup sys {
+  audit_logs
+  parameters
+  notifications
+  files
+  agent_runs
+  change_requests
+  approvals
+}
+
+TableGroup menu {
+  ingredient_groups
+  ingredients
+  ingredient_seasons
+  cooking_methods
+  allergens
+  dishes
+  dish_allergens
+  dish_conflicts
+  recipes
+  recipe_items
+  dish_prices
+  meal_types
+  menus
+  menu_days
+  menu_day_items
+  menu_rules
+  menu_rule_results
+}
+
+TableGroup cost {
+  cost_sheets
+  cost_sheet_lines
+  cost_allowances
+  menu_cost_snapshots
+  menu_cost_snapshot_lines
+  cost_recalculations
+  cost_alerts
+  cost_alert_kitchens
+  cost_estimate_servings
+  cost_estimate_components
+  cost_estimate_allowances
+  suppliers
+  ingredient_prices
+  cost_estimates
+  cost_estimate_lines
+}
+
+TableGroup nutr {
+  nutrient_values
+  eater_health_profiles
+}
+
+TableGroup cus_ord {
+  customers
+  service_points
+  service_schedules
+  customer_quotas
+  customer_qr_codes
+  eaters
+  meal_selections
+  selection_counters
+  orders
+  order_dish_lines
+}
+
+
+// Accounting design CR-COST-2026-001. No SQL migration is implied.
+Table customer_price_terms {
+  id bigint [pk, increment]
+  customer_id bigint [not null, ref: > customers.id]
+  meal_type_id bigint [not null, ref: > meal_types.id]
+  quoted_unit_price decimal(18,6) [not null]
+  sale_price_basis varchar(24) [not null, default: 'UNKNOWN', note: 'INCLUSIVE | EXCLUSIVE | FINAL_CONFIRMED | UNKNOWN']
+  vat_rate_pct decimal(9,6) [note: 'Null khac0; invoiceRequested khong quyet dinh rate']
+  invoice_requested boolean [note: 'Null=chua hoi; false khong nghia VAT0']
+  evidence varchar(1000) [note: 'Thoa thuan va nguon xac nhan']
+  effective_from date [not null]
+  effective_to date [note: 'Nullable; rang buoc khong chong lan ACTIVE theo customer/meal type can transaction']
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | ACTIVE | CANCELLED; activation gated cho sales policy']
+  version int [not null, default: 1]
+  created_by bigint [not null, ref: > users.id]
+  created_at datetime(3) [not null]
+  updated_by bigint [ref: > users.id]
+  updated_at datetime(3)
+  indexes {
+    (customer_id, meal_type_id, effective_from)
+  }
+}
+
+Table order_pricing_snapshots {
+  id bigint [pk, increment]
+  order_id bigint [not null, ref: > orders.id]
+  order_version int [not null]
+  price_term_id bigint [ref: > customer_price_terms.id]
+  quoted_unit_price decimal(18,6) [not null]
+  sale_price_basis varchar(24) [not null]
+  vat_rate_pct decimal(9,6)
+  invoice_requested boolean
+  servings int [not null]
+  gross_amount_due decimal(18,6) [note: 'Khong tru khoan chiet khau rieng; null neu UNKNOWN']
+  revenue_ex_vat decimal(18,6) [note: 'Null neu chua du VAT/context; khong lay gross neu invoice=false']
+  context_status varchar(24) [not null, note: 'RESOLVED | UNRESOLVED | LEGACY_UNVERIFIED']
+  captured_at datetime(3) [not null]
+  captured_by bigint [not null, ref: > users.id]
+  inputs_snapshot json [not null, note: 'Bat bien; quyen doc rieng, khong serialize cho agent khach']
+  indexes {
+    (order_id, order_version) [unique]
+  }
+}
+
+Table order_discount_records {
+  id bigint [pk, increment]
+  order_id bigint [not null, ref: > orders.id]
+  pricing_snapshot_id bigint [not null, ref: > order_pricing_snapshots.id]
+  proposal_key varchar(64) [not null, note: 'Khong phai key TTL; unique proposal trong order']
+  calculation_type varchar(24) [not null, note: 'PERCENT | FIXED_PER_SERVING']
+  rate_pct decimal(9,6) [note: 'Chi PERCENT; base chua chot thi draft only']
+  amount_per_serving decimal(18,6) [note: 'Chi FIXED_PER_SERVING; rounding CK-Q03']
+  percent_basis varchar(24) [not null, default: 'UNRESOLVED', note: 'GROSS | NET | UNRESOLVED; ghi gia dinh draft khong dong CK-Q01']
+  eligible_servings int [note: 'CK-Q02; khong lay qty dish lines thay so suat']
+  quantity_basis varchar(24) [not null, default: 'UNRESOLVED', note: 'ORDERED | DELIVERED | CONFIRMED | UNRESOLVED']
+  base_amount decimal(18,6) [note: 'Server-derived, null neu chua xac dinh']
+  calculated_amount decimal(18,6) [note: 'So tinh thu, khong phai paid amount; null neu thieu base']
+  status varchar(24) [not null, default: 'DRAFT', note: 'DRAFT | NEEDS_REVIEW | CONFIRMED | CANCELLED; confirm/cancel da xu ly gated CK-Q04-09']
+  calculation_snapshot json [not null, note: 'Gia dinh, gates, ruleVersion; khong ghi len amountDue cua order']
+  version int [not null, default: 1]
+  created_by bigint [not null, ref: > users.id]
+  created_at datetime(3) [not null]
+  updated_by bigint [ref: > users.id]
+  updated_at datetime(3)
+  indexes {
+    (order_id, proposal_key) [unique]
+    (order_id, status)
+  }
+}
+
+Table order_discount_events {
+  id bigint [pk, increment]
+  discount_id bigint [not null, ref: > order_discount_records.id]
+  event_key varchar(64) [not null, note: 'Event replay chi ghi mot lan']
+  event_type varchar(32) [not null, note: 'DRAFT_CREATED | DRAFT_UPDATED | ORDER_CHANGED | REVIEW_REQUESTED; khong settlement event']
+  actor_id bigint [ref: > users.id, note: 'Nullable cho worker; event phai co actor hoac system source']
+  source varchar(32) [not null]
+  payload json [not null, note: 'Before/after va reason, version; khong luu token']
+  created_at datetime(3) [not null]
+  indexes {
+    (discount_id, event_key) [unique]
+  }
+}
+
+TableGroup accounting_extension {
+  customer_price_terms
+  order_pricing_snapshots
+  order_discount_records
+  order_discount_events
+}
+
+// E4_E5_MVP_EXTENSION — Draft 0.1.0, 2026-11-11. Notes are not enforced CHECK constraints.
+
+Table nutrient_value_revisions {
+  id bigint [pk, increment]
+  ingredient_id bigint [not null, ref: > ingredients.id]
+  version int [not null]
+  value_snapshot json [not null]
+  reason varchar(500) [not null]
+  changed_by bigint [not null, ref: > users.id]
+  changed_at datetime(3) [not null]
+  indexes {
+    (ingredient_id, version) [unique]
+  }
+}
+
+Table nutrition_calculations {
+  id bigint [pk, increment]
+  kind varchar(8) [not null]
+  recipe_id bigint [ref: > recipes.id]
+  menu_id bigint [ref: > menus.id]
+  menu_version int
+  service_date date [not null]
+  scope_snapshot json [not null]
+  inputs_snapshot json [not null]
+  totals json [not null]
+  client_revision int [not null]
+  created_by bigint [not null, ref: > users.id]
+  request_route varchar(80) [not null]
+  request_key varchar(128) [not null]
+  request_hash varchar(64) [not null]
+  created_at datetime(3) [not null]
+  indexes {
+    (created_by, request_route, request_key) [unique]
+    (menu_id, created_at)
+  }
+}
+
+Table agent_run_contexts {
+  run_id bigint [pk, ref: - agent_runs.id]
+  parent_run_id bigint [ref: > agent_runs.id]
+  actor_id bigint [not null, ref: > users.id]
+  request_route varchar(80) [not null]
+  request_key varchar(128) [not null]
+  request_hash varchar(64) [not null]
+  scope_snapshot json [not null]
+  input_snapshot json [not null]
+  base_menu_id bigint [ref: > menus.id]
+  base_version int
+  candidate_revision int
+  candidate_hash varchar(64)
+  candidate_snapshot json
+  evidence_snapshot json
+  outcome varchar(24)
+  questions json
+  deadline_at datetime(3) [not null]
+  model_code varchar(120)
+  prompt_version varchar(40)
+  usage_status varchar(16) [not null, default: 'UNKNOWN']
+  applied_menu_id bigint [ref: > menus.id]
+  applied_menu_version int
+  application_key varchar(128)
+  application_hash varchar(64)
+  applied_at datetime(3)
+  indexes {
+    (actor_id, request_route, request_key) [unique]
+  }
+}
+
+Table agent_tool_events {
+  id bigint [pk, increment]
+  run_id bigint [not null, ref: > agent_runs.id]
+  seq int [not null]
+  tool_name varchar(80) [not null]
+  status varchar(24) [not null]
+  request_id varchar(64) [not null]
+  argument_hash varchar(64)
+  result_hash varchar(64)
+  safe_summary json [not null]
+  started_at datetime(3) [not null]
+  finished_at datetime(3)
+  indexes {
+    (run_id, seq) [unique]
+  }
+}
+
+TableGroup mvp_e4_e5_extension {
+  nutrient_value_revisions
+  nutrition_calculations
+  agent_run_contexts
+  agent_tool_events
+}
