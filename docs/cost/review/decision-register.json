@@ -1,0 +1,548 @@
+[
+  {
+    "id": "O-01",
+    "question": "Thành phần cost; khoản khoán; VAT; giá nhập có gồm VAT đầu vào",
+    "owner": "Kế toán",
+    "current": "Cờ \"tính vào cost\" từng nguyên liệu + khoản khoán + `VAT_PCT`; Cost gồm VAT phải trả theo ACC-CONF-02; giá báo chưa VAT cần chuẩn hóa trước khi tính, xem bổ sung kế toán",
+    "source": "srs/spec.md",
+    "status": "PARTIALLY_CONFIRMED",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Chốt riêng VAT bán ra, thành phần cost, khoản khoán và cách hiểu giá nhập; yêu cầu bảng kế toán làm nguồn.",
+    "tradeoff": "Không lấy VAT8% của mẫu làm mặc định; thiếu VAT vẫn chặn tính%.",
+    "updateTargets": "SRS3.3, params SYS, seed dữ liệu, fixture kế toán",
+    "explicitBlockedTests": [
+      "TC-COST-010-06",
+      "TC-COST-015-01"
+    ],
+    "confirmedFacts": "Người dùng xác nhận 11/11/2026: cost nguyên liệu gồm VAT phải trả; khách không lấy VAT là không yêu cầu hóa đơn. Chi tiết ACC-CONF-01 đến05 tại accounting/business-rules.md. VAT cụ thể/thành phần khoán/cơ sở doanh thu còn mở."
+  },
+  {
+    "id": "E3-Q1",
+    "question": "Cost phần món chính",
+    "owner": "Giám đốc, kế toán",
+    "current": "Tham số, mặc định `DAT_NHAT`",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc DAT_NHAT giai đoạn đầu; so với BINH_QUAN/MAC_DINH trên10 ngày thực tế trước khi chọn.",
+    "tradeoff": "DAT_NHAT thận trọng nhưng có thể cao hơn cơ cấu chọn thực tế.",
+    "updateTargets": "BR-CALC-004, tham số, AC-COST-015-04",
+    "explicitBlockedTests": [
+      "TC-COST-015-04"
+    ]
+  },
+  {
+    "id": "E3-Q2",
+    "question": "Định lượng sống đã gồm xương, vỏ chưa",
+    "owner": "Người soạn docx, bếp trưởng",
+    "current": "Tham số, mặc định `KHONG`",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Xác nhận định lượng sống là trước hay sau loại xương/vỏ; chỉ áp hao hụt một lần.",
+    "tradeoff": "Áp hai lần sẽ tăng lượng mua sai; tắt hao hụt khi định lượng đã bao gồm phần bỏ.",
+    "updateTargets": "SRS3.3.1/3.3.4 và dữ liệu công thức",
+    "explicitBlockedTests": [
+      "TC-COST-010-05"
+    ]
+  },
+  {
+    "id": "E3-Q3",
+    "question": "Hai cơ sở mua giá khác nhau; kiểm ngưỡng theo cơ sở nào",
+    "owner": "Kế toán",
+    "current": "Kiểm theo từng cơ sở, phải đạt ở mọi cơ sở",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q4",
+    "question": "Giá nào là giá tham chiếu",
+    "owner": "Kế toán",
+    "current": "Kế toán đánh dấu",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-003-03"
+    ]
+  },
+  {
+    "id": "E3-Q5",
+    "question": "Tần suất cập nhật giá thực tế",
+    "owner": "Kế toán",
+    "current": "Ngưỡng giá cũ là tham số",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q6",
+    "question": "Giá nhập có cần duyệt",
+    "owner": "Giám đốc",
+    "current": "Không có bước duyệt; chỉ hỏi xác nhận khi lệch bất thường",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q7",
+    "question": "Định nghĩa cost cao / thấp",
+    "owner": "Người soạn docx",
+    "current": "Dùng nhóm cost gắn tay ở E2",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-014-01",
+      "TC-COST-014-02",
+      "TC-COST-014-03",
+      "TC-COST-020-01"
+    ]
+  },
+  {
+    "id": "E3-Q8",
+    "question": "Nguồn số suất trước khi có order",
+    "owner": "Dinh dưỡng viên",
+    "current": "Nhập tay theo từng món chính",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q9",
+    "question": "Vượt ngưỡng: chặn tuyệt đối hay cho ngoại lệ",
+    "owner": "Giám đốc",
+    "current": "Chặn tuyệt đối khi ở chế độ `CHAN`; có chế độ `CANH_BAO`",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q10",
+    "question": "Chặn chuyển bếp",
+    "owner": "Giám đốc",
+    "current": "Chưa hiện thực",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E3-Q11",
+    "question": "Bếp trưởng có xem giá và cost",
+    "owner": "Giám đốc",
+    "current": "Không; chỉ xem dự toán dạng số lượng",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-021-05",
+      "TC-COST-024-02",
+      "TC-COST-024-03",
+      "TC-COST-025-03"
+    ]
+  },
+  {
+    "id": "E2-Q1",
+    "question": "Giá món dùng để làm gì khi công ty đã đặt định mức",
+    "owner": "Dinh dưỡng viên, Giám đốc",
+    "current": "Mẫu số của cost % là ngưỡng giá loại suất",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-015-01"
+    ]
+  },
+  {
+    "id": "DL-01",
+    "question": "Loại và con số của các quy tắc cost",
+    "owner": "Người soạn docx, kế toán",
+    "current": "Loại ghi \"chờ DL-01\"",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-007-03",
+      "TC-COST-020-01"
+    ]
+  },
+  {
+    "id": "E3-Q12",
+    "question": "Khi tính `BINH_QUAN` hoặc `DAT_NHAT`, món chính Healthy (thường rẻ hơn) có được tính vào không",
+    "owner": "Giám đốc",
+    "current": "Có, tính mọi món chính của ngày",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-015-04"
+    ]
+  },
+  {
+    "id": "E3-Q13",
+    "question": "Cho nhập giá hồi tố tối đa mấy ngày; giá hồi tố có làm tính lại các bản chụp không",
+    "owner": "Kế toán",
+    "current": "7 ngày; không tính lại bản chụp, chỉ ảnh hưởng lần tính sau",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-002-03"
+    ]
+  },
+  {
+    "id": "E3-Q14",
+    "question": "FR-COST-PRC-002 cho đổi cờ tham chiếu nhưng BR-PRC-004 cấm sửa giá đã hiệu lực; có được đổi riêng cờ không?",
+    "owner": "Kế toán",
+    "current": "Chưa cho phép thay đổi hồi tố cờ trên giá đã hiệu lực; snapshot cũ giữ bất biến. Cần quyết định trước khi triển khai thao tác này",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ giá đã hiệu lực bất biến, chỉ đổi tham chiếu tương lai; nếu cần hồi tố phải thiết kế nghiệp vụ riêng.",
+    "tradeoff": "Dễ kiểm toán nhưng kế toán không sửa cờ lịch sử trực tiếp.",
+    "updateTargets": "BR-PRC-004/005, API-COST-008, UC-COST-002",
+    "explicitBlockedTests": [
+      "TC-COST-003-03"
+    ]
+  },
+  {
+    "id": "E3-Q15",
+    "question": "Ngày dùng nhiều món chính: FR-COST-EST-002 gọi tổng lượt chọn là tổng suất, nhưng BR-EST-001 yêu cầu chia main_pick",
+    "owner": "Dinh dưỡng viên",
+    "current": "Mô hình theo BR-EST-001; tổng lượt chọn phải chia hết cho main_pick. MVP main_pick=1 không bị ảnh hưởng; cần chốt trước khi mở main_pick>1",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "R3 giới hạn K=1; chỉ mở K>1 khi xác nhận tổng lượt chọn chia hết K và cách xử lý phần dư.",
+    "tradeoff": "Giảm rủi ro suy ra sai số suất; hạn chế loại suất nhiều món chính.",
+    "updateTargets": "BR-EST-001, API EstimateInput, TC-COST-022-04",
+    "explicitBlockedTests": [
+      "TC-COST-022-04"
+    ]
+  },
+  {
+    "id": "E3-Q16",
+    "question": "Món đặc thù có bảng tính ở cơ sở A có hợp lệ cho cơ sở B không; mốc 90 ngày tính theo ngày lập hay ngày tính giá?",
+    "owner": "Giám đốc, kế toán",
+    "current": "Lưu cả cơ sở, ngày tính và thời điểm lập, chưa suy ra quyền dùng chéo cơ sở. Cần xác nhận bộ lọc hiệu lực trước triển khai",
+    "source": "srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc cùng món/cỡ/cơ sở, ngày lập đến ngày phục vụ <=N ngày; chốt riêng công thức đổi có làm hết hiệu lực không.",
+    "tradeoff": "Không tái dùng bảng khác cơ sở nếu chưa có quy tắc; tăng số bảng cần duyệt.",
+    "updateTargets": "BR-CALC-007, bộ lọc bảng, test89/90/91ngày",
+    "explicitBlockedTests": [
+      "TC-COST-013-03"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q01",
+    "question": "Huỷ giá tham chiếu tương lai khi cùng ngày còn báo giá khác thì chọn giá thay thế thế nào?",
+    "owner": "Kế toán",
+    "current": "Không tự chọn NCC; luồng còn chờ phương án để giữ đúng một tham chiếu",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Yêu cầu chọn giá thay thế trong cùng giao dịch hủy, nếu còn báo giá khác cùng nhóm.",
+    "tradeoff": "Không tự chọn NCC; lỗi ở một bước rollback cả hai thay đổi.",
+    "updateTargets": "API hủy/tham chiếu, unique constraint, UC-COST-002",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "FLOW-COST-Q02",
+    "question": "Chống gửi trùng và đối soát khi mất phản hồi: request key/phiên bản/lịch sử trả ra thế nào?",
+    "owner": "Tech lead và BA",
+    "current": "API v0.1.0 kế thừa TTL 24h từ SYS, đề xuất scope key/hash/đối soát; chờ Tech lead review, chưa triển khai",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Review phương án API hiện có: key/hash theo actor/method/path, TTL24h, đối soát, commit nguyên tử.",
+    "tradeoff": "Cần kho bền vững và migration; retry không được vượt quyền hiện tại.",
+    "updateTargets": "API mục2/7, schema request store, test concurrency",
+    "explicitBlockedTests": [
+      "TC-COST-004-03",
+      "TC-COST-004-05",
+      "TC-COST-015-05",
+      "TC-COST-018-01",
+      "TC-COST-018-03",
+      "TC-COST-023-03"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q03",
+    "question": "Cảnh báo giá cũ/nhà cung cấp ngừng được lưu, đóng và chống trùng thế nào?",
+    "owner": "BA, kế toán, Tech lead",
+    "current": "Không dùng cost_alerts có menu_day_id bắt buộc để giả lưu cảnh báo nguyên liệu; cần đặc tả lưu trữ riêng hoặc mở rộng notifications",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Tạo thiết kế cảnh báo nguyên liệu riêng, không dùng cost_alerts bắt buộc menu_day_id.",
+    "tradeoff": "Chốt khóa chống trùng theo nguyên liệu hay nguyên liệu/cơ sở trước thiết kế bảng.",
+    "updateTargets": "SRS PRC009, schema, worker giá cũ, thông báo NCC ngừng",
+    "explicitBlockedTests": [
+      "TC-COST-001-03",
+      "TC-COST-007-02"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q04",
+    "question": "Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?",
+    "owner": "Kế toán, UX/BA",
+    "current": "Không chia 0; đề xuất hiện không áp dụng, chờ xác nhận",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.",
+    "tradeoff": "Không trả Infinity/NaN, không biến delta% thành0 gây hiểu nhầm.",
+    "updateTargets": "API Decimal nullable, bảng phân rã/so sánh, AC",
+    "explicitBlockedTests": [
+      "TC-COST-010-08",
+      "TC-COST-011-03"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q05",
+    "question": "Ai được đọc danh sách/chi tiết khoản khoán?",
+    "owner": "Giám đốc, BA",
+    "current": "Không suy ra mọi người xem cost được đọc danh mục quản trị khoản khoán",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Xác nhận ma trận đọc danh mục quản trị riêng với quyền xem khoản trong phân rã cost.",
+    "tradeoff": "Cần phân biệt số liệu người xem cost được biết với quyền xem đề nghị quản trị.",
+    "updateTargets": "SRS2.2, API khoản khoán, wireframe11",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "FLOW-COST-Q06",
+    "question": "Giá/tham số đổi trong thời gian PENDING: kiểm lại tại duyệt cuối hay chụp bộ giá lúc gửi? Nếu vượt mới thì trả lại thế nào?",
+    "owner": "Giám đốc, kế toán",
+    "current": "Luồng thành công giả định dữ liệu không đổi; nhánh thay đổi chưa đủ nghiệm thu",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc kiểm lại tại duyệt cuối; nếu đủ điều kiện thì chụp bộ vừa kiểm cùng transaction.",
+    "tradeoff": "Khi mới vượt ở CHAN cần trả lại hoặc giữ PENDING? phải chốt trạng thái; không tự chuyển.",
+    "updateTargets": "MENU/SRS Cost, transaction approve, snapshot, TC-COST-018-02",
+    "explicitBlockedTests": [
+      "TC-COST-018-02"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q07",
+    "question": "Lập tuần có một ngày lỗi thì rollback cả tuần hay lưu ngày hợp lệ?",
+    "owner": "Kế toán, dinh dưỡng viên",
+    "current": "Không tự chốt; mỗi bản ngày nguyên tử, trạng thái cả batch còn mở",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc all-or-nothing cho cả batch tuần; trả lỗi theo ngày, không ghi ngày hợp lệ khi có lỗi.",
+    "tradeoff": "Dễ đối soát/retry nhưng phải sửa mọi ngày lỗi trước khi có kết quả tuần.",
+    "updateTargets": "API batch success/error, transaction, version/batch key, UC012",
+    "explicitBlockedTests": [
+      "TC-COST-023-01",
+      "TC-COST-023-02",
+      "TC-COST-023-03"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q08",
+    "question": "Thực đơn đã được duyệt vượt ngưỡng ở CANH_BAO: giá tăng tiếp hoặc phục hồi rồi vượt lại thì phát cảnh báo ra sao?",
+    "owner": "Giám đốc, dinh dưỡng viên",
+    "current": "Giữ điều kiện đã có: chuyển đạt → vượt; không tự đặt ngưỡng tăng mới",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Tách hai tình huống: vốn vượt khi duyệt và phục hồi rồi vượt lại; xác định có mở cảnh báo mới hay cập nhật lịch sử.",
+    "tradeoff": "Không dùng mức tăng tùy ý để phát thông báo; cần tránh lặp cảnh báo đang mở.",
+    "updateTargets": "SRS ALR001/002, state/worker và test P1",
+    "explicitBlockedTests": [
+      "TC-COST-026-03"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q09",
+    "question": "Agent gặp đồng thời ngày vượt và ngày không tính được: ưu tiên trạng thái nào? VAT chưa cấu hình có cùng KHONG_XAC_DINH không?",
+    "owner": "BA, chủ sản phẩm/AI lead",
+    "current": "Không trả DAT; nhánh còn chờ quy tắc tổng hợp",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc KHONG_XAC_DINH ưu tiên khi bất kỳ ngày/cơ sở không tính được, kể cả thiếu VAT.",
+    "tradeoff": "Tránh kết luận toàn bộ đã đánh giá, nhưng che mất một vi phạm đã chắc chắn; PO phải chọn.",
+    "updateTargets": "BR-CALC-011, budget contract, quota/log, TC-COST-021-04",
+    "explicitBlockedTests": [
+      "TC-COST-021-04"
+    ]
+  },
+  {
+    "id": "FLOW-COST-Q10",
+    "question": "Mô phỏng giá P2 cho ai dùng, xét trạng thái và khoảng ngày nào?",
+    "owner": "Giám đốc, kế toán",
+    "current": "Đánh dấu đề xuất; không cấp quyền hoặc nâng P2 thành bắt buộc",
+    "source": "ui/user-flow.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ P2; chốt vai trò, phạm vi cơ sở, trạng thái thực đơn và cửa sổ ngày trước khi mở.",
+    "tradeoff": "Không tăng phạm vi R3 để hoàn tất một màn mẫu.",
+    "updateTargets": "API simulation, role matrix, US-COST-028",
+    "explicitBlockedTests": [
+      "TC-COST-028-01",
+      "TC-COST-028-02",
+      "TC-COST-028-03"
+    ]
+  },
+  {
+    "id": "O-06",
+    "question": "Ai duyệt và ai thay khi vắng?",
+    "owner": "Giám đốc",
+    "current": "Giữ phân tách người tạo/người sửa cuối và người duyệt",
+    "source": "../nen-tang/srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": []
+  },
+  {
+    "id": "E2-Q5",
+    "question": "Nguồn khoảng định lượng chuẩn và mức chất độn?",
+    "owner": "Dinh dưỡng viên, Giám đốc",
+    "current": "Test dùng ngưỡng fixture, chưa làm cấu hình thật",
+    "source": "../thuc-don-dinh-luong/srs/spec.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Giữ phương án SRS làm ứng viên; chủ sở hữu xác nhận hoặc nêu phương án khác.",
+    "tradeoff": "Chưa có bằng chứng để tự quyết thay nghiệp vụ.",
+    "updateTargets": "SRS, use case, API và AC bị ảnh hưởng",
+    "explicitBlockedTests": [
+      "TC-COST-020-04"
+    ]
+  },
+  {
+    "id": "QA-COST-Q01",
+    "question": "NCC tồn tại INACTIVE trả 404-01 hay 422-02?",
+    "owner": "BA, Tech lead",
+    "current": "Cả hai mô tả trùng điều kiện, chưa đổi mã lỗi",
+    "source": "validation/backlog-report.md",
+    "status": "OPEN",
+    "decision": null,
+    "approvedBy": null,
+    "approvedAt": null,
+    "proposal": "Cân nhắc422-02 khi NCC tồn tại nhưng INACTIVE;404-01 chỉ tham chiếu không tồn tại hoặc nguyên liệu không dùng.",
+    "tradeoff": "Phải sửa câu chữ404-01 và đồng bộ các client; ngoài phạm vi vẫn dùng404 theo SYS.",
+    "updateTargets": "SRS ma trận lỗi, API và TC-COST-002-06",
+    "explicitBlockedTests": [
+      "TC-COST-002-06"
+    ]
+  }
+]

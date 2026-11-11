@@ -1,0 +1,2231 @@
+{
+  "version": "0.1.0",
+  "status": "draft-not-executed",
+  "stories": [
+    {
+      "id": "US-COST-001",
+      "title": "Danh mục nhà cung cấp",
+      "actor": "kế toán mua hàng",
+      "goal": "tạo, sửa, tìm và ngừng nhà cung cấp",
+      "value": "quản lý nguồn giá mà vẫn giữ lịch sử",
+      "fr": [
+        "FR-COST-SUP-001",
+        "FR-COST-SUP-002",
+        "FR-COST-SUP-003"
+      ],
+      "uc": "001",
+      "priority": "P0",
+      "points": 3,
+      "gates": "FLOW-COST-Q03",
+      "cases": [
+        {
+          "title": "Tạo, sửa và lọc NCC",
+          "given": "KT có quyền ghi; chưa có NCC An Bình",
+          "when": "tạo An Bình loại REGULAR; sửa điện thoại; lọc tên An Bình, loại REGULAR và ACTIVE",
+          "then": "có đúng một NCC ACTIVE với điện thoại mới, lịch sử ghi người thao tác và nội dung thay đổi",
+          "refs": [
+            "BR-PRC-001"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-001-01",
+          "tc": "TC-COST-001-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Tên trùng sau chuẩn hóa",
+          "given": "đã có NCC An Bình chưa huỷ",
+          "when": "tạo NCC có tên \"  AN   BÌNH  \"",
+          "then": "HTTP 409 ERR-COST-409-01; không thêm NCC",
+          "refs": [
+            "BR-PRC-001",
+            "BR-CAT-001",
+            "ERR-COST-409-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-001-02",
+          "tc": "TC-COST-001-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Ngừng không xóa giá cũ",
+          "given": "NCC An Bình có giá tham chiếu 120000 ngày 10/11/2026",
+          "when": "ngừng NCC với lý do \"Không tiếp tục mua hàng\"; tính giá tại 10/11; thử nhập giá mới",
+          "then": "giá lịch sử vẫn dùng; giá mới bị từ chối; cảnh báo tham chiếu đang dùng được ghi nhận theo thiết kế Q03",
+          "refs": [
+            "BR-PRC-007",
+            "ERR-COST-422-02"
+          ],
+          "gate": "FLOW-COST-Q03",
+          "kind": "Functional",
+          "ac": "AC-COST-001-03",
+          "tc": "TC-COST-001-03",
+          "status": "BLOCKED — FLOW-COST-Q03"
+        }
+      ],
+      "apis": [
+        "API-COST-001",
+        "API-COST-002",
+        "API-COST-003"
+      ],
+      "screens": [
+        "SCR-COST-01",
+        "SCR-COST-02"
+      ]
+    },
+    {
+      "id": "US-COST-002",
+      "title": "Nhập giá nguyên liệu",
+      "actor": "kế toán mua hàng",
+      "goal": "thêm giá trên đơn vị mua và ngày hiệu lực",
+      "value": "có dữ liệu giá truy vết được",
+      "fr": [
+        "FR-COST-PRC-001"
+      ],
+      "uc": "002",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q13; E3-Q6",
+      "cases": [
+        {
+          "title": "Giá đầu tiên",
+          "given": "nguyên liệu I1 và NCC S1 ACTIVE; chưa có giá; ngày hệ thống 11/11/2026",
+          "when": "nhập I1/S1/A giá 120000 ngày 11/11",
+          "then": "tạo một dòng giá, tự đánh dấu tham chiếu, ghi audit; không có bước duyệt giá thứ hai trong thiết kế hiện tại",
+          "refs": [
+            "BR-PRC-002",
+            "BR-PRC-005"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-002-01",
+          "tc": "TC-COST-002-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Giá không hợp lệ",
+          "given": "I1/S1 ACTIVE",
+          "when": "lần lượt nhập giá 0, -1, 1.5; mỗi lần dùng khóa yêu cầu mới",
+          "then": "mỗi lần HTTP 422 ERR-COST-422-01; không tạo dòng",
+          "refs": [
+            "BR-PRC-002",
+            "ERR-COST-422-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-002-02",
+          "tc": "TC-COST-002-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Biên ngày và khóa trùng",
+          "given": "hôm nay 11/11/2026; hồi tố cấu hình 7 ngày",
+          "when": "nhập từng bản độc lập tại 04/11, 11/12 rồi tại 03/11, 12/12; gửi lại tuple I1/S1/A/ngày đã tồn tại bằng khóa mới",
+          "then": "hai ngày biên hợp lệ; hai ngày ngoài biên trả ERR-COST-422-02; tuple trùng trả ERR-COST-409-02",
+          "refs": [
+            "BR-PRC-003",
+            "BR-PRC-005",
+            "ERR-COST-422-02",
+            "ERR-COST-409-02"
+          ],
+          "gate": "E3-Q13",
+          "kind": "Boundary",
+          "ac": "AC-COST-002-03",
+          "tc": "TC-COST-002-03",
+          "status": "BLOCKED — E3-Q13"
+        },
+        {
+          "title": "Tham chiếu không tồn tại",
+          "given": "không có nguyên liệu I999",
+          "when": "nhập giá cho I999 hoặc NCC không tồn tại",
+          "then": "HTTP 404 ERR-COST-404-01; không tạo giá",
+          "refs": [
+            "ERR-COST-404-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-002-04",
+          "tc": "TC-COST-002-04",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Schema và trường do server quản lý",
+          "given": "KT có token hợp lệ; chưa có giá tuple định tạo",
+          "when": "gửi JSON thiếu priceVnd, enum sai, thêm createdBy hoặc totalCost client tự đặt",
+          "then": "400 ERR-COST-400-01 theo hợp đồng đề xuất, details.path chỉ field sai; không ghi giá",
+          "refs": [
+            "ERR-COST-400-01"
+          ],
+          "gate": "review API",
+          "kind": "Contract",
+          "ac": "AC-COST-002-05",
+          "tc": "TC-COST-002-05",
+          "status": "BLOCKED — review API"
+        },
+        {
+          "title": "NCC inactive có hai mã lỗi trong SRS",
+          "given": "S1 tồn tại nhưng INACTIVE; I1 ACTIVE",
+          "when": "nhập giá cho S1",
+          "then": "không ghi giá; oracle mã lỗi BLOCKED vì ma trận404-01 nói tham chiếu không còn dùng,422-02 lại nói NCC ngừng; cần thống nhất trước nghiệm thu hợp đồng",
+          "refs": [
+            "ERR-COST-404-01",
+            "ERR-COST-422-02"
+          ],
+          "gate": "QA-COST-Q01: BA/Tech lead thống nhất mã",
+          "kind": "Contract",
+          "ac": "AC-COST-002-06",
+          "tc": "TC-COST-002-06",
+          "status": "BLOCKED — QA-COST-Q01: BA/Tech lead thống nhất mã"
+        }
+      ],
+      "apis": [
+        "API-COST-005",
+        "API-COST-037"
+      ],
+      "screens": [
+        "SCR-COST-03",
+        "SCR-COST-04"
+      ]
+    },
+    {
+      "id": "US-COST-003",
+      "title": "Chọn và tra giá tham chiếu",
+      "actor": "kế toán mua hàng",
+      "goal": "chọn giá và tra theo ngày, cơ sở",
+      "value": "tính cost theo đúng nguồn giá",
+      "fr": [
+        "FR-COST-PRC-002",
+        "FR-COST-PRC-003"
+      ],
+      "uc": "002",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q4; E3-Q14; FLOW-COST-Q01",
+      "cases": [
+        {
+          "title": "Ưu tiên giá cơ sở",
+          "given": "I1 có giá chung 100000 ngày 10/11 và giá A 120000 ngày 01/11; không có giá B",
+          "when": "tra I1 tại 11/11 cho A và B",
+          "then": "A nhận 120000 dù giá chung mới hơn; B nhận 100000 kèm NCC/ngày giá",
+          "refs": [
+            "BR-PRC-006",
+            "BR-COST-004"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-003-01",
+          "tc": "TC-COST-003-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Không dùng giá tương lai",
+          "given": "I2 chỉ có giá hiệu lực 16/11",
+          "when": "tra I2 ngày 11/11",
+          "then": "HTTP 404 ERR-COST-404-02; không dùng giá tương lai",
+          "refs": [
+            "BR-PRC-006",
+            "ERR-COST-404-02"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-003-02",
+          "tc": "TC-COST-003-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Chuyển cờ trong cùng nhóm tương lai",
+          "given": "hai giá I1/A/16-11 thuộc hai NCC; chỉ giá thứ nhất tham chiếu",
+          "when": "chọn giá thứ hai làm tham chiếu; tra I1/A/16-11",
+          "then": "chỉ giá thứ hai còn cờ trong nhóm; giá nhóm ngày/cơ sở khác giữ nguyên; đổi cờ giá đã hiệu lực chờ quyết định riêng",
+          "refs": [
+            "BR-PRC-005"
+          ],
+          "gate": "E3-Q4; E3-Q14",
+          "kind": "Boundary",
+          "ac": "AC-COST-003-03",
+          "tc": "TC-COST-003-03",
+          "status": "BLOCKED — E3-Q4; E3-Q14"
+        }
+      ],
+      "apis": [
+        "API-COST-008",
+        "API-COST-010"
+      ],
+      "screens": [
+        "SCR-COST-03",
+        "SCR-COST-04"
+      ]
+    },
+    {
+      "id": "US-COST-004",
+      "title": "Nhập lưới nguyên tử",
+      "actor": "kế toán mua hàng",
+      "goal": "lưu nhiều giá trong một lượt",
+      "value": "giảm thao tác mà không ghi dở dang",
+      "fr": [
+        "FR-COST-PRC-004"
+      ],
+      "uc": "003",
+      "priority": "P0",
+      "points": 3,
+      "gates": "—",
+      "cases": [
+        {
+          "title": "Bỏ qua dòng không đổi",
+          "given": "lưới có hai nguyên liệu; I1=100000, I2=20000",
+          "when": "lọc nhóm/bảo quản/đang dùng; đổi I1 thành 110000, giữ I2; lưu ngày hợp lệ",
+          "then": "tạo đúng một giá I1; I2 không thêm lịch sử",
+          "refs": [],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-004-01",
+          "tc": "TC-COST-004-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Một dòng sai rollback",
+          "given": "lô có I1 giá 110000 và I2 giá 0",
+          "when": "lưu lô; kiểm số giá trước/sau",
+          "then": "báo ERR-COST-422-01 gắn dòng I2; không tạo giá I1 hoặc I2",
+          "refs": [
+            "BR-PRC-002",
+            "ERR-COST-422-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-004-02",
+          "tc": "TC-COST-004-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Mất phản hồi sau commit",
+          "given": "lô hợp lệ và key K; gateway làm mất phản hồi sau commit",
+          "when": "đối soát K rồi retry cùng key/body trong 24 giờ",
+          "then": "trả kết quả đã lưu; số dòng không tăng lần hai; không tạo key mới chỉ vì timeout",
+          "refs": [],
+          "gate": "FLOW-COST-Q02",
+          "kind": "Integration",
+          "ac": "AC-COST-004-03",
+          "tc": "TC-COST-004-03",
+          "status": "BLOCKED — FLOW-COST-Q02"
+        },
+        {
+          "title": "Hiệu năng lưới200 dòng",
+          "given": "200 tuple giá mới hợp lệ, không cần xác nhận biến động; ghi cấu hình môi trường",
+          "when": "gửi một lô200 dòng, đo từ gửi đến nhận xác nhận commit; đếm giá/audit",
+          "then": "<=3giây và đủ200 dòng; thời gian và tính nguyên tử cùng đạt",
+          "refs": [
+            "NFR-COST-003"
+          ],
+          "gate": "môi trường backend",
+          "kind": "Performance",
+          "ac": "AC-COST-004-04",
+          "tc": "TC-COST-004-04",
+          "status": "BLOCKED — môi trường backend"
+        },
+        {
+          "title": "Key cùng body khác và đang xử lý",
+          "given": "request K đã commit; request L được giữ ở trạng thái xử lý trong test",
+          "when": "gửi K với giá khác; gửi đồng thời cùng L",
+          "then": "K trả ERR-COST-409-04 không ghi; L trả ERR-COST-409-05 kèm Retry-After; đối soát sau hoàn tất chỉ một kết quả",
+          "refs": [
+            "ERR-COST-409-04",
+            "ERR-COST-409-05"
+          ],
+          "gate": "FLOW-COST-Q02",
+          "kind": "Contract",
+          "ac": "AC-COST-004-05",
+          "tc": "TC-COST-004-05",
+          "status": "BLOCKED — FLOW-COST-Q02"
+        }
+      ],
+      "apis": [
+        "API-COST-006",
+        "API-COST-037"
+      ],
+      "screens": [
+        "SCR-COST-03"
+      ]
+    },
+    {
+      "id": "US-COST-005",
+      "title": "Nhập XLSX giá",
+      "actor": "kế toán mua hàng",
+      "goal": "kiểm tệp trước khi nhập",
+      "value": "xử lý dữ liệu hàng loạt có báo lỗi theo dòng",
+      "fr": [
+        "FR-COST-PRC-005"
+      ],
+      "uc": "004",
+      "priority": "P0",
+      "points": 5,
+      "gates": "—",
+      "cases": [
+        {
+          "title": "Đọc đúng tên cột",
+          "given": "mẫu giá XLSX không mật khẩu, hai dòng hợp lệ; đổi thứ tự cột, thêm cột Ghi chú lạ, dòng trắng",
+          "when": "kiểm tệp; xác nhận nhập",
+          "then": "kiểm không ghi; bỏ dòng trắng và cảnh báo cột lạ; xác nhận mới tạo hai dòng",
+          "refs": [
+            "BR-CAT-023"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-005-01",
+          "tc": "TC-COST-005-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Tệp lỗi không ghi",
+          "given": "tệp thiếu cột bắt buộc hoặc giá dòng 2 bằng 0",
+          "when": "kiểm và thử xác nhận tệp chưa đạt",
+          "then": "ERR-MENU-422-20, lỗi có dòng/cột; không tạo giá",
+          "refs": [
+            "BR-CAT-023",
+            "ERR-MENU-422-20"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-005-02",
+          "tc": "TC-COST-005-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Giới hạn dòng và đọc số",
+          "given": "hai tệp mẫu có 2000 và 2001 dòng hợp lệ; số văn bản \"120000\"; tệp phụ có \"120,000\"",
+          "when": "kiểm từng tệp; không xác nhận nhập",
+          "then": "2000 dòng được kiểm; 2001 trả ERR-MENU-422-20; số nguyên văn bản được đọc; \"120,000\" là thập phân 120, không được hiểu là 120000",
+          "refs": [
+            "BR-CAT-023",
+            "ERR-MENU-422-20"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-005-03",
+          "tc": "TC-COST-005-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Import đã kiểm bị đổi",
+          "given": "đã kiểm tệp và có token; thay bytes tệp hoặc dùng token hết hạn",
+          "when": "commit token cũ với tệp mới",
+          "then": "ERR-COST-409-07; không nhập một dòng nào; phải kiểm lại",
+          "refs": [
+            "ERR-COST-409-07"
+          ],
+          "gate": "review API",
+          "kind": "Contract",
+          "ac": "AC-COST-005-04",
+          "tc": "TC-COST-005-04",
+          "status": "BLOCKED — review API"
+        },
+        {
+          "title": "Số dạng văn bản và trang tính",
+          "given": "mẫu đúng trang; giá văn bản120000.0 và120000,0; trang khác có dữ liệu; file khác đặt mật khẩu",
+          "when": "kiểm từng tệp không commit",
+          "then": "hai dạng số bằng120000 được đọc; bỏ trang khác kèm cảnh báo; tệp mật khẩu bị từ chối không ghi",
+          "refs": [
+            "BR-CAT-023"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-005-05",
+          "tc": "TC-COST-005-05",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [
+        "API-COST-012",
+        "API-COST-013",
+        "API-COST-014"
+      ],
+      "screens": [
+        "SCR-COST-05"
+      ]
+    },
+    {
+      "id": "US-COST-006",
+      "title": "Lịch sử và hủy giá tương lai",
+      "actor": "kế toán mua hàng",
+      "goal": "xem lịch sử và hủy giá chưa hiệu lực",
+      "value": "sửa kế hoạch giá mà không sửa dữ liệu quá khứ",
+      "fr": [
+        "FR-COST-PRC-006",
+        "FR-COST-PRC-007"
+      ],
+      "uc": "002,005",
+      "priority": "P0",
+      "points": 3,
+      "gates": "FLOW-COST-Q01; E3-Q14",
+      "cases": [
+        {
+          "title": "Hủy giá tương lai độc lập",
+          "given": "giá I1/A/16-11 là dòng duy nhất của ngày; hôm nay 11/11",
+          "when": "xem lịch sử rồi hủy với lý do từ 10 ký tự",
+          "then": "dòng được đánh dấu hủy, giữ audit, không còn được chọn khi tra giá; các dòng cũ giữ nguyên",
+          "refs": [
+            "BR-PRC-004",
+            "BR-AUD-001"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-006-01",
+          "tc": "TC-COST-006-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Giá đã hiệu lực",
+          "given": "giá ngày 10/11 và ngày 11/11; hôm nay 11/11",
+          "when": "thử sửa hoặc hủy từng giá",
+          "then": "HTTP 409 ERR-COST-409-03; dữ liệu và cờ tham chiếu không bị đổi ngầm",
+          "refs": [
+            "BR-PRC-004",
+            "ERR-COST-409-03"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-006-02",
+          "tc": "TC-COST-006-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Phạm vi lịch sử",
+          "given": "QL chỉ thuộc A; tồn tại giá riêng B",
+          "when": "gọi trực tiếp chi tiết giá B bằng ID và lọc lịch sử B",
+          "then": "ERR-SYS-404-01 cho tài nguyên ngoài phạm vi; không lộ giá B",
+          "refs": [
+            "ERR-SYS-404-01"
+          ],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-006-03",
+          "tc": "TC-COST-006-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [
+        "API-COST-004",
+        "API-COST-009"
+      ],
+      "screens": [
+        "SCR-COST-03",
+        "SCR-COST-04",
+        "SCR-COST-06",
+        "SCR-COST-07"
+      ]
+    },
+    {
+      "id": "US-COST-007",
+      "title": "Theo dõi giá thiếu và giá cũ",
+      "actor": "kế toán mua hàng",
+      "goal": "nhận danh sách nguyên liệu cần cập nhật",
+      "value": "ưu tiên cập nhật giá đang ảnh hưởng thực đơn",
+      "fr": [
+        "FR-COST-PRC-008",
+        "FR-COST-PRC-009"
+      ],
+      "uc": "005",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q5; FLOW-COST-Q03; DL-01",
+      "cases": [
+        {
+          "title": "Thiếu giá theo cơ sở",
+          "given": "I1 dùng ở hai công thức ACTIVE; chỉ có giá riêng A",
+          "when": "tra danh sách thiếu giá B và A",
+          "then": "B có I1, số món ảnh hưởng 2; A không liệt kê I1; không lấy giá riêng A cho B",
+          "refs": [
+            "BR-PRC-006"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-007-01",
+          "tc": "TC-COST-007-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Chạy lại không nhân cảnh báo",
+          "given": "I1 tươi có giá 8 ngày tuổi; ngưỡng 7",
+          "when": "chạy worker giá cũ hai lần cùng ngày",
+          "then": "một cảnh báo đang mở cho I1 gửi KT; lần hai không tạo cảnh báo mở thứ hai",
+          "refs": [
+            "BR-PRC-008",
+            "BR-COST-005"
+          ],
+          "gate": "FLOW-COST-Q03",
+          "kind": "Functional",
+          "ac": "AC-COST-007-02",
+          "tc": "TC-COST-007-02",
+          "status": "BLOCKED — FLOW-COST-Q03"
+        },
+        {
+          "title": "Biên tuổi giá",
+          "given": "tươi có giá 7/8 ngày tuổi; khô và đông lạnh có giá 30/31 ngày tuổi; cấu hình 7/30",
+          "when": "chạy kiểm tuổi giá",
+          "then": "7 và 30 chưa cảnh báo; 8 và 31 cảnh báo; nguyên liệu ngoài công thức ACTIVE không bị đưa vào tập kiểm",
+          "refs": [
+            "BR-PRC-008",
+            "BR-COST-005"
+          ],
+          "gate": "DL-01",
+          "kind": "Boundary",
+          "ac": "AC-COST-007-03",
+          "tc": "TC-COST-007-03",
+          "status": "BLOCKED — DL-01"
+        }
+      ],
+      "apis": [
+        "API-COST-011"
+      ],
+      "screens": [
+        "SCR-COST-06",
+        "SCR-COST-07"
+      ]
+    },
+    {
+      "id": "US-COST-008",
+      "title": "Xác nhận biến động giá",
+      "actor": "kế toán mua hàng",
+      "goal": "xác nhận giá thay đổi lớn",
+      "value": "tránh nhập nhầm mà vẫn cho lưu giá thực tế",
+      "fr": [
+        "FR-COST-PRC-010"
+      ],
+      "uc": "002",
+      "priority": "P1",
+      "points": 2,
+      "gates": "E3-Q6",
+      "cases": [
+        {
+          "title": "Xác nhận rồi lưu",
+          "given": "giá trước 100000; ngưỡng lệch 30%",
+          "when": "nhập 131000; xác nhận cảnh báo",
+          "then": "trước xác nhận chưa có dòng mới; sau xác nhận tạo đúng một dòng",
+          "refs": [
+            "BR-PRC-009"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-008-01",
+          "tc": "TC-COST-008-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Hủy xác nhận",
+          "given": "giá trước 100000",
+          "when": "nhập 69000; chọn hủy cảnh báo",
+          "then": "không tạo dòng giá; có thể sửa dữ liệu nhập",
+          "refs": [
+            "BR-PRC-009"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-008-02",
+          "tc": "TC-COST-008-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Đúng ngưỡng và giá đầu tiên",
+          "given": "giá trước 100000; ngưỡng 30%; I2 chưa có giá",
+          "when": "thử giá 130000, 70000 ở các fixture độc lập; nhập giá đầu I2",
+          "then": "đúng 30% không hỏi vì quy tắc là vượt 30%; I2 không có cơ sở so sánh nên không hỏi",
+          "refs": [
+            "BR-PRC-009"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-008-03",
+          "tc": "TC-COST-008-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Token xác nhận stale",
+          "given": "giá nền100000, đã cấp token cho giá131000; sau đó giá nền thay hoặc token hết hạn",
+          "when": "xác nhận giá131000 bằng token cũ",
+          "then": "ERR-COST-409-06; không ghi, yêu cầu kiểm lại dựa trên giá nền mới",
+          "refs": [
+            "ERR-COST-409-06"
+          ],
+          "gate": "review API",
+          "kind": "Contract",
+          "ac": "AC-COST-008-04",
+          "tc": "TC-COST-008-04",
+          "status": "BLOCKED — review API"
+        }
+      ],
+      "apis": [
+        "API-COST-005",
+        "API-COST-006",
+        "API-COST-007"
+      ],
+      "screens": [
+        "SCR-COST-03",
+        "SCR-COST-04"
+      ]
+    },
+    {
+      "id": "US-COST-009",
+      "title": "Chứng từ giá",
+      "actor": "kế toán mua hàng",
+      "goal": "gắn chứng từ cho giá hoặc lô giá",
+      "value": "truy lại nguồn nhập",
+      "fr": [
+        "FR-COST-PRC-011"
+      ],
+      "uc": "002",
+      "priority": "P1",
+      "points": 2,
+      "gates": "—",
+      "cases": [
+        {
+          "title": "Gắn PDF hợp lệ",
+          "given": "KT có quyền và PDF thật 1 MB",
+          "when": "upload rồi gắn vào giá hoặc một lô; mở bằng quyền hợp lệ",
+          "then": "truy lại cùng chứng từ; URL nội bộ có chữ ký hết hạn 15 phút",
+          "refs": [],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-009-01",
+          "tc": "TC-COST-009-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Sai nội dung và quá dung lượng",
+          "given": "tệp executable đổi đuôi .pdf; PDF lớn hơn 10 MB",
+          "when": "upload từng tệp",
+          "then": "tệp giả trả ERR-SYS-415-01; tệp quá cỡ trả ERR-SYS-413-01; không tạo liên kết chứng từ",
+          "refs": [
+            "ERR-SYS-415-01",
+            "ERR-SYS-413-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-009-02",
+          "tc": "TC-COST-009-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Thu hồi quyền và URL hết hạn",
+          "given": "chứng từ giá thuộc B; QL thuộc A; URL đã hết hạn",
+          "when": "thử tải bằng QL A; thử tải URL hết hạn",
+          "then": "không trả bytes chứng từ; không rò qua URL tải hoặc thông báo lỗi",
+          "refs": [],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-009-03",
+          "tc": "TC-COST-009-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [
+        "API-COST-005",
+        "API-COST-006"
+      ],
+      "screens": [
+        "SCR-COST-03",
+        "SCR-COST-04"
+      ]
+    },
+    {
+      "id": "US-COST-010",
+      "title": "Cost món và bảng phân rã",
+      "actor": "dinh dưỡng viên",
+      "goal": "xem cost món theo ngày và công thức",
+      "value": "chọn món có căn cứ về chi phí",
+      "fr": [
+        "FR-COST-DISH-001",
+        "FR-COST-DISH-002",
+        "FR-COST-DISH-003",
+        "FR-COST-DISH-004"
+      ],
+      "uc": "006",
+      "priority": "P0",
+      "points": 5,
+      "gates": "O-01; E3-Q2; FLOW-COST-Q04",
+      "cases": [
+        {
+          "title": "Tính chính xác theo đơn vị",
+          "given": "thịt 70g giá 120000/kg hệ số1000; trứng 3 quả giá800; hao hụt KHONG; cả hai tính cost",
+          "when": "tính món và mở picker tại cùng ngày/cơ sở",
+          "then": "cost 10800; dòng thịt 8400, trứng 2400; có NCC/ngày giá/đơn vị/tỷ trọng; picker cùng ngày khớp 10800",
+          "refs": [
+            "BR-CALC-001",
+            "BR-CALC-002",
+            "BR-CALC-006"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-010-01",
+          "tc": "TC-COST-010-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Không trả tổng thiếu",
+          "given": "thịt cần tính cost nhưng không có giá; trứng vẫn có giá; nước không tính cost và không có giá",
+          "when": "tính món",
+          "then": "ERR-COST-422-03 liệt kê thịt, không liệt kê nước; không trả 2400 như cost toàn món",
+          "refs": [
+            "BR-CALC-002",
+            "BR-CALC-003",
+            "ERR-COST-422-03"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-010-02",
+          "tc": "TC-COST-010-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Công thức theo ngày và quyền",
+          "given": "R1 hiệu lực10/11 thịt70g; R2 hiệu lực16/11 thịt80g; giá120000; có thêm công thức đã gắn vào MENU PENDING",
+          "when": "tính món tại15/11,16/11; kiểm MENU PENDING; gọi picker bằng người thiếu cost.cost.read",
+          "then": "chọn R1 rồi R2 theo ngày; MENU PENDING giữ công thức gắn; picker của người thiếu quyền không có trường tiền",
+          "refs": [
+            "BR-CALC-001",
+            "BR-CAT-014"
+          ],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-010-03",
+          "tc": "TC-COST-010-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Món không tồn tại",
+          "given": "không có mã món M999",
+          "when": "tính M999",
+          "then": "ERR-MENU-404-01; không trả kết quả số",
+          "refs": [
+            "ERR-MENU-404-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-010-04",
+          "tc": "TC-COST-010-04",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Hao hụt đúng một lần",
+          "given": "thịt70g, giá120000/kg, hao hụt20%, chế độ CO",
+          "when": "tính cost một suất; lập dự toán10 suất chỉ có món này không khoản khoán",
+          "then": "cost thịt10500; lượng mua0.88kg sau làm tròn lên từ0.875; thành tiền105600; không chia hao hụt lần hai",
+          "refs": [
+            "BR-EST-002"
+          ],
+          "gate": "E3-Q2",
+          "kind": "Boundary",
+          "ac": "AC-COST-010-05",
+          "tc": "TC-COST-010-05",
+          "status": "BLOCKED — E3-Q2"
+        },
+        {
+          "title": "Đối soát bộ kế toán",
+          "given": "kế toán cung cấp10 món và10 ngày đã ký xác nhận; cấu hình VAT/phương pháp ghi kèm",
+          "when": "tính lặp từng bộ bằng decimal, so bảng tay và lần tính trước",
+          "then": "sai lệch cost món<=1đ, cost%<=0.01 điểm phần trăm; lặp cùng đầu vào có cùng kết quả; lưu bảng actual/expected",
+          "refs": [
+            "NFR-COST-002"
+          ],
+          "gate": "O-01; dữ liệu kế toán",
+          "kind": "Accuracy",
+          "ac": "AC-COST-010-06",
+          "tc": "TC-COST-010-06",
+          "status": "BLOCKED — O-01; dữ liệu kế toán"
+        },
+        {
+          "title": "Decimal và không làm tròn trung gian",
+          "given": "fixture0.1+0.2 đơn vị dùng; giá1đ/đơn vị; fixture có ba dòng cost0.4đ",
+          "when": "rà kiểu dữ liệu engine và tính hai fixture",
+          "then": "tổng chính xác0.3; tổng ba dòng1.2 hiển thị1đ, không làm tròn từng dòng thành0; không dùng float cho tiền/định lượng",
+          "refs": [
+            "NFR-COST-008",
+            "BR-CALC-006"
+          ],
+          "gate": "—",
+          "kind": "Accuracy",
+          "ac": "AC-COST-010-07",
+          "tc": "TC-COST-010-07",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Tổng cost0 không chia cho0",
+          "given": "mọi nguyên liệu món có cờ không tính cost",
+          "when": "tính món và xem tỷ trọng từng dòng",
+          "then": "tổng cost0; cách biểu diễn tỷ trọng chờ Q04; không NaN/Infinity và không suy ra giá nhập0",
+          "refs": [
+            "BR-CALC-002"
+          ],
+          "gate": "FLOW-COST-Q04",
+          "kind": "Boundary",
+          "ac": "AC-COST-010-08",
+          "tc": "TC-COST-010-08",
+          "status": "BLOCKED — FLOW-COST-Q04"
+        }
+      ],
+      "apis": [
+        "API-COST-015"
+      ],
+      "screens": [
+        "SCR-COST-08"
+      ]
+    },
+    {
+      "id": "US-COST-011",
+      "title": "So sánh công thức",
+      "actor": "người duyệt công thức",
+      "goal": "so sánh cost hai phiên bản",
+      "value": "thấy tác động trước quyết định",
+      "fr": [
+        "FR-COST-DISH-005"
+      ],
+      "uc": "006",
+      "priority": "P1",
+      "points": 2,
+      "gates": "FLOW-COST-Q04",
+      "cases": [
+        {
+          "title": "So sánh cùng ngày",
+          "given": "R1 cost10000, R2 cost11000 tại cùng D/A",
+          "when": "so sánh R1 và R2",
+          "then": "chênh1000 và10%; không ghi giá hay tự duyệt công thức",
+          "refs": [],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-011-01",
+          "tc": "TC-COST-011-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Một bản thiếu giá",
+          "given": "R2 có nguyên liệu chưa có giá",
+          "when": "so sánh R1/R2",
+          "then": "ERR-COST-422-03; không suy diễn R2 bằng0 và không trả delta sai",
+          "refs": [
+            "ERR-COST-422-03"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-011-02",
+          "tc": "TC-COST-011-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Cost gốc bằng0",
+          "given": "R1 có mọi nguyên liệu không tính cost; R2 cost1000",
+          "when": "so sánh hai bản",
+          "then": "delta tiền1000; cách hiển thị delta% phải theo quyết định Q04; không trả Infinity/NaN",
+          "refs": [],
+          "gate": "FLOW-COST-Q04",
+          "kind": "Boundary",
+          "ac": "AC-COST-011-03",
+          "tc": "TC-COST-011-03",
+          "status": "BLOCKED — FLOW-COST-Q04"
+        }
+      ],
+      "apis": [
+        "API-COST-016"
+      ],
+      "screens": [
+        "SCR-COST-08"
+      ]
+    },
+    {
+      "id": "US-COST-012",
+      "title": "Lập bảng món đặc thù",
+      "actor": "dinh dưỡng viên",
+      "goal": "chụp bảng cost và gửi duyệt",
+      "value": "có căn cứ xét món đặc thù",
+      "fr": [
+        "FR-COST-DISH-006"
+      ],
+      "uc": "007",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q16",
+      "cases": [
+        {
+          "title": "Chụp bản pending",
+          "given": "món đặc thù M1 đủ giá tại A/D",
+          "when": "lập bảng có ghi chú và gửi",
+          "then": "bảng PENDING giữ công thức, giá, cơ sở, ngày tính và người lập; thay giá sau đó không sửa nội dung chụp",
+          "refs": [
+            "BR-CALC-010"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-012-01",
+          "tc": "TC-COST-012-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Sai loại món",
+          "given": "M2 không có cờ đặc thù",
+          "when": "lập bảng đặc thù cho M2",
+          "then": "ERR-COST-422-04; không tạo bảng",
+          "refs": [
+            "ERR-COST-422-04"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-012-02",
+          "tc": "TC-COST-012-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Thiếu một giá",
+          "given": "M1 đặc thù thiếu giá thịt",
+          "when": "gửi bảng M1",
+          "then": "ERR-COST-422-03, danh sách thiếu; không tạo bản chụp thiếu rồi coi là đủ",
+          "refs": [
+            "BR-CALC-003",
+            "ERR-COST-422-03"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-012-03",
+          "tc": "TC-COST-012-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [
+        "API-COST-018",
+        "API-COST-019",
+        "API-COST-020"
+      ],
+      "screens": [
+        "SCR-COST-09",
+        "SCR-COST-10"
+      ]
+    },
+    {
+      "id": "US-COST-013",
+      "title": "Duyệt bảng món đặc thù",
+      "actor": "Giám đốc",
+      "goal": "duyệt hoặc trả lại bảng tính",
+      "value": "kiểm soát món đặc thù trước khi dùng",
+      "fr": [
+        "FR-COST-DISH-007"
+      ],
+      "uc": "007",
+      "priority": "P0",
+      "points": 3,
+      "gates": "O-06; E3-Q16",
+      "cases": [
+        {
+          "title": "Duyệt bởi người khác",
+          "given": "bảng PENDING do DD1 tạo/sửa; GD1 khác DD1",
+          "when": "GD1 duyệt",
+          "then": "APPROVED, có audit quyết định; dữ liệu chụp không bị tính lại",
+          "refs": [
+            "BR-SEC-008",
+            "BR-CALC-010"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-013-01",
+          "tc": "TC-COST-013-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Không tự duyệt hoặc thiếu lý do",
+          "given": "người có quyền duyệt đồng thời là người tạo hoặc người sửa cuối của bảng; bảng khác do người khác tạo",
+          "when": "tự duyệt bảng đầu; trả lại bảng thứ hai với lý do9 ký tự rồi10 ký tự",
+          "then": "tự duyệt trả ERR-SYS-403-01; lý do9 trả ERR-SYS-422-01; lý do10 cho trả lại, giữ bản chụp",
+          "refs": [
+            "BR-SEC-008",
+            "ERR-SYS-403-01",
+            "ERR-SYS-422-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-013-02",
+          "tc": "TC-COST-013-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Hiệu lực và cơ sở",
+          "given": "bảng M1 được duyệt ở A; ngày lập và ngày tính khác nhau; thời hạn cấu hình90",
+          "when": "kiểm điều kiện M1 ở mốc89/90/91 ngày và cơ sở B",
+          "then": "ghi nhận kết quả theo bộ lọc được chốt ở E3-Q16 trước khi chạy; không tự coi bảng A dùng được ở B",
+          "refs": [
+            "BR-CALC-007",
+            "BR-COST-007"
+          ],
+          "gate": "E3-Q16",
+          "kind": "Boundary",
+          "ac": "AC-COST-013-03",
+          "tc": "TC-COST-013-03",
+          "status": "BLOCKED — E3-Q16"
+        },
+        {
+          "title": "Hai quyết định cạnh tranh",
+          "given": "cùng bảng PENDING v1; hai người có quyền duyệt khác người tạo/sửa",
+          "when": "người1 duyệt v1; người2 gửi trả lại v1 với khóa mới",
+          "then": "chỉ một quyết định được commit; version cũ ERR-SYS-409-02; nếu tải version mới nhưng trạng thái đã duyệt thì ERR-COST-409-07; không ghi đè quyết định trước",
+          "refs": [
+            "ERR-SYS-409-02",
+            "ERR-COST-409-07"
+          ],
+          "gate": "review API và concurrency token",
+          "kind": "Contract",
+          "ac": "AC-COST-013-04",
+          "tc": "TC-COST-013-04",
+          "status": "BLOCKED — review API và concurrency token"
+        }
+      ],
+      "apis": [
+        "API-COST-018",
+        "API-COST-019",
+        "API-COST-021"
+      ],
+      "screens": [
+        "SCR-COST-09",
+        "SCR-COST-10"
+      ]
+    },
+    {
+      "id": "US-COST-014",
+      "title": "Gợi ý nhóm cost",
+      "actor": "dinh dưỡng viên",
+      "goal": "nhận gợi ý nhóm cao/thấp",
+      "value": "phân loại món có tham khảo chi phí",
+      "fr": [
+        "FR-COST-DISH-008"
+      ],
+      "uc": "006",
+      "priority": "P1",
+      "points": 2,
+      "gates": "E3-Q7",
+      "cases": [
+        {
+          "title": "Gợi ý không tự ghi",
+          "given": "ngưỡng phân nhóm đã được duyệt trong fixture và món đủ giá",
+          "when": "yêu cầu gợi ý",
+          "then": "trả nhóm theo ngưỡng; nhóm đang lưu không đổi cho tới thao tác quyết định của người dùng",
+          "refs": [],
+          "gate": "E3-Q7",
+          "kind": "Functional",
+          "ac": "AC-COST-014-01",
+          "tc": "TC-COST-014-01",
+          "status": "BLOCKED — E3-Q7"
+        },
+        {
+          "title": "Thiếu giá không phân nhóm",
+          "given": "món có nguyên liệu thiếu giá",
+          "when": "yêu cầu gợi ý",
+          "then": "không đưa nhóm thấp do coi giá thiếu là0; trả chưa tính được",
+          "refs": [
+            "BR-CALC-003"
+          ],
+          "gate": "E3-Q7",
+          "kind": "Functional",
+          "ac": "AC-COST-014-02",
+          "tc": "TC-COST-014-02",
+          "status": "BLOCKED — E3-Q7"
+        },
+        {
+          "title": "Biên phân nhóm",
+          "given": "có quyết định E3-Q7 về ngưỡng và dấu so sánh",
+          "when": "thử cost dưới, đúng, trên ngưỡng một đồng",
+          "then": "nhóm khớp quyết định được duyệt; chưa điền ngưỡng tự đặt vào production",
+          "refs": [],
+          "gate": "E3-Q7",
+          "kind": "Boundary",
+          "ac": "AC-COST-014-03",
+          "tc": "TC-COST-014-03",
+          "status": "BLOCKED — E3-Q7"
+        }
+      ],
+      "apis": [
+        "API-COST-017"
+      ],
+      "screens": [
+        "SCR-COST-08"
+      ]
+    },
+    {
+      "id": "US-COST-015",
+      "title": "Cost ngày trên thực đơn",
+      "actor": "dinh dưỡng viên",
+      "goal": "xem cost suất và phân rã theo ngày/cơ sở",
+      "value": "điều chỉnh thực đơn trong ngân sách",
+      "fr": [
+        "FR-COST-MEAL-001",
+        "FR-COST-MEAL-002",
+        "FR-COST-MEAL-003"
+      ],
+      "uc": "009",
+      "priority": "P0",
+      "points": 5,
+      "gates": "O-01; E3-Q1; E3-Q3; E2-Q1",
+      "cases": [
+        {
+          "title": "Ngày đủ món",
+          "given": "fixture giá suất40000 VAT8%, phần chính10800, phụ/rau/canh6500, khoán1500; ngưỡng52",
+          "when": "tính cost ngày và mở phân rã",
+          "then": "cost18800; doanh thu chưa VAT=40000/1.08, cost50.76%, đạt; dư hiển thị459đ; có từng phần và cách tính",
+          "refs": [
+            "BR-CALC-005",
+            "BR-CALC-006",
+            "BR-COST-002",
+            "BR-COST-003"
+          ],
+          "gate": "O-01; E2-Q1",
+          "kind": "Functional",
+          "ac": "AC-COST-015-01",
+          "tc": "TC-COST-015-01",
+          "status": "BLOCKED — O-01; E2-Q1"
+        },
+        {
+          "title": "VAT thiếu hoặc mẫu số0",
+          "given": "fixture không đặt VAT; fixture khác giá suất0",
+          "when": "tính từng ngày",
+          "then": "ERR-COST-422-05; không mặc định VAT0 hay trả cost%0",
+          "refs": [
+            "BR-CALC-005",
+            "ERR-COST-422-05"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-015-02",
+          "tc": "TC-COST-015-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Làm tròn rồi so ngưỡng",
+          "given": "fixture VAT0, giá suất100000, ngưỡng52; cost52004 và52005 ở hai lần độc lập",
+          "when": "tính cost% và kiểm ngưỡng",
+          "then": "52.004% làm tròn52.00 đạt;52.005% làm tròn52.01 vượt; trung gian không làm tròn",
+          "refs": [
+            "BR-CALC-006",
+            "BR-COST-001"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-015-03",
+          "tc": "TC-COST-015-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Ba phương pháp món chính",
+          "given": "các món chính gồm Healthy có cost8000,10000,12000; K=2; món mặc định10000",
+          "when": "tính từng cấu hình DAT_NHAT, BINH_QUAN, MAC_DINH",
+          "then": "phần chính lần lượt24000,20000,20000; không bỏ Healthy khỏi trung bình",
+          "refs": [
+            "BR-CALC-004"
+          ],
+          "gate": "E3-Q1; E3-Q12",
+          "kind": "Functional",
+          "ac": "AC-COST-015-04",
+          "tc": "TC-COST-015-04",
+          "status": "BLOCKED — E3-Q1; E3-Q12"
+        },
+        {
+          "title": "Ngày chưa đủ món và phản hồi cũ",
+          "given": "ngày mới có món chính; hai lượt sửa có revision1 và2",
+          "when": "tính phần có; trả phản hồi revision1 sau revision2",
+          "then": "hiện chưa đủ món, không gắn nhãn đạt cho ngày hoàn chỉnh; không ghi đè kết quả revision2 bằng revision1",
+          "refs": [],
+          "gate": "FLOW-COST-Q02",
+          "kind": "Integration",
+          "ac": "AC-COST-015-05",
+          "tc": "TC-COST-015-05",
+          "status": "BLOCKED — FLOW-COST-Q02"
+        },
+        {
+          "title": "Hiệu năng tính thực đơn",
+          "given": "fixture6 ngày x7 món, đủ giá; ghi môi trường, cơ sở, cache và cấu hình",
+          "when": "chạy50 lần đo API cost và bộ kiểm đầy đủ, lưu từng mẫu; p95 theo thứ tự mẫu thứ48",
+          "then": "p95 Cost<=1s; tổng bộ kiểm theo NFR-MENU-001<=2s; không tính thời gian render wireframe",
+          "refs": [
+            "NFR-COST-001"
+          ],
+          "gate": "môi trường backend",
+          "kind": "Performance",
+          "ac": "AC-COST-015-06",
+          "tc": "TC-COST-015-06",
+          "status": "BLOCKED — môi trường backend"
+        }
+      ],
+      "apis": [
+        "API-COST-025"
+      ],
+      "screens": [
+        "SCR-COST-12"
+      ]
+    },
+    {
+      "id": "US-COST-016",
+      "title": "Khoản khoán",
+      "actor": "kế toán mua hàng",
+      "goal": "đề nghị khoản khoán để Giám đốc duyệt",
+      "value": "tính đúng khoản cố định trên suất",
+      "fr": [
+        "FR-COST-MEAL-004"
+      ],
+      "uc": "008",
+      "priority": "P0",
+      "points": 3,
+      "gates": "O-01; FLOW-COST-Q05",
+      "cases": [
+        {
+          "title": "Ưu tiên riêng thay chung",
+          "given": "khoản Gia vị chung1000 đã duyệt; đề nghị riêng suất40K1500 ngày16/11",
+          "when": "người khác duyệt đề nghị; tính ngày15/11 và16/11 cho suất40K",
+          "then": "ngày15 dùng1000; ngày16 dùng1500 thay vì2500; không áp PENDING",
+          "refs": [
+            "BR-CALC-008",
+            "BR-SEC-008"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-016-01",
+          "tc": "TC-COST-016-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Khoản sai không nhận",
+          "given": "KT có quyền",
+          "when": "gửi khoản -1,1.5 hoặc thiếu ngày hiệu lực",
+          "then": "mỗi đầu vào trả ERR-COST-422-06; không tạo đề nghị",
+          "refs": [
+            "BR-CALC-008",
+            "ERR-COST-422-06"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-016-02",
+          "tc": "TC-COST-016-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Số0 và người đề nghị",
+          "given": "khoản giá0 ngày hợp lệ lý do đủ; người tạo có cả quyền duyệt trong fixture",
+          "when": "gửi đề nghị0 rồi tự duyệt",
+          "then": "đề nghị0 hợp lệ, tự duyệt ERR-SYS-403-01; giá0 của khoản không bị nhầm với giá nguyên liệu",
+          "refs": [
+            "BR-CALC-008",
+            "BR-SEC-008",
+            "ERR-SYS-403-01"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-016-03",
+          "tc": "TC-COST-016-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Khoản trùng khi duyệt",
+          "given": "đã có Gia vị/ALL/16-11 APPROVED; có đề nghị khác cùng tuple sau chuẩn hóa tên",
+          "when": "duyệt đề nghị thứ hai",
+          "then": "ERR-COST-409-08; không tạo hai khoản cùng tên/phạm vi/ngày hiệu lực",
+          "refs": [
+            "ERR-COST-409-08"
+          ],
+          "gate": "review API",
+          "kind": "Contract",
+          "ac": "AC-COST-016-04",
+          "tc": "TC-COST-016-04",
+          "status": "BLOCKED — review API"
+        }
+      ],
+      "apis": [
+        "API-COST-022",
+        "API-COST-023",
+        "API-COST-024"
+      ],
+      "screens": [
+        "SCR-COST-11"
+      ]
+    },
+    {
+      "id": "US-COST-017",
+      "title": "Cổng gửi duyệt",
+      "actor": "dinh dưỡng viên",
+      "goal": "kiểm Cost trước gửi thực đơn",
+      "value": "ngăn thiếu dữ liệu và tuân thủ chế độ ngưỡng",
+      "fr": [
+        "FR-COST-MEAL-005"
+      ],
+      "uc": "010",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q3; E3-Q9; E3-Q16",
+      "cases": [
+        {
+          "title": "Mọi cơ sở đều đạt",
+          "given": "thực đơn đủ món, đủ giá/VAT, bảng đặc thù còn hiệu lực; A/B cùng dưới ngưỡng",
+          "when": "gửi duyệt ở chế độ CHAN",
+          "then": "Cost cho qua; MENU tiếp tục các điều kiện khác, không tự coi toàn bộ MENU đã được duyệt",
+          "refs": [
+            "BR-CALC-009"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-017-01",
+          "tc": "TC-COST-017-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Một cơ sở vượt",
+          "given": "A cost50%, B cost54%, ngưỡng52; CHAN",
+          "when": "gửi duyệt thực đơn chung A/B và thử bỏ B khỏi request",
+          "then": "ERR-COST-422-07; không PENDING; server vẫn kiểm đủ cơ sở và trả chi tiết theo quyền",
+          "refs": [
+            "BR-CALC-009",
+            "BR-COST-001",
+            "ERR-COST-422-07"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-017-02",
+          "tc": "TC-COST-017-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Cảnh báo không bỏ qua dữ liệu thiếu",
+          "given": "CANH_BAO; lần1 đủ giá cost54%; lần2 thiếu giá; lần3 đặc thù thiếu bảng; lần4 thiếu VAT",
+          "when": "gửi duyệt từng fixture",
+          "then": "lần1 Cost chỉ cảnh báo; lần2/3/4 vẫn chặn với ERR-COST-422-03/04/05 tương ứng; không có nút ngoại lệ CHAN",
+          "refs": [
+            "BR-CALC-003",
+            "BR-CALC-007",
+            "ERR-COST-422-03",
+            "ERR-COST-422-04",
+            "ERR-COST-422-05"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-017-03",
+          "tc": "TC-COST-017-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [],
+      "screens": [
+        "SCR-COST-12"
+      ]
+    },
+    {
+      "id": "US-COST-018",
+      "title": "Snapshot lúc duyệt",
+      "actor": "Giám đốc",
+      "goal": "lưu căn cứ cost cùng quyết định duyệt",
+      "value": "truy lại số liệu đã dùng sau khi giá thay đổi",
+      "fr": [
+        "FR-COST-MEAL-006"
+      ],
+      "uc": "010",
+      "priority": "P0",
+      "points": 3,
+      "gates": "FLOW-COST-Q06",
+      "cases": [
+        {
+          "title": "Chụp từng ngày/cơ sở",
+          "given": "MENU PENDING đủ điều kiện, không có thay đổi đầu vào từ lần kiểm; 6 ngày,2 cơ sở",
+          "when": "duyệt thành APPROVED",
+          "then": "có12 snapshot cho vòng duyệt, chứa giá/nguồn/ngày/params; ghi APPROVED và snapshot cùng giao dịch đề xuất",
+          "refs": [
+            "BR-CALC-010"
+          ],
+          "gate": "FLOW-COST-Q02",
+          "kind": "Functional",
+          "ac": "AC-COST-018-01",
+          "tc": "TC-COST-018-01",
+          "status": "BLOCKED — FLOW-COST-Q02"
+        },
+        {
+          "title": "Giá đổi trong lúc chờ",
+          "given": "MENU PENDING đã kiểm bằng giá cũ; giá mới có hiệu lực trước khi duyệt",
+          "when": "duyệt thực đơn",
+          "then": "chưa xác định oracle số liệu chụp đến khi Q06 chốt chính sách kiểm lại; ca phải BLOCKED, không mặc nhiên chụp kết quả cũ hoặc mới",
+          "refs": [
+            "BR-CALC-010"
+          ],
+          "gate": "FLOW-COST-Q06",
+          "kind": "Functional",
+          "ac": "AC-COST-018-02",
+          "tc": "TC-COST-018-02",
+          "status": "BLOCKED — FLOW-COST-Q06"
+        },
+        {
+          "title": "Bất biến và rollback",
+          "given": "đã có snapshot vòng1; fixture khác cố ý gây lỗi khi lưu snapshot trước commit",
+          "when": "đổi giá/công thức/params rồi đọc vòng1; thử duyệt fixture lỗi",
+          "then": "vòng1 không đổi; giao dịch lỗi không để APPROVED thiếu snapshot; retry đối soát không tạo trùng vòng",
+          "refs": [
+            "BR-CALC-010"
+          ],
+          "gate": "FLOW-COST-Q02",
+          "kind": "Integration",
+          "ac": "AC-COST-018-03",
+          "tc": "TC-COST-018-03",
+          "status": "BLOCKED — FLOW-COST-Q02"
+        }
+      ],
+      "apis": [
+        "API-COST-026"
+      ],
+      "screens": [
+        "SCR-COST-12"
+      ]
+    },
+    {
+      "id": "US-COST-019",
+      "title": "Chế độ kiểm Cost",
+      "actor": "quản trị tham số",
+      "goal": "đề nghị chế độ kiểm để người khác duyệt",
+      "value": "chuyển giai đoạn chạy thử sang kiểm soát chặn",
+      "fr": [
+        "FR-COST-MEAL-008"
+      ],
+      "uc": "011",
+      "priority": "P0",
+      "points": 2,
+      "gates": "—",
+      "cases": [
+        {
+          "title": "Duyệt thay đổi SYS",
+          "given": "CANH_BAO hiện hành; QT đề nghị CHAN hiệu lực hôm nay",
+          "when": "GD khác người tạo duyệt",
+          "then": "trước duyệt vẫn CANH_BAO; sau duyệt CHAN áp dụng từ ngày hiệu lực",
+          "refs": [
+            "BR-SYS-002",
+            "BR-SEC-008"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-019-01",
+          "tc": "TC-COST-019-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Tự duyệt bị cấm",
+          "given": "người đề nghị cũng có quyền duyệt",
+          "when": "tự duyệt đề nghị hoặc người sửa cuối duyệt",
+          "then": "ERR-SYS-403-01; tham số không thay",
+          "refs": [
+            "BR-SEC-008",
+            "ERR-SYS-403-01"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-019-02",
+          "tc": "TC-COST-019-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Hiệu lực tương lai",
+          "given": "CHAN đã duyệt hiệu lực16/11, hiện11/11",
+          "when": "kiểm ngày trước và đúng thời điểm có hiệu lực theo SYS",
+          "then": "trước hiệu lực giữ chế độ cũ; tới hiệu lực áp CHAN; bản chụp quá khứ không đổi",
+          "refs": [
+            "BR-SYS-002",
+            "BR-CALC-010"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-019-03",
+          "tc": "TC-COST-019-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [],
+      "screens": [
+        "SCR-COST-13"
+      ]
+    },
+    {
+      "id": "US-COST-020",
+      "title": "Bộ kiểm và ẩn con số",
+      "actor": "người soạn thực đơn",
+      "goal": "xem quy tắc Cost theo quyền",
+      "value": "biết vi phạm mà không lộ dữ liệu ngoài phạm vi",
+      "fr": [
+        "FR-COST-RUL-001",
+        "FR-COST-RUL-002"
+      ],
+      "uc": "009",
+      "priority": "P0",
+      "points": 3,
+      "gates": "DL-01; E3-Q7",
+      "cases": [
+        {
+          "title": "Đăng ký đúng quy tắc",
+          "given": "fixture có ngày vượt, giá cũ, cặp chính/phụ cost cao, đặc thù thiếu bảng",
+          "when": "chạy bộ kiểm tích hợp MENU",
+          "then": "có kết quả BR-COST-001/005/006/007 theo loại cấu hình; không đăng ký002/003/004 thành lỗi kiểm độc lập",
+          "refs": [
+            "BR-COST-001",
+            "BR-COST-005",
+            "BR-COST-006",
+            "BR-COST-007"
+          ],
+          "gate": "DL-01; E3-Q7",
+          "kind": "Functional",
+          "ac": "AC-COST-020-01",
+          "tc": "TC-COST-020-01",
+          "status": "BLOCKED — DL-01; E3-Q7"
+        },
+        {
+          "title": "Không lộ tiền trong lỗi",
+          "given": "tài khoản có quyền kiểm MENU nhưng thiếu cost.cost.read",
+          "when": "kiểm ngày vượt và gửi duyệt ở CHAN; đọc JSON/network và UI",
+          "then": "chỉ nhãn đạt/không đạt; ERR-COST-422-07 được rút gọn, không cost%, tiền, breakdown trong details",
+          "refs": [
+            "ERR-COST-422-07"
+          ],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-020-02",
+          "tc": "TC-COST-020-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Quyền thay đổi và agent nội bộ",
+          "given": "agent nội bộ thay QL A; quyền cost bị thu hồi giữa hai yêu cầu",
+          "when": "gọi cost B rồi lặp yêu cầu A sau thu hồi",
+          "then": "không trả dữ liệu B; quyền hiệu lực là giao quyền dịch vụ/người; yêu cầu kế tiếp không replay dữ liệu đã mất quyền",
+          "refs": [
+            "BR-SEC-009"
+          ],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-020-03",
+          "tc": "TC-COST-020-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Hồi quy quy tắc đã thuộc MENU",
+          "given": "fixture chuẩn min70/max80g; phụ tối đa50g; nguyên liệu có xương chưa khai hao hụt; định mức40000",
+          "when": "lưu công thức chính69g và81g, phụ51g; lưu nguyên liệu thiếu hao hụt; chọn món tổng40001",
+          "then": "MENU chặn theo BR-COST-008/009/010/012; Cost không thay thế kiểm này; ngưỡng min/max/phụ là fixture chờ E2-Q5",
+          "refs": [
+            "BR-COST-008",
+            "BR-COST-009",
+            "BR-COST-010",
+            "BR-COST-012"
+          ],
+          "gate": "E2-Q5",
+          "kind": "Integration",
+          "ac": "AC-COST-020-04",
+          "tc": "TC-COST-020-04",
+          "status": "BLOCKED — E2-Q5"
+        }
+      ],
+      "apis": [
+        "API-COST-025"
+      ],
+      "screens": [
+        "SCR-COST-12"
+      ]
+    },
+    {
+      "id": "US-COST-021",
+      "title": "Ngân sách cho agent phía khách",
+      "actor": "agent dinh dưỡng viên phía khách",
+      "goal": "nhận trạng thái ngân sách tổng",
+      "value": "hỗ trợ thực đơn mà không đọc giá nội bộ",
+      "fr": [
+        "FR-COST-RUL-003"
+      ],
+      "uc": "015",
+      "priority": "P0",
+      "points": 3,
+      "gates": "FLOW-COST-Q09",
+      "cases": [
+        {
+          "title": "Chỉ một trạng thái",
+          "given": "phiên còn quota; thực đơn hợp lệ mọi ngày đều đạt",
+          "when": "gọi budget-check",
+          "then": "chỉ result DAT; không ngày vượt, ngưỡng, cost, giá, snapshot trong body hoặc log",
+          "refs": [
+            "BR-CALC-011",
+            "BR-SEC-010"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-021-01",
+          "tc": "TC-COST-021-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Thực đơn lỗi",
+          "given": "payload chứa món INACTIVE hoặc lặp món trong ngày",
+          "when": "gọi budget-check",
+          "then": "ERR-MENU-422-14; không trả dữ liệu tiền trong lỗi",
+          "refs": [
+            "ERR-MENU-422-14"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-021-02",
+          "tc": "TC-COST-021-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Quota lời gọi31",
+          "given": "một phiên đã có29 lời gọi; payload hợp lệ",
+          "when": "gọi lần30 rồi31, thử đổi key yêu cầu trong cùng phiên",
+          "then": "lần30 xử lý; lần31 ERR-COST-429-01, không có con số; key mới không reset quota",
+          "refs": [
+            "ERR-COST-429-01"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-021-03",
+          "tc": "TC-COST-021-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Thiếu giá và trạng thái hỗn hợp",
+          "given": "fixture1 tất cả xác định và một ngày vượt; fixture2 thiếu giá nhưng không có ngày vượt; fixture3 vừa vượt vừa thiếu",
+          "when": "gọi từng fixture",
+          "then": "fixture1 KHONG_DAT; fixture2 KHONG_XAC_DINH; fixture3 BLOCKED chờ ưu tiên Q09, không tự chốt",
+          "refs": [
+            "BR-CALC-011"
+          ],
+          "gate": "FLOW-COST-Q09",
+          "kind": "Functional",
+          "ac": "AC-COST-021-04",
+          "tc": "TC-COST-021-04",
+          "status": "BLOCKED — FLOW-COST-Q09"
+        },
+        {
+          "title": "Không rò dữ liệu toàn API",
+          "given": "bốn tài khoản: bếp A, người nội bộ không quyền giá/cost, svc khách, QL A truy B; danh mục MENU/COST",
+          "when": "gọi success/error/list/detail/export/replay với từng tài khoản; kiểm JSON, file và cache",
+          "then": "không con số hoặc trường giá/cost ngoài quyền trong mọi đường phản hồi; ghi endpoint x actor x outcome",
+          "refs": [
+            "NFR-COST-005"
+          ],
+          "gate": "E3-Q11",
+          "kind": "Security",
+          "ac": "AC-COST-021-05",
+          "tc": "TC-COST-021-05",
+          "status": "BLOCKED — E3-Q11"
+        },
+        {
+          "title": "Quyền DB agent khách",
+          "given": "tài khoản DB thật dùng cho agent khách; danh mục15 bảng Cost từ DBML",
+          "when": "kiểm grants rồi SELECT từng bảng Cost gồm bảng snapshot/allowance/alert mới; kiểm service không dùng tài khoản quyền cao để lách",
+          "then": "mọi SELECT trực tiếp bị từ chối; không chỉ kiểm4 bảng cũ",
+          "refs": [
+            "NFR-COST-006",
+            "BR-SEC-010"
+          ],
+          "gate": "môi trường backend",
+          "kind": "Security",
+          "ac": "AC-COST-021-06",
+          "tc": "TC-COST-021-06",
+          "status": "BLOCKED — môi trường backend"
+        },
+        {
+          "title": "Log budget không chứa số",
+          "given": "budget trả DAT,KHONG_DAT,KHONG_XAC_DINH và các lỗi; fixture cost có giá trị nhận dạng",
+          "when": "gọi các nhánh; kiểm log ứng dụng, exception, trace của budget-check",
+          "then": "không cost/giá/cost% trong log hoặc payload debug; vẫn có requestId cho đối soát",
+          "refs": [
+            "NFR-COST-007",
+            "BR-SEC-010"
+          ],
+          "gate": "môi trường backend",
+          "kind": "Security",
+          "ac": "AC-COST-021-07",
+          "tc": "TC-COST-021-07",
+          "status": "BLOCKED — môi trường backend"
+        }
+      ],
+      "apis": [
+        "API-COST-036"
+      ],
+      "screens": []
+    },
+    {
+      "id": "US-COST-022",
+      "title": "Dự toán ngày",
+      "actor": "kế toán mua hàng",
+      "goal": "lập dự toán với số suất từng món",
+      "value": "biết lượng mua và chi phí dự kiến",
+      "fr": [
+        "FR-COST-EST-001",
+        "FR-COST-EST-002",
+        "FR-COST-EST-004"
+      ],
+      "uc": "012",
+      "priority": "P0",
+      "points": 5,
+      "gates": "E3-Q8; E3-Q15; E3-Q2; O-01",
+      "cases": [
+        {
+          "title": "Gộp nguyên liệu và đủ cột",
+          "given": "K=1,10 suất; công thức mỗi suất thịt70g trứng3 quả; giá120000/kg và800/quả; khoán1500; VAT0,giá suất40000",
+          "when": "lập dự toán ngày",
+          "then": "thịt0.70kg=84000, trứng30quả=24000, khoán15000; tổng123000, doanh thu400000,cost30.75%; đủ phân rã món/giá/NCC/ngày/công thức",
+          "refs": [
+            "BR-EST-001",
+            "BR-EST-002",
+            "BR-EST-003"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-022-01",
+          "tc": "TC-COST-022-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Số suất sai",
+          "given": "thực đơn đủ giá",
+          "when": "lập từng fixture số suất -1,1.5 hoặc tất cả0",
+          "then": "ERR-COST-422-08; không lưu bản dự toán",
+          "refs": [
+            "BR-EST-001",
+            "ERR-COST-422-08"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-022-02",
+          "tc": "TC-COST-022-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Làm tròn lên lượng mua",
+          "given": "K=1; nguyên liệu tổng1001g, hệ số1000, giá100000/kg; không hao hụt/khoán",
+          "when": "lập dự toán",
+          "then": "lượng1.01kg, thành tiền101000; không làm tròn gần nhất thành1.00kg",
+          "refs": [
+            "BR-EST-002"
+          ],
+          "gate": "—",
+          "kind": "Boundary",
+          "ac": "AC-COST-022-03",
+          "tc": "TC-COST-022-03",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "K lớn hơn1",
+          "given": "K=2; số lượt chọn món chính50 và30, fixture khác50 và31",
+          "when": "lập dự toán với chính sách Q15 được duyệt",
+          "then": "theo đề xuất chia K: N=40 cho fixture1; fixture2 không chia hết cần xử lý theo quyết định; ca BLOCKED trước khi Q15 chốt",
+          "refs": [
+            "BR-EST-001"
+          ],
+          "gate": "E3-Q15",
+          "kind": "Functional",
+          "ac": "AC-COST-022-04",
+          "tc": "TC-COST-022-04",
+          "status": "BLOCKED — E3-Q15"
+        }
+      ],
+      "apis": [
+        "API-COST-027",
+        "API-COST-030"
+      ],
+      "screens": [
+        "SCR-COST-14",
+        "SCR-COST-15"
+      ]
+    },
+    {
+      "id": "US-COST-023",
+      "title": "Dự toán tuần",
+      "actor": "kế toán mua hàng",
+      "goal": "lập và gộp dự toán nhiều ngày",
+      "value": "chuẩn bị nhu cầu nguyên liệu trong tuần",
+      "fr": [
+        "FR-COST-EST-003"
+      ],
+      "uc": "012",
+      "priority": "P0",
+      "points": 5,
+      "gates": "FLOW-COST-Q07",
+      "cases": [
+        {
+          "title": "Tuần đủ dữ liệu",
+          "given": "hai ngày cùng nguyên liệu I1; ngày1 dùng1kg,ngày2 dùng2kg; giá100000 và110000/kg; không khoán",
+          "when": "lập tuần theo hợp đồng Q07 đã duyệt",
+          "then": "có bản ngày; bảng tuần I1 tổng3kg, tiền320000; truy được giá/ngày từng phần, không nhân3kg với một giá duy nhất",
+          "refs": [
+            "BR-EST-003"
+          ],
+          "gate": "FLOW-COST-Q07",
+          "kind": "Functional",
+          "ac": "AC-COST-023-01",
+          "tc": "TC-COST-023-01",
+          "status": "BLOCKED — FLOW-COST-Q07"
+        },
+        {
+          "title": "Một ngày thiếu giá",
+          "given": "tuần có ngày2 thiếu giá, còn lại hợp lệ",
+          "when": "lập tuần",
+          "then": "báo lỗi ngày2; atomicity và số bản được phép ghi phải theo Q07; chưa chạy với oracle tự đặt",
+          "refs": [
+            "BR-CALC-003",
+            "ERR-COST-422-03"
+          ],
+          "gate": "FLOW-COST-Q07",
+          "kind": "Functional",
+          "ac": "AC-COST-023-02",
+          "tc": "TC-COST-023-02",
+          "status": "BLOCKED — FLOW-COST-Q07"
+        },
+        {
+          "title": "Retry tuần và phiên bản",
+          "given": "đã commit một batch nhưng mất phản hồi; giữ key cũ",
+          "when": "đối soát rồi retry cùng key trong24h",
+          "then": "không tạo thêm bản ngày hoặc batch; kết quả theo semantics Q07 được duyệt",
+          "refs": [
+            "BR-EST-004"
+          ],
+          "gate": "FLOW-COST-Q02; FLOW-COST-Q07",
+          "kind": "Integration",
+          "ac": "AC-COST-023-03",
+          "tc": "TC-COST-023-03",
+          "status": "BLOCKED — FLOW-COST-Q02; FLOW-COST-Q07"
+        }
+      ],
+      "apis": [
+        "API-COST-028"
+      ],
+      "screens": [
+        "SCR-COST-14",
+        "SCR-COST-15"
+      ]
+    },
+    {
+      "id": "US-COST-024",
+      "title": "Lịch sử và bản chỉ lượng",
+      "actor": "bếp trưởng",
+      "goal": "xem dự toán thuộc cơ sở và lịch sử phù hợp quyền",
+      "value": "nhận lượng cần chuẩn bị từ đúng phiên bản",
+      "fr": [
+        "FR-COST-EST-005",
+        "FR-COST-EST-006"
+      ],
+      "uc": "013",
+      "priority": "P0",
+      "points": 3,
+      "gates": "E3-Q11",
+      "cases": [
+        {
+          "title": "Lập lại không sửa cũ",
+          "given": "dự toán v1 giá100000; KT cập nhật giá110000",
+          "when": "KT lập lại cùng ngày/cơ sở; đọc cả hai bản bằng quyền đầy đủ",
+          "then": "v2 có người/thời điểm mới, v1 giữ giá100000; không sửa số suất hoặc dữ liệu chụp v1",
+          "refs": [
+            "BR-EST-004",
+            "BR-CALC-010"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-024-01",
+          "tc": "TC-COST-024-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Bếp không xem cơ sở khác",
+          "given": "bếp A chỉ có cost.estimate.qty; tồn tại dự toán B",
+          "when": "đổi ID/path/query sang B",
+          "then": "ERR-SYS-404-01; không trả dòng của B",
+          "refs": [
+            "ERR-SYS-404-01"
+          ],
+          "gate": "E3-Q11",
+          "kind": "Security",
+          "ac": "AC-COST-024-02",
+          "tc": "TC-COST-024-02",
+          "status": "BLOCKED — E3-Q11"
+        },
+        {
+          "title": "Không có cột tiền ẩn",
+          "given": "bếp A mở dự toán A",
+          "when": "đọc raw JSON, DOM và đối soát mọi nested field",
+          "then": "có số lượng/đơn vị/phân rã; không giá/thành tiền/tổng/cost%/inputsSnapshot chứa tiền, kể cả trường ẩn",
+          "refs": [
+            "NFR-COST-005"
+          ],
+          "gate": "E3-Q11",
+          "kind": "Security",
+          "ac": "AC-COST-024-03",
+          "tc": "TC-COST-024-03",
+          "status": "BLOCKED — E3-Q11"
+        }
+      ],
+      "apis": [
+        "API-COST-027",
+        "API-COST-029",
+        "API-COST-030",
+        "API-COST-037"
+      ],
+      "screens": [
+        "SCR-COST-15"
+      ]
+    },
+    {
+      "id": "US-COST-025",
+      "title": "Xuất dự toán",
+      "actor": "kế toán mua hàng",
+      "goal": "xuất XLSX hoặc PDF theo quyền",
+      "value": "chia sẻ bảng chuẩn bị nguyên liệu",
+      "fr": [
+        "FR-COST-EST-007"
+      ],
+      "uc": "013",
+      "priority": "P1",
+      "points": 3,
+      "gates": "E3-Q11",
+      "cases": [
+        {
+          "title": "Bản đủ giá",
+          "given": "KT có quyền estimate.read và bản v1",
+          "when": "xuất XLSX và PDF",
+          "then": "hai tệp đúng v1, đủ dòng/tổng/đơn vị và metadata; số liệu khớp snapshot không tính lại theo giá mới",
+          "refs": [
+            "BR-CALC-010"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-025-01",
+          "tc": "TC-COST-025-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Quyền bị thu hồi trước tải",
+          "given": "yêu cầu xuất hợp lệ đã được tạo; thu hồi quyền trước khi tải",
+          "when": "tải tệp và retry URL cũ",
+          "then": "không tải được dữ liệu ngoài quyền; phản hồi lỗi không chứa tiền",
+          "refs": [],
+          "gate": "—",
+          "kind": "Security",
+          "ac": "AC-COST-025-02",
+          "tc": "TC-COST-025-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Bản chỉ lượng không giấu tiền trong tệp",
+          "given": "bếp A có qty và dự toán A",
+          "when": "xuất hai định dạng; giải nén XLSX kiểm sheets, hidden cells, sharedStrings, công thức; kiểm PDF text/metadata",
+          "then": "không có tiền/cost trong bất kỳ thành phần nào; chỉ lượng của A",
+          "refs": [],
+          "gate": "E3-Q11",
+          "kind": "Security",
+          "ac": "AC-COST-025-03",
+          "tc": "TC-COST-025-03",
+          "status": "BLOCKED — E3-Q11"
+        }
+      ],
+      "apis": [
+        "API-COST-031"
+      ],
+      "screens": [
+        "SCR-COST-15"
+      ]
+    },
+    {
+      "id": "US-COST-026",
+      "title": "Tính lại và mở cảnh báo",
+      "actor": "dinh dưỡng viên",
+      "goal": "được báo khi giá mới khiến ngày đã duyệt vượt cost",
+      "value": "kịp điều chỉnh thực đơn",
+      "fr": [
+        "FR-COST-ALR-001",
+        "FR-COST-ALR-002"
+      ],
+      "uc": "014",
+      "priority": "P1",
+      "points": 5,
+      "gates": "FLOW-COST-Q08",
+      "cases": [
+        {
+          "title": "Tính lại đúng tập",
+          "given": "100 giá đổi ảnh hưởng50 thực đơn APPROVED/PUBLISHED ngày phục vụ từ hôm nay; snapshot trước đạt",
+          "when": "kích hoạt giá mới và đo đến khi lưu kết quả/cảnh báo",
+          "then": "hoàn tất<=5phút; snapshot giữ nguyên; kết quả mới tách riêng; ngày chuyển đạt sang vượt có cảnh báo cho DD/GD",
+          "refs": [
+            "BR-COST-011",
+            "BR-CALC-010",
+            "NFR-COST-004"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-026-01",
+          "tc": "TC-COST-026-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Không tính lại ngày đã qua",
+          "given": "có ngày hôm qua đã duyệt và ngày tương lai DRAFT không thuộc tập worker",
+          "when": "đổi giá liên quan",
+          "then": "không đưa hai bản đó vào tập tính lại FR-COST-ALR-001; không sửa snapshot của chúng",
+          "refs": [
+            "BR-COST-011"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-026-02",
+          "tc": "TC-COST-026-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Không trùng cảnh báo",
+          "given": "ngày chung A/B đã có cảnh báo OPEN; giá tiếp tục đổi ở hai cơ sở",
+          "when": "phát lặp sự kiện giá và xử lý đồng thời",
+          "then": "một cảnh báo OPEN cho thực đơn/ngày, chi tiết A/B cập nhật; không tạo hai đầu mục; ngày vốn vượt lúc duyệt chờ Q08",
+          "refs": [
+            "BR-COST-011"
+          ],
+          "gate": "FLOW-COST-Q08",
+          "kind": "Integration",
+          "ac": "AC-COST-026-03",
+          "tc": "TC-COST-026-03",
+          "status": "BLOCKED — FLOW-COST-Q08"
+        }
+      ],
+      "apis": [
+        "API-COST-032",
+        "API-COST-033"
+      ],
+      "screens": [
+        "SCR-COST-16",
+        "SCR-COST-17"
+      ]
+    },
+    {
+      "id": "US-COST-027",
+      "title": "Xử lý cảnh báo",
+      "actor": "dinh dưỡng viên",
+      "goal": "xem và đóng cảnh báo với lý do",
+      "value": "theo dõi việc xử lý biến động giá",
+      "fr": [
+        "FR-COST-ALR-003"
+      ],
+      "uc": "014",
+      "priority": "P1",
+      "points": 3,
+      "gates": "—",
+      "cases": [
+        {
+          "title": "Đóng tay có audit",
+          "given": "DD có cost.alert.read; cảnh báo OPEN và thực đơn vẫn vượt",
+          "when": "xem danh sách; đóng với lý do \"Đã trao đổi để xử lý\"",
+          "then": "CLOSED; audit người/thời điểm/lý do; không biến kết quả vượt thành đạt hoặc sửa snapshot",
+          "refs": [
+            "BR-AUD-001"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-027-01",
+          "tc": "TC-COST-027-01",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Lý do ngắn hoặc thiếu quyền",
+          "given": "cảnh báo OPEN; KT doanh thu không có alert.read; DD có quyền",
+          "when": "KT doanh thu thử đóng; DD đóng với9 ký tự",
+          "then": "thiếu quyền ERR-AUTH-403-02; lý do ngắn ERR-SYS-422-01; giữ OPEN",
+          "refs": [
+            "BR-AUD-001",
+            "ERR-SYS-422-01",
+            "ERR-AUTH-403-02"
+          ],
+          "gate": "—",
+          "kind": "Functional",
+          "ac": "AC-COST-027-02",
+          "tc": "TC-COST-027-02",
+          "status": "NOT RUN — chưa có backend"
+        },
+        {
+          "title": "Đóng theo sự kiện nghiệp vụ",
+          "given": "hai fixture cảnh báo OPEN: giá đổi lại về đạt; thực đơn được thu hồi và sửa",
+          "when": "xử lý từng sự kiện",
+          "then": "cảnh báo tương ứng đóng; ghi nguồn xử lý và giữ lịch sử giá/snapshot",
+          "refs": [
+            "BR-AUD-001"
+          ],
+          "gate": "—",
+          "kind": "Integration",
+          "ac": "AC-COST-027-03",
+          "tc": "TC-COST-027-03",
+          "status": "NOT RUN — chưa có backend"
+        }
+      ],
+      "apis": [
+        "API-COST-032",
+        "API-COST-033",
+        "API-COST-034"
+      ],
+      "screens": [
+        "SCR-COST-16",
+        "SCR-COST-17"
+      ]
+    },
+    {
+      "id": "US-COST-028",
+      "title": "Mô phỏng giá",
+      "actor": "người nội bộ được cấp quyền mô phỏng",
+      "goal": "thử một giá giả định",
+      "value": "đánh giá tác động trước khi nhập thật",
+      "fr": [
+        "FR-COST-ALR-005"
+      ],
+      "uc": "016",
+      "priority": "P2",
+      "points": 3,
+      "gates": "FLOW-COST-Q10",
+      "cases": [
+        {
+          "title": "Mô phỏng không ghi",
+          "given": "quyền/phạm vi Q10 đã chốt; giá thật100000; giả định130000",
+          "when": "chạy mô phỏng rồi so số bản ghi giá/snapshot/estimate/alert trước sau",
+          "then": "có danh sách ngày vượt trong phạm vi; các bảng nghiệp vụ không đổi; nhãn mô phỏng",
+          "refs": [],
+          "gate": "FLOW-COST-Q10",
+          "kind": "Functional",
+          "ac": "AC-COST-028-01",
+          "tc": "TC-COST-028-01",
+          "status": "BLOCKED — FLOW-COST-Q10"
+        },
+        {
+          "title": "Giá giả định sai",
+          "given": "nguyên liệu hợp lệ",
+          "when": "mô phỏng giá0 hoặc-1",
+          "then": "ERR-COST-422-01, không chạy ghi nghiệp vụ",
+          "refs": [
+            "BR-PRC-002",
+            "ERR-COST-422-01"
+          ],
+          "gate": "FLOW-COST-Q10",
+          "kind": "Functional",
+          "ac": "AC-COST-028-02",
+          "tc": "TC-COST-028-02",
+          "status": "BLOCKED — FLOW-COST-Q10"
+        },
+        {
+          "title": "Phạm vi và thiếu giá khác",
+          "given": "chỉ được mô phỏng A; một ngày A thiếu giá nguyên liệu khác; có thực đơn B",
+          "when": "mô phỏng A rồi cố yêu cầu B",
+          "then": "ngày thiếu được ghi chưa tính được; không khẳng định đạt; không trả dữ liệu B",
+          "refs": [
+            "BR-CALC-003"
+          ],
+          "gate": "FLOW-COST-Q10",
+          "kind": "Security",
+          "ac": "AC-COST-028-03",
+          "tc": "TC-COST-028-03",
+          "status": "BLOCKED — FLOW-COST-Q10"
+        }
+      ],
+      "apis": [
+        "API-COST-035"
+      ],
+      "screens": [
+        "SCR-COST-18"
+      ]
+    }
+  ],
+  "deferred": [
+    "FR-COST-MEAL-007",
+    "FR-COST-ALR-004"
+  ]
+}

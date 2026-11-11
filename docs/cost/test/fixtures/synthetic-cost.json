@@ -1,0 +1,403 @@
+{
+  "version": "0.1.0",
+  "status": "SYNTHETIC_NOT_ACCOUNTANT_APPROVED",
+  "description": "Cost main inputs in days are supplied fixture numbers, not references to dishes or real menus. No price selection/approval workflow is implemented here.",
+  "dishes": [
+    {
+      "id": "MOCK-DISH-01",
+      "name": "Thịt và trứng mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "70",
+          "priceVnd": "120000",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": true
+        },
+        {
+          "qty": "3",
+          "priceVnd": "800",
+          "conversionFactor": "1",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "10800"
+    },
+    {
+      "id": "MOCK-DISH-02",
+      "name": "Thịt đơn mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "70",
+          "priceVnd": "120000",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "8400"
+    },
+    {
+      "id": "MOCK-DISH-03",
+      "name": "Thịt hao hụt20% mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": true,
+      "lines": [
+        {
+          "qty": "70",
+          "priceVnd": "120000",
+          "conversionFactor": "1000",
+          "wastePct": "20",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "10500"
+    },
+    {
+      "id": "MOCK-DISH-04",
+      "name": "Nước không tính cost mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "70",
+          "priceVnd": "120000",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": true
+        },
+        {
+          "qty": "100",
+          "priceVnd": "0",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": false
+        }
+      ],
+      "expectedExactCost": "8400"
+    },
+    {
+      "id": "MOCK-DISH-05",
+      "name": "Phần lẻ ba dòng mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "0.4",
+          "priceVnd": "1",
+          "conversionFactor": "1",
+          "wastePct": "0",
+          "includeInCost": true
+        },
+        {
+          "qty": "0.4",
+          "priceVnd": "1",
+          "conversionFactor": "1",
+          "wastePct": "0",
+          "includeInCost": true
+        },
+        {
+          "qty": "0.4",
+          "priceVnd": "1",
+          "conversionFactor": "1",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "1.2"
+    },
+    {
+      "id": "MOCK-DISH-06",
+      "name": "Không có thành phần tính cost",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "100",
+          "priceVnd": "0",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": false
+        }
+      ],
+      "expectedExactCost": "0"
+    },
+    {
+      "id": "MOCK-DISH-07",
+      "name": "Định lượng80g mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "80",
+          "priceVnd": "120000",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "9600"
+    },
+    {
+      "id": "MOCK-DISH-08",
+      "name": "Giá cơ sở B mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "B",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "70",
+          "priceVnd": "126000",
+          "conversionFactor": "1000",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "8820"
+    },
+    {
+      "id": "MOCK-DISH-09",
+      "name": "Trứng mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": false,
+      "lines": [
+        {
+          "qty": "3",
+          "priceVnd": "800",
+          "conversionFactor": "1",
+          "wastePct": "0",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "2400"
+    },
+    {
+      "id": "MOCK-DISH-10",
+      "name": "Hải sản hao hụt20% mẫu",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "applyWaste": true,
+      "lines": [
+        {
+          "qty": "100",
+          "priceVnd": "100000",
+          "conversionFactor": "1000",
+          "wastePct": "20",
+          "includeInCost": true
+        }
+      ],
+      "expectedExactCost": "12500"
+    }
+  ],
+  "days": [
+    {
+      "id": "MOCK-DAY-01",
+      "date": "2026-11-16",
+      "kitchenId": "A",
+      "mainCosts": [
+        "10800"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "40000",
+      "vatPct": "8",
+      "thresholdPct": "52",
+      "expectedCost": "18800",
+      "expectedPct": "50.76",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-02",
+      "date": "2026-11-17",
+      "kitchenId": "A",
+      "mainCosts": [
+        "13000"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "40000",
+      "vatPct": "8",
+      "thresholdPct": "52",
+      "expectedCost": "21000",
+      "expectedPct": "56.70",
+      "expectedResult": "KHONG_DAT"
+    },
+    {
+      "id": "MOCK-DAY-03",
+      "date": "2026-11-18",
+      "kitchenId": "A",
+      "mainCosts": [
+        "12000"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "40000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "20000",
+      "expectedPct": "50.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-04",
+      "date": "2026-11-19",
+      "kitchenId": "A",
+      "mainCosts": [
+        "52004"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "0",
+      "allowance": "0",
+      "mealPrice": "100000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "52004",
+      "expectedPct": "52.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-05",
+      "date": "2026-11-20",
+      "kitchenId": "A",
+      "mainCosts": [
+        "52005"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "0",
+      "allowance": "0",
+      "mealPrice": "100000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "52005",
+      "expectedPct": "52.01",
+      "expectedResult": "KHONG_DAT"
+    },
+    {
+      "id": "MOCK-DAY-06",
+      "date": "2026-11-21",
+      "kitchenId": "A",
+      "mainCosts": [
+        "8000",
+        "10000",
+        "12000"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 2,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "80000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "32000",
+      "expectedPct": "40.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-07",
+      "date": "2026-11-22",
+      "kitchenId": "A",
+      "mainCosts": [
+        "8000",
+        "10000",
+        "12000"
+      ],
+      "method": "BINH_QUAN",
+      "mainPick": 2,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "80000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "28000",
+      "expectedPct": "35.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-08",
+      "date": "2026-11-23",
+      "kitchenId": "A",
+      "mainCosts": [
+        "8000",
+        "10000",
+        "12000"
+      ],
+      "method": "MAC_DINH",
+      "mainPick": 2,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "80000",
+      "vatPct": "0",
+      "thresholdPct": "52",
+      "expectedCost": "24000",
+      "expectedPct": "30.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-09",
+      "date": "2026-11-24",
+      "kitchenId": "A",
+      "mainCosts": [
+        "0"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "0",
+      "allowance": "0",
+      "mealPrice": "40000",
+      "vatPct": "8",
+      "thresholdPct": "52",
+      "expectedCost": "0",
+      "expectedPct": "0.00",
+      "expectedResult": "DAT"
+    },
+    {
+      "id": "MOCK-DAY-10",
+      "date": "2026-11-25",
+      "kitchenId": "B",
+      "mainCosts": [
+        "13000"
+      ],
+      "method": "DAT_NHAT",
+      "mainPick": 1,
+      "defaultIndex": 0,
+      "otherCost": "6500",
+      "allowance": "1500",
+      "mealPrice": "40000",
+      "vatPct": "8",
+      "thresholdPct": "52",
+      "expectedCost": "21000",
+      "expectedPct": "56.70",
+      "expectedResult": "KHONG_DAT"
+    }
+  ]
+}
