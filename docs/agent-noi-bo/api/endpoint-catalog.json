@@ -1,0 +1,44 @@
+[
+  {
+    "id": "API-AIO-001",
+    "method": "POST",
+    "path": "/v1/internal-agent/runs",
+    "fr": "FR-AIO-GEN-001",
+    "ui": "UI-AIO-01"
+  },
+  {
+    "id": "API-AIO-002",
+    "method": "GET",
+    "path": "/v1/internal-agent/runs/{id}",
+    "fr": "FR-AIO-CHK-001",
+    "ui": "UI-AIO-02"
+  },
+  {
+    "id": "API-AIO-003",
+    "method": "POST",
+    "path": "/v1/internal-agent/revisions",
+    "fr": "FR-AIO-EDIT-001",
+    "ui": "UI-AIO-02"
+  },
+  {
+    "id": "API-AIO-004",
+    "method": "POST",
+    "path": "/v1/internal-agent/runs/{id}/applications",
+    "fr": "FR-AIO-APLY-001",
+    "ui": "UI-AIO-02"
+  },
+  {
+    "id": "API-AIO-005",
+    "method": "GET",
+    "path": "/v1/internal-agent/run-logs",
+    "fr": "FR-AIO-LOG-001",
+    "ui": "UI-AIO-03"
+  },
+  {
+    "id": "API-AIO-006",
+    "method": "GET",
+    "path": "/v1/internal-agent/runs/{id}/events",
+    "fr": "FR-AIO-OPS-001",
+    "ui": "UI-AIO-03"
+  }
+]
