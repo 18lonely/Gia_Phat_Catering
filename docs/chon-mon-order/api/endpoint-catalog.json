@@ -1,0 +1,215 @@
+[
+  {
+    "id": "API-ORD-001",
+    "method": "GET",
+    "path": "/v1/orders/available-meals",
+    "features": [
+      "FEAT-036",
+      "FEAT-045"
+    ]
+  },
+  {
+    "id": "API-ORD-002",
+    "method": "PUT",
+    "path": "/v1/orders/me/selections/{date}/{shift}",
+    "features": [
+      "FEAT-036"
+    ]
+  },
+  {
+    "id": "API-ORD-003",
+    "method": "GET",
+    "path": "/v1/orders/selection-summaries",
+    "features": [
+      "FEAT-038",
+      "FEAT-042"
+    ]
+  },
+  {
+    "id": "API-ORD-004",
+    "method": "POST",
+    "path": "/v1/orders/submissions",
+    "features": [
+      "FEAT-038",
+      "FEAT-042"
+    ]
+  },
+  {
+    "id": "API-ORD-005",
+    "method": "POST",
+    "path": "/v1/orders/{id}/change-requests",
+    "features": [
+      "FEAT-041"
+    ]
+  },
+  {
+    "id": "API-ORD-006",
+    "method": "POST",
+    "path": "/v1/orders/customer-access-grants",
+    "features": [
+      "FEAT-030"
+    ]
+  },
+  {
+    "id": "API-ORD-007",
+    "method": "GET",
+    "path": "/v1/orders/customer-access-grants",
+    "features": [
+      "FEAT-030"
+    ]
+  },
+  {
+    "id": "API-ORD-008",
+    "method": "POST",
+    "path": "/v1/orders/qr-registrations",
+    "features": [
+      "FEAT-031"
+    ]
+  },
+  {
+    "id": "API-ORD-009",
+    "method": "POST",
+    "path": "/v1/orders/qr-sessions",
+    "features": [
+      "FEAT-032"
+    ]
+  },
+  {
+    "id": "API-ORD-010",
+    "method": "GET",
+    "path": "/v1/orders/customers/{id}/eaters",
+    "features": [
+      "FEAT-033"
+    ]
+  },
+  {
+    "id": "API-ORD-011",
+    "method": "POST",
+    "path": "/v1/orders/customers/{id}/qr-rotations",
+    "features": [
+      "FEAT-033"
+    ]
+  },
+  {
+    "id": "API-ORD-012",
+    "method": "PATCH",
+    "path": "/v1/orders/eaters/{id}/status",
+    "features": [
+      "FEAT-033"
+    ]
+  },
+  {
+    "id": "API-ORD-013",
+    "method": "GET",
+    "path": "/v1/orders/service-contexts",
+    "features": [
+      "FEAT-034"
+    ]
+  },
+  {
+    "id": "API-ORD-014",
+    "method": "PUT",
+    "path": "/v1/orders/service-contexts/{pointId}",
+    "features": [
+      "FEAT-034"
+    ]
+  },
+  {
+    "id": "API-ORD-015",
+    "method": "GET",
+    "path": "/v1/orders/customers/{id}/quotas",
+    "features": [
+      "FEAT-035"
+    ]
+  },
+  {
+    "id": "API-ORD-016",
+    "method": "POST",
+    "path": "/v1/orders/customers/{id}/quotas",
+    "features": [
+      "FEAT-035"
+    ]
+  },
+  {
+    "id": "API-ORD-017",
+    "method": "GET",
+    "path": "/v1/orders/me/selections",
+    "features": [
+      "FEAT-036"
+    ]
+  },
+  {
+    "id": "API-ORD-018",
+    "method": "POST",
+    "path": "/v1/orders/me/weekly-selections",
+    "features": [
+      "FEAT-037"
+    ]
+  },
+  {
+    "id": "API-ORD-019",
+    "method": "GET",
+    "path": "/v1/orders/{id}/revisions",
+    "features": [
+      "FEAT-038",
+      "FEAT-041"
+    ]
+  },
+  {
+    "id": "API-ORD-020",
+    "method": "GET",
+    "path": "/v1/orders/production-plans",
+    "features": [
+      "FEAT-040",
+      "FEAT-048"
+    ]
+  },
+  {
+    "id": "API-ORD-021",
+    "method": "GET",
+    "path": "/v1/orders/{id}/change-requests",
+    "features": [
+      "FEAT-041"
+    ]
+  },
+  {
+    "id": "API-ORD-022",
+    "method": "POST",
+    "path": "/v1/orders/change-requests/{id}/decisions",
+    "features": [
+      "FEAT-041"
+    ]
+  },
+  {
+    "id": "API-ORD-023",
+    "method": "GET",
+    "path": "/v1/orders/reminder-runs",
+    "features": [
+      "FEAT-043"
+    ]
+  },
+  {
+    "id": "API-ORD-024",
+    "method": "PUT",
+    "path": "/v1/orders/customers/{id}/choice-mode",
+    "features": [
+      "FEAT-044"
+    ]
+  },
+  {
+    "id": "API-ORD-025",
+    "method": "GET",
+    "path": "/v1/orders/production-plans/{id}",
+    "features": [
+      "FEAT-048"
+    ]
+  },
+  {
+    "id": "API-ORD-026",
+    "method": "POST",
+    "path": "/v1/orders/service-contexts",
+    "features": [
+      "FEAT-034"
+    ]
+  }
+]
