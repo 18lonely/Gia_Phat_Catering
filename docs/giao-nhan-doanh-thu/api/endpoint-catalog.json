@@ -1,0 +1,295 @@
+[
+  {
+    "id": "API-E7-001",
+    "method": "POST",
+    "path": "/v1/deliveries",
+    "features": [
+      "FEAT-049"
+    ],
+    "fr": [
+      "FR-DLV-NOTE-001"
+    ],
+    "ui": [
+      "UI-E7-01"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E6-CG-05/06/08; E7-Q02"
+  },
+  {
+    "id": "API-E7-002",
+    "method": "POST",
+    "path": "/v1/deliveries/{id}/confirmations",
+    "features": [
+      "FEAT-049"
+    ],
+    "fr": [
+      "FR-DLV-ACK-001"
+    ],
+    "ui": [
+      "UI-E7-02"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E6-CG-01/08; E7-Q01; Q-13"
+  },
+  {
+    "id": "API-E7-003",
+    "method": "POST",
+    "path": "/v1/delivery-discrepancies",
+    "features": [
+      "FEAT-050"
+    ],
+    "fr": [
+      "FR-DLV-DIFF-001"
+    ],
+    "ui": [
+      "UI-E7-03"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q02; E6-CG-08"
+  },
+  {
+    "id": "API-E7-004",
+    "method": "POST",
+    "path": "/v1/delivery-discrepancies/{id}/resolutions",
+    "features": [
+      "FEAT-050"
+    ],
+    "fr": [
+      "FR-DLV-RES-001"
+    ],
+    "ui": [
+      "UI-E7-03"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q02/03; CK-Q07–09 khi liên quan CK"
+  },
+  {
+    "id": "API-E7-005",
+    "method": "POST",
+    "path": "/v1/revenue-calculations",
+    "features": [
+      "FEAT-051"
+    ],
+    "fr": [
+      "FR-FIN-REV-001"
+    ],
+    "ui": [
+      "UI-E7-04"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q03/04; Q-13; E6-CG-04/05/07"
+  },
+  {
+    "id": "API-E7-006",
+    "method": "GET",
+    "path": "/v1/revenues",
+    "features": [
+      "FEAT-051"
+    ],
+    "fr": [
+      "FR-FIN-VIEW-001"
+    ],
+    "ui": [
+      "UI-E7-04"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q04/08; E6-CG-08"
+  },
+  {
+    "id": "API-E7-007",
+    "method": "POST",
+    "path": "/v1/reconciliation-periods",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-REC-001"
+    ],
+    "ui": [
+      "UI-E7-05"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q05; Q-13; E6-CG-08"
+  },
+  {
+    "id": "API-E7-008",
+    "method": "POST",
+    "path": "/v1/reconciliation-periods/{id}/agreements",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-AGRE-001"
+    ],
+    "ui": [
+      "UI-E7-05"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q05; Q-13; E6-CG-01/08"
+  },
+  {
+    "id": "API-E7-009",
+    "method": "POST",
+    "path": "/v1/reconciliation-periods/{id}/receipts",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-RCPT-001"
+    ],
+    "ui": [
+      "UI-E7-06"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q06; E7-Q05 về thu sau khóa"
+  },
+  {
+    "id": "API-E7-010",
+    "method": "POST",
+    "path": "/v1/reconciliation-periods/{id}/locks",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-LOCK-001"
+    ],
+    "ui": [
+      "UI-E7-05"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q05; Q-13"
+  },
+  {
+    "id": "API-E7-011",
+    "method": "POST",
+    "path": "/v1/reconciliation-periods/{id}/reopen-requests",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-RREQ-001"
+    ],
+    "ui": [
+      "UI-E7-07"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q05; O-06 về ủy quyền giữ mở"
+  },
+  {
+    "id": "API-E7-012",
+    "method": "POST",
+    "path": "/v1/reopen-requests/{id}/decisions",
+    "features": [
+      "FEAT-052"
+    ],
+    "fr": [
+      "FR-FIN-RDEC-001"
+    ],
+    "ui": [
+      "UI-E7-07"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q05; O-06 không tự cấp người thay"
+  },
+  {
+    "id": "API-E7-013",
+    "method": "POST",
+    "path": "/v1/misa-exports",
+    "features": [
+      "FEAT-053"
+    ],
+    "fr": [
+      "FR-FIN-MISA-001"
+    ],
+    "ui": [
+      "UI-E7-08"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q07/08; E7-Q05 về kỳ được phép xuất"
+  },
+  {
+    "id": "API-E7-014",
+    "method": "GET",
+    "path": "/v1/deliveries",
+    "fr": [
+      "FR-DLV-NOTE-001"
+    ],
+    "features": [
+      "FEAT-049"
+    ],
+    "ui": [
+      "UI-E7-01"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q08; scope/source gates inherited",
+    "behavior": "Danh sách phiếu theo scope/ngày, có empty và missing source"
+  },
+  {
+    "id": "API-E7-015",
+    "method": "GET",
+    "path": "/v1/deliveries/{id}",
+    "fr": [
+      "FR-DLV-ACK-001"
+    ],
+    "features": [
+      "FEAT-049"
+    ],
+    "ui": [
+      "UI-E7-02"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q08; scope/source gates inherited",
+    "behavior": "Chi tiết theo quyền/link đã xác minh; không tự xác nhận"
+  },
+  {
+    "id": "API-E7-016",
+    "method": "GET",
+    "path": "/v1/delivery-discrepancies/{id}",
+    "fr": [
+      "FR-DLV-DIFF-001"
+    ],
+    "features": [
+      "FEAT-050"
+    ],
+    "ui": [
+      "UI-E7-03"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q08; scope/source gates inherited",
+    "behavior": "Biên bản/bằng chứng, không tự thống nhất"
+  },
+  {
+    "id": "API-E7-017",
+    "method": "GET",
+    "path": "/v1/reconciliation-periods/{id}",
+    "fr": [
+      "FR-FIN-REC-001"
+    ],
+    "features": [
+      "FEAT-052"
+    ],
+    "ui": [
+      "UI-E7-05"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q08; scope/source gates inherited",
+    "behavior": "Kỳ/nguồn/thu tiền/yêu cầu mở lại theo quyền; không chốt"
+  },
+  {
+    "id": "API-E7-018",
+    "method": "GET",
+    "path": "/v1/misa-exports/{id}",
+    "fr": [
+      "FR-FIN-MISA-001"
+    ],
+    "features": [
+      "FEAT-053"
+    ],
+    "ui": [
+      "UI-E7-08"
+    ],
+    "status": "PROPOSED_CONDITIONAL",
+    "gates": "E7-Q08; scope/source gates inherited",
+    "behavior": "Trạng thái/fileRef khi có file thật; không tạo file"
+  }
+]
