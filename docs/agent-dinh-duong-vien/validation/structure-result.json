@@ -1,0 +1,5215 @@
+{
+  "scope": "Document structure only; not product tests",
+  "protectedFiles": 617,
+  "checks": [
+    {
+      "name": "protected hash docs/nen-tang/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/html-wireframe/foundation-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-4.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-4.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-5.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-5.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-6.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-6.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-7.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-erd-7.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-spec-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-spec-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-spec-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-spec-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/schema.dbml",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-013.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-014.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-015.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-016.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-017.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-018.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-019.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-020.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-021.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-022.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-023.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-024.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-025.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/usecases/UC-CORE-026.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/nen-tang/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/api/api-traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/html-wireframe/chi-tiet-mon.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/html-wireframe/cho-duyet.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/html-wireframe/soan-thuc-don-tuan.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-erd-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-erd-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-4.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-4.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-5.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-5.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-6.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-6.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-7.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-7.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/test/rule-test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/usecases/UC-MENU-013.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/thuc-don-dinh-luong/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/accounting/acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/accounting/business-rules.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/accounting/design-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/accounting/design-tests.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/api/accounting-contract.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/api/accounting-endpoints.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/cr/CR-COST-2026-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/html-wireframe/accounting-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/html-wireframe/cost-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/html-wireframe/README.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/accountant-input.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/blocked-tests.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/cost-branch-decisions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/decision-register.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/decision-register.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/srs-usecase-diagram-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-4.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-4.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-5.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-5.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-6.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-6.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-7.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/diagrams/ui-user-flow-7.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/fixtures/synthetic-cost.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/scenario-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-013.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-014.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-015.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/usecases/UC-COST-016.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/user-guide.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/userstories/accounting-backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/accounting-design-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/accounting-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/accounting-mobile.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/api-wireframe-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/backlog-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/build-accounting-backlog.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/build-backlog.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-accounting-design.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-accounting.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-api-wireframe.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-backlog.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-diagrams.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-reconciliation.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check-usecases.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/check.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/cost-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/cost-mobile.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/prepare-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/sync-accounting-design.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/cost/validation/usecase-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/html-wireframe/nutrition-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-erd-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-erd-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/ui/wireframe-ascii.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/usecases/UC-NUTR-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/usecases/UC-NUTR-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/usecases/UC-NUTR-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/usecases/UC-NUTR-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/usecases/UC-NUTR-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/dinh-duong/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/html-wireframe/agent-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-erd-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-erd-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/ui/wireframe-ascii.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/usecases/UC-AIO-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/agent-noi-bo/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/adapter-contract-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/delta-contract-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/dto-presence-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/api/route-validation-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/gap-analysis.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/html-wireframe/order-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/adapter-handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/contract-gap-register.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/contract-handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/decision-findings.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/decision-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/dto-handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/independent-handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/scope-assessment.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/review/uc-operation-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-data-dictionary-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-data-dictionary-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-erd-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-erd-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-flows-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-flows-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-flows-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-flows-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-states-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-usecase-diagram-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/srs-usecase-diagram-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/flows.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/lock-plan-review.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/operational-rules.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/srs/usecase-diagram.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/decision-review-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/fixtures/adapter-synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/fixtures/consistency-synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/fixtures/delta-synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/invariant-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/review-test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/system-test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/ui/screen-catalog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-013.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-014.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-015.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-016.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-017.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-018.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/usecases/UC-ORD-019.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/adapter-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/adapter-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/adapter-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/adapter-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/api-e6.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/build-e6.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/capability-map.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/case-review-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/case-review-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/case-review-original.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/case-review-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-adapter-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-case-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-contract-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-downstream-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-dto-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-e6.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-fixture-review.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/check-ui.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/contract-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/contract-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/contract-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/contract-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/decision-review-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/desktop-plan.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/diagram-change.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/downstream-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/downstream-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/downstream-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/downstream-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/dto-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/dto-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/dto-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/dto-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/extend-e6.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/finalize-e6.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/fixture-review-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/fixture-review-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/fixture-review-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/independent-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/independent-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/independent-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/independent-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/mobile-selection.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/open-questions-2026-11-12/baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/open-questions-2026-11-12/check-e6-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/open-questions-2026-11-12/diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/open-questions-2026-11-12/preservation-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/preview-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/proposal-2026-11-12/baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/proposal-2026-11-12/check-e6-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/proposal-2026-11-12/check-proposal.py",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/proposal-2026-11-12/diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/proposal-2026-11-12/preservation-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/render-e6.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/uc-baseline-sha256.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/uc-change-manifest.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/uc-check-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/uc-review-report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/chon-mon-order/validation/ui-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/html-wireframe/revenue-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/fixtures/synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-DLV-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-DLV-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-DLV-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-DLV-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/usecases/UC-FIN-013.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/append-status.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/author-e7.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/check-e7.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/check-ui-e7.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/design-index.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/files-created.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/finish-report.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/history-prefixes.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/manifest-e7.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/protected-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/render-e7.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-01.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-02.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-03.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-04.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-05.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-06.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-07.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-08.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/desktop-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-01.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-02.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-03.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-04.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-05.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-06.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-07.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-08.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/screenshots/mobile-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/structure-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/giao-nhan-doanh-thu/validation/ui-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/html-wireframe/public-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/preview.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-3.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/ui-user-flow-2.html",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/diagrams/ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/fixtures/synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-001.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-002.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-003.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-004.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-005.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-006.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-007.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-008.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-009.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-010.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-011.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/usecases/UC-PUB-012.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/append-e8-status.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/author-e8.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/capture-baseline.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/check-e8.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/check-ui-e8.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/design-index.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/files-created.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/manifest-e8.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/protected-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/render-e8.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-01.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-02.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-03.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-04.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-05.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-06.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-07.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-08.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-09.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/desktop-sheet-3.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-01.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-02.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-03.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-04.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-05.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-06.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-07.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-08.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-09.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/screenshots/mobile-sheet-3.png",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/structure-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/website-cong-khai/validation/ui-result.json",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/gia-phat/01-prd.md",
+      "passed": true
+    },
+    {
+      "name": "protected hash docs/gia-phat/02-roadmap.md",
+      "passed": true
+    },
+    {
+      "name": "protected inventory nen-tang",
+      "passed": true
+    },
+    {
+      "name": "protected inventory thuc-don-dinh-luong",
+      "passed": true
+    },
+    {
+      "name": "protected inventory cost",
+      "passed": true
+    },
+    {
+      "name": "protected inventory dinh-duong",
+      "passed": true
+    },
+    {
+      "name": "protected inventory agent-noi-bo",
+      "passed": true
+    },
+    {
+      "name": "protected inventory chon-mon-order",
+      "passed": true
+    },
+    {
+      "name": "protected inventory giao-nhan-doanh-thu",
+      "passed": true
+    },
+    {
+      "name": "protected inventory website-cong-khai",
+      "passed": true
+    },
+    {
+      "name": "append prefix docs/OVERVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "append prefix docs/project-dashboard.md",
+      "passed": true
+    },
+    {
+      "name": "append prefix docs/gia-phat/review/progress-assessment.md",
+      "passed": true
+    },
+    {
+      "name": "append prefix docs/gia-phat/review/next-session-prompt.md",
+      "passed": true
+    },
+    {
+      "name": "65 tables",
+      "passed": true
+    },
+    {
+      "name": "six features",
+      "passed": true
+    },
+    {
+      "name": "five designed + one gate",
+      "passed": true
+    },
+    {
+      "name": "13 unique FR",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SESS-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 001-01",
+      "passed": true
+    },
+    {
+      "name": "TC 001-01",
+      "passed": true
+    },
+    {
+      "name": "AC 001-02",
+      "passed": true
+    },
+    {
+      "name": "TC 001-02",
+      "passed": true
+    },
+    {
+      "name": "AC 001-03",
+      "passed": true
+    },
+    {
+      "name": "TC 001-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GEN-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 002-01",
+      "passed": true
+    },
+    {
+      "name": "TC 002-01",
+      "passed": true
+    },
+    {
+      "name": "AC 002-02",
+      "passed": true
+    },
+    {
+      "name": "TC 002-02",
+      "passed": true
+    },
+    {
+      "name": "AC 002-03",
+      "passed": true
+    },
+    {
+      "name": "TC 002-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CHK-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 003-01",
+      "passed": true
+    },
+    {
+      "name": "TC 003-01",
+      "passed": true
+    },
+    {
+      "name": "AC 003-02",
+      "passed": true
+    },
+    {
+      "name": "TC 003-02",
+      "passed": true
+    },
+    {
+      "name": "AC 003-03",
+      "passed": true
+    },
+    {
+      "name": "TC 003-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EXPL-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 004-01",
+      "passed": true
+    },
+    {
+      "name": "TC 004-01",
+      "passed": true
+    },
+    {
+      "name": "AC 004-02",
+      "passed": true
+    },
+    {
+      "name": "TC 004-02",
+      "passed": true
+    },
+    {
+      "name": "AC 004-03",
+      "passed": true
+    },
+    {
+      "name": "TC 004-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-EDIT-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 005-01",
+      "passed": true
+    },
+    {
+      "name": "TC 005-01",
+      "passed": true
+    },
+    {
+      "name": "AC 005-02",
+      "passed": true
+    },
+    {
+      "name": "TC 005-02",
+      "passed": true
+    },
+    {
+      "name": "AC 005-03",
+      "passed": true
+    },
+    {
+      "name": "TC 005-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SEND-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 006-01",
+      "passed": true
+    },
+    {
+      "name": "TC 006-01",
+      "passed": true
+    },
+    {
+      "name": "AC 006-02",
+      "passed": true
+    },
+    {
+      "name": "TC 006-02",
+      "passed": true
+    },
+    {
+      "name": "AC 006-03",
+      "passed": true
+    },
+    {
+      "name": "TC 006-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-STAT-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 007-01",
+      "passed": true
+    },
+    {
+      "name": "TC 007-01",
+      "passed": true
+    },
+    {
+      "name": "AC 007-02",
+      "passed": true
+    },
+    {
+      "name": "TC 007-02",
+      "passed": true
+    },
+    {
+      "name": "AC 007-03",
+      "passed": true
+    },
+    {
+      "name": "TC 007-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-GATE-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 008-01",
+      "passed": true
+    },
+    {
+      "name": "TC 008-01",
+      "passed": true
+    },
+    {
+      "name": "AC 008-02",
+      "passed": true
+    },
+    {
+      "name": "TC 008-02",
+      "passed": true
+    },
+    {
+      "name": "AC 008-03",
+      "passed": true
+    },
+    {
+      "name": "TC 008-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LIMT-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 009-01",
+      "passed": true
+    },
+    {
+      "name": "TC 009-01",
+      "passed": true
+    },
+    {
+      "name": "AC 009-02",
+      "passed": true
+    },
+    {
+      "name": "TC 009-02",
+      "passed": true
+    },
+    {
+      "name": "AC 009-03",
+      "passed": true
+    },
+    {
+      "name": "TC 009-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-CONF-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 010-01",
+      "passed": true
+    },
+    {
+      "name": "TC 010-01",
+      "passed": true
+    },
+    {
+      "name": "AC 010-02",
+      "passed": true
+    },
+    {
+      "name": "TC 010-02",
+      "passed": true
+    },
+    {
+      "name": "AC 010-03",
+      "passed": true
+    },
+    {
+      "name": "TC 010-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-SAFE-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 011-01",
+      "passed": true
+    },
+    {
+      "name": "TC 011-01",
+      "passed": true
+    },
+    {
+      "name": "AC 011-02",
+      "passed": true
+    },
+    {
+      "name": "TC 011-02",
+      "passed": true
+    },
+    {
+      "name": "AC 011-03",
+      "passed": true
+    },
+    {
+      "name": "TC 011-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-MED-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 012-01",
+      "passed": true
+    },
+    {
+      "name": "TC 012-01",
+      "passed": true
+    },
+    {
+      "name": "AC 012-02",
+      "passed": true
+    },
+    {
+      "name": "TC 012-02",
+      "passed": true
+    },
+    {
+      "name": "AC 012-03",
+      "passed": true
+    },
+    {
+      "name": "TC 012-03",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 naming",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 SRS",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 UC",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 story",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 RTM",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 API",
+      "passed": true
+    },
+    {
+      "name": "FR-AIN-LOG-001 UI",
+      "passed": true
+    },
+    {
+      "name": "AC 013-01",
+      "passed": true
+    },
+    {
+      "name": "TC 013-01",
+      "passed": true
+    },
+    {
+      "name": "AC 013-02",
+      "passed": true
+    },
+    {
+      "name": "TC 013-02",
+      "passed": true
+    },
+    {
+      "name": "AC 013-03",
+      "passed": true
+    },
+    {
+      "name": "TC 013-03",
+      "passed": true
+    },
+    {
+      "name": "unique catalog IDs",
+      "passed": true
+    },
+    {
+      "name": "11 HTTP / 4 ports",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-001 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-002 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-003 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-004 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-005 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-006 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-007 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-008 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION FR",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-ADMISSION ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-010 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD FR",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-TOOL-GUARD ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY FR",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-SAFETY ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-400-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-404-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-409-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-409-02",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-422-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-429-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-013 ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-014 FR",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-014 ERR-AIN-401-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-014 ERR-AIN-403-01",
+      "passed": true
+    },
+    {
+      "name": "API-AIN-014 ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-HANDOFF FR",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-HANDOFF ERR-AIN-503-01",
+      "passed": true
+    },
+    {
+      "name": "PORT-AIN-HANDOFF ERR-AIN-500-01",
+      "passed": true
+    },
+    {
+      "name": "14 questions",
+      "passed": true
+    },
+    {
+      "name": "E9-Q01 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q01 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q02 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q02 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q03 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q03 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q04 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q04 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q05 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q05 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q06 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q06 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q07 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q07 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q08 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q08 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q09 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q09 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q10 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q10 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q11 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q11 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q12 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q12 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q13 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q13 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "E9-Q14 answer blank",
+      "passed": true
+    },
+    {
+      "name": "E9-Q14 blocked branch",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-001-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-001-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-001-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-002-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-002-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-002-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-003-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-003-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-003-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-004-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-004-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-004-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-005-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-005-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-005-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-006-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-006-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-006-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-007-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-007-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-007-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-008-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-008-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-008-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-009-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-009-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-009-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-010-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-010-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-010-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-011-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-011-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-011-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-012-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-012-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-012-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-013-01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-013-02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-013-03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S01 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S02 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S03 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S04 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S05 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S06 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S07 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S08 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S09 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S10 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S11 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S12 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "TC-AIN-S13 status/evidence",
+      "passed": true
+    },
+    {
+      "name": "verbatim | `R9`",
+      "passed": true
+    },
+    {
+      "name": "verbatim **Cổng G-Next**",
+      "passed": true
+    },
+    {
+      "name": "link api\\api-spec.md → endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link api\\api-spec.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link api\\data-mapping.md → ../../nen-tang/srs/schema.dbml",
+      "passed": true
+    },
+    {
+      "name": "link api\\data-mapping.md → ../../nen-tang/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → ../gia-phat/01-prd.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → ../agent-noi-bo/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → ../agent-noi-bo/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "link epic-spec.md → test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link html-wireframe\\agent-workbench.html → ../preview.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../OVERVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../project-dashboard.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → html-wireframe/agent-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../nen-tang/srs/schema.dbml",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../nen-tang/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../gia-phat/01-prd.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../agent-noi-bo/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../agent-noi-bo/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../thuc-don-dinh-luong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../dinh-duong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../dinh-duong/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../agent-noi-bo/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../agent-noi-bo/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../agent-noi-bo/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../chon-mon-order/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../chon-mon-order/review/contract-gap-register.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../website-cong-khai/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../website-cong-khai/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../nen-tang/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../nen-tang/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../nen-tang/srs/schema.dbml",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../cost/accounting/business-rules.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../cost/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../gia-phat/02-roadmap.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → preview.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-2.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-3.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/fixtures/synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/r9-acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ../gia-phat/02-roadmap.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → html-wireframe/agent-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/ui-user-flow-2.html",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → srs/diagrams/ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-001.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-002.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-003.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-004.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-005.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-006.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-007.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-008.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-009.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-010.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-011.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-012.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → usecases/UC-AIN-013.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link preview.html → userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../thuc-don-dinh-luong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../dinh-duong/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../dinh-duong/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../agent-noi-bo/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../agent-noi-bo/api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../agent-noi-bo/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../chon-mon-order/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../chon-mon-order/review/contract-gap-register.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../website-cong-khai/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../website-cong-khai/review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../nen-tang/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../nen-tang/srs/erd.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../nen-tang/srs/schema.dbml",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../cost/accounting/business-rules.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../cost/srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\dependencies.md → ../../gia-phat/02-roadmap.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../preview.html",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link review\\handoff.md → ../validation/report.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\data-dictionary.md → ../api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\data-dictionary.md → ../api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-1.html",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-2.html",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-3.html",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-1.html",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-2.html",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\index.html → ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\srs-states-1.html → srs-states-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\srs-states-2.html → srs-states-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\srs-states-3.html → srs-states-3.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\ui-user-flow-1.html → ui-user-flow-1.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\diagrams\\ui-user-flow-2.html → ui-user-flow-2.svg",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → states.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "link srs\\spec.md → ../test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\checklist.md → test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\checklist.md → system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\checklist.md → traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\checklist.md → r9-acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\checklist.md → evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\fixtures\\README.md → synthetic.json",
+      "passed": true
+    },
+    {
+      "name": "link test\\r9-acceptance.md → ../../gia-phat/02-roadmap.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\r9-acceptance.md → fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → ../usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → ../userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → ../api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → ../ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "link test\\traceability.md → system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link ui\\screens.md → ../html-wireframe/agent-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "link ui\\screens.md → user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-001.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-002.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-003.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-004.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-005.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-006.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-007.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-008.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-009.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-010.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-011.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-012.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\index.md → UC-AIN-013.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-001.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-001.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-001.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-002.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-002.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-002.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-003.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-003.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-003.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-004.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-004.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-004.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-005.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-005.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-005.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-006.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-006.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-006.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-007.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-007.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-007.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-008.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-008.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-008.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-009.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-009.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-009.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-010.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-010.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-010.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-011.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-011.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-011.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-012.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-012.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-012.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-013.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-013.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link usecases\\UC-AIN-013.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → structure-result.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → diagram-render-result.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ui-result.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/desktop-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/desktop-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/desktop-sheet-3.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/mobile-sheet-1.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/mobile-sheet-2.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → screenshots/mobile-sheet-3.png",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → protected-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → files-created.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../srs/spec.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../srs/error-matrix.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../srs/data-dictionary.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../usecases/index.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../userstories/backlog.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../userstories/acceptance-criteria.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../api/endpoint-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../html-wireframe/agent-workbench.html",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../ui/screens.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../ui/user-flow.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../preview.html",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../srs/diagrams/index.html",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/checklist.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/test-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/system-cases.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/traceability.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/r9-acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/evidence-protocol.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../test/fixtures/README.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../review/questions.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../review/handoff.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../../OVERVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../../project-dashboard.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../../gia-phat/review/progress-assessment.md",
+      "passed": true
+    },
+    {
+      "name": "link validation\\report.md → ../../gia-phat/review/next-session-prompt.md",
+      "passed": true
+    },
+    {
+      "name": "wireframe no network/storage",
+      "passed": true
+    },
+    {
+      "name": "required epic-spec.md",
+      "passed": true
+    },
+    {
+      "name": "required api/api-spec.md",
+      "passed": true
+    },
+    {
+      "name": "required api/data-mapping.md",
+      "passed": true
+    },
+    {
+      "name": "required srs/states.md",
+      "passed": true
+    },
+    {
+      "name": "required review/dependencies.md",
+      "passed": true
+    },
+    {
+      "name": "required test/r9-acceptance.md",
+      "passed": true
+    },
+    {
+      "name": "required preview.html",
+      "passed": true
+    },
+    {
+      "name": "required validation/report.md",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

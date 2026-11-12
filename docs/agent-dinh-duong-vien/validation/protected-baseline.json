@@ -1,0 +1,2505 @@
+{
+  "captured": "2026-11-12",
+  "dirs": [
+    "nen-tang",
+    "thuc-don-dinh-luong",
+    "cost",
+    "dinh-duong",
+    "agent-noi-bo",
+    "chon-mon-order",
+    "giao-nhan-doanh-thu",
+    "website-cong-khai"
+  ],
+  "files": [
+    {
+      "path": "docs/nen-tang/api/api-spec.md",
+      "sha256": "bd15cc5733c8082ab99b74454190bc0dc28aa84e46feb8b49806af204b218c11"
+    },
+    {
+      "path": "docs/nen-tang/api/endpoint-catalog.json",
+      "sha256": "5350b23a8d3c33618be14ba27583787a0991e47dc856961de6a6d56b6bd35a6d"
+    },
+    {
+      "path": "docs/nen-tang/epic-spec.md",
+      "sha256": "dcc9f3e18fb10ac4b2c5e4b1563a26c25540a01c909833c5a1f552f0b70565a9"
+    },
+    {
+      "path": "docs/nen-tang/gap-analysis.md",
+      "sha256": "83878fe119b909bf4ce1171744f3deca29e6d612f7a6a3551904f37194f0f517"
+    },
+    {
+      "path": "docs/nen-tang/html-wireframe/foundation-workbench.html",
+      "sha256": "7a0aef7cb537b55b55c49d77ef8b057fa04749e6c44012542346d06e0ffb0757"
+    },
+    {
+      "path": "docs/nen-tang/preview.html",
+      "sha256": "25045da2e03c8a283dbfc6269fa4a06ed7cf84b3ed67d6113cbf87755d104010"
+    },
+    {
+      "path": "docs/nen-tang/review/questions.md",
+      "sha256": "07b57984e4cdcde72887686fdd99d49be7142717abe1f43f8cfaf11749c1027b"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/index.html",
+      "sha256": "cd4c90ae71d3ae8730a0a68f4d01c5553848dbe12c55ff730a10fc5d06a270e4"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-1.html",
+      "sha256": "027e7fc17179b01f06a03cd0631ca28f45364d3da981bde3a19a864feb3baa8d"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-1.svg",
+      "sha256": "a4ac38e9d7cea5c62735ebcdd31053a6d74b98849f324feec9709f01651b04f2"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-2.html",
+      "sha256": "7929895fe717d8cf81bf47c21f0098d0e381317a70a1c12dbdff4b2c1b029806"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-2.svg",
+      "sha256": "b5225290d96f7605fe480b518846bf7e32d1f25427acac781120d77f4dea8770"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-3.html",
+      "sha256": "00745e5caebf05370b962355fd1d9fd47575f70d034571a4e7e82ca75dc3d71b"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-3.svg",
+      "sha256": "cd8e60da738bda290e6d1d654f98ba5cf2181ec521b571d71968b58954670a3d"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-4.html",
+      "sha256": "fabeaf65be9f559c4a687919b4a08a573a779a5da4f54b4838266b494ba0eac1"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-4.svg",
+      "sha256": "7276cc5292e1879754abd6c8e0c976bd777d669a6098bb60286c501b66dc4c8b"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-5.html",
+      "sha256": "0006a90fac882d53c307a073e39f27eeb7839384377809e24f8109867c79a2ca"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-5.svg",
+      "sha256": "d28583cdaddbd2a4f706ebfee890478cc306f51267a891683a94c56e0bfa4cc5"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-6.html",
+      "sha256": "7d11f95afff2d60d40deff7ae359f39a0455f7d50b8237629e4460ec2c352d71"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-6.svg",
+      "sha256": "a62376784943b7085ff3f624be902efb904608b05d31aa364ca5967d5e2d2c15"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-7.html",
+      "sha256": "0f83317b8f59e8041f5c5a0b3ff5058e17f1c2c24093deaf2230b94a33ea3ff6"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-erd-7.svg",
+      "sha256": "d76e43adcc743c9a232bd1727286b83615407c2efd708434394b1fefa14a83ff"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-flows-1.html",
+      "sha256": "30c20e2c10a0f65dc72de7754ac50f2306df967d11310d10e09f8f2b384aecf8"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-flows-1.svg",
+      "sha256": "6873f6c7c3fcc0a02d65dd8261376e037e8757db3a5838cb204fc979cc8bc809"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-spec-1.html",
+      "sha256": "090b126607732885dfaeb51863ddc84a30099c167f80a1e15da6b3e865cc8d4d"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-spec-1.svg",
+      "sha256": "ad8b96d57083f9b4f938ec44bf8fe603481eef49c5433fd8a81cd3bf19f050db"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-spec-2.html",
+      "sha256": "e995a6f3a855f2c2cee1db610c1a31bdbffcb1e96dd184ea72afbf3a52140a25"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-spec-2.svg",
+      "sha256": "b6fa59c612928fc2ccd094abec46c1db9d4e1671242ce5851950b730456dd7e6"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-states-1.html",
+      "sha256": "b2d771e2f820533a7e9c0bebd940d84d298d7ad7e9d35a3906474b0f6411e4b7"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-states-1.svg",
+      "sha256": "40c91b1a2521e5e4d8a53c5bbfaefcb2bf626bd558cc4ebd94078929e48ddce2"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "cbf16dc4a005178f584caa96a738199c5691c634e1ff9f27124376284ba60d34"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "408237b09d418198768778508c042f1ff7d9801236cc503e88943dbc6bae8426"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "d87568f50c5a296dd2671498765653090d606780c4eba129601ca7ac1e7c2001"
+    },
+    {
+      "path": "docs/nen-tang/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "0ffad01f6f1cea72c4c0460a944e7a184427f8b4ceaeea2183de276b4b30462c"
+    },
+    {
+      "path": "docs/nen-tang/srs/erd.md",
+      "sha256": "bbf8bd817c46f9914e10a6bfb8af5b8b64571bb954303a7a05af8a90b8f5613f"
+    },
+    {
+      "path": "docs/nen-tang/srs/flows.md",
+      "sha256": "4aa1360ab9effd5b04a8a8f9a5becb3d4e946d0051c803f5d07f81e2bfe71524"
+    },
+    {
+      "path": "docs/nen-tang/srs/schema.dbml",
+      "sha256": "485a6b5963418a9fe21ce7da5db8b1e54c413bfc4f12937b151257479f370386"
+    },
+    {
+      "path": "docs/nen-tang/srs/spec.md",
+      "sha256": "e5afac6d4d347e21baf157c1ccd9b642a2d24c67c5c3ee73e3ba2d808d1b1586"
+    },
+    {
+      "path": "docs/nen-tang/srs/states.md",
+      "sha256": "c14d054b2818a49eee6f0212fe6f3af8e2714290a96ea788f1f46264c1231b34"
+    },
+    {
+      "path": "docs/nen-tang/srs/usecase-diagram.md",
+      "sha256": "0b2a31b1bc1d5e6fddd3ef4cf860e1d7298a35b32b90c27792ca1e099bda2762"
+    },
+    {
+      "path": "docs/nen-tang/test/checklist.md",
+      "sha256": "05921ffe87d2a9fefc7029b0b4d50421df591f94aa68b04396f1fc64ea8570e9"
+    },
+    {
+      "path": "docs/nen-tang/test/test-cases.md",
+      "sha256": "d1ed7bf6b99ff9e3d5a39a52b57ee604dfe0cefadc269465d49b281d7eb70b5d"
+    },
+    {
+      "path": "docs/nen-tang/test/traceability.md",
+      "sha256": "a296139876557b65869841ab6b9a7f8d36b64b0a8ddca1d6a970164a1a0c5ba4"
+    },
+    {
+      "path": "docs/nen-tang/ui/user-flow.md",
+      "sha256": "c3de8568f409658e49d4adcae3f848e41e48cc44fc917d559b0768aa60b69157"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-001.md",
+      "sha256": "284b05600a123a64fb38020c097c751038063b8991542b7855b63e929944fd42"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-002.md",
+      "sha256": "3bfb436240fbdc7aa07907befc87d31bbfc7a71fc24b7644ac4d1e2e3aed8b74"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-003.md",
+      "sha256": "6a558a4832e24f14220d5220b76e844476cacccf49139ecf84ad2a8157a0e847"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-004.md",
+      "sha256": "663655ef3d96086c919546c74b967f811bed757a89fedb0140dd9bdca33234ef"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-005.md",
+      "sha256": "85d1200fc0c5d9be61e6a5ef1f16067b7ea01f3df661e6f773d75774d6cdd3af"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-006.md",
+      "sha256": "5917f138b9e7316bef94e3414201fe976496a88209259dc36ca3826a4ea2f5fc"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-007.md",
+      "sha256": "3a546d8f2ef44f400e3b5d664179b4a694a8201adb67fd825f3fae95c222d4f2"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-008.md",
+      "sha256": "bef749e2df13c0aa2c86997bdd07a74ddd032220dae887c6ce081c1829b82bb5"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-009.md",
+      "sha256": "01273e1a292f86b1f572aa370c41263cbed0f01d96e10cc5f13c0ae1a1ad54d3"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-010.md",
+      "sha256": "29402358fd26a4f937bdc98a0a8f33e2a33059d86f99600c1a365a39c22d959b"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-011.md",
+      "sha256": "144c384a0e9f9139dfa8f2a999de84d27c466339aaa7a3ef62ae9dca2c6329c6"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-012.md",
+      "sha256": "0d274913e31b28dc1864a5939cf2ffcb7841d51c217179032c0d580604680de3"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-013.md",
+      "sha256": "383cfc6143aaed1525a8e98925625216f7de4aa9fa2d6d996019ad55360ff849"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-014.md",
+      "sha256": "44c93f381b5a110767405bf4f7214e95cf8881a9303d040fb672b576cf872b9f"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-015.md",
+      "sha256": "d9348f865bc3d0e0adf47fea3bb462134e123f455537310051c2e7c359f3c3dc"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-016.md",
+      "sha256": "a8b1aa5b35c6f9bd767fb7f3070298fea2932f0014c0c01df50893b552e6570c"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-017.md",
+      "sha256": "c973ee103185e686644fd56687ca5e17b13c935483986486080fd163d816599a"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-018.md",
+      "sha256": "7d3ad3905e64e208ea051307aeb2ff4b0e8dae3d68c96fa866b68ce7fc98b02a"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-019.md",
+      "sha256": "82e7aa1431742b04a7096491a6a9df681ee0349320c043b8f6e601a04a71ba11"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-020.md",
+      "sha256": "a3e09024ceefb78a7e2f58bd5c2c651405a0a0d2d2381feb34527ee4e011b639"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-021.md",
+      "sha256": "450cf26d27aeacf2c96b441a10eb928a03b7feb8f6b8f1d208c9c28014195f12"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-022.md",
+      "sha256": "6d862fa598c8e30afb7c0a33acd2916fc2f476220940a906216a1c66e853d1a7"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-023.md",
+      "sha256": "2f0e402574da57e1267b355d3000411cce60e9004a47329b9ee33d9d68128029"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-024.md",
+      "sha256": "6ba9bb6b12355a94ad485243bb7725d1eb552f2447e579c07916178b01166029"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-025.md",
+      "sha256": "bd7b39882c5d5d7b16f5d9f86233af6f549a273bf9712e81a1ae6c3f59df9b64"
+    },
+    {
+      "path": "docs/nen-tang/usecases/UC-CORE-026.md",
+      "sha256": "6236cc7500c1baeabdc5cfeaa292c48c53a45e96dc89fc19ec05057c7c17c14b"
+    },
+    {
+      "path": "docs/nen-tang/userstories/acceptance-criteria.md",
+      "sha256": "6cb2b80cf58fdc401de0a3202ced50c5a060903ae908d7542edf126b36debdce"
+    },
+    {
+      "path": "docs/nen-tang/userstories/backlog.md",
+      "sha256": "f7e59c281908ab2295434f9933404d96556160c90e09e66bb23edf43c13f3d89"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/api/api-spec.md",
+      "sha256": "447e1c64ce90ecd3ca33985594d0cae564c03989df10354d2fe32b84135b2659"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/api/api-traceability.md",
+      "sha256": "a8a35ec13418ebd27e1e03077fbb2aaaf0ac60020e33bf55d5d87c0dd4cfba9f"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/api/endpoint-catalog.json",
+      "sha256": "9667c7bfc8a68ccfa9fdb17b3d4c0740cf80f77ff12188f29d8ca086c486a760"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/epic-spec.md",
+      "sha256": "9821901dc0d5db4f7f19e6975b6f7896b9ea982510db6d93c61e227b76b070ee"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/gap-analysis.md",
+      "sha256": "d2160f6bee1b03d608b761132c944b9e1375230db71f456aea218a8ff11d8b91"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/html-wireframe/chi-tiet-mon.html",
+      "sha256": "351fa2a84000fa602da5296f749cdcb8634f50281f7ef1879058f54e99402e2a"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/html-wireframe/cho-duyet.html",
+      "sha256": "fcc929aa041ecab588455ba1227e571c42233ff5a1f691897348fc03d47a13b2"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/html-wireframe/soan-thuc-don-tuan.html",
+      "sha256": "78f11b6451c6aa1f1f08204a4ef8acf09f934dce209cd343d1910d7757c191f1"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/preview.html",
+      "sha256": "b5c780224062b5582974cc31d71ca917307831a3602d02e5f9502b56547c6186"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/index.html",
+      "sha256": "2dcbb33c4fecff7f1e6680247a380279ccb6e5f2a088ea10a1ff45aed83e3103"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-erd-1.html",
+      "sha256": "dfb90e09a996c2d7a6f2037529a5594dcbdc017e8546c96d633c0ff6e44d0788"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-erd-1.svg",
+      "sha256": "16b88e5ad03eec00ce4074c227a84f8f019aaf6b917623f19954e0d8994b04a8"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-flows-1.html",
+      "sha256": "33bd6562089a1434665ec98663382d3e6eca826d74a2b242eb252f4a91ba1e1f"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-flows-1.svg",
+      "sha256": "07f42a0863002d5a1437dda2c65018c11c855c9fa878f303f179c28d8787bb7f"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-states-1.html",
+      "sha256": "5e412eecef82b175988062681e25257813c671fc638bc15d88036289ce9bfbe0"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-states-1.svg",
+      "sha256": "fd8d03b3ec527feba0dc7809a00e05bf831c97d437369992bf25be86f6f60be3"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "ee4e1098705ebd0a067912c653cb034f5cffa6d4fce21ec56f91d6069eab8c25"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "6ca32bff768a67870233bcc56420ed5891694ef4686389c58040585010c6ba64"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "66e06441d39750021fef71da5c59cc06201fdb509e5ef9b2135069ee01800e6f"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "5b7f616537eaed9abbe8837fb5fb341cc3222720c184cc9b8e7b17b74257c1d1"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-2.html",
+      "sha256": "0e85eba2edfddad703a27f8d4d27aa8e688e3051a7edb20d830e2855c05e2aa8"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-2.svg",
+      "sha256": "c13456cbafce6bca5b9745540c2a96870e99806025c59337f77d9484b45b8014"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-3.html",
+      "sha256": "d7c8bbeba9fbc83bbc67c862a4083953d680de33da4b8cd5006be2ae7094c985"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-3.svg",
+      "sha256": "1de0d04a6608bf02d32b031fdf9262123256f90f1a963c8e26f6d3efdf636841"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-4.html",
+      "sha256": "f980fdef4263c7ad6fc04d5e5368e6f36193903dd536bba06044868577da3268"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-4.svg",
+      "sha256": "d5210ba29651107097d0d56ee7d3792b239ee0a5d31bf0687b4f88a92129401c"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-5.html",
+      "sha256": "aedcddd1414328b975d015d8f5effd455a1778522cc7d8c5829d90ca0b752aee"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-5.svg",
+      "sha256": "f68bbdd5821c72ce4b12dc8dfc4ac1510a9187ba166a41b4fe68e06018db1259"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-6.html",
+      "sha256": "7a099fbf5a496f6e4086c5d8d237c118e681df541e415211cfba533f36d5be2a"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-6.svg",
+      "sha256": "b83d66011402e161253492f00bbeac6079e8e5942ffb0c2218a10c1cc52f3e9e"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-7.html",
+      "sha256": "c5c389d45641d33b254c95d8d2ee5599dc2e09a4990c713617105391a47a565a"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/diagrams/ui-user-flow-7.svg",
+      "sha256": "7f54f76b5a682136e4d9ec66db27d3aeebc1e70eb190409a60b586f67dc86cd7"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/erd.md",
+      "sha256": "29483208274e2f6b6a57e3d1f4492c631d69b7a3dffd3611038e5e94dec1f405"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/flows.md",
+      "sha256": "933722554e81311487ccb2e3f2d2e14b39ea683d11b0eac33c8150f783c9469b"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/spec.md",
+      "sha256": "fdd659830b02b2189a748664103aacc64fa03c818d7c75e915a73bd8e48224f4"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/states.md",
+      "sha256": "0618af851a28ece17166cd91289bd0c39579e6a73b757d0998e598aeb520bde8"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/srs/usecase-diagram.md",
+      "sha256": "546f47535fc8580c70b4fe0f0562c4beb9dfd64a1de0727198dfa2c03ae91e0e"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/test/checklist.md",
+      "sha256": "6793f036da39d8c5c208ec32137f9dea1b5ee086005fbb66ed52ad8a4a2db649"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/test/rule-test-cases.md",
+      "sha256": "9caa3e9dc3e1e10a04d3547bfbb270f5dc6fc46530581ab7c124eb30481ad2ba"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/test/test-cases.md",
+      "sha256": "aefa5286a4fc8d1b1a8bb291adad0d328e4b656ac2ae822125fc681447696753"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/test/traceability.md",
+      "sha256": "0ff384f93c9f0bf9d442dbc63488e67a8445fdef95f3e0e2dc4da5ea6f7c08f5"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/ui/user-flow.md",
+      "sha256": "7c5443db6eeffd7b3714b09e622021665953f6a6bc2759aae1114a1428258b59"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-001.md",
+      "sha256": "b9c565af53d9b1fec480cc994c93d4f3579e2aaca2ccc4feb1f5b493f6d33902"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-002.md",
+      "sha256": "c9f70e19c9bbb7e9b86eede31be194c540af29ad88432e024519a90a63ad135b"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-003.md",
+      "sha256": "2c3c9fba49e4a2cb31c8c73e5da54e432c166c5ebb1c89c2c47b2809b5245e06"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-004.md",
+      "sha256": "7e0557431a562472f2a50b6fbc4c21e0bb06b09c6367d3f905119047be9f2ba6"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-005.md",
+      "sha256": "367513aa5f739bb0417edfd01423f2f5fb15b057e0f94f7c5f5562468d45abbb"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-006.md",
+      "sha256": "858cadf9a5588dddd534076993c6bd277e12707986696152433b227785e80cf0"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-007.md",
+      "sha256": "9de00834ab861c95a8d8d8eddb22c6735eed8711477c025c469661382adfd008"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-008.md",
+      "sha256": "811d1c2c3748a809008ec34919dd02df094ab30f47fedbf861e6266f3a6798ca"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-009.md",
+      "sha256": "016d92e885ed436be68171cab48817828ba97ef0f88dcef7185023c398879917"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-010.md",
+      "sha256": "9871cc638b7764ef082057115857ffa3ef47725b0f9c6fdd10194cf4c0f15e9b"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-011.md",
+      "sha256": "cd6f58f454ac79f39556772d38f36b879cb52391273dd863164946390874c90c"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-012.md",
+      "sha256": "7679cf4c1cb07e73ed1a21e3c826fd8029f38e6d35062af4f5b013c131b286e7"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/usecases/UC-MENU-013.md",
+      "sha256": "56cf6111f4a62f7ff0dc5a36856b69b1f1f363d8858cc6df9c3d170a9e2a5d69"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/userstories/acceptance-criteria.md",
+      "sha256": "a355cdc2f6c817151a1b2198ec016420ac2d9bf21d9ecca61ba01bf35b6652e1"
+    },
+    {
+      "path": "docs/thuc-don-dinh-luong/userstories/backlog.md",
+      "sha256": "7c725aff4b231c2a1fbc6f8048d9a0715aad34fad7865fee007894da741452fb"
+    },
+    {
+      "path": "docs/cost/accounting/acceptance.md",
+      "sha256": "a0631dc421d77722a86e899990ebc084b7f76b2c4c06e38c727b999ca539fe1f"
+    },
+    {
+      "path": "docs/cost/accounting/business-rules.md",
+      "sha256": "662de3330b1cfaea9196052fd245c5ceb1412eb081cd79f1677cfd9cb9be5c76"
+    },
+    {
+      "path": "docs/cost/accounting/design-catalog.json",
+      "sha256": "af8cd0ca9ef53ca72e281e4e267f4eef2e86c5532bcf059af5d4529645ed82b9"
+    },
+    {
+      "path": "docs/cost/accounting/design-tests.md",
+      "sha256": "0bafe37fff617d9db2009ac65c585707c2e51678ff6f8e01487d664a3b46d0e3"
+    },
+    {
+      "path": "docs/cost/api/accounting-contract.md",
+      "sha256": "711c0588c8171893bfd9a9d832b2543e1e919806ae87e57c0662997f16a43dc3"
+    },
+    {
+      "path": "docs/cost/api/accounting-endpoints.json",
+      "sha256": "a2ff3567d1a01a5486f2aeabf595dcab55535fec4d320794f5360c39edc28777"
+    },
+    {
+      "path": "docs/cost/api/api-spec.md",
+      "sha256": "c339b7d6392e6d5992fc7e5636a0c84fc1c312b71e8e80648273faa277dcc8af"
+    },
+    {
+      "path": "docs/cost/api/endpoint-catalog.json",
+      "sha256": "56f9731b8d928067fce7ff2f933d629d47d7b58ab8267d1207ecce74a214700a"
+    },
+    {
+      "path": "docs/cost/cr/CR-COST-2026-001.md",
+      "sha256": "ebad8b258c5d8a5eb188c2bfae60e052ba8b5911e2c05993ecdf0174e4f8c330"
+    },
+    {
+      "path": "docs/cost/epic-spec.md",
+      "sha256": "3f004a5f23a6f9d048efa7f3b851042706b13051f2f0cf2fe8f18e40cff3bcef"
+    },
+    {
+      "path": "docs/cost/gap-analysis.md",
+      "sha256": "65766e49d5c6618d3a6c68b2515d6be9fd6a0629c5c7a5080f4c4b9778e8a5a5"
+    },
+    {
+      "path": "docs/cost/html-wireframe/accounting-workbench.html",
+      "sha256": "e09ab4e6f27ba53fc76da97686db38b04d7e2e606bb215340ae7a79bd9ab5456"
+    },
+    {
+      "path": "docs/cost/html-wireframe/cost-workbench.html",
+      "sha256": "f4d4d93d3defbed6c43fe12ec0b3b3af27f2337172819c1e9b16a98eba11b53d"
+    },
+    {
+      "path": "docs/cost/html-wireframe/README.md",
+      "sha256": "a58e37cef94c6945a77a0939fd74e981c71174fdb343e8b4e043db1d32a70a3d"
+    },
+    {
+      "path": "docs/cost/preview.html",
+      "sha256": "0d36ecbc7081a6a5f4f118f5ca18559d3e20218377b4aaab770e8fad66436c60"
+    },
+    {
+      "path": "docs/cost/review/accountant-input.md",
+      "sha256": "25cb47bffadcc5b0e1e0c734f90f1479e453db764f3d3267186e716489642cce"
+    },
+    {
+      "path": "docs/cost/review/blocked-tests.md",
+      "sha256": "4060e72bfc6ca47c56e5dee597d99de2ffa896f522041b89c4465a1304d61d95"
+    },
+    {
+      "path": "docs/cost/review/cost-branch-decisions.md",
+      "sha256": "1937b895a2e1709ee0cc1f537793df8e340312b65cb8fed37b93fa2301a5b837"
+    },
+    {
+      "path": "docs/cost/review/decision-register.json",
+      "sha256": "2b74c461576efe513350444a19f03aba1a6742fd78cabcd472db7dc954583b39"
+    },
+    {
+      "path": "docs/cost/review/decision-register.md",
+      "sha256": "7eff06386909db9ca30ffe98c3156ca42e6b5d606b5f61a8a19ad12bd8a4e769"
+    },
+    {
+      "path": "docs/cost/review/handoff.md",
+      "sha256": "29b5813b519a58ce89fea6739ea8de562db9f4e56fa5aa77f58747afe9ea8695"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/index.html",
+      "sha256": "08c7cea3736789608bd67f61436451b1fdc167cff6288a4420c6de561ae51518"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-flows-1.html",
+      "sha256": "8cac3019579cc64ea3eeff843ec277a90fc5ab72bd27c5de91091971e191670c"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-flows-1.svg",
+      "sha256": "0065aeeb9f785d46d5d2ad42047f844cb3d737894bbf473e9c5525c3f9a4298f"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-states-1.html",
+      "sha256": "1efb62ade8047f6e98816684f016ca03a4421b038327bf7d493108ddf568d8fb"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-states-1.svg",
+      "sha256": "56ec2868726ceedf81a83ac0f05a3098e10b08a4849465c2ba5eaa99bb932544"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "12ce2f29553808d0b1df4ac297c32d1d0f11ed8958962cc15fbcb92219f5e046"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "83f1f9fcbfbe6fa0b119dbd62cc3d9920afdf4a5d9399affb43b019532d447e2"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-2.html",
+      "sha256": "96bb5567aa53996f457ce72493b5c4061a18c89f8fa959cc609278bb040c28d2"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-2.svg",
+      "sha256": "e3b6aba405497b8b4ecd8a530088d793b7e4ad682ba33fcf8041d2d98bde4546"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-3.html",
+      "sha256": "d868f4105639178a3152bae7492c584a032b2851e264e688b491c4b753751325"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/srs-usecase-diagram-3.svg",
+      "sha256": "fcf5dcca7d48c7f03839dd9797f6cde33eac7d628365976892a4718301f1d162"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "d7593704276f46acca408cc85bfcee2a9d8ec9975c7a4555a9bdda17c96e1d26"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "1f308641a30b739ab39ed86e151405f106920e5376e29e24a82aa03e862e97fa"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-2.html",
+      "sha256": "34298d7d7170a2c8e7fd8bf20b5e6e9527694228541919b93c492ce5e20f7df1"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-2.svg",
+      "sha256": "1704c407de6ed5fd565e06d18926d1776cc4887d6ad28ae27695d0c985cdb740"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-3.html",
+      "sha256": "318565edbdf400bc08905d5f1e9f385bbd442236d0341fb25e8ced11750ae5a0"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-3.svg",
+      "sha256": "023cd39df23ca3af3fa20d60bad02d991c458a1969a1bc304e0f169f18bd2c10"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-4.html",
+      "sha256": "0ec11c4e233a6c1050c724b94eda5f164fc4744317a020c1218a8eeaad60702c"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-4.svg",
+      "sha256": "0143f6dbc5e010205a14378c40791332c65103328dab0729a90ff09ce8f9d358"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-5.html",
+      "sha256": "bcfb1879b0435a2330d235243fb552e3af68e8f370d1c2cfbcb13c5f1044ea75"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-5.svg",
+      "sha256": "34b83dcc753b97e209dde0d54b90674f90dd6fbedbe31b8c989507751f87a591"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-6.html",
+      "sha256": "c0a12ba54277c66389a2fc4d0a2b4df94c21cff5d2705236bf50bd167e7e3490"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-6.svg",
+      "sha256": "fdf3206224d2587f17040dcc4343603ac4636d18cdf36c904e33b8a721e84c76"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-7.html",
+      "sha256": "7a7a2629b035f2a2b132d46b87f64a03ff8b8eb15190c5fbb732aad75e36f089"
+    },
+    {
+      "path": "docs/cost/srs/diagrams/ui-user-flow-7.svg",
+      "sha256": "8a1de374bf3e7c3ecc9dd5419fe882123b0a52633af059596e0beeecbb511988"
+    },
+    {
+      "path": "docs/cost/srs/erd.md",
+      "sha256": "bb449695eeff641419cd7f1fbcad1de86839e618266a90761e18355fd64471ff"
+    },
+    {
+      "path": "docs/cost/srs/flows.md",
+      "sha256": "52b91021664570d5758f63f9c8b78104dfd504b13509cb80c372a6ad9b361bb4"
+    },
+    {
+      "path": "docs/cost/srs/spec.md",
+      "sha256": "62db42f7d129cbf1d94cae60a2b796056ab7f053f5082499eaef7f79ea75fb54"
+    },
+    {
+      "path": "docs/cost/srs/states.md",
+      "sha256": "9bbf5e4d6e2538ef34f3318ac3ecc2ea4278306ce73600af75fb3bc51be8b8b5"
+    },
+    {
+      "path": "docs/cost/srs/usecase-diagram.md",
+      "sha256": "02333bc480aada57dc4f77c9aff2084ff7a99d6572acb429c136c0ac9b94cf7a"
+    },
+    {
+      "path": "docs/cost/test/checklist.md",
+      "sha256": "2cf93b3b5349d354ec4ce592da1dc97bf174b23ab94b9805a9c7ce35f2490706"
+    },
+    {
+      "path": "docs/cost/test/fixtures/README.md",
+      "sha256": "04efb0bc7808c3c9a825fe83133fd62a4b1a07ebdb63e319003a1a5dbc485af3"
+    },
+    {
+      "path": "docs/cost/test/fixtures/synthetic-cost.json",
+      "sha256": "ba03b0fac36981c1f91bb4cfddeb848a850a517fc9f7927bf3103c32a71863ac"
+    },
+    {
+      "path": "docs/cost/test/scenario-catalog.json",
+      "sha256": "9affc1256712ce55666856ad37d9ada5661c4163d935b01fa360d8bcfd3624aa"
+    },
+    {
+      "path": "docs/cost/test/test-cases.md",
+      "sha256": "e468869e381734f5de9e2cbfaeeb68807f4061f174d37fa8f2f9ba2b5798d085"
+    },
+    {
+      "path": "docs/cost/test/traceability.md",
+      "sha256": "ff7d8710e61ebe0bfe729a158adf176824039762b7a047d73c4b12b07785598c"
+    },
+    {
+      "path": "docs/cost/ui/user-flow.md",
+      "sha256": "189df6529a30e985242b7d3fa535b3723ba8654c42b0e54b6d962437b219dd11"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-001.md",
+      "sha256": "a0218afff50757a9ffc1bf17c95fc6b683e9de8f064158a8f59f431c1d5ea088"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-002.md",
+      "sha256": "d2cc10d7cf4d72b4bcb8d9e752ea51b2745f93b564960b1793ca36b1c57ae0d9"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-003.md",
+      "sha256": "58af657271ab37f614209f3ccc864745fb6bfe270e2ec2cdbf3cf336ea8f8cd1"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-004.md",
+      "sha256": "b0dce8e1095d6685176061bd0d094a76d7497edb950a6dc0df063ced0cef6958"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-005.md",
+      "sha256": "1a6c015a19753963ce7582e4f556fe213f629a3e2e2494fd6e00e728dff0c2ff"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-006.md",
+      "sha256": "20337889ecafbd51b311fa74b2128c39bcc3ede626bee76b6b7228778adcbbda"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-007.md",
+      "sha256": "2593cbba17cb7ae63384bc4a401a95dcf8382c6db7253e862713bff5e52da0f0"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-008.md",
+      "sha256": "da670cae70cb6f8ffafacac0c4ac039fc634f922c657b66af00a143c39635839"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-009.md",
+      "sha256": "e5f13c2b90968bf1cbda2b4afb4d1326d3ab1197e3e308dfe10a61e34d205eae"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-010.md",
+      "sha256": "20fc5c520ebb299742fa292c3922f5f044d95857fb0e55e7c0ec54da5a1d3d7c"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-011.md",
+      "sha256": "9a2f36e5333c072d5e48847ccd0389fcad86727f15875ebdcdff0fefea1a0b8f"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-012.md",
+      "sha256": "38ad162812cfb1c6f3c4258c7e4304fe89bbeb701d2662007f428dc088d0b305"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-013.md",
+      "sha256": "7aeb8aa4dbfc65478b0e5e91c069d08be8f52babbec9c25dd664ec2044e8ef29"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-014.md",
+      "sha256": "a7eb607304b619fc6de155b8bc8258308c8b440ea7fe7242c2c4af46817325ae"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-015.md",
+      "sha256": "86a48d5d1458a8d7fd9db78f50c8ebc69aee425380dc5b350adda9ea1a5c262c"
+    },
+    {
+      "path": "docs/cost/usecases/UC-COST-016.md",
+      "sha256": "e3c7287b2b60745c9767e5eac3e30b5d040aed1834d7ab7b276b3715d5354a47"
+    },
+    {
+      "path": "docs/cost/user-guide.md",
+      "sha256": "2a33ed4b2036c99eee735c09421f56fc4063354aec7e8aa7abb7eaf2b8b32ca8"
+    },
+    {
+      "path": "docs/cost/userstories/acceptance-criteria.md",
+      "sha256": "e2d7ca6491dd1eae99ccee73ce9c7d9edf06d2b1e895a72a0d68c635538316cc"
+    },
+    {
+      "path": "docs/cost/userstories/accounting-backlog.md",
+      "sha256": "3ed7f4510322e9cadb4862a14fe1f42902339b31e7d1e1e33529ac05fb2ea6fd"
+    },
+    {
+      "path": "docs/cost/userstories/backlog.md",
+      "sha256": "2ce60726b9ecfe7d19282e86fb83569dac728f2872b449974fe6adb60c8a3898"
+    },
+    {
+      "path": "docs/cost/validation/accounting-design-report.md",
+      "sha256": "acae811b806706e382b975b2f65aab5578538127ccd80c8a7bac3bdac80eebdd"
+    },
+    {
+      "path": "docs/cost/validation/accounting-desktop.png",
+      "sha256": "25d23e80b991ffc492e820ff141637de1b7ab11ac2e69232185fcf522e4d1375"
+    },
+    {
+      "path": "docs/cost/validation/accounting-mobile.png",
+      "sha256": "05cfd125eb83b3785b7ce3f90dec7b42d44b5b8e65b22e9e786184e0354b4894"
+    },
+    {
+      "path": "docs/cost/validation/api-wireframe-report.md",
+      "sha256": "04095f5b11c193139e1b18cb46243d5d651c9413c6fff07cf286226229ba482a"
+    },
+    {
+      "path": "docs/cost/validation/backlog-report.md",
+      "sha256": "7b86d1273336036a8e9b12e8ec15fe0b762e601128b37d1f96d083e7b68d7823"
+    },
+    {
+      "path": "docs/cost/validation/build-accounting-backlog.py",
+      "sha256": "40c86a3e2504ffe859867d663a27a6ebca2958e8710c9eaa275c3675b0ac53ac"
+    },
+    {
+      "path": "docs/cost/validation/build-backlog.py",
+      "sha256": "29773586ebbb98a1fec340974523a1b9c34ebb5bf04b6efd10c6b8222c193b6e"
+    },
+    {
+      "path": "docs/cost/validation/check-accounting-design.cjs",
+      "sha256": "0de9a9ce81b9956e643c36ba91026509d9ffbe4bb8eb6e395ba9f075a8e5fb6d"
+    },
+    {
+      "path": "docs/cost/validation/check-accounting.py",
+      "sha256": "a1a69ebdc3f58cd77fd49b05ec5d363bcee00a286a225040a6e714eb2dcebff0"
+    },
+    {
+      "path": "docs/cost/validation/check-api-wireframe.cjs",
+      "sha256": "cd7143fa08fc1fef4199bd9e5d4a3516b08ec74321f2fbf5be39321cdfd91b29"
+    },
+    {
+      "path": "docs/cost/validation/check-backlog.py",
+      "sha256": "192951173487d509789a2ace065855ed16df22f1c001e3ba8b6492e25fffaeaa"
+    },
+    {
+      "path": "docs/cost/validation/check-diagrams.cjs",
+      "sha256": "5057420ce88dfafbf90890f0c0f43d800dd4296abf052441f92fac7560b33b40"
+    },
+    {
+      "path": "docs/cost/validation/check-reconciliation.py",
+      "sha256": "931f5e188527643788c915ca18827389d58d151cee50271b2c871f0e4d6824da"
+    },
+    {
+      "path": "docs/cost/validation/check-usecases.py",
+      "sha256": "86a927b8fee9ffb4563c5cbb2602839cd319599856289b92c7c0167805c9e679"
+    },
+    {
+      "path": "docs/cost/validation/check.cjs",
+      "sha256": "c755e31eb24d24d592186bfb31b2bbe27f44f13a772aad2dd6682c8ef1378e7d"
+    },
+    {
+      "path": "docs/cost/validation/cost-desktop.png",
+      "sha256": "819879a8983c5fc1657ca52f38b1bf8c23171069d2bb4cbf820054e6d30f5eeb"
+    },
+    {
+      "path": "docs/cost/validation/cost-mobile.png",
+      "sha256": "eb3ea4c19ff571f8ca8a65fed286ad86113aeaa7cc34d9f85ca5f64a9bdab4fd"
+    },
+    {
+      "path": "docs/cost/validation/prepare-review.py",
+      "sha256": "8df3a55531c8ac6f3c6523a99cf3cb44109a3fddcc5034eda24337b7fcfd9305"
+    },
+    {
+      "path": "docs/cost/validation/report.md",
+      "sha256": "342dbf15d9c013d7e94bbe72a1cc3169e457da0a7f8b831bfa223604db08e24f"
+    },
+    {
+      "path": "docs/cost/validation/sync-accounting-design.py",
+      "sha256": "836fd0a8556e6efb51562c76c41257ebc191253c4d7f065d98abb47ad8ac866e"
+    },
+    {
+      "path": "docs/cost/validation/usecase-report.md",
+      "sha256": "9cc5884b3db3a4dbfd6edf909f2623250b37a92c22801470475803829c1af902"
+    },
+    {
+      "path": "docs/dinh-duong/api/api-spec.md",
+      "sha256": "6fa975c81838fd24aa4fcba2c05a95f827b7c48bd2bc71f5c88e48df1ad6a05c"
+    },
+    {
+      "path": "docs/dinh-duong/api/endpoint-catalog.json",
+      "sha256": "423c76d47b3de2ee27a4e18a637b47069fceb95ee724be1f665731203cce43eb"
+    },
+    {
+      "path": "docs/dinh-duong/epic-spec.md",
+      "sha256": "e204752cd50dbc826730301dcb6413eca6bd24a1fa833300e48a5e12102f2be2"
+    },
+    {
+      "path": "docs/dinh-duong/gap-analysis.md",
+      "sha256": "2e3d9e2c014d1f138f0a4803b2d8ad427cb348f5c7c87faf82146af74d00b59e"
+    },
+    {
+      "path": "docs/dinh-duong/html-wireframe/nutrition-workbench.html",
+      "sha256": "dc8384d1730c6cd38ed78c2bbc858f8df4f90e3f10b7306c49534682e03a3be8"
+    },
+    {
+      "path": "docs/dinh-duong/preview.html",
+      "sha256": "92e75cea8161976d7931cc5738fb1ca2a3d476917f9291e9f61a7c885523be77"
+    },
+    {
+      "path": "docs/dinh-duong/review/questions.md",
+      "sha256": "54b94760f01e296f725dc0f1830bfa0b6ce30eb36aa064da22e0abec5f32cc70"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/index.html",
+      "sha256": "c0a00303cb2ad58509e72b5a93223f5c53fc1c8488163c55ece67363ccc2ed3e"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-erd-1.html",
+      "sha256": "7fee23dd562fc7429e4a91b721e0e5e37cd2693360caf3090742f3e6829af893"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-erd-1.svg",
+      "sha256": "caad519e7fd0dcdd4d8ee80144d2abff881d1abe4f9970e1fafe65afba063e86"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-flows-1.html",
+      "sha256": "33820055b470d860ea8d41a58aeaf4bb252e6f4fe05886c68a05e68d9799d8f0"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-flows-1.svg",
+      "sha256": "fd41a2a543105f6594e18806bfd4a2887bc8a08039c7597e2fefa42552e03e8a"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-states-1.html",
+      "sha256": "c05b222c4bed7701ccfe5b3a22acb1310f48acf6adc310a1a1ed108e290e4fd1"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-states-1.svg",
+      "sha256": "3c27021a933e84dbad3f73bacccd551ffa4e98c92ec5d71e2a3837731dc7bc1c"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "92f7f60666956eb4cf4b5e577cef7f03c985dda024dbb40c7fe64af2b65185b0"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "9283fc33f8ff5352dec820d462c3ca59c448233b28df0ef20eba06460c0b9341"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "84036075e49caa5316ca8a48cc40ccc2f5c3dd4a9c9f32efbc59d5e4d0e1c39a"
+    },
+    {
+      "path": "docs/dinh-duong/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "4c1c16cdaa59ae57016c27038303332d1a03987e9fd82b92b48bec1a40ec1ada"
+    },
+    {
+      "path": "docs/dinh-duong/srs/erd.md",
+      "sha256": "25d66d699451b8632cc0b91985360a157ff61f6daa1af35a8bfcf96f518ab7b0"
+    },
+    {
+      "path": "docs/dinh-duong/srs/flows.md",
+      "sha256": "c41c16fd69fbbc9475046962ab8154db88084266b527adec9fe0d4042f831272"
+    },
+    {
+      "path": "docs/dinh-duong/srs/spec.md",
+      "sha256": "44409b21bdaf3ced0a4c35e084ba3d5c5c13625b631d1ef9fd295f5a08819d6d"
+    },
+    {
+      "path": "docs/dinh-duong/srs/states.md",
+      "sha256": "dccdc8be0e78872eb661aa7d97f20f23217e0dd86b289cc64bc8ba648cc0d21d"
+    },
+    {
+      "path": "docs/dinh-duong/srs/usecase-diagram.md",
+      "sha256": "a7ea3166568d5147f0c36250ee7af23c3beb7ad23cd13a53431faca6976d7987"
+    },
+    {
+      "path": "docs/dinh-duong/test/checklist.md",
+      "sha256": "5e332a8aa8b7ca8c89372b6b15b6e4180a91a43f72b0a8b8a6a78246d4d6a395"
+    },
+    {
+      "path": "docs/dinh-duong/test/test-cases.md",
+      "sha256": "1aef0179fc4b41ecc7f83901013f9719cbd2407b70bb486d13c9c8611a82cf97"
+    },
+    {
+      "path": "docs/dinh-duong/test/traceability.md",
+      "sha256": "d7c5461df2727cbceb9e18dbf03f4c3dbcee019c84e699d1ea6fd316b390ddc3"
+    },
+    {
+      "path": "docs/dinh-duong/ui/user-flow.md",
+      "sha256": "54a56f09673e88eb532fad7a2f6b9c749f4b865d46b83a2fdc8afbc3a9e7a9a1"
+    },
+    {
+      "path": "docs/dinh-duong/ui/wireframe-ascii.md",
+      "sha256": "65e29623cf26715ad722f849ec90d4d3af78183feaae74b4475ad154d0444045"
+    },
+    {
+      "path": "docs/dinh-duong/usecases/UC-NUTR-001.md",
+      "sha256": "f1718108fc4c31318dfea816c5b3b20d343a3d59501a0cebdb05c2433470b5c6"
+    },
+    {
+      "path": "docs/dinh-duong/usecases/UC-NUTR-002.md",
+      "sha256": "41039ed7c07f44f0001aa62af7267e1de4643ee7da6a26a80ca63c0122ed008d"
+    },
+    {
+      "path": "docs/dinh-duong/usecases/UC-NUTR-003.md",
+      "sha256": "c4710a1e05c844cae651c7711449fa901249980c566785c0475ca69aa60e8276"
+    },
+    {
+      "path": "docs/dinh-duong/usecases/UC-NUTR-004.md",
+      "sha256": "d41f8690cd116c32c4303dd7efd185864434afe989efccf75977e4edb85ac7da"
+    },
+    {
+      "path": "docs/dinh-duong/usecases/UC-NUTR-005.md",
+      "sha256": "31a24c12e2c9c5cc29276c86498df25cdc23552227d19d6b99b94eb72139305e"
+    },
+    {
+      "path": "docs/dinh-duong/userstories/acceptance-criteria.md",
+      "sha256": "131c995eb199680723098d7975e667f706c02f6b0d0b7625c6190edc8cb8a509"
+    },
+    {
+      "path": "docs/dinh-duong/userstories/backlog.md",
+      "sha256": "b53d691c4f36dcf2e1cebbb17c1b2c02401857e5b12d725f60b20222ad8f21cc"
+    },
+    {
+      "path": "docs/agent-noi-bo/api/api-spec.md",
+      "sha256": "597a484a75641b2eb0551d7694230ec9e78077eeb3f83062236496b85b63371a"
+    },
+    {
+      "path": "docs/agent-noi-bo/api/endpoint-catalog.json",
+      "sha256": "159a3932a0af7830d2a73f56f323cea757e1166c0021b7e0e4f264b3fec972a5"
+    },
+    {
+      "path": "docs/agent-noi-bo/epic-spec.md",
+      "sha256": "3ceb462d5a6213b0e0702498348af9b7fee1b270cd8a91aecf95fb288d2afc0a"
+    },
+    {
+      "path": "docs/agent-noi-bo/gap-analysis.md",
+      "sha256": "87fd7692525045bb28d5dbc02a4e19d26d398ab9eb6928c750eb1f3a7a4467f8"
+    },
+    {
+      "path": "docs/agent-noi-bo/html-wireframe/agent-workbench.html",
+      "sha256": "f6cbd8c147463b46d4e805ee782c5f45c2fd1bd2efc5955010bad2ec8b46e3a5"
+    },
+    {
+      "path": "docs/agent-noi-bo/preview.html",
+      "sha256": "69525d9b40eb2a2dc8b8b8932c8f4067a2e3603eecdd0c65c9b4c922da55fc7f"
+    },
+    {
+      "path": "docs/agent-noi-bo/review/questions.md",
+      "sha256": "072dde43a8dd5f199c9ff0c19d0acfa351d347e899075f5c299fac06ecbfd036"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/index.html",
+      "sha256": "530531e2d6639f9c66693d893bcfdbdda41f5df7a2e710e2848405658ecec71f"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-erd-1.html",
+      "sha256": "f5f32f9a4347bfe79050da1c44b5d91cb9a05832185db4bc4f90ffd4d16d46c6"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-erd-1.svg",
+      "sha256": "e9a88b21a0121055ca9c3dea776ad4c7cae130734489e6507848202cf7d78007"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-flows-1.html",
+      "sha256": "5d4533fb2b5c2e808584eb70676d01c71dcbb7ec9bf4a35fd191bf1b05e57d44"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-flows-1.svg",
+      "sha256": "e9be87cb363436d4c30b593cc6b61c7bdd947d595ff0f02ad09fa49b6ab60790"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-states-1.html",
+      "sha256": "91218f6cdd42db54fb1c4026b2bb96394033054e8294065bd086486ad88e4e76"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-states-1.svg",
+      "sha256": "9594dfde16357fcd3a145e4afaa73b93f16a5ca1c4cb1c7d0c05eec5f0cbbf5f"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "32c788dc13feaa397d851d233d8b4e875adc3e44cb1a778742cb4484ba036490"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "5ad6bd8d9549281d3f4f406880cd0f662d41d10ab6cfceb88be17e3db728c52c"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "8b709e9bc08c08d3fbbf8d19a307f007fb541c4309a86c6e904f59539764baf7"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "8271a21877e4f3ec9bb5cc1fee9684d524e0dbb64f8e8153b511c8ddb2b99298"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/erd.md",
+      "sha256": "56f8124f334264aea331855d718b10e5f29622093443371fc5062a972dfdaf61"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/flows.md",
+      "sha256": "2a582140b2e3a4e7c208ec9a25faadc1c74f85244aa5ced76085bcdf09b83047"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/spec.md",
+      "sha256": "e694bc17d2bec4c30725fa4df036741b1f9529077b8fc80121e46a23fb22983d"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/states.md",
+      "sha256": "aa19e1a906549a22fb00bbf58be0852d8e178690721c7c69ecc1953ed5407629"
+    },
+    {
+      "path": "docs/agent-noi-bo/srs/usecase-diagram.md",
+      "sha256": "35f566561708d3ecbe62dcb26c1e3de9e4d14f7e78a01c24d097c7de3a81b008"
+    },
+    {
+      "path": "docs/agent-noi-bo/test/checklist.md",
+      "sha256": "2ace9f309edc6b24ee53e35cb135ae0bcc2f34523bd735c21e1d1510fa913f74"
+    },
+    {
+      "path": "docs/agent-noi-bo/test/test-cases.md",
+      "sha256": "7fbb508204789844710fe91e634639b60e6173d279b0d0329fe06eead1a0e015"
+    },
+    {
+      "path": "docs/agent-noi-bo/test/traceability.md",
+      "sha256": "6752653983f262bccfb6d34178485c37871e92bb3450c25eda2f25795859d4c3"
+    },
+    {
+      "path": "docs/agent-noi-bo/ui/user-flow.md",
+      "sha256": "7eb04bc82c5aba5ee7890f924db04218b9c4b58aa614c264d8058d02b6c5db96"
+    },
+    {
+      "path": "docs/agent-noi-bo/ui/wireframe-ascii.md",
+      "sha256": "43269d13f0ee0aa897846ca93fcf65df7df2e241a3d27b4322b8e1a86c86e3bd"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-001.md",
+      "sha256": "f6eb9914f99a8952c88401520eeacb97d35fdff7b8d091a2a08da1d92ca8b3dc"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-002.md",
+      "sha256": "48c05db1a63366a6ead152d082169b660b9bbf91794c58fc15c9f618d7342334"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-003.md",
+      "sha256": "40918d02f6ff6da0968b65c0fcdc2d8e349b69095a4c3d4d9dbabc1182e96688"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-004.md",
+      "sha256": "fd25c5c9aebf8fec6adadb81cf55289441cae585b7783d246383d3ce62b48024"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-005.md",
+      "sha256": "4ae38cdfe27440466b0b4db14d601bd6e1e05e38bc0737c6b0105ef266c8b4d2"
+    },
+    {
+      "path": "docs/agent-noi-bo/usecases/UC-AIO-006.md",
+      "sha256": "6ef366a82377ce2752ef0ffce07f9a1d238761c59be2cb2d99c2501d7d682865"
+    },
+    {
+      "path": "docs/agent-noi-bo/userstories/acceptance-criteria.md",
+      "sha256": "a0b5dcfdb3bdf2ea1a9281c979dcf3b90a958ab3a930c77f1d0d71653902a78e"
+    },
+    {
+      "path": "docs/agent-noi-bo/userstories/backlog.md",
+      "sha256": "d75707e3d6b2c52d7fcc65437b1a42ff426f6252ba45e51265db06cbe9158607"
+    },
+    {
+      "path": "docs/chon-mon-order/api/adapter-contract-review.md",
+      "sha256": "6c2adbb2788270bd249a0466c48a6a2339550ef514850c00d69deaa9b80380c8"
+    },
+    {
+      "path": "docs/chon-mon-order/api/api-spec.md",
+      "sha256": "49a7a659765db32030709112b4230961f492896f9540ab1e4c0a7282e74cb6d4"
+    },
+    {
+      "path": "docs/chon-mon-order/api/data-mapping.md",
+      "sha256": "6dabadb63e3f1743248fde83008919821d4ab1c9bb41c8e9628695dde7094ea1"
+    },
+    {
+      "path": "docs/chon-mon-order/api/delta-contract-review.md",
+      "sha256": "37b749d44717a87e5ee32d289608de87a80cde8ea1920052ba3f34cf2c7a52e9"
+    },
+    {
+      "path": "docs/chon-mon-order/api/dto-presence-review.md",
+      "sha256": "6d2fbff9d9ca1be3b3cc6afb8c94564a49e9e07df796a45d8dc8dae51ea84f9c"
+    },
+    {
+      "path": "docs/chon-mon-order/api/endpoint-catalog.json",
+      "sha256": "106bf1cff23fecca7a5e25639c6be1a1b4c84a0db73ae5fdf34ec460561f6f7a"
+    },
+    {
+      "path": "docs/chon-mon-order/api/route-validation-review.md",
+      "sha256": "4137426c980d5c9a7aaed9b058c3005b6c528c6d507cfc40c1576d64485ba582"
+    },
+    {
+      "path": "docs/chon-mon-order/epic-spec.md",
+      "sha256": "563604eeed10310ed686f0853a6ff4ad45a9211cb9b244f046e3249df903adae"
+    },
+    {
+      "path": "docs/chon-mon-order/gap-analysis.md",
+      "sha256": "1a29000f8c64b4a793c53b386e02603e521b19b5cd0b6b68ae07b1af0ec6a74b"
+    },
+    {
+      "path": "docs/chon-mon-order/html-wireframe/order-workbench.html",
+      "sha256": "4b8d05bf6ee0f77102076a8c52aaad1f69452d37e2842b513142f21c12d9a980"
+    },
+    {
+      "path": "docs/chon-mon-order/preview.html",
+      "sha256": "ac4d768b1b751e21bedd82bef883d9816c2c4f00747c0c238ce75788527c3b29"
+    },
+    {
+      "path": "docs/chon-mon-order/review/adapter-handoff.md",
+      "sha256": "5ca278c2877217bdba6a6ba5f7dd24af9f7b86ea63da0fc3f3ad492e101e2449"
+    },
+    {
+      "path": "docs/chon-mon-order/review/contract-gap-register.md",
+      "sha256": "d7fd5ac64795b009512c2a22bcb4d66311fb919a14aefaad5bc13d4d2e466d44"
+    },
+    {
+      "path": "docs/chon-mon-order/review/contract-handoff.md",
+      "sha256": "7e13fb82a9eee251dfebacfeaca984d619a54b388d51df24491df9df3dd64436"
+    },
+    {
+      "path": "docs/chon-mon-order/review/decision-findings.md",
+      "sha256": "6942e10e7b4f56bcba7166355e30c77bac0f33f184d3371d7c78027b558ba8e9"
+    },
+    {
+      "path": "docs/chon-mon-order/review/decision-review.md",
+      "sha256": "4773f17f6ba8261d0d2ea6a1575c51fc85b5b714441b2fb164ab362357c7195e"
+    },
+    {
+      "path": "docs/chon-mon-order/review/dependencies.md",
+      "sha256": "48fba27cca80773f092efeddbafbd39620de3fecf0051d9dc9e7c25169c12e59"
+    },
+    {
+      "path": "docs/chon-mon-order/review/dto-handoff.md",
+      "sha256": "fa0fd3d02bc5b495f3a1f8cb15473cd707c6da8c2453650e9094bbaf20d876b6"
+    },
+    {
+      "path": "docs/chon-mon-order/review/handoff.md",
+      "sha256": "9143627dc6ebfbcba7f44a5744c09a0a57ca55ed0ca28cb7d5c177365d601e24"
+    },
+    {
+      "path": "docs/chon-mon-order/review/independent-handoff.md",
+      "sha256": "88809a3816885421800bce9fa1f7580cd2ffa9dc0e4ae4822b64b19ad440a11e"
+    },
+    {
+      "path": "docs/chon-mon-order/review/questions.md",
+      "sha256": "720625abf7cb34d64c6367d2fb24f41a421b31a355d641f0c2859d9321350eaf"
+    },
+    {
+      "path": "docs/chon-mon-order/review/scope-assessment.md",
+      "sha256": "1e8116984f9f3ae3ea11bc274b4bac6be26b4e1a7c432bc6df7142b74a2a6eeb"
+    },
+    {
+      "path": "docs/chon-mon-order/review/uc-operation-review.md",
+      "sha256": "0e7088e1a13686863e093e3ea26c6d20ee997012973e0f5e737cea9f5f6c8883"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/data-dictionary.md",
+      "sha256": "94f80fe7d4a2ab2628cd8c4164be6e88c14dfdcfc3d45732c635ea127fb59ae5"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/index.html",
+      "sha256": "6f7934b6e61e1185d16a5472cf281d475c3d4a896b14affa9ba594a38253bec5"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-data-dictionary-1.html",
+      "sha256": "1dddb2bda438eda861da1ff156333f0179896d769903b2990650d686d8d24573"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-data-dictionary-1.svg",
+      "sha256": "e8ddcb9a7b639437e09502354106d0a53c67574a619a57a3c8a5aa36b4278300"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-erd-1.html",
+      "sha256": "4022d7be4c81b437967b0f0cf86eef671eec175b7575652a830a3975fa8b17d7"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-erd-1.svg",
+      "sha256": "c62f41f5c690355e41c18ea7de07245f16c8004de8605d09c3f49b6625dea1b7"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-flows-1.html",
+      "sha256": "ca2f8eeaab749ab76c8e4681d843cb114413657210ffa5dc40285d49ce2c03d2"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-flows-1.svg",
+      "sha256": "128fabf57cea0f021f56279da7ad0ba99548ca2d5da3dfb16474830844f5d705"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-flows-2.html",
+      "sha256": "c998386ed43b811224210dec3638837eb56b047ef44d7f6ac7d752e5489c2af4"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-flows-2.svg",
+      "sha256": "486a56d959ae04e95aef5f869aeff718ab19ca8b9da0f1b7af11a22286f7c463"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-states-1.html",
+      "sha256": "e8045de353ed20257baa048b4f5470dcb1a951ad9ae83814164a0376ce5a3677"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-states-1.svg",
+      "sha256": "c15b0bd0bb78abba4f977f76ff2fef8a50b979a8ea47be861a11a8a4706f698c"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-states-2.html",
+      "sha256": "b49f90d12a0cb8e9d6e5febf1c839d21ee664d23d7f0d19269c3434febc569b8"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-states-2.svg",
+      "sha256": "4521bbb624311857629e2b650d2e2af870a266fda462669b4ad4f89883676b06"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-usecase-diagram-1.html",
+      "sha256": "8d67cbf551a15875795fa00de15a9d498bd569ebd91327067b8bd06c38be3c05"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/srs-usecase-diagram-1.svg",
+      "sha256": "146df9b50ea52d1ba6ae8982a99785b047e427dd4a2f53898cd5a2b979993c13"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "fa510928edacefa3b443e207eb6b131756941898d152c5c164e317376ead4ee1"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "e2d0b82bd09a234be9f897c4fea12076b628e34583834a566b26985d3cd10350"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/erd.md",
+      "sha256": "e7fefb037569bdcaa9c7cd5a284f55593297586e6a85dfd05bbbbfdb0447ca5d"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/flows.md",
+      "sha256": "6da4cc2f0cbc5086d13b68e645f82e7f1ce987e07dbbf439a8ce3c0059a687c1"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/lock-plan-review.md",
+      "sha256": "61873cdb5f142649f0dba0b55efd4d96002cddab653e535bc3c3d6af650c9174"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/operational-rules.md",
+      "sha256": "fc0f15d142456fcf8142343a5a75e449b87c4862af13e699af7c057f9a6de160"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/spec.md",
+      "sha256": "0f99fcf53712d6d6f054450078f449489c4b3072d61d8fc69508c7f73ae9855a"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/states.md",
+      "sha256": "a0c785a1f5a315e3e9e5d3aa2febef29f27da912f5e370f62f13aa67b3890d99"
+    },
+    {
+      "path": "docs/chon-mon-order/srs/usecase-diagram.md",
+      "sha256": "10ad07e859dc7b6579576699db63ce1c88909a41ba0eda6e1827f16f37dbcc18"
+    },
+    {
+      "path": "docs/chon-mon-order/test/checklist.md",
+      "sha256": "a1b2a661346655903d678c3007b16fc7d1277ba75d02721e65032deabd19fb39"
+    },
+    {
+      "path": "docs/chon-mon-order/test/decision-review-cases.md",
+      "sha256": "14533b3ec644d2ae7d0fe8a4f84321c746a9c5cce28657d65f5943eef3da43a8"
+    },
+    {
+      "path": "docs/chon-mon-order/test/evidence-protocol.md",
+      "sha256": "b7520f72e02677b7f4fcb1df688697f10c4e51dffc4adc200b2a279fb4972d00"
+    },
+    {
+      "path": "docs/chon-mon-order/test/fixtures/adapter-synthetic.json",
+      "sha256": "873ba0f5533d9b4484c679c330553a21ddffe3e41f0963f35a078a1482de4801"
+    },
+    {
+      "path": "docs/chon-mon-order/test/fixtures/consistency-synthetic.json",
+      "sha256": "cf427d9c5210f2c70f0420f9607c0c3e94947ef6887144dfb08ff0169eff42e4"
+    },
+    {
+      "path": "docs/chon-mon-order/test/fixtures/delta-synthetic.json",
+      "sha256": "a2b2d62b65996e9cfa5d173e53ed6d0416e0ebeb315da717089b1dd41157acf1"
+    },
+    {
+      "path": "docs/chon-mon-order/test/fixtures/README.md",
+      "sha256": "bb46cd58587a965fd81461a7724c8dbc1ce0438df97e67a8dfc1696de884e09d"
+    },
+    {
+      "path": "docs/chon-mon-order/test/invariant-cases.md",
+      "sha256": "7099a824ba916f8f912d532735207c7b7b24adc905bc544a339f36487fbf453f"
+    },
+    {
+      "path": "docs/chon-mon-order/test/review-test-cases.md",
+      "sha256": "d94df8ea8960b4fd0e3ffae17460adc34541d861bf5829c737d92378596bbdac"
+    },
+    {
+      "path": "docs/chon-mon-order/test/system-test-cases.md",
+      "sha256": "2288d767a6aa98b0c97fd589e5119d8793b3a6456f3189406091a9420d1f7c16"
+    },
+    {
+      "path": "docs/chon-mon-order/test/test-cases.md",
+      "sha256": "1177ff87ff3c73e845bad80e283e51845335abca6a622957999591553b16fdc7"
+    },
+    {
+      "path": "docs/chon-mon-order/test/traceability.md",
+      "sha256": "322fdabfa784032cbdc4b89810feb99bb7da3c439c980d95bc36c1f7705da623"
+    },
+    {
+      "path": "docs/chon-mon-order/ui/screen-catalog.md",
+      "sha256": "50e714759cf46c12650189d70eadaacba7fba7cd138193333331974d2b8b7207"
+    },
+    {
+      "path": "docs/chon-mon-order/ui/user-flow.md",
+      "sha256": "41d25ada583f98c9f2208090eefc78a2381ddd7c7b2bb421f1ae57e37cc19bcd"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-001.md",
+      "sha256": "8904e893cf9a1b872e988aab27e470ff36efbd991d3e59c61bafe7d322d3c8b8"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-002.md",
+      "sha256": "c722ed11520eb8e60c6431e6fa6fb014a8157909d9046b914460810b7c163deb"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-003.md",
+      "sha256": "05c8d1320fe0a8c395a7a5198ef2941840b18eac93d2bd9070caf5df35e7650f"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-004.md",
+      "sha256": "62c3d6cdf2a1dad9ca819d69531addab72170665f48d67012e0db64bbb3dd45a"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-005.md",
+      "sha256": "3b1a4cc548e8d9e5dd793f2c0e438ce10519f653efe87a6f724ddf21207b70e5"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-006.md",
+      "sha256": "a09331d252942e427758948a743a58d86f5fccef27d06437f4bdac3f075b2fe1"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-007.md",
+      "sha256": "4736efe3670dc2ddfb144fdc2d7709c440246487e6ca17616290c871c70639f9"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-008.md",
+      "sha256": "e62e600fd71948bd95d3cdc3a6028aa69a628329f7332da47a8950507ba55fd9"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-009.md",
+      "sha256": "7c34644f65b727ea7a769152889d8ad67fcc284100f975a5e808abfd2dcc5ab9"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-010.md",
+      "sha256": "24cea918fe2c63931dd954408c092c4c19841c809b5304162305b7d42ab2e565"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-011.md",
+      "sha256": "8227e02c2409001fc06cda27b63bf12013101b157da064527fb3eadd93adb566"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-012.md",
+      "sha256": "6d9a1a5d281052d3d5f3a61cf8c57732c168a14a8c1b61d673f3049afe7f2780"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-013.md",
+      "sha256": "08c2b653a54ecdb30b98660e21dd7bea9760cf89ac35cb0f81a709f7adb29b26"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-014.md",
+      "sha256": "4228a31c5e7ad66dfdec8f9e2b250e3e9db18854e6ea2dd638d326e97b7c271d"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-015.md",
+      "sha256": "8c3b1972d83e0fa55551f6b7f82e838b79d84c028e30dbbf77b99ecf3227d767"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-016.md",
+      "sha256": "091e776a5ec121969ed6115973434756019fe91fb33e4245808514bc086e2ffa"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-017.md",
+      "sha256": "33aa1046c43b765aca35ef2b1b01a2b1117489cf54554965693e6069d829208e"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-018.md",
+      "sha256": "39730d8dd92abd4932751f57bfc52637fee37e1762db98126519585a8e43da17"
+    },
+    {
+      "path": "docs/chon-mon-order/usecases/UC-ORD-019.md",
+      "sha256": "c5bbedfb0f884424a2c29c58f43dd36641e549374fc40d8def231002cd0ea7ee"
+    },
+    {
+      "path": "docs/chon-mon-order/userstories/acceptance-criteria.md",
+      "sha256": "c6f68c8801ceb4ab1f3e396f73b0d657eb61c20b65bb140d5bbcc7cf3ac85500"
+    },
+    {
+      "path": "docs/chon-mon-order/userstories/backlog.md",
+      "sha256": "677c5adcc5625dee88b582a91fa3beae268b4536e9813fb75aabf5febc449b28"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/adapter-baseline-sha256.json",
+      "sha256": "b25172c144e059e20dac1114f7e2e8e2f9cab63a1103b385b651fa49c750e289"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/adapter-change-manifest.md",
+      "sha256": "ffe9d26994ee083f55f070b342b90a0b1ea0c92546418fa1eedde55978dc4933"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/adapter-check-result.json",
+      "sha256": "7e9448a784b9888d0f9f181b7f81bed65c7b75b5d0ab5c5bf5e149cb6adbcebf"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/adapter-report.md",
+      "sha256": "2346e636d14108eaad2821ed3f35c12b07f157e04d28d5925087d91ce9ec74e2"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/api-e6.py",
+      "sha256": "b6af1a1b45a588e15afe2b457ce697ce02ca8ff280970ca8b2ef7dc79a1952a0"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/baseline-sha256.json",
+      "sha256": "87aa27bb3ee8b7511020cfdda548f94dc4a08a861f7e2d9bf4c171ab3b7b1383"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/build-e6.py",
+      "sha256": "95e7f5b73e6d4f0123249f87c9c2b6eabc6940797264e226c06cf367bc5d3ba2"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/capability-map.json",
+      "sha256": "f903d17029b753216632b3c380126136aeed7e3ba31f0116a8bdd9e0748a550e"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/case-review-baseline-sha256.json",
+      "sha256": "19e1c3407e27efa769b3df1da7f37068b926f31dc6465fda094a0b86af31c84a"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/case-review-check-result.json",
+      "sha256": "3151f967673c2c6d22059355ffaf3c777b880c15ce530fed08998540b1eb7a61"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/case-review-original.json",
+      "sha256": "cfabaafdc1f4e44de7ccb50c30fac40fe439bb389fa7ad2681c2c408b4f50b5a"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/case-review-report.md",
+      "sha256": "10e5e43c93ada569aa564fb11d08d5ee8091b94fc41ded664af8e55d0d903410"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/change-manifest.md",
+      "sha256": "c0de68c341090dae90b4c74ccd21be3cefa471f556a69fd86ea8e22613023c4b"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-adapter-review.py",
+      "sha256": "44a03d2d909392d11eb94981421dfd6da7916c0fbcc773973fdb79410a6dc790"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-case-review.py",
+      "sha256": "65aa337e9f136c56cfadf611b925a3a5c1976c97388e038dd0f379be93447a15"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-contract-review.py",
+      "sha256": "d894b61adf4fa2aabec32468710284d89c58b0fbae35aa36041388d0b5d3748d"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-downstream-review.py",
+      "sha256": "a3d2ce07d4d6b2568bccfd2a3b3dd0921ca3c348946be25a751a9472e8e42c8c"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-dto-review.py",
+      "sha256": "fa5a82194bf03d5c557d68c9028e3998d4151be18d804d338fc7b87aa04d1483"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-e6.py",
+      "sha256": "06e50d8f36dccccc7c6cb6c0d9e3b76503cd21a2d69a1f2934415e117bf1f9e9"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-fixture-review.py",
+      "sha256": "138e758492c8bc1e091d92c6c8c317b7a406ddc903c373dd7ab3ab86bd354786"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-result.json",
+      "sha256": "3d1e6f93748609d86e2e7a52ee463728a3dafdace2f9d1bea723c71bb688bd2c"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/check-ui.cjs",
+      "sha256": "d6ebab1eba1638e3fd1cb44c273648023699ac57267e29e4f01d19442be58cee"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/contract-baseline-sha256.json",
+      "sha256": "80f34075e959a73d03b959c8063c36458dfe9239db43548839591b9a2d6cf82f"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/contract-change-manifest.md",
+      "sha256": "19859b8f3c7a2083ed0f0999c85e18a82d8455949fd28a3b1b9ceebe85a5cd15"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/contract-check-result.json",
+      "sha256": "cbc5d67f01d8f97fb3ec71aefe3339825d91824022d2be86b647a413dce8c2c9"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/contract-report.md",
+      "sha256": "c075eab2495e38799b80a59a26cb0a896ca6ca216bd4a35fa3e2e07546eef398"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/decision-review-report.md",
+      "sha256": "00caf925408993de8f676e38d6b02428492ce27742bcc3bba5ce1ec324a3499e"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/desktop-plan.png",
+      "sha256": "9e615d6e77a5e488fdfce0f3087b2b60987ace50cb8a7b8d5cb2ccfdf1360fd2"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/diagram-change.png",
+      "sha256": "a02eb714c0d3dd98fcc06b2d4e5c3bc41fe214cd7585e8fe20f0b9ba4f982f55"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/diagram-render-result.json",
+      "sha256": "b6e9d3e724ed07c79c8b27979c247c49e3189f0053b302093382eed616fa9fe3"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/downstream-baseline-sha256.json",
+      "sha256": "76c3352405b89e862afcacb6dd4460d8ba2de2a1ce21f217750717ae66017d8e"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/downstream-change-manifest.md",
+      "sha256": "63aeb4dcadda552602ecc7a9242ba8640f50048bdb20b1731ed4a21a655add24"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/downstream-check-result.json",
+      "sha256": "2f5453308490ef0cc7b86b08b9a2894bb927e2bf97459e319526f6df610d92b0"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/downstream-report.md",
+      "sha256": "f34e7ec3a3ba73c11dbb887a6992b55415ca7ed2250480ff615c39bf6b255b81"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/dto-baseline-sha256.json",
+      "sha256": "44c5f307786beb215fa205244a288eb4b2b350742f4a96565f3915dae546b06d"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/dto-change-manifest.md",
+      "sha256": "370b76474f6e861f2b00031c3b805a932369bda1697132fb7423e4330898e738"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/dto-check-result.json",
+      "sha256": "c256dc22504a608299821a56eda152b5b6e64356f1bf8c9fa9c90e900ddfd59e"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/dto-report.md",
+      "sha256": "235ad2ab09a312c20ea9d063023daed5609a5e82b8ae76ed5ffbec9a72da5ed1"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/extend-e6.py",
+      "sha256": "d5ceef64f72e163b6c5d6d802ef8132a43e843291d28e1baed97d90f4b3bff42"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/finalize-e6.py",
+      "sha256": "ee50d5936068dac52811498c593d3d8de2d38313c6e174a75d49bea526a18092"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/fixture-review-baseline-sha256.json",
+      "sha256": "dfd35d807252a447ebf717b981f62177e8ca8d95de72c2422036603ddeb45b21"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/fixture-review-check-result.json",
+      "sha256": "f9525fd0fc6be4ae81de99ee8a6f91ae3fdc56f8212b12ae351cbe5394d41197"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/fixture-review-report.md",
+      "sha256": "cd476cb0622813714b64f2ee878dcc04b2050e821fa53b39f7f9ad66785e55d1"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/independent-baseline-sha256.json",
+      "sha256": "6211fd527337199987dfd5906c6a4e859192648e87ef1aa388ec3ba2b607680d"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/independent-change-manifest.md",
+      "sha256": "cf480d11ca8729bc62f8e305aca3cb54e5a6e986185985a55497da5d05ffa295"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/independent-check-result.json",
+      "sha256": "c5515fd4c4815ab5fa982a879a1e4d48628c597fe12b41462e38e88c8a0f07df"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/independent-report.md",
+      "sha256": "eb7ff2e5f13c365517c317a5dc6d3b0bd596b1cfeeb244b84f7c394bc0bf7ca8"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/mobile-selection.png",
+      "sha256": "0d43c6b9455e0b75e96f234519c91ef419552829516847b4633f934e6bc27280"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/open-questions-2026-11-12/baseline-sha256.json",
+      "sha256": "be0c820f48851ed50da4c51f4bc5a274ef2be53eb73b4cbb50d2363f12deba9a"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/open-questions-2026-11-12/check-e6-result.json",
+      "sha256": "3d1e6f93748609d86e2e7a52ee463728a3dafdace2f9d1bea723c71bb688bd2c"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/open-questions-2026-11-12/diagram-render-result.json",
+      "sha256": "b6e9d3e724ed07c79c8b27979c247c49e3189f0053b302093382eed616fa9fe3"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/open-questions-2026-11-12/preservation-result.json",
+      "sha256": "e7b0053e8b747ef81741aca0a17530a8c60cda623d38a0e1b747dd1960ba97a7"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/preview-desktop.png",
+      "sha256": "5011e9a73b2460933bd27f8fe58240fbab68e48d07d34043ac0fa9ebcc442506"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/proposal-2026-11-12/baseline-sha256.json",
+      "sha256": "a31853484d70cadd7f31146c29528ef6645dbca35abbff9299f54b1fd3e08a24"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/proposal-2026-11-12/check-e6-result.json",
+      "sha256": "3d1e6f93748609d86e2e7a52ee463728a3dafdace2f9d1bea723c71bb688bd2c"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/proposal-2026-11-12/check-proposal.py",
+      "sha256": "72acb504408b227538a88b589de2ab2e05fde68a0df29a544c38efccf04a06fb"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/proposal-2026-11-12/diagram-render-result.json",
+      "sha256": "b6e9d3e724ed07c79c8b27979c247c49e3189f0053b302093382eed616fa9fe3"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/proposal-2026-11-12/preservation-result.json",
+      "sha256": "58e53c5ddb4c5c39b9326f79fe22d214d649bae5d8caa9ddc864d1c9bcf443fc"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/render-e6.cjs",
+      "sha256": "1269fc0fd8a655eef8170c1743eb147cb185267b4ba68c73e25bf0be68fd8b5c"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/report.md",
+      "sha256": "fccf925bd0720a0ae8829ce1d6e56622bdddfafd95ff199964e5317ca94a93f6"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/uc-baseline-sha256.json",
+      "sha256": "727e9281bbd21a46bb2969a04b5abef73d4b0d61387fe25550fb4a5241d30d8d"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/uc-change-manifest.md",
+      "sha256": "26c24d9e18815144fb23aeea11becaa9513040bc63822cb1eaabd21f5ab20434"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/uc-check-result.json",
+      "sha256": "cb30889008d14754b4666b00499bc9f10108c6bfeb3e7c6c8e926b4010ed3d7b"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/uc-review-report.md",
+      "sha256": "37cdacdab5c50d958b0577b33eb3450e9d8a38925b94c1f554c4b0a43491ab98"
+    },
+    {
+      "path": "docs/chon-mon-order/validation/ui-result.json",
+      "sha256": "69fff2bc1a0d82810ab3c9d46f01420b3c64cd0f2be3b70eebba50b652700a26"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/api/api-spec.md",
+      "sha256": "4cf7663d52a952babcc41adca47d75c06b458fa3a9f2894edb135098266ced1d"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/api/data-mapping.md",
+      "sha256": "39e272032d75b12d59ca3d13f49e1127e66b78358d384109383cb99647ffe8e5"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/api/endpoint-catalog.json",
+      "sha256": "b2f0dc0f7f79ca507089a23d4dd07348f5e51e7e99e839ce25d3ccf91aaccf69"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/epic-spec.md",
+      "sha256": "b5ed0357ee02308648214db641ca63ecd5f27b73b46323b75722e30e58a34fbd"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/html-wireframe/revenue-workbench.html",
+      "sha256": "a6d84d5c0ef1393cf7ff7ca884ba45cb9cb06278951600cf5926ccf15db1c215"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/preview.html",
+      "sha256": "f3057d5e27197119a5a40d3d8ba5023d07bf11f93f7aee25a5a11dcdcbd09e90"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/review/dependencies.md",
+      "sha256": "bc781ded085dd3626d403a26277092b58f73f06e1d13509e5bdaf6466b1de749"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/review/handoff.md",
+      "sha256": "27e3f88069d72bee3ee979d773ad192c3eef7eddef8f1d1fb0832f5512b66693"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/review/questions.md",
+      "sha256": "ba2b26217b3d19b521524f8bc69f541f810ce05cc09886ee63617a2b05a40f5f"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "sha256": "94d5f7747b3acd347d520e73c610f88bddde5c907265b4e4e9545f52622da7b8"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/index.html",
+      "sha256": "53a7ac65c47b47c78c9d8a669d4c4e175c1ee9ace25a440da53e0a7e1562440a"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-1.html",
+      "sha256": "524451bd86447f039367ee67cb1c7f1decaaf7f92391c40e956cac5def33c85d"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-1.svg",
+      "sha256": "56b2988a5d604058135904e3d6bd38291326cc184c573eaab7aad1fde154845b"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-2.html",
+      "sha256": "d1a5a4bd6cb7e76e5b283564f44f6538315a0ea6bcc9224846c831a17dcc901b"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-2.svg",
+      "sha256": "2f50b463e27e24c146f164a7cb8ef5a673a3c9cfb7b2319265a2f40f6f29f357"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-3.html",
+      "sha256": "0e288b97c4b30d38b2832c6f01e6c74e0eb954282d544b30be9a0172ef6d7b47"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/srs-states-3.svg",
+      "sha256": "201c297e210e1c79b52f3015497a9c3ababa5aa826c3992a8af584c015aa0a57"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "00a065659d157aeac9ac9566c1c731fb67040c6a9a0e7085d4e9a3741b3acfa9"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "707ffe7b43a238efbc4740ad9310c3dbb71e29bf1ef2dd470a268a83529bd817"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/error-matrix.md",
+      "sha256": "6d3a245a97cfc3a3a85d3b8fdef09af31fc4ba1c9d1c7efbdac0721e81c104cf"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/spec.md",
+      "sha256": "a146456fdccf11e6ba84d2b0c9fb649feeaefb6ee3f87c9c6fa05bed0e2b78bb"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/states.md",
+      "sha256": "e22ae62024b639122cfcef786b2c1eb21113115c0df0a498f476d1fea6e07a0e"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/checklist.md",
+      "sha256": "640b1c30e721a7242292496413f916e6c9a2d8bd4d703f76745ca563a3b09791"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/evidence-protocol.md",
+      "sha256": "de4f85771201afd55dbb5d7759ead6d8a3fe4a7b93587a65b83199637d4a3b67"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/fixtures/README.md",
+      "sha256": "cb9e26c1e68f80b50c6bf82bea6d5f66ab0806a6190022ae3888e45a20a6913e"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/fixtures/synthetic.json",
+      "sha256": "8de90917c983da640376842a67c4ca183e4eac7629fd35bb4b53e1ff4acbedee"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/system-cases.md",
+      "sha256": "a10a7120f6910b0884a2ec6ce5e4a0efe025e6b2bc3c90034acf124bc5c3026d"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/test-cases.md",
+      "sha256": "a957735631d719dff1eb31d8e64ac9a5e5fbe9db6f41c374cf6a12c69042d512"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/test/traceability.md",
+      "sha256": "8b01c539044cd6445d36a1bc30dca9c7663772a9db2366f0c50a044212c3cce8"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/ui/screens.md",
+      "sha256": "da069bd7add8fb29b80ae0e95fff054bac63f97c4b97dfed8a21d0fdca542b82"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/ui/user-flow.md",
+      "sha256": "5cf5bfc6dc86c1b69fad726db706f788d0dbb61893c9459483c75a8369140785"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/index.md",
+      "sha256": "0b3109d6f25bdacc6403d7c4cab04b267c8f6fef807820c9a20a873e3fb5c25b"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-DLV-001.md",
+      "sha256": "87bdfd482d861fd235e43f443e6c21b27cb12146e4d98819b4ea219c58cec88e"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-DLV-002.md",
+      "sha256": "44ae234ebc1b86b78f7b5a38b06efc72e5aa5fc662daa9a9bc23a2faff74b09c"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-DLV-003.md",
+      "sha256": "a41271a396c30e1e7f0a6f5a52a8dd3246da2d22b3e3ae26a5271e51238845da"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-DLV-004.md",
+      "sha256": "1c793cde239b89df838c8fcb3d033e67359d462a1deb47ecdb5f0f2ee2f8b721"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-005.md",
+      "sha256": "6497d1132040673c1e65de13b239aed830ce564776c9d6c6cf7dbdd29128f9e8"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-006.md",
+      "sha256": "bd3559fa2e9271120496e5b32e48350ebb90d250a1fe800c165b1b5b22eb4045"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-007.md",
+      "sha256": "2352b53d675dea7413444a95eea171f511925294ee1a67e56c0f4cfde5789774"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-008.md",
+      "sha256": "51549041a9125860a25ccf0787b28aa3d6f1741d0af2c0a71ebd4f1f2070289a"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-009.md",
+      "sha256": "71828bc52a1553cb1330695ef960d875ef066ad59ad33bd6ead94b4f6352e198"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-010.md",
+      "sha256": "e6bf736a1d347f9fa9d68b7415fa250018a0029527ca5d880d50ff934d11b5fe"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-011.md",
+      "sha256": "749d691c42e2cbe16c80655b3c74d4c91bd949fd01bfeb27a791683acf9f29cd"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-012.md",
+      "sha256": "3e82fdfd485e021e7b42c2398486d0759415116dcda9068a8586607bf89e4a9b"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/usecases/UC-FIN-013.md",
+      "sha256": "7152f08609f4fa9cfd95d59bd096641a4f4f063bf3498e605462bf9cd72105fa"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/userstories/acceptance-criteria.md",
+      "sha256": "6a0c76dfb6fab7b89999f2cbeb1941ec8ce68a65d8fd664b5c148b6c34803f13"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/userstories/backlog.md",
+      "sha256": "d326c5603094fd6b94c536bd56007e28f996476c9d8866c853e8860dae781d8c"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/append-status.cjs",
+      "sha256": "56fabed256ba2579c8e5d3826d2465affa7dafceea8120922f1f839c3bc58e16"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/author-e7.cjs",
+      "sha256": "53561604c483b1ebe757b9f36b81f9ac467f0ae74e3155e1b86078d55b4d03e0"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/check-e7.cjs",
+      "sha256": "511cc3f51167fcaabf467754b0a55168291574034bdd77c1ec9aac6f443aa2d1"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/check-ui-e7.cjs",
+      "sha256": "027e03bb56a871c191dd4072dcf9ef209a1ad4c85214946e42782434d1b40001"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/design-index.json",
+      "sha256": "284df1751223eb8c62251744b2b7f1abe92630e4cabfcbd862d330dbe2275cb4"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/diagram-render-result.json",
+      "sha256": "addeeebb6f29d3aed38b5ff009f5df1b44bf3a1e822cf4f779289f9e5aa66176"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/files-created.json",
+      "sha256": "6781f36c5b37efb16f844c14244748d43968ccccacd366b963e9118b1a4cdd4d"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/finish-report.cjs",
+      "sha256": "082c2b463cbe761fb2deac8f99465d5f8724f91fb39e89027c561c617ed297b0"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/history-prefixes.json",
+      "sha256": "f2cc645a431a74e04144ff72236b9636c96cfbc0b12662ff1c86bf0547fd58b1"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/manifest-e7.cjs",
+      "sha256": "5d839781418fc294cde52490601d4d2d46e54caa7735eaa4fad365af2d7950d7"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/protected-baseline.json",
+      "sha256": "bfcab1fcfdb23a2376f7f15a73f77a9357ff0eee9bef509369d263c9f32a444a"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/render-e7.cjs",
+      "sha256": "0df916c1069c2d7eb8322fdacbce98b614c8c9785590844ce475663c5a9b9b58"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/report.md",
+      "sha256": "1f3e0dc04be8fe048204c84fd2a94ccc0582b9fe5f83b877aa3b8d7bde11bf95"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-01.png",
+      "sha256": "0186d64291e3ebb098c8e9ed94db2696c0f7988aa0a48f89826a522fce5b2cb3"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-02.png",
+      "sha256": "901bdf4d5b02ab49a0b79667a3a21f754be88760c58e208a29313b77a24bce07"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-03.png",
+      "sha256": "57747b70256eea64240f35baa4b1eef983d500b99a01fd4550d6df9ec157e4f3"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-04.png",
+      "sha256": "6f89c563d1e042e5b7a9745e5b77c17dc268c79e3a8a4f33aa2beb050a7fc34c"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-05.png",
+      "sha256": "cab5850004d6ed29669719d87fe99c4f9b98543de2be0e991578a0d64f828d24"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-06.png",
+      "sha256": "38624cda50ddb9da815e2196dd0e5559acaf0ebd04caf017ad37d109103bfc57"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-07.png",
+      "sha256": "a8ea32ed1b2ec65ecaf7897306e89e8bab132cc292bff8b5bd7a48d0bedb82f4"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-08.png",
+      "sha256": "5973c2f06cc6f1a09a4b45e1916dedbd33b2fcbc37e5ac6224e364eb53691d61"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-sheet-1.png",
+      "sha256": "0e37faf4f72815ff7c497315c49287d7ff9f57dd25bcb1ff9b2241e2f6734e5d"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/desktop-sheet-2.png",
+      "sha256": "a1e5f6b39a683d08d45094f9266dd5085dc07d140d53e4e8c1236f567be18f40"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-01.png",
+      "sha256": "5beaa541c2c8019ad82b5be8c7981f4661fb954d4ff9da24a5d8556baca921ce"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-02.png",
+      "sha256": "139b5c553f2c5c678d949982e7e70ca864b4850551e4a4f299a4a9d3931ca5e2"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-03.png",
+      "sha256": "567d5ed884cb809e925d900e48c8d73dbf45548d5b20d12933d221f56abbdbb2"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-04.png",
+      "sha256": "a911c91b7ab47c70a56d927effbc2574e62ddbccaeb61b5bcb4f575d70154c6e"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-05.png",
+      "sha256": "3443c723bb7f9a5459e06ff9c29bf5ee334bbfec10d16b65eca9b21dceb3d53e"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-06.png",
+      "sha256": "9a2c688621befa0ee40ccaa8ccf8e69b6144efc7d415487dd56912160a8f0cc3"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-07.png",
+      "sha256": "ec4bb3eebb5aca0859e43013fb2bdb5899b0dde480a706f652f779027802e717"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-08.png",
+      "sha256": "36047c2e5f51ed963e26d72eb7acb5b689d4f850c656321ac6f59bbc175c45d8"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-sheet-1.png",
+      "sha256": "1378ad66b725f5d0a1359ec8f0c4e175d38f0fe9876ed649f350b91eae27dae3"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/screenshots/mobile-sheet-2.png",
+      "sha256": "72f22204a189b2493da7032f1ba02dfe24ef99c9a87d038d868937736359c3e2"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/structure-result.json",
+      "sha256": "4282efadcfd5a653bdd66b4a3e6a28a87ef2df12438aa5a335a130a7948d4170"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/validation/ui-result.json",
+      "sha256": "447ac803b64b1f51ffc5165360bafa66adc53ffd9a9ee81d4efd9adb232bed4f"
+    },
+    {
+      "path": "docs/website-cong-khai/api/api-spec.md",
+      "sha256": "eb592fef06cfcdc84323b1e03878c8314b2682559ca058f0f7e2b696bb1a7e26"
+    },
+    {
+      "path": "docs/website-cong-khai/api/data-mapping.md",
+      "sha256": "f97bac8c4ea789e6a5d6ec71f737f72140fd2e3812473c348f621c54f7a70780"
+    },
+    {
+      "path": "docs/website-cong-khai/api/endpoint-catalog.json",
+      "sha256": "91b273534318e1f09c2aab8ccd87dae00b27e4290c2c1362cccceb9a5413fa33"
+    },
+    {
+      "path": "docs/website-cong-khai/epic-spec.md",
+      "sha256": "8656ad8305fffb06187bceadd4a783f09e252fd48b848cca0d43ab179db7c5d6"
+    },
+    {
+      "path": "docs/website-cong-khai/html-wireframe/public-workbench.html",
+      "sha256": "af6de2bb1dfd5f7f07d3eb431b6653b31374c3c76ca954000dbb786203c5dc72"
+    },
+    {
+      "path": "docs/website-cong-khai/preview.html",
+      "sha256": "46686b9a9185e4ad0ba22de8a44fb5c537b0dc069d1d2cfbde37409ac3c26913"
+    },
+    {
+      "path": "docs/website-cong-khai/review/dependencies.md",
+      "sha256": "21e29c5de33de50bf080fce8051dc82ffa0caae0269970f81741a787ba0859fc"
+    },
+    {
+      "path": "docs/website-cong-khai/review/handoff.md",
+      "sha256": "a29187c1c0c1a693a5d45eb76ee242cc25b7366acdd295f49fc1360c286af7e7"
+    },
+    {
+      "path": "docs/website-cong-khai/review/questions.md",
+      "sha256": "69279bc5880c42e154985d4d7f69ce33b20ed40f1c60e77e0ccfd6e8a2c6ff95"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/data-dictionary.md",
+      "sha256": "38d909ca76fa80b1108ca64b0e58978dccd76469ae83c59125af12537940a719"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/index.html",
+      "sha256": "2a24a9fff76e6fb10fe8ff09c93b695eb85b21c28b6d373af280d3c124bd5d65"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-1.html",
+      "sha256": "e8fd45c72ee4d984e140cf1b622e1007911cf174aad08ad9e5590ff37c6a449f"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-1.svg",
+      "sha256": "61eff94ab1f1eca8200e700345394b46ef85f66f14982f956d12313b4296b7fd"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-2.html",
+      "sha256": "b0b057d9b06990020d0c07279cf6461473fe529c75516935fe3b51430efd73d2"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-2.svg",
+      "sha256": "a1a4f149fc86e00b2a9cc1acd1ebbade95230d3827d9c4db2cba7294d5ad2b1d"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-3.html",
+      "sha256": "f7255d14dd8a42782b87a10276a0fdb1d4fb77f0a9e7741d7f6b28cdba63c75e"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/srs-states-3.svg",
+      "sha256": "1796760fdc3997113c7c6cd208b3d53931233a05c26d580df9ad8a3cdb698163"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/ui-user-flow-1.html",
+      "sha256": "5c93fa62cb8c351837bee167e6014d6c2b5f1d79847fc8f2cd90141bb008e6a5"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/ui-user-flow-1.svg",
+      "sha256": "b2a04efb9c92cf47306a0decba344f5df42d14af668c70f56011b1522414517e"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/ui-user-flow-2.html",
+      "sha256": "dc9491c30db611fe8dcec84f9085ed366a7f5cac02389efd064bd2f041a9cf82"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/diagrams/ui-user-flow-2.svg",
+      "sha256": "d552ca2047db21649c6cd7b6821642cf76af0075a7d4c5bc61ef4689c5045e4a"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/error-matrix.md",
+      "sha256": "1467d40e4031480369ab18bd84014e31c8cc3508bdbd05c5ddf97c5898fa8fe8"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/spec.md",
+      "sha256": "4784f03583fbc00149d9d6270aa6e6536b2bd8aae5b5c18b57b41baf5b57aea9"
+    },
+    {
+      "path": "docs/website-cong-khai/srs/states.md",
+      "sha256": "1d1eccd7fee4ed75d3657afbf94b93186a4f74acfe26f8489068c8a436f9615b"
+    },
+    {
+      "path": "docs/website-cong-khai/test/checklist.md",
+      "sha256": "d7d2553432d996599e5d0812481e87f16ad53bff176c5be13577b459d2ba9089"
+    },
+    {
+      "path": "docs/website-cong-khai/test/evidence-protocol.md",
+      "sha256": "3675481eaaf96f069447a467c52b0eae8c0e819b2206068b184fd6f801a3e38b"
+    },
+    {
+      "path": "docs/website-cong-khai/test/fixtures/README.md",
+      "sha256": "d5c9a46c93120c0e7199fdd2b03faaee93d1320f673fff51aeb85409f132d4ea"
+    },
+    {
+      "path": "docs/website-cong-khai/test/fixtures/synthetic.json",
+      "sha256": "b7158812783dafab2f0f8a3b32550c6101a54fa4018f7b81842e07e1a42e26f0"
+    },
+    {
+      "path": "docs/website-cong-khai/test/system-cases.md",
+      "sha256": "8fbd12f4b5e83de60e2403f6f65aadaab4d9719ff14e25d6386b69db9ce3a0be"
+    },
+    {
+      "path": "docs/website-cong-khai/test/test-cases.md",
+      "sha256": "702e3889b4fa57216f5cadc2972f89914ad81ea35a589eff9e58b1807ca36b5e"
+    },
+    {
+      "path": "docs/website-cong-khai/test/traceability.md",
+      "sha256": "99331b3ed171cdfe21b140d15edd30d5c4af34478a3bf11bbd3670e0f3d4fdb0"
+    },
+    {
+      "path": "docs/website-cong-khai/ui/screens.md",
+      "sha256": "a39d40b9fac60e5da05faea5b84f350e76d1293a7e3c603992967c34eefb1ed3"
+    },
+    {
+      "path": "docs/website-cong-khai/ui/user-flow.md",
+      "sha256": "87d3833c6a849ee70e3f1e7e880fb8a64f925d9a1ceae5147bbaaff4f6f99e30"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/index.md",
+      "sha256": "157fe920d0062253483e692d0fa6470f6c58610f65b3b97a6447647802d794a8"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-001.md",
+      "sha256": "80b4ca3d92d8fb7b4cd74c96bc179666d36847ce1dc7f54688f1a4df36f8ec63"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-002.md",
+      "sha256": "c1bd1e6447590ac05dd01739044113e381fe7b1d7ab58bd12e7a50d494fb8b47"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-003.md",
+      "sha256": "bb287258ad7942c3c2ba0e8ff7d019c263de49f26db15e1100377ea4c759c287"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-004.md",
+      "sha256": "1b9fd18b83fc8e88954e6a722521f465698432c5d949e44995c611851830f8d6"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-005.md",
+      "sha256": "ae6f39b83b002b72dbab4dd006b9b7e04c39d79426899c0d8e1adca81d7c99d8"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-006.md",
+      "sha256": "5d648b52aa16858cf97854bc2b928610e48561a4fc5f87866c4fcc11c36a1748"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-007.md",
+      "sha256": "d94a54e28d7c79d18b98667231549aab5d093996d8e3500460e5a788acee350a"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-008.md",
+      "sha256": "934cc76a58a3cb7d4dfeab63aec3c222a4bf2323baecbeba2abdb3341197abb9"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-009.md",
+      "sha256": "cfd23e99672472acab86dae6778f1d4eafc3c41e54edd9ab08cd0e04d52093e1"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-010.md",
+      "sha256": "cd6455a0dadfb56f58930781927e52da91575b8d054accd0b67c59a701bf00d7"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-011.md",
+      "sha256": "298db821cbd10e57f0ef783b8aaae6f6375341542b620586114e2af8c6c4198a"
+    },
+    {
+      "path": "docs/website-cong-khai/usecases/UC-PUB-012.md",
+      "sha256": "f1216cc81d006fcc713c4f47e6b1dec93199aa7fab2d86d0c613dc0c525859e4"
+    },
+    {
+      "path": "docs/website-cong-khai/userstories/acceptance-criteria.md",
+      "sha256": "9bf7056c6970698de85a66b8d334fa7fab62f0d5815067ae6c6865206ba48e1c"
+    },
+    {
+      "path": "docs/website-cong-khai/userstories/backlog.md",
+      "sha256": "541786d5a2aa0d9122c3d09da856951e6f555f00df0b010c9941e68d71bb018b"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/append-e8-status.cjs",
+      "sha256": "09f6225c57c1f2bae6de526ed7d92da45f9c94339304fe24b9ceb2b51cc4522a"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/author-e8.cjs",
+      "sha256": "9904cec4c1131fd25647d1d75997acea0b50f6656e839e3868a6c502c889ae38"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/capture-baseline.cjs",
+      "sha256": "d6fb2075c0777b49cc6a7ec699e2899291f5240f00d8c1bfff4cd315219a30af"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/check-e8.cjs",
+      "sha256": "d7cc6f29650feea948845c0df02f39a29f90902d7445bae649624e9d10dc661b"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/check-ui-e8.cjs",
+      "sha256": "2628280bef0bc86f1b0ec5f76387e5df71bee5f06576c09c69b0296d38b9ceb2"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/design-index.json",
+      "sha256": "d6c1a566f085d3f5ca8901e60205a859ee2c9b8aaa27529824e8f778131a6910"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/diagram-render-result.json",
+      "sha256": "ceb926047d8afd571dde85c2d233749ac1109be5c13c767a9f86f37245494c55"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/files-created.json",
+      "sha256": "252f2e4a5a2b1f75dda2636d4fc024c3eb634a379739a1d9d3475f96bbcf93ce"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/manifest-e8.cjs",
+      "sha256": "9a93170aa1b9753c2eb0bdcc0d8041e4ba9142dd9f54953e00627773d8cd5d4f"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/protected-baseline.json",
+      "sha256": "1ae689c9258acff1c8bd1ccc17620f8724f2b4b68faef2b31f0d448beb524f08"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/render-e8.cjs",
+      "sha256": "78faac64d805bcb4a6404dac830beaa1c5d2e89eeb4b241cacf9be1fc8e224db"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/report.md",
+      "sha256": "530de8f94d1d5e3118df367f1300cdd3c3cd44391502473afd2a71b79fbc2701"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-01.png",
+      "sha256": "286572f9db117cbf6c5b74ebbad9a58a9d654355a04296ed6e55620caf9fb624"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-02.png",
+      "sha256": "7118c6ee67f126b9c17e09fd589ef7f62ed7e78ab17a517510d30f006db10de8"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-03.png",
+      "sha256": "c91d99ebf146b5cbf17dda8b5d5aa0df249e3fb47d11b402e1cdce28149b09a1"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-04.png",
+      "sha256": "2a7215994598b46e123ef74aa68cac7eecae71038500a999b38f0c0bbdd4e47b"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-05.png",
+      "sha256": "eb94a02bccfb2006639e232a8262023bed8756f26b0c62d0f6575c41c02ad647"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-06.png",
+      "sha256": "ede958f2bd8659c406bc0f05e55faa0aa48a94aa712f853ca185e2c3e441085f"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-07.png",
+      "sha256": "c757c87912681876bcaba051659d99ffbccf121fddeac75df8884680392af4ae"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-08.png",
+      "sha256": "e08215d7de49909f1d1a4cf846028ecb3a5de9cfca2b66cbfdb22bd278338e36"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-09.png",
+      "sha256": "7c0b659b6ff312e0485fc371206d5e218f1a2fc79d7467a3cdaea8a1a761be71"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-sheet-1.png",
+      "sha256": "a33d33100dae58c26e1b62a8516a075dc52c14e1fbe9818b98c7b2dedc3f9ab7"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-sheet-2.png",
+      "sha256": "6644c1024bbd1a5e3465edafac62009df370e7e43b75a4a829ab8330487a9b19"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/desktop-sheet-3.png",
+      "sha256": "b229b2e39e3181a513a1d79015b95ca452725fbd1f720c998b95aee7f55f3d06"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-01.png",
+      "sha256": "0edf1b21ee9cfd5b0b574368211e496bdf4f25d553774b209ed8fb8cb962a605"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-02.png",
+      "sha256": "ec4102996b011473eb719ea615c5e70f79451e6407af33e256f162d73d9e58ae"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-03.png",
+      "sha256": "f809b02a0962698119a5574d9bc6c8bac465847cc61575c8a5e4e83c7c8e1970"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-04.png",
+      "sha256": "665260c8b6996d5ab91d6f5fddab618b5fc94021796c7b86459ee1d120468b5a"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-05.png",
+      "sha256": "1eda31acbe64bb341b4901c1ebfe83cac20b583a17702d51866fb608e38530fa"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-06.png",
+      "sha256": "e7fe7cbf54167f6d9195ce7fed303dfd800af8b9e7ef5816f9453fac72ab1564"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-07.png",
+      "sha256": "edf13f8ce0c45123e0be4f4e6b7d0119618c1c35cdabc19890703145184701c0"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-08.png",
+      "sha256": "8bfa087d1bf9b6fc572c759a21cbf26c775028dfc8d35d1faa2c5b10dc3ab592"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-09.png",
+      "sha256": "72c20f0ebf8e7b69edca4f838c4ad0454ebcd7a3b88517ccd80e71d1a0a37d85"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-sheet-1.png",
+      "sha256": "0ef87826d137f40e9200da5f7cc798687aca5646fa14ef2beb2d947d7d1dda57"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-sheet-2.png",
+      "sha256": "b6d2382e295991774fa41c9a488b7bd6ecd53f717c73b86f3034939e73ec5ff9"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/screenshots/mobile-sheet-3.png",
+      "sha256": "f04721d60d042817f5da601a0273ae3e1ff154e4adb59933ade09711f00a2b78"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/structure-result.json",
+      "sha256": "fbb41b3e3820dc5a7b671ddef109ee871a2198f4fc1d4913cd404df7b7000258"
+    },
+    {
+      "path": "docs/website-cong-khai/validation/ui-result.json",
+      "sha256": "f58fcea8c80e01dca1bef2106496bf4a833adadf6067fc30aaa3849e96b32bd3"
+    },
+    {
+      "path": "docs/gia-phat/01-prd.md",
+      "sha256": "7f0101f53eb164ac49a2bd5a5fe43f6d5d4f79e4adca5fa80eb36c1cdd9ff0e9"
+    },
+    {
+      "path": "docs/gia-phat/02-roadmap.md",
+      "sha256": "b414ef6968cb408f950fa770713a3d417fc8f14df690287102b0ea1d058c6664"
+    }
+  ],
+  "append": [
+    {
+      "path": "docs/OVERVIEW.md",
+      "bytes": 16205,
+      "sha256": "f28af6070e8bdf706c3fa0d836f0c517424f2e66a7cfba8b3fbfe442fc6e4248"
+    },
+    {
+      "path": "docs/project-dashboard.md",
+      "bytes": 13905,
+      "sha256": "bd4d9756510e930065cf67d7f843c9651801ad7c907388ca92fdd21d77eab0e5"
+    },
+    {
+      "path": "docs/gia-phat/review/progress-assessment.md",
+      "bytes": 13156,
+      "sha256": "f5865622cb16e84e1c8b8759d4f6098e69d9737d3a661123bbf8ff1ad2ee8bb7"
+    },
+    {
+      "path": "docs/gia-phat/review/next-session-prompt.md",
+      "bytes": 25122,
+      "sha256": "0a75f5c080dbcb909b9a31da260f4cdb312b39df03369c54085f3b40e92b0a34"
+    }
+  ]
+}

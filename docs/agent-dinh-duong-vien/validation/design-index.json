@@ -1,0 +1,573 @@
+{
+  "date": "2026-11-12",
+  "features": [
+    {
+      "id": "FEAT-060",
+      "priority": "P0",
+      "gateOnly": false
+    },
+    {
+      "id": "FEAT-061",
+      "priority": "P0",
+      "gateOnly": false
+    },
+    {
+      "id": "FEAT-062",
+      "priority": "P0",
+      "gateOnly": false
+    },
+    {
+      "id": "FEAT-063",
+      "priority": "P1",
+      "gateOnly": true
+    },
+    {
+      "id": "FEAT-064",
+      "priority": "P0",
+      "gateOnly": false
+    },
+    {
+      "id": "FEAT-065",
+      "priority": "P0",
+      "gateOnly": false
+    }
+  ],
+  "requirements": [
+    {
+      "n": "001",
+      "code": "SESS",
+      "feat": "FEAT-060",
+      "title": "Mở phiên yêu cầu",
+      "actor": "PER-01, PER-02",
+      "input": "kênh, bằng chứng identity/consent theo policy",
+      "process": "Kiểm policy truy cập và nhóm từ server; cấp sessionRef opaque gắn chủ thể; chưa chốt guest không tự tạo users/eaters",
+      "output": "Phiên được phép hoặc từ chối",
+      "gate": "E9-Q02, E9-Q10",
+      "ui": "UI-AIN-01",
+      "method": "POST",
+      "route": "/v1/nutrition-agent/sessions",
+      "dto": "SessionInput → Session",
+      "scenarios": [
+        [
+          "policy/consent đã duyệt và identity hợp lệ",
+          "mở phiên",
+          "có sessionRef đúng chủ thể, không cấp quyền cost"
+        ],
+        [
+          "chưa chốt loại người dùng hoặc consent",
+          "mở phiên",
+          "từ chối, không gọi AI, không lưu hội thoại"
+        ],
+        [
+          "phiên người khác hoặc đã thu hồi",
+          "đọc lại phiên",
+          "404 hoặc 401 an toàn, không phục hồi dữ liệu ngoài quyền"
+        ]
+      ],
+      "fr": "FR-AIN-SESS-001",
+      "uc": "UC-AIN-001",
+      "us": "US-AIN-001",
+      "api": "API-AIN-001"
+    },
+    {
+      "n": "002",
+      "code": "GEN",
+      "feat": "FEAT-060",
+      "title": "Yêu cầu thực đơn tập thể",
+      "actor": "PER-01, PER-02",
+      "input": "sessionRef, loại suất, số suất nguyên dương, tuần/ngày, khẩu vị/kiêng kỵ theo danh mục",
+      "process": "Kiểm đầu vào/policy/nguồn và reserve hạn mức trước nhận; dựng candidate chỉ món/công thức đã duyệt qua tools; không tự tính dinh dưỡng/cost",
+      "output": "Run và candidate chờ kiểm; không trả nháp chưa kiểm là hợp lệ",
+      "gate": "E9-Q01, E9-Q03, E9-Q07, E9-Q11, E9-Q12, E9-Q13",
+      "ui": "UI-AIN-01",
+      "method": "POST",
+      "route": "/v1/nutrition-agent/requests",
+      "dto": "MenuRequest + key → Run",
+      "scenarios": [
+        [
+          "nguồn đã duyệt, đủ hạn mức và yêu cầu khả thi",
+          "gửi yêu cầu",
+          "run bền vững; candidate phải qua CHK trước trình bày"
+        ],
+        [
+          "số suất âm/lẻ hoặc kiêng kỵ không rõ",
+          "gửi",
+          "400/422 hoặc NEEDS_INPUT, không tự đoán"
+        ],
+        [
+          "gửi lặp cùng key/body sau mất mạng",
+          "gửi lại",
+          "trả cùng run, không reserve/tính lượt lần hai"
+        ]
+      ],
+      "fr": "FR-AIN-GEN-001",
+      "uc": "UC-AIN-002",
+      "us": "US-AIN-002",
+      "api": "API-AIN-002"
+    },
+    {
+      "n": "003",
+      "code": "CHK",
+      "feat": "FEAT-060",
+      "title": "Kiểm và xem phương án",
+      "actor": "PER-01, PER-02",
+      "input": "runRef, candidateRevision/hash, phiên bản nguồn",
+      "process": "Orchestrator gọi FR-MENU-RUL-002 không lưu; buộc toàn phương án khớp hash/ruleVersion; lọc kết quả nhạy cảm trước model/UI; nguồn thiếu/cứng fail không hợp lệ",
+      "output": "Candidate đã kiểm, bảng kiểm an toàn hoặc trạng thái chặn",
+      "gate": "E9-Q05, E9-Q12, E9-Q13",
+      "ui": "UI-AIN-02",
+      "method": "GET",
+      "route": "/v1/nutrition-agent/requests/{id}",
+      "dto": "— → SafeRun",
+      "scenarios": [
+        [
+          "candidate đúng nguồn và máy E2 không vi phạm cứng",
+          "hoàn tất kiểm rồi GET",
+          "hiện nháp đã kiểm, bảng kiểm an toàn và version"
+        ],
+        [
+          "máy kiểm lỗi hoặc vi phạm cứng",
+          "đọc kết quả",
+          "không trả VALID; không cho gửi nháp đó"
+        ],
+        [
+          "nguồn/ruleVersion đổi sau kiểm",
+          "xem hoặc gửi",
+          "đánh dấu stale và yêu cầu kiểm lại, không dùng evidence cũ"
+        ]
+      ],
+      "fr": "FR-AIN-CHK-001",
+      "uc": "UC-AIN-003",
+      "us": "US-AIN-003",
+      "api": "API-AIN-003"
+    },
+    {
+      "n": "004",
+      "code": "EXPL",
+      "feat": "FEAT-061",
+      "title": "Giải thích thực đơn",
+      "actor": "PER-01, PER-02",
+      "input": "candidateRef/revision và mục cần giải thích",
+      "process": "Chỉ diễn giải projection món, định lượng, bảng kiểm public và 4 chỉ số từ E4; gắn nguồn và nhãn; không tự tính, không nêu nguyên nhân cost",
+      "output": "Giải thích có nguồn, hoặc thiếu dữ liệu",
+      "gate": "E9-Q04, E9-Q05, E9-Q12",
+      "ui": "UI-AIN-02",
+      "method": "POST",
+      "route": "/v1/nutrition-agent/requests/{id}/explanations",
+      "dto": "ExplanationInput + key → SafeExplanation",
+      "scenarios": [
+        [
+          "candidate đã kiểm và đủ nguồn E4",
+          "yêu cầu giải thích",
+          "4 chỉ số có đơn vị/nguồn và nhãn ước tính từ định lượng sống"
+        ],
+        [
+          "nguồn dinh dưỡng thiếu hoặc stale",
+          "hỏi dinh dưỡng",
+          "ghi chưa đủ/cũ, không bịa số hoặc thay null bằng 0"
+        ],
+        [
+          "hỏi suy giá nhập từ giá suất và định lượng",
+          "yêu cầu giải thích",
+          "không suy ngược, không gọi tool cấm; trả từ chối an toàn"
+        ]
+      ],
+      "fr": "FR-AIN-EXPL-001",
+      "uc": "UC-AIN-004",
+      "us": "US-AIN-004",
+      "api": "API-AIN-004"
+    },
+    {
+      "n": "005",
+      "code": "EDIT",
+      "feat": "FEAT-061",
+      "title": "Chỉnh thực đơn và kiểm lại",
+      "actor": "PER-01, PER-02",
+      "input": "candidateRef, baseRevision, chỉ dẫn đổi ngày/vị trí/món",
+      "process": "Làm rõ yêu cầu mơ hồ; tạo revision mới với diff; luôn chạy lại máy E2 toàn tuần và kiểm nguồn, không tái dùng pass cũ",
+      "output": "Nháp revision mới đã kiểm hoặc nhánh không đạt",
+      "gate": "E9-Q03, E9-Q05, E9-Q12, E9-Q13",
+      "ui": "UI-AIN-03",
+      "method": "POST",
+      "route": "/v1/nutrition-agent/requests/{id}/revisions",
+      "dto": "RevisionInput + key → Run",
+      "scenarios": [
+        [
+          "revision hiện hành và đổi món hợp lệ",
+          "chỉnh một ngày",
+          "chạy E2 toàn tuần; chỉ bản mới đạt mới được ghi đã kiểm"
+        ],
+        [
+          "đổi tạo vi phạm cứng",
+          "chỉnh",
+          "bản mới bị chặn; không trình bày hợp lệ, bản cũ chỉ lịch sử"
+        ],
+        [
+          "hai tab sửa cùng baseRevision",
+          "gửi hai chỉnh sửa",
+          "một revision tiến; lệnh cũ 409, không ghi đè"
+        ]
+      ],
+      "fr": "FR-AIN-EDIT-001",
+      "uc": "UC-AIN-005",
+      "us": "US-AIN-005",
+      "api": "API-AIN-005"
+    },
+    {
+      "n": "006",
+      "code": "SEND",
+      "feat": "FEAT-062",
+      "title": "Gửi đề xuất về Gia Phát",
+      "actor": "PER-01, PER-02",
+      "input": "candidateRef/revision, nguồn kênh, liên hệ tối thiểu và consent được duyệt",
+      "process": "Lệnh do khách xác nhận; kiểm lại quyền/evidence hiện hành; ghi proposal và nguồn bền vững trước ACK; chuyển qua port tối thiểu khi có đầu nhận; không gọi applyDraft",
+      "output": "Mã tiếp nhận khi đã lưu; chỉ đề xuất chờ người thật",
+      "gate": "E9-Q06, E9-Q10, E9-Q13",
+      "ui": "UI-AIN-04",
+      "method": "POST",
+      "route": "/v1/nutrition-agent/proposals",
+      "dto": "ProposalInput + key → ProposalReceipt",
+      "scenarios": [
+        [
+          "đầu nhận được duyệt, consent đủ, nháp đạt kiểm mới",
+          "xác nhận gửi",
+          "receipt bền vững và CHỜ XEM XÉT; không menus/order/báo giá"
+        ],
+        [
+          "chưa chọn nơi lưu/đầu nhận",
+          "gửi",
+          "503/policy closed, không báo thành công hoặc vào CRM"
+        ],
+        [
+          "đã lưu nhưng mất phản hồi/nhận trùng",
+          "gửi lại cùng key",
+          "cùng proposal/receipt; không tạo lead hoặc đề xuất trùng"
+        ]
+      ],
+      "fr": "FR-AIN-SEND-001",
+      "uc": "UC-AIN-006",
+      "us": "US-AIN-006",
+      "api": "API-AIN-006"
+    },
+    {
+      "n": "007",
+      "code": "STAT",
+      "feat": "FEAT-062",
+      "title": "Xem trạng thái đề xuất",
+      "actor": "PER-01, PER-02",
+      "input": "proposalRef",
+      "process": "Kiểm quyền sở hữu; chỉ phản ánh trạng thái có evidence từ nơi nhận; không suy giao thành công từ thông báo; wording sau tiếp nhận chờ Q06",
+      "output": "Trạng thái tiếp nhận an toàn, không cam kết SLA",
+      "gate": "E9-Q06, E9-Q13",
+      "ui": "UI-AIN-04",
+      "method": "GET",
+      "route": "/v1/nutrition-agent/proposals/{id}",
+      "dto": "— → SafeProposalStatus",
+      "scenarios": [
+        [
+          "proposal đã tiếp nhận bền vững thuộc chủ thể",
+          "xem",
+          "hiện chờ người thật xem xét, không coi đã áp dụng"
+        ],
+        [
+          "proposal ngoài quyền",
+          "xem",
+          "404 đồng nhất không lộ tồn tại"
+        ],
+        [
+          "chưa receipt bàn giao hoặc trạng thái đến muộn",
+          "xem",
+          "không tự chuyển đã bàn giao/đã duyệt"
+        ]
+      ],
+      "fr": "FR-AIN-STAT-001",
+      "uc": "UC-AIN-007",
+      "us": "US-AIN-007",
+      "api": "API-AIN-007"
+    },
+    {
+      "n": "008",
+      "code": "GATE",
+      "feat": "FEAT-063",
+      "title": "Từ chối gợi ý cá nhân khi gate đóng",
+      "actor": "PER-03, PER-04",
+      "input": "chỉ yêu cầu xem khả dụng, không nhận profile/consent sức khỏe",
+      "process": "O-03 chưa mở và FEAT-047 gate-only: không gọi recommendation, không đọc/thu/suy luận hồ sơ; điều kiện mở ghi riêng, chưa xây luồng mở",
+      "output": "CLOSED, lý do khả dụng chung; không gợi ý",
+      "gate": "E9-Q14",
+      "ui": "UI-AIN-07",
+      "method": "GET",
+      "route": "/v1/nutrition-agent/personal-availability",
+      "dto": "— → {state:CLOSED}",
+      "scenarios": [
+        [
+          "gate O-03 đóng",
+          "xem khả dụng",
+          "CLOSED, không có biểu mẫu hồ sơ"
+        ],
+        [
+          "client cố gửi trường bệnh lý/hồ sơ",
+          "gọi đường không được hỗ trợ",
+          "từ chối, không chuyển payload tới model hoặc lưu hồ sơ"
+        ],
+        [
+          "client tự khai gate đã mở",
+          "yêu cầu gợi ý",
+          "server giữ CLOSED; không quyền client đổi gate"
+        ]
+      ],
+      "fr": "FR-AIN-GATE-001",
+      "uc": "UC-AIN-008",
+      "us": "US-AIN-008",
+      "api": "API-AIN-008"
+    },
+    {
+      "n": "009",
+      "code": "LIMT",
+      "feat": "FEAT-064",
+      "title": "Kiểm và giữ hạn mức lượt/ngân sách",
+      "actor": "Hệ thống; PER-08 giám sát",
+      "input": "principal/group từ server, policyVersion, dự trù upper bound chi phí",
+      "process": "Admission giữ chỗ nguyên tử lượt và ngân sách ngày; spentConfirmed + outstandingReserved + upperBound không vượt cap; unknown không bằng 0; mỗi bước tool/model cần quyền và budget lease còn hiệu lực",
+      "output": "ADMITTED/QUOTA_BLOCKED/BUDGET_BLOCKED/UNKNOWN_BLOCKED",
+      "gate": "E9-Q01, E9-Q07, E9-Q13",
+      "ui": "UI-AIN-06",
+      "method": "PORT",
+      "route": "PORT-AIN-ADMISSION",
+      "dto": "AdmissionRequest → Decision",
+      "scenarios": [
+        [
+          "policy được duyệt và remaining đủ upper bound",
+          "nhận lượt",
+          "reserve nguyên tử trước bất kỳ phát sinh chi phí nào"
+        ],
+        [
+          "hết lượt/chạm trần hoặc không xác định được upper bound",
+          "nhận lượt",
+          "chặn không gọi provider; không fallback sang quota AIO"
+        ],
+        [
+          "nhiều lượt đồng thời sát trần, retry hoặc timeout usage unknown",
+          "nhận/đối soát",
+          "không overspend; giữ reserve khi chưa rõ usage; không hoàn bằng 0"
+        ]
+      ],
+      "fr": "FR-AIN-LIMT-001",
+      "uc": "UC-AIN-009",
+      "us": "US-AIN-009",
+      "api": "PORT-AIN-ADMISSION"
+    },
+    {
+      "n": "010",
+      "code": "CONF",
+      "feat": "FEAT-064",
+      "title": "Xem và đề nghị đổi hạn mức",
+      "actor": "PER-08 có quyền được cấp",
+      "input": "group, policyVersion, giới hạn lượt, cap ngày/đơn vị/múi giờ, lý do",
+      "process": "Kiểm quyền server; version và hiệu lực; nếu policy cần duyệt thì tạo đề nghị, tách người tạo/sửa cuối khỏi duyệt theo E1; chưa chốt policy không kích hoạt",
+      "output": "Cấu hình/đề nghị và audit; không tự đặt số",
+      "gate": "E9-Q07, E9-Q08, E9-Q13",
+      "ui": "UI-AIN-05",
+      "method": "PUT",
+      "route": "/v1/nutrition-agent/admin/limits/{group}",
+      "dto": "LimitChange → PendingOrEffectivePolicy",
+      "scenarios": [
+        [
+          "quyền và policy thay đổi đã duyệt",
+          "đề nghị đổi hạn mức",
+          "audit trước/sau/lý do/version; hiệu lực đúng workflow"
+        ],
+        [
+          "thiếu quyền hoặc chưa quyết định cơ chế duyệt",
+          "đổi",
+          "403 hoặc policy closed; không tăng quota"
+        ],
+        [
+          "giảm cap thấp hơn spent+reserved hoặc version cũ",
+          "đổi",
+          "không hủy debt/ghi quá khứ; chặn admission mới, conflict 409 khi version cũ"
+        ]
+      ],
+      "fr": "FR-AIN-CONF-001",
+      "uc": "UC-AIN-010",
+      "us": "US-AIN-010",
+      "api": "API-AIN-010"
+    },
+    {
+      "n": "011",
+      "code": "SAFE",
+      "feat": "FEAT-065",
+      "title": "Chặn truy cập dữ liệu kinh tế nội bộ",
+      "actor": "Hệ thống",
+      "input": "mọi tool request, quyền và DTO đầu vào/ra",
+      "process": "Deny by default ở registry, API, service identity, DB grants; projection allowlist đệ quy trước model và response; không cho quyền AIO qua hội thoại; chặn cost, giá nhập, cost %, khoản khoán, chiết khấu và suy ngược",
+      "output": "Từ chối an toàn, event không payload nhạy cảm",
+      "gate": "E9-Q05, E9-Q13",
+      "ui": "UI-AIN-07",
+      "method": "PORT",
+      "route": "PORT-AIN-TOOL-GUARD",
+      "dto": "ToolInvocation → SafeResultOrDeny",
+      "scenarios": [
+        [
+          "agent chỉ có quyền AIN và projection sạch",
+          "gọi catalog được phép",
+          "chỉ trường allowlist; credential không SELECT bảng cấm"
+        ],
+        [
+          "prompt chèn lệnh, tool alias/SQL/URL hoặc request cost gián tiếp",
+          "gọi tool",
+          "403/deny trước truy cập, không chạy công cụ cấm"
+        ],
+        [
+          "cost nằm trong nested error/log/giải thích/cache hoặc chuỗi suy giá suất",
+          "trả kết quả",
+          "không lộ bất kỳ giá trị/ratio/chiết khấu; chặn cả kênh phụ"
+        ]
+      ],
+      "fr": "FR-AIN-SAFE-001",
+      "uc": "UC-AIN-011",
+      "us": "US-AIN-011",
+      "api": "PORT-AIN-TOOL-GUARD"
+    },
+    {
+      "n": "012",
+      "code": "MED",
+      "feat": "FEAT-065",
+      "title": "Giữ ranh giới câu hỏi bệnh lý",
+      "actor": "Hệ thống",
+      "input": "nội dung người dùng tại biên an toàn; không tạo hồ sơ",
+      "process": "Chặn nhánh chẩn đoán/điều trị và cá nhân hóa sức khỏe; không hỏi thêm bệnh; nội dung nhắc bắt buộc chờ duyệt E9-Q09; không lưu raw sức khỏe hoặc đưa vào tool/model",
+      "output": "Trạng thái ngoài phạm vi và placeholder lời nhắc chờ xác nhận",
+      "gate": "E9-Q03, E9-Q09, E9-Q10, E9-Q14",
+      "ui": "UI-AIN-07",
+      "method": "PORT",
+      "route": "PORT-AIN-SAFETY",
+      "dto": "InputClassification → SafeRefusal",
+      "scenarios": [
+        [
+          "nội dung nhắc và rubric đã duyệt",
+          "câu hỏi về bệnh lý",
+          "có đúng lời nhắc được duyệt và không chẩn đoán/điều trị"
+        ],
+        [
+          "chưa duyệt nội dung lời nhắc",
+          "cố mở hội thoại thật",
+          "BLOCKED; mock chỉ ghi nội dung chờ xác nhận"
+        ],
+        [
+          "nội dung sức khỏe xen trong yêu cầu đổi món",
+          "tiếp nhận",
+          "không lưu/suy ra hồ sơ, không tự coi là kiêng nguyên liệu thông thường"
+        ]
+      ],
+      "fr": "FR-AIN-MED-001",
+      "uc": "UC-AIN-012",
+      "us": "US-AIN-012",
+      "api": "PORT-AIN-SAFETY"
+    },
+    {
+      "n": "013",
+      "code": "LOG",
+      "feat": "FEAT-064",
+      "title": "Đối soát lượt và chi phí AI",
+      "actor": "PER-08 có quyền được cấp",
+      "input": "ngày/group, runRef, sự kiện usage có provenance",
+      "process": "Đối soát theo run/event duy nhất, tách confirmed/estimated/unknown/reserved; không biến unknown=0; xem theo quyền không raw hội thoại; log AIN không đọc log AIO",
+      "output": "Báo cáo quota/ngân sách AI và sai lệch chưa xử lý",
+      "gate": "E9-Q07, E9-Q08, E9-Q10, E9-Q13",
+      "ui": "UI-AIN-05",
+      "method": "GET",
+      "route": "/v1/nutrition-agent/admin/usage",
+      "dto": "UsageQuery → UsageLedgerSummary",
+      "scenarios": [
+        [
+          "usage confirmed có nguồn và quyền xem",
+          "đối soát ngày",
+          "tổng AI đúng ledger/đơn vị và policyVersion, không cost nguyên liệu"
+        ],
+        [
+          "usage missing/provider lỗi",
+          "xem báo cáo",
+          "UNKNOWN cùng reservation, không báo còn đủ tiền giả"
+        ],
+        [
+          "sự kiện trùng/đến muộn qua ranh giới ngày",
+          "đối soát",
+          "một lần theo eventId; gắn ngày theo policy được duyệt; không reset debt"
+        ]
+      ],
+      "fr": "FR-AIN-LOG-001",
+      "uc": "UC-AIN-013",
+      "us": "US-AIN-013",
+      "api": "API-AIN-013"
+    }
+  ],
+  "brMap": {
+    "SESS": [
+      "001",
+      "011",
+      "014"
+    ],
+    "GEN": [
+      "001",
+      "002",
+      "008",
+      "014"
+    ],
+    "CHK": [
+      "002",
+      "003",
+      "013",
+      "014"
+    ],
+    "EXPL": [
+      "003",
+      "006",
+      "007",
+      "013"
+    ],
+    "EDIT": [
+      "002",
+      "003",
+      "008"
+    ],
+    "SEND": [
+      "001",
+      "004",
+      "011"
+    ],
+    "STAT": [
+      "001",
+      "004"
+    ],
+    "GATE": [
+      "005",
+      "014"
+    ],
+    "LIMT": [
+      "008",
+      "014"
+    ],
+    "CONF": [
+      "009",
+      "014"
+    ],
+    "SAFE": [
+      "001",
+      "006",
+      "007",
+      "012",
+      "013"
+    ],
+    "MED": [
+      "005",
+      "007",
+      "010",
+      "011"
+    ],
+    "LOG": [
+      "008",
+      "011"
+    ]
+  }
+}

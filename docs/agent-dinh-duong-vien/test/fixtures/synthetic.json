@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "approved": false,
+  "requests": [
+    {
+      "id": "SYN-M01",
+      "mealType": "A",
+      "servings": 100,
+      "taste": "OPTION_SYNTHETIC",
+      "exclusion": "INGREDIENT_SYNTHETIC"
+    },
+    {
+      "id": "SYN-M02",
+      "instruction": "Đổi món cá ở ngày thứ ba sang món B"
+    }
+  ],
+  "scenarioKeys": [
+    "HARD_RULE_FAIL",
+    "VALIDATOR_DOWN",
+    "SOURCE_STALE",
+    "NO_RECEIPT",
+    "QUOTA_EXHAUSTED",
+    "BUDGET_UNKNOWN",
+    "TOOL_DENY",
+    "PERSONAL_GATE_CLOSED"
+  ],
+  "budgetValues": null,
+  "healthProfiles": []
+}

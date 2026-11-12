@@ -1,0 +1,471 @@
+{
+  "scope": "Offline static mock only, not AI/API/UAT",
+  "checks": [
+    {
+      "name": "candidate hidden missing",
+      "passed": true
+    },
+    {
+      "name": "status readable missing",
+      "passed": true
+    },
+    {
+      "name": "candidate hidden stale",
+      "passed": true
+    },
+    {
+      "name": "status readable stale",
+      "passed": true
+    },
+    {
+      "name": "candidate hidden invalid",
+      "passed": true
+    },
+    {
+      "name": "status readable invalid",
+      "passed": true
+    },
+    {
+      "name": "candidate hidden loading",
+      "passed": true
+    },
+    {
+      "name": "status readable loading",
+      "passed": true
+    },
+    {
+      "name": "candidate hidden empty",
+      "passed": true
+    },
+    {
+      "name": "status readable empty",
+      "passed": true
+    },
+    {
+      "name": "candidate hidden error",
+      "passed": true
+    },
+    {
+      "name": "status readable error",
+      "passed": true
+    },
+    {
+      "name": "synthetic visible",
+      "passed": true
+    },
+    {
+      "name": "all business buttons disabled",
+      "passed": true
+    },
+    {
+      "name": "no health form",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 01",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 01",
+      "passed": true
+    },
+    {
+      "name": "desktop label 01",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 02",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 02",
+      "passed": true
+    },
+    {
+      "name": "desktop label 02",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 03",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 03",
+      "passed": true
+    },
+    {
+      "name": "desktop label 03",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 04",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 04",
+      "passed": true
+    },
+    {
+      "name": "desktop label 04",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 05",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 05",
+      "passed": true
+    },
+    {
+      "name": "desktop label 05",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 06",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 06",
+      "passed": true
+    },
+    {
+      "name": "desktop label 06",
+      "passed": true
+    },
+    {
+      "name": "desktop visible 07",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 07",
+      "passed": true
+    },
+    {
+      "name": "desktop label 07",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 01",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 01",
+      "passed": true
+    },
+    {
+      "name": "mobile label 01",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 02",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 02",
+      "passed": true
+    },
+    {
+      "name": "mobile label 02",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 03",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 03",
+      "passed": true
+    },
+    {
+      "name": "mobile label 03",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 04",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 04",
+      "passed": true
+    },
+    {
+      "name": "mobile label 04",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 05",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 05",
+      "passed": true
+    },
+    {
+      "name": "mobile label 05",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 06",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 06",
+      "passed": true
+    },
+    {
+      "name": "mobile label 06",
+      "passed": true
+    },
+    {
+      "name": "mobile visible 07",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 07",
+      "passed": true
+    },
+    {
+      "name": "mobile label 07",
+      "passed": true
+    },
+    {
+      "name": "small visible 01",
+      "passed": true
+    },
+    {
+      "name": "small overflow 01",
+      "passed": true
+    },
+    {
+      "name": "small label 01",
+      "passed": true
+    },
+    {
+      "name": "small visible 02",
+      "passed": true
+    },
+    {
+      "name": "small overflow 02",
+      "passed": true
+    },
+    {
+      "name": "small label 02",
+      "passed": true
+    },
+    {
+      "name": "small visible 03",
+      "passed": true
+    },
+    {
+      "name": "small overflow 03",
+      "passed": true
+    },
+    {
+      "name": "small label 03",
+      "passed": true
+    },
+    {
+      "name": "small visible 04",
+      "passed": true
+    },
+    {
+      "name": "small overflow 04",
+      "passed": true
+    },
+    {
+      "name": "small label 04",
+      "passed": true
+    },
+    {
+      "name": "small visible 05",
+      "passed": true
+    },
+    {
+      "name": "small overflow 05",
+      "passed": true
+    },
+    {
+      "name": "small label 05",
+      "passed": true
+    },
+    {
+      "name": "small visible 06",
+      "passed": true
+    },
+    {
+      "name": "small overflow 06",
+      "passed": true
+    },
+    {
+      "name": "small label 06",
+      "passed": true
+    },
+    {
+      "name": "small visible 07",
+      "passed": true
+    },
+    {
+      "name": "small overflow 07",
+      "passed": true
+    },
+    {
+      "name": "small label 07",
+      "passed": true
+    },
+    {
+      "name": "preview documents",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-api-api-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-api-data-mapping-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-epic-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-review-dependencies-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-review-handoff-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-review-questions-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-srs-data-dictionary-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-srs-error-matrix-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-srs-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-srs-states-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-checklist-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-evidence-protocol-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-fixtures-README-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-r9-acceptance-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-system-cases-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-test-cases-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-test-traceability-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-ui-screens-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-ui-user-flow-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-index-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-001-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-002-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-003-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-004-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-005-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-006-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-007-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-008-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-009-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-010-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-011-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-012-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-AIN-013-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-userstories-acceptance-criteria-md",
+      "passed": true
+    },
+    {
+      "name": "preview #doc-userstories-backlog-md",
+      "passed": true
+    },
+    {
+      "name": "preview mobile overflow",
+      "passed": true
+    },
+    {
+      "name": "no network requests",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "network": []
+}
