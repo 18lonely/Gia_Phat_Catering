@@ -1,0 +1,10 @@
+{
+  "scope": "BA HTML simulation only; backend/model tests=0",
+  "results": [
+    "CORE: six screens at360/390px, login5-fail/password clearing, role scope, separate approval, idempotent mock approval, offline and job retry",
+    "NUTR: three screens, fixture40/50kcal, selected combination, missing source, immutable old snapshot, version conflict, escaped source,360/390px",
+    "AIO: three screens, Monday validation, all4 non-valid outcomes block apply, confirm/cancel/replay, stale guard, revision/diff, escaped log,360/390px"
+  ],
+  "previewPages": 5,
+  "jsErrors": []
+}

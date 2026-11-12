@@ -1,0 +1,65 @@
+{
+  "scope": "Structural BA validation only; backend tests=0",
+  "inventory": [
+    {
+      "folder": "nen-tang",
+      "fr": 26,
+      "storyLinked": 26,
+      "testLinked": 26,
+      "uiExplicitLinked": 26,
+      "httpEndpoints": 25,
+      "stories": 26,
+      "ucFiles": 26,
+      "htmlFiles": 1
+    },
+    {
+      "folder": "thuc-don-dinh-luong",
+      "fr": 55,
+      "storyLinked": 54,
+      "testLinked": 54,
+      "uiExplicitLinked": 8,
+      "httpEndpoints": 60,
+      "stories": 53,
+      "ucFiles": 13,
+      "htmlFiles": 3
+    },
+    {
+      "folder": "cost",
+      "fr": 45,
+      "storyLinked": 43,
+      "testLinked": 43,
+      "uiExplicitLinked": 1,
+      "httpEndpoints": 37,
+      "stories": 28,
+      "ucFiles": 16,
+      "htmlFiles": 2
+    },
+    {
+      "folder": "dinh-duong",
+      "fr": 5,
+      "storyLinked": 5,
+      "testLinked": 5,
+      "uiExplicitLinked": 5,
+      "httpEndpoints": 7,
+      "stories": 5,
+      "ucFiles": 5,
+      "htmlFiles": 1
+    },
+    {
+      "folder": "agent-noi-bo",
+      "fr": 6,
+      "storyLinked": 6,
+      "testLinked": 6,
+      "uiExplicitLinked": 6,
+      "httpEndpoints": 6,
+      "stories": 6,
+      "ucFiles": 6,
+      "htmlFiles": 1
+    }
+  ],
+  "markdownFilesChecked": 172,
+  "errors": [],
+  "menuUnmappedFR": [
+    "FR-MENU-RCP-007"
+  ]
+}

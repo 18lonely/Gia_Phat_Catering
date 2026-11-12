@@ -1,0 +1,26 @@
+{
+  "scope": "Structural document validation + synthetic Decimal only; backend tests run=0",
+  "counts": {
+    "NUTR": {
+      "fr": 5,
+      "story": 5,
+      "ac": 15,
+      "test": 28,
+      "blocked": 5,
+      "notRun": 23,
+      "api": 7
+    },
+    "AIO": {
+      "fr": 6,
+      "story": 6,
+      "ac": 18,
+      "test": 32,
+      "blocked": 4,
+      "notRun": 28,
+      "api": 6
+    }
+  },
+  "tables": 65,
+  "markdownFilesChecked": 50,
+  "errors": []
+}
