@@ -1,0 +1,1061 @@
+{
+  "features": [
+    [
+      "FEAT-070",
+      "CUS",
+      "Hồ sơ khách hàng 360°; phát hiện và gộp trùng",
+      "001–006"
+    ],
+    [
+      "FEAT-071",
+      "CUS",
+      "Vòng đời và nguy cơ rời theo lịch điểm",
+      "007–008"
+    ],
+    [
+      "FEAT-072",
+      "SALE",
+      "Cơ hội, báo giá có phiên bản và thực đơn",
+      "009–012"
+    ],
+    [
+      "FEAT-073",
+      "SALE",
+      "Hợp đồng và phụ lục giá theo loại suất",
+      "013–016"
+    ]
+  ],
+  "requirements": [
+    {
+      "n": "001",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-VIEW-001",
+      "uc": "UC-CRM-001",
+      "us": "US-CRM-001",
+      "api": "API-CRM-001",
+      "ui": "UI-CRM-01",
+      "title": "Xem hồ sơ khách hàng 360°",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "GET",
+      "path": "/v1/crm/customers/{id}/overview",
+      "input": "customerId, kỳ xem và phạm vi cơ sở",
+      "logic": "Đọc từng nhóm liên hệ, điểm, hợp đồng, order, doanh thu, phản hồi theo nguồn và quyền; giữ nguồn, thời điểm và độ đầy đủ riêng từng nhóm",
+      "output": "Hồ sơ có các nhóm dữ liệu và trạng thái ĐỦ / THIẾU / CHƯA CÓ NGUỒN; không cộng phần chưa xác định thành 0",
+      "gates": "E6-CG-01/08; E7-Q03/04/08; E10-Q01",
+      "value": "đối chiếu lịch sử khách mà không nhập lại doanh thu",
+      "scenarios": [
+        [
+          "nguồn order và doanh thu đã được xác nhận cho khách A",
+          "mở hồ sơ A trong kỳ được phép",
+          "hiện đúng nguồn và phiên bản; tổng doanh thu có nhãn phạm vi, không tự tính từ số giao"
+        ],
+        [
+          "nguồn doanh thu hoặc phản hồi chưa có",
+          "mở hồ sơ A",
+          "nhóm tương ứng ghi CHƯA CÓ NGUỒN; giá trị null, không 0; không mở chức năng phản hồi E12"
+        ],
+        [
+          "người dùng chỉ có phạm vi khách A",
+          "đổi mã hồ sơ sang khách B",
+          "trả ERR-CRM-404-01; không lộ liên hệ hoặc tổng tiền của B"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-001-01",
+          "tc": "TC-CRM-001-01",
+          "given": "nguồn order và doanh thu đã được xác nhận cho khách A",
+          "when": "mở hồ sơ A trong kỳ được phép",
+          "then": "hiện đúng nguồn và phiên bản; tổng doanh thu có nhãn phạm vi, không tự tính từ số giao",
+          "status": "BLOCKED",
+          "gate": "E6-CG-01/08; E7-Q03/04/08; E10-Q01"
+        },
+        {
+          "ac": "AC-CRM-001-02",
+          "tc": "TC-CRM-001-02",
+          "given": "nguồn doanh thu hoặc phản hồi chưa có",
+          "when": "mở hồ sơ A",
+          "then": "nhóm tương ứng ghi CHƯA CÓ NGUỒN; giá trị null, không 0; không mở chức năng phản hồi E12",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-001-03",
+          "tc": "TC-CRM-001-03",
+          "given": "người dùng chỉ có phạm vi khách A",
+          "when": "đổi mã hồ sơ sang khách B",
+          "then": "trả ERR-CRM-404-01; không lộ liên hệ hoặc tổng tiền của B",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "002",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-CONT-001",
+      "uc": "UC-CRM-002",
+      "us": "US-CRM-002",
+      "api": "API-CRM-002",
+      "ui": "UI-CRM-01",
+      "title": "Ghi nháp thông tin liên hệ CRM",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/customer-contact-drafts",
+      "input": "customerRef, tên liên hệ, vai trò liên hệ, phương thức liên hệ, nguồn xác minh",
+      "logic": "Kiểm quyền và dữ liệu tối thiểu theo chính sách được duyệt; lưu bản nháp liên hệ gắn khách tham chiếu, không tạo khách chủ hoặc tài khoản đặt món",
+      "output": "Bản nháp liên hệ có version và audit; khách chủ và điểm phục vụ không đổi",
+      "gates": "E10-Q01; E6-CG-08",
+      "value": "lưu đầu mối có nguồn xác minh",
+      "scenarios": [
+        [
+          "danh mục trường và quyền lưu liên hệ đã được duyệt",
+          "ghi đầu mối A từ nguồn xác minh",
+          "tạo đúng một bản nháp liên hệ và audit, không tạo users hoặc service_points"
+        ],
+        [
+          "yêu cầu chứa role quản trị hoặc customerId ngoài phạm vi",
+          "gửi nháp liên hệ",
+          "từ chối trường lạ hoặc phạm vi; không cấp quyền đặt món"
+        ],
+        [
+          "quyết định thời gian lưu và xử lý xóa chưa có",
+          "yêu cầu lưu hoặc xóa thông tin liên hệ thật",
+          "giữ BLOCKED E10-Q01; không dùng thời gian lưu audit làm thời gian lưu liên hệ"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-002-01",
+          "tc": "TC-CRM-002-01",
+          "given": "danh mục trường và quyền lưu liên hệ đã được duyệt",
+          "when": "ghi đầu mối A từ nguồn xác minh",
+          "then": "tạo đúng một bản nháp liên hệ và audit, không tạo users hoặc service_points",
+          "status": "BLOCKED",
+          "gate": "E10-Q01; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-002-02",
+          "tc": "TC-CRM-002-02",
+          "given": "yêu cầu chứa role quản trị hoặc customerId ngoài phạm vi",
+          "when": "gửi nháp liên hệ",
+          "then": "từ chối trường lạ hoặc phạm vi; không cấp quyền đặt món",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-002-03",
+          "tc": "TC-CRM-002-03",
+          "given": "quyết định thời gian lưu và xử lý xóa chưa có",
+          "when": "yêu cầu lưu hoặc xóa thông tin liên hệ thật",
+          "then": "giữ BLOCKED E10-Q01; không dùng thời gian lưu audit làm thời gian lưu liên hệ",
+          "status": "BLOCKED",
+          "gate": "E10-Q01; E6-CG-08"
+        }
+      ]
+    },
+    {
+      "n": "003",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-LEAD-001",
+      "uc": "UC-CRM-003",
+      "us": "US-CRM-003",
+      "api": "API-CRM-003",
+      "ui": "UI-CRM-02",
+      "title": "Tiếp nhận đề xuất từ website và E9",
+      "actor": "Dịch vụ tiếp nhận được cấp quyền; nhân viên chăm sóc khách theo dõi",
+      "method": "POST",
+      "path": "/v1/crm/intakes",
+      "input": "sourceSystem, sourceRef, sourceRevision, sourceHash, contactRef, consentRef, safeMenuRef nếu có",
+      "logic": "Kiểm giao tiếp đầu nhận đã được duyệt, chống trùng theo nguồn và revision; chỉ lưu nội dung được phép; cấp receipt sau ghi bền vững; nhân viên phân loại sau tiếp nhận",
+      "output": "Phiếu tiếp nhận và receipt của E10, chưa phải khách chủ hoặc hợp đồng; không trả dữ liệu nội bộ về E8/E9",
+      "gates": "E8-Q06/07/12; E9-Q06/10/13; E10-Q13",
+      "value": "không thất lạc yêu cầu tư vấn và không tạo trùng do gửi lại",
+      "scenarios": [
+        [
+          "hai bên đã duyệt trường bàn giao, consent và đầu nhận",
+          "nhận đề xuất từ PORT-AIN-HANDOFF hoặc PORT-PUB-LEAD-HANDOFF",
+          "receipt gắn đúng nguồn và hash sau ghi bền vững; trạng thái chờ người thật phân loại"
+        ],
+        [
+          "đầu nhận hoặc consent chưa được duyệt",
+          "nhận đề xuất thật",
+          "trả ERR-CRM-503-01; không báo đã vào CRM và không tự tạo customers"
+        ],
+        [
+          "phiếu đã lưu nhưng mất phản hồi",
+          "nhận lại cùng nguồn, revision và nội dung",
+          "trả receipt cũ theo quyền hiện tại; khác hash cùng định danh trả ERR-CRM-409-02"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-003-01",
+          "tc": "TC-CRM-003-01",
+          "given": "hai bên đã duyệt trường bàn giao, consent và đầu nhận",
+          "when": "nhận đề xuất từ PORT-AIN-HANDOFF hoặc PORT-PUB-LEAD-HANDOFF",
+          "then": "receipt gắn đúng nguồn và hash sau ghi bền vững; trạng thái chờ người thật phân loại",
+          "status": "BLOCKED",
+          "gate": "E8-Q06/07/12; E9-Q06/10/13; E10-Q13"
+        },
+        {
+          "ac": "AC-CRM-003-02",
+          "tc": "TC-CRM-003-02",
+          "given": "đầu nhận hoặc consent chưa được duyệt",
+          "when": "nhận đề xuất thật",
+          "then": "trả ERR-CRM-503-01; không báo đã vào CRM và không tự tạo customers",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-003-03",
+          "tc": "TC-CRM-003-03",
+          "given": "phiếu đã lưu nhưng mất phản hồi",
+          "when": "nhận lại cùng nguồn, revision và nội dung",
+          "then": "trả receipt cũ theo quyền hiện tại; khác hash cùng định danh trả ERR-CRM-409-02",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "004",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-DUP-001",
+      "uc": "UC-CRM-004",
+      "us": "US-CRM-004",
+      "api": "API-CRM-004",
+      "ui": "UI-CRM-03",
+      "title": "Lập đề nghị rà khách nghi trùng",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/duplicate-reviews",
+      "input": "cặp customerRef, bằng chứng nghi trùng, nguồn và version của hai hồ sơ",
+      "logic": "Chỉ áp tiêu chí phát hiện sau quyết định E10-Q02; hiện chỉ thiết kế khung danh sách và bằng chứng. Nhân viên mở cặp để đối chiếu, đề nghị giữ hồ sơ nào và từng trường; không tự gộp",
+      "output": "Đề nghị chờ duyệt với bản so sánh, nguồn và tập tham chiếu chịu tác động",
+      "gates": "E10-Q02/03; E6-CG-08",
+      "value": "tránh đánh đồng hai doanh nghiệp chỉ vì giống thông tin liên hệ",
+      "scenarios": [
+        [
+          "tiêu chí phát hiện đã được duyệt và cặp hồ sơ thuộc quyền",
+          "rà cặp nghi trùng và lập đề nghị",
+          "lưu tiêu chí phiên bản, bằng chứng và lựa chọn từng trường; chưa thay mã khách"
+        ],
+        [
+          "chưa chốt tiêu chí phát hiện trùng",
+          "yêu cầu quét tự động",
+          "BLOCKED E10-Q02; không tự chọn số điện thoại, tên hoặc mã số thuế làm khóa gộp"
+        ],
+        [
+          "hai khách khác nhau dùng chung một đầu mối",
+          "đánh giá cặp theo tiêu chí chính thức",
+          "kết quả theo bộ tiêu chí được duyệt; không có quy tắc mặc định coi chung đầu mối là trùng"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-004-01",
+          "tc": "TC-CRM-004-01",
+          "given": "tiêu chí phát hiện đã được duyệt và cặp hồ sơ thuộc quyền",
+          "when": "rà cặp nghi trùng và lập đề nghị",
+          "then": "lưu tiêu chí phiên bản, bằng chứng và lựa chọn từng trường; chưa thay mã khách",
+          "status": "BLOCKED",
+          "gate": "E10-Q02/03; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-004-02",
+          "tc": "TC-CRM-004-02",
+          "given": "chưa chốt tiêu chí phát hiện trùng",
+          "when": "yêu cầu quét tự động",
+          "then": "BLOCKED E10-Q02; không tự chọn số điện thoại, tên hoặc mã số thuế làm khóa gộp",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-004-03",
+          "tc": "TC-CRM-004-03",
+          "given": "hai khách khác nhau dùng chung một đầu mối",
+          "when": "đánh giá cặp theo tiêu chí chính thức",
+          "then": "kết quả theo bộ tiêu chí được duyệt; không có quy tắc mặc định coi chung đầu mối là trùng",
+          "status": "BLOCKED",
+          "gate": "E10-Q02/03; E6-CG-08"
+        }
+      ]
+    },
+    {
+      "n": "005",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-MRG-001",
+      "uc": "UC-CRM-005",
+      "us": "US-CRM-005",
+      "api": "API-CRM-005",
+      "ui": "UI-CRM-03",
+      "title": "Duyệt đề nghị gộp khách",
+      "actor": "Người duyệt gộp được chỉ định",
+      "method": "POST",
+      "path": "/v1/crm/duplicate-reviews/{id}/decisions",
+      "input": "reviewId, baseVersions, quyết định, lựa chọn trường và lý do",
+      "logic": "Người thật xem diff và tác động; kiểm quyền, tách người lập/sửa cuối với người duyệt theo đề xuất; chỉ thực hiện khi quyền sở hữu mã và cơ chế tham chiếu đã được duyệt; lưu ánh xạ và ảnh trước gộp nguyên tử",
+      "output": "Quyết định, nhật ký gộp, liên kết truy nguyên; không xóa hồ sơ gốc hoặc sửa snapshot tài chính",
+      "gates": "E10-Q03/04; E6-CG-08; O-06",
+      "value": "gộp có trách nhiệm và giữ lịch sử phục vụ",
+      "scenarios": [
+        [
+          "đề nghị đủ bằng chứng, nguồn và người duyệt được chỉ định",
+          "duyệt gộp đúng phiên bản",
+          "ghi gộp cùng audit và ảnh trước; vẫn truy được nguồn order, hợp đồng và doanh thu cũ"
+        ],
+        [
+          "người lập đề nghị tự duyệt hoặc chưa có quyền duyệt",
+          "gửi quyết định gộp",
+          "ERR-CRM-403-01 hoặc ERR-CRM-503-01; không thay ánh xạ khách"
+        ],
+        [
+          "một hồ sơ đổi version sau khi người duyệt mở diff",
+          "xác nhận gộp bằng version cũ",
+          "ERR-CRM-409-01; tải lại diff, không ghi đè thay đổi mới"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-005-01",
+          "tc": "TC-CRM-005-01",
+          "given": "đề nghị đủ bằng chứng, nguồn và người duyệt được chỉ định",
+          "when": "duyệt gộp đúng phiên bản",
+          "then": "ghi gộp cùng audit và ảnh trước; vẫn truy được nguồn order, hợp đồng và doanh thu cũ",
+          "status": "BLOCKED",
+          "gate": "E10-Q03/04; E6-CG-08; O-06"
+        },
+        {
+          "ac": "AC-CRM-005-02",
+          "tc": "TC-CRM-005-02",
+          "given": "người lập đề nghị tự duyệt hoặc chưa có quyền duyệt",
+          "when": "gửi quyết định gộp",
+          "then": "ERR-CRM-403-01 hoặc ERR-CRM-503-01; không thay ánh xạ khách",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-005-03",
+          "tc": "TC-CRM-005-03",
+          "given": "một hồ sơ đổi version sau khi người duyệt mở diff",
+          "when": "xác nhận gộp bằng version cũ",
+          "then": "ERR-CRM-409-01; tải lại diff, không ghi đè thay đổi mới",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "006",
+      "feature": "FEAT-070",
+      "fr": "FR-CUS-UNDO-001",
+      "uc": "UC-CRM-006",
+      "us": "US-CRM-006",
+      "api": "API-CRM-006",
+      "ui": "UI-CRM-03",
+      "title": "Hoàn tác một lần gộp khách",
+      "actor": "Người duyệt hoàn tác được chỉ định",
+      "method": "POST",
+      "path": "/v1/crm/merges/{id}/reversals",
+      "input": "mergeRef, versions hiện tại, lý do, bằng chứng và phân tích liên kết phát sinh sau gộp",
+      "logic": "Đọc ảnh trước gộp và diff hiện tại; lập phương án hoàn tác có người duyệt. Phải xử lý tham chiếu phát sinh theo quyết định Q04; ghi bù có liên kết tới lần gộp, không xóa audit hoặc tái tính giao dịch quá khứ",
+      "output": "Bản hoàn tác có audit hoặc danh sách xung đột cần xử lý; hồ sơ lịch sử vẫn truy nguyên",
+      "gates": "E10-Q03/04; E6-CG-08",
+      "value": "khôi phục khi gộp nhầm mà không làm mất giao dịch mới",
+      "scenarios": [
+        [
+          "người duyệt và phương án khôi phục đã được duyệt, không có xung đột mới",
+          "xác nhận hoàn tác lần gộp",
+          "khôi phục liên kết theo ảnh trước, ghi sự kiện bù; audit gộp còn nguyên"
+        ],
+        [
+          "thiếu ảnh trước gộp hoặc có tham chiếu mới chưa có phương án",
+          "yêu cầu hoàn tác",
+          "ERR-CRM-422-01 hoặc BLOCKED E10-Q04; không khôi phục một phần"
+        ],
+        [
+          "đã phát sinh order và hợp đồng mới sau gộp",
+          "lập phương án hoàn tác",
+          "phân bổ theo quyết định được duyệt; không tự chuyển toàn bộ giao dịch mới về một khách"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-006-01",
+          "tc": "TC-CRM-006-01",
+          "given": "người duyệt và phương án khôi phục đã được duyệt, không có xung đột mới",
+          "when": "xác nhận hoàn tác lần gộp",
+          "then": "khôi phục liên kết theo ảnh trước, ghi sự kiện bù; audit gộp còn nguyên",
+          "status": "BLOCKED",
+          "gate": "E10-Q03/04; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-006-02",
+          "tc": "TC-CRM-006-02",
+          "given": "thiếu ảnh trước gộp hoặc có tham chiếu mới chưa có phương án",
+          "when": "yêu cầu hoàn tác",
+          "then": "ERR-CRM-422-01 hoặc BLOCKED E10-Q04; không khôi phục một phần",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-006-03",
+          "tc": "TC-CRM-006-03",
+          "given": "đã phát sinh order và hợp đồng mới sau gộp",
+          "when": "lập phương án hoàn tác",
+          "then": "phân bổ theo quyết định được duyệt; không tự chuyển toàn bộ giao dịch mới về một khách",
+          "status": "BLOCKED",
+          "gate": "E10-Q03/04; E6-CG-08"
+        }
+      ]
+    },
+    {
+      "n": "007",
+      "feature": "FEAT-071",
+      "fr": "FR-CUS-LIFE-001",
+      "uc": "UC-CRM-007",
+      "us": "US-CRM-007",
+      "api": "API-CRM-007",
+      "ui": "UI-CRM-04",
+      "title": "Xem và đề nghị đổi vòng đời khách",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/customers/{id}/lifecycle-events",
+      "input": "customerRef, trạng thái hiện tại, trạng thái đề nghị, evidenceRef, reason, version",
+      "logic": "Đối chiếu ma trận chuyển đã duyệt với bằng chứng lịch phục vụ từng điểm; giữ sự kiện và actor; không suy khách rời từ một ngày không có order; tín hiệu rủi ro khác quyết định chuyển vòng đời",
+      "output": "Sự kiện vòng đời có căn cứ và lịch sử; nhánh không đủ căn cứ giữ trạng thái cũ",
+      "gates": "E10-Q05/06; E6-CG-05/06/08",
+      "value": "phân biệt tạm nghỉ, đang phục vụ và thực sự rời",
+      "scenarios": [
+        [
+          "ma trận và người có quyền đã được duyệt, có bằng chứng chuyển",
+          "đề nghị đổi từ PAUSED sang REACTIVATED",
+          "ghi trạng thái và evidence theo ma trận, giữ lịch sử trạng thái cũ"
+        ],
+        [
+          "không có order vào ngày không nằm trong lịch phục vụ",
+          "xem vòng đời khách",
+          "không tự chuyển CHURNED hoặc AT_RISK chỉ từ sự vắng mặt đó"
+        ],
+        [
+          "khách có nhiều điểm với lịch phục vụ khác nhau",
+          "tổng hợp vòng đời khách",
+          "áp đúng quy tắc tổng hợp đã được duyệt; chưa có quy tắc thì BLOCKED E10-Q05"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-007-01",
+          "tc": "TC-CRM-007-01",
+          "given": "ma trận và người có quyền đã được duyệt, có bằng chứng chuyển",
+          "when": "đề nghị đổi từ PAUSED sang REACTIVATED",
+          "then": "ghi trạng thái và evidence theo ma trận, giữ lịch sử trạng thái cũ",
+          "status": "BLOCKED",
+          "gate": "E10-Q05/06; E6-CG-05/06/08"
+        },
+        {
+          "ac": "AC-CRM-007-02",
+          "tc": "TC-CRM-007-02",
+          "given": "không có order vào ngày không nằm trong lịch phục vụ",
+          "when": "xem vòng đời khách",
+          "then": "không tự chuyển CHURNED hoặc AT_RISK chỉ từ sự vắng mặt đó",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-007-03",
+          "tc": "TC-CRM-007-03",
+          "given": "khách có nhiều điểm với lịch phục vụ khác nhau",
+          "when": "tổng hợp vòng đời khách",
+          "then": "áp đúng quy tắc tổng hợp đã được duyệt; chưa có quy tắc thì BLOCKED E10-Q05",
+          "status": "BLOCKED",
+          "gate": "E10-Q05/06; E6-CG-05/06/08"
+        }
+      ]
+    },
+    {
+      "n": "008",
+      "feature": "FEAT-071",
+      "fr": "FR-CUS-RISK-001",
+      "uc": "UC-CRM-008",
+      "us": "US-CRM-008",
+      "api": "API-CRM-008",
+      "ui": "UI-CRM-04",
+      "title": "Rà tín hiệu nguy cơ rời theo lịch điểm",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "GET",
+      "path": "/v1/crm/customers/{id}/risk-signals",
+      "input": "customerRef, khoảng quan sát, lịch điểm có phiên bản, sự kiện phục vụ có nguồn",
+      "logic": "Đọc kết quả đánh giá đã có với nguồn và mức đầy đủ; chỉ đánh giá các kỳ phục vụ dự kiến, loại ngày nghỉ đã xác nhận theo policy. Không tự đặt số ngày, trọng số, ngưỡng hoặc suy thiếu dữ liệu là không phát sinh",
+      "output": "Tín hiệu có lý do, lịch/nguồn, hoặc CHƯA ĐỦ DỮ LIỆU; GET không chạy tác vụ đánh giá",
+      "gates": "E10-Q06; E6-CG-03/05/06/08; E7-Q02/03; Q-13",
+      "value": "ưu tiên chăm sóc đúng điểm thực sự có dấu hiệu giảm phục vụ",
+      "scenarios": [
+        [
+          "lịch ngoại lệ, ngưỡng và nguồn sự kiện đã được duyệt",
+          "đọc tín hiệu của khách A",
+          "giải thích bằng các kỳ phục vụ đủ điều kiện và nguồn, không dùng số ngày lịch đơn thuần"
+        ],
+        [
+          "lịch thiếu hoặc dữ liệu giao nhận chưa xác nhận",
+          "xem tín hiệu",
+          "hiện CHƯA ĐỦ DỮ LIỆU và nguyên nhân, không chấm rủi ro thấp hoặc cao giả"
+        ],
+        [
+          "cùng dữ liệu được đọc lại hai lần",
+          "GET tín hiệu",
+          "không sinh thêm cảnh báo, không đổi vòng đời, giữ cùng evaluationRef"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-008-01",
+          "tc": "TC-CRM-008-01",
+          "given": "lịch ngoại lệ, ngưỡng và nguồn sự kiện đã được duyệt",
+          "when": "đọc tín hiệu của khách A",
+          "then": "giải thích bằng các kỳ phục vụ đủ điều kiện và nguồn, không dùng số ngày lịch đơn thuần",
+          "status": "BLOCKED",
+          "gate": "E10-Q06; E6-CG-03/05/06/08; E7-Q02/03; Q-13"
+        },
+        {
+          "ac": "AC-CRM-008-02",
+          "tc": "TC-CRM-008-02",
+          "given": "lịch thiếu hoặc dữ liệu giao nhận chưa xác nhận",
+          "when": "xem tín hiệu",
+          "then": "hiện CHƯA ĐỦ DỮ LIỆU và nguyên nhân, không chấm rủi ro thấp hoặc cao giả",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-008-03",
+          "tc": "TC-CRM-008-03",
+          "given": "cùng dữ liệu được đọc lại hai lần",
+          "when": "GET tín hiệu",
+          "then": "không sinh thêm cảnh báo, không đổi vòng đời, giữ cùng evaluationRef",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "009",
+      "feature": "FEAT-072",
+      "fr": "FR-SALE-OPP-001",
+      "uc": "UC-CRM-009",
+      "us": "US-CRM-009",
+      "api": "API-CRM-009",
+      "ui": "UI-CRM-05",
+      "title": "Quản lý cơ hội và phễu bán hàng",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/opportunity-events",
+      "input": "opportunityRef nếu đã có, customerOrIntakeRef, stage đề nghị, ownerRef, evidenceRef, version",
+      "logic": "Tạo cơ hội nháp hoặc ghi sự kiện chuyển giai đoạn sau kiểm policy; giữ chủ cơ hội, lịch sử, nguồn thắng/thua; đếm theo cơ hội duy nhất và cùng kỳ/cohort, không coi mọi lead là cơ hội đã đủ điều kiện",
+      "output": "Cơ hội và lịch sử giai đoạn; bảng phễu nêu định nghĩa mẫu số, thiếu thì chưa tính tỷ lệ",
+      "gates": "E10-Q07/08; E6-CG-08",
+      "value": "theo dõi tiến trình tư vấn tới hợp đồng có bằng chứng",
+      "scenarios": [
+        [
+          "giai đoạn, chủ cơ hội và định nghĩa chuyển đã được duyệt",
+          "ghi sự kiện chuyển cơ hội",
+          "lưu nguồn, thời điểm và stage đúng ma trận; bảng phễu không đếm trùng do nhiều phiên bản báo giá"
+        ],
+        [
+          "chỉ có báo giá đã gửi, chưa có bằng chứng thắng",
+          "đề nghị ghi WON",
+          "ERR-CRM-422-01; không tự suy thắng từ việc gửi báo giá"
+        ],
+        [
+          "mẫu số cơ hội của kỳ bằng 0",
+          "xem tỷ lệ chuyển đổi",
+          "hiện chưa có cơ sở tính, tỷ lệ null; không chia 0 hoặc hiển thị 100%"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-009-01",
+          "tc": "TC-CRM-009-01",
+          "given": "giai đoạn, chủ cơ hội và định nghĩa chuyển đã được duyệt",
+          "when": "ghi sự kiện chuyển cơ hội",
+          "then": "lưu nguồn, thời điểm và stage đúng ma trận; bảng phễu không đếm trùng do nhiều phiên bản báo giá",
+          "status": "BLOCKED",
+          "gate": "E10-Q07/08; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-009-02",
+          "tc": "TC-CRM-009-02",
+          "given": "chỉ có báo giá đã gửi, chưa có bằng chứng thắng",
+          "when": "đề nghị ghi WON",
+          "then": "ERR-CRM-422-01; không tự suy thắng từ việc gửi báo giá",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-009-03",
+          "tc": "TC-CRM-009-03",
+          "given": "mẫu số cơ hội của kỳ bằng 0",
+          "when": "xem tỷ lệ chuyển đổi",
+          "then": "hiện chưa có cơ sở tính, tỷ lệ null; không chia 0 hoặc hiển thị 100%",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "010",
+      "feature": "FEAT-072",
+      "fr": "FR-SALE-QUOT-001",
+      "uc": "UC-CRM-010",
+      "us": "US-CRM-010",
+      "api": "API-CRM-010",
+      "ui": "UI-CRM-06",
+      "title": "Soạn phiên bản báo giá",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/quote-revisions",
+      "input": "quoteRef và baseRevision chỉ khi sửa báo giá đã có; opportunityRef, dòng loại suất/giá, điều kiện, hiệu lực đề nghị",
+      "logic": "Lần đầu không có quoteRef/baseRevision thì tạo báo giá và revision đầu cùng giao dịch; lần sửa bắt buộc cả hai, tạo revision mới từ bản gốc, giữ diff và liên hệ cơ hội; không sửa bản đã phát hành. Giá, VAT và điều kiện phải có căn cứ; phần tính margin chỉ nội bộ và không tự chọn công thức",
+      "output": "Phiên bản nháp mới; bản phát hành cũ bất biến, trạng thái duyệt không tự sao chép",
+      "gates": "E10-Q08/15; O-01; CK-Q01–10",
+      "value": "đàm phán giá mà vẫn biết khách đã nhận phiên bản nào",
+      "scenarios": [
+        [
+          "chính sách báo giá và giá/VAT đã được duyệt",
+          "soạn revision mới từ báo giá đã phát hành",
+          "revision mới ở DRAFT, bản cũ và bằng chứng phát hành không đổi"
+        ],
+        [
+          "client gửi approvedBy, margin hoặc số tổng để ép kết quả",
+          "lưu báo giá",
+          "từ chối trường ngoài hợp đồng; không tin tổng hay người duyệt client"
+        ],
+        [
+          "hai người cùng sửa baseRevision",
+          "lưu bản thứ hai sau khi bản thứ nhất đã ghi",
+          "ERR-CRM-409-01; không mất diff và không ghi đè revision"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-010-01",
+          "tc": "TC-CRM-010-01",
+          "given": "chính sách báo giá và giá/VAT đã được duyệt",
+          "when": "soạn revision mới từ báo giá đã phát hành",
+          "then": "revision mới ở DRAFT, bản cũ và bằng chứng phát hành không đổi",
+          "status": "BLOCKED",
+          "gate": "E10-Q08/15; O-01; CK-Q01–10"
+        },
+        {
+          "ac": "AC-CRM-010-02",
+          "tc": "TC-CRM-010-02",
+          "given": "client gửi approvedBy, margin hoặc số tổng để ép kết quả",
+          "when": "lưu báo giá",
+          "then": "từ chối trường ngoài hợp đồng; không tin tổng hay người duyệt client",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-010-03",
+          "tc": "TC-CRM-010-03",
+          "given": "hai người cùng sửa baseRevision",
+          "when": "lưu bản thứ hai sau khi bản thứ nhất đã ghi",
+          "then": "ERR-CRM-409-01; không mất diff và không ghi đè revision",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "011",
+      "feature": "FEAT-072",
+      "fr": "FR-SALE-MENU-001",
+      "uc": "UC-CRM-011",
+      "us": "US-CRM-011",
+      "api": "API-CRM-011",
+      "ui": "UI-CRM-06",
+      "title": "Đính kèm thực đơn có phiên bản vào báo giá",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/quotes/{id}/menu-attachments",
+      "input": "quoteRevision, menuRef, menuRevision, sourceHash, phạm vi dùng cho khách",
+      "logic": "Kiểm quyền và nguồn MENU được phép theo Q09; chụp projection khách gắn đúng revision báo giá; thực đơn E9 chỉ là đề xuất cần người thật xử lý, không coi receipt là MENU được duyệt",
+      "output": "Tệp/nội dung thực đơn được phép và provenance; không tự sửa MENU hoặc dùng bản hiện hành động",
+      "gates": "E10-Q09; E9-Q06/12; O-02; NUTR-Q01–04; E8-Q04",
+      "value": "gửi đúng thực đơn đã tư vấn và truy lại được khi thương lượng",
+      "scenarios": [
+        [
+          "nguồn MENU và quyền đưa cho khách đã được xác nhận",
+          "gắn thực đơn vào revision báo giá",
+          "lưu menuRevision và hash, khách chỉ thấy projection được phép của bản đính kèm"
+        ],
+        [
+          "nguồn thực đơn bị thu hồi hoặc chỉ có nháp E9 chưa duyệt",
+          "đính kèm để phát hành báo giá",
+          "ERR-CRM-422-01 hoặc BLOCKED theo nguồn; không tự công bố MENU"
+        ],
+        [
+          "MENU có bản mới sau khi báo giá đã phát hành",
+          "mở lại báo giá cũ",
+          "giữ đúng bản đính kèm cũ và cảnh báo nguồn; muốn thay phải tạo revision mới"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-011-01",
+          "tc": "TC-CRM-011-01",
+          "given": "nguồn MENU và quyền đưa cho khách đã được xác nhận",
+          "when": "gắn thực đơn vào revision báo giá",
+          "then": "lưu menuRevision và hash, khách chỉ thấy projection được phép của bản đính kèm",
+          "status": "BLOCKED",
+          "gate": "E10-Q09; E9-Q06/12; O-02; NUTR-Q01–04; E8-Q04"
+        },
+        {
+          "ac": "AC-CRM-011-02",
+          "tc": "TC-CRM-011-02",
+          "given": "nguồn thực đơn bị thu hồi hoặc chỉ có nháp E9 chưa duyệt",
+          "when": "đính kèm để phát hành báo giá",
+          "then": "ERR-CRM-422-01 hoặc BLOCKED theo nguồn; không tự công bố MENU",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-011-03",
+          "tc": "TC-CRM-011-03",
+          "given": "MENU có bản mới sau khi báo giá đã phát hành",
+          "when": "mở lại báo giá cũ",
+          "then": "giữ đúng bản đính kèm cũ và cảnh báo nguồn; muốn thay phải tạo revision mới",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "012",
+      "feature": "FEAT-072",
+      "fr": "FR-SALE-SAFE-001",
+      "uc": "UC-CRM-012",
+      "us": "US-CRM-012",
+      "api": "API-CRM-012",
+      "ui": "UI-CRM-07",
+      "title": "Duyệt và tạo bản báo giá dành cho khách",
+      "actor": "Người duyệt báo giá được chỉ định; nhân viên chăm sóc khách",
+      "method": "POST",
+      "path": "/v1/crm/quotes/{id}/publications",
+      "input": "quoteRevision, expectedHash, quyết định duyệt, evidenceRef, recipientScope",
+      "logic": "Kiểm người duyệt, hiệu lực và nguồn; tạo projection allowlist riêng tại server rồi lưu bản phát hành. Cost và margin chỉ người nội bộ có quyền riêng đọc; không nhúng rồi ẩn CSS. Phiên này không gửi thư/tin nhắn cho khách",
+      "output": "Bản phát hành có hash và revision chỉ gồm trường khách được phép; lỗi không lộ cost",
+      "gates": "E10-Q08/09/13; O-06",
+      "value": "khách nhận báo giá rõ ràng và dữ liệu kinh tế nội bộ được bảo vệ",
+      "scenarios": [
+        [
+          "báo giá được duyệt và nguồn còn hợp lệ",
+          "tạo bản phát hành cho khách A",
+          "chỉ có mã/phiên bản, giá bán được duyệt, điều kiện và thực đơn an toàn; không cost hoặc margin"
+        ],
+        [
+          "dữ liệu lồng nhau hoặc lỗi chứa purchasePrice, costAmount hoặc margin",
+          "tạo projection khách",
+          "loại theo allowlist trước lưu/xuất, không có trường nhạy cảm trong JSON, HTML, metadata, lỗi hoặc cache"
+        ],
+        [
+          "khách B hoặc tài khoản AIN truy bản dành cho A",
+          "đọc bản phát hành",
+          "ERR-CRM-404-01 hoặc ERR-CRM-403-01; không trả bản nội bộ và không nâng quyền dịch vụ"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-012-01",
+          "tc": "TC-CRM-012-01",
+          "given": "báo giá được duyệt và nguồn còn hợp lệ",
+          "when": "tạo bản phát hành cho khách A",
+          "then": "chỉ có mã/phiên bản, giá bán được duyệt, điều kiện và thực đơn an toàn; không cost hoặc margin",
+          "status": "BLOCKED",
+          "gate": "E10-Q08/09/13; O-06"
+        },
+        {
+          "ac": "AC-CRM-012-02",
+          "tc": "TC-CRM-012-02",
+          "given": "dữ liệu lồng nhau hoặc lỗi chứa purchasePrice, costAmount hoặc margin",
+          "when": "tạo projection khách",
+          "then": "loại theo allowlist trước lưu/xuất, không có trường nhạy cảm trong JSON, HTML, metadata, lỗi hoặc cache",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-012-03",
+          "tc": "TC-CRM-012-03",
+          "given": "khách B hoặc tài khoản AIN truy bản dành cho A",
+          "when": "đọc bản phát hành",
+          "then": "ERR-CRM-404-01 hoặc ERR-CRM-403-01; không trả bản nội bộ và không nâng quyền dịch vụ",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "013",
+      "feature": "FEAT-073",
+      "fr": "FR-SALE-CONT-001",
+      "uc": "UC-CRM-013",
+      "us": "US-CRM-013",
+      "api": "API-CRM-013",
+      "ui": "UI-CRM-08",
+      "title": "Lập hợp đồng từ báo giá được chấp thuận",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/contracts",
+      "input": "customerRef, quoteRevision, acceptanceEvidenceRef, draftTerms, fileRefs",
+      "logic": "Đối chiếu bằng chứng khách chấp thuận đúng revision và quyền lập; tạo hợp đồng DRAFT tham chiếu báo giá bất biến. Không lấy việc xem/tải báo giá làm chấp thuận hoặc chữ ký; nhập hợp đồng hiện hữu theo nguồn riêng sau Q10",
+      "output": "Hợp đồng nháp có nguồn và các dòng giá đề nghị; chưa hiệu lực, không tạo order",
+      "gates": "E10-Q08/10/11; E6-CG-08",
+      "value": "chuyển kết quả đàm phán thành hợp đồng có nguồn đối chiếu",
+      "scenarios": [
+        [
+          "khách chấp thuận đúng revision và bằng chứng được duyệt",
+          "lập hợp đồng từ báo giá",
+          "hợp đồng DRAFT giữ quoteRevision/hash và evidence, không tự ACTIVE"
+        ],
+        [
+          "bằng chứng thuộc revision cũ nhưng yêu cầu lấy giá revision mới",
+          "lập hợp đồng",
+          "ERR-CRM-409-01; yêu cầu đối chiếu lại, không đổi giá khách đã nhận"
+        ],
+        [
+          "chỉ có lượt mở báo giá, không có bằng chứng chấp thuận",
+          "lập hợp đồng theo luồng báo giá đã chấp thuận",
+          "ERR-CRM-422-01; không coi lượt xem là ký hoặc chấp thuận"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-013-01",
+          "tc": "TC-CRM-013-01",
+          "given": "khách chấp thuận đúng revision và bằng chứng được duyệt",
+          "when": "lập hợp đồng từ báo giá",
+          "then": "hợp đồng DRAFT giữ quoteRevision/hash và evidence, không tự ACTIVE",
+          "status": "BLOCKED",
+          "gate": "E10-Q08/10/11; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-013-02",
+          "tc": "TC-CRM-013-02",
+          "given": "bằng chứng thuộc revision cũ nhưng yêu cầu lấy giá revision mới",
+          "when": "lập hợp đồng",
+          "then": "ERR-CRM-409-01; yêu cầu đối chiếu lại, không đổi giá khách đã nhận",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-013-03",
+          "tc": "TC-CRM-013-03",
+          "given": "chỉ có lượt mở báo giá, không có bằng chứng chấp thuận",
+          "when": "lập hợp đồng theo luồng báo giá đã chấp thuận",
+          "then": "ERR-CRM-422-01; không coi lượt xem là ký hoặc chấp thuận",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "014",
+      "feature": "FEAT-073",
+      "fr": "FR-SALE-ACTV-001",
+      "uc": "UC-CRM-014",
+      "us": "US-CRM-014",
+      "api": "API-CRM-014",
+      "ui": "UI-CRM-08",
+      "title": "Kích hoạt hợp đồng và giá theo loại suất",
+      "actor": "Người duyệt hợp đồng được chỉ định",
+      "method": "POST",
+      "path": "/v1/crm/contracts/{id}/activations",
+      "input": "contractVersion, amendmentRef/amendmentVersion nếu kích hoạt phụ lục, signatureEvidenceRef, priceLines theo mealTypeRef, effectiveFrom, effectiveTo, salePriceBasis, vatRatePct",
+      "logic": "Kiểm bằng chứng, quyền duyệt và hiệu lực; phụ lục phải thuộc hợp đồng trong path và đúng version. Kiểm không chồng khoảng giá ACTIVE theo customer + mealType như nguồn hiện có; kiểm nguyên tử khi cạnh tranh. Chưa chốt quy ước biên ngày không kích hoạt",
+      "output": "Hợp đồng và bộ giá hiệu lực nhất quán, audit và nguồn phụ lục; không ghi giá ngược vào order đã chụp",
+      "gates": "E10-Q10/11/12; O-01; CK-Q01–10; E6-CG-08",
+      "value": "áp một giá có căn cứ cho từng loại suất và thời gian",
+      "scenarios": [
+        [
+          "quy ước hiệu lực và quyền duyệt đã được chốt, có bằng chứng ký",
+          "kích hoạt bộ giá không chồng lấn",
+          "mỗi customer + mealType + ngày áp dụng có tối đa một giá ACTIVE; dữ liệu và audit cùng giao dịch"
+        ],
+        [
+          "hai bộ giá cùng khách và loại suất có phần giao nhau",
+          "kích hoạt bộ thứ hai",
+          "ERR-CRM-409-03; không ACTIVE một phần và không chọn giá theo bản ghi mới nhất"
+        ],
+        [
+          "hai bộ giá liền kề đúng ngày kết thúc/bắt đầu",
+          "kiểm tra hiệu lực tại ranh giới",
+          "kết quả theo quy ước biên đã duyệt E10-Q11; trước quyết định thì BLOCKED"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-014-01",
+          "tc": "TC-CRM-014-01",
+          "given": "quy ước hiệu lực và quyền duyệt đã được chốt, có bằng chứng ký",
+          "when": "kích hoạt bộ giá không chồng lấn",
+          "then": "mỗi customer + mealType + ngày áp dụng có tối đa một giá ACTIVE; dữ liệu và audit cùng giao dịch",
+          "status": "BLOCKED",
+          "gate": "E10-Q10/11/12; O-01; CK-Q01–10; E6-CG-08"
+        },
+        {
+          "ac": "AC-CRM-014-02",
+          "tc": "TC-CRM-014-02",
+          "given": "hai bộ giá cùng khách và loại suất có phần giao nhau",
+          "when": "kích hoạt bộ thứ hai",
+          "then": "ERR-CRM-409-03; không ACTIVE một phần và không chọn giá theo bản ghi mới nhất",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-014-03",
+          "tc": "TC-CRM-014-03",
+          "given": "hai bộ giá liền kề đúng ngày kết thúc/bắt đầu",
+          "when": "kiểm tra hiệu lực tại ranh giới",
+          "then": "kết quả theo quy ước biên đã duyệt E10-Q11; trước quyết định thì BLOCKED",
+          "status": "BLOCKED",
+          "gate": "E10-Q10/11/12; O-01; CK-Q01–10; E6-CG-08"
+        }
+      ]
+    },
+    {
+      "n": "015",
+      "feature": "FEAT-073",
+      "fr": "FR-SALE-AMND-001",
+      "uc": "UC-CRM-015",
+      "us": "US-CRM-015",
+      "api": "API-CRM-015",
+      "ui": "UI-CRM-09",
+      "title": "Lập phụ lục thay đổi giá",
+      "actor": "Dinh dưỡng viên kiêm chăm sóc khách hàng",
+      "method": "POST",
+      "path": "/v1/crm/contracts/{id}/amendments",
+      "input": "contractRef, baseVersion, predecessorPriceRefs, giá đề nghị, from/to, reason, evidenceRef",
+      "logic": "Lưu phụ lục DRAFT và quan hệ bản trước/bản sau, giữ nội dung giá cũ bất biến. Khi được duyệt phải kiểm cùng quy tắc ACTV và không chồng lấn; sửa hồi tố và tác động đơn đã khóa chờ Q12, không tự mở kỳ",
+      "output": "Phụ lục nháp và diff lịch sử; không sửa giá hoặc snapshot order cũ",
+      "gates": "E10-Q10/11/12; E6-CG-04/05/07; E7-Q05",
+      "value": "đổi giá có lịch sử và tránh tính lại kỳ đã đối soát",
+      "scenarios": [
+        [
+          "có chính sách phụ lục và thời điểm hiệu lực được duyệt",
+          "lập phụ lục giá cho kỳ tới",
+          "lưu bản nháp có predecessor và diff; giá cũ vẫn được truy nguyên"
+        ],
+        [
+          "người dùng đòi sửa trực tiếp bản giá đã dùng cho order",
+          "gửi phụ lục kèm lệnh ghi đè lịch sử",
+          "ERR-CRM-422-01; không sửa snapshot và không tự mở kỳ khóa E7"
+        ],
+        [
+          "gửi lại cùng khóa và cùng nội dung phụ lục",
+          "lưu lại sau mất phản hồi",
+          "trả cùng phụ lục, không tạo hai chuỗi thay thế"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-015-01",
+          "tc": "TC-CRM-015-01",
+          "given": "có chính sách phụ lục và thời điểm hiệu lực được duyệt",
+          "when": "lập phụ lục giá cho kỳ tới",
+          "then": "lưu bản nháp có predecessor và diff; giá cũ vẫn được truy nguyên",
+          "status": "BLOCKED",
+          "gate": "E10-Q10/11/12; E6-CG-04/05/07; E7-Q05"
+        },
+        {
+          "ac": "AC-CRM-015-02",
+          "tc": "TC-CRM-015-02",
+          "given": "người dùng đòi sửa trực tiếp bản giá đã dùng cho order",
+          "when": "gửi phụ lục kèm lệnh ghi đè lịch sử",
+          "then": "ERR-CRM-422-01; không sửa snapshot và không tự mở kỳ khóa E7",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-015-03",
+          "tc": "TC-CRM-015-03",
+          "given": "gửi lại cùng khóa và cùng nội dung phụ lục",
+          "when": "lưu lại sau mất phản hồi",
+          "then": "trả cùng phụ lục, không tạo hai chuỗi thay thế",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    },
+    {
+      "n": "016",
+      "feature": "FEAT-073",
+      "fr": "FR-SALE-PRIC-001",
+      "uc": "UC-CRM-016",
+      "us": "US-CRM-016",
+      "api": "API-CRM-016",
+      "ui": "UI-CRM-09",
+      "title": "Tra giá hợp đồng cho thời điểm phục vụ",
+      "actor": "Dịch vụ order được cấp quyền; kế toán tra cứu",
+      "method": "GET",
+      "path": "/v1/crm/price-resolutions",
+      "input": "customerRef, mealTypeRef, serviceDate, sourceScope đã xác minh",
+      "logic": "Chỉ đọc bộ giá đã có hiệu lực theo quy ước được duyệt; trả priceTermRef, contract/amendmentRef, version, căn cứ VAT. Không tự chụp giá vào order; adapter E6/Cost phải được duyệt riêng",
+      "output": "Một kết quả có nguồn hoặc UNRESOLVED; không dùng giá hiện tại thay snapshot lịch sử",
+      "gates": "E10-Q11/12/13; E6-CG-04/05/07/08/11; CK-Q01–10",
+      "value": "đặt đơn dùng đúng điều khoản giá mà vẫn giữ trách nhiệm nguồn",
+      "scenarios": [
+        [
+          "đúng một bộ giá hợp lệ cho khách, loại suất và ngày",
+          "tra giá theo ngày phục vụ",
+          "trả giá và căn cứ thuế cùng nguồn hợp đồng/phụ lục; GET không ghi order"
+        ],
+        [
+          "không có hoặc có hơn một giá khớp, VAT cần thiết chưa rõ",
+          "tra giá",
+          "UNRESOLVED hoặc ERR-CRM-409-03; không lấy giá 0 hoặc tự chọn giá mới nhất"
+        ],
+        [
+          "đơn lịch sử đã có pricingSnapshot và sau đó có phụ lục mới",
+          "xem hồ sơ đơn cũ",
+          "vẫn dùng snapshot đúng order/version từ E6/Cost; không thay bằng kết quả tra giá hiện tại"
+        ]
+      ],
+      "cases": [
+        {
+          "ac": "AC-CRM-016-01",
+          "tc": "TC-CRM-016-01",
+          "given": "đúng một bộ giá hợp lệ cho khách, loại suất và ngày",
+          "when": "tra giá theo ngày phục vụ",
+          "then": "trả giá và căn cứ thuế cùng nguồn hợp đồng/phụ lục; GET không ghi order",
+          "status": "BLOCKED",
+          "gate": "E10-Q11/12/13; E6-CG-04/05/07/08/11; CK-Q01–10"
+        },
+        {
+          "ac": "AC-CRM-016-02",
+          "tc": "TC-CRM-016-02",
+          "given": "không có hoặc có hơn một giá khớp, VAT cần thiết chưa rõ",
+          "when": "tra giá",
+          "then": "UNRESOLVED hoặc ERR-CRM-409-03; không lấy giá 0 hoặc tự chọn giá mới nhất",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        },
+        {
+          "ac": "AC-CRM-016-03",
+          "tc": "TC-CRM-016-03",
+          "given": "đơn lịch sử đã có pricingSnapshot và sau đó có phụ lục mới",
+          "when": "xem hồ sơ đơn cũ",
+          "then": "vẫn dùng snapshot đúng order/version từ E6/Cost; không thay bằng kết quả tra giá hiện tại",
+          "status": "NOT RUN",
+          "gate": "Không cần quyết định còn mở để xác định invariant của ca này"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "features": 4,
+    "fr": 16,
+    "ac": 48,
+    "blocked": 21,
+    "notRun": 27
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "folder": "crm-ban-hang",
+    "source": "srs/states.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "crm-ban-hang",
+    "source": "srs/states.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "crm-ban-hang",
+    "source": "srs/states.md",
+    "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "crm-ban-hang",
+    "source": "srs/states.md",
+    "diagram": 4,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "crm-ban-hang",
+    "source": "ui/user-flow.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "crm-ban-hang",
+    "source": "ui/user-flow.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  }
+]

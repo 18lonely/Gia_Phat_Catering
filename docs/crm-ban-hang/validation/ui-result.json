@@ -1,0 +1,1031 @@
+{
+  "scope": "Kiểm artifact HTML offline; không phải kiểm sản phẩm",
+  "checks": [
+    {
+      "name": "1440 màn 01",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 01",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 01",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 02",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 02",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 02",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 03",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 03",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 03",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 04",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 04",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 04",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 05",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 05",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 05",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 06",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 06",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 06",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 07",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 07",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 07",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 08",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 08",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 08",
+      "ok": true
+    },
+    {
+      "name": "1440 màn 09",
+      "ok": true
+    },
+    {
+      "name": "1440 không tràn 09",
+      "ok": true
+    },
+    {
+      "name": "1440 có nhãn form 09",
+      "ok": true
+    },
+    {
+      "name": "390 màn 01",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 01",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 01",
+      "ok": true
+    },
+    {
+      "name": "390 màn 02",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 02",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 02",
+      "ok": true
+    },
+    {
+      "name": "390 màn 03",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 03",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 03",
+      "ok": true
+    },
+    {
+      "name": "390 màn 04",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 04",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 04",
+      "ok": true
+    },
+    {
+      "name": "390 màn 05",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 05",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 05",
+      "ok": true
+    },
+    {
+      "name": "390 màn 06",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 06",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 06",
+      "ok": true
+    },
+    {
+      "name": "390 màn 07",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 07",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 07",
+      "ok": true
+    },
+    {
+      "name": "390 màn 08",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 08",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 08",
+      "ok": true
+    },
+    {
+      "name": "390 màn 09",
+      "ok": true
+    },
+    {
+      "name": "390 không tràn 09",
+      "ok": true
+    },
+    {
+      "name": "390 có nhãn form 09",
+      "ok": true
+    },
+    {
+      "name": "360 màn 01",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 01",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 01",
+      "ok": true
+    },
+    {
+      "name": "360 màn 02",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 02",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 02",
+      "ok": true
+    },
+    {
+      "name": "360 màn 03",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 03",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 03",
+      "ok": true
+    },
+    {
+      "name": "360 màn 04",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 04",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 04",
+      "ok": true
+    },
+    {
+      "name": "360 màn 05",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 05",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 05",
+      "ok": true
+    },
+    {
+      "name": "360 màn 06",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 06",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 06",
+      "ok": true
+    },
+    {
+      "name": "360 màn 07",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 07",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 07",
+      "ok": true
+    },
+    {
+      "name": "360 màn 08",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 08",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 08",
+      "ok": true
+    },
+    {
+      "name": "360 màn 09",
+      "ok": true
+    },
+    {
+      "name": "360 không tràn 09",
+      "ok": true
+    },
+    {
+      "name": "360 có nhãn form 09",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "01 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "01 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "02 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "02 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "03 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "03 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "04 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "04 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "05 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "05 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "06 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "06 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "07 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "07 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "08 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "08 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu loading",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo loading",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu empty",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo empty",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu missing",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo missing",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu error",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo error",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu offline",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo offline",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu denied",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo denied",
+      "ok": true
+    },
+    {
+      "name": "09 ẩn dữ liệu conflict",
+      "ok": true
+    },
+    {
+      "name": "09 thông báo conflict",
+      "ok": true
+    },
+    {
+      "name": "hộp review mở",
+      "ok": true
+    },
+    {
+      "name": "Escape đóng hộp",
+      "ok": true
+    },
+    {
+      "name": "nút đóng hộp",
+      "ok": true
+    },
+    {
+      "name": "projection mẫu không giá nội bộ",
+      "ok": true
+    },
+    {
+      "name": "projection có giá bán mẫu",
+      "ok": true
+    },
+    {
+      "name": "nút nghiệp vụ không chạy",
+      "ok": true
+    },
+    {
+      "name": "preview đủ nội dung",
+      "ok": true
+    },
+    {
+      "name": "preview không tràn 1440",
+      "ok": true
+    },
+    {
+      "name": "preview không tràn 390",
+      "ok": true
+    },
+    {
+      "name": "preview không tràn 360",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-api-api-spec-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-api-data-mapping-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-epic-spec-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-review-dependencies-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-review-handoff-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-review-questions-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-srs-data-dictionary-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-srs-error-matrix-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-srs-spec-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-srs-states-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-checklist-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-evidence-protocol-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-fixtures-README-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-r10-acceptance-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-system-cases-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-test-cases-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-test-traceability-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-ui-screens-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-ui-user-flow-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-index-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-001-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-002-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-003-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-004-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-005-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-006-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-007-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-008-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-009-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-010-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-011-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-012-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-013-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-014-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-015-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-usecases-UC-CRM-016-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-userstories-acceptance-criteria-md",
+      "ok": true
+    },
+    {
+      "name": "preview #doc-userstories-backlog-md",
+      "ok": true
+    },
+    {
+      "name": "không gọi mạng",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "network": []
+}

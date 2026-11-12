@@ -1,0 +1,56 @@
+[
+  [
+    "01",
+    "Hồ sơ khách hàng 360°",
+    "VIEW/CONT",
+    "Liên hệ, điểm, hợp đồng, order, doanh thu, phản hồi; nguồn và trạng thái từng nhóm"
+  ],
+  [
+    "02",
+    "Tiếp nhận yêu cầu tư vấn",
+    "LEAD",
+    "Nguồn website/E9, nháp thực đơn, receipt và chờ người thật"
+  ],
+  [
+    "03",
+    "Rà trùng, duyệt gộp và hoàn tác",
+    "DUP/MRG/UNDO",
+    "Diff từng trường, bằng chứng, người duyệt, ảnh trước và liên kết mới"
+  ],
+  [
+    "04",
+    "Vòng đời và nguy cơ rời",
+    "LIFE/RISK",
+    "Lịch theo điểm, ngày nghỉ, bằng chứng và chưa đủ dữ liệu"
+  ],
+  [
+    "05",
+    "Cơ hội và phễu",
+    "OPP",
+    "Chủ cơ hội, giai đoạn đề xuất, lịch sử và mẫu số"
+  ],
+  [
+    "06",
+    "Báo giá nội bộ có phiên bản",
+    "QUOT/MENU",
+    "Giá theo loại suất, điều kiện, thực đơn, cost/margin chỉ nội bộ có quyền"
+  ],
+  [
+    "07",
+    "Bản báo giá dành cho khách",
+    "SAFE",
+    "Projection riêng, giá bán/điều kiện/thực đơn được duyệt, không cost/margin"
+  ],
+  [
+    "08",
+    "Hợp đồng",
+    "CONT/ACTV",
+    "Bằng chứng chấp thuận/ký, trạng thái, giá theo loại suất, hiệu lực"
+  ],
+  [
+    "09",
+    "Phụ lục và tra giá",
+    "AMND/PRIC",
+    "Lịch sử trước/sau, từ–đến, xung đột khoảng và nguồn giá theo ngày"
+  ]
+]

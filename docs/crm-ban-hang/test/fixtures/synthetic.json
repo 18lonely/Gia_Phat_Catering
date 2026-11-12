@@ -1,0 +1,443 @@
+{
+  "synthetic": true,
+  "approved": false,
+  "description": "Dữ liệu minh họa review, không phải dữ liệu Gia Phát hoặc seed sản phẩm",
+  "customers": [
+    {
+      "ref": "SYN-C-A",
+      "name": "Doanh nghiệp mẫu A"
+    },
+    {
+      "ref": "SYN-C-B",
+      "name": "Doanh nghiệp mẫu B"
+    }
+  ],
+  "priceIntervals": [
+    {
+      "id": "SYN-P1",
+      "customerRef": "SYN-C-A",
+      "mealTypeRef": "SYN-M1",
+      "from": "2026-12-01",
+      "to": "2026-12-20"
+    },
+    {
+      "id": "SYN-P2",
+      "customerRef": "SYN-C-A",
+      "mealTypeRef": "SYN-M1",
+      "from": "2026-12-10",
+      "to": "2026-12-25"
+    }
+  ],
+  "intervalOracle": "Hai khoảng giao nhau ở phần bên trong bất kể quy ước đóng/mở; trường hợp liền kề chờ E10-Q11",
+  "dedupCriteria": null,
+  "riskThreshold": null,
+  "marginFormula": null,
+  "customerProjection": {
+    "publicationRef": "SYN-PUB-01",
+    "quoteCode": "SYN-BG-01",
+    "revision": 1,
+    "recipientDisplayName": "Doanh nghiệp mẫu A",
+    "permittedSaleLines": [
+      {
+        "mealTypeLabel": "Suất mẫu",
+        "quotedPrice": "40000",
+        "currency": "VND",
+        "label": "Giá synthetic chưa phải giá được duyệt"
+      }
+    ],
+    "permittedTerms": [
+      "Chỉ minh họa bố cục"
+    ],
+    "validity": null,
+    "safeMenuAttachment": {
+      "name": "Thực đơn mẫu",
+      "revision": "SYN-MENU-R1"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "TC-CRM-001-01",
+      "given": "nguồn order và doanh thu đã được xác nhận cho khách A",
+      "action": "mở hồ sơ A trong kỳ được phép",
+      "oracle": "hiện đúng nguồn và phiên bản; tổng doanh thu có nhãn phạm vi, không tự tính từ số giao",
+      "gate": "E6-CG-01/08; E7-Q03/04/08; E10-Q01",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-001-02",
+      "given": "nguồn doanh thu hoặc phản hồi chưa có",
+      "action": "mở hồ sơ A",
+      "oracle": "nhóm tương ứng ghi CHƯA CÓ NGUỒN; giá trị null, không 0; không mở chức năng phản hồi E12",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-001-03",
+      "given": "người dùng chỉ có phạm vi khách A",
+      "action": "đổi mã hồ sơ sang khách B",
+      "oracle": "trả ERR-CRM-404-01; không lộ liên hệ hoặc tổng tiền của B",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-002-01",
+      "given": "danh mục trường và quyền lưu liên hệ đã được duyệt",
+      "action": "ghi đầu mối A từ nguồn xác minh",
+      "oracle": "tạo đúng một bản nháp liên hệ và audit, không tạo users hoặc service_points",
+      "gate": "E10-Q01; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-002-02",
+      "given": "yêu cầu chứa role quản trị hoặc customerId ngoài phạm vi",
+      "action": "gửi nháp liên hệ",
+      "oracle": "từ chối trường lạ hoặc phạm vi; không cấp quyền đặt món",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-002-03",
+      "given": "quyết định thời gian lưu và xử lý xóa chưa có",
+      "action": "yêu cầu lưu hoặc xóa thông tin liên hệ thật",
+      "oracle": "giữ BLOCKED E10-Q01; không dùng thời gian lưu audit làm thời gian lưu liên hệ",
+      "gate": "E10-Q01; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-003-01",
+      "given": "hai bên đã duyệt trường bàn giao, consent và đầu nhận",
+      "action": "nhận đề xuất từ PORT-AIN-HANDOFF hoặc PORT-PUB-LEAD-HANDOFF",
+      "oracle": "receipt gắn đúng nguồn và hash sau ghi bền vững; trạng thái chờ người thật phân loại",
+      "gate": "E8-Q06/07/12; E9-Q06/10/13; E10-Q13",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-003-02",
+      "given": "đầu nhận hoặc consent chưa được duyệt",
+      "action": "nhận đề xuất thật",
+      "oracle": "trả ERR-CRM-503-01; không báo đã vào CRM và không tự tạo customers",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-003-03",
+      "given": "phiếu đã lưu nhưng mất phản hồi",
+      "action": "nhận lại cùng nguồn, revision và nội dung",
+      "oracle": "trả receipt cũ theo quyền hiện tại; khác hash cùng định danh trả ERR-CRM-409-02",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-004-01",
+      "given": "tiêu chí phát hiện đã được duyệt và cặp hồ sơ thuộc quyền",
+      "action": "rà cặp nghi trùng và lập đề nghị",
+      "oracle": "lưu tiêu chí phiên bản, bằng chứng và lựa chọn từng trường; chưa thay mã khách",
+      "gate": "E10-Q02/03; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-004-02",
+      "given": "chưa chốt tiêu chí phát hiện trùng",
+      "action": "yêu cầu quét tự động",
+      "oracle": "BLOCKED E10-Q02; không tự chọn số điện thoại, tên hoặc mã số thuế làm khóa gộp",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-004-03",
+      "given": "hai khách khác nhau dùng chung một đầu mối",
+      "action": "đánh giá cặp theo tiêu chí chính thức",
+      "oracle": "kết quả theo bộ tiêu chí được duyệt; không có quy tắc mặc định coi chung đầu mối là trùng",
+      "gate": "E10-Q02/03; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-005-01",
+      "given": "đề nghị đủ bằng chứng, nguồn và người duyệt được chỉ định",
+      "action": "duyệt gộp đúng phiên bản",
+      "oracle": "ghi gộp cùng audit và ảnh trước; vẫn truy được nguồn order, hợp đồng và doanh thu cũ",
+      "gate": "E10-Q03/04; E6-CG-08; O-06",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-005-02",
+      "given": "người lập đề nghị tự duyệt hoặc chưa có quyền duyệt",
+      "action": "gửi quyết định gộp",
+      "oracle": "ERR-CRM-403-01 hoặc ERR-CRM-503-01; không thay ánh xạ khách",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-005-03",
+      "given": "một hồ sơ đổi version sau khi người duyệt mở diff",
+      "action": "xác nhận gộp bằng version cũ",
+      "oracle": "ERR-CRM-409-01; tải lại diff, không ghi đè thay đổi mới",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-006-01",
+      "given": "người duyệt và phương án khôi phục đã được duyệt, không có xung đột mới",
+      "action": "xác nhận hoàn tác lần gộp",
+      "oracle": "khôi phục liên kết theo ảnh trước, ghi sự kiện bù; audit gộp còn nguyên",
+      "gate": "E10-Q03/04; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-006-02",
+      "given": "thiếu ảnh trước gộp hoặc có tham chiếu mới chưa có phương án",
+      "action": "yêu cầu hoàn tác",
+      "oracle": "ERR-CRM-422-01 hoặc BLOCKED E10-Q04; không khôi phục một phần",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-006-03",
+      "given": "đã phát sinh order và hợp đồng mới sau gộp",
+      "action": "lập phương án hoàn tác",
+      "oracle": "phân bổ theo quyết định được duyệt; không tự chuyển toàn bộ giao dịch mới về một khách",
+      "gate": "E10-Q03/04; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-007-01",
+      "given": "ma trận và người có quyền đã được duyệt, có bằng chứng chuyển",
+      "action": "đề nghị đổi từ PAUSED sang REACTIVATED",
+      "oracle": "ghi trạng thái và evidence theo ma trận, giữ lịch sử trạng thái cũ",
+      "gate": "E10-Q05/06; E6-CG-05/06/08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-007-02",
+      "given": "không có order vào ngày không nằm trong lịch phục vụ",
+      "action": "xem vòng đời khách",
+      "oracle": "không tự chuyển CHURNED hoặc AT_RISK chỉ từ sự vắng mặt đó",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-007-03",
+      "given": "khách có nhiều điểm với lịch phục vụ khác nhau",
+      "action": "tổng hợp vòng đời khách",
+      "oracle": "áp đúng quy tắc tổng hợp đã được duyệt; chưa có quy tắc thì BLOCKED E10-Q05",
+      "gate": "E10-Q05/06; E6-CG-05/06/08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-008-01",
+      "given": "lịch ngoại lệ, ngưỡng và nguồn sự kiện đã được duyệt",
+      "action": "đọc tín hiệu của khách A",
+      "oracle": "giải thích bằng các kỳ phục vụ đủ điều kiện và nguồn, không dùng số ngày lịch đơn thuần",
+      "gate": "E10-Q06; E6-CG-03/05/06/08; E7-Q02/03; Q-13",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-008-02",
+      "given": "lịch thiếu hoặc dữ liệu giao nhận chưa xác nhận",
+      "action": "xem tín hiệu",
+      "oracle": "hiện CHƯA ĐỦ DỮ LIỆU và nguyên nhân, không chấm rủi ro thấp hoặc cao giả",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-008-03",
+      "given": "cùng dữ liệu được đọc lại hai lần",
+      "action": "GET tín hiệu",
+      "oracle": "không sinh thêm cảnh báo, không đổi vòng đời, giữ cùng evaluationRef",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-009-01",
+      "given": "giai đoạn, chủ cơ hội và định nghĩa chuyển đã được duyệt",
+      "action": "ghi sự kiện chuyển cơ hội",
+      "oracle": "lưu nguồn, thời điểm và stage đúng ma trận; bảng phễu không đếm trùng do nhiều phiên bản báo giá",
+      "gate": "E10-Q07/08; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-009-02",
+      "given": "chỉ có báo giá đã gửi, chưa có bằng chứng thắng",
+      "action": "đề nghị ghi WON",
+      "oracle": "ERR-CRM-422-01; không tự suy thắng từ việc gửi báo giá",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-009-03",
+      "given": "mẫu số cơ hội của kỳ bằng 0",
+      "action": "xem tỷ lệ chuyển đổi",
+      "oracle": "hiện chưa có cơ sở tính, tỷ lệ null; không chia 0 hoặc hiển thị 100%",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-010-01",
+      "given": "chính sách báo giá và giá/VAT đã được duyệt",
+      "action": "soạn revision mới từ báo giá đã phát hành",
+      "oracle": "revision mới ở DRAFT, bản cũ và bằng chứng phát hành không đổi",
+      "gate": "E10-Q08/15; O-01; CK-Q01–10",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-010-02",
+      "given": "client gửi approvedBy, margin hoặc số tổng để ép kết quả",
+      "action": "lưu báo giá",
+      "oracle": "từ chối trường ngoài hợp đồng; không tin tổng hay người duyệt client",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-010-03",
+      "given": "hai người cùng sửa baseRevision",
+      "action": "lưu bản thứ hai sau khi bản thứ nhất đã ghi",
+      "oracle": "ERR-CRM-409-01; không mất diff và không ghi đè revision",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-011-01",
+      "given": "nguồn MENU và quyền đưa cho khách đã được xác nhận",
+      "action": "gắn thực đơn vào revision báo giá",
+      "oracle": "lưu menuRevision và hash, khách chỉ thấy projection được phép của bản đính kèm",
+      "gate": "E10-Q09; E9-Q06/12; O-02; NUTR-Q01–04; E8-Q04",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-011-02",
+      "given": "nguồn thực đơn bị thu hồi hoặc chỉ có nháp E9 chưa duyệt",
+      "action": "đính kèm để phát hành báo giá",
+      "oracle": "ERR-CRM-422-01 hoặc BLOCKED theo nguồn; không tự công bố MENU",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-011-03",
+      "given": "MENU có bản mới sau khi báo giá đã phát hành",
+      "action": "mở lại báo giá cũ",
+      "oracle": "giữ đúng bản đính kèm cũ và cảnh báo nguồn; muốn thay phải tạo revision mới",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-012-01",
+      "given": "báo giá được duyệt và nguồn còn hợp lệ",
+      "action": "tạo bản phát hành cho khách A",
+      "oracle": "chỉ có mã/phiên bản, giá bán được duyệt, điều kiện và thực đơn an toàn; không cost hoặc margin",
+      "gate": "E10-Q08/09/13; O-06",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-012-02",
+      "given": "dữ liệu lồng nhau hoặc lỗi chứa purchasePrice, costAmount hoặc margin",
+      "action": "tạo projection khách",
+      "oracle": "loại theo allowlist trước lưu/xuất, không có trường nhạy cảm trong JSON, HTML, metadata, lỗi hoặc cache",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-012-03",
+      "given": "khách B hoặc tài khoản AIN truy bản dành cho A",
+      "action": "đọc bản phát hành",
+      "oracle": "ERR-CRM-404-01 hoặc ERR-CRM-403-01; không trả bản nội bộ và không nâng quyền dịch vụ",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-013-01",
+      "given": "khách chấp thuận đúng revision và bằng chứng được duyệt",
+      "action": "lập hợp đồng từ báo giá",
+      "oracle": "hợp đồng DRAFT giữ quoteRevision/hash và evidence, không tự ACTIVE",
+      "gate": "E10-Q08/10/11; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-013-02",
+      "given": "bằng chứng thuộc revision cũ nhưng yêu cầu lấy giá revision mới",
+      "action": "lập hợp đồng",
+      "oracle": "ERR-CRM-409-01; yêu cầu đối chiếu lại, không đổi giá khách đã nhận",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-013-03",
+      "given": "chỉ có lượt mở báo giá, không có bằng chứng chấp thuận",
+      "action": "lập hợp đồng theo luồng báo giá đã chấp thuận",
+      "oracle": "ERR-CRM-422-01; không coi lượt xem là ký hoặc chấp thuận",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-014-01",
+      "given": "quy ước hiệu lực và quyền duyệt đã được chốt, có bằng chứng ký",
+      "action": "kích hoạt bộ giá không chồng lấn",
+      "oracle": "mỗi customer + mealType + ngày áp dụng có tối đa một giá ACTIVE; dữ liệu và audit cùng giao dịch",
+      "gate": "E10-Q10/11/12; O-01; CK-Q01–10; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-014-02",
+      "given": "hai bộ giá cùng khách và loại suất có phần giao nhau",
+      "action": "kích hoạt bộ thứ hai",
+      "oracle": "ERR-CRM-409-03; không ACTIVE một phần và không chọn giá theo bản ghi mới nhất",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-014-03",
+      "given": "hai bộ giá liền kề đúng ngày kết thúc/bắt đầu",
+      "action": "kiểm tra hiệu lực tại ranh giới",
+      "oracle": "kết quả theo quy ước biên đã duyệt E10-Q11; trước quyết định thì BLOCKED",
+      "gate": "E10-Q10/11/12; O-01; CK-Q01–10; E6-CG-08",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-015-01",
+      "given": "có chính sách phụ lục và thời điểm hiệu lực được duyệt",
+      "action": "lập phụ lục giá cho kỳ tới",
+      "oracle": "lưu bản nháp có predecessor và diff; giá cũ vẫn được truy nguyên",
+      "gate": "E10-Q10/11/12; E6-CG-04/05/07; E7-Q05",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-015-02",
+      "given": "người dùng đòi sửa trực tiếp bản giá đã dùng cho order",
+      "action": "gửi phụ lục kèm lệnh ghi đè lịch sử",
+      "oracle": "ERR-CRM-422-01; không sửa snapshot và không tự mở kỳ khóa E7",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-015-03",
+      "given": "gửi lại cùng khóa và cùng nội dung phụ lục",
+      "action": "lưu lại sau mất phản hồi",
+      "oracle": "trả cùng phụ lục, không tạo hai chuỗi thay thế",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-016-01",
+      "given": "đúng một bộ giá hợp lệ cho khách, loại suất và ngày",
+      "action": "tra giá theo ngày phục vụ",
+      "oracle": "trả giá và căn cứ thuế cùng nguồn hợp đồng/phụ lục; GET không ghi order",
+      "gate": "E10-Q11/12/13; E6-CG-04/05/07/08/11; CK-Q01–10",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "TC-CRM-016-02",
+      "given": "không có hoặc có hơn một giá khớp, VAT cần thiết chưa rõ",
+      "action": "tra giá",
+      "oracle": "UNRESOLVED hoặc ERR-CRM-409-03; không lấy giá 0 hoặc tự chọn giá mới nhất",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "TC-CRM-016-03",
+      "given": "đơn lịch sử đã có pricingSnapshot và sau đó có phụ lục mới",
+      "action": "xem hồ sơ đơn cũ",
+      "oracle": "vẫn dùng snapshot đúng order/version từ E6/Cost; không thay bằng kết quả tra giá hiện tại",
+      "gate": "Không cần quyết định còn mở để xác định invariant của ca này",
+      "status": "NOT RUN"
+    }
+  ]
+}
