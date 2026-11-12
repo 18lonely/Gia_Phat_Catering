@@ -1,0 +1,55 @@
+﻿
+const fs=require('fs'),path=require('path');const base=path.resolve(__dirname,'..');
+fs.appendFileSync(path.join(base,'test/traceability.md'),'\n\n## Endpoint đọc bổ sung\n\n| API | FR / UC / story | UI | Test đọc và quyền |\n| :--- | :--- | :--- | :--- |\n| API-E7-014 | FR-DLV-NOTE-001 / UC-DLV-001 / US-DLV-001 | UI-E7-01 | TC-E7-001-1 (đọc sau ghi); TC-E7-SYS-01 |\n| API-E7-015 | FR-DLV-ACK-001 / UC-DLV-002 / US-DLV-002 | UI-E7-02 | TC-E7-002-1/2 (đọc phiếu không xác nhận); TC-E7-SYS-01 |\n| API-E7-016 | FR-DLV-DIFF-001 / UC-DLV-003 / US-DLV-003 | UI-E7-03 | TC-E7-003-1 (đọc lại biên bản); TC-E7-SYS-01 |\n| API-E7-017 | FR-FIN-REC-001 / UC-FIN-007 / US-FIN-007 | UI-E7-05 | TC-E7-007-1 (đọc tập nguồn); TC-E7-SYS-01 |\n| API-E7-018 | FR-FIN-MISA-001 / UC-FIN-013 / US-FIN-013 | UI-E7-08 | TC-E7-013-3 (đọc bản xuất cũ); TC-E7-SYS-01 |\n\nCác bước producer+read cùng mã ca, không cộng ca mới; GET không tạo phiếu/bản tính/file. Read authorization và lỗi chung được kiểm theo SYS01, dữ liệu thiếu SYS05.\n');
+fs.appendFileSync(path.join(base,'test/checklist.md'),'\n\n## Độ phủ error matrix\n\n| Mã lỗi | Ca phủ |\n| :--- | :--- |\n| ERR-E7-401-01 / 403-01 / 404-01 | TC-E7-SYS-01; TC-E7-002-2/006-2/012-2 |\n| ERR-E7-409-01 | TC-E7-001-3/008-3/010-3 |\n| ERR-E7-503-01 | TC-E7-SYS-05 |\n| ERR-E7-500-01 | TC-E7-SYS-08 |\n| ERR-DLV-422-01 | TC-E7-001-2 |\n| ERR-DLV-422-02 | TC-E7-003-2/004-2 |\n| ERR-FIN-422-01 | TC-E7-005-2 |\n| ERR-FIN-422-02 | TC-E7-007-2/008-2/010-2/011-2 |\n| ERR-FIN-422-03 | TC-E7-009-2; TC-E7-SYS-03 |\n| ERR-FIN-409-02 | TC-E7-003-3/011-3 |\n| ERR-FIN-422-04 | TC-E7-013-2 |\n');
+const report=[
+'---','id: DOC-E7-VALIDATION-REPORT','title: Báo cáo kiểm gói BA nháp E7','version: 0.1.0','phase: Validation','domain: Gia Phát','author: BA','last_updated: 2026-11-12','---','# Báo cáo kiểm gói BA nháp E7','',
+'12/11/2026 · Chỉ tài liệu và HTML mock E7. Không backend/migration/UAT.','',
+'## Kết quả và phạm vi',
+'- Đã tạo gói nháp đúng FEAT-049→053:5 feature có thiết kế có điều kiện,0 feature E7 chỉ gate;13 FR/UC/story,39 AC và39 ca tương ứng (17 BLOCKED,22 NOT RUN);8 ca hệ thống bổ sung có overlap. Không cộng thành47 mục tiêu nghiệm thu độc lập.',
+'- 18 endpoint đề xuất,8 màn HTML,3 state diagrams và1 user flow; delta E7 riêng, DBML65 bảng không đổi.',
+'- Độ phủ thiết kế nháp45/78≈57,7% =23 E1–E5 +17 E6 +5 E7.2 feature E6 chỉ gate O-03 tính riêng; không phải BA được duyệt hoặc tiến độ phần mềm.',
+'- E6 không sửa file nào:14/14 CG OPEN, CG01/08/05/06 CHỜ TRẢ LỜI; E6-EVID-001/002 và O-02/O-03/O-04 còn hiệu lực. Không chạy bốn generator E6 hoặc checker ghi đè snapshot cũ.','',
+'## Kiểm đã chạy',
+'| Công cụ | Kết quả / bằng chứng | Giới hạn |',
+'| :--- | :--- | :--- |',
+'| node validation/check-e7.cjs | [structure-result.json](structure-result.json): cấu trúc, liên kết Markdown, mã/RTM/catalog, Q-13 để trống, R7 nguyên văn, số học synthetic và bảo toàn hash | Kiểm cấu trúc không chứng minh đủ/đúng nghiệp vụ |',
+'| node validation/render-e7.cjs | [diagram-render-result.json](diagram-render-result.json):4/4 sơ đồ render; preview34 tài liệu nội dung | Mermaid/marked cục bộ; chỉ output E7 |',
+'| node validation/check-ui-e7.cjs | [ui-result.json](ui-result.json):88 kiểm đạt,0 lỗi;8 màn desktop1440/mobile390; preview navigation và tương tác | Mock không test auth/contract/persistence/backend |',
+'| Xem ảnh | Đã xem đủ8 màn ×2 kích thước qua4 ảnh ghép dưới đây; bố cục/nhãn/form/table đọc được, không cắt nội dung hoặc tràn toàn trang | Không audit accessibility đầy đủ, không thiết bị thật |',
+'| Bảo toàn |280 file E6/Cost/nền SRS so [protected-baseline.json](protected-baseline.json); prefix lịch sử4 file tổng quan so [history-prefixes.json](history-prefixes.json) | Không có Git repository tại D:\\BA; dùng hash/prefix trong phiên |','',
+'Kiểm UI gồm số giao âm, Q-13 không suy số nhận, thiếu thỏa thuận, thiếu context doanh thu, kỳ khóa, chứng từ trùng, lý do≥10, yêu cầu chờ vẫn khóa, chặn tự duyệt/sai role, từ chối/duyệt mở lại, modal và chặn xuất MISA. Trạng thái loading/empty/error/offline là banner mô phỏng, dữ liệu synthetic vẫn ở dưới để review; không giả đã tải dữ liệu thực.',
+'',
+'Lần chạy trung gian: checker báo2 liên kết tới report chưa tạo; nay đã bổ sung report. Bước ghép ảnh đầu bị timeout do ảnh file:// trong trang setContent; đổi sang data URI của chính screenshot đã chụp rồi chạy lại đạt. Không thay nguồn E6 hoặc policy để làm checker pass.','',
+'## Ảnh đã kiểm trực quan',
+'- [Desktop01–04](screenshots/desktop-sheet-1.png) · [Desktop05–08](screenshots/desktop-sheet-2.png)',
+'- [Mobile01–04](screenshots/mobile-sheet-1.png) · [Mobile05–08](screenshots/mobile-sheet-2.png)',
+'',
+'Ảnh riêng desktop-01.png→08 và mobile-01.png→08 trong screenshots;4 ảnh ghép giữ đầy đủ nội dung các ảnh riêng.',
+'',
+'## File tạo và cập nhật',
+'[Manifest file](files-created.json) liệt kê đường dẫn/hash của toàn bộ output E7; không ghi vào manifest lịch sử E6.',
+'',
+'| Nhóm | File chính |',
+'| :--- | :--- |',
+'| Epic | [epic-spec.md](../epic-spec.md) |',
+'| SRS | [spec](../srs/spec.md), [states](../srs/states.md), [error matrix](../srs/error-matrix.md), [data dictionary delta](../srs/data-dictionary.md) |',
+'| UC/story/AC | [13UC](../usecases/index.md), [backlog](../userstories/backlog.md), [39AC](../userstories/acceptance-criteria.md) |',
+'| API/data | [api-spec](../api/api-spec.md), [catalog18](../api/endpoint-catalog.json), [mapping](../api/data-mapping.md) |',
+'| UI | [screens/quyền](../ui/screens.md), [flow](../ui/user-flow.md), [8 màn HTML](../html-wireframe/revenue-workbench.html) |',
+'| Test | [checklist](../test/checklist.md), [39ca](../test/test-cases.md), [8ca hệ thống](../test/system-cases.md), [RTM](../test/traceability.md), [protocol](../test/evidence-protocol.md), [fixture synthetic](../test/fixtures/README.md) |',
+'| Review | [questions](../review/questions.md), [dependencies](../review/dependencies.md), [handoff](../review/handoff.md) |',
+'| Render | [preview](../preview.html), [gallery4 sơ đồ](../srs/diagrams/index.html),8 SVG/HTML sơ đồ |',
+'| Validation | checker/renderer/UI script, result JSON, baseline hash/prefix,16 ảnh +4 ảnh ghép; helper author-e7/append-status chỉ tạo bản đầu, có guard không chạy lại |',
+'',
+'Chỉ append mục hiện hành12/11/2026 vào [OVERVIEW](../../OVERVIEW.md), [dashboard](../../project-dashboard.md), [progress-assessment](../../gia-phat/review/progress-assessment.md), [next-session-prompt](../../gia-phat/review/next-session-prompt.md); phần lịch sử giữ nguyên. Không sửa PRD/roadmap/E6/Cost/schema.','',
+'## Giới hạn và tiếp nối',
+'Q-13/E7-Q01–08 để trống câu trả lời; nhánh phụ thuộc BLOCKED. Nguồn số chốt/order revision/plan revision/điểm/khách đều là giả định có điều kiện CG, không contract E6 freeze. FEAT-053 chỉ có preflight/provenance/luồng xuất; định dạng/cột/file bytes/thử nhập chờ mẫu MISA, không tự bịa.',
+'',
+'VAT cost gồm khoản phải trả NCC; invoiceRequested riêng không đồng nghĩaVAT0%; CK %/tiền suất riêng theo đơn không giảm phải trả. CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002 không đổi. Dữ liệu minh họa synthetic; chưa đối soát tháng2khách, chưa test tải,0 backend.',
+'',
+'Prompt tiếp nối hiện hành ở cuối [next-session-prompt](../../gia-phat/review/next-session-prompt.md): chỉ E7, chỉ tài liệu; đọc questions/dependencies/report và sửa theo evidence mới hoặc sai lệch cụ thể. Không hỏi lại E6, không tự chốt policy, không mở E8–E13 hoặc chạy generator E6. Khi sửa E7 kiểm cấu trúc/render; chỉ kiểm UI/xem ảnh khi wireframe đổi.'
+].join('\n');
+fs.writeFileSync(path.join(base,'validation/report.md'),report+'\n');
+console.log('Completed traceability and validation report.');
+

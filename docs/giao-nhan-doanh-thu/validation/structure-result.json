@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-12",
+  "scope": "E7 documents only; not backend",
+  "checks": 697,
+  "errors": [],
+  "markdownFiles": 35,
+  "protectedFiles": 280,
+  "historyFiles": 4,
+  "fr": 13,
+  "uc": 13,
+  "stories": 13,
+  "ac": 39,
+  "testCases": 39,
+  "systemCases": 8,
+  "endpoints": 18,
+  "ui": 8,
+  "diagrams": 4,
+  "backend": 0,
+  "caseStatus": {
+    "blocked": 17,
+    "notRun": 22
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "label": "synthetic — not real accounting or production data",
+  "orderedServings": 100,
+  "deliveredServings": 98,
+  "receivedServings": null,
+  "billableServings": 100,
+  "billableBasis": "ASSUMED AGREEMENT FOR ARITHMETIC ONLY; E7-Q03 OPEN",
+  "quotedUnitPrice": "40000",
+  "salePriceBasis": "INCLUSIVE",
+  "vatRatePct": "8",
+  "invoiceRequested": false,
+  "amountDue": "4000000",
+  "discountSeparate": "200000",
+  "receivedPayment": "1000000",
+  "remainingDue": "3000000",
+  "note": "VAT8% chỉ số thử; không tự suy billable=ordered; Q13 unresolved"
+}

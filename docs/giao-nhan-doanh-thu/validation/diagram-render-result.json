@@ -1,0 +1,26 @@
+[
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/states.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/states.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/states.md",
+    "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "ui/user-flow.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  }
+]

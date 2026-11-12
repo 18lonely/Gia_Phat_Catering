@@ -1,0 +1,4 @@
+﻿const fs=require('fs'),path=require('path'),crypto=require('crypto');const base=path.resolve(__dirname,'..');
+function walk(p){return fs.readdirSync(p,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(path.join(p,x.name)):[path.join(p,x.name)]);}
+const output=path.join(__dirname,'files-created.json');const files=walk(base).filter(p=>p!==output).map(p=>({path:path.relative(base,p).replaceAll('\\','/'),sha256:crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'),bytes:fs.statSync(p).size}));
+fs.writeFileSync(output,JSON.stringify({date:'2026-11-12',root:'docs/giao-nhan-doanh-thu',note:'E7 only; manifest excludes itself. Four existing overview files appended separately, protected by history-prefixes.json.',count:files.length,files},null,2));console.log('Manifest: '+files.length+' files (excluding manifest itself).');

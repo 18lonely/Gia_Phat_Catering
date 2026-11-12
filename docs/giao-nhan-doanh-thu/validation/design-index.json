@@ -1,0 +1,457 @@
+[
+  {
+    "n": 1,
+    "feat": "FEAT-049",
+    "mod": "DLV",
+    "fr": "FR-DLV-NOTE-001",
+    "uc": "UC-DLV-001",
+    "us": "US-DLV-001",
+    "api": "API-E7-001",
+    "title": "Lập phiếu giao nhận",
+    "actor": "Bếp trưởng / quản lý cơ sở",
+    "input": "orderId, orderRevisionRef, planRevisionRef, số giao, bằng chứng giao",
+    "logic": "Đối chiếu scope và nguồn; giữ số chốt/số giao riêng, ghi phiếu và provenance, không sửa order E6",
+    "output": "Phiếu chờ khách xác nhận",
+    "gate": "E6-CG-05/06/08; E7-Q02",
+    "method": "POST",
+    "url": "/v1/deliveries",
+    "ui": "UI-E7-01",
+    "cases": [
+      [
+        "số chốt synthetic 100, số giao 98, nguồn được xác nhận hợp lệ theo giả định",
+        "lập phiếu giao 98",
+        "giữ số chốt 100 và giao 98; không sửa order"
+      ],
+      [
+        "số giao -1",
+        "lưu phiếu",
+        "ERR-DLV-422-01; không tạo phiếu"
+      ],
+      [
+        "order revision nguồn đã thay",
+        "lưu phiếu tham chiếu bản cũ",
+        "ERR-E7-409-01; không tự chuyển revision"
+      ]
+    ]
+  },
+  {
+    "n": 2,
+    "feat": "FEAT-049",
+    "mod": "DLV",
+    "fr": "FR-DLV-ACK-001",
+    "uc": "UC-DLV-002",
+    "us": "US-DLV-002",
+    "api": "API-E7-002",
+    "title": "Xác nhận số nhận qua link",
+    "actor": "Đại diện khách được xác minh",
+    "input": "deliveryId, số nhận, version, bằng chứng xác nhận",
+    "logic": "Chỉ ghi khi người nhận được xác minh đúng scope theo policy đã duyệt; mở link không là xác nhận; giữ số nhận thực và dấu vết",
+    "output": "Xác nhận nhận hoặc chênh lệch",
+    "gate": "E6-CG-01/08; E7-Q01; Q-13",
+    "method": "POST",
+    "url": "/v1/deliveries/{id}/confirmations",
+    "ui": "UI-E7-02",
+    "cases": [
+      [
+        "phiếu synthetic giao 98 và quyền link được xác minh theo policy giả định hợp lệ",
+        "nhập nhận 98 và xác nhận",
+        "lưu số nhận 98, actor/thời điểm và version"
+      ],
+      [
+        "link bị thu hồi hoặc không đủ scope",
+        "xác nhận nhận",
+        "ERR-E7-403-01; không ghi số nhận"
+      ],
+      [
+        "khách không trả lời",
+        "đến thời điểm chờ xử lý",
+        "BLOCKED Q-13; không tự lấy số giao/chốt làm số nhận"
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "feat": "FEAT-050",
+    "mod": "DLV",
+    "fr": "FR-DLV-DIFF-001",
+    "uc": "UC-DLV-003",
+    "us": "US-DLV-003",
+    "api": "API-E7-003",
+    "title": "Lập biên bản chênh lệch",
+    "actor": "Dinh dưỡng viên / vận hành được cấp quyền",
+    "input": "deliveryId, số giao/nhận tham chiếu, mô tả, evidenceRef",
+    "logic": "Giữ bằng chứng hai phía; so sánh số giao/nhận; thiếu số nhận thì chưa xác định chênh, không điền 0",
+    "output": "Biên bản có version, liên kết phiếu",
+    "gate": "E7-Q02; E6-CG-08",
+    "method": "POST",
+    "url": "/v1/delivery-discrepancies",
+    "ui": "UI-E7-03",
+    "cases": [
+      [
+        "phiếu synthetic giao 100 nhận 98 có bằng chứng",
+        "lập biên bản",
+        "ghi chênh 2, chưa tự giảm tiền"
+      ],
+      [
+        "thiếu bằng chứng nhận",
+        "kết luận chênh lệch đã thống nhất",
+        "ERR-DLV-422-02; giữ nháp"
+      ],
+      [
+        "phiếu thuộc kỳ khóa",
+        "sửa số làm thay đổi kỳ",
+        "ERR-FIN-409-02; cần mở lại hợp lệ"
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "feat": "FEAT-050",
+    "mod": "DLV",
+    "fr": "FR-DLV-RES-001",
+    "uc": "UC-DLV-004",
+    "us": "US-DLV-004",
+    "api": "API-E7-004",
+    "title": "Ghi thỏa thuận xử lý chênh lệch",
+    "actor": "Vận hành được cấp quyền",
+    "input": "discrepancyId, phương án giao bù/giảm trừ, evidenceRef, version",
+    "logic": "Ghi thỏa thuận hai phía; giao bù gắn phiếu gốc và số bù thực; giảm trừ giữ dòng điều chỉnh riêng; không tự cộng cả hai cách cho một phần thiếu",
+    "output": "Thỏa thuận và nguồn số tính tiền",
+    "gate": "E7-Q02/03; CK-Q07–09 khi liên quan CK",
+    "method": "POST",
+    "url": "/v1/delivery-discrepancies/{id}/resolutions",
+    "ui": "UI-E7-03",
+    "cases": [
+      [
+        "thiếu synthetic 2 suất, thỏa thuận bù 2 và phiếu bù được xác nhận",
+        "ghi xử lý",
+        "giữ phiếu gốc, liên kết bù, không đếm hai lần"
+      ],
+      [
+        "chưa có thỏa thuận",
+        "áp giảm trừ",
+        "ERR-DLV-422-02; không đổi phải trả"
+      ],
+      [
+        "phần thiếu đã giao bù",
+        "thêm giảm trừ cùng phần thiếu",
+        "BLOCKED E7-Q02; không tự cộng hai cách"
+      ]
+    ]
+  },
+  {
+    "n": 5,
+    "feat": "FEAT-051",
+    "mod": "FIN",
+    "fr": "FR-FIN-REV-001",
+    "uc": "UC-FIN-005",
+    "us": "US-FIN-005",
+    "api": "API-E7-005",
+    "title": "Tính doanh thu từ số tính tiền",
+    "actor": "Kế toán doanh thu",
+    "input": "orderRevisionRef, pricingSnapshotId, billableServings, basisEvidenceRef",
+    "logic": "Kiểm căn cứ số tính tiền và giá chụp đúng order/version; tính số tính tiền × giá chụp; tách phải trả, VAT/doanh thu chưa VAT và CK riêng; thiếu context thì chưa xác định",
+    "output": "Bản tính nháp có provenance",
+    "gate": "E7-Q03/04; Q-13; E6-CG-04/05/07",
+    "method": "POST",
+    "url": "/v1/revenue-calculations",
+    "ui": "UI-E7-04",
+    "cases": [
+      [
+        "synthetic số tính tiền 100 có căn cứ, giá chụp 40000 gồm VAT thử 8%, CK riêng 200000",
+        "tính doanh thu",
+        "phải trả 4000000, CK 200000 riêng, trước VAT 4000000/1.08 trước làm tròn; không phải trả 3800000"
+      ],
+      [
+        "context giá UNKNOWN hoặc số tính tiền không có căn cứ",
+        "tính chính thức",
+        "ERR-FIN-422-01; chưa xác định, không điền 0"
+      ],
+      [
+        "giá hiện tại đổi 42000 sau order",
+        "tính lại cùng snapshot",
+        "vẫn dùng giá chụp 40000"
+      ]
+    ]
+  },
+  {
+    "n": 6,
+    "feat": "FEAT-051",
+    "mod": "FIN",
+    "fr": "FR-FIN-VIEW-001",
+    "uc": "UC-FIN-006",
+    "us": "US-FIN-006",
+    "api": "API-E7-006",
+    "title": "Tra cứu doanh thu và nguồn",
+    "actor": "Kế toán doanh thu",
+    "input": "customerId, fromDate, toDate, trạng thái",
+    "logic": "Đọc bản tính có sẵn theo scope; tách dòng đủ/thiếu; không cộng dòng chưa xác định như 0 vào tổng hoàn tất",
+    "output": "Danh sách, nguồn và tổng có nhãn đủ/thiếu",
+    "gate": "E7-Q04/08; E6-CG-08",
+    "method": "GET",
+    "url": "/v1/revenues",
+    "ui": "UI-E7-04",
+    "cases": [
+      [
+        "hai bản tính synthetic hợp lệ trong scope",
+        "lọc khách/ngày",
+        "trả đúng tập và nguồn số tính tiền/giá chụp"
+      ],
+      [
+        "khách ngoài scope",
+        "tra cứu",
+        "ERR-E7-404-01; không lộ tên hoặc tổng"
+      ],
+      [
+        "khoảng ngày không có dữ liệu",
+        "tra cứu",
+        "trả danh sách rỗng, không tạo calculation qua GET"
+      ]
+    ]
+  },
+  {
+    "n": 7,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-REC-001",
+    "uc": "UC-FIN-007",
+    "us": "US-FIN-007",
+    "api": "API-E7-007",
+    "title": "Lập kỳ đối soát",
+    "actor": "Kế toán doanh thu",
+    "input": "customerId, fromDate, toDate, revenueRefs",
+    "logic": "Chụp tập nguồn/version; liệt kê dòng thiếu/tranh chấp, không bỏ dòng lỗi để báo đủ",
+    "output": "Kỳ nháp và danh sách chặn",
+    "gate": "E7-Q05; Q-13; E6-CG-08",
+    "method": "POST",
+    "url": "/v1/reconciliation-periods",
+    "ui": "UI-E7-05",
+    "cases": [
+      [
+        "synthetic tập doanh thu tháng có nguồn hợp lệ",
+        "lập kỳ",
+        "kỳ nháp giữ tập nguồn và tổng, chưa tự thống nhất"
+      ],
+      [
+        "fromDate sau toDate",
+        "lập kỳ",
+        "ERR-FIN-422-02; không tạo kỳ"
+      ],
+      [
+        "có phiếu chưa được khách xác nhận",
+        "chuẩn bị chốt kỳ",
+        "BLOCKED Q-13; dòng chờ không bị bỏ qua"
+      ]
+    ]
+  },
+  {
+    "n": 8,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-AGRE-001",
+    "uc": "UC-FIN-008",
+    "us": "US-FIN-008",
+    "api": "API-E7-008",
+    "title": "Ghi nhận thống nhất đối soát",
+    "actor": "Kế toán và đại diện khách",
+    "input": "periodId, version, agreementEvidenceRef",
+    "logic": "Đối chiếu tổng và nguồn đúng revision với bằng chứng khách; còn chênh lệch chưa thống nhất; không tự ghi thu",
+    "output": "Kỳ thống nhất có bằng chứng",
+    "gate": "E7-Q05; Q-13; E6-CG-01/08",
+    "method": "POST",
+    "url": "/v1/reconciliation-periods/{id}/agreements",
+    "ui": "UI-E7-05",
+    "cases": [
+      [
+        "kỳ synthetic đủ nguồn và biên bản khách khớp revision",
+        "ghi thống nhất",
+        "lưu evidence/revision; số đã thu không đổi"
+      ],
+      [
+        "tổng biên bản khác tổng kỳ",
+        "ghi thống nhất",
+        "ERR-FIN-422-02; giữ chưa thống nhất"
+      ],
+      [
+        "nguồn kỳ thay khi khách đang xác nhận",
+        "ghi theo bản cũ",
+        "ERR-E7-409-01; không áp bằng chứng cũ cho bản mới"
+      ]
+    ]
+  },
+  {
+    "n": 9,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-RCPT-001",
+    "uc": "UC-FIN-009",
+    "us": "US-FIN-009",
+    "api": "API-E7-009",
+    "title": "Ghi nhận thu tiền",
+    "actor": "Kế toán doanh thu",
+    "input": "periodId, số tiền, ngày nhận, chứng từ, version",
+    "logic": "Kiểm tiền dương, đúng khách/kỳ và chứng từ; ghi khoản thu có dấu vết; không suy đã thu từ thống nhất hoặc xuất MISA",
+    "output": "Khoản thu và còn phải thu riêng",
+    "gate": "E7-Q06; E7-Q05 về thu sau khóa",
+    "method": "POST",
+    "url": "/v1/reconciliation-periods/{id}/receipts",
+    "ui": "UI-E7-06",
+    "cases": [
+      [
+        "kỳ mở synthetic phải trả 4000000, chứng từ thu 1000000 hợp lệ",
+        "ghi thu 1000000",
+        "đã thu 1000000, còn 3000000; phải trả gốc không đổi"
+      ],
+      [
+        "tiền thu -1",
+        "ghi thu",
+        "ERR-FIN-422-03; không tạo khoản thu"
+      ],
+      [
+        "mất phản hồi lệnh thu",
+        "định gửi thao tác mới",
+        "hiện chưa rõ kết quả, đối chiếu chứng từ; replay BLOCKED E7-Q08"
+      ]
+    ]
+  },
+  {
+    "n": 10,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-LOCK-001",
+    "uc": "UC-FIN-010",
+    "us": "US-FIN-010",
+    "api": "API-E7-010",
+    "title": "Khóa kỳ đối soát",
+    "actor": "Kế toán doanh thu",
+    "input": "periodId, version, nguồn quyết định",
+    "logic": "Kiểm đủ nguồn/điều kiện khóa đã được duyệt; giữ snapshot bất biến; chặn mọi đường ghi ảnh hưởng kỳ",
+    "output": "Kỳ LOCKED và audit",
+    "gate": "E7-Q05; Q-13",
+    "method": "POST",
+    "url": "/v1/reconciliation-periods/{id}/locks",
+    "ui": "UI-E7-05",
+    "cases": [
+      [
+        "kỳ synthetic đã thống nhất và đủ điều kiện khóa giả định được duyệt",
+        "khóa kỳ",
+        "snapshot giữ nguyên, mọi sửa số bị chặn"
+      ],
+      [
+        "còn nguồn chưa xác định",
+        "khóa kỳ",
+        "ERR-FIN-422-02; không khóa"
+      ],
+      [
+        "hai lệnh khóa cùng version",
+        "ghi cạnh tranh",
+        "một chuyển trạng thái; lệnh còn lại ERR-E7-409-01"
+      ]
+    ]
+  },
+  {
+    "n": 11,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-RREQ-001",
+    "uc": "UC-FIN-011",
+    "us": "US-FIN-011",
+    "api": "API-E7-011",
+    "title": "Đề nghị mở lại kỳ",
+    "actor": "Kế toán doanh thu",
+    "input": "periodId, version, lý do, nội dung sửa, evidenceRef",
+    "logic": "Kỳ phải khóa; lý do ≥10 ký tự theo nền; tạo yêu cầu, không mở khóa",
+    "output": "Yêu cầu chờ Giám đốc, kỳ vẫn khóa",
+    "gate": "E7-Q05; O-06 về ủy quyền giữ mở",
+    "method": "POST",
+    "url": "/v1/reconciliation-periods/{id}/reopen-requests",
+    "ui": "UI-E7-07",
+    "cases": [
+      [
+        "kỳ synthetic khóa, lý do hợp lệ và bằng chứng",
+        "gửi đề nghị",
+        "yêu cầu chờ; số liệu kỳ vẫn khóa"
+      ],
+      [
+        "lý do dưới 10 ký tự",
+        "gửi đề nghị",
+        "ERR-FIN-422-02; không lưu"
+      ],
+      [
+        "đề nghị chưa duyệt",
+        "sửa doanh thu kỳ",
+        "ERR-FIN-409-02; chờ không là mở"
+      ]
+    ]
+  },
+  {
+    "n": 12,
+    "feat": "FEAT-052",
+    "mod": "FIN",
+    "fr": "FR-FIN-RDEC-001",
+    "uc": "UC-FIN-012",
+    "us": "US-FIN-012",
+    "api": "API-E7-012",
+    "title": "Duyệt hoặc từ chối mở lại kỳ",
+    "actor": "Giám đốc",
+    "input": "requestId, requestVersion, periodVersion, approve/reject, reason",
+    "logic": "Kiểm Giám đốc khác người lập/sửa cuối theo BR-SEC-008; đúng version mới mở; từ chối giữ khóa; giữ snapshot cũ, sửa sau mở phải đối soát lại",
+    "output": "Quyết định; kỳ REOPENED hoặc LOCKED",
+    "gate": "E7-Q05; O-06 không tự cấp người thay",
+    "method": "POST",
+    "url": "/v1/reopen-requests/{id}/decisions",
+    "ui": "UI-E7-07",
+    "cases": [
+      [
+        "Giám đốc synthetic khác người lập/sửa cuối, yêu cầu hợp lệ",
+        "duyệt đúng version",
+        "kỳ REOPENED, snapshot khóa cũ còn nguyên"
+      ],
+      [
+        "người duyệt là người lập hoặc không phải Giám đốc",
+        "duyệt",
+        "ERR-E7-403-01; kỳ vẫn khóa"
+      ],
+      [
+        "Giám đốc chọn từ chối",
+        "ghi quyết định",
+        "yêu cầu từ chối, kỳ LOCKED, số liệu không đổi"
+      ]
+    ]
+  },
+  {
+    "n": 13,
+    "feat": "FEAT-053",
+    "mod": "FIN",
+    "fr": "FR-FIN-MISA-001",
+    "uc": "UC-FIN-013",
+    "us": "US-FIN-013",
+    "api": "API-E7-013",
+    "title": "Chuẩn bị và yêu cầu xuất MISA",
+    "actor": "Kế toán doanh thu",
+    "input": "periodId, revision, templateRef đã xác nhận",
+    "logic": "Kiểm quyền/nguồn kỳ và mẫu nhập/mapping được duyệt; ghi yêu cầu xuất có nguồn/trạng thái/lỗi; thiếu mẫu thì chặn, không tự tạo cột",
+    "output": "Yêu cầu xuất; file chỉ sau mapping được duyệt",
+    "gate": "E7-Q07/08; E7-Q05 về kỳ được phép xuất",
+    "method": "POST",
+    "url": "/v1/misa-exports",
+    "ui": "UI-E7-08",
+    "cases": [
+      [
+        "kỳ synthetic hợp lệ, mẫu nhập/mapping MISA đã duyệt trong môi trường thử",
+        "xuất và thử nhập MISA",
+        "file được nhận; lưu evidence nhập, không ghi đã thu"
+      ],
+      [
+        "chưa có mẫu chính thức",
+        "yêu cầu xuất",
+        "ERR-FIN-422-04; không file/cột giả"
+      ],
+      [
+        "kỳ đã mở lại sau xuất",
+        "xem file cũ",
+        "hiện revision cũ và cần rà lại, không sửa bytes cũ hoặc coi hiện hành"
+      ]
+    ]
+  }
+]
