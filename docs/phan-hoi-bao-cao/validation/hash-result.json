@@ -1,0 +1,26 @@
+{
+  "scope": "All pre-existing docs files; two append-only exceptions; new docs restricted to E12",
+  "baselineFiles": 945,
+  "unchanged": 941,
+  "appended": [],
+  "tableCount": 65,
+  "errors": [
+    "Changed old prefix docs/OVERVIEW.md",
+    "Changed old prefix docs/project-dashboard.md",
+    "Changed docs/gia-phat/review/next-session-prompt.md",
+    "Changed docs/gia-phat/review/progress-assessment.md"
+  ],
+  "sessionAppend": [
+    {
+      "path": "docs/OVERVIEW.md",
+      "preAppendPrefixPreserved": true,
+      "appendedBytes": 3499
+    },
+    {
+      "path": "docs/project-dashboard.md",
+      "preAppendPrefixPreserved": true,
+      "appendedBytes": 3499
+    }
+  ],
+  "knownDriftEvidence": "pre-append-drift.json"
+}

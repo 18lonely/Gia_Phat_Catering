@@ -1,0 +1,44 @@
+[
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "srs/states.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "srs/states.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "srs/states.md",
+    "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "srs/states.md",
+    "diagram": 4,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "srs/states.md",
+    "diagram": 5,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "ui/user-flow.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "phan-hoi-bao-cao",
+    "source": "ui/user-flow.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  }
+]

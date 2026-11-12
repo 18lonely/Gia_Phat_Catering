@@ -1,0 +1,525 @@
+{
+  "status": "Draft documentation only",
+  "endpoints": [
+    {
+      "id": "API-FBR-001",
+      "method": "POST",
+      "path": "/api/v1/e12/feedback/ratings",
+      "fr": [
+        "FR-FB-RATE-001"
+      ],
+      "screen": "UI-FBR-01",
+      "actor": "PER-02, PER-03, PER-04, PER-05",
+      "input": "mealRef, ratingScaleRef, ratingValue, sourceScope",
+      "output": "Đánh giá có receipt và trạng thái tiếp nhận",
+      "gate": "E12-Q01/02; E6 CG01/08",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-002",
+      "method": "POST",
+      "path": "/api/v1/e12/feedback/cases",
+      "fr": [
+        "FR-FB-CASE-001"
+      ],
+      "screen": "UI-FBR-02",
+      "actor": "PER-02, PER-03, PER-04, PER-05",
+      "input": "mealRef, complaintCategoryRef, nội dung về bữa, caseVersion",
+      "output": "Hồ sơ tiếp nhận cùng lịch sử; xử lý chính thức chờ chính sách",
+      "gate": "E12-Q02/03; E6 CG01/08; E7-Q02",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-003",
+      "method": "GET",
+      "path": "/api/v1/e12/feedback/dish-selection-metrics",
+      "fr": [
+        "FR-FB-SELR-001"
+      ],
+      "screen": "UI-FBR-03",
+      "actor": "PER-05",
+      "input": "ngày, khách, điểm, ca, dishRef, selectionSourceRef",
+      "output": "Số lựa chọn có nguồn khi đủ căn cứ; tỷ lệ chưa xác định",
+      "gate": "E12-Q04; E6 CG01–14, ORD-Q01–15, E6-EVID-001/002",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-004",
+      "method": "POST",
+      "path": "/api/v1/e12/feedback/menu-proposals",
+      "fr": [
+        "FR-FB-PROP-001"
+      ],
+      "screen": "UI-FBR-04",
+      "actor": "PER-05",
+      "input": "dishMetricRefs, feedbackRefs, menuRef, revision, ghi chú đề xuất",
+      "output": "Đề xuất nháp cùng căn cứ và điều kiện kiểm lại",
+      "gate": "E12-Q04/05; DL-01; O-02",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-005",
+      "method": "GET",
+      "path": "/api/v1/e12/reports/role-dashboards",
+      "fr": [
+        "FR-RPT-ROLE-001"
+      ],
+      "screen": "UI-FBR-05",
+      "actor": "PER-05, PER-06, PER-07, PER-08",
+      "input": "roleView, dateRange, customerRef, kitchenRef",
+      "output": "Bốn góc nhìn có nguồn, trạng thái thiếu và quyền riêng",
+      "gate": "E12-Q06/07/08; E7-Q03/04; E10-Q07; E11-Q07/08",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-006",
+      "method": "GET",
+      "path": "/api/v1/e12/reports/cost-percentages",
+      "fr": [
+        "FR-RPT-CPCT-001"
+      ],
+      "screen": "UI-FBR-06",
+      "actor": "PER-05, PER-06, PER-07, PER-08 theo quyền riêng",
+      "input": "date, customerRef, kitchenRef, costResultRef",
+      "output": "Cost % ngày có nguồn E3; ô theo khách chưa xác định khi thiếu công thức",
+      "gate": "E12-Q07/08; O-01; DATA-COST-Q01–06; E11-Q07/08",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-007",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/price-review-proposals",
+      "fr": [
+        "FR-AIO-PRRV-001"
+      ],
+      "screen": "UI-FBR-07",
+      "actor": "PER-05, PER-08",
+      "input": "priceChangeRef, menuRef, menuRevision, scope",
+      "output": "Đề xuất nháp chờ người thật duyệt, hoặc thiếu nguồn",
+      "gate": "AIO-Q01–06; E12-Q09; O-01/O-02",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-008",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/menu-proposal-checks",
+      "fr": [
+        "FR-AIO-RCHK-001"
+      ],
+      "screen": "UI-FBR-07",
+      "actor": "PER-05, PER-08",
+      "input": "candidateRef, candidateRevision, menuSourceRef",
+      "output": "Bảng kiểm có nguồn; dù đủ kiểm vẫn chỉ nháp chờ người thật",
+      "gate": "AIO-Q02/05/06; DL-01; E11-Q15; E12-Q09",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-009",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/estimate-proposals",
+      "fr": [
+        "FR-AIO-ESTR-001"
+      ],
+      "screen": "UI-FBR-08",
+      "actor": "PER-07",
+      "input": "estimateRef, estimateRevision, date, kitchenRef",
+      "output": "Nháp diễn giải dự toán chờ người thật rà",
+      "gate": "AIO-Q01–06; E12-Q09; DATA-COST-Q01–06",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-010",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/demand-proposals",
+      "fr": [
+        "FR-AIO-DEMR-001"
+      ],
+      "screen": "UI-FBR-08",
+      "actor": "PER-07",
+      "input": "demandRef, planRevisionRef, estimateRef",
+      "output": "Nháp diễn giải nhu cầu với thiếu nguồn rõ ràng",
+      "gate": "E11-Q01/03/13; E6 CG06; AIO-Q01–06",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-011",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/price-deviation-proposals",
+      "fr": [
+        "FR-AIO-PDEV-001"
+      ],
+      "screen": "UI-FBR-08",
+      "actor": "PER-07",
+      "input": "comparisonRef, priceSourceRefs, alertPolicyRef",
+      "output": "Nháp giải thích; cảnh báo chính thức chưa xác định",
+      "gate": "E12-Q10; E11-Q07/08/14; AIO-Q01–06",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-012",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/crm-summary-proposals",
+      "fr": [
+        "FR-AIO-CRMS-001"
+      ],
+      "screen": "UI-FBR-09",
+      "actor": "PER-05, PER-08",
+      "input": "customerRef, timeRange, CRM sourceRefs",
+      "output": "Nháp tóm tắt và danh sách việc cần người thật rà",
+      "gate": "E10-Q01/05/06/13; AIO-Q01–06; E12-Q11",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-013",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/quote-content-proposals",
+      "fr": [
+        "FR-AIO-CRMQ-001"
+      ],
+      "screen": "UI-FBR-09",
+      "actor": "PER-05, PER-08",
+      "input": "customerRef, quoteRevisionRef, menuRef, nguồn giá được phép",
+      "output": "Nháp báo giá có nguồn và nhãn chưa phát hành",
+      "gate": "E10-Q08/09/13/15; AIO-Q01–06; E12-Q11",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-014",
+      "method": "POST",
+      "path": "/api/v1/e12/assistant/data-answer-proposals",
+      "fr": [
+        "FR-AIO-DQA-001"
+      ],
+      "screen": "UI-FBR-10",
+      "actor": "PER-07, PER-08",
+      "input": "câu hỏi về chỉ số, dateRange, customerRef, metricDefinitionRef",
+      "output": "Câu trả lời nháp chờ người thật rà, kèm số nguồn hoặc không đủ dữ liệu",
+      "gate": "AIO-Q01–06; E12-Q06/07/08/12; E10-Q15",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": "READ_ONLY_INTERSECTION_AT_TOOL_AND_DB"
+    },
+    {
+      "id": "API-FBR-015",
+      "method": "POST",
+      "path": "/api/v1/e12/nutrition/group-targets",
+      "fr": [
+        "FR-NUTR-GRPT-001"
+      ],
+      "screen": "UI-FBR-11",
+      "actor": "PER-05",
+      "input": "groupRef phi y tế, mục tiêu có sourceRef, effectiveRange, version",
+      "output": "Mục tiêu nhóm nháp có nguồn hoặc danh sách thiếu",
+      "gate": "NUTR-Q01–04; E12-Q13/14",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-016",
+      "method": "POST",
+      "path": "/api/v1/e12/nutrition/group-menu-checks",
+      "fr": [
+        "FR-NUTR-GRPC-001"
+      ],
+      "screen": "UI-FBR-11",
+      "actor": "PER-05",
+      "input": "groupTargetRef, targetVersion, menuRevision, nutritionCalculationRefs",
+      "output": "So sánh có phiên bản hoặc chưa xác định",
+      "gate": "NUTR-Q01–04; E12-Q13/14; DL-01",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-017",
+      "method": "POST",
+      "path": "/api/v1/e12/nutrition/diary-consents",
+      "fr": [
+        "FR-NUTR-DCON-001"
+      ],
+      "screen": "UI-FBR-12",
+      "actor": "PER-03",
+      "input": "consentPolicyRef, explicitAgreement",
+      "output": "Đồng ý có phiên bản hoặc nhật ký chưa bật",
+      "gate": "E12-Q15/16; E6 CG01/08; E1 NFR-PRIV-001",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-018",
+      "method": "POST",
+      "path": "/api/v1/e12/nutrition/diary-meals",
+      "fr": [
+        "FR-NUTR-DREC-001"
+      ],
+      "screen": "UI-FBR-12",
+      "actor": "PER-03",
+      "input": "consentRef, consumedMealRef, consumedAt, mealNutritionSnapshotRef",
+      "output": "Bản ghi bữa đã ăn có nguồn hoặc chặn thiếu bằng chứng",
+      "gate": "E12-Q15/17; NUTR-Q01–04; E6 CG01/08/10",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-019",
+      "method": "GET",
+      "path": "/api/v1/e12/nutrition/diary-meals",
+      "fr": [
+        "FR-NUTR-DVIW-001"
+      ],
+      "screen": "UI-FBR-12",
+      "actor": "PER-03",
+      "input": "dateRange; subject từ phiên",
+      "output": "Danh sách bữa và dinh dưỡng suất; không phải lượng hấp thu thực",
+      "gate": "E12-Q15/16; E6 CG01/08; NUTR-Q03/04",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": false,
+      "tools": null
+    },
+    {
+      "id": "API-FBR-020",
+      "method": "POST",
+      "path": "/api/v1/e12/nutrition/diary-deletion-requests",
+      "fr": [
+        "FR-NUTR-DDEL-001"
+      ],
+      "screen": "UI-FBR-12",
+      "actor": "PER-03",
+      "input": "consentRef, diaryScope, explicitDeleteConfirmation",
+      "output": "Receipt yêu cầu xóa; trạng thái có bằng chứng, đồng ý bị rút",
+      "gate": "E12-Q15/16; E1 NFR-PRIV-001",
+      "status": "PROPOSED_NOT_FROZEN",
+      "errors": [
+        "ERR-FBR-400-01",
+        "ERR-FBR-401-01",
+        "ERR-FBR-403-01",
+        "ERR-FBR-404-01",
+        "ERR-FBR-409-01",
+        "ERR-FBR-422-01",
+        "ERR-FBR-500-01",
+        "ERR-FBR-503-01"
+      ],
+      "businessMutation": true,
+      "tools": null
+    }
+  ]
+}

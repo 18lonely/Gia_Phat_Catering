@@ -1,0 +1,47 @@
+{
+  "observedAt": "2026-11-12T08:30:33.874Z",
+  "baselineAt": "2026-11-12T15:10:45.5210032+07:00",
+  "note": "Observed before any E12 overview append. No session tool had written these four files. Cause/actor not identified; do not restore or overwrite baseline.",
+  "files": [
+    {
+      "path": "docs/OVERVIEW.md",
+      "baselineBytes": 26605,
+      "observedBytes": 26058,
+      "baselineSha256": "d92a7cd31c8a1d09fd12bddcd3607229834bb0a43249fa46d6fa827ca4a08e15",
+      "observedSha256": "620cd4d333b7b8e4a21dac7662fed679ce677be3b3e8e0e29bb9100f6d997be4",
+      "lastModified": "2026-11-12T08:13:53.662Z",
+      "matchesAfterCRLFNormalization": false,
+      "matchesAfterLFNormalization": false
+    },
+    {
+      "path": "docs/project-dashboard.md",
+      "baselineBytes": 24305,
+      "observedBytes": 23758,
+      "baselineSha256": "ac6ddfc4db9fe1300c4401387ccab3989c7b7881bf4327dee20501ec3dc8a5b8",
+      "observedSha256": "ca8d1cd57d99fb518bbfdc1081e859ea3c0923ad6efab1e463cfde1be35438db",
+      "lastModified": "2026-11-12T08:13:53.700Z",
+      "matchesAfterCRLFNormalization": false,
+      "matchesAfterLFNormalization": false
+    },
+    {
+      "path": "docs/gia-phat/review/next-session-prompt.md",
+      "baselineBytes": 31080,
+      "observedBytes": 30512,
+      "baselineSha256": "d86c5e275921c07ee0e01f91d5bf6d30c16bc7c347efa7dc2259c768ea8dde7c",
+      "observedSha256": "04956132b3d6146f8de0cb2fb18f5e000415a9ad8ebb5dfaaa17eac673f176c2",
+      "lastModified": "2026-11-12T08:13:53.766Z",
+      "matchesAfterCRLFNormalization": false,
+      "matchesAfterLFNormalization": false
+    },
+    {
+      "path": "docs/gia-phat/review/progress-assessment.md",
+      "baselineBytes": 17158,
+      "observedBytes": 16632,
+      "baselineSha256": "656f1354d5f6581e194842a3aec0d8f1cfbcfcf3df9c512388efdb294bef0499",
+      "observedSha256": "a1811a31a0f564f9177732f9b1a61d5f3963abe4e2afc5ae5dbbaa05c64e3455",
+      "lastModified": "2026-11-12T08:13:53.732Z",
+      "matchesAfterCRLFNormalization": false,
+      "matchesAfterLFNormalization": false
+    }
+  ]
+}

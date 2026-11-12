@@ -1,0 +1,25 @@
+{
+  "label": "synthetic only; no real customer or health data",
+  "scopes": [
+    "A",
+    "B"
+  ],
+  "sourceRevisions": [
+    "v1",
+    "v2"
+  ],
+  "selectedCount": 24,
+  "selectionDenominator": null,
+  "selectionRate": null,
+  "productionServings": 100,
+  "costExample": {
+    "source": "E3 SRS example",
+    "mealCost": 18800,
+    "revenueExVAT": 37037.04,
+    "costPct": 50.76
+  },
+  "diary": {
+    "consent": false,
+    "meals": []
+  }
+}
