@@ -1,0 +1,1366 @@
+{
+  "date": "2026-11-12T04:47:40.646Z",
+  "scope": "Document structure only; not backend",
+  "protectedFiles": 531,
+  "fr": 12,
+  "features": 6,
+  "endpoints": 16,
+  "checks": [
+    {
+      "name": "E1–E7 and PRD/roadmap SHA256 unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No added files in E1–E7",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Append-only docs/OVERVIEW.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Append-only docs/project-dashboard.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Append-only docs/gia-phat/review/progress-assessment.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Append-only docs/gia-phat/review/next-session-prompt.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Exactly six features 054–059",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "5P0 and 057 P1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-PAGE-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-001.md FR-PUB-PAGE-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-001-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-001-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-PAGE-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-01\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-PAGE-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 001H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 001E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 001B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-BLOG-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-002.md FR-PUB-BLOG-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-002",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-002-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-002-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-BLOG-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-02\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-BLOG-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 002H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 002E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 002B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-URLM-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-003.md FR-PUB-URLM-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-003",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-003-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-003-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-URLM-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-07\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-URLM-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 003H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 003E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 003B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-URLR-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-004.md FR-PUB-URLR-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-004",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-004-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-004-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-URLR-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-07\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-URLR-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 004H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 004E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 004B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-MENU-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-005.md FR-PUB-MENU-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-005",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-005-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-005-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-MENU-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-03\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-MENU-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 005H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 005E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 005B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-TRY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-006.md FR-PUB-TRY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-006",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-006-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-006-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-TRY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-04\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-TRY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 006H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 006E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 006B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-LEAD-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-007.md FR-PUB-LEAD-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-007",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-007-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-007-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-LEAD-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-05\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-LEAD-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 007H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 007E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 007B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-RELY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-008.md FR-PUB-RELY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-008",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-008-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-008-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-RELY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-08\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-RELY-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 008H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 008E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 008B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-EDIT-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-009.md FR-PUB-EDIT-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-009",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-009-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-009-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-EDIT-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-06\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-EDIT-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 009H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 009E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 009B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-PREV-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-010.md FR-PUB-PREV-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-010",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-010-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-010-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-PREV-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-06\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-PREV-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 010H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 010E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 010B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-PUBL-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-011.md FR-PUB-PUBL-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-011",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-011-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-011-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-PUBL-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-06\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-PUBL-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 011H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 011E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 011B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "srs/spec.md FR-PUB-MEDI-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usecases/UC-PUB-012.md FR-PUB-MEDI-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/backlog.md US-PUB-012",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "userstories/acceptance-criteria.md AC-PUB-012-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/test-cases.md TC-PUB-012-H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test/traceability.md FR-PUB-MEDI-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html-wireframe/public-workbench.html id=\"UI-PUB-09\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog FR FR-PUB-MEDI-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 012H",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 012E",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AC/test 012B",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No duplicate routes/IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-001 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-001 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-001 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-001 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-001 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-002 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-002 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-002 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-002 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-002 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-003 error ERR-PUB-422-03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-004 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-004 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-004 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-004 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-004 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-005 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-006 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-007 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-008 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-009 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-010 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-011 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-012 error ERR-PUB-415-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-013 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-013 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-013 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-013 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-013 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-014 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-015 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-400-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-404-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-429-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-500-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-503-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-401-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-403-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-409-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-422-01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API-PUB-016 error ERR-PUB-422-02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "12 unanswered questions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "R8 verbatim",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Schema remains65tables",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Local Markdown links exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Local HTML links/assets exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No SQL/DBML migration output",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "failed": []
+}

@@ -1,0 +1,35 @@
+{
+  "synthetic": true,
+  "article": {
+    "title": "Bài minh họa synthetic",
+    "oldURL": "https://example.invalid/bai-cu-synthetic",
+    "target": "/tin/bai-synthetic"
+  },
+  "sample": {
+    "label": "Suất synthetic",
+    "priceVnd": 40000,
+    "quantities": [
+      {
+        "label": "Nguyên liệu synthetic",
+        "qty": 100,
+        "unit": "g sống/suất"
+      }
+    ],
+    "nutrients": {
+      "energyKcal": 600,
+      "proteinG": 25,
+      "fatG": 18,
+      "carbG": 80
+    },
+    "allergens": [
+      "Đậu nành — synthetic"
+    ]
+  },
+  "internalSentinels": {
+    "cost": "PRIVATE_COST_SYNTHETIC",
+    "purchasePrice": "PRIVATE_PURCHASE_SYNTHETIC",
+    "costPct": "PRIVATE_PCT_SYNTHETIC",
+    "allowance": "PRIVATE_ALLOWANCE_SYNTHETIC",
+    "discount": "PRIVATE_DISCOUNT_SYNTHETIC"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "folder": "website-cong-khai",
+    "source": "srs/states.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "website-cong-khai",
+    "source": "srs/states.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "website-cong-khai",
+    "source": "srs/states.md",
+    "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "website-cong-khai",
+    "source": "ui/user-flow.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "website-cong-khai",
+    "source": "ui/user-flow.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  }
+]

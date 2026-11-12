@@ -1,0 +1,482 @@
+{
+  "checks": [
+    {
+      "name": "loading hides data",
+      "passed": true
+    },
+    {
+      "name": "empty hides data",
+      "passed": true
+    },
+    {
+      "name": "error hides data",
+      "passed": true
+    },
+    {
+      "name": "offline hides data",
+      "passed": true
+    },
+    {
+      "name": "article detail",
+      "passed": true
+    },
+    {
+      "name": "sample missing hides numbers",
+      "passed": true
+    },
+    {
+      "name": "sample private hides numbers",
+      "passed": true
+    },
+    {
+      "name": "sample stale hides numbers",
+      "passed": true
+    },
+    {
+      "name": "invalid servings -1",
+      "passed": true
+    },
+    {
+      "name": "invalid servings 1.5",
+      "passed": true
+    },
+    {
+      "name": "invalid servings 0",
+      "passed": true
+    },
+    {
+      "name": "trial blocked",
+      "passed": true
+    },
+    {
+      "name": "trial static explicit",
+      "passed": true
+    },
+    {
+      "name": "consent required",
+      "passed": true
+    },
+    {
+      "name": "contact validation",
+      "passed": true
+    },
+    {
+      "name": "no fake receipt",
+      "passed": true
+    },
+    {
+      "name": "stale version",
+      "passed": true
+    },
+    {
+      "name": "local draft",
+      "passed": true
+    },
+    {
+      "name": "preview dialog",
+      "passed": true
+    },
+    {
+      "name": "preview escaped",
+      "passed": true
+    },
+    {
+      "name": "escape modal",
+      "passed": true
+    },
+    {
+      "name": "writer no publish",
+      "passed": true
+    },
+    {
+      "name": "policy gate",
+      "passed": true
+    },
+    {
+      "name": "URL missing",
+      "passed": true
+    },
+    {
+      "name": "URL loop",
+      "passed": true
+    },
+    {
+      "name": "URL private",
+      "passed": true
+    },
+    {
+      "name": "URL valid",
+      "passed": true
+    },
+    {
+      "name": "no CRM ack",
+      "passed": true
+    },
+    {
+      "name": "unsafe media",
+      "passed": true
+    },
+    {
+      "name": "media rights",
+      "passed": true
+    },
+    {
+      "name": "media remains gated",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 01",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 01",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 02",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 02",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 03",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 03",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 04",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 04",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 05",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 05",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 06",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 06",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 07",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 07",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 08",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 08",
+      "passed": true
+    },
+    {
+      "name": "desktop panel 09",
+      "passed": true
+    },
+    {
+      "name": "desktop overflow 09",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 01",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 01",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 02",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 02",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 03",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 03",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 04",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 04",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 05",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 05",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 06",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 06",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 07",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 07",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 08",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 08",
+      "passed": true
+    },
+    {
+      "name": "mobile panel 09",
+      "passed": true
+    },
+    {
+      "name": "mobile overflow 09",
+      "passed": true
+    },
+    {
+      "name": "small panel 01",
+      "passed": true
+    },
+    {
+      "name": "small overflow 01",
+      "passed": true
+    },
+    {
+      "name": "small panel 02",
+      "passed": true
+    },
+    {
+      "name": "small overflow 02",
+      "passed": true
+    },
+    {
+      "name": "small panel 03",
+      "passed": true
+    },
+    {
+      "name": "small overflow 03",
+      "passed": true
+    },
+    {
+      "name": "small panel 04",
+      "passed": true
+    },
+    {
+      "name": "small overflow 04",
+      "passed": true
+    },
+    {
+      "name": "small panel 05",
+      "passed": true
+    },
+    {
+      "name": "small overflow 05",
+      "passed": true
+    },
+    {
+      "name": "small panel 06",
+      "passed": true
+    },
+    {
+      "name": "small overflow 06",
+      "passed": true
+    },
+    {
+      "name": "small panel 07",
+      "passed": true
+    },
+    {
+      "name": "small overflow 07",
+      "passed": true
+    },
+    {
+      "name": "small panel 08",
+      "passed": true
+    },
+    {
+      "name": "small overflow 08",
+      "passed": true
+    },
+    {
+      "name": "small panel 09",
+      "passed": true
+    },
+    {
+      "name": "small overflow 09",
+      "passed": true
+    },
+    {
+      "name": "preview has documents",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-api-api-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-api-data-mapping-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-epic-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-review-dependencies-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-review-handoff-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-review-questions-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-srs-data-dictionary-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-srs-error-matrix-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-srs-spec-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-srs-states-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-checklist-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-evidence-protocol-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-fixtures-README-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-system-cases-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-test-cases-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-test-traceability-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-ui-screens-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-ui-user-flow-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-index-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-001-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-002-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-003-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-004-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-005-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-006-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-007-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-008-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-009-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-010-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-011-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-usecases-UC-PUB-012-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-userstories-acceptance-criteria-md",
+      "passed": true
+    },
+    {
+      "name": "preview navigation #doc-userstories-backlog-md",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Offline mock UI only, not runtime product tests"
+}

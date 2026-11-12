@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.resolve(__dirname,'../../..');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const walk=p=>fs.readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(p,e.name)):[path.join(p,e.name)]);
+const names=['nen-tang','thuc-don-dinh-luong','cost','dinh-duong','agent-noi-bo','chon-mon-order','giao-nhan-doanh-thu'];
+const files=names.flatMap(n=>walk(path.join(root,'docs',n))).concat(['01-prd.md','02-roadmap.md'].map(n=>path.join(root,'docs/gia-phat',n)));
+const histories=['docs/OVERVIEW.md','docs/project-dashboard.md','docs/gia-phat/review/progress-assessment.md','docs/gia-phat/review/next-session-prompt.md'];
+const output=path.join(__dirname,'protected-baseline.json');
+if(fs.existsSync(output))throw Error('Baseline exists; never overwrite');
+fs.writeFileSync(output,JSON.stringify({capturedAt:new Date().toISOString(),files:files.map(p=>({path:path.relative(root,p).replaceAll('\\','/'),sha256:sha(fs.readFileSync(p))})),history:histories.map(p=>{const b=fs.readFileSync(path.join(root,p));return {path:p,bytes:b.length,sha256:sha(b)};})},null,2));
+console.log('Protected files: '+files.length);
