@@ -1,0 +1,18 @@
+{
+  "fr": 12,
+  "uc": 12,
+  "story": 12,
+  "ac": 36,
+  "functional": 36,
+  "blocked": 16,
+  "notRun": 20,
+  "system": 13,
+  "systemBlocked": 4,
+  "r13": 4,
+  "endpoints": 18,
+  "ports": 5,
+  "screens": 8,
+  "diagrams": 7,
+  "questions": 14,
+  "systemNotRun": 9
+}

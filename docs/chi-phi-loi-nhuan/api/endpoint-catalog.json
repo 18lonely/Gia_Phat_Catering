@@ -1,0 +1,506 @@
+{
+  "scope": "E13 documentation proposal only",
+  "endpoints": [
+    {
+      "id": "API-EXP-001",
+      "method": "POST",
+      "path": "/v1/expense-periods",
+      "fr": [
+        "FR-EXP-PER-001"
+      ],
+      "screen": "UI-EXP-01",
+      "request": "periodRef, kitchenRef, fromDate, toDate, version, lockDecisionRef",
+      "response": "Kỳ OPEN hoặc LOCKED; danh sách điều kiện thiếu",
+      "gate": "E13-Q02",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-002",
+      "method": "POST",
+      "path": "/v1/expense-entries",
+      "fr": [
+        "FR-EXP-COST-001"
+      ],
+      "screen": "UI-EXP-02",
+      "request": "periodRef, kitchenRef, typeVersionRef, amount, evidenceRef, sourceKey, customerRef?",
+      "response": "Dòng chi phí DRAFT có nguồn; chưa hạch toán chính thức",
+      "gate": "E13-Q01",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-003",
+      "method": "POST",
+      "path": "/v1/attendance-sheets",
+      "fr": [
+        "FR-EXP-TIME-001"
+      ],
+      "screen": "UI-EXP-03",
+      "request": "personRef, kitchenRef, shiftRevisionRef, workDate, hours, attendanceEvidenceRef, version",
+      "response": "Bảng DRAFT; giờ thực tế và ca dự kiến tách riêng",
+      "gate": "E13-Q03; E11-Q09",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-004",
+      "method": "POST",
+      "path": "/v1/labor-cost-references",
+      "fr": [
+        "FR-EXP-LAB-001"
+      ],
+      "screen": "UI-EXP-03",
+      "request": "attendanceVersionRef, rateVersionRef hoặc payrollAmountRef, evidenceRef",
+      "response": "Chi phí nhân công có nguồn hoặc BLOCKED",
+      "gate": "E13-Q03/04",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-005",
+      "method": "POST",
+      "path": "/v1/allocation-method-versions",
+      "fr": [
+        "FR-EXP-METH-001"
+      ],
+      "screen": "UI-EXP-04",
+      "request": "methodRef?, baseVersion?, scope, proposedBasis, effectiveRange, sourceDefinitionRefs, rationale",
+      "response": "Phiên bản DRAFT; không có hiệu lực phân bổ",
+      "gate": "E13-Q05/09",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-006",
+      "method": "POST",
+      "path": "/v1/allocation-method-versions/{id}/decisions",
+      "fr": [
+        "FR-EXP-APRV-001"
+      ],
+      "screen": "UI-EXP-04",
+      "request": "methodVersionRef, expectedVersion, expectedHash, decision, evidenceRef, reason",
+      "response": "Quyết định APPROVED hoặc RETURNED; version không đổi nội dung",
+      "gate": "E13-Q05; O-06",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-007",
+      "method": "POST",
+      "path": "/v1/allocation-runs",
+      "fr": [
+        "FR-EXP-ALLOC-001"
+      ],
+      "screen": "UI-EXP-05",
+      "request": "periodSnapshotRef, methodVersionRef, sourceManifestRef",
+      "response": "Lần chạy BLOCKED hoặc bản phân bổ có methodVersion; phần chưa phân bổ riêng",
+      "gate": "E13-Q05/06/09/12",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-008",
+      "method": "GET",
+      "path": "/v1/profit-runs/{id}/customers",
+      "fr": [
+        "FR-EXP-PROF-001"
+      ],
+      "screen": "UI-EXP-06",
+      "request": "runRef, customerRef, kitchenRef, periodRef",
+      "response": "Báo cáo nội bộ có nguồn, version và trạng thái; margin chưa xác định",
+      "gate": "E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07/PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-009",
+      "method": "GET",
+      "path": "/v1/profit-runs/{id}/reconciliation",
+      "fr": [
+        "FR-EXP-RECON-001"
+      ],
+      "screen": "UI-EXP-07",
+      "request": "runRef, facilityResultRef, resultDefinitionVersionRef",
+      "response": "Bảng đối chiếu có residual/unallocated/delta; chưa khớp không nghiệm thu",
+      "gate": "E13-Q06/08/09/14",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-010",
+      "method": "POST",
+      "path": "/v1/expense-adjustments",
+      "fr": [
+        "FR-EXP-ADJ-001"
+      ],
+      "screen": "UI-EXP-08",
+      "request": "originalEntryRef, lockedSnapshotRef, adjustmentAmount, reason, evidenceRef, approvalRef",
+      "response": "Đề nghị PENDING; chỉ POSTED khi có quyết định hợp lệ",
+      "gate": "E13-Q10; O-06",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-011",
+      "method": "GET",
+      "path": "/v1/profit-runs/{id}/internal-projection",
+      "fr": [
+        "FR-EXP-SAFE-001"
+      ],
+      "screen": "UI-EXP-06",
+      "request": "runRef, actorScope, purpose, projection",
+      "response": "Projection nội bộ cho phép hoặc từ chối; không có đường gửi khách E13",
+      "gate": "E13-Q11/12; E12-Q07",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07/PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-012",
+      "method": "GET",
+      "path": "/v1/profit-runs/{id}/sources",
+      "fr": [
+        "FR-EXP-SRC-001"
+      ],
+      "screen": "UI-EXP-05",
+      "request": "runRef, sourceManifestRef, expectedVersions",
+      "response": "Manifest, danh sách BLOCKED và liên kết nội bộ theo quyền",
+      "gate": "E13-Q12/13",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07/PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-013",
+      "method": "POST",
+      "path": "/v1/expense-periods/{id}/locks",
+      "fr": [
+        "FR-EXP-PER-001"
+      ],
+      "screen": "UI-EXP-01",
+      "request": "periodRef, expectedVersion, lockDecisionRef",
+      "response": "Kỳ OPEN hoặc LOCKED; danh sách điều kiện thiếu",
+      "gate": "E13-Q02",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-014",
+      "method": "POST",
+      "path": "/v1/attendance-sheets/{id}/submissions",
+      "fr": [
+        "FR-EXP-TIME-001"
+      ],
+      "screen": "UI-EXP-03",
+      "request": "sheetRef, expectedVersion, evidenceRef",
+      "response": "Bảng SUBMITTED giữ revision và bằng chứng; chưa tự xác nhận giờ công",
+      "gate": "E13-Q03; E11-Q09",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-015",
+      "method": "POST",
+      "path": "/v1/allocation-method-versions/{id}/submissions",
+      "fr": [
+        "FR-EXP-METH-001"
+      ],
+      "screen": "UI-EXP-04",
+      "request": "methodVersionRef, expectedVersion, expectedHash",
+      "response": "Phiên bản SUBMITTED chờ Giám đốc; chưa có hiệu lực phân bổ",
+      "gate": "E13-Q05/09",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-016",
+      "method": "POST",
+      "path": "/v1/expense-adjustments/{id}/decisions",
+      "fr": [
+        "FR-EXP-ADJ-001"
+      ],
+      "screen": "UI-EXP-08",
+      "request": "adjustmentRef, expectedVersion, decision, reason, approvalEvidenceRef",
+      "response": "Quyết định REJECTED hoặc POSTED theo chính sách đã duyệt; bản gốc bất biến",
+      "gate": "E13-Q10; O-06",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-017",
+      "method": "POST",
+      "path": "/v1/profit-runs",
+      "fr": [
+        "FR-EXP-PROF-001"
+      ],
+      "screen": "UI-EXP-06",
+      "request": "allocationRunRef, sourceManifestRef, definitionVersionRef",
+      "response": "Báo cáo nội bộ có nguồn, version và trạng thái; margin chưa xác định",
+      "gate": "E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07/PER-08 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    },
+    {
+      "id": "API-EXP-018",
+      "method": "GET",
+      "path": "/v1/expense-periods/{id}/direct-costs",
+      "fr": [
+        "FR-EXP-COST-001"
+      ],
+      "screen": "UI-EXP-02",
+      "request": "periodRef, kitchenRef, customerRef?",
+      "response": "Dòng chi phí DRAFT có nguồn; chưa hạch toán chính thức",
+      "gate": "E13-Q01",
+      "status": "DRAFT_CONDITIONAL",
+      "authorization": "PER-07 + quyền hành động + scope cơ sở",
+      "errors": [
+        "ERR-EXP-401-01",
+        "ERR-EXP-403-01",
+        "ERR-EXP-404-01",
+        "ERR-EXP-409-01",
+        "ERR-EXP-409-02",
+        "ERR-EXP-409-03",
+        "ERR-EXP-422-01",
+        "ERR-EXP-422-02",
+        "ERR-EXP-422-03",
+        "ERR-EXP-422-04",
+        "ERR-EXP-503-01"
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "id": "PORT-EXP-E3",
+      "mode": "READ_ONLY",
+      "source": "Cost snapshot / estimate; no recomputation"
+    },
+    {
+      "id": "PORT-EXP-E7",
+      "mode": "READ_ONLY",
+      "source": "Reconciled revenue snapshot"
+    },
+    {
+      "id": "PORT-EXP-E10",
+      "mode": "READ_ONLY",
+      "source": "Customer identity and contract provenance, not current-price revenue"
+    },
+    {
+      "id": "PORT-EXP-E11",
+      "mode": "READ_ONLY",
+      "source": "Actual purchase allocation and shift revisions"
+    },
+    {
+      "id": "PORT-EXP-E12",
+      "mode": "PROPOSED_READ_BOUNDARY",
+      "source": "Aggregate metric with definition, methodVersion, scope and status; adapter BLOCKED"
+    }
+  ]
+}

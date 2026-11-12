@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "notApprovedMethod": true,
+  "bridge": {
+    "facilityResult": 200,
+    "customerTotal": 250,
+    "unallocatedCost": 50,
+    "unallocatedEffect": -50,
+    "delta": 0,
+    "r13Complete": false
+  },
+  "mismatch": {
+    "facilityResult": 200,
+    "customerTotal": 250,
+    "unallocatedEffect": -40,
+    "delta": -10
+  },
+  "completeIllustration": {
+    "facilityResult": 200,
+    "customerTotals": [
+      120,
+      80
+    ],
+    "unallocatedEffect": 0,
+    "delta": 0
+  },
+  "warning": "Arithmetic only; does not choose allocation or profit accounting policy"
+}

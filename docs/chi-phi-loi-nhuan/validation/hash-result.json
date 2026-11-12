@@ -1,0 +1,13 @@
+{
+  "scope": "All pre-existing docs files; two append-only exceptions; new docs restricted to E13",
+  "baselineFiles": 1070,
+  "unchanged": 1068,
+  "appended": [
+    "docs/OVERVIEW.md",
+    "docs/project-dashboard.md"
+  ],
+  "tableCount": 65,
+  "errors": [],
+  "sessionAppend": [],
+  "knownDriftEvidence": null
+}

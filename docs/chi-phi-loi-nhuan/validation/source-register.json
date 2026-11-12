@@ -1,0 +1,147 @@
+{
+  "readScope": "Nội dung nguồn theo các mục/mã liên quan; script mẫu đọc cấu trúc, entry point và logic kiểm/render, không chạy generator lịch sử",
+  "sources": [
+    {
+      "path": "docs/OVERVIEW.md",
+      "note": "Mốc E12: 74/78, không coi nguồn được duyệt"
+    },
+    {
+      "path": "docs/gia-phat/review/progress-status-2026-11-12.md",
+      "note": "Ảnh tiến độ cũ 60/78, không ghi đè; đối chiếu mốc E12 mới hơn"
+    },
+    {
+      "path": "docs/gia-phat/01-prd.md",
+      "note": "FEAT-088, BO-01/02, PER-07/08, O-01/O-06"
+    },
+    {
+      "path": "docs/gia-phat/02-roadmap.md",
+      "note": "R13: R7/R11 xong, Giám đốc duyệt; tiêu chí đối chiếu cơ sở"
+    },
+    {
+      "path": "docs/phan-hoi-bao-cao/review/handoff.md",
+      "note": "Gói mẫu gần nhất; phạm vi và giới hạn hash lịch sử"
+    },
+    {
+      "path": "docs/phan-hoi-bao-cao/validation/report.md",
+      "note": "Mẫu bàn giao/checker, không thay bằng chứng E12"
+    },
+    {
+      "path": "docs/cost/srs/spec.md",
+      "note": "Giá, snapshot, dự toán, quyền cost, NFR-COST-002; đọc các mục liên quan"
+    },
+    {
+      "path": "docs/cost/accounting/business-rules.md",
+      "note": "ACC-CONF-02 VAT phải trả, cờ hóa đơn và CK riêng"
+    },
+    {
+      "path": "docs/cost/review/decision-register.md",
+      "note": "Câu Cost/CK/DATA-COST chưa đóng; không tự chọn thành phần"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/srs/spec.md",
+      "note": "FR-FIN-REV/VIEW/REC/AGRE/LOCK; bản đối soát và căn cứ"
+    },
+    {
+      "path": "docs/giao-nhan-doanh-thu/review/questions.md",
+      "note": "Q-13/E7-Q01–08; doanh thu/VAT/rounding/kỳ và contract chưa chốt"
+    },
+    {
+      "path": "docs/crm-ban-hang/srs/spec.md",
+      "note": "Khách, snapshot giá/hợp đồng, quote nội bộ và projection khách"
+    },
+    {
+      "path": "docs/crm-ban-hang/review/questions.md",
+      "note": "E10-Q15 chưa có công thức margin, không suy cost thành lợi nhuận"
+    },
+    {
+      "path": "docs/mua-hang-san-xuat/srs/spec.md",
+      "note": "FR-COST-BUY-001; FR-PLAN-SHF-001; phân ca khác giờ công"
+    },
+    {
+      "path": "docs/mua-hang-san-xuat/review/questions.md",
+      "note": "E11-Q07/08/09/13 và nguồn mua/công nợ giữ mở"
+    },
+    {
+      "path": "docs/phan-hoi-bao-cao/srs/spec.md",
+      "note": "FR-RPT-CPCT-001, chỉ số/nguồn/projection; không thay cost %"
+    },
+    {
+      "path": "docs/phan-hoi-bao-cao/review/questions.md",
+      "note": "E12-Q06/07/08/18 và toàn bộ câu nguồn còn mở"
+    },
+    {
+      "path": "docs/nen-tang/srs/spec.md",
+      "note": "Quyền cơ sở, BR-SEC-008, audit, NFR nền"
+    },
+    {
+      "path": "docs/nen-tang/srs/erd.md",
+      "note": "Mục khung/phạm vi bảng, khóa BIGINT, thời điểm và dữ liệu đề xuất"
+    },
+    {
+      "path": "docs/nen-tang/srs/schema.dbml",
+      "note": "65 bảng; kitchens/users/customers có thật, EXP chưa có"
+    }
+  ],
+  "rules": [
+    ".claude/ba-kit/rules/01-fr-naming-convention.md",
+    ".claude/ba-kit/rules/02-br-naming-convention.md",
+    ".claude/ba-kit/rules/03-err-naming-convention.md",
+    ".claude/ba-kit/rules/04-nfr-standards.md",
+    ".claude/ba-kit/rules/05-srs-ieee-830.md",
+    ".claude/ba-kit/rules/06-cockburn-use-case.md",
+    ".claude/ba-kit/rules/07-invest-user-story.md",
+    ".claude/ba-kit/rules/08-gherkin-acceptance-criteria.md",
+    ".claude/ba-kit/rules/09-data-dictionary-standard.md",
+    ".claude/ba-kit/rules/10-api-contract-standards.md",
+    ".claude/ba-kit/rules/11-error-matrix-convention.md",
+    ".claude/ba-kit/rules/12-state-transition-rules.md",
+    ".claude/ba-kit/rules/13-wireframe-html-guidelines.md",
+    ".claude/ba-kit/rules/14-test-case-traceability.md",
+    ".claude/ba-kit/rules/15-change-request-impact-matrix.md",
+    ".claude/ba-kit/rules/16-ambiguity-detection-rules.md",
+    ".claude/ba-kit/rules/17-actor-role-definition.md",
+    ".claude/ba-kit/rules/18-knowledge-graph-metadata.md",
+    ".claude/ba-kit/rules/19-document-versioning-rules.md"
+  ],
+  "templates": [
+    ".claude/ba-kit/_templates/07-prd-epic.md",
+    ".claude/ba-kit/_templates/08-srs.md",
+    ".claude/ba-kit/_templates/19-state-diagram.md",
+    ".claude/ba-kit/_templates/26-usecase-cockburn.md",
+    ".claude/ba-kit/_templates/27-userstory.md",
+    ".claude/ba-kit/_templates/28-acceptance-criteria.md",
+    ".claude/ba-kit/_templates/29-user-flow.md",
+    ".claude/ba-kit/_templates/31-wireframe-html.html",
+    ".claude/ba-kit/_templates/37-api-design.md",
+    ".claude/ba-kit/_templates/38-api-map.md",
+    ".claude/ba-kit/_templates/42-test-checklist.md",
+    ".claude/ba-kit/_templates/43-test-cases.md"
+  ],
+  "skills": [
+    ".agents/skills/prd-epic/SKILL.md",
+    ".agents/skills/srs/SKILL.md",
+    ".agents/skills/usecase/SKILL.md",
+    ".agents/skills/userstory/SKILL.md",
+    ".agents/skills/ac/SKILL.md",
+    ".agents/skills/state/SKILL.md",
+    ".agents/skills/user-flow/SKILL.md",
+    ".agents/skills/api-design/SKILL.md",
+    ".agents/skills/api-map/SKILL.md",
+    ".agents/skills/wireframe-html/SKILL.md",
+    ".agents/skills/test-checklist/SKILL.md",
+    ".agents/skills/test-cases/SKILL.md",
+    ".agents/skills/preview/SKILL.md"
+  ],
+  "sampleScripts": [
+    "docs/phan-hoi-bao-cao/validation/append-e12-status.cjs",
+    "docs/phan-hoi-bao-cao/validation/author-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/check-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/check-ui-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/complete-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/hash-check-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/inspect-drift-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/refine-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/render-e12.cjs",
+    "docs/phan-hoi-bao-cao/validation/update-manifest-e12.cjs"
+  ]
+}
