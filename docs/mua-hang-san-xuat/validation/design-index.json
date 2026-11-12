@@ -1,0 +1,662 @@
+[
+  {
+    "n": "001",
+    "fr": "FR-PUR-DEM-001",
+    "feature": "FEAT-074",
+    "name": "Lập nhu cầu nguyên liệu",
+    "actor": "Kế toán (PER-07)",
+    "screen": "UI-PUR-01",
+    "input": "planRef, planRevision, estimateRef, serviceDate, kitchenId",
+    "logic": "Đối chiếu đúng bản kế hoạch và dự toán; cộng theo nguyên liệu và đơn vị quy đổi đã có căn cứ; hiển thị nguồn thiếu, không tự trừ tồn hoặc áp hao hụt lần hai.",
+    "output": "Nhu cầu gộp theo ngày/cơ sở, tách lượng mua ròng chưa xác định",
+    "gate": "E6 CG06, ORD-Q10/14; E11-Q01",
+    "scenarios": [
+      [
+        "Nguồn có 100 suất × 70 g, hệ số 1000 g/kg đã xác nhận",
+        "Nhu cầu gộp 7000 g = 7 kg; lượng mua ròng chưa xác định"
+      ],
+      [
+        "Thiếu hệ số g/kg",
+        "Chặn tổng hợp khác đơn vị; không coi hệ số là 1"
+      ],
+      [
+        "Kế hoạch đổi revision khi đang xem",
+        "Đánh dấu nguồn cũ; không dùng số cũ làm nhu cầu hiện hành"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/demands",
+    "entity": "demand",
+    "uc": "UC-PUR-001",
+    "us": "US-PUR-001",
+    "api": "API-PUR-001",
+    "br": "BR-PUR-001",
+    "err": "ERR-PUR-422-11",
+    "ac": [
+      "AC-PUR-001-1",
+      "AC-PUR-001-2",
+      "AC-PUR-001-3"
+    ],
+    "tc": [
+      "TC-PUR-001-1",
+      "TC-PUR-001-2",
+      "TC-PUR-001-3"
+    ]
+  },
+  {
+    "n": "002",
+    "fr": "FR-PUR-POD-001",
+    "feature": "FEAT-074",
+    "name": "Lập đơn mua nháp",
+    "actor": "Kế toán (PER-07)",
+    "screen": "UI-PUR-02",
+    "input": "demandRef, supplierId, lines, reason",
+    "logic": "Người lập chọn NCC từ danh mục E3, không có tự chọn; nhập lượng/đơn vị và PriceInput có nguồn; tổng tiền chỉ khi giá đã xác định.",
+    "output": "Đơn DRAFT, nguồn nhu cầu và giá được giữ",
+    "gate": "E11-Q01/02/13/14",
+    "scenarios": [
+      [
+        "NCC synthetic do người lập chọn, lượng 2 kg; giá cuối 108000 đ/kg",
+        "Nháp có tiền hàng 216000 đ khi căn cứ giá đủ; chưa phát hành"
+      ],
+      [
+        "Số lượng âm hoặc thiếu NCC",
+        "Từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập"
+      ],
+      [
+        "Giá UNKNOWN hoặc chưa rõ VAT phải trả",
+        "Giữ chưa xác định, không coi giá hoặc VAT bằng 0"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/purchase-orders",
+    "entity": "purchaseOrder",
+    "uc": "UC-PUR-002",
+    "us": "US-PUR-002",
+    "api": "API-PUR-002",
+    "br": "BR-PUR-002",
+    "err": "ERR-PUR-422-12",
+    "ac": [
+      "AC-PUR-002-1",
+      "AC-PUR-002-2",
+      "AC-PUR-002-3"
+    ],
+    "tc": [
+      "TC-PUR-002-1",
+      "TC-PUR-002-2",
+      "TC-PUR-002-3"
+    ]
+  },
+  {
+    "n": "003",
+    "fr": "FR-PUR-POG-001",
+    "feature": "FEAT-074",
+    "name": "Kiểm cổng phát hành đơn mua",
+    "actor": "Kế toán (PER-07)",
+    "screen": "UI-PUR-02",
+    "input": "purchaseOrderRef, version",
+    "logic": "Đọc tình trạng nguồn, quyết định duyệt và policy; thiếu E11-Q02 thì trả BLOCKED. Không mô tả người duyệt hay thuật toán hạn mức.",
+    "output": "Danh sách điều kiện thiếu, không phát hành",
+    "gate": "E11-Q02; O-06",
+    "scenarios": [
+      [
+        "Đơn nháp chưa có chính sách duyệt",
+        "Trả BLOCKED kèm E11-Q02; đơn giữ DRAFT"
+      ],
+      [
+        "Client tự gắn APPROVED",
+        "Không công nhận trạng thái do client tự khai"
+      ],
+      [
+        "Tải lại cổng nhiều lần",
+        "GET không tạo quyết định, không gửi đơn cho NCC"
+      ]
+    ],
+    "method": "GET",
+    "route": "/v1/purchasing/purchase-orders/{id}/readiness",
+    "entity": "purchaseOrder",
+    "uc": "UC-PUR-003",
+    "us": "US-PUR-003",
+    "api": "API-PUR-003",
+    "br": "BR-PUR-003",
+    "err": "ERR-PUR-422-13",
+    "ac": [
+      "AC-PUR-003-1",
+      "AC-PUR-003-2",
+      "AC-PUR-003-3"
+    ],
+    "tc": [
+      "TC-PUR-003-1",
+      "TC-PUR-003-2",
+      "TC-PUR-003-3"
+    ]
+  },
+  {
+    "n": "004",
+    "fr": "FR-PUR-LOT-001",
+    "feature": "FEAT-074",
+    "name": "Kiểm phạm vi quản lý lô",
+    "actor": "Quản lý cơ sở (PER-06)",
+    "screen": "UI-PUR-03",
+    "input": "ingredientId, storageType, receiptRef",
+    "logic": "Đọc phân loại E2; chỉ FROZEN hoặc DRY thuộc phạm vi lô; quy tắc mã/hạn/xuất còn chờ.",
+    "output": "Kết quả thuộc/không thuộc phạm vi; chưa tạo lô thật",
+    "gate": "E11-Q03",
+    "scenarios": [
+      [
+        "Nguyên liệu thuộc FROZEN hoặc DRY",
+        "Hiển thị thuộc phạm vi lô; chi tiết lô còn chờ"
+      ],
+      [
+        "Hàng tươi được gửi yêu cầu quản lý lô",
+        "Không tạo lô cho hàng tươi"
+      ],
+      [
+        "Thiếu loại bảo quản",
+        "Không suy là hàng khô; hiển thị chưa xác định"
+      ]
+    ],
+    "method": "GET",
+    "route": "/v1/purchasing/lot-eligibility",
+    "entity": "lotScope",
+    "uc": "UC-PUR-004",
+    "us": "US-PUR-004",
+    "api": "API-PUR-004",
+    "br": "BR-PUR-004",
+    "err": "ERR-PUR-422-14",
+    "ac": [
+      "AC-PUR-004-1",
+      "AC-PUR-004-2",
+      "AC-PUR-004-3"
+    ],
+    "tc": [
+      "TC-PUR-004-1",
+      "TC-PUR-004-2",
+      "TC-PUR-004-3"
+    ]
+  },
+  {
+    "n": "005",
+    "fr": "FR-PUR-RCV-001",
+    "feature": "FEAT-075",
+    "name": "Ghi phiếu nhận hàng nháp",
+    "actor": "Quản lý cơ sở (PER-06)",
+    "screen": "UI-PUR-03",
+    "input": "purchaseOrderRef, lines.receivedQty, lines.acceptedQty, receivedAt, reason",
+    "logic": "Giữ lượng đặt, thực nhận và chấp nhận riêng theo dòng; ghi chứng cứ chênh; không tự hoàn tất đơn hay tăng công nợ chính thức.",
+    "output": "Phiếu DRAFT có phiên bản và chênh lệch hiển thị",
+    "gate": "E11-Q04/13",
+    "scenarios": [
+      [
+        "Đặt 10 kg, nhận 8 kg; người nhận khai chấp nhận 7 kg",
+        "Hiện riêng 10/8/7 kg; 1 kg chưa chấp nhận, 2 kg chưa nhận; chưa tự trả hàng"
+      ],
+      [
+        "Chấp nhận 9 kg khi chỉ nhận 8 kg",
+        "Chặn dữ liệu mâu thuẫn, không ghi phiếu"
+      ],
+      [
+        "Hai lần nhận cùng đơn",
+        "Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/goods-receipts",
+    "entity": "goodsReceipt",
+    "uc": "UC-PUR-005",
+    "us": "US-PUR-005",
+    "api": "API-PUR-005",
+    "br": "BR-PUR-005",
+    "err": "ERR-PUR-422-15",
+    "ac": [
+      "AC-PUR-005-1",
+      "AC-PUR-005-2",
+      "AC-PUR-005-3"
+    ],
+    "tc": [
+      "TC-PUR-005-1",
+      "TC-PUR-005-2",
+      "TC-PUR-005-3"
+    ]
+  },
+  {
+    "n": "006",
+    "fr": "FR-PUR-DOC-001",
+    "feature": "FEAT-075",
+    "name": "Gắn ảnh chứng từ vào phiếu",
+    "actor": "Quản lý cơ sở (PER-06)",
+    "screen": "UI-PUR-04",
+    "input": "receiptRef, fileRef, version",
+    "logic": "Kiểm quyền tệp E1 và cùng phạm vi phiếu; giữ nguồn ảnh và người gắn; mở ảnh không phải xác nhận giá hoặc nhận hàng.",
+    "output": "Liên kết ảnh nội bộ; trạng thái chứng từ riêng",
+    "gate": "E11-Q05/13; E1-Q01",
+    "scenarios": [
+      [
+        "Ảnh synthetic thuộc phiếu/cơ sở và MIME hợp lệ theo E1",
+        "Gắn được tham chiếu ảnh; không chuyển phiếu sang đã nhận chính thức"
+      ],
+      [
+        "File của cơ sở ngoài scope",
+        "Không lộ nội dung/URL tệp, không gắn chéo"
+      ],
+      [
+        "Liên kết ảnh hết hạn 15 phút theo E1",
+        "Kiểm quyền để cấp lại liên kết; không công khai ảnh lâu dài"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/goods-receipts/{id}/evidence",
+    "entity": "receiptEvidence",
+    "uc": "UC-PUR-006",
+    "us": "US-PUR-006",
+    "api": "API-PUR-006",
+    "br": "BR-PUR-006",
+    "err": "ERR-PUR-422-16",
+    "ac": [
+      "AC-PUR-006-1",
+      "AC-PUR-006-2",
+      "AC-PUR-006-3"
+    ],
+    "tc": [
+      "TC-PUR-006-1",
+      "TC-PUR-006-2",
+      "TC-PUR-006-3"
+    ]
+  },
+  {
+    "n": "007",
+    "fr": "FR-PUR-APV-001",
+    "feature": "FEAT-075",
+    "name": "Xem công nợ nhà cung cấp",
+    "actor": "Kế toán (PER-07)",
+    "screen": "UI-PUR-05",
+    "input": "supplierId, kitchenId, fromDate, toDate",
+    "logic": "Đọc số dư và nguồn được xác nhận; thiếu đầu kỳ/ghi nhận/thanh toán thì trả chưa xác định, không biến phiếu nhận thành đã trả.",
+    "output": "Bảng nghĩa vụ, thanh toán, điều chỉnh riêng và nguồn thiếu",
+    "gate": "E11-Q06/04",
+    "scenarios": [
+      [
+        "Có 216000 đ nghĩa vụ và 100000 đ thanh toán có căn cứ, đầu kỳ 0 đã xác nhận",
+        "Dư 116000 đ theo fixture đã đủ căn cứ; không giảm bởi CK khách"
+      ],
+      [
+        "Thiếu số dư đầu kỳ",
+        "Không báo tổng công nợ hoàn chỉnh"
+      ],
+      [
+        "Đơn có CK khách 5 %",
+        "Không trừ 5 % khỏi phải trả NCC; không tự giảm số khách phải trả"
+      ]
+    ],
+    "method": "GET",
+    "route": "/v1/purchasing/supplier-balances",
+    "entity": "supplierBalance",
+    "uc": "UC-PUR-007",
+    "us": "US-PUR-007",
+    "api": "API-PUR-007",
+    "br": "BR-PUR-007",
+    "err": "ERR-PUR-422-17",
+    "ac": [
+      "AC-PUR-007-1",
+      "AC-PUR-007-2",
+      "AC-PUR-007-3"
+    ],
+    "tc": [
+      "TC-PUR-007-1",
+      "TC-PUR-007-2",
+      "TC-PUR-007-3"
+    ]
+  },
+  {
+    "n": "008",
+    "fr": "FR-COST-BUY-001",
+    "feature": "FEAT-076",
+    "name": "Đối chiếu dự toán và thực mua",
+    "actor": "Kế toán (PER-07)",
+    "screen": "UI-PUR-06",
+    "input": "estimateRef, purchaseAllocationRefs, date, kitchenId, measurementBasisRef",
+    "logic": "Giữ tiền dự toán và thực mua riêng; chỉ so tỷ lệ khi cùng scope, đủ nguồn và có định nghĩa BO-02 được duyệt; thiếu thì không trả đạt.",
+    "output": "Hai số tiền, hai tỷ lệ, chênh điểm phần trăm hoặc null có lý do",
+    "gate": "E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04",
+    "scenarios": [
+      [
+        "Fixture minh họa có tỷ lệ cùng mẫu số đã được xác nhận: 50 % và 53 %",
+        "Chênh hiển thị 3 điểm phần trăm; không gọi tăng tương đối 6 % là tiêu chí R11"
+      ],
+      [
+        "Thực mua của cơ sở khác hoặc ngày chưa phân bổ",
+        "Không ghép với dự toán để kết luận đạt"
+      ],
+      [
+        "Mẫu số bằng 0 hoặc chưa biết",
+        "Tỷ lệ và chênh null; kết luận chưa xác định"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/purchase-comparisons",
+    "entity": "comparison",
+    "uc": "UC-PUR-008",
+    "us": "US-PUR-008",
+    "api": "API-PUR-008",
+    "br": "BR-PUR-008",
+    "err": "ERR-PUR-422-18",
+    "ac": [
+      "AC-PUR-008-1",
+      "AC-PUR-008-2",
+      "AC-PUR-008-3"
+    ],
+    "tc": [
+      "TC-PUR-008-1",
+      "TC-PUR-008-2",
+      "TC-PUR-008-3"
+    ]
+  },
+  {
+    "n": "009",
+    "fr": "FR-COST-BEX-001",
+    "feature": "FEAT-076",
+    "name": "Giải thích nguồn chênh lệch",
+    "actor": "Giám đốc/Kế toán (PER-08/07)",
+    "screen": "UI-PUR-06",
+    "input": "comparisonRef, ingredientId",
+    "logic": "Truy về dòng dự toán, dòng nhận/mua và giá gồm VAT; hiển thị lượng/giá/đơn vị và nguồn. Không tự phân rã tác động giá/lượng nếu chưa chốt phương pháp.",
+    "output": "Chi tiết đối chiếu có provenance, giới hạn và thiếu nguồn",
+    "gate": "E11-Q07/08/14",
+    "scenarios": [
+      [
+        "Hai dòng cùng nguyên liệu và đơn vị có nguồn được phép đọc",
+        "Hiện lượng và giá hai phía, liên kết chứng từ; không ghi đè dự toán"
+      ],
+      [
+        "Người không có cost.cost.read yêu cầu tiền",
+        "Không trả tiền hoặc cost trong body/lỗi/log hiển thị"
+      ],
+      [
+        "Giá E3 mới có hiệu lực sau bản dự toán",
+        "Giữ giá snapshot dự toán; giá mới không sửa lịch sử"
+      ]
+    ],
+    "method": "GET",
+    "route": "/v1/purchasing/purchase-comparisons/{id}/lines",
+    "entity": "comparisonLine",
+    "uc": "UC-PUR-009",
+    "us": "US-PUR-009",
+    "api": "API-PUR-009",
+    "br": "BR-PUR-009",
+    "err": "ERR-PUR-403-11",
+    "ac": [
+      "AC-PUR-009-1",
+      "AC-PUR-009-2",
+      "AC-PUR-009-3"
+    ],
+    "tc": [
+      "TC-PUR-009-1",
+      "TC-PUR-009-2",
+      "TC-PUR-009-3"
+    ]
+  },
+  {
+    "n": "010",
+    "fr": "FR-PLAN-SHF-001",
+    "feature": "FEAT-077",
+    "name": "Lập phân ca nháp",
+    "actor": "Bếp trưởng (PER-06)",
+    "screen": "UI-PUR-07",
+    "input": "kitchenId, serviceDate, shiftRef, assignments, planRef",
+    "logic": "Ghi phân công dự kiến gắn đúng nguồn; không xác nhận đã bắt đầu sản xuất E6, không tự chốt đủ người hoặc giờ ca.",
+    "output": "Phân ca DRAFT và các điều kiện còn thiếu",
+    "gate": "E11-Q09; E6 CG06",
+    "scenarios": [
+      [
+        "Ca synthetic, phân công công việc cho mã nhân sự giả thuộc scope",
+        "Giữ bản nháp; trạng thái bắt đầu sản xuất E6 không đổi"
+      ],
+      [
+        "Nhân sự ngoài cơ sở được phép",
+        "Từ chối gắn vào ca"
+      ],
+      [
+        "Plan revision thay đổi",
+        "Đánh dấu cần rà soát phân công; không tự kế thừa xác nhận bản cũ"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/production-shifts",
+    "entity": "productionShift",
+    "uc": "UC-PUR-010",
+    "us": "US-PUR-010",
+    "api": "API-PUR-010",
+    "br": "BR-PUR-010",
+    "err": "ERR-PUR-422-20",
+    "ac": [
+      "AC-PUR-010-1",
+      "AC-PUR-010-2",
+      "AC-PUR-010-3"
+    ],
+    "tc": [
+      "TC-PUR-010-1",
+      "TC-PUR-010-2",
+      "TC-PUR-010-3"
+    ]
+  },
+  {
+    "n": "011",
+    "fr": "FR-PLAN-QCG-001",
+    "feature": "FEAT-077",
+    "name": "Ghi kiểm tra trước giao",
+    "actor": "Bếp trưởng (PER-06)",
+    "screen": "UI-PUR-08",
+    "input": "shiftRef, checklistRef, results, reason",
+    "logic": "Ghi kết quả theo mục đã được duyệt; thiếu checklist hoặc còn mục chưa kiểm thì chưa đủ căn cứ giao. QC không ghi số khách nhận hoặc doanh thu.",
+    "output": "Phiếu QC nháp và cổng chưa sẵn sàng",
+    "gate": "E11-Q10; E7-Q02; E6 CG06",
+    "scenarios": [
+      [
+        "Checklist mẫu có mục kiểm hộp chưa kiểm",
+        "Hiện chưa đủ căn cứ giao; không tự chuyển E7 sang giao thành công"
+      ],
+      [
+        "Client bỏ mục không đạt khỏi yêu cầu",
+        "Không kết luận đủ dựa trên tập mục thiếu"
+      ],
+      [
+        "Tất cả mục mẫu được đánh đạt nhưng policy chưa duyệt",
+        "Vẫn BLOCKED E11-Q10; không phát sinh phiếu giao"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/pre-delivery-checks",
+    "entity": "qualityCheck",
+    "uc": "UC-PUR-011",
+    "us": "US-PUR-011",
+    "api": "API-PUR-011",
+    "br": "BR-PUR-011",
+    "err": "ERR-PUR-422-21",
+    "ac": [
+      "AC-PUR-011-1",
+      "AC-PUR-011-2",
+      "AC-PUR-011-3"
+    ],
+    "tc": [
+      "TC-PUR-011-1",
+      "TC-PUR-011-2",
+      "TC-PUR-011-3"
+    ]
+  },
+  {
+    "n": "012",
+    "fr": "FR-PLAN-SMP-001",
+    "feature": "FEAT-077",
+    "name": "Ghi sổ mẫu lưu theo bữa",
+    "actor": "Quản lý cơ sở (PER-06)",
+    "screen": "UI-PUR-08",
+    "input": "mealRef, kitchenId, sampleCode, recordedAt, recordedBy, evidenceRef",
+    "logic": "Ghi mẫu và liên kết bữa; phân biệt đã có bản ghi với mẫu hợp lệ theo policy; không tự đặt hạn lưu hay hủy.",
+    "output": "Sổ mẫu nháp, danh sách bữa thiếu mẫu",
+    "gate": "E11-Q11; E6 CG06",
+    "scenarios": [
+      [
+        "Tập bữa synthetic đã xác nhận có 10 bữa, 9 bữa có bản ghi mẫu",
+        "Độ phủ bản ghi 90 %, liệt kê 1 bữa thiếu; chưa đạt mục tiêu 100 % R11"
+      ],
+      [
+        "Thiếu mã bữa hoặc cơ sở",
+        "Chặn bản ghi không truy được nguồn"
+      ],
+      [
+        "Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu",
+        "Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/retained-samples",
+    "entity": "retainedSample",
+    "uc": "UC-PUR-012",
+    "us": "US-PUR-012",
+    "api": "API-PUR-012",
+    "br": "BR-PUR-012",
+    "err": "ERR-PUR-422-22",
+    "ac": [
+      "AC-PUR-012-1",
+      "AC-PUR-012-2",
+      "AC-PUR-012-3"
+    ],
+    "tc": [
+      "TC-PUR-012-1",
+      "TC-PUR-012-2",
+      "TC-PUR-012-3"
+    ]
+  },
+  {
+    "n": "013",
+    "fr": "FR-MENU-SUB-001",
+    "feature": "FEAT-078",
+    "name": "Lập ứng viên món thay thế",
+    "actor": "Dinh dưỡng viên (PER-05)",
+    "screen": "UI-PUR-09",
+    "input": "menuRef, menuVersion, originalDishId, replacementDishId, reason",
+    "logic": "Người dùng chọn món cùng vai trò từ danh mục được phép; ghi thiếu hàng và nguồn; tạo ứng viên DRAFT, không thay thực đơn công bố.",
+    "output": "Ứng viên nháp có món cũ/mới và vai trò",
+    "gate": "E11-Q12/15; O-02",
+    "scenarios": [
+      [
+        "Đổi một món MAIN sang món MAIN đang được phép dùng",
+        "Tạo ứng viên DRAFT; thực đơn công bố không đổi"
+      ],
+      [
+        "Đổi món MAIN sang SOUP",
+        "Chặn khác vai trò, không tạo thay thế hợp lệ"
+      ],
+      [
+        "Món có tên giống nhưng vai trò khác",
+        "So mã vai trò, không so chuỗi tên món"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/substitution-candidates",
+    "entity": "substitution",
+    "uc": "UC-PUR-013",
+    "us": "US-PUR-013",
+    "api": "API-PUR-013",
+    "br": "BR-PUR-013",
+    "err": "ERR-PUR-422-23",
+    "ac": [
+      "AC-PUR-013-1",
+      "AC-PUR-013-2",
+      "AC-PUR-013-3"
+    ],
+    "tc": [
+      "TC-PUR-013-1",
+      "TC-PUR-013-2",
+      "TC-PUR-013-3"
+    ]
+  },
+  {
+    "n": "014",
+    "fr": "FR-MENU-SCK-001",
+    "feature": "FEAT-078",
+    "name": "Kiểm lại ứng viên thay món",
+    "actor": "Dinh dưỡng viên (PER-05)",
+    "screen": "UI-PUR-09",
+    "input": "candidateRef, candidateVersion, menuSourceRef",
+    "logic": "Mỗi lần thay đều yêu cầu kiểm lại dị ứng, quy tắc E2 và cost E3 trên cùng phiên bản; chỉ hiển thị kết quả có provenance; không dùng lại kết quả món cũ.",
+    "output": "Bộ kết quả hoặc trạng thái BLOCKED kèm nguồn thiếu",
+    "gate": "DL-01; E11-Q15; O-01/O-02; CK/DATA-COST",
+    "scenarios": [
+      [
+        "Ứng viên có đủ nhãn dị ứng, rule và giá trong fixture đã duyệt",
+        "Có đủ ba kết quả đúng candidateVersion; vẫn chưa được công bố"
+      ],
+      [
+        "Thiếu giá hoặc thiếu căn cứ dị ứng",
+        "BLOCKED; không trả đạt dù quy tắc khác đạt"
+      ],
+      [
+        "Người dùng đổi ứng viên sau lần kiểm",
+        "Kết quả cũ không hợp lệ; chạy lại cả ba kiểm"
+      ]
+    ],
+    "method": "POST",
+    "route": "/v1/purchasing/substitution-checks",
+    "entity": "substitutionCheck",
+    "uc": "UC-PUR-014",
+    "us": "US-PUR-014",
+    "api": "API-PUR-014",
+    "br": "BR-PUR-014",
+    "err": "ERR-PUR-422-24",
+    "ac": [
+      "AC-PUR-014-1",
+      "AC-PUR-014-2",
+      "AC-PUR-014-3"
+    ],
+    "tc": [
+      "TC-PUR-014-1",
+      "TC-PUR-014-2",
+      "TC-PUR-014-3"
+    ]
+  },
+  {
+    "n": "015",
+    "fr": "FR-MENU-SGT-001",
+    "feature": "FEAT-078",
+    "name": "Kiểm cổng chuyển duyệt MENU",
+    "actor": "Dinh dưỡng viên (PER-05)",
+    "screen": "UI-PUR-09",
+    "input": "candidateRef, candidateVersion, checkRefs",
+    "logic": "Kiểm đủ kết quả đúng nguồn và cổng MENU hiện hành. CHAN chặn vượt cost; CANH_BAO giữ cảnh báo và vẫn qua MENU; thiếu đầu vào luôn chặn. Không ghi duyệt/công bố hoặc cập nhật E6.",
+    "output": "Readiness và lý do chặn; việc chuyển thật chờ adapter nguồn",
+    "gate": "E11-Q12/13; DL-01; E6 CG05/06/07",
+    "scenarios": [
+      [
+        "Kết quả dị ứng, rule, cost đúng phiên bản; MENU vẫn chưa duyệt",
+        "Hiện cần qua cổng MENU; không tự công bố hoặc sửa kế hoạch"
+      ],
+      [
+        "Quy tắc cứng vi phạm hoặc thiếu cost",
+        "Không được chuyển như đã đạt; giữ ứng viên"
+      ],
+      [
+        "Nguồn thay đổi giữa kiểm và chuyển",
+        "Từ chối dùng kết quả cũ; yêu cầu kiểm lại, không bỏ qua MENU"
+      ]
+    ],
+    "method": "GET",
+    "route": "/v1/purchasing/substitution-candidates/{id}/readiness",
+    "entity": "substitution",
+    "uc": "UC-PUR-015",
+    "us": "US-PUR-015",
+    "api": "API-PUR-015",
+    "br": "BR-PUR-015",
+    "err": "ERR-PUR-422-25",
+    "ac": [
+      "AC-PUR-015-1",
+      "AC-PUR-015-2",
+      "AC-PUR-015-3"
+    ],
+    "tc": [
+      "TC-PUR-015-1",
+      "TC-PUR-015-2",
+      "TC-PUR-015-3"
+    ]
+  }
+]

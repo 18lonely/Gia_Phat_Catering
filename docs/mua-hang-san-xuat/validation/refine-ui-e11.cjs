@@ -1,0 +1,17 @@
+const fs=require('fs'),path=require('path');const p=path.resolve(__dirname,'../html-wireframe/purchase-workbench.html');let s=fs.readFileSync(p,'utf8');
+const input=(label,value,type='text')=>`<label>${label}<input type="${type}" value="${value}"></label>`;
+const select=(label,values)=>`<label>${label}<select>${values.map(v=>'<option>'+v+'</option>').join('')}</select></label>`;
+const fields=[
+input('Bản kế hoạch nguồn','SYN-PLAN-A / revision mẫu')+input('Bản dự toán','SYN-EST-A / phiên bản mẫu')+input('Nguyên liệu mẫu','SYN-NL-01')+input('Nhu cầu gộp đã quy đổi','7 kg · chưa trừ tồn'),
+select('Nhà cung cấp (người lập chọn)',['Chưa chọn','SYN-NCC-01 · synthetic'])+input('Lượng đề nghị mua','2','number')+select('Đơn vị',['kg'])+input('Giá báo trên đơn vị','108000','number')+select('Cách báo giá',['Đã gồm VAT phải trả','Chưa gồm VAT — cần căn cứ','Giá cuối được xác nhận'])+input('Nguồn xác nhận giá','Chứng từ synthetic, chưa có nguồn thật'),
+input('Đơn mua tham chiếu','SYN-PO-01')+select('Loại bảo quản',['Đông lạnh — thuộc phạm vi lô','Khô — thuộc phạm vi lô','Tươi — không quản lý lô'])+input('Lượng đặt (kg)','10','number')+input('Thực nhận (kg)','8','number')+input('Chấp nhận (kg)','7','number')+input('Lý do chưa chấp nhận','Ghi nhận mẫu; chính sách xử lý còn chờ'),
+input('Phiếu nhận tham chiếu','SYN-RCV-01')+input('Mã tệp nội bộ','SYN-FILE-01')+select('Loại chứng từ',['Ảnh nhận hàng synthetic','Ảnh chứng từ giá synthetic'])+input('Nguồn ảnh','Placeholder, không có ảnh chứng từ thật'),
+input('Nhà cung cấp','SYN-NCC-01')+input('Từ ngày','12/11/2026')+input('Đến ngày','12/11/2026')+input('Tình trạng nguồn','Chưa xác nhận số đầu kỳ và kỳ đối chiếu'),
+input('Dự toán tham chiếu','SYN-EST-A')+input('Nguồn thực mua','SYN-RCV-01 · phân bổ chưa duyệt')+input('Tỷ lệ dự toán minh họa','50 %')+input('Tỷ lệ thực mua minh họa','53 %')+input('Chênh minh họa','3 điểm phần trăm')+input('Kết luận R11','BLOCKED · chờ E11-Q07/08'),
+input('Ca tham chiếu','SYN-SHIFT-01 · chưa chốt giờ ca')+input('Nhân sự giả lập','SYN-PERSON-01')+input('Công việc dự kiến','Chuẩn bị nguyên liệu')+input('Nguồn kế hoạch','SYN-PLAN-A · chưa có xác nhận E6'),
+input('Mã bữa','SYN-MEAL-01')+input('Mã mẫu lưu','SYN-SAMPLE-01')+select('Kết quả mục QC mẫu',['Chưa kiểm','Đạt trong mô phỏng','Không đạt trong mô phỏng'])+input('Hạn lưu mẫu','Chưa xác định — E11-Q11')+input('Mẫu hợp lệ','Chờ chính sách, không suy từ bản ghi')+input('Bữa có bản ghi / bữa kỳ vọng','9 / 10 · synthetic'),
+input('Món đang thiếu','SYN-DISH-01 · MAIN')+select('Món thay cùng vai trò',['Chưa chọn','SYN-DISH-02 · MAIN'])+input('Lý do thay','Thiếu nguyên liệu — synthetic')+input('Kiểm dị ứng / quy tắc / cost','Cần kiểm lại đúng phiên bản')+input('Cổng duyệt','MENU — chưa được duyệt')+input('Tác động kế hoạch','BLOCKED · E11-Q12')
+];
+s=s.replaceAll('type="date" value="2026-11-12"','type="text" value="12/11/2026"');
+for(let i=0;i<9;i++){const id='UI-PUR-'+String(i+1).padStart(2,'0');const start=s.indexOf('<section id="'+id+'"'),end=s.indexOf('</section>',start);let part=s.slice(start,end);if(!part.includes('data-business-fields'))part=part.replace('<div class="card">','<div class="card" data-business-fields><h3>Thông tin thao tác mẫu</h3><p class="meta">Các trường chỉ phục vụ review, không lưu hoặc gửi dữ liệu.</p><div class="form">'+fields[i]+'</div></div><div class="card">');s=s.slice(0,start)+part+s.slice(end)}
+s=s.replace('.actions{display:flex;','.actions{margin-top:12px;display:flex;');fs.writeFileSync(p,s);

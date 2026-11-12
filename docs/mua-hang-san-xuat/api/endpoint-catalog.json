@@ -1,0 +1,269 @@
+{
+  "status": "DRAFT",
+  "endpoints": [
+    {
+      "id": "API-PUR-001",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/demands",
+      "fr": [
+        "FR-PUR-DEM-001"
+      ],
+      "screen": "UI-PUR-01",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E6 CG06, ORD-Q10/14; E11-Q01",
+      "request": "planRef, planRevision, estimateRef, serviceDate, kitchenId",
+      "response": "Nhu cầu gộp theo ngày/cơ sở, tách lượng mua ròng chưa xác định",
+      "entity": "demand"
+    },
+    {
+      "id": "API-PUR-002",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/purchase-orders",
+      "fr": [
+        "FR-PUR-POD-001"
+      ],
+      "screen": "UI-PUR-02",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q01/02/13/14",
+      "request": "demandRef, supplierId, lines, reason",
+      "response": "Đơn DRAFT, nguồn nhu cầu và giá được giữ",
+      "entity": "purchaseOrder"
+    },
+    {
+      "id": "API-PUR-003",
+      "kind": "HTTP",
+      "method": "GET",
+      "path": "/v1/purchasing/purchase-orders/{id}/readiness",
+      "fr": [
+        "FR-PUR-POG-001"
+      ],
+      "screen": "UI-PUR-02",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q02; O-06",
+      "request": "purchaseOrderRef, version",
+      "response": "Danh sách điều kiện thiếu, không phát hành",
+      "entity": "purchaseOrder"
+    },
+    {
+      "id": "API-PUR-004",
+      "kind": "HTTP",
+      "method": "GET",
+      "path": "/v1/purchasing/lot-eligibility",
+      "fr": [
+        "FR-PUR-LOT-001"
+      ],
+      "screen": "UI-PUR-03",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q03",
+      "request": "ingredientId, storageType, receiptRef",
+      "response": "Kết quả thuộc/không thuộc phạm vi; chưa tạo lô thật",
+      "entity": "lotScope"
+    },
+    {
+      "id": "API-PUR-005",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/goods-receipts",
+      "fr": [
+        "FR-PUR-RCV-001"
+      ],
+      "screen": "UI-PUR-03",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q04/13",
+      "request": "purchaseOrderRef, lines.receivedQty, lines.acceptedQty, receivedAt, reason",
+      "response": "Phiếu DRAFT có phiên bản và chênh lệch hiển thị",
+      "entity": "goodsReceipt"
+    },
+    {
+      "id": "API-PUR-006",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/goods-receipts/{id}/evidence",
+      "fr": [
+        "FR-PUR-DOC-001"
+      ],
+      "screen": "UI-PUR-04",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q05/13; E1-Q01",
+      "request": "receiptRef, fileRef, version",
+      "response": "Liên kết ảnh nội bộ; trạng thái chứng từ riêng",
+      "entity": "receiptEvidence"
+    },
+    {
+      "id": "API-PUR-007",
+      "kind": "HTTP",
+      "method": "GET",
+      "path": "/v1/purchasing/supplier-balances",
+      "fr": [
+        "FR-PUR-APV-001"
+      ],
+      "screen": "UI-PUR-05",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q06/04",
+      "request": "supplierId, kitchenId, fromDate, toDate",
+      "response": "Bảng nghĩa vụ, thanh toán, điều chỉnh riêng và nguồn thiếu",
+      "entity": "supplierBalance"
+    },
+    {
+      "id": "API-PUR-008",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/purchase-comparisons",
+      "fr": [
+        "FR-COST-BUY-001"
+      ],
+      "screen": "UI-PUR-06",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04",
+      "request": "estimateRef, purchaseAllocationRefs, date, kitchenId, measurementBasisRef",
+      "response": "Hai số tiền, hai tỷ lệ, chênh điểm phần trăm hoặc null có lý do",
+      "entity": "comparison"
+    },
+    {
+      "id": "API-PUR-009",
+      "kind": "HTTP",
+      "method": "GET",
+      "path": "/v1/purchasing/purchase-comparisons/{id}/lines",
+      "fr": [
+        "FR-COST-BEX-001"
+      ],
+      "screen": "UI-PUR-06",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q07/08/14",
+      "request": "comparisonRef, ingredientId",
+      "response": "Chi tiết đối chiếu có provenance, giới hạn và thiếu nguồn",
+      "entity": "comparisonLine"
+    },
+    {
+      "id": "API-PUR-010",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/production-shifts",
+      "fr": [
+        "FR-PLAN-SHF-001"
+      ],
+      "screen": "UI-PUR-07",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q09; E6 CG06",
+      "request": "kitchenId, serviceDate, shiftRef, assignments, planRef",
+      "response": "Phân ca DRAFT và các điều kiện còn thiếu",
+      "entity": "productionShift"
+    },
+    {
+      "id": "API-PUR-011",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/pre-delivery-checks",
+      "fr": [
+        "FR-PLAN-QCG-001"
+      ],
+      "screen": "UI-PUR-08",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q10; E7-Q02; E6 CG06",
+      "request": "shiftRef, checklistRef, results, reason",
+      "response": "Phiếu QC nháp và cổng chưa sẵn sàng",
+      "entity": "qualityCheck"
+    },
+    {
+      "id": "API-PUR-012",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/retained-samples",
+      "fr": [
+        "FR-PLAN-SMP-001"
+      ],
+      "screen": "UI-PUR-08",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q11; E6 CG06",
+      "request": "mealRef, kitchenId, sampleCode, recordedAt, recordedBy, evidenceRef",
+      "response": "Sổ mẫu nháp, danh sách bữa thiếu mẫu",
+      "entity": "retainedSample"
+    },
+    {
+      "id": "API-PUR-013",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/substitution-candidates",
+      "fr": [
+        "FR-MENU-SUB-001"
+      ],
+      "screen": "UI-PUR-09",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q12/15; O-02",
+      "request": "menuRef, menuVersion, originalDishId, replacementDishId, reason",
+      "response": "Ứng viên nháp có món cũ/mới và vai trò",
+      "entity": "substitution"
+    },
+    {
+      "id": "API-PUR-014",
+      "kind": "HTTP",
+      "method": "POST",
+      "path": "/v1/purchasing/substitution-checks",
+      "fr": [
+        "FR-MENU-SCK-001"
+      ],
+      "screen": "UI-PUR-09",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "DL-01; E11-Q15; O-01/O-02; CK/DATA-COST",
+      "request": "candidateRef, candidateVersion, menuSourceRef",
+      "response": "Bộ kết quả hoặc trạng thái BLOCKED kèm nguồn thiếu",
+      "entity": "substitutionCheck"
+    },
+    {
+      "id": "API-PUR-015",
+      "kind": "HTTP",
+      "method": "GET",
+      "path": "/v1/purchasing/substitution-candidates/{id}/readiness",
+      "fr": [
+        "FR-MENU-SGT-001"
+      ],
+      "screen": "UI-PUR-09",
+      "status": "DRAFT_CONDITIONAL",
+      "gate": "E11-Q12/13; DL-01; E6 CG05/06/07",
+      "request": "candidateRef, candidateVersion, checkRefs",
+      "response": "Readiness và lý do chặn; việc chuyển thật chờ adapter nguồn",
+      "entity": "substitution"
+    }
+  ],
+  "ports": [
+    {
+      "id": "PORT-PUR-PLAN",
+      "fr": [
+        "FR-PUR-DEM-001",
+        "FR-PLAN-SHF-001"
+      ],
+      "source": "E6",
+      "status": "BLOCKED CG06; no producer contract"
+    },
+    {
+      "id": "PORT-PUR-PRICE",
+      "fr": [
+        "FR-PUR-POD-001",
+        "FR-PUR-RCV-001",
+        "FR-COST-BEX-001"
+      ],
+      "source": "E3 PriceInput",
+      "status": "BLOCKED E11-Q14; no price write"
+    },
+    {
+      "id": "PORT-PUR-MENU",
+      "fr": [
+        "FR-MENU-SCK-001",
+        "FR-MENU-SGT-001"
+      ],
+      "source": "E2/E3",
+      "status": "BLOCKED DL-01 / E11-Q12/15; no approval bypass"
+    },
+    {
+      "id": "PORT-PUR-DLV",
+      "fr": [
+        "FR-PLAN-QCG-001",
+        "FR-PLAN-SMP-001"
+      ],
+      "source": "E7",
+      "status": "BLOCKED E11-Q10 / E7-Q02; no delivery write"
+    }
+  ]
+}
