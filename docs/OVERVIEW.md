@@ -144,8 +144,6 @@ E9 đúng FEAT-060→065: 5 P0 có thiết kế nháp có điều kiện; FEAT-0
 
 Mọi câu hỏi mở giữ nguyên, cột trả lời để trống: E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8-Q01–12; E9-Q01–14; O-01 đến O-05; CK-Q01–10/DATA-COST-Q01–06; AIO-Q01–06/NUTR-Q01–04. Không backend, migration, gọi mô hình AI, thay PRD/roadmap hoặc schema 65 bảng.
 
-[Báo cáo phiên và giới hạn kiểm](review-sessions/uc-refresh-2026-11-12/report.md): kiểm bảo toàn/truy vết/liên kết/UC đạt; check-e7.cjs đạt. Kiểm số dính chữ còn báo lỗi trong report.md lịch sử của ba gói vì các file đó bị cấm sửa. Không chạy check-e8.cjs/check-e9.cjs: chúng khóa hash các gói trước khi chỉnh; dùng checker phiên, không ghi đè kết quả lịch sử.
-
 
 ## Mốc hiện hành — gói BA nháp E10, 12/11/2026
 
