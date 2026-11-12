@@ -1,0 +1,334 @@
+[
+  {
+    "id": "API-PUB-001",
+    "method": "GET",
+    "path": "/v1/public/pages/{slug}",
+    "fr": "FR-PUB-PAGE-001",
+    "ui": "UI-PUB-01",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "slug trang",
+    "response": "Trang nội dung hoặc không tìm thấy",
+    "gate": "E8-Q08",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01"
+    ]
+  },
+  {
+    "id": "API-PUB-002",
+    "method": "GET",
+    "path": "/v1/public/articles/{slug}",
+    "fr": "FR-PUB-BLOG-001",
+    "ui": "UI-PUB-02",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "bộ lọc, page, slug bài",
+    "response": "Danh sách/chi tiết và metadata công khai",
+    "gate": "E8-Q01/08",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01"
+    ]
+  },
+  {
+    "id": "API-PUB-003",
+    "method": "POST",
+    "path": "/v1/admin/public/url-maps",
+    "fr": "FR-PUB-URLM-001",
+    "ui": "UI-PUB-07",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "inventoryRef, URL nguồn, target, KEEP/REDIRECT, revision",
+    "response": "Bảng mapping nháp và danh sách chặn",
+    "gate": "E8-Q01/02",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02",
+      "ERR-PUB-422-03"
+    ]
+  },
+  {
+    "id": "API-PUB-004",
+    "method": "GET",
+    "path": "/v1/public/legacy-resolution",
+    "fr": "FR-PUB-URLR-001",
+    "ui": "UI-PUB-07",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "URL cũ từ mapping đã duyệt",
+    "response": "HTTP 200 hoặc 301 với Location",
+    "gate": "E8-Q01/02",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01"
+    ]
+  },
+  {
+    "id": "API-PUB-005",
+    "method": "GET",
+    "path": "/v1/public/menu-samples/{id}",
+    "fr": "FR-PUB-MENU-001",
+    "ui": "UI-PUB-03",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "publicSampleId, ngày hiển thị",
+    "response": "Tuần mẫu, giá suất, định lượng, kcal/đạm/béo/bột đường, dị ứng và nhãn ước tính",
+    "gate": "E8-Q03/04",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-006",
+    "method": "POST",
+    "path": "/v1/public/menu-trials",
+    "fr": "FR-PUB-TRY-001",
+    "ui": "UI-PUB-04",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "loại suất công khai, số suất nguyên dương, lựa chọn kiêng nguyên liệu",
+    "response": "Kết quả mẫu/không tìm thấy phương án hoặc BLOCKED",
+    "gate": "E8-Q05/04",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-007",
+    "method": "POST",
+    "path": "/v1/public/leads",
+    "fr": "FR-PUB-LEAD-001",
+    "ui": "UI-PUB-05",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "thông tin liên hệ tối thiểu, consent, nguồn, trialRef nếu có",
+    "response": "Mã tiếp nhận an toàn; CRM chưa đồng nghĩa đã nhận",
+    "gate": "E8-Q06/07",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-008",
+    "method": "GET",
+    "path": "/v1/admin/public/lead-handoffs/{id}",
+    "fr": "FR-PUB-RELY-001",
+    "ui": "UI-PUB-08",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "leadRef, trạng thái bàn giao, receiptRef khi có",
+    "response": "Tình trạng chờ bàn giao/lỗi/đã có receipt",
+    "gate": "E8-Q06/07/11",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01"
+    ]
+  },
+  {
+    "id": "API-PUB-009",
+    "method": "PUT",
+    "path": "/v1/admin/public/contents/{id}",
+    "fr": "FR-PUB-EDIT-001",
+    "ui": "UI-PUB-06",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "loại trang/bài/banner, title, body, slug, mediaRefs, version",
+    "response": "Bản nháp với version mới",
+    "gate": "E8-Q08/09",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-010",
+    "method": "GET",
+    "path": "/v1/admin/public/contents/{id}/preview",
+    "fr": "FR-PUB-PREV-001",
+    "ui": "UI-PUB-06",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "contentId, revision",
+    "response": "Bản xem trước có nhãn nháp",
+    "gate": "E8-Q08",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01"
+    ]
+  },
+  {
+    "id": "API-PUB-011",
+    "method": "POST",
+    "path": "/v1/admin/public/contents/{id}/publication",
+    "fr": "FR-PUB-PUBL-001",
+    "ui": "UI-PUB-06",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "contentId, revision, action, lý do",
+    "response": "Revision công khai hoặc trạng thái thu hồi",
+    "gate": "E8-Q08/09/02",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-012",
+    "method": "POST",
+    "path": "/v1/admin/public/media",
+    "fr": "FR-PUB-MEDI-001",
+    "ui": "UI-PUB-09",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "fileRef, altText, vị trí banner, quyền sử dụng, version",
+    "response": "Media metadata nháp và các vị trí sử dụng",
+    "gate": "E8-Q09/08",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02",
+      "ERR-PUB-415-01"
+    ]
+  },
+  {
+    "id": "API-PUB-013",
+    "method": "GET",
+    "path": "/v1/public/articles",
+    "fr": "FR-PUB-BLOG-001",
+    "ui": "UI-PUB-02",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "bộ lọc/phân trang theo nền; E8-Q12",
+    "response": "items và thông tin phân trang đã duyệt",
+    "gate": "E8-Q01/08",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01"
+    ]
+  },
+  {
+    "id": "API-PUB-014",
+    "method": "GET",
+    "path": "/v1/public/menu-samples",
+    "fr": "FR-PUB-MENU-001",
+    "ui": "UI-PUB-03",
+    "auth": "anonymous, chỉ dữ liệu công khai",
+    "request": "bộ lọc/phân trang theo nền; E8-Q12",
+    "response": "items và thông tin phân trang đã duyệt",
+    "gate": "E8-Q03/04",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-015",
+    "method": "GET",
+    "path": "/v1/admin/public/contents",
+    "fr": "FR-PUB-EDIT-001",
+    "ui": "UI-PUB-06",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "bộ lọc/phân trang theo nền; E8-Q12",
+    "response": "items và thông tin phân trang đã duyệt",
+    "gate": "E8-Q08/09",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  },
+  {
+    "id": "API-PUB-016",
+    "method": "POST",
+    "path": "/v1/admin/public/contents",
+    "fr": "FR-PUB-EDIT-001",
+    "ui": "UI-PUB-06",
+    "auth": "AUTH + quyền PUB đề xuất E8-Q08",
+    "request": "Nội dung nháp mới; chưa có id/version trước tạo",
+    "response": "id và revision nháp mới",
+    "gate": "E8-Q08/09",
+    "errors": [
+      "ERR-PUB-400-01",
+      "ERR-PUB-404-01",
+      "ERR-PUB-429-01",
+      "ERR-PUB-500-01",
+      "ERR-PUB-503-01",
+      "ERR-PUB-401-01",
+      "ERR-PUB-403-01",
+      "ERR-PUB-409-01",
+      "ERR-PUB-422-01",
+      "ERR-PUB-422-02"
+    ]
+  }
+]
