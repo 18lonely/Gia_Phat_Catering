@@ -1,13 +1,18 @@
 ---
 id: DOC-E9-TEST-TEST-CASES-MD
 title: Ca chức năng E9
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Ca chức năng E9
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E9-Q15; Giữ gate E9-Q15 |
+
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -30,10 +35,10 @@ Toàn bộ input minh họa **synthetic**, không phải bộ nghiệm thu đã 
 | TC-AIN-005-01 | AC-AIN-005-01 | FR-AIN-EDIT-001 | Fixture synthetic; revision hiện hành và đổi món hợp lệ | chỉnh một ngày | chạy E2 toàn tuần; chỉ bản mới đạt mới được ghi đã kiểm | BLOCKED |  |  |
 | TC-AIN-005-02 | AC-AIN-005-02 | FR-AIN-EDIT-001 | Fixture synthetic; đổi tạo vi phạm cứng | chỉnh | bản mới bị chặn; không trình bày hợp lệ, bản cũ chỉ lịch sử | NOT RUN |  |  |
 | TC-AIN-005-03 | AC-AIN-005-03 | FR-AIN-EDIT-001 | Fixture synthetic; hai tab sửa cùng baseRevision | gửi hai chỉnh sửa | một revision tiến; lệnh cũ 409, không ghi đè | NOT RUN |  |  |
-| TC-AIN-006-01 | AC-AIN-006-01 | FR-AIN-SEND-001 | Fixture synthetic; đầu nhận được duyệt, consent đủ, nháp đạt kiểm mới | xác nhận gửi | receipt bền vững và CHỜ XEM XÉT; không menus/order/báo giá | BLOCKED |  |  |
+| TC-AIN-006-01 | AC-AIN-006-01 | FR-AIN-SEND-001 | Fixture synthetic; đầu nhận được duyệt, consent đủ, nháp đạt kiểm mới | xác nhận gửi | receipt bền vững và CHỜ XEM XÉT; không menus/order/báo giá ; chờ E9-Q15; XC-05 | BLOCKED |  |  |
 | TC-AIN-006-02 | AC-AIN-006-02 | FR-AIN-SEND-001 | Fixture synthetic; chưa chọn nơi lưu/đầu nhận | gửi | 503/policy closed, không báo thành công hoặc vào CRM | NOT RUN |  |  |
 | TC-AIN-006-03 | AC-AIN-006-03 | FR-AIN-SEND-001 | Fixture synthetic; đã lưu nhưng mất phản hồi/nhận trùng | gửi lại cùng key | cùng proposal/receipt; không tạo lead hoặc đề xuất trùng | NOT RUN |  |  |
-| TC-AIN-007-01 | AC-AIN-007-01 | FR-AIN-STAT-001 | Fixture synthetic; proposal đã tiếp nhận bền vững thuộc chủ thể | xem | hiện chờ người thật xem xét, không coi đã áp dụng | BLOCKED |  |  |
+| TC-AIN-007-01 | AC-AIN-007-01 | FR-AIN-STAT-001 | Fixture synthetic; proposal đã tiếp nhận bền vững thuộc chủ thể | xem | hiện chờ người thật xem xét, không coi đã áp dụng; chờ E9-Q15; XC-05 | BLOCKED |  |  |
 | TC-AIN-007-02 | AC-AIN-007-02 | FR-AIN-STAT-001 | Fixture synthetic; proposal ngoài quyền | xem | 404 đồng nhất không lộ tồn tại | NOT RUN |  |  |
 | TC-AIN-007-03 | AC-AIN-007-03 | FR-AIN-STAT-001 | Fixture synthetic; chưa receipt bàn giao hoặc trạng thái đến muộn | xem | không tự chuyển đã bàn giao/đã duyệt | NOT RUN |  |  |
 | TC-AIN-008-01 | AC-AIN-008-01 | FR-AIN-GATE-001 | Fixture synthetic; gate O-03 đóng | xem khả dụng | CLOSED, không có biểu mẫu hồ sơ | NOT RUN |  |  |
@@ -54,3 +59,9 @@ Toàn bộ input minh họa **synthetic**, không phải bộ nghiệm thu đã 
 | TC-AIN-013-01 | AC-AIN-013-01 | FR-AIN-LOG-001 | Fixture synthetic; usage confirmed có nguồn và quyền xem | đối soát ngày | tổng AI đúng ledger/đơn vị và policyVersion, không cost nguyên liệu | BLOCKED |  |  |
 | TC-AIN-013-02 | AC-AIN-013-02 | FR-AIN-LOG-001 | Fixture synthetic; usage missing/provider lỗi | xem báo cáo | UNKNOWN cùng reservation, không báo còn đủ tiền giả | NOT RUN |  |  |
 | TC-AIN-013-03 | AC-AIN-013-03 | FR-AIN-LOG-001 | Fixture synthetic; sự kiện trùng/đến muộn qua ranh giới ngày | đối soát | một lần theo eventId; gắn ngày theo policy được duyệt; không reset debt | NOT RUN |  |  |
+
+## Bổ sung gate — XC-05
+
+> Chờ E9-Q15 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-AIN-006-03, TC-AIN-007-01, TC-AIN-007-02. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

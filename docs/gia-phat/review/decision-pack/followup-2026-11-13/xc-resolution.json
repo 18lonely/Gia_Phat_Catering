@@ -1,0 +1,216 @@
+[
+  {
+    "id": "XC-01",
+    "type": "A",
+    "status": "ĐÃ SỬA",
+    "files": [
+      "docs/nen-tang/srs/erd.md",
+      "docs/cost/review/accountant-input.md",
+      "docs/chi-phi-loi-nhuan/review/dependencies.md"
+    ],
+    "questions": [],
+    "existingQuestions": [],
+    "limit": "Chỉ sửa VAT đầu vào theo ACC-CONF-02; giữ O-01 mở."
+  },
+  {
+    "id": "XC-02",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/mua-hang-san-xuat/review/questions.md",
+      "docs/phan-hoi-bao-cao/review/questions.md",
+      "docs/chi-phi-loi-nhuan/review/questions.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E11-Q08",
+      "E12-Q08",
+      "E13-Q08"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-03",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/giao-nhan-doanh-thu/review/questions.md",
+      "docs/chi-phi-loi-nhuan/review/dependencies.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E7-Q03, E7-Q04",
+      "E7-Q03, E7-Q04, E13-Q12"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-04",
+    "type": "B",
+    "status": "ĐÃ SỬA",
+    "files": [
+      "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "docs/giao-nhan-doanh-thu/api/api-spec.md",
+      "docs/website-cong-khai/srs/data-dictionary.md",
+      "docs/website-cong-khai/api/api-spec.md",
+      "docs/agent-dinh-duong-vien/srs/data-dictionary.md",
+      "docs/agent-dinh-duong-vien/api/api-spec.md",
+      "docs/crm-ban-hang/srs/data-dictionary.md",
+      "docs/crm-ban-hang/api/api-spec.md",
+      "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "docs/mua-hang-san-xuat/api/api-spec.md",
+      "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "docs/phan-hoi-bao-cao/api/api-spec.md",
+      "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "docs/chi-phi-loi-nhuan/api/api-spec.md"
+    ],
+    "questions": [],
+    "existingQuestions": [],
+    "limit": "Đã thống nhất cách mô tả; mapping wire vẫn BLOCKED theo câu contract E7–E13."
+  },
+  {
+    "id": "XC-05",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/website-cong-khai/review/questions.md",
+      "docs/agent-dinh-duong-vien/review/questions.md",
+      "docs/crm-ban-hang/review/questions.md",
+      "docs/website-cong-khai/srs/data-dictionary.md",
+      "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "docs/crm-ban-hang/srs/data-dictionary.md",
+      "docs/website-cong-khai/test/test-cases.md",
+      "docs/website-cong-khai/test/traceability.md",
+      "docs/agent-dinh-duong-vien/test/test-cases.md",
+      "docs/agent-dinh-duong-vien/test/traceability.md",
+      "docs/crm-ban-hang/test/test-cases.md",
+      "docs/crm-ban-hang/test/traceability.md",
+      "docs/gia-phat/review/decision-pack/meeting-agenda.md"
+    ],
+    "questions": [
+      "E8-Q13",
+      "E9-Q15",
+      "E10-Q16"
+    ],
+    "existingQuestions": [
+      "E8-Q13",
+      "E9-Q15",
+      "E10-Q16"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-06",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/phan-hoi-bao-cao/review/dependencies.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E12-Q15, E12-Q16, E12-Q17"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-07",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/mua-hang-san-xuat/review/questions.md",
+      "docs/chi-phi-loi-nhuan/review/questions.md",
+      "docs/crm-ban-hang/review/questions.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E11-Q02, O-06",
+      "E13-Q10, O-06",
+      "E10-Q03, O-06"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-08",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/website-cong-khai/review/questions.md",
+      "docs/agent-dinh-duong-vien/review/questions.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E8-Q05, E9-Q11",
+      "E9-Q11, E8-Q05"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-09",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "docs/chi-phi-loi-nhuan/review/questions.md",
+      "docs/crm-ban-hang/srs/data-dictionary.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E11-Q14",
+      "E13-Q09",
+      "E10-Q13, E11-Q14, E13-Q09"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-10",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/chi-phi-loi-nhuan/review/dependencies.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E13-Q08, CK-Q05, CK-Q09"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-11",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/giao-nhan-doanh-thu/review/questions.md",
+      "docs/mua-hang-san-xuat/review/dependencies.md",
+      "docs/chi-phi-loi-nhuan/review/questions.md"
+    ],
+    "questions": [],
+    "existingQuestions": [
+      "E7-Q07",
+      "E7-Q07",
+      "E13-Q12"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  },
+  {
+    "id": "XC-12",
+    "type": "C",
+    "status": "CHỜ QUYẾT ĐỊNH",
+    "files": [
+      "docs/nen-tang/review/questions.md",
+      "docs/agent-noi-bo/review/questions.md",
+      "docs/nen-tang/test/test-cases.md",
+      "docs/nen-tang/test/traceability.md",
+      "docs/agent-noi-bo/test/test-cases.md",
+      "docs/agent-noi-bo/test/traceability.md"
+    ],
+    "questions": [
+      "E1-Q06",
+      "AIO-Q07"
+    ],
+    "existingQuestions": [
+      "E1-Q06",
+      "AIO-Q07, E1-Q06"
+    ],
+    "limit": "Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng."
+  }
+]

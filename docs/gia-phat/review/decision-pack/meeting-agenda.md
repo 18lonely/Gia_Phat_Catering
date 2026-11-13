@@ -1,7 +1,7 @@
 ---
 id: DOC-DECISION-PACK-MEET
 title: Chương trình họp theo vai trò
-version: 0.1.0
+version: 0.1.1
 phase: Review
 domain: Gia Phát
 tags: [decision-pack, draft, review]
@@ -16,6 +16,7 @@ Nháp · 13/11/2026 · Chuẩn bị quyết định, chưa phê duyệt.
 
 | Phiên bản | Ngày | Vai trò | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | DEC-27; BA-Q; XC-05/12 |
 | 0.1.0 | 13/11/2026 | BA | Hợp nhất nguồn để review; giữ câu mở |
 
 Theo skill meet và mẫu 48: phân biệt nội dung thảo luận, quyết định có chữ ký và việc theo sau. Đây là chương trình cùng biên bản trống, không phải biên bản cuộc họp đã diễn ra. Không đặt lịch triển khai, tên người hoặc thời lượng ước đoán.
@@ -36,9 +37,9 @@ Dữ liệu cần mang: Ma trận quyền hiện hành; cơ chế thay người;
 
 Các nhóm cần review:
 
-- [DEC-01 — Phạm vi sức khỏe và điều kiện mở gợi ý cá nhân](decision-groups.md#dec-01) (O-03, ORD-Q15, E9-Q14).
-- [DEC-02 — Nguồn lực, hạ tầng và cấu hình ngân sách AI](decision-groups.md#dec-02) (O-04, AIO-Q01, E9-Q01).
-- [DEC-03 — Người duyệt ngoại lệ và cơ chế thay thế](decision-groups.md#dec-03) (O-06, E11-Q02, E13-Q10, E10-Q03, CK-Q04).
+- [DEC-01 — Gợi ý cá nhân có xét bệnh lý không](decision-groups.md#dec-01) (O-03).
+- [DEC-02 — Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách](decision-groups.md#dec-02) (O-04).
+- [DEC-03 — Ai duyệt ngoại lệ và ai thay khi vắng](decision-groups.md#dec-03) (O-06).
 - [DEC-06 — Chuẩn envelope giữa các phân hệ](decision-groups.md#dec-06) (E1-Q01, E6-CG-09).
 - [DEC-16 — Trường học, bệnh viện, tiệc cỗ có trong bản đầu không](decision-groups.md#dec-16) (O-05).
 - [DEC-17 — Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?](decision-groups.md#dec-17) (E1-Q02).
@@ -50,6 +51,16 @@ Các nhóm cần review:
 - [DEC-23 — Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)](decision-groups.md#dec-23) (N-03).
 - [DEC-24 — Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?](decision-groups.md#dec-24) (N-04).
 - [DEC-26 — Số người ăn, số công ty, số điểm giao mỗi ngày](decision-groups.md#dec-26) (Q-18).
+- [DEC-198 — NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?](decision-groups.md#dec-198) (E1-Q06).
+- [DEC-199 — E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?](decision-groups.md#dec-199) (AIO-Q07).
+- [DEC-203 — Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?](decision-groups.md#dec-203) (ORD-Q15).
+- [DEC-204 — Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?](decision-groups.md#dec-204) (E9-Q14).
+- [DEC-205 — Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?](decision-groups.md#dec-205) (AIO-Q01).
+- [DEC-206 — O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?](decision-groups.md#dec-206) (E9-Q01).
+- [DEC-207 — Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?](decision-groups.md#dec-207) (CK-Q04).
+- [DEC-208 — Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?](decision-groups.md#dec-208) (E10-Q03).
+- [DEC-209 — Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?](decision-groups.md#dec-209) (E11-Q02).
+- [DEC-210 — Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?](decision-groups.md#dec-210) (E13-Q10).
 
 Đọc trước:
 
@@ -87,14 +98,9 @@ Dữ liệu cần mang: Bản 43 quy tắc; danh mục 30 món và công thức;
 
 Các nhóm cần review:
 
-- [DEC-27 — Duyệt 43 quy tắc](decision-groups.md#dec-27) (DL-01).
 - [DEC-04 — Cỡ định lượng của một món](decision-groups.md#dec-04) (O-02, H-9).
-- [DEC-86 — Ấn bản, trang/mã thực phẩm của Bảng thành phần thực phẩm Việt Nam nào được phép dùng; ai duyệt mapping và sửa số liệu?](decision-groups.md#dec-86) (NUTR-Q01).
-- [DEC-09 — Nguồn định lượng sống, phần ăn được và hao hụt](decision-groups.md#dec-09) (E3-Q2, NUTR-Q02).
-- [DEC-87 — Suất mẫu là tổ hợp chọn cụ thể hay món mặc định? Có gồm cơm/gia vị/đồ uống; ghi ở recipe/item nào để không bỏ sót hoặc đếm đôi?](decision-groups.md#dec-87) (NUTR-Q03).
-- [DEC-88 — Chốt cách làm tròn và dung sai khớp 5 suất tính tay theo R4; đề xuất HALF_UP 2 chữ số ở tổng cuối, không dùng dung sai Cost.](decision-groups.md#dec-88) (NUTR-Q04).
+- [DEC-27 — Phiên bản quy tắc được duyệt: biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến](decision-groups.md#dec-27) (DL-01, E2-Q2, H-1, H-2, H-3, H-4, H-8).
 - [DEC-28 — Cách kiểm ngưỡng giá suất](decision-groups.md#dec-28) (E2-Q1).
-- [DEC-29 — Quy tắc tuần có xét tuần trước không](decision-groups.md#dec-29) (E2-Q2).
 - [DEC-30 — Tuần phục vụ gồm những ngày nào](decision-groups.md#dec-30) (E2-Q3).
 - [DEC-31 — Thực đơn chung hay riêng theo khách](decision-groups.md#dec-31) (E2-Q4).
 - [DEC-32 — Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)](decision-groups.md#dec-32) (E2-Q6).
@@ -104,12 +110,10 @@ Các nhóm cần review:
 - [DEC-36 — Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)](decision-groups.md#dec-36) (E2-Q10).
 - [DEC-37 — Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)](decision-groups.md#dec-37) (E2-Q11).
 - [DEC-38 — Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?](decision-groups.md#dec-38) (E2-Q5).
-- [DEC-39 — Món Healthy chỉ được luộc, hay hấp / áp chảo ít dầu / nướng cũng được tính?](decision-groups.md#dec-39) (H-1).
-- [DEC-40 — "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?](decision-groups.md#dec-40) (H-2).
-- [DEC-41 — Duyệt danh sách nhóm nguyên liệu chính nào để so trùng; sườn tách riêng hay gộp vào lợn?](decision-groups.md#dec-41) (H-3).
-- [DEC-42 — Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày?](decision-groups.md#dec-42) (H-4).
 - [DEC-43 — Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào?](decision-groups.md#dec-43) (H-5).
-- [DEC-44 — Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?](decision-groups.md#dec-44) (H-8).
+- [DEC-86 — Ấn bản, trang/mã thực phẩm của Bảng thành phần thực phẩm Việt Nam nào được phép dùng; ai duyệt mapping và sửa số liệu?](decision-groups.md#dec-86) (NUTR-Q01).
+- [DEC-87 — Suất mẫu là tổ hợp chọn cụ thể hay món mặc định? Có gồm cơm/gia vị/đồ uống; ghi ở recipe/item nào để không bỏ sót hoặc đếm đôi?](decision-groups.md#dec-87) (NUTR-Q03).
+- [DEC-88 — Chốt cách làm tròn và dung sai khớp 5 suất tính tay theo R4; đề xuất HALF_UP 2 chữ số ở tổng cuối, không dùng dung sai Cost.](decision-groups.md#dec-88) (NUTR-Q04).
 - [DEC-89 — Cung cấp mapping nguyên liệu của 30 món, ấn bản/nguồn và 5 suất tính tay độc lập, người lập/ngày/phương pháp.](decision-groups.md#dec-89) (DATA-NUTR-Q01).
 - [DEC-90 — Xác nhận R5 chỉ trả VALID nếu cost không vượt kể cả CANH_BAO; có cho người dùng xem phương án chưa đạt để sửa thủ công không?](decision-groups.md#dec-90) (AIO-Q02).
 - [DEC-91 — 20 yêu cầu nghiệm thu gồm nhóm nào, dữ liệu khả thi nào, mẫu đo trước MVP và cách tính giảm 50% thời gian ra sao?](decision-groups.md#dec-91) (AIO-Q03).
@@ -149,23 +153,7 @@ Dữ liệu cần mang: 10 món / 10 ngày thật: công thức, đơn vị/quy 
 Các nhóm cần review:
 
 - [DEC-05 — Thành phần cost và VAT bán ra còn thiếu](decision-groups.md#dec-05) (O-01, H-6, H-7).
-- [DEC-71 — Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?](decision-groups.md#dec-71) (CK-Q01).
-- [DEC-72 — Chiết khấu áp dụng mọi suất hay từng loại/dòng; số lượng căn cứ đặt, giao hay khách xác nhận?](decision-groups.md#dec-72) (CK-Q02).
-- [DEC-73 — Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào?](decision-groups.md#dec-73) (CK-Q03).
-- [DEC-03 — Người duyệt ngoại lệ và cơ chế thay thế](decision-groups.md#dec-03) (O-06, E11-Q02, E13-Q10, E10-Q03, CK-Q04).
-- [DEC-74 — Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai?](decision-groups.md#dec-74) (CK-Q05).
-- [DEC-75 — Xác nhận/xử lý chiết khấu lúc chốt, giao, thanh toán hay cuối kỳ; xử lý một phần và chứng từ thế nào?](decision-groups.md#dec-75) (CK-Q06).
-- [DEC-76 — Đơn đổi suất/giá/loại khi chiết khấu chưa xử lý: tự tính lại, duyệt lại và giữ phiên bản cũ thế nào?](decision-groups.md#dec-76) (CK-Q07).
-- [DEC-77 — Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không?](decision-groups.md#dec-77) (CK-Q08).
-- [DEC-78 — Đơn đổi/hủy sau chi trả/bù trừ: thu hồi, bù kỳ sau hay điều chỉnh riêng; ai duyệt, chứng từ nào?](decision-groups.md#dec-78) (CK-Q09).
-- [DEC-79 — Một đơn hưởng đồng thời chiết khấu %/tiền mỗi suất hoặc nhiều chương trình được không; cộng dồn, ưu tiên, trần thế nào?](decision-groups.md#dec-79) (CK-Q10).
-- [DEC-80 — Ai phụ trách cung cấp và xác nhận 10 món/10 ngày thực tế? Khi nào có dữ liệu?](decision-groups.md#dec-80) (DATA-COST-Q01).
-- [DEC-81 — File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?](decision-groups.md#dec-81) (DATA-COST-Q02).
-- [DEC-82 — Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?](decision-groups.md#dec-82) (DATA-COST-Q03).
-- [DEC-83 — Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?](decision-groups.md#dec-83) (DATA-COST-Q04).
-- [DEC-84 — Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?](decision-groups.md#dec-84) (DATA-COST-Q05).
-- [DEC-85 — Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?](decision-groups.md#dec-85) (DATA-COST-Q06).
-- [DEC-09 — Nguồn định lượng sống, phần ăn được và hao hụt](decision-groups.md#dec-09) (E3-Q2, NUTR-Q02).
+- [DEC-09 — Định lượng sống đã gồm xương, vỏ chưa](decision-groups.md#dec-09) (E3-Q2).
 - [DEC-45 — Cost phần món chính](decision-groups.md#dec-45) (E3-Q1).
 - [DEC-46 — Hai cơ sở mua giá khác nhau; kiểm ngưỡng theo cơ sở nào](decision-groups.md#dec-46) (E3-Q3).
 - [DEC-47 — Giá nào là giá tham chiếu](decision-groups.md#dec-47) (E3-Q4).
@@ -192,6 +180,22 @@ Các nhóm cần review:
 - [DEC-68 — Agent gặp đồng thời ngày vượt và ngày không tính được: ưu tiên trạng thái nào? VAT chưa cấu hình có cùng KHONG_XAC_DINH không?](decision-groups.md#dec-68) (FLOW-COST-Q09).
 - [DEC-69 — Mô phỏng giá P2 cho ai dùng, xét trạng thái và khoảng ngày nào?](decision-groups.md#dec-69) (FLOW-COST-Q10).
 - [DEC-70 — NCC tồn tại INACTIVE trả 404-01 hay 422-02?](decision-groups.md#dec-70) (QA-COST-Q01).
+- [DEC-71 — Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?](decision-groups.md#dec-71) (CK-Q01).
+- [DEC-72 — Chiết khấu áp dụng mọi suất hay từng loại/dòng; số lượng căn cứ đặt, giao hay khách xác nhận?](decision-groups.md#dec-72) (CK-Q02).
+- [DEC-73 — Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào?](decision-groups.md#dec-73) (CK-Q03).
+- [DEC-74 — Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai?](decision-groups.md#dec-74) (CK-Q05).
+- [DEC-75 — Xác nhận/xử lý chiết khấu lúc chốt, giao, thanh toán hay cuối kỳ; xử lý một phần và chứng từ thế nào?](decision-groups.md#dec-75) (CK-Q06).
+- [DEC-76 — Đơn đổi suất/giá/loại khi chiết khấu chưa xử lý: tự tính lại, duyệt lại và giữ phiên bản cũ thế nào?](decision-groups.md#dec-76) (CK-Q07).
+- [DEC-77 — Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không?](decision-groups.md#dec-77) (CK-Q08).
+- [DEC-78 — Đơn đổi/hủy sau chi trả/bù trừ: thu hồi, bù kỳ sau hay điều chỉnh riêng; ai duyệt, chứng từ nào?](decision-groups.md#dec-78) (CK-Q09).
+- [DEC-79 — Một đơn hưởng đồng thời chiết khấu %/tiền mỗi suất hoặc nhiều chương trình được không; cộng dồn, ưu tiên, trần thế nào?](decision-groups.md#dec-79) (CK-Q10).
+- [DEC-80 — Ai phụ trách cung cấp và xác nhận 10 món/10 ngày thực tế? Khi nào có dữ liệu?](decision-groups.md#dec-80) (DATA-COST-Q01).
+- [DEC-81 — File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?](decision-groups.md#dec-81) (DATA-COST-Q02).
+- [DEC-82 — Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?](decision-groups.md#dec-82) (DATA-COST-Q03).
+- [DEC-83 — Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?](decision-groups.md#dec-83) (DATA-COST-Q04).
+- [DEC-84 — Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?](decision-groups.md#dec-84) (DATA-COST-Q05).
+- [DEC-85 — Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?](decision-groups.md#dec-85) (DATA-COST-Q06).
+- [DEC-213 — qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.](decision-groups.md#dec-213) (NUTR-Q02).
 
 Đọc trước:
 
@@ -227,12 +231,10 @@ Dữ liệu cần mang: Danh sách người ăn có quản lý xác nhận; ví 
 
 Các nhóm cần review:
 
-- [DEC-07 — Xác minh người ăn và binding danh tính](decision-groups.md#dec-07) (ORD-Q01, E6-CG-01).
-- [DEC-108 — Customer master/account/service lifecycle; ORD-Q03/11](decision-groups.md#dec-108) (E6-CG-08).
-- [DEC-10 — Chính sách hạn chốt và xử lý nguồn sau hạn](decision-groups.md#dec-10) (Q-16, ORD-Q08, E6-CG-05).
-- [DEC-11 — Phát hành, xác nhận revision và bắt đầu sản xuất](decision-groups.md#dec-11) (ORD-Q14, E6-CG-06).
-- [DEC-111 — Tuần/mode/reminder policy; ORD-Q05/09, Q-14/E1-Q04](decision-groups.md#dec-111) (E6-CG-12).
-- [DEC-08 — Scope người đặt tổng một hoặc nhiều khách](decision-groups.md#dec-08) (ORD-Q11, E6-CG-02).
+- [DEC-07 — Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?](decision-groups.md#dec-07) (ORD-Q01).
+- [DEC-08 — Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?](decision-groups.md#dec-08) (ORD-Q11).
+- [DEC-10 — Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?](decision-groups.md#dec-10) (ORD-Q08).
+- [DEC-11 — Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?](decision-groups.md#dec-11) (ORD-Q14).
 - [DEC-25 — Kênh thông báo ngoài (Zalo OA, SMS, email)](decision-groups.md#dec-25) (Q-14).
 - [DEC-95 — Đổi QR/gỡ người ăn có thu hồi phiên ngay và giữ hay hủy lựa chọn chưa khóa?](decision-groups.md#dec-95) (ORD-Q02).
 - [DEC-96 — Một điểm phục vụ có đổi bếp/ca/lịch giữa kỳ; dữ liệu nào chụp lúc order?](decision-groups.md#dec-96) (ORD-Q03).
@@ -247,15 +249,17 @@ Các nhóm cần review:
 - [DEC-105 — C có danh tính/gộp, C→S, vượtT, hủy/zero; RV02/03, ORD-Q06/13, EVID002](decision-groups.md#dec-105) (E6-CG-03).
 - [DEC-106 — Summary token, receipt, outbox transaction/retention; RV04, E1-Q02](decision-groups.md#dec-106) (E6-CG-04).
 - [DEC-107 — Delta line identity, unit/role/portion và món mới; RV07, ORD-Q04/08/10/12, O-02](decision-groups.md#dec-107) (E6-CG-07).
+- [DEC-108 — Customer master/account/service lifecycle; ORD-Q03/11](decision-groups.md#dec-108) (E6-CG-08).
 - [DEC-109 — NUTR provenance/kind/stale, refresh/cache/fallback; NUTR-Q03/04, ORD-Q04/12](decision-groups.md#dec-109) (E6-CG-10).
 - [DEC-110 — Required/optional/null, limits, enum/query, create-version chưa rõ](decision-groups.md#dec-110) (E6-CG-11).
+- [DEC-111 — Tuần/mode/reminder policy; ORD-Q05/09, Q-14/E1-Q04](decision-groups.md#dec-111) (E6-CG-12).
 - [DEC-112 — Wireframe chỉ mô phỏng một nguồn/version đồng bộ](decision-groups.md#dec-112) (E6-CG-13).
 - [DEC-113 — Gate sức khỏe và dữ liệu/QA môi trường chưa có](decision-groups.md#dec-113) (E6-CG-14).
-- [DEC-06 — Chuẩn envelope giữa các phân hệ](decision-groups.md#dec-06) (E1-Q01, E6-CG-09).
-- [DEC-17 — Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?](decision-groups.md#dec-17) (E1-Q02).
-- [DEC-18 — MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?](decision-groups.md#dec-18) (E1-Q03).
-- [DEC-19 — Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?](decision-groups.md#dec-19) (E1-Q04).
-- [DEC-20 — Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?](decision-groups.md#dec-20) (E1-Q05).
+- [DEC-211 — Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách](decision-groups.md#dec-211) (E6-CG-01).
+- [DEC-212 — Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002](decision-groups.md#dec-212) (E6-CG-02).
+- [DEC-214 — Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06](decision-groups.md#dec-214) (E6-CG-05).
+- [DEC-215 — Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?](decision-groups.md#dec-215) (Q-16).
+- [DEC-216 — Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14](decision-groups.md#dec-216) (E6-CG-06).
 
 Đọc trước:
 
@@ -287,7 +291,7 @@ Dữ liệu cần mang: Biên bản đối soát 2 khách, mẫu MISA chính th�
 
 Các nhóm cần review:
 
-- [DEC-14 — Lợi nhuận báo giá và công thức kết quả kinh doanh](decision-groups.md#dec-14) (E10-Q15, E13-Q08).
+- [DEC-14 — Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?](decision-groups.md#dec-14) (E10-Q15).
 - [DEC-114 — Khách không xác nhận số nhận thì xử lý thế nào, sau khoảng chờ nào và ai quyết định số tính tiền?](decision-groups.md#dec-114) (Q-13).
 - [DEC-115 — Ai xác nhận link nhận hàng; cơ chế xác minh, hiệu lực, thu hồi/cấp lại là gì?](decision-groups.md#dec-115) (E7-Q01).
 - [DEC-116 — Ai thống nhất chênh lệch; giao nhiều lần/giao bù/nhận thừa/giảm trừ được duyệt và sửa thế nào?](decision-groups.md#dec-116) (E7-Q02).
@@ -309,6 +313,7 @@ Các nhóm cần review:
 - [DEC-195 — Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào?](decision-groups.md#dec-195) (E13-Q12).
 - [DEC-196 — Định nghĩa và quyền chỉ số lợi nhuận/biên lợi nhuận E13 chuyển sang E12 được duyệt thế nào?](decision-groups.md#dec-196) (E13-Q13).
 - [DEC-197 — Bằng chứng R7, R11 hoàn tất và người xác nhận bộ đối chiếu độc lập R13 ở đâu?](decision-groups.md#dec-197) (E13-Q14).
+- [DEC-219 — Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?](decision-groups.md#dec-219) (E13-Q08).
 
 Đọc trước:
 
@@ -379,9 +384,9 @@ Dữ liệu cần mang: Inventory URL/media, quyền tên miền, nguồn giá c
 
 Các nhóm cần review:
 
-- [DEC-12 — Giá công khai cho website và agent khách](decision-groups.md#dec-12) (E8-Q03, E9-Q04).
-- [DEC-13 — Dựng thực đơn public và tái dùng bộ kiểm](decision-groups.md#dec-13) (E8-Q05, E9-Q11).
-- [DEC-15 — Nguồn công khai, độ đầy đủ và tính mới](decision-groups.md#dec-15) (E8-Q04, E9-Q12).
+- [DEC-12 — Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?](decision-groups.md#dec-12) (E8-Q03).
+- [DEC-13 — FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?](decision-groups.md#dec-13) (E8-Q05).
+- [DEC-15 — Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?](decision-groups.md#dec-15) (E8-Q04).
 - [DEC-123 — DL-08: danh sách bài viết, URL, media và trạng thái WordPress gốc ở đâu; ai xác nhận inventory đầy đủ?](decision-groups.md#dec-123) (E8-Q01).
 - [DEC-124 — Giữ URL hay 301 theo tiêu chí nào; xử lý trùng/bài xóa, chữ hoa/dấu slash/query; ai duyệt mapping và rollback?](decision-groups.md#dec-124) (E8-Q02).
 - [DEC-125 — Lead vào CRM khi E10 chưa mở: lưu tạm ở đâu, trường bắt buộc, consent/version, thời gian lưu/xóa và receipt bàn giao thế nào?](decision-groups.md#dec-125) (E8-Q06).
@@ -404,6 +409,12 @@ Các nhóm cần review:
 - [DEC-151 — Phụ lục hồi tố, thu hồi/thay thế giá và ảnh hưởng đơn đã khóa hoặc kỳ đã đối soát được xử lý thế nào?](decision-groups.md#dec-151) (E10-Q12).
 - [DEC-152 — Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao?](decision-groups.md#dec-152) (E10-Q13).
 - [DEC-153 — Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu?](decision-groups.md#dec-153) (E10-Q14).
+- [DEC-200 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?](decision-groups.md#dec-200) (E8-Q13).
+- [DEC-201 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?](decision-groups.md#dec-201) (E9-Q15).
+- [DEC-202 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?](decision-groups.md#dec-202) (E10-Q16).
+- [DEC-217 — Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?](decision-groups.md#dec-217) (E9-Q04).
+- [DEC-218 — FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?](decision-groups.md#dec-218) (E9-Q11).
+- [DEC-220 — Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?](decision-groups.md#dec-220) (E9-Q12).
 
 Đọc trước:
 
@@ -502,3 +513,5 @@ Biên bản mẫu — ghi từng nhóm và phạm vi sau cuộc họp:
 | :--- | :--- | :--- | :--- |
 |  |  |  |  |
 
+
+Thẩm quyền cần hỏi trước chữ ký: [BA-Q](ba-open-questions.md). Không lấy danh sách tham dự thay thẩm quyền quyết định.

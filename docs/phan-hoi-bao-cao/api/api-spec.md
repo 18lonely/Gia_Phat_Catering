@@ -1,14 +1,14 @@
 ---
 id: DOC-E12-API-API-SPEC-MD
 title: Hợp đồng API đề xuất E12
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e12, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Hợp đồng API đề xuất E12
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E12-Q18 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 ## Ranh giới
@@ -76,3 +77,9 @@ Lỗi 400/401/403/404/409/422/500/503 theo [ma trận](../srs/error-matrix.md), 
 Allowlist này là đề xuất contract, không xác nhận công cụ hiện hữu. FEAT-082 dùng MENU/COST; FEAT-083 dùng COST/PUR và tham chiếu E6; FEAT-084 chỉ CRM và nguồn E10 được phép; FEAT-085 dùng chỉ số được duyệt từ các port đọc. E5 kiểm giao quyền từng tool call, thu hồi giữa lượt và trước output; DB/service grants không cấp quyền ghi nghiệp vụ. E9/AIN không dùng quyền hoặc cache của AIO. Không webhook/callback công khai trong phạm vi; chưa có nhu cầu nên không đặt chữ ký giả.
 
 Review người thật không đồng nghĩa ghi nghiệp vụ. Muốn chuyển sang E2/E10/E11 phải đi quy trình nguồn riêng sau các gate, chưa đặc tả adapter apply.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E12-Q18 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

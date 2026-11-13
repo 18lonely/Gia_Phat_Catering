@@ -1,0 +1,2745 @@
+{
+  "scope": "Artifact structure and traceability only",
+  "counts": {
+    "fr": 15,
+    "uc": 15,
+    "story": 15,
+    "ac": 45,
+    "functionalCases": 45,
+    "http": 15,
+    "ports": 4,
+    "screens": 9
+  },
+  "checks": 682,
+  "errors": [],
+  "details": [
+    {
+      "name": "Required epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Required srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Required srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Required srs/error-matrix.md",
+      "ok": true
+    },
+    {
+      "name": "Required srs/states.md",
+      "ok": true
+    },
+    {
+      "name": "Required usecases/index.md",
+      "ok": true
+    },
+    {
+      "name": "Required userstories/backlog.md",
+      "ok": true
+    },
+    {
+      "name": "Required userstories/acceptance-criteria.md",
+      "ok": true
+    },
+    {
+      "name": "Required ui/screens.md",
+      "ok": true
+    },
+    {
+      "name": "Required ui/user-flow.md",
+      "ok": true
+    },
+    {
+      "name": "Required api/api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Required api/data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Required api/endpoint-catalog.json",
+      "ok": true
+    },
+    {
+      "name": "Required html-wireframe/purchase-workbench.html",
+      "ok": true
+    },
+    {
+      "name": "Required test/checklist.md",
+      "ok": true
+    },
+    {
+      "name": "Required test/test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Required test/system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Required test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Required test/r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Required review/handoff.md",
+      "ok": true
+    },
+    {
+      "name": "Required review/questions.md",
+      "ok": true
+    },
+    {
+      "name": "Required review/dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Required validation/report.md",
+      "ok": true
+    },
+    {
+      "name": "Required validation/files-created.json",
+      "ok": true
+    },
+    {
+      "name": "Required preview.html",
+      "ok": true
+    },
+    {
+      "name": "5 features exact",
+      "ok": true
+    },
+    {
+      "name": "Unique new IDs",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-DEM-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-11",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-001-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-001-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-001-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-001-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-001-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-001-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-POD-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-12",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-002-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-002-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-002-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-002-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-002-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-002-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-POG-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-13",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-003-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-003-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-003-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-003-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-003-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-003-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-LOT-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-14",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-004-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-004-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-004-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-004-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-004-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-004-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-RCV-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-15",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-005-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-005-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-005-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-005-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-005-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-005-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-DOC-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-16",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-006-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-006-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-006-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-006-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-006-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-006-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PUR-APV-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-17",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-007-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-007-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-007-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-007-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-007-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-007-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-COST-BUY-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-18",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-008-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-008-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-008-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-008-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-008-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-008-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-COST-BEX-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-403-11",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-009-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-009-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-009-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-009-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-009-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-009-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PLAN-SHF-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-20",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-010-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-010-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-010-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-010-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-010-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-010-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PLAN-QCG-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-21",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-011-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-011-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-011-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-011-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-011-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-011-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-PLAN-SMP-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-22",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-012-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-012-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-012-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-012-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-012-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-012-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-MENU-SUB-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-23",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-013-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-013-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-013-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-013-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-013-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-013-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-MENU-SCK-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-24",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-014-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-014-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-014-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-014-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-014-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-014-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision FR-MENU-SGT-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision UC-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision US-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision API-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision BR-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-25",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-015-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-015-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision AC-PUR-015-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-015-1",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-015-2",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision TC-PUR-015-3",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision PORT-PUR-PLAN",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision PORT-PUR-PRICE",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision PORT-PUR-MENU",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision PORT-PUR-DLV",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision NFR-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision NFR-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision NFR-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision NFR-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision NFR-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-409-11",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-503-11",
+      "ok": true
+    },
+    {
+      "name": "No E1-E10 declaration collision ERR-PUR-422-99",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-DEM-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-001-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-001-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-001-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-001-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-001-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-001-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-DEM-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-01",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-POD-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-002-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-002-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-002-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-002-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-002-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-002-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-POD-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-02",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-POG-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-003-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-003-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-003-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-003-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-003-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-003-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-POG-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-02",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-LOT-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-004-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-004-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-004-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-004-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-004-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-004-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-LOT-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-03",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-RCV-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-005-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-005-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-005-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-005-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-005-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-005-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-RCV-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-03",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-DOC-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-006-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-006-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-006-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-006-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-006-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-006-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-DOC-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-04",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PUR-APV-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-007-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-007-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-007-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-007-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-007-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-007-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PUR-APV-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-05",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-COST-BUY-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-008-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-008-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-008-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-008-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-008-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-008-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-COST-BUY-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-06",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-COST-BEX-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-009-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-009-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-009-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-009-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-009-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-009-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-COST-BEX-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-06",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PLAN-SHF-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-010-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-010-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-010-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-010-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-010-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-010-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PLAN-SHF-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-07",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PLAN-QCG-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-011-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-011-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-011-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-011-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-011-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-011-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PLAN-QCG-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-08",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-PLAN-SMP-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-012-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-012-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-012-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-012-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-012-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-012-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-PLAN-SMP-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-08",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-MENU-SUB-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-013-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-013-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-013-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-013-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-013-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-013-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-MENU-SUB-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-09",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-MENU-SCK-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-014-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-014-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-014-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-014-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-014-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-014-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-MENU-SCK-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-09",
+      "ok": true
+    },
+    {
+      "name": "FR defined FR-MENU-SGT-001",
+      "ok": true
+    },
+    {
+      "name": "UC Cockburn UC-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "Story US-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-015-1",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-015-1",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-015-2",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-015-2",
+      "ok": true
+    },
+    {
+      "name": "GWT AC-PUR-015-3",
+      "ok": true
+    },
+    {
+      "name": "Case TC-PUR-015-3",
+      "ok": true
+    },
+    {
+      "name": "RTM complete FR-MENU-SGT-001",
+      "ok": true
+    },
+    {
+      "name": "API backtrace API-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "Screen UI-PUR-09",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-001",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-002",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-003",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-004",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-005",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-006",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-007",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-008",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-009",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-010",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-011",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-012",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-013",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-014",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR API-PUR-015",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR PORT-PUR-PLAN",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR PORT-PUR-PRICE",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR PORT-PUR-MENU",
+      "ok": true
+    },
+    {
+      "name": "Every API has valid FR PORT-PUR-DLV",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter api\\api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Revision api\\api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing api\\api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → endpoint-catalog.json",
+      "ok": true
+    },
+    {
+      "name": "Link api\\api-spec.md → ../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter api\\data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Revision api\\data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing api\\data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Link api\\data-mapping.md → ../srs/data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Revision epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → ../gia-phat/01-prd.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → ../gia-phat/02-roadmap.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → test/r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → review/dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → review/questions.md",
+      "ok": true
+    },
+    {
+      "name": "Link epic-spec.md → srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter review\\dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Revision review\\dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing review\\dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../gia-phat/review/decision-pack/cross-epic-consistency.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../thuc-don-dinh-luong/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../cost/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../cost/accounting/business-rules.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../cost/api/api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../chon-mon-order/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../chon-mon-order/review/contract-gap-register.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../giao-nhan-doanh-thu/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../nen-tang/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../nen-tang/srs/erd.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\dependencies.md → ../../nen-tang/srs/schema.dbml",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter review\\handoff.md",
+      "ok": true
+    },
+    {
+      "name": "Revision review\\handoff.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing review\\handoff.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → questions.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../usecases/index.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../userstories/backlog.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../userstories/acceptance-criteria.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../api/api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../api/data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../html-wireframe/purchase-workbench.html",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../test/r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\handoff.md → ../validation/report.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter review\\questions.md",
+      "ok": true
+    },
+    {
+      "name": "Revision review\\questions.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing review\\questions.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\questions.md → ../../gia-phat/review/decision-pack/cross-epic-consistency.md",
+      "ok": true
+    },
+    {
+      "name": "Link review\\questions.md → ../../gia-phat/review/decision-pack/cross-epic-consistency.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter srs\\data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Revision srs\\data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing srs\\data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\data-dictionary.md → ../../nen-tang/srs/schema.dbml",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\data-dictionary.md → ../../nen-tang/srs/erd.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\data-dictionary.md → ../../gia-phat/review/decision-pack/cross-epic-consistency.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\data-dictionary.md → ../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter srs\\error-matrix.md",
+      "ok": true
+    },
+    {
+      "name": "Revision srs\\error-matrix.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing srs\\error-matrix.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter srs\\spec.md",
+      "ok": true
+    },
+    {
+      "name": "Revision srs\\spec.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing srs\\spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../epic-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../ui/screens.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../review/dependencies.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../api/api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../api/data-mapping.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → data-dictionary.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → error-matrix.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → states.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../ui/user-flow.md",
+      "ok": true
+    },
+    {
+      "name": "Link srs\\spec.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter srs\\states.md",
+      "ok": true
+    },
+    {
+      "name": "Revision srs\\states.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing srs\\states.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter test\\checklist.md",
+      "ok": true
+    },
+    {
+      "name": "Revision test\\checklist.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing test\\checklist.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter test\\r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Revision test\\r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing test\\r11-acceptance.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\r11-acceptance.md → ../../gia-phat/02-roadmap.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\r11-acceptance.md → ../../gia-phat/01-prd.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter test\\system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Revision test\\system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing test\\system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter test\\test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Revision test\\test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing test\\test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\test-cases.md → fixtures/synthetic.json",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter test\\traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Revision test\\traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing test\\traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-001.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-002.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-003.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-004.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-005.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-006.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-007.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-008.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-009.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-010.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-011.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-012.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-013.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-014.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → ../usecases/UC-PUR-015.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Link test\\traceability.md → test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter ui\\screens.md",
+      "ok": true
+    },
+    {
+      "name": "Revision ui\\screens.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing ui\\screens.md",
+      "ok": true
+    },
+    {
+      "name": "Link ui\\screens.md → ../html-wireframe/purchase-workbench.html",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter ui\\user-flow.md",
+      "ok": true
+    },
+    {
+      "name": "Revision ui\\user-flow.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing ui\\user-flow.md",
+      "ok": true
+    },
+    {
+      "name": "Link ui\\user-flow.md → screens.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\index.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\index.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\index.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-001.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-002.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-003.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-004.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-005.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-006.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-007.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-008.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-009.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-010.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-011.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-012.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-013.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-014.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\index.md → UC-PUR-015.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-001.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-001.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-001.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-001.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-002.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-002.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-002.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-002.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-003.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-003.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-003.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-003.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-004.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-004.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-004.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-004.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-005.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-005.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-005.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-005.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-006.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-006.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-006.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-006.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-007.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-007.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-007.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-007.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-008.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-008.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-008.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-008.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-009.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-009.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-009.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-009.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-010.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-010.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-010.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-010.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-011.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-011.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-011.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-011.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-012.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-012.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-012.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-012.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-013.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-013.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-013.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-013.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-014.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-014.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-014.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-014.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter usecases\\UC-PUR-015.md",
+      "ok": true
+    },
+    {
+      "name": "Revision usecases\\UC-PUR-015.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing usecases\\UC-PUR-015.md",
+      "ok": true
+    },
+    {
+      "name": "Link usecases\\UC-PUR-015.md → ../test/traceability.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter userstories\\acceptance-criteria.md",
+      "ok": true
+    },
+    {
+      "name": "Revision userstories\\acceptance-criteria.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing userstories\\acceptance-criteria.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter userstories\\backlog.md",
+      "ok": true
+    },
+    {
+      "name": "Revision userstories\\backlog.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing userstories\\backlog.md",
+      "ok": true
+    },
+    {
+      "name": "Frontmatter validation\\report.md",
+      "ok": true
+    },
+    {
+      "name": "Revision validation\\report.md",
+      "ok": true
+    },
+    {
+      "name": "Spacing validation\\report.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../OVERVIEW.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../gia-phat/review/progress-status-2026-11-12.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../gia-phat/01-prd.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../gia-phat/02-roadmap.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../crm-ban-hang/review/handoff.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../crm-ban-hang/validation/report.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../cost/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../cost/accounting/business-rules.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../cost/api/api-spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../thuc-don-dinh-luong/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../chon-mon-order/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../chon-mon-order/review/contract-gap-register.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../giao-nhan-doanh-thu/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../nen-tang/srs/spec.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../nen-tang/srs/erd.md",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ../../nen-tang/srs/schema.dbml",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → baseline.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → structure-result.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → diagram-render-result.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → ui-result.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → hash-result.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → files-created.json",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/1440-sheet-1.png",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/1440-sheet-2.png",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/1440-sheet-3.png",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/360-sheet-1.png",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/360-sheet-2.png",
+      "ok": true
+    },
+    {
+      "name": "Link validation\\report.md → screenshots/360-sheet-3.png",
+      "ok": true
+    },
+    {
+      "name": "Document IDs unique",
+      "ok": true
+    },
+    {
+      "name": "15 questions blank",
+      "ok": true
+    },
+    {
+      "name": "Product statuses test/test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Empty Actual Evidence test/test-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Product statuses test/system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Empty Actual Evidence test/system-cases.md",
+      "ok": true
+    },
+    {
+      "name": "Append spacing OVERVIEW.md",
+      "ok": true
+    },
+    {
+      "name": "Append spacing project-dashboard.md",
+      "ok": true
+    },
+    {
+      "name": "65 baseline schema tables",
+      "ok": true
+    },
+    {
+      "name": "Spacing detector positive",
+      "ok": true
+    },
+    {
+      "name": "Spacing detector code exemption",
+      "ok": true
+    },
+    {
+      "name": "Manifest complete",
+      "ok": true
+    }
+  ]
+}

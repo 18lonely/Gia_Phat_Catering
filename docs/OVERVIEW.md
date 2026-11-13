@@ -238,3 +238,16 @@ Theo yêu cầu người dùng, chuẩn bị gói quyết định cho 13 epic v�
 Rà liên epic ghi 12 phát hiện cần xác nhận; không sửa nguồn. Cost gồm VAT phải trả NCC, cờ không yêu cầu hóa đơn độc lập; chiết khấu riêng theo đơn không giảm phải trả NCC hoặc tự giảm tiền khách. NFR-COST-002 giữ ≤ 1 đ và ≤ 0,01 điểm phần trăm; BO-01/BO-02 là mục tiêu kinh doanh. FR-MENU-RCP-007 giữ gate O-02.
 
 Baseline gói chụp 1175 file cũ trong docs trước khi viết; chỉ hai tổng quan được append, schema giữ 65 bảng. Bốn sai lệch hash E12 do commit 71e2a4c đã được giải thích trong báo cáo, không khôi phục hoặc chụp lại baseline E12. Phiên sau chỉ xử lý từng DEC theo quyết định đã ký có nguồn, phân tích tác động bằng skill cr. Không backend, migration, gọi AI, commit hoặc xóa file.
+
+
+## Mốc hiện hành — rà tiếp gói quyết định, 13/11/2026
+
+Độ phủ thiết kế tài liệu nháp giữ **75/78**. **0 câu được trả lời**, 0 feature được duyệt, 0 ca sản phẩm đã chạy; đây không phải BA được duyệt. 224 mã nguồn gồm 219 câu gốc và 5 câu mới; 196 nhóm DEC. Thẩm quyền còn thiếu và 4 gate release chưa rõ đã có BA-Q; không chọn thay stakeholder. 12 XC có trạng thái, phần phụ thuộc tiếp tục BLOCKED.
+
+[Gói quyết định](gia-phat/review/decision-pack/README.md) · [Báo cáo rà tiếp](gia-phat/review/decision-pack/followup-2026-11-13/report.md).
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.9.1 | 13/11/2026 | BA | Append mốc XC-01–12, DEC-27 và BA-Q |
+
+Hiệu chỉnh số nhóm trong cùng mốc: rà tiêu chí một chữ ký yêu cầu tách 18 câu khỏi nhóm chủ đề cũ. Tổng hiện hành là **214 nhóm DEC**, vẫn 224 câu nguồn và 0 câu trả lời; xem bảng ánh xạ và bảng tách trong gói quyết định.

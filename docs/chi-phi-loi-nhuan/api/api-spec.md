@@ -1,14 +1,14 @@
 ---
 id: DOC-E13-API-API-SPEC-MD
 title: Đề xuất hợp đồng API EXP
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e13, exp, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Đề xuất hợp đồng API EXP
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E13-Q12 |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu FEAT-088; giữ các quyết định còn chờ |
 
 ## 1. Trạng thái hợp đồng
@@ -203,3 +204,9 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 API-EXP-006 chỉ PER-08 khác lập/sửa cuối; API-EXP-016 người duyệt chờ Q10, deny khi chưa cấu hình. API-EXP-008/011 không có personRef/hours/rate trong output theo khách. Chi tiết lương chỉ trả ở tài nguyên công cho PER-07/PER-08 được cấp quyền trường. Tham số purpose=customer không được dùng để xuất E13; từ chối, không dựa vào ẩn CSS. Mọi đường export tương lai phải kiểm lại quyền và allowlist; định dạng chưa chọn.
 
 [Mapping](data-mapping.md) · [Catalog máy đọc](endpoint-catalog.json) · [RTM](../test/traceability.md).
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E13-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

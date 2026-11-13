@@ -1,7 +1,7 @@
 ---
 id: DOC-DECISION-PACK-CONSISTENCY
 title: Rà nhất quán liên epic
-version: 0.1.0
+version: 0.1.1
 phase: Review
 domain: Gia Phát
 tags: [decision-pack, draft, review]
@@ -16,6 +16,7 @@ Nháp · 13/11/2026 · Chuẩn bị quyết định, chưa phê duyệt.
 
 | Phiên bản | Ngày | Vai trò | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-01–12: trạng thái xử lý |
 | 0.1.0 | 13/11/2026 | BA | Hợp nhất nguồn để review; giữ câu mở |
 
 ## Phạm vi và cách kiểm
@@ -42,6 +43,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Kế toán, BA. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **ĐÃ SỬA** — loại A; Chỉ sửa VAT đầu vào theo ACC-CONF-02; giữ O-01 mở. Xem [kết quả XC-01](followup-2026-11-13/xc-resolution.md).
+
 ## XC-02 — Các mẫu số cost không được thay thế nhau
 
 Mức: **Cao**. E3 định nghĩa cost suất trên doanh thu chưa VAT; E11 hỏi mẫu số BO-02; E12 hỏi tập ghép/trọng số theo khách; E13 hỏi thành phần kết quả kinh doanh. Các chỉ số có liên quan nhưng chưa có ánh xạ được duyệt. Không phát hiện căn cứ để coi chúng là cùng một tỷ lệ.
@@ -57,6 +60,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Kế toán, Giám đốc, chủ dashboard. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-02](followup-2026-11-13/xc-resolution.md).
+
 ## XC-03 — Doanh thu E13 phụ thuộc số tính tiền và VAT E7 còn mở
 
 Mức: **Cao**. E13 yêu cầu doanh thu đã đối soát có revision; E7 chưa chốt số tính tiền, căn cứ VAT và dung sai đối chiếu. Bản snapshot đề xuất không chứng minh doanh thu chính thức đã đủ nguồn.
@@ -70,6 +75,8 @@ Nguồn và dòng:
 Đề xuất xử lý: Giữ gate R13; sau quyết định E7 mới chuẩn hóa hợp đồng đọc doanh thu và evidence. Không suy số tính tiền từ số giao/nhận. Không mượn dung sai Cost cho R7/R13.
 
 Cần xác nhận: Kế toán, Giám đốc. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
+
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-03](followup-2026-11-13/xc-resolution.md).
 
 ## XC-04 — Tên và kiểu version/định danh ở delta chưa thống nhất
 
@@ -85,6 +92,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Tech lead, chủ dữ liệu E10–E13. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **ĐÃ SỬA** — loại B; Đã thống nhất cách mô tả; mapping wire vẫn BLOCKED theo câu contract E7–E13. Xem [kết quả XC-04](followup-2026-11-13/xc-resolution.md).
+
 ## XC-05 — Lead và proposal xuất hiện ở ba delta
 
 Mức: **Trung bình**. Ba cấu trúc có contact/consent/source/receipt cùng chức năng tiếp nhận nhưng khác producer và vòng đời. Chưa có tên bảng vật lý trùng chính xác; vẫn có nguy cơ ghi nhiều bản cho một nguồn hoặc coi receipt là duyệt.
@@ -98,6 +107,8 @@ Nguồn và dòng:
 Đề xuất xử lý: Xác nhận nguồn chủ, khóa bàn giao và phạm vi consent qua E8-Q06, E9-Q06/10, E10-Q13. Giữ các delta độc lập cho đến khi có quyết định; không tự gộp bảng.
 
 Cần xác nhận: Kinh doanh, phụ trách dữ liệu, Tech lead. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
+
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-05](followup-2026-11-13/xc-resolution.md).
 
 ## XC-06 — Đồng ý nhật ký khác đồng ý sức khỏe; bữa đã ăn cần evidence riêng
 
@@ -114,6 +125,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Giám đốc, phụ trách dữ liệu, Dinh dưỡng viên. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-06](followup-2026-11-13/xc-resolution.md).
+
 ## XC-07 — Người duyệt trong các epic mới vẫn chưa được O-06 chỉ định
 
 Mức: **Trung bình**. Tách người lập/người sửa cuối khỏi người duyệt là nguyên tắc nền. Các epic mới đã mô tả approval nhưng người duyệt, hạn mức và người thay còn mở; không thể dùng tên persona để tự cấp quyền.
@@ -128,6 +141,8 @@ Nguồn và dòng:
 Đề xuất xử lý: Trình ma trận theo nghiệp vụ trong nhóm O-06; ghi phạm vi từng chữ ký. Các vai trò chỉ tham gia review chưa được tính là người có quyền quyết định.
 
 Cần xác nhận: Giám đốc, BA. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
+
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-07](followup-2026-11-13/xc-resolution.md).
 
 ## XC-08 — Hai chức năng dựng thực đơn public có khả năng dùng chung
 
@@ -144,6 +159,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Tech lead, Dinh dưỡng viên, chủ website. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-08](followup-2026-11-13/xc-resolution.md).
+
 ## XC-09 — Dữ liệu giá có phần lẻ và giá cost nguyên đồng còn gate
 
 Mức: **Trung bình**. E10 giữ quoted_unit_price decimal(18,6), E11 có giá cost Integer money và phần lẻ chờ review, E13 chưa chọn precision/làm tròn/phần dư. Các trường khác nghĩa nên không kết luận trùng kiểu sai; cần mapping để tránh cắt phần lẻ khi truyền nguồn.
@@ -157,6 +174,8 @@ Nguồn và dòng:
 Đề xuất xử lý: Chốt chuẩn hóa PriceInput và quy tắc làm tròn từng chỉ số theo nguồn. Giữ NFR-COST-002 ≤ 1 đ và ≤ 0,01 điểm phần trăm, không dùng làm quy tắc làm tròn mọi tiền.
 
 Cần xác nhận: Kế toán, Tech lead. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
+
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-09](followup-2026-11-13/xc-resolution.md).
 
 ## XC-10 — Chiết khấu riêng chưa có chính sách đưa vào lợi nhuận
 
@@ -172,6 +191,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Kế toán, Giám đốc. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-10](followup-2026-11-13/xc-resolution.md).
+
 ## XC-11 — MISA chỉ có câu nguồn E7; không tạo quyết định xuất MISA cho E11/E13
 
 Mức: **Thấp**. E7 hỏi mẫu nhập MISA; E13 chỉ hỏi export nội bộ; E11 phân biệt công nợ NCC với phải thu khách. Không thấy căn cứ trong sổ để gộp cả ba thành một quyết định MISA.
@@ -186,6 +207,8 @@ Nguồn và dòng:
 
 Cần xác nhận: Kế toán, BA. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
 
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-11](followup-2026-11-13/xc-resolution.md).
+
 ## XC-12 — E1 và E5 diễn giải thời gian phản hồi đầu khác nhau
 
 Mức: **Trung bình**. E1 ghi ký tự đầu trong 5 giây; ghi chú E1 nêu polling E5 và đề xuất hiểu là phản hồi tiến trình đầu, không phải token đầu. Đây mới là đề xuất, không tự sửa NFR gốc.
@@ -198,6 +221,8 @@ Nguồn và dòng:
 Đề xuất xử lý: Tech lead và QA xác nhận cách đo sau khi O-04/AIO-Q01 có nguồn. Giữ giới hạn phản hồi và thời gian dựng thực đơn là hai chỉ số riêng.
 
 Cần xác nhận: Tech lead, QA, Giám đốc. Cách kiểm: Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu.
+
+Trạng thái: **CHỜ QUYẾT ĐỊNH** — loại C; Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng. Xem [kết quả XC-12](followup-2026-11-13/xc-resolution.md).
 
 ## Danh mục delta ngoài schema
 

@@ -10,6 +10,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-04; E11-Q13</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -321,6 +327,11 @@
 </tr>
 </tbody></table></div>
 <p>PriceInput giữ ingredientId, supplierId, kitchenId, quotedUnitPrice, priceBasis, căn cứ VAT và pricingEvidence theo E3. Không nhận priceVnd như số client được tin cậy. Chưa rõ phần lẻ thì BLOCKED normalization, không tự làm tròn. <a href="api/endpoint-catalog.json">Catalog máy đọc</a>.</p>
+<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
+<blockquote>
+<p>Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+</blockquote>
 </section><section id="doc-api-data-mapping-md" hidden><p><a href="api/data-mapping.md">Mở Markdown nguồn</a> · api/data-mapping.md</p><h1>Mapping API — dữ liệu — màn E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -612,6 +623,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-11; E7-Q07</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -652,6 +669,9 @@
 <td align="left">E1-Q01–05/O-06 giữ mở; file MIME JPG/PNG/WEBP/PDF ≤ 10 MB, signed link 15 phút theo nguồn; chính sách ảnh E11-Q05 chưa chọn</td>
 </tr>
 </tbody></table></div>
+<blockquote>
+<p>Chờ E7-Q07 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-11</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
 <p>Nguồn đọc: <a href="../thuc-don-dinh-luong/srs/spec.md">E2</a>, <a href="../cost/srs/spec.md">E3</a>, <a href="../cost/accounting/business-rules.md">kế toán</a>, <a href="../cost/api/api-spec.md">PriceInput</a>, <a href="../chon-mon-order/srs/spec.md">E6</a>, <a href="../chon-mon-order/review/contract-gap-register.md">CG</a>, <a href="../giao-nhan-doanh-thu/srs/spec.md">E7</a>, <a href="../nen-tang/srs/spec.md">E1</a>, <a href="../nen-tang/srs/erd.md">ERD</a>, <a href="../nen-tang/srs/schema.dbml">DBML</a>.</p>
 <p>Giữ chờ toàn bộ E8-Q01–12; E9-Q01–14; E10-Q01–15; O-01–O-06; CK-Q01–10; DATA-COST-Q01–06; AIO-Q01–06; NUTR-Q01–04; DL-01; E1-Q01–05. Các câu E8–E10 không là lý do mở producer mới trong E11. Không đặc tả FEAT-082/083, không mở E12/E13.</p>
 <p>Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu cầu hóa đơn độc lập, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn, không giảm phải trả nhà cung cấp và không tự khấu trừ số khách phải trả. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-02/R11 dùng ≤ 3 điểm phần trăm, không phải sai số tính toán. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chặn O-03, không thu dữ liệu sức khỏe.</p>
@@ -694,6 +714,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-02; E11-Q08; XC-07; E11-Q02, O-06</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -817,6 +843,12 @@
 <td align="left"></td>
 </tr>
 </tbody></table></div>
+<blockquote>
+<p>Chờ E11-Q02, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-07</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
+<blockquote>
+<p>Chờ E11-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
 </section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Từ điển dữ liệu và delta đề xuất E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -829,6 +861,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-04; E11-Q13; XC-09; E11-Q14</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -1003,6 +1041,9 @@
 <td align="left">Căn cứ thay đổi</td>
 </tr>
 </tbody></table></div>
+<blockquote>
+<p>Chờ E11-Q14 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-09</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
 <h2>Thực thể đề xuất và trường riêng</h2>
 <div class="table-wrap"><table>
 <thead>
@@ -1079,6 +1120,11 @@
 </tr>
 </tbody></table></div>
 <p>Mọi độ dài/precision chưa có nguồn đều chờ E11-Q13, không tự lấy từ mẫu. Giữ nguyên invoiceRequested riêng và khoản chiết khấu theo đơn ở E3/E6; không sao chép hồ sơ sức khỏe. Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu cầu hóa đơn độc lập, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn, không giảm phải trả nhà cung cấp và không tự khấu trừ số khách phải trả. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-02/R11 dùng ≤ 3 điểm phần trăm, không phải sai số tính toán. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chặn O-03, không thu dữ liệu sức khỏe.</p>
+<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
+<blockquote>
+<p>Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+</blockquote>
 </section><section id="doc-srs-error-matrix-md" hidden><p><a href="srs/error-matrix.md">Mở Markdown nguồn</a> · srs/error-matrix.md</p><h1>Ma trận lỗi E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -4460,4 +4506,4 @@
 <td align="left">E11-Q12/13; DL-01; E6 CG05/06/07</td>
 </tr>
 </tbody></table></div>
-</section></article></main><script>const sections=[...document.querySelectorAll("article>section")];function show(){let id=location.hash.slice(1);if(!sections.some(s=>s.id===id))id=sections[0].id;sections.forEach(s=>s.hidden=s.id!==id);}window.addEventListener("hashchange",show);show();document.querySelector("#search").oninput=e=>document.querySelectorAll("aside a").forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(e.target.value.toLowerCase()));</script></body></html>
+</section></article></main><script>const sections=[...document.querySelectorAll("article>section")];function show(){let id=location.hash.slice(1);if(!sections.some(s=>s.id===id))id=sections[0].id;sections.forEach(s=>s.hidden=s.id!==id);}window.addEventListener("hashchange",show);show();document.querySelector("#search").oninput=e=>document.querySelectorAll("aside a").forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(e.target.value.toLowerCase()));</script><table aria-label="Lịch sử phiên bản"><tr><th>Phiên bản</th><th>Ngày</th><th>Người thực hiện</th><th>Nội dung</th></tr><tr><td>0.1.1</td><td>13/11/2026</td><td>BA</td><td>Render lại tài liệu XC-01–12; không phê duyệt nghiệp vụ</td></tr></table></body></html>

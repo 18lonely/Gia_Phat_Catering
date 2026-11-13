@@ -1,14 +1,14 @@
 ---
 id: DOC-E10-TEST-TRACEABILITY-MD
 title: Ma trận truy vết E10
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [crm, e10, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Ma trận truy vết E10
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E10-Q16 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E10; giữ mọi quyết định chưa có căn cứ ở trạng thái chờ |
 
 Một FR ↔ một UC ↔ một story. Mỗi story ba AC; mỗi AC một ca chức năng. Endpoint đọc bổ sung không tạo FR mới.
@@ -104,3 +105,13 @@ Các dòng sau chỉ liên kết lại ca đã có, không tạo thêm ca hoặc
 | ERR-CRM-422-01 | TC-CRM-006-02; TC-CRM-009-02; TC-CRM-013-03 |
 | ERR-CRM-500-01 | TC-CRM-S004: lỗi ghi/audit trước hoặc sau commit, chưa xác định kết quả |
 | ERR-CRM-503-01 | TC-CRM-003-02; TC-CRM-006-02 khi policy chưa đủ |
+
+## Bổ sung gate — XC-05
+
+> Chờ E10-Q16 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-CRM-003-01, TC-CRM-003-02, TC-CRM-003-03. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
+
+| Câu hỏi bổ sung | Ca phụ thuộc | Trạng thái | Căn cứ |
+| :--- | :--- | :--- | :--- |
+| E10-Q16 | TC-CRM-003-01 | BLOCKED (giữ từ trước; bổ sung gate) | XC-05; [sổ câu hỏi](../review/questions.md) |

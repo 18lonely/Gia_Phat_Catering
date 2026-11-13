@@ -1,6 +1,11 @@
 # Phiếu cung cấp dữ liệu đối soát của kế toán
 
-Phiên bản 0.1.0 · 11/11/2026 · Trạng thái: Chưa nhận dữ liệu thực tế.
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-01; ACC-CONF-02 |
+
+
+Phiên bản 0.1.1 · 11/11/2026 · Trạng thái: Chưa nhận dữ liệu thực tế.
 
 Mục đích: chuẩn bị đầu vào cho NFR-COST-002 và TC-COST-010-06. Cần 10 món và 10 ngày mẫu có kết quả tính tay độc lập. Không dùng kết quả do script hoặc backend đang kiểm tự sinh làm expected. [Bộ số giả định](../test/fixtures/README.md) chỉ là ví dụ cách tính, chưa thay thế dữ liệu này.
 
@@ -12,7 +17,7 @@ Mục đích: chuẩn bị đầu vào cho NFR-COST-002 và TC-COST-010-06. Cầ
 | Kế toán lập / người review / ngày xác nhận | Chưa cung cấp |
 | Nguồn bảng tính tay/chứng từ | Chưa cung cấp; ghi tên file, phiên bản và vị trí lưu |
 | Cơ sở / khoảng ngày tính | Chưa cung cấp |
-| Giá nhập bao gồm khoản gì, VAT đầu vào xử lý thế nào | Chờ O-01 |
+| Giá nhập bao gồm khoản gì, VAT đầu vào xử lý thế nào | Cost nguyên liệu gồm VAT phải trả NCC theo [ACC-CONF-02](../accounting/business-rules.md); XC-01. Thành phần cost khác vẫn chờ O-01 |
 | Giá suất đã gồm VAT / VAT bán ra / ngưỡng Cost | Chưa cung cấp; ghi nguồn quyết định và thời gian hiệu lực |
 | Phương pháp món chính / K / món mặc định | Chưa cung cấp; gắn E3-Q1/Q12/Q15 |
 | Áp hao hụt hay không; định lượng đã gồm phần bỏ chưa | Chờ E3-Q2 |

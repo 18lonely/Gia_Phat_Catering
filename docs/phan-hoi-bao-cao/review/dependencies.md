@@ -1,14 +1,14 @@
 ---
 id: DOC-E12-REVIEW-DEPENDENCIES-MD
 title: Điểm nối E12 và các gói nguồn
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e12, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Điểm nối E12 và các gói nguồn
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-06; E12-Q15, E12-Q16, E12-Q17 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; không đóng câu hỏi nguồn |
 
 | Gói | Nguồn chỉ đọc | Dữ liệu / trách nhiệm nguồn | E12 sử dụng / ranh giới | Điều kiện chưa đạt |
@@ -35,3 +36,5 @@ Nền tảng: [SRS](../../nen-tang/srs/spec.md), [ERD](../../nen-tang/srs/erd.md
 R12 cần R6, R7, R10, R11 xong; G-Next vẫn cần bằng chứng BO-05/06/09. Chưa có bằng chứng đạt; mở tài liệu không miễn các điều kiện này. Giữ toàn bộ E8-Q01–12, O-01–O-06, DL-01 và câu nguồn trên, không hỏi lại hoặc chọn thay.
 
 FEAT-087 độc lập với O-03 vì không đọc eater_health_profiles, không nhận bệnh lý/chỉ số cơ thể, không suy luận và không gợi ý; chỉ sự kiện bữa đã ăn cùng snapshot suất. Chính sách identity/consent/retention/bằng chứng còn BLOCKED, nhưng không làm feature này chỉ gate. Bất kỳ mở rộng FEAT-046/047 là gate-only O-03, ngoài thiết kế hiện tại.
+
+> Chờ E12-Q15, E12-Q16, E12-Q17 — XC-06. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-06](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.

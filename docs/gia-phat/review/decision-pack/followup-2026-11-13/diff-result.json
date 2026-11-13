@@ -1,0 +1,613 @@
+{
+  "status": "PASS",
+  "baselineFiles": 1201,
+  "modified": [
+    {
+      "file": "docs/agent-dinh-duong-vien/api/api-spec.md",
+      "beforeSize": 10421,
+      "afterSize": 11103,
+      "sha256": "f0a02eccdd1f54ea1a202dbfab817f719676baecef4e51eb3dad7fcbbbeb7862"
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "beforeSize": 5327,
+      "afterSize": 5735,
+      "sha256": "de955ce62b805977955c37369da66dd6ecbedce419a905b3ba7e11dc80ca9c32"
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/review/questions.md",
+      "beforeSize": 6268,
+      "afterSize": 7228,
+      "sha256": "fffff82a80f1e154208cbc27d1b64421a9359f5364b0fce2c4e22bea0f23fc68"
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/srs/data-dictionary.md",
+      "beforeSize": 1476,
+      "afterSize": 2158,
+      "sha256": "5330d523efd843a30b5ee0d87dc7205948534a6323e8e18d275515a8a4408a60"
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/test/test-cases.md",
+      "beforeSize": 9594,
+      "afterSize": 10263,
+      "sha256": "acfcdc294280554ff1e3fc6eebd7f37f83bcd849ee32ca8e8627e074c7f7ad43"
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/test/traceability.md",
+      "beforeSize": 2622,
+      "afterSize": 3526,
+      "sha256": "9296a8cbe0781db4e00e24477449e46b49b4bcb826b547d5b100e1671e8652ff"
+    },
+    {
+      "file": "docs/agent-noi-bo/review/questions.md",
+      "beforeSize": 2665,
+      "afterSize": 3437,
+      "sha256": "235298a9bccacc1cf49822cfcdefc03535dae78af9eba44eb2bdb5f20cc9ee8d"
+    },
+    {
+      "file": "docs/agent-noi-bo/test/test-cases.md",
+      "beforeSize": 13284,
+      "afterSize": 13800,
+      "sha256": "282582cd04428a717b45e653012b7062b7a9710fb1710929b72138a0ddf875e5"
+    },
+    {
+      "file": "docs/agent-noi-bo/test/traceability.md",
+      "beforeSize": 3640,
+      "afterSize": 4433,
+      "sha256": "65c5dffaac9f6163ccfc865ff47f8b3f93eafbe21d52e2eb13b729380825dcf6"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/api/api-spec.md",
+      "beforeSize": 15955,
+      "afterSize": 16544,
+      "sha256": "bebd5fe7c5f4277a1415f01a09e8dce4965c904a5b74001f877f5b7cc6443d8f"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/preview.html",
+      "beforeSize": 420907,
+      "afterSize": 424952,
+      "sha256": "86220fe1f374e025cadb0f1c53aa453c3592d6f461ab573ca460c823d3c054c7"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/review/dependencies.md",
+      "beforeSize": 3911,
+      "afterSize": 4622,
+      "sha256": "face06318eac5742093863a418d3fd8851ec0628659a11f5b7a2a2958a1c5e86"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+      "beforeSize": 5712,
+      "afterSize": 6888,
+      "sha256": "91bf2999cc7595896e63b69c3c3631235ebc78352898180ae803a59ac87a60e1"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "beforeSize": 7762,
+      "afterSize": 8351,
+      "sha256": "f8819920fa829e208959956c9043162008b6602e0701e6ad0028f632ba4c41d5"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/index.html",
+      "beforeSize": 3409,
+      "afterSize": 3691,
+      "sha256": "ee023737e157e736af8ff9efd8c674713dd373c5dbe0ac60f0514cd9da53ab04"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-1.html",
+      "beforeSize": 28090,
+      "afterSize": 28372,
+      "sha256": "0d437f0758cf8a9b8007202a7389c6cf29c4731a516fb70197382c2c461c3b2c"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-1.svg",
+      "beforeSize": 26259,
+      "afterSize": 26584,
+      "sha256": "8ead0df81f59766cea02472f1e854be52b5723569d2cce8cfe547e30bc36e0bd"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-2.html",
+      "beforeSize": 33731,
+      "afterSize": 34013,
+      "sha256": "3af72469b693cf1470824e7ee8063141627f387b4a592473feeec69d8f541f0d"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-2.svg",
+      "beforeSize": 31900,
+      "afterSize": 32225,
+      "sha256": "bbf16f3c3f890612926040785b3e8a3c6404d8e2c24abdf6764260fbee6534ff"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-3.html",
+      "beforeSize": 33677,
+      "afterSize": 33959,
+      "sha256": "bb01af884b7a378fe941da13253b0e37904364f71808218c8531ca4d07b1d5d9"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-3.svg",
+      "beforeSize": 31846,
+      "afterSize": 32171,
+      "sha256": "680923dbd6f17c4047765b7655df342d0efcfa3cf07043c65b00abb9d7f1258e"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-4.html",
+      "beforeSize": 33852,
+      "afterSize": 34134,
+      "sha256": "032816dfc6aca2c2444b3d5d31facbfb75d75795de2899022072ba726be2279e"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-4.svg",
+      "beforeSize": 32021,
+      "afterSize": 32346,
+      "sha256": "172667a22f136ac0df01afd6b77323e4df9bdf7e2d81470c654a83630dd5b168"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-5.html",
+      "beforeSize": 30202,
+      "afterSize": 30484,
+      "sha256": "8c2e0c2d02aafd5655c90869992d939ff1200852bce2ef44df19d64ebdc20bb6"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/srs-states-5.svg",
+      "beforeSize": 28371,
+      "afterSize": 28696,
+      "sha256": "e8a2685f1c5632a2f19d18c64c25cee6809e5647c4b019ddd86f4ef9b4616d4b"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/ui-user-flow-1.html",
+      "beforeSize": 26950,
+      "afterSize": 27232,
+      "sha256": "cbb3b3e3150f32eb102bb7767d7fd9b7c5d3681bbf5ef62d0246383e0df2b003"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/ui-user-flow-1.svg",
+      "beforeSize": 25159,
+      "afterSize": 25484,
+      "sha256": "d122f20afdd2729cd3a5868118570da6441ab17405fc45cec134ef881b9a5f31"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/ui-user-flow-2.html",
+      "beforeSize": 17838,
+      "afterSize": 18120,
+      "sha256": "43e62dbd6c9d7756e31d9fcec0f283d06a8b8785485ed5e4d3dee67e98b67c10"
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/srs/diagrams/ui-user-flow-2.svg",
+      "beforeSize": 16047,
+      "afterSize": 16372,
+      "sha256": "424dd5dc086e7af441876eca91c8509a8817a07c3cd94b90c9453779ae4ee60e"
+    },
+    {
+      "file": "docs/cost/review/accountant-input.md",
+      "beforeSize": 8008,
+      "afterSize": 8293,
+      "sha256": "74e656e800c597a5a68dd14318eb150880422c5079ce33a87ff68ac4e66ad1aa"
+    },
+    {
+      "file": "docs/crm-ban-hang/api/api-spec.md",
+      "beforeSize": 18061,
+      "afterSize": 18650,
+      "sha256": "99e263ed5a9b87fbc6f825b98f1eaeff042f6cc5f872e3e1f976723af428f085"
+    },
+    {
+      "file": "docs/crm-ban-hang/review/questions.md",
+      "beforeSize": 10363,
+      "afterSize": 11196,
+      "sha256": "8f4d735a69528c086b20b1b287c7e6614e90e1b8e6bf0d5d76851e32441e4f36"
+    },
+    {
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "beforeSize": 6298,
+      "afterSize": 7489,
+      "sha256": "16235683ebdd55bb8b97047b60dc882d3f2b2ab1e08da3872a57817df2fb3f46"
+    },
+    {
+      "file": "docs/crm-ban-hang/test/test-cases.md",
+      "beforeSize": 26304,
+      "afterSize": 26860,
+      "sha256": "71b722a134a14da8d90dfe7a9b8c70b1cfb3d277942b0aee480ae5a987955546"
+    },
+    {
+      "file": "docs/crm-ban-hang/test/traceability.md",
+      "beforeSize": 9388,
+      "afterSize": 10132,
+      "sha256": "6b2bd856a65b37f41e1dae515bde15a78d3f3ec8dbe6cdbf667dcd16e0b40df1"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/cross-epic-consistency.md",
+      "beforeSize": 50936,
+      "afterSize": 53635,
+      "sha256": "58f2d08f5d57c57bc77bdc18db7f757626ec52223ba10971ca6099cf36e05b9d"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/decision-groups.md",
+      "beforeSize": 262794,
+      "afterSize": 282523,
+      "sha256": "5ccfd41f0f4da7d520d52ce0c0c71a7e42868c812c09fc44bfa363c174c60b70"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/decision-register.json",
+      "beforeSize": 240442,
+      "afterSize": 250956,
+      "sha256": "74b326370c7773dc24e34509b7ead9373a44fc5ab3b932e1f792b087f16b2cb8"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/decision-register.md",
+      "beforeSize": 82581,
+      "afterSize": 89408,
+      "sha256": "53c844ab25f97fa271bec2312cbf18d21a5aee9daa1304fcc9409317e6f12d51"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/meeting-agenda.md",
+      "beforeSize": 47863,
+      "afterSize": 50928,
+      "sha256": "467fa6ffc5fd8b8290fa22e6f5e559a552bf01fdd5909caa694c3396b3f1bbf7"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/README.md",
+      "beforeSize": 3855,
+      "afterSize": 4782,
+      "sha256": "9f870ffad37b09f8a02d43a6896f1e918cbb64685923bd276923dcce49c4dffd"
+    },
+    {
+      "file": "docs/gia-phat/review/decision-pack/validation/check-decision-pack.cjs",
+      "beforeSize": 6630,
+      "afterSize": 7096,
+      "sha256": "acfa63148559a68a95e8e8d559f37ff8b5a016041617b1dc167d3ad9e2400d76"
+    },
+    {
+      "file": "docs/giao-nhan-doanh-thu/api/api-spec.md",
+      "beforeSize": 9679,
+      "afterSize": 10361,
+      "sha256": "4d3e230b8891317c8e4951087a09a68186cf9e755ec2de636f569602e92cf17b"
+    },
+    {
+      "file": "docs/giao-nhan-doanh-thu/review/questions.md",
+      "beforeSize": 3575,
+      "afterSize": 4280,
+      "sha256": "a05a9835f281e866e2c6255948560a7876eb06fff17a652a790b684b74a47195"
+    },
+    {
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "beforeSize": 3611,
+      "afterSize": 4293,
+      "sha256": "69da67fdffdc83cbfd8d132a819f28f0c3efd3eae3939bd7186036435447f795"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/api/api-spec.md",
+      "beforeSize": 22214,
+      "afterSize": 22803,
+      "sha256": "f7e7f1e2e9569a808d46cc0e6b0af9b58453eee9aeb49bd35450a0cc2da40826"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/preview.html",
+      "beforeSize": 472409,
+      "afterSize": 475687,
+      "sha256": "da6fbd39347050dac8819f117dcaf2545e1d5cf3bfe7b336eda807bc576c045a"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/review/dependencies.md",
+      "beforeSize": 3150,
+      "afterSize": 3463,
+      "sha256": "b29221ecde5c2793150182dd1dd2bde89eb6a3dadd1c04aa140455542b667fc1"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/review/questions.md",
+      "beforeSize": 5625,
+      "afterSize": 6235,
+      "sha256": "ffa40c31bf48e85d3ff56a9ae7cec2b054685b1c0cde336fac85eff9a0c23d0c"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "beforeSize": 7183,
+      "afterSize": 8055,
+      "sha256": "fb581b706093fc512025e93a59108e00ca40b1a84456f41d0c1096c7eeaca700"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/index.html",
+      "beforeSize": 3271,
+      "afterSize": 3553,
+      "sha256": "9ee162d389c30b635aac9747512462fa9041cab89f6e818df7c26e7721575a0c"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-1.html",
+      "beforeSize": 34774,
+      "afterSize": 35056,
+      "sha256": "f6768b321551164103ad5ab99c744194d13ad7da88cfc4296eec2b9158e8ec5a"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-1.svg",
+      "beforeSize": 32973,
+      "afterSize": 33298,
+      "sha256": "678556b0a90a8a6f81b912cb4484606c834cf317291229f20e212d9420e0034b"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-2.html",
+      "beforeSize": 34876,
+      "afterSize": 35158,
+      "sha256": "33b51aa7e4369b55a5ac6f5eddaa362eb995fe6961fdd0792040766ae7e3adc3"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-2.svg",
+      "beforeSize": 33075,
+      "afterSize": 33400,
+      "sha256": "9b34686167e667a325b3cf14564cd6675d26ac8dad8cb958c8c30ebe347db7d4"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-3.html",
+      "beforeSize": 34786,
+      "afterSize": 35068,
+      "sha256": "566180a3780d38648d9dd79b8a63747437400f1930e51ed0a464f604c21d4bde"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-3.svg",
+      "beforeSize": 32985,
+      "afterSize": 33310,
+      "sha256": "56596a42dd2e367ed91371ef7bb9b1bf0307679cb46545ef57977dcb5f322434"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-4.html",
+      "beforeSize": 34772,
+      "afterSize": 35054,
+      "sha256": "0b4d6a5578560f6748bb4894c11961698e6565117724bd2307400f7a97c58ec1"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-4.svg",
+      "beforeSize": 32971,
+      "afterSize": 33296,
+      "sha256": "447774a031f08f10ccdd741827caadbdf2e9dbc780221ceef8c4e96d1e0f23d5"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-5.html",
+      "beforeSize": 34719,
+      "afterSize": 35001,
+      "sha256": "a9f7c79c6f157dab533bb648ca02ee07619b8433054f01e18c706eedad40779d"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/srs-states-5.svg",
+      "beforeSize": 32918,
+      "afterSize": 33243,
+      "sha256": "ee848ac91022f1ce2817641270540ca8abe493e2796d823fb8738db386159391"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/ui-user-flow-1.html",
+      "beforeSize": 24416,
+      "afterSize": 24698,
+      "sha256": "c65a316d63a29caa01f916871ae150a6087d54e0da5d68d02042226933a54b3e"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/ui-user-flow-1.svg",
+      "beforeSize": 22619,
+      "afterSize": 22944,
+      "sha256": "94943807c5efc6aa022e822666d55765824c760f3dda389d176046ba933c5b33"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/ui-user-flow-2.html",
+      "beforeSize": 24467,
+      "afterSize": 24749,
+      "sha256": "2646af641af4c41be56db3473c88c31c3c4c744b6256abed3b0685bd92a66d69"
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/srs/diagrams/ui-user-flow-2.svg",
+      "beforeSize": 22670,
+      "afterSize": 22995,
+      "sha256": "55ce86bb185f2804eade065aed27ca14b56f2cd2e4a3440b7c0228690eff242a"
+    },
+    {
+      "file": "docs/nen-tang/review/questions.md",
+      "beforeSize": 2203,
+      "afterSize": 2893,
+      "sha256": "dc9c4ab79aecf82d051f989faa8a66ba1bdcac496add6b579aa356adab90f9ff"
+    },
+    {
+      "file": "docs/nen-tang/srs/erd.md",
+      "beforeSize": 97573,
+      "afterSize": 97753,
+      "sha256": "837c0ef921754e7d8c5038ec1139a6aed6c844c80a85ec2528fb93fe197c3b87"
+    },
+    {
+      "file": "docs/nen-tang/test/test-cases.md",
+      "beforeSize": 49721,
+      "afterSize": 50218,
+      "sha256": "a0fb12a498bd3f74eee5ee17085d42f5591be6de56e7f01180ed31308ba7c92a"
+    },
+    {
+      "file": "docs/nen-tang/test/traceability.md",
+      "beforeSize": 3798,
+      "afterSize": 4573,
+      "sha256": "714d00c8b552b58e19eec6f30e445700dc206787700929010194f421c5b33569"
+    },
+    {
+      "file": "docs/OVERVIEW.md",
+      "beforeSize": 35657,
+      "afterSize": 36774,
+      "sha256": "0cb8b90ec64a5cdb87d54bc088c8b6bfc8c3dc81873f126af14ebf8a8e8b20aa"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/api/api-spec.md",
+      "beforeSize": 9731,
+      "afterSize": 10320,
+      "sha256": "adf47b38dd6693839ee45bea9ce6f2a12a5a2ad35af43b84a306700364a1397f"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/preview.html",
+      "beforeSize": 558892,
+      "afterSize": 561552,
+      "sha256": "56630babac7468ac58add075e4991b96143978d3ade45de3ce857a859e73b957"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/review/dependencies.md",
+      "beforeSize": 4577,
+      "afterSize": 4928,
+      "sha256": "897792760380d20f60d70febc3c499911a989399a979c0d1d5a4727c76149d37"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/review/questions.md",
+      "beforeSize": 6875,
+      "afterSize": 7190,
+      "sha256": "3d57becf3364e3a7e6834828a3f3cf8e7c7ecaa83cebe6b355faef38dd161757"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "beforeSize": 5574,
+      "afterSize": 6163,
+      "sha256": "eb845191ef1fc9ac2029fb991162dbd4443663898272aafd814ee4eeaff1afd6"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/index.html",
+      "beforeSize": 3269,
+      "afterSize": 3551,
+      "sha256": "377d0fa1e777d8e09dce8398cc533880cb9bce1153878433e21485a10cdcb719"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-1.html",
+      "beforeSize": 32042,
+      "afterSize": 32324,
+      "sha256": "470d0c775db5cf71eee2f115d1bd184f2f246445bc025463ac6896bd2d7f0daf"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-1.svg",
+      "beforeSize": 30241,
+      "afterSize": 30566,
+      "sha256": "2404333664147b9feb707c243d57a86a1c3fe07e2f54e661ed0d6779598846d4"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-2.html",
+      "beforeSize": 30751,
+      "afterSize": 31033,
+      "sha256": "2a6bd45e857d101271a5d5c663e36f53119f0998b5259c1635fbbf692dc18718"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-2.svg",
+      "beforeSize": 28950,
+      "afterSize": 29275,
+      "sha256": "49995ccd168d48e0647c4d2d04eb26c6ded9aa8985bec18daa6e596952520532"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-3.html",
+      "beforeSize": 37036,
+      "afterSize": 37318,
+      "sha256": "3616388f9b4b6ac30fe568f3d712cab29b753c1516292593ca956971e9426872"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-3.svg",
+      "beforeSize": 35235,
+      "afterSize": 35560,
+      "sha256": "3277e34a7432d02c61666d99b2b4f82072d3c33c458d4558e801a7f5a26fa237"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-4.html",
+      "beforeSize": 37528,
+      "afterSize": 37810,
+      "sha256": "a67ed58fcb09ad4f8495f3bf292eeae37d7e1b329260d77bdf925bc401682d12"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-4.svg",
+      "beforeSize": 35727,
+      "afterSize": 36052,
+      "sha256": "8a36f2954ecaf1c0fa4a8bacaa7a9aff28b64e77f9374ea5ffa1c2ab85f0f665"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-5.html",
+      "beforeSize": 32684,
+      "afterSize": 32966,
+      "sha256": "cbc970150bc4400f06bea78f19abb2f8adea4097257d6f653eaf0e323edaf493"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/srs-states-5.svg",
+      "beforeSize": 30883,
+      "afterSize": 31208,
+      "sha256": "71f94b62efc0909eabe4a50af49bec554f39546cb23c4484b3f7cf29891f69c6"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/ui-user-flow-1.html",
+      "beforeSize": 21121,
+      "afterSize": 21403,
+      "sha256": "dfb779cd11e87a0884d22b2e976bcd5585dac857ad88bc7a858c8d427060c245"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/ui-user-flow-1.svg",
+      "beforeSize": 19324,
+      "afterSize": 19649,
+      "sha256": "a452b6798714c53256f626a51c0dbb9d7d5b893fac4c298696d21db9a8df8735"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/ui-user-flow-2.html",
+      "beforeSize": 22092,
+      "afterSize": 22374,
+      "sha256": "e7c429f080c1418cceddfbf3d86336370940238f594cb1854a196fbc4dcf36d2"
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/srs/diagrams/ui-user-flow-2.svg",
+      "beforeSize": 20295,
+      "afterSize": 20620,
+      "sha256": "f2a6617065a9f4de8cb5bced3cc4654d24f6e3de51f4e47d73189b7703b3b6e0"
+    },
+    {
+      "file": "docs/project-dashboard.md",
+      "beforeSize": 33357,
+      "afterSize": 34474,
+      "sha256": "64ad71419f1c70b35fb1005aea9fe1f18cc8a76ed2e435dabe50b172d61e5ab5"
+    },
+    {
+      "file": "docs/website-cong-khai/api/api-spec.md",
+      "beforeSize": 8234,
+      "afterSize": 8916,
+      "sha256": "137fbb10525dfae4d5dba57dde769a8a4699765dce868efcaa80bf8e6af56884"
+    },
+    {
+      "file": "docs/website-cong-khai/review/questions.md",
+      "beforeSize": 5260,
+      "afterSize": 6203,
+      "sha256": "1633da00ff369705ab22cedd0f270244686271c392738eec4cd7b8133c003a08"
+    },
+    {
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "beforeSize": 2379,
+      "afterSize": 3342,
+      "sha256": "9c1ab10d4b4a248199e9c9bb60de2ea1c7c078e2963f4740416d1172167befbd"
+    },
+    {
+      "file": "docs/website-cong-khai/test/test-cases.md",
+      "beforeSize": 15885,
+      "afterSize": 16578,
+      "sha256": "26a607c5e471fbf3e5117ccc155494b6be91fdfdeaf5870c1dc48fb8cef417b5"
+    },
+    {
+      "file": "docs/website-cong-khai/test/traceability.md",
+      "beforeSize": 3006,
+      "afterSize": 3824,
+      "sha256": "76183257f6305833931b7cbaa44fbe4a624a8dd77c5aa9b1fe91e5ec18a3b7c1"
+    }
+  ],
+  "added": [
+    "docs/gia-phat/review/decision-pack/ba-open-questions.md",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/ba-questions.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/baseline.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/change-log.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/check-followup.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/chi-phi-loi-nhuan-diagram-render-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/chi-phi-loi-nhuan-structure-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/conventions.md",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/decision-map.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/decision-pack-cross-epic-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/decision-pack-structure-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/decision-splits.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/diff-report.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/edit-documents.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/group-index.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/impact-analysis.md",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/mua-hang-san-xuat-diagram-render-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/new-questions.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/phan-hoi-bao-cao-diagram-render-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/phan-hoi-bao-cao-structure-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/preserve-results.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/refine-document-review.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/report.md",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/structure-result.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/write-report.cjs",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/xc-resolution.json",
+    "docs/gia-phat/review/decision-pack/followup-2026-11-13/xc-resolution.md"
+  ],
+  "deleted": [],
+  "errors": []
+}

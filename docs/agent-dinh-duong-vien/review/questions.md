@@ -1,13 +1,18 @@
 ---
 id: DOC-E9-REVIEW-QUESTIONS-MD
 title: Sổ câu hỏi mở E9
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Sổ câu hỏi mở E9
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E9-Q15; XC-08; E9-Q11, E8-Q05 |
+
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -29,5 +34,8 @@ Tất cả **CHỜ TRẢ LỜI**. Cột trả lời và nguồn/người/ngày �
 | E9-Q12 | Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ? | Projection có phiên bản nguồn, không coi thiếu là 0 hoặc không dị ứng; refresh phải kiểm lại | Kết quả thật, nhãn đầy đủ, mapping ngày/cỡ | E2-Q3; O-02; NUTR-Q01–04; E8-Q04 |  |  |
 | E9-Q13 | Wire contract: idempotency, TTL, retry/deadline/concurrency, receipt đối soát, giao dịch quota/ledger và profile tải R9? | Key bền vững gắn chủ thể/route/body; giữ reservation khi usage chưa rõ; profile theo nền chưa chọn số quota | Freeze API/delta, fault tolerance và thử tải | AIO-Q06; E8-Q12; O-04 |  |  |
 | E9-Q14 | Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không? | Giữ gate đóng; sau quyết định mới review phạm vi persona, consent/quyền và contract FEAT-047; không xây nhánh gợi ý trước | Toàn bộ gợi ý cá nhân/đọc hồ sơ/thu hoặc suy luận sức khỏe | O-03; FR-NUTR-PROF-001/REC-001 |  |  |
+| E9-Q15 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. XC-05; DEC-201. Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | XC-05; DEC-201 |  |  |
+
+> Chờ E9-Q11, E8-Q05 — XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Chỉ cập nhật khi có phản hồi có nguồn/phạm vi; không đóng câu hỏi vì kiểm tài liệu đạt. E6 CG01/08/05/06, E7 Q-13/E7-Q01–08, E8-Q01–12 giữ CHỜ TRẢ LỜI.

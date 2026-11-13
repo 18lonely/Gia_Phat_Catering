@@ -7,6 +7,7 @@
 | Phạm vi | Toàn hệ thống. Từ điển dữ liệu chi tiết cho các bảng của đợt Now (R1 → R5) và bảng chịu tải cao của R6; các bảng còn lại mới ở mức khung, chi tiết viết ở ERD của epic tương ứng |
 | Phiên bản | 0.5.0 |
 | Trạng thái | Draft |
+| 0.5.1 | 13/11/2026 | BA | XC-01; ACC-CONF-02 |
 | Ngày | 2026-11-11 |
 | Cơ sở dữ liệu | MySQL 8, InnoDB, `utf8mb4` |
 | Tài liệu liên quan | [SRS nền tảng](spec.md) · [PRD](../../gia-phat/01-prd.md) · [Bảng quy tắc thực đơn](../../gia-phat/brainstorms/quy-tac-thuc-don.md) |
@@ -577,7 +578,7 @@ erDiagram
 | Nguyên liệu | ingredient_id | BIGINT UNSIGNED | — | Không | FK → `ingredients.id` | — | — |
 | Nhà cung cấp | supplier_id | BIGINT UNSIGNED | — | Không | FK → `suppliers.id` | — | — |
 | Cơ sở | kitchen_id | BIGINT UNSIGNED | — | Có | FK → `kitchens.id` | Null = áp dụng cả 2 cơ sở | Hai cơ sở có thể mua giá khác nhau |
-| Giá nhập | price_vnd | BIGINT | — | Không | — | > 0; trên 1 `buy_unit` | Có gồm VAT đầu vào hay không: [O-01] |
+| Giá nhập | price_vnd | BIGINT | — | Không | — | > 0; trên 1 `buy_unit` | Giá dùng tính cost gồm VAT phải trả NCC theo [ACC-CONF-02](../../cost/accounting/business-rules.md); XC-01. O-01 vẫn mở về thành phần cost và VAT bán ra |
 | Hiệu lực từ | effective_from | DATE | — | Không | — | — | `BR-COST-004` |
 | Là giá dùng tính cost | is_reference | BOOLEAN | — | Không | — | Mỗi (`ingredient_id`, `kitchen_id`, `effective_from`) có đúng 1 dòng TRUE | Khi một nguyên liệu có nhiều nhà cung cấp |
 | Chứng từ | source_file_id | BIGINT UNSIGNED | — | Có | FK → `files.id` | — | Ảnh chứng từ |

@@ -1,11 +1,11 @@
 ---
 id: DOC-NEN-TANG-TEST-TEST-CASES
 title: Test case E1
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-11
+last_updated: 2026-11-13
 ---
 # Test case E1
 
@@ -13,6 +13,7 @@ last_updated: 2026-11-11
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-12; E1-Q06; Giữ gate E1-Q06 |
 | 0.1.0 | 2026-11-11 | BA | Bổ sung theo kế hoạch; giữ điểm mở và xác nhận đã có |
 
 **Chưa chạy backend.** Actual/evidence mọi ca = chưa có; khi chạy ghi build,môi trường,actor,fixture,requestId,actual,defect/retest. NOT RUN vẫn cần môi trường; BLOCKED cần thêm quyết định được ghi ở ca.
@@ -153,7 +154,7 @@ last_updated: 2026-11-11
 | :--- | :--- | :--- | :--- | :--- |
 | TC-CORE-NFR-001 | NFR-PERF-001 | Kiểm thử tải trên môi trường thử nghiệm có cấu hình bằng vận hành thật; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Với mô hình tải trên: p95 ≤ 300 ms cho API đọc, ≤ 800 ms cho API ghi; tỷ lệ lỗi 5xx ≤ 0,1% | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-002 | NFR-PERF-002 | Đo bằng công cụ kiểm thử trang; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Trang chọn món hiển thị nội dung chính trong ≤ 2,5 giây trên mạng 4G | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
-| TC-CORE-NFR-003 | NFR-PERF-003 | Đo trên 20 yêu cầu mẫu; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Lời gọi AI không chạy trong luồng xử lý yêu cầu web; ký tự đầu tiên ≤ 5 giây, thực đơn tuần hoàn chỉnh ≤ 60 giây | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
+| TC-CORE-NFR-003 | NFR-PERF-003 | Đo trên 20 yêu cầu mẫu; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Lời gọi AI không chạy trong luồng xử lý yêu cầu web; ký tự đầu tiên ≤ 5 giây, thực đơn tuần hoàn chỉnh ≤ 60 giây | BLOCKED: E1-Q06; XC-12; môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-004 | NFR-PERF-004 | Kiểm thử tải kết hợp; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Khi hàng đợi AI đầy, p95 của API chọn món không đổi quá 10% so với lúc hàng đợi rỗng | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-005 | NFR-CAP-001 | Kiểm thử với dữ liệu giả lập 3 năm; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Thiết kế chỉ mục và phân vùng để dữ liệu 3 năm không làm p95 tăng quá 10%. Khối lượng dự kiến tính từ số người ăn/ngày: [Q-18] | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-006 | NFR-SCAL-001 | Chạy 2 và 3 bản, so kết quả; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | API không giữ trạng thái trong bộ nhớ tiến trình; thêm 1 bản API không cần sửa mã | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
@@ -174,3 +175,9 @@ last_updated: 2026-11-11
 | TC-CORE-NFR-021 | NFR-USE-001 | Kiểm thử trên 3 kích thước màn hình; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Giao diện dùng được ở chiều rộng 360 px, không cuộn ngang | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-022 | NFR-USE-002 | Kiểm tra bằng công cụ; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Đạt WCAG 2.1 mức AA: tương phản ≥ 4,5:1, thao tác được bằng bàn phím | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
 | TC-CORE-NFR-023 | NFR-MAINT-001 | Báo cáo kiểm thử; lưu cấu hình môi trường, số mẫu, actual và bằng chứng | Mỗi FR mức P0 có ít nhất 1 kiểm thử tự động; kiểm thử chạy ở mỗi lần gộp mã | BLOCKED: môi trường/O-04 và dữ liệu profile tương ứng |
+
+## Bổ sung gate — XC-12
+
+> Chờ E1-Q06 — XC-12. BLOCKED kết luận đạt phép đo phản hồi đầu E1/E5. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-CORE-NFR-003. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

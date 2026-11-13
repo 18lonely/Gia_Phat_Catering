@@ -1,14 +1,14 @@
 ---
 id: DOC-E11-SRS-DATA-DICTIONARY-MD
 title: Từ điển dữ liệu và delta đề xuất E11
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e11, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Từ điển dữ liệu và delta đề xuất E11
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E11-Q13; XC-09; E11-Q14 |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu E11; giữ câu hỏi chưa có câu trả lời |
 
 ## Đối chiếu schema hiện hành
@@ -44,6 +45,8 @@ Tên physical dưới đây chỉ là đề xuất để review, chưa migration
 | Người/thời điểm | actor_id / recorded_at | Id / Timestamp | Theo E1 | Không khi ghi | FK logic users | Do phiên/server xác định | Audit |
 | Lý do | reason | Text | Theo E1 / chờ Q13 | Không khi sửa số | — | Không ghi đè lịch sử | Căn cứ thay đổi |
 
+> Chờ E11-Q14 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+
 ## Thực thể đề xuất và trường riêng
 
 | Thực thể logic / physical đề xuất | Trường riêng (kiểu; null; khóa/ràng buộc) | Nguồn / sử dụng / gate |
@@ -64,3 +67,9 @@ Tên physical dưới đây chỉ là đề xuất để review, chưa migration
 
 
 Mọi độ dài/precision chưa có nguồn đều chờ E11-Q13, không tự lấy từ mẫu. Giữ nguyên invoiceRequested riêng và khoản chiết khấu theo đơn ở E3/E6; không sao chép hồ sơ sức khỏe. Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu cầu hóa đơn độc lập, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn, không giảm phải trả nhà cung cấp và không tự khấu trừ số khách phải trả. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-02/R11 dùng ≤ 3 điểm phần trăm, không phải sai số tính toán. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chặn O-03, không thu dữ liệu sức khỏe.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

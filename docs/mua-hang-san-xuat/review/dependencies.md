@@ -1,14 +1,14 @@
 ---
 id: DOC-E11-REVIEW-DEPENDENCIES-MD
 title: Phụ thuộc E11 và ranh giới chưa chốt
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e11, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Phụ thuộc E11 và ranh giới chưa chốt
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-11; E7-Q07 |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu E11; giữ câu hỏi chưa có câu trả lời |
 
 | Nguồn | Điểm nối | Giới hạn |
@@ -25,6 +26,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | E6 | Kế hoạch theo cơ sở/ngày/ca/món và revision | CG01–14, ORD-Q01–15, E6-EVID-001/002 giữ nguyên. Không thiết kế build/publish/ack/start hay sửa order thay E6; chỉ báo thiếu nguồn |
 | E7 | Điểm nối kiểm trước giao, số giao/nhận và căn cứ doanh thu | Q-13/E7-Q01–08 chưa chốt; QC không là nhận hàng của khách, công nợ NCC không là phải thu khách; không tự lấy doanh thu làm mẫu số BO-02 |
 | E1 | Quyền theo cơ sở, audit, files, approvals; DBML 65 bảng | E1-Q01–05/O-06 giữ mở; file MIME JPG/PNG/WEBP/PDF ≤ 10 MB, signed link 15 phút theo nguồn; chính sách ảnh E11-Q05 chưa chọn |
+
+> Chờ E7-Q07 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-11](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Nguồn đọc: [E2](../../thuc-don-dinh-luong/srs/spec.md), [E3](../../cost/srs/spec.md), [kế toán](../../cost/accounting/business-rules.md), [PriceInput](../../cost/api/api-spec.md), [E6](../../chon-mon-order/srs/spec.md), [CG](../../chon-mon-order/review/contract-gap-register.md), [E7](../../giao-nhan-doanh-thu/srs/spec.md), [E1](../../nen-tang/srs/spec.md), [ERD](../../nen-tang/srs/erd.md), [DBML](../../nen-tang/srs/schema.dbml).
 

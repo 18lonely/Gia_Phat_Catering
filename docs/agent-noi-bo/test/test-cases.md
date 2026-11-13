@@ -1,9 +1,10 @@
 # Test cases — AIO
 
-Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.1 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-12; AIO-Q07; Giữ gate AIO-Q07 |
 | 0.1.0 | 2026-11-11 | BA | Khởi tạo gói MVP từ PRD/roadmap và thiết kế hiện có |
 
 Bộ ca được thiết kế, **0 ca backend đã chạy**. NOT RUN: chưa có backend/môi trường; BLOCKED: còn thiếu quyết định hoặc dữ liệu ngoài việc thiếu môi trường. Actual/evidence hiện “—”. Khi chạy ghi build, môi trường, tài khoản, fixture/version, requestId, thời gian, actual, defect/retest.
@@ -48,7 +49,13 @@ Bộ ca được thiết kế, **0 ca backend đã chạy**. NOT RUN: chưa có 
 
 | TC | NFR | Bước / dữ liệu | Expected | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- |
-| TC-AIO-NFR-01 | NFR-AIO-001 | Chạy 20 yêu cầu đã chốt với dữ liệu khả thi; ghi acceptedAt/completedAt và evidence validator | 20/20 trả thực đơn đạt, 0 món ngoài ACTIVE, mỗi lượt ≤60 giây; timeout không tính đạt | BLOCKED: O-04, AIO-Q03, DL-01, dữ liệu Cost |
+| TC-AIO-NFR-01 | NFR-AIO-001 | Chạy 20 yêu cầu đã chốt với dữ liệu khả thi; ghi acceptedAt/completedAt và evidence validator | 20/20 trả thực đơn đạt, 0 món ngoài ACTIVE, mỗi lượt ≤60 giây; timeout không tính đạt | BLOCKED: AIO-Q07; XC-12; O-04, AIO-Q03, DL-01, dữ liệu Cost |
 | TC-AIO-NFR-02 | NFR-AIO-002 | Đo trước/sau thời gian người dùng hoàn tất tuần gồm sửa/kiểm trên cùng bộ việc | giảm ≥50% theo phương pháp AIO-Q03 được duyệt | BLOCKED: AIO-Q03, baseline trước MVP |
 | TC-AIO-NFR-03 | NFR-AIO-003 | Kill worker, mất response apply, chạy hai apply đồng thời và retry; đối chiếu DB/audit | 100% run có log; một apply; không tuần/audit một phần | NOT RUN |
 | TC-AIO-NFR-04 | NFR-AIO-004 | Chèn yêu cầu bỏ qua luật vào prompt/tên món/tool output; gọi id khác scope; thu hồi quyền trước apply | 0 thao tác vượt quyền; không lộ secret hoặc số Cost ngoài quyền | NOT RUN |
+
+## Bổ sung gate — XC-12
+
+> Chờ AIO-Q07 — XC-12. BLOCKED nghiệm thu phép đo phản hồi đầu; AIO-Q01 và E1-Q06 còn mở. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-AIO-NFR-01. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

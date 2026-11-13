@@ -1,13 +1,18 @@
 ---
 id: DOC-E8-TEST-TEST-CASES-MD
 title: Ca kiểm thử E8
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Ca kiểm thử E8
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E8-Q13; Giữ gate E8-Q13 |
+
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -33,10 +38,10 @@ Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 ba
 | TC-PUB-006-H | AC-PUB-006-H | FR-PUB-TRY-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-04. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-006 / thao tác Dựng thử thực đơn tuần. 4. Đối chiếu response, UI và read-back nếu ghi. | Khi policy có căn cứ, kết quả tuần mẫu đúng đầu vào và mang nhãn mẫu, chưa đặt hàng | BLOCKED |  |  |
 | TC-PUB-006-E | AC-PUB-006-E | FR-PUB-TRY-001 | đầu vào hoặc quyền không hợp lệ như tình huống dưới; fixture synthetic | 1. Mở UI-PUB-04. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-006 / thao tác Dựng thử thực đơn tuần. 4. Đối chiếu response, UI và read-back nếu ghi. | Số âm/lẻ bị từ chối; tổ hợp vô nghiệm không nới quy tắc cứng; chưa chốt engine trả BLOCKED | NOT RUN |  |  |
 | TC-PUB-006-B | AC-PUB-006-B | FR-PUB-TRY-001 | chưa có quyết định E8-Q05/04; fixture synthetic | 1. Mở UI-PUB-04. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-006 / thao tác thực hiện nhánh phụ thuộc. 4. Đối chiếu response, UI và read-back nếu ghi. | Giữ BLOCKED E8-Q05/04; không ghi/công bố hoặc bịa dữ liệu phụ thuộc | NOT RUN |  |  |
-| TC-PUB-007-H | AC-PUB-007-H | FR-PUB-LEAD-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-05. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-007 / thao tác Gửi form tư vấn. 4. Đối chiếu response, UI và read-back nếu ghi. | Với policy đã duyệt, form hợp lệ tạo một bản ghi kèm source và trialRef hợp lệ nếu có | BLOCKED |  |  |
+| TC-PUB-007-H | AC-PUB-007-H | FR-PUB-LEAD-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-05. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-007 / thao tác Gửi form tư vấn. 4. Đối chiếu response, UI và read-back nếu ghi. | Với policy đã duyệt, form hợp lệ tạo một bản ghi kèm source và trialRef hợp lệ nếu có; chờ E8-Q13; XC-05 | BLOCKED |  |  |
 | TC-PUB-007-E | AC-PUB-007-E | FR-PUB-LEAD-001 | đầu vào hoặc quyền không hợp lệ như tình huống dưới; fixture synthetic | 1. Mở UI-PUB-05. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-007 / thao tác Gửi form tư vấn. 4. Đối chiếu response, UI và read-back nếu ghi. | Không consent thì không ghi; mất phản hồi không gửi lại bằng định danh mới; chưa chọn nơi lưu thì BLOCKED | NOT RUN |  |  |
 | TC-PUB-007-B | AC-PUB-007-B | FR-PUB-LEAD-001 | chưa có quyết định E8-Q06/07; fixture synthetic | 1. Mở UI-PUB-05. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-007 / thao tác thực hiện nhánh phụ thuộc. 4. Đối chiếu response, UI và read-back nếu ghi. | Giữ BLOCKED E8-Q06/07; không ghi/công bố hoặc bịa dữ liệu phụ thuộc | NOT RUN |  |  |
-| TC-PUB-008-H | AC-PUB-008-H | FR-PUB-RELY-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-08. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-008 / thao tác Theo dõi điểm nối lead. 4. Đối chiếu response, UI và read-back nếu ghi. | Bản ghi đã lưu nhưng chưa receipt hiển thị chờ E10; giữ source/trialRef | BLOCKED |  |  |
+| TC-PUB-008-H | AC-PUB-008-H | FR-PUB-RELY-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-08. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-008 / thao tác Theo dõi điểm nối lead. 4. Đối chiếu response, UI và read-back nếu ghi. | Bản ghi đã lưu nhưng chưa receipt hiển thị chờ E10; giữ source/trialRef; chờ E8-Q13; XC-05 | BLOCKED |  |  |
 | TC-PUB-008-E | AC-PUB-008-E | FR-PUB-RELY-001 | đầu vào hoặc quyền không hợp lệ như tình huống dưới; fixture synthetic | 1. Mở UI-PUB-08. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-008 / thao tác Theo dõi điểm nối lead. 4. Đối chiếu response, UI và read-back nếu ghi. | CRM không khả dụng không mất lead và không báo đã đồng bộ; GET không gửi thông báo hay bàn giao | NOT RUN |  |  |
 | TC-PUB-008-B | AC-PUB-008-B | FR-PUB-RELY-001 | chưa có quyết định E8-Q06/07/11; fixture synthetic | 1. Mở UI-PUB-08. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-008 / thao tác thực hiện nhánh phụ thuộc. 4. Đối chiếu response, UI và read-back nếu ghi. | Giữ BLOCKED E8-Q06/07/11; không ghi/công bố hoặc bịa dữ liệu phụ thuộc | NOT RUN |  |  |
 | TC-PUB-009-H | AC-PUB-009-H | FR-PUB-EDIT-001 | nguồn hợp lệ và policy liên quan đã được xác nhận; fixture synthetic | 1. Mở UI-PUB-06. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-009 / thao tác Soạn và sửa nội dung. 4. Đối chiếu response, UI và read-back nếu ghi. | Bản nháp hợp lệ lưu revision, bản công khai cũ giữ nguyên | BLOCKED |  |  |
@@ -52,3 +57,9 @@ Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 ba
 | TC-PUB-012-E | AC-PUB-012-E | FR-PUB-MEDI-001 | đầu vào hoặc quyền không hợp lệ như tình huống dưới; fixture synthetic | 1. Mở UI-PUB-09. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-012 / thao tác Quản lý ảnh và banner. 4. Đối chiếu response, UI và read-back nếu ghi. | File private/không an toàn không vào public; ảnh đang dùng không bị gỡ âm thầm | NOT RUN |  |  |
 | TC-PUB-012-B | AC-PUB-012-B | FR-PUB-MEDI-001 | chưa có quyết định E8-Q09/08; fixture synthetic | 1. Mở UI-PUB-09. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-012 / thao tác thực hiện nhánh phụ thuộc. 4. Đối chiếu response, UI và read-back nếu ghi. | Giữ BLOCKED E8-Q09/08; không ghi/công bố hoặc bịa dữ liệu phụ thuộc | NOT RUN |  |  |
 
+
+## Bổ sung gate — XC-05
+
+> Chờ E8-Q13 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-PUB-007-H, TC-PUB-007-E, TC-PUB-007-B, TC-PUB-008-H, TC-PUB-008-E. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

@@ -1,0 +1,987 @@
+[
+  {
+    "old": "DEC-01",
+    "current": "DEC-01",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-02",
+    "current": "DEC-02",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-03",
+    "current": "DEC-03",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-04",
+    "current": "DEC-04",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-05",
+    "current": "DEC-05",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-06",
+    "current": "DEC-06",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-07",
+    "current": "DEC-07",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-08",
+    "current": "DEC-08",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-09",
+    "current": "DEC-09",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-10",
+    "current": "DEC-10",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-11",
+    "current": "DEC-11",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-12",
+    "current": "DEC-12",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-13",
+    "current": "DEC-13",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-14",
+    "current": "DEC-14",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-15",
+    "current": "DEC-15",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-16",
+    "current": "DEC-16",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-17",
+    "current": "DEC-17",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-18",
+    "current": "DEC-18",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-19",
+    "current": "DEC-19",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-20",
+    "current": "DEC-20",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-21",
+    "current": "DEC-21",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-22",
+    "current": "DEC-22",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-23",
+    "current": "DEC-23",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-24",
+    "current": "DEC-24",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-25",
+    "current": "DEC-25",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-26",
+    "current": "DEC-26",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-27",
+    "current": "DEC-27",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-28",
+    "current": "DEC-28",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-29",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-30",
+    "current": "DEC-30",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-31",
+    "current": "DEC-31",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-32",
+    "current": "DEC-32",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-33",
+    "current": "DEC-33",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-34",
+    "current": "DEC-34",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-35",
+    "current": "DEC-35",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-36",
+    "current": "DEC-36",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-37",
+    "current": "DEC-37",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-38",
+    "current": "DEC-38",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-39",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-40",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-41",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-42",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-43",
+    "current": "DEC-43",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-44",
+    "current": "DEC-27",
+    "reason": "Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con."
+  },
+  {
+    "old": "DEC-45",
+    "current": "DEC-45",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-46",
+    "current": "DEC-46",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-47",
+    "current": "DEC-47",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-48",
+    "current": "DEC-48",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-49",
+    "current": "DEC-49",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-50",
+    "current": "DEC-50",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-51",
+    "current": "DEC-51",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-52",
+    "current": "DEC-52",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-53",
+    "current": "DEC-53",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-54",
+    "current": "DEC-54",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-55",
+    "current": "DEC-55",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-56",
+    "current": "DEC-56",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-57",
+    "current": "DEC-57",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-58",
+    "current": "DEC-58",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-59",
+    "current": "DEC-59",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-60",
+    "current": "DEC-60",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-61",
+    "current": "DEC-61",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-62",
+    "current": "DEC-62",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-63",
+    "current": "DEC-63",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-64",
+    "current": "DEC-64",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-65",
+    "current": "DEC-65",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-66",
+    "current": "DEC-66",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-67",
+    "current": "DEC-67",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-68",
+    "current": "DEC-68",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-69",
+    "current": "DEC-69",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-70",
+    "current": "DEC-70",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-71",
+    "current": "DEC-71",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-72",
+    "current": "DEC-72",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-73",
+    "current": "DEC-73",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-74",
+    "current": "DEC-74",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-75",
+    "current": "DEC-75",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-76",
+    "current": "DEC-76",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-77",
+    "current": "DEC-77",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-78",
+    "current": "DEC-78",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-79",
+    "current": "DEC-79",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-80",
+    "current": "DEC-80",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-81",
+    "current": "DEC-81",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-82",
+    "current": "DEC-82",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-83",
+    "current": "DEC-83",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-84",
+    "current": "DEC-84",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-85",
+    "current": "DEC-85",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-86",
+    "current": "DEC-86",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-87",
+    "current": "DEC-87",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-88",
+    "current": "DEC-88",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-89",
+    "current": "DEC-89",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-90",
+    "current": "DEC-90",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-91",
+    "current": "DEC-91",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-92",
+    "current": "DEC-92",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-93",
+    "current": "DEC-93",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-94",
+    "current": "DEC-94",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-95",
+    "current": "DEC-95",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-96",
+    "current": "DEC-96",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-97",
+    "current": "DEC-97",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-98",
+    "current": "DEC-98",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-99",
+    "current": "DEC-99",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-100",
+    "current": "DEC-100",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-101",
+    "current": "DEC-101",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-102",
+    "current": "DEC-102",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-103",
+    "current": "DEC-103",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-104",
+    "current": "DEC-104",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-105",
+    "current": "DEC-105",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-106",
+    "current": "DEC-106",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-107",
+    "current": "DEC-107",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-108",
+    "current": "DEC-108",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-109",
+    "current": "DEC-109",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-110",
+    "current": "DEC-110",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-111",
+    "current": "DEC-111",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-112",
+    "current": "DEC-112",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-113",
+    "current": "DEC-113",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-114",
+    "current": "DEC-114",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-115",
+    "current": "DEC-115",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-116",
+    "current": "DEC-116",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-117",
+    "current": "DEC-117",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-118",
+    "current": "DEC-118",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-119",
+    "current": "DEC-119",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-120",
+    "current": "DEC-120",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-121",
+    "current": "DEC-121",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-122",
+    "current": "DEC-122",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-123",
+    "current": "DEC-123",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-124",
+    "current": "DEC-124",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-125",
+    "current": "DEC-125",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-126",
+    "current": "DEC-126",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-127",
+    "current": "DEC-127",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-128",
+    "current": "DEC-128",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-129",
+    "current": "DEC-129",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-130",
+    "current": "DEC-130",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-131",
+    "current": "DEC-131",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-132",
+    "current": "DEC-132",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-133",
+    "current": "DEC-133",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-134",
+    "current": "DEC-134",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-135",
+    "current": "DEC-135",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-136",
+    "current": "DEC-136",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-137",
+    "current": "DEC-137",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-138",
+    "current": "DEC-138",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-139",
+    "current": "DEC-139",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-140",
+    "current": "DEC-140",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-141",
+    "current": "DEC-141",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-142",
+    "current": "DEC-142",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-143",
+    "current": "DEC-143",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-144",
+    "current": "DEC-144",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-145",
+    "current": "DEC-145",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-146",
+    "current": "DEC-146",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-147",
+    "current": "DEC-147",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-148",
+    "current": "DEC-148",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-149",
+    "current": "DEC-149",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-150",
+    "current": "DEC-150",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-151",
+    "current": "DEC-151",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-152",
+    "current": "DEC-152",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-153",
+    "current": "DEC-153",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-154",
+    "current": "DEC-154",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-155",
+    "current": "DEC-155",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-156",
+    "current": "DEC-156",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-157",
+    "current": "DEC-157",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-158",
+    "current": "DEC-158",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-159",
+    "current": "DEC-159",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-160",
+    "current": "DEC-160",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-161",
+    "current": "DEC-161",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-162",
+    "current": "DEC-162",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-163",
+    "current": "DEC-163",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-164",
+    "current": "DEC-164",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-165",
+    "current": "DEC-165",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-166",
+    "current": "DEC-166",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-167",
+    "current": "DEC-167",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-168",
+    "current": "DEC-168",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-169",
+    "current": "DEC-169",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-170",
+    "current": "DEC-170",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-171",
+    "current": "DEC-171",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-172",
+    "current": "DEC-172",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-173",
+    "current": "DEC-173",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-174",
+    "current": "DEC-174",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-175",
+    "current": "DEC-175",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-176",
+    "current": "DEC-176",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-177",
+    "current": "DEC-177",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-178",
+    "current": "DEC-178",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-179",
+    "current": "DEC-179",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-180",
+    "current": "DEC-180",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-181",
+    "current": "DEC-181",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-182",
+    "current": "DEC-182",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-183",
+    "current": "DEC-183",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-184",
+    "current": "DEC-184",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-185",
+    "current": "DEC-185",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-186",
+    "current": "DEC-186",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-187",
+    "current": "DEC-187",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-188",
+    "current": "DEC-188",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-189",
+    "current": "DEC-189",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-190",
+    "current": "DEC-190",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-191",
+    "current": "DEC-191",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-192",
+    "current": "DEC-192",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-193",
+    "current": "DEC-193",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-194",
+    "current": "DEC-194",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-195",
+    "current": "DEC-195",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-196",
+    "current": "DEC-196",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  },
+  {
+    "old": "DEC-197",
+    "current": "DEC-197",
+    "reason": "Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác."
+  }
+]

@@ -1,13 +1,18 @@
 ---
 id: DOC-E9-TEST-TRACEABILITY-MD
 title: RTM E9
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # RTM E9
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E9-Q15 |
+
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -28,3 +33,13 @@ Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; kh�
 | FEAT-064 | FR-AIN-LOG-001 | UC-AIN-013 | US-AIN-013 | AC-AIN-013-01→03 | API-AIN-013 | UI-AIN-05 | TC-AIN-013-01→03 |
 
 FR-AIN-CONF-001 còn API-AIN-014 GET cấu hình. FR-AIN-SEND-001 còn PORT-AIN-HANDOFF cho điểm nhận tối thiểu. Tất cả mã UC/story/AC/test tương ứng trong [UC](../usecases/index.md), [backlog](../userstories/backlog.md), [AC](../userstories/acceptance-criteria.md), [ca](test-cases.md), [catalog](../api/endpoint-catalog.json), [UI](../ui/screens.md). FEAT-063 dòng riêng chỉ gate an toàn, không đóng góp 5 feature có thiết kế. BR/NFR test chéo tại [ca hệ thống](system-cases.md); không cộng overlap thành mục tiêu nghiệm thu độc lập.
+
+## Bổ sung gate — XC-05
+
+> Chờ E9-Q15 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Phép đo/tích hợp này chưa có ca độc lập được xác nhận; cần truy vết sau quyết định. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
+
+| Câu hỏi bổ sung | Ca phụ thuộc | Trạng thái | Căn cứ |
+| :--- | :--- | :--- | :--- |
+| E9-Q15 | TC-AIN-006-01, TC-AIN-007-01 | BLOCKED (giữ từ trước; bổ sung gate) | XC-05; [sổ câu hỏi](../review/questions.md) |

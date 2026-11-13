@@ -1,7 +1,7 @@
 ---
 id: DOC-DECISION-PACK-GROUPS
 title: Nhóm quyết định và phương án nguồn
-version: 0.1.0
+version: 0.1.1
 phase: Review
 domain: Gia Phát
 tags: [decision-pack, draft, review]
@@ -16,19 +16,22 @@ Nháp · 13/11/2026 · Chuẩn bị quyết định, chưa phê duyệt.
 
 | Phiên bản | Ngày | Vai trò | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | DEC-27 gộp cùng bản quy tắc; BA-Q và câu mới |
 | 0.1.0 | 13/11/2026 | BA | Hợp nhất nguồn để review; giữ câu mở |
 
-Nhóm chỉ gom phần quyết định chung. Câu nhiều nhánh vẫn phải được ký theo phạm vi từng mã; đồng ý một phần không đóng cả nhóm. Mỗi mục có câu tổng hợp, mã nguồn, vai trò và release. Phương án và tác động dưới đây trích nguồn, không tự bổ sung đánh đổi. Nếu nguồn không tách tác động từng phương án, ghi “chưa rõ”; không suy diễn.
+197 nhóm lịch sử được rà theo người quyết định và phạm vi ký. Gộp 6 nhóm vào DEC-27 vì cùng bản quy tắc và Người soạn docx; tách 18 câu khỏi các nhóm chủ đề cũ vì khác phạm vi hoặc chưa chứng minh cùng thẩm quyền. Còn 209 nhóm cho 219 câu gốc; thêm 5 câu epic thành **214 nhóm / 224 câu nguồn**. Không gộp để đạt 60–90 khi một chữ ký chưa trả lời được các câu độc lập.
 
-Không gộp cost % E3, mẫu số BO-02 E11, cost % theo khách E12 và lợi nhuận E13 thành một công thức. Không gộp consent nhật ký FEAT-087 với consent sức khỏe O-03. MISA là câu E7-Q07; E11 và E13 không có câu riêng về MISA để gộp.
+DEC-04 là một quyết định cỡ định lượng; DEC-05 là một định nghĩa cost/VAT đầy đủ của Kế toán; DEC-06 là một contract envelope do Tech lead và BA review, với vai trò API owner ghi ở nguồn E6. DEC-27 cần một bản quy tắc có phiên bản, điền đủ từng trường được hỏi. Các nhóm còn lại giữ một câu nguồn; câu nhiều nhánh phải có bằng chứng trả lời đủ phạm vi trước khi đóng.
+
+Không gộp cost E3, BO-02 E11, cost theo khách E12 và lợi nhuận E13. Không gộp đồng ý nhật ký với O-03; không mở thêm MISA ngoài E7.
 
 <a id="dec-01"></a>
 
-## DEC-01 — Phạm vi sức khỏe và điều kiện mở gợi ý cá nhân
+## DEC-01 — Gợi ý cá nhân có xét bệnh lý không
 
-Cần quyết định: Phạm vi sức khỏe và điều kiện mở gợi ý cá nhân?
+Cần quyết định: Gợi ý cá nhân có xét bệnh lý không?
 
-Mã nguồn: O-03, ORD-Q15, E9-Q14. Người quyết định: Giám đốc; Chủ sản phẩm, phụ trách dữ liệu; chưa rõ. Release: R6, R9. [Buổi 1](meeting-agenda.md#buoi-1).
+Mã nguồn: O-03. Người quyết định: Giám đốc. Release: R6, R9. [Buổi 1](meeting-agenda.md#buoi-1).
 
 ### O-03
 
@@ -42,61 +45,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### ORD-Q15
-
-[Nguồn, dòng 41](../../../chon-mon-order/review/questions.md#L41). Nội dung đầy đủ:
-
-> Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E9-Q14
-
-[Nguồn, dòng 31](../../../agent-dinh-duong-vien/review/questions.md#L31). Nội dung đầy đủ:
-
-> Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
-
-Phương án khuyến nghị đã có:
-
-> Giữ gate đóng; sau quyết định mới review phạm vi persona, consent/quyền và contract FEAT-047; không xây nhánh gợi ý trước
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Toàn bộ gợi ý cá nhân/đọc hồ sơ/thu hoặc suy luận sức khỏe
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-02"></a>
 
-## DEC-02 — Nguồn lực, hạ tầng và cấu hình ngân sách AI
+## DEC-02 — Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách
 
-Cần quyết định: Nguồn lực, hạ tầng và cấu hình ngân sách AI?
+Cần quyết định: Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách?
 
-Mã nguồn: O-04, AIO-Q01, E9-Q01. Người quyết định: Giám đốc; Giám đốc, Tech lead; chưa rõ. Release: R1, R5, R9. [Buổi 1](meeting-agenda.md#buoi-1).
+Mã nguồn: O-04. Người quyết định: Giám đốc. Release: R1, R5. [Buổi 1](meeting-agenda.md#buoi-1).
 
 ### O-04
 
@@ -110,61 +73,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### AIO-Q01
-
-[Nguồn, dòng 13](../../../agent-noi-bo/review/questions.md#L13). Nội dung đầy đủ:
-
-> Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> O-04; không có mặc định ngân sách được duyệt
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E9-Q01
-
-[Nguồn, dòng 18](../../../agent-dinh-duong-vien/review/questions.md#L18). Nội dung đầy đủ:
-
-> O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
-
-Phương án khuyến nghị đã có:
-
-> So sánh phương án tự quản lý hoặc dịch vụ sau đánh giá dữ liệu; chưa chọn provider/model
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Toàn bộ gọi AI thật, cấu hình chi phí, release R9
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-03"></a>
 
-## DEC-03 — Người duyệt ngoại lệ và cơ chế thay thế
+## DEC-03 — Ai duyệt ngoại lệ và ai thay khi vắng
 
-Cần quyết định: Người duyệt ngoại lệ và cơ chế thay thế?
+Cần quyết định: Ai duyệt ngoại lệ và ai thay khi vắng?
 
-Mã nguồn: O-06, E11-Q02, E13-Q10, E10-Q03, CK-Q04. Người quyết định: Giám đốc; chưa rõ; Giám đốc và chủ dữ liệu khách; Giám đốc, kế toán. Release: R1, R11, R13, R10, R3. [Buổi 1](meeting-agenda.md#buoi-1).
+Mã nguồn: O-06. Người quyết định: Giám đốc. Release: R1. [Buổi 1](meeting-agenda.md#buoi-1).
 
 ### O-06
 
@@ -178,93 +101,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E11-Q02
-
-[Nguồn, dòng 26](../../../mua-hang-san-xuat/review/questions.md#L26). Nội dung đầy đủ:
-
-> Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
-
-Phương án khuyến nghị đã có:
-
-> Dùng tách tạo/duyệt của E1; chưa gán vai trò duyệt hoặc hạn mức.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Đơn mua chỉ nháp; phát hành và sửa đơn đã duyệt BLOCKED; O-06 giữ mở.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E13-Q10
-
-[Nguồn, dòng 34](../../../chi-phi-loi-nhuan/review/questions.md#L34). Nội dung đầy đủ:
-
-> Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
-
-Phương án khuyến nghị đã có:
-
-> Bút toán riêng gắn bản gốc, lý do và người duyệt khác người lập/sửa cuối; không mở khóa tại E13.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Ghi nhận điều chỉnh chính thức; O-06; FR-EXP-ADJ-001.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E10-Q03
-
-[Nguồn, dòng 27](../../../crm-ban-hang/review/questions.md#L27). Nội dung đầy đủ:
-
-> Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
-
-Phương án khuyến nghị đã có:
-
-> Người duyệt khác người lập/sửa cuối; quyền gộp và hoàn tác riêng.
-
-Phương án khác đã có:
-
-> Hội đồng review từng đợt dữ liệu trước khi giao quyền vận hành.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> FR-CUS-DUP-001 / UC-CRM-004; FR-CUS-MRG-001 / UC-CRM-005; FR-CUS-UNDO-001 / UC-CRM-006
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### CK-Q04
-
-[Nguồn, dòng 94](../../../cost/accounting/business-rules.md#L94). Nội dung đầy đủ:
-
-> Ai được lập/sửa khoản chiết khấu? Ai được duyệt; có phân cấp theo số tiền hoặc tỷ lệ không? Người lập có được tự duyệt không, ai thay khi người duyệt vắng?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-04"></a>
 
@@ -286,19 +129,19 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 ### H-9
 
 [Nguồn, dòng 128](../../brainstorms/quy-tac-thuc-don.md#L128). Nội dung đầy đủ:
 
-> Bảng định lượng hiện chỉ có 23 dòng cho mức 40k. Khi dinh dưỡng viên tạo loại suất giá khác, định lượng giữ nguyên theo món (giá suất khác nhau do số món khác nhau), hay cùng một món có nhiều cỡ định lượng với giá khác nhau?
+> Bảng định lượng hiện chỉ có 23 dòng cho mức 40k. Khi dinh dưỡng viên tạo loại suất giá khác, định lượng **giữ nguyên theo món** (giá suất khác nhau do số món khác nhau), hay cùng một món có **nhiều cỡ định lượng** với giá khác nhau?
 
 Phương án khuyến nghị đã có:
 
@@ -306,13 +149,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-05"></a>
 
@@ -334,13 +177,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 ### H-6
 
@@ -354,13 +197,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 ### H-7
 
@@ -374,13 +217,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-06"></a>
 
@@ -392,7 +235,7 @@ Mã nguồn: E1-Q01, E6-CG-09. Người quyết định: Tech lead, BA; Tech lea
 
 ### E1-Q01
 
-[Nguồn, dòng 22](../../../nen-tang/review/questions.md#L22). Nội dung đầy đủ:
+[Nguồn, dòng 23](../../../nen-tang/review/questions.md#L23). Nội dung đầy đủ:
 
 > Thống nhất envelope lỗi và page/cursor giữa E1 và E3/E4/E5 thế nào?
 
@@ -402,13 +245,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 ### E6-CG-09
 
@@ -424,19 +267,19 @@ Phương án khác đã có:
 
 > Giữ DTO trực tiếp của E6: ít thay đổi hơn nhưng client phải xử lý nhiều envelope. Thống nhất E6 theo E1 tác động toàn bộ consumer/test nháp E6, nên chỉ triển khai sau review version.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > API owner review ví dụ success/list/error và mapping từng miền, chọn version/chuyển đổi. Chưa sửa 26route hoặc DTO hiện hành; không áp template skill thay E1-Q01.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-07"></a>
 
-## DEC-07 — Xác minh người ăn và binding danh tính
+## DEC-07 — Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?
 
-Cần quyết định: Xác minh người ăn và binding danh tính?
+Cần quyết định: Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?
 
-Mã nguồn: ORD-Q01, E6-CG-01. Người quyết định: Gia Phát, BA; BA, phụ trách khách, Tech lead/Auth. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+Mã nguồn: ORD-Q01. Người quyết định: Gia Phát, BA. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
 
 ### ORD-Q01
 
@@ -450,41 +293,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E6-CG-01
-
-[Nguồn, dòng 7](../../../chon-mon-order/review/contract-gap-register.md#L7). Nội dung đầy đủ:
-
-> Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách
-
-Phương án khuyến nghị đã có:
-
-> Dùng một định danh thành viên nội bộ ổn định gắn danh sách đã được quản lý xác nhận; account và guest nếu được hỗ trợ cùng tham chiếu thành viên đó. Quản lý xác nhận đúng người trước khi cấp liên kết/mã kích hoạt dùng một lần; QR tại điểm chỉ dẫn vào luồng, không tự chứng minh danh tính. Khôi phục/thu hồi phải kiểm lại người nhận và lưu audit. Không dùng mã nhân viên công khai làm mật khẩu.
-
-Phương án khác đã có:
-
-> OTP qua số điện thoại đã xác minh: thuận tiện khôi phục nhưng cần chất lượng dữ liệu số điện thoại và dịch vụ gửi.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Một người đổi điện thoại vẫn nối về cùng thành viên, không tự sinh người ăn mới; không gộp hai người chỉ vì trùng tên. Ưu điểm: tận dụng danh sách hiện có, chưa đòi số điện thoại cho tất cả. Đánh đổi: quản lý phải bàn giao mã riêng đúng người; không có kênh bàn giao an toàn thì chưa kích hoạt.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-08"></a>
 
-## DEC-08 — Scope người đặt tổng một hoặc nhiều khách
+## DEC-08 — Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?
 
-Cần quyết định: Scope người đặt tổng một hoặc nhiều khách?
+Cần quyết định: Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?
 
-Mã nguồn: ORD-Q11, E6-CG-02. Người quyết định: Gia Phát, Tech lead; Chủ sản phẩm, BA, Tech lead. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+Mã nguồn: ORD-Q11. Người quyết định: Gia Phát, Tech lead. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
 
 ### ORD-Q11
 
@@ -498,41 +321,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E6-CG-02
-
-[Nguồn, dòng 8](../../../chon-mon-order/review/contract-gap-register.md#L8). Nội dung đầy đủ:
-
-> Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-09"></a>
 
-## DEC-09 — Nguồn định lượng sống, phần ăn được và hao hụt
+## DEC-09 — Định lượng sống đã gồm xương, vỏ chưa
 
-Cần quyết định: Nguồn định lượng sống, phần ăn được và hao hụt?
+Cần quyết định: Định lượng sống đã gồm xương, vỏ chưa?
 
-Mã nguồn: E3-Q2, NUTR-Q02. Người quyết định: Người soạn docx, bếp trưởng; Dinh dưỡng viên, bếp trưởng. Release: R3, R4. [Buổi 3](meeting-agenda.md#buoi-3).
+Mã nguồn: E3-Q2. Người quyết định: Người soạn docx, bếp trưởng. Release: R3. [Buổi 3](meeting-agenda.md#buoi-3).
 
 ### E3-Q2
 
@@ -546,61 +349,21 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Áp hai lần sẽ tăng lượng mua sai; tắt hao hụt khi định lượng đã bao gồm phần bỏ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### NUTR-Q02
-
-[Nguồn, dòng 14](../../../dinh-duong/review/questions.md#L14). Nội dung đầy đủ:
-
-> qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> FR-NUTR-CALC-001; công thức khung kế thừa ERD, chưa nghiệm thu dữ liệu
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-10"></a>
 
-## DEC-10 — Chính sách hạn chốt và xử lý nguồn sau hạn
+## DEC-10 — Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?
 
-Cần quyết định: Chính sách hạn chốt và xử lý nguồn sau hạn?
+Cần quyết định: Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?
 
-Mã nguồn: Q-16, ORD-Q08, E6-CG-05. Người quyết định: chưa rõ; Giám đốc, bếp trưởng; Vận hành, người duyệt được chỉ định, BA. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
-
-### Q-16
-
-[Nguồn, dòng 423](../../00-ke-hoach-tong-the.md#L423). Nội dung đầy đủ:
-
-> Hạn chốt ca trưa 15:00 ngày D-1 và ngưỡng đổi sau chốt (5% / 10 suất / trước 06:00) có đúng thực tế không? Ngưỡng là "nhỏ hơn trong hai" hay "lớn hơn trong hai"?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Mã nguồn: ORD-Q08. Người quyết định: Giám đốc, bếp trưởng. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
 
 ### ORD-Q08
 
@@ -614,41 +377,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E6-CG-05
-
-[Nguồn, dòng 11](../../../chon-mon-order/review/contract-gap-register.md#L11). Nội dung đầy đủ:
-
-> Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06
-
-Phương án khuyến nghị đã có:
-
-> Đề xuất lệnh chọn/chốt chỉ hợp lệ khi thời điểm kiểm hạn trong transaction theo đồng hồ server nhỏ hơn deadline hiệu lực; đúng deadline thuộc sau hạn. Thiếu nguồn/counter lệch thì giữ trạng thái cũ và NEEDS_ATTENTION. Vận hành lập yêu cầu xử lý nguồn; người duyệt được chỉ định, khác người tạo/sửa cuối, quyết định ngoại lệ. Retry kỹ thuật không gia hạn.
-
-Phương án khác đã có:
-
-> Xét thời điểm nhận request có bằng chứng đáng tin: thân thiện hơn với độ trễ nhưng cần contract queue/clock và xử lý request tồn đọng.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Hạn 15:00 chỉ là ví dụ: request tới trước nhưng tới bước kiểm hạn lúc 15:00 không được coi hợp lệ chỉ nhờ giờ gửi. Chọn quy tắc rõ để kiểm race; đánh đổi: người dùng sát hạn có thể bị từ chối dù đã bấm trước hạn. Không dùng ví dụ làm giờ mặc định.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-11"></a>
 
-## DEC-11 — Phát hành, xác nhận revision và bắt đầu sản xuất
+## DEC-11 — Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?
 
-Cần quyết định: Phát hành, xác nhận revision và bắt đầu sản xuất?
+Cần quyết định: Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?
 
-Mã nguồn: ORD-Q14, E6-CG-06. Người quyết định: Bếp trưởng, vận hành; Bếp, vận hành, BA, Tech lead. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+Mã nguồn: ORD-Q14. Người quyết định: Bếp trưởng, vận hành. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
 
 ### ORD-Q14
 
@@ -662,45 +405,25 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E6-CG-06
-
-[Nguồn, dòng 12](../../../chon-mon-order/review/contract-gap-register.md#L12). Nội dung đầy đủ:
-
-> Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14
-
-Phương án khuyến nghị đã có:
-
-> Worker tạo bản kế hoạch để kiểm tra; chỉ cho phát hành khi tập nguồn kỳ vọng có căn cứ, không còn nguồn thiếu và các revision được kiểm lại. Bản thiếu/UNKNOWN chỉ phục vụ xử lý, không coi đủ để sản xuất. Đề xuất vận hành được cấp quyền phát hành, bếp trưởng theo scope xác nhận đúng revision, rồi ghi bắt đầu sản xuất bằng thao tác riêng. Bản mới cần xác nhận riêng; ack cũ không áp cho bản mới.
-
-Phương án khác đã có:
-
-> Cho phát hành một phần với quyết định ngoại lệ, nhãn thiếu và người chịu trách nhiệm: linh hoạt nhưng tăng rủi ro thiếu suất, cần chính sách riêng.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> A+B+C là nguồn kỳ vọng nhưng mới có A+B: không gọi 2/2 là đủ. Bản 6 không kế thừa xác nhận bản 5. Giảm nguy cơ bếp dùng thiếu nguồn/bản cũ; đánh đổi: một nguồn chậm có thể giữ cả lần phát hành.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-12"></a>
 
-## DEC-12 — Giá công khai cho website và agent khách
+## DEC-12 — Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
 
-Cần quyết định: Giá công khai cho website và agent khách?
+Cần quyết định: Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
 
-Mã nguồn: E8-Q03, E9-Q04. Người quyết định: chưa rõ. Release: R8, R9. [Buổi 7](meeting-agenda.md#buoi-7).
+Mã nguồn: E8-Q03. Người quyết định: chưa rõ. Release: R8. [Buổi 7](meeting-agenda.md#buoi-7).
 
 ### E8-Q03
 
-[Nguồn, dòng 20](../../../website-cong-khai/review/questions.md#L20). Nội dung đầy đủ:
+[Nguồn, dòng 25](../../../website-cong-khai/review/questions.md#L25). Nội dung đầy đủ:
 
 > Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
 
@@ -710,45 +433,25 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Giá FEAT-056, projection giá và hiệu lực
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E9-Q04
-
-[Nguồn, dòng 21](../../../agent-dinh-duong-vien/review/questions.md#L21). Nội dung đầy đủ:
-
-> Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
-
-Phương án khuyến nghị đã có:
-
-> Projection giá public riêng hoặc không hiển thị cho đến khi có nguồn; không dùng price_cap làm giá bán
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Hiển thị giá suất; không cam kết giá
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q07. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-13"></a>
 
-## DEC-13 — Dựng thực đơn public và tái dùng bộ kiểm
+## DEC-13 — FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
 
-Cần quyết định: Dựng thực đơn public và tái dùng bộ kiểm?
+Cần quyết định: FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
 
-Mã nguồn: E8-Q05, E9-Q11. Người quyết định: chưa rõ. Release: R8, R9. [Buổi 7](meeting-agenda.md#buoi-7).
+Mã nguồn: E8-Q05. Người quyết định: chưa rõ. Release: R8. [Buổi 7](meeting-agenda.md#buoi-7).
 
 ### E8-Q05
 
-[Nguồn, dòng 22](../../../website-cong-khai/review/questions.md#L22). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../website-cong-khai/review/questions.md#L27). Nội dung đầy đủ:
 
 > FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
 
@@ -758,45 +461,25 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Generation, kiểm quy tắc và giới hạn chính thức
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E9-Q11
-
-[Nguồn, dòng 28](../../../agent-dinh-duong-vien/review/questions.md#L28). Nội dung đầy đủ:
-
-> FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
-
-Phương án khuyến nghị đã có:
-
-> Có thể dùng chung port kiểm thuần, hoặc bộ dựng riêng; không dùng lại credential/quota AIO
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Chốt adapter/bộ dựng và reuse; không sửa FEAT-057
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q08. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-14"></a>
 
-## DEC-14 — Lợi nhuận báo giá và công thức kết quả kinh doanh
+## DEC-14 — Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
 
-Cần quyết định: Lợi nhuận báo giá và công thức kết quả kinh doanh?
+Cần quyết định: Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
 
-Mã nguồn: E10-Q15, E13-Q08. Người quyết định: Kế toán và Giám đốc; chưa rõ. Release: R10, R13. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E10-Q15. Người quyết định: Kế toán và Giám đốc. Release: R10. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E10-Q15
 
-[Nguồn, dòng 39](../../../crm-ban-hang/review/questions.md#L39). Nội dung đầy đủ:
+[Nguồn, dòng 40](../../../crm-ban-hang/review/questions.md#L40). Nội dung đầy đủ:
 
 > Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
 
@@ -808,43 +491,23 @@ Phương án khác đã có:
 
 > Chỉ hiển thị cost có nguồn theo quyền và bỏ chỉ số biên lợi nhuận cho tới khi được duyệt.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-QUOT-001 / UC-CRM-010
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E13-Q08
-
-[Nguồn, dòng 32](../../../chi-phi-loi-nhuan/review/questions.md#L32). Nội dung đầy đủ:
-
-> Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
-
-Phương án khuyến nghị đã có:
-
-> Cần manifest thành phần và định nghĩa có phiên bản; không suy lợi nhuận bằng doanh thu trừ riêng cost nguyên liệu.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Kết quả chính thức, công thức lợi nhuận; O-01, CK-Q01–10, E10-Q15; FR-EXP-RECON-001.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-15"></a>
 
-## DEC-15 — Nguồn công khai, độ đầy đủ và tính mới
+## DEC-15 — Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
 
-Cần quyết định: Nguồn công khai, độ đầy đủ và tính mới?
+Cần quyết định: Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
 
-Mã nguồn: E8-Q04, E9-Q12. Người quyết định: chưa rõ. Release: R8, R9. [Buổi 7](meeting-agenda.md#buoi-7).
+Mã nguồn: E8-Q04. Người quyết định: chưa rõ. Release: R8. [Buổi 7](meeting-agenda.md#buoi-7).
 
 ### E8-Q04
 
-[Nguồn, dòng 21](../../../website-cong-khai/review/questions.md#L21). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../website-cong-khai/review/questions.md#L26). Nội dung đầy đủ:
 
 > Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
 
@@ -854,33 +517,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Public snapshot/refresh, R4, độ đầy đủ dữ liệu FEAT-056
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-### E9-Q12
-
-[Nguồn, dòng 29](../../../agent-dinh-duong-vien/review/questions.md#L29). Nội dung đầy đủ:
-
-> Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
-
-Phương án khuyến nghị đã có:
-
-> Projection có phiên bản nguồn, không coi thiếu là 0 hoặc không dị ứng; refresh phải kiểm lại
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-> Kết quả thật, nhãn đầy đủ, mapping ngày/cỡ
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q08. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-16"></a>
 
@@ -902,13 +545,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-17"></a>
 
@@ -920,7 +563,7 @@ Mã nguồn: E1-Q02. Người quyết định: Tech lead. Release: R1. [Buổi 1
 
 ### E1-Q02
 
-[Nguồn, dòng 23](../../../nen-tang/review/questions.md#L23). Nội dung đầy đủ:
+[Nguồn, dòng 24](../../../nen-tang/review/questions.md#L24). Nội dung đầy đủ:
 
 > Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?
 
@@ -930,13 +573,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-18"></a>
 
@@ -948,7 +591,7 @@ Mã nguồn: E1-Q03. Người quyết định: Giám đốc, Tech lead. Release:
 
 ### E1-Q03
 
-[Nguồn, dòng 24](../../../nen-tang/review/questions.md#L24). Nội dung đầy đủ:
+[Nguồn, dòng 25](../../../nen-tang/review/questions.md#L25). Nội dung đầy đủ:
 
 > MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?
 
@@ -958,13 +601,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Release: BA-Q44. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-19"></a>
 
@@ -976,7 +619,7 @@ Mã nguồn: E1-Q04. Người quyết định: BA, Tech lead. Release: R1. [Bu�
 
 ### E1-Q04
 
-[Nguồn, dòng 25](../../../nen-tang/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../nen-tang/review/questions.md#L26). Nội dung đầy đủ:
 
 > Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?
 
@@ -986,13 +629,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-20"></a>
 
@@ -1004,7 +647,7 @@ Mã nguồn: E1-Q05. Người quyết định: Giám đốc. Release: R1. [Buổ
 
 ### E1-Q05
 
-[Nguồn, dòng 26](../../../nen-tang/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../nen-tang/review/questions.md#L27). Nội dung đầy đủ:
 
 > Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?
 
@@ -1014,13 +657,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-21"></a>
 
@@ -1042,13 +685,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-22"></a>
 
@@ -1070,13 +713,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-23"></a>
 
@@ -1098,13 +741,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-24"></a>
 
@@ -1126,13 +769,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Release: BA-Q44. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-25"></a>
 
@@ -1154,13 +797,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-26"></a>
 
@@ -1182,21 +825,21 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-27"></a>
 
-## DEC-27 — Duyệt 43 quy tắc
+## DEC-27 — Phiên bản quy tắc được duyệt: biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến
 
-Cần quyết định: Duyệt 43 quy tắc?
+Cần quyết định: Bản quy tắc DL-01 nào được duyệt, ghi đủ biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến?
 
-Mã nguồn: DL-01. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
+Mã nguồn: DL-01, E2-Q2, H-1, H-2, H-3, H-4, H-8. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
 
 ### DL-01
 
@@ -1210,13 +853,133 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### E2-Q2
+
+[Nguồn, dòng 445](../../../thuc-don-dinh-luong/srs/spec.md#L445). Nội dung đầy đủ:
+
+> Quy tắc tuần có xét tuần trước không
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### H-1
+
+[Nguồn, dòng 120](../../brainstorms/quy-tac-thuc-don.md#L120). Nội dung đầy đủ:
+
+> Món Healthy chỉ được **luộc**, hay hấp / áp chảo ít dầu / nướng cũng được tính?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### H-2
+
+[Nguồn, dòng 121](../../brainstorms/quy-tac-thuc-don.md#L121). Nội dung đầy đủ:
+
+> "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### H-3
+
+[Nguồn, dòng 122](../../brainstorms/quy-tac-thuc-don.md#L122). Nội dung đầy đủ:
+
+> Danh sách **nhóm nguyên liệu chính** để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### H-4
+
+[Nguồn, dòng 123](../../brainstorms/quy-tac-thuc-don.md#L123). Nội dung đầy đủ:
+
+> Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+### H-8
+
+[Nguồn, dòng 127](../../brainstorms/quy-tac-thuc-don.md#L127). Nội dung đầy đủ:
+
+> Danh sách **phương pháp chế biến** — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-28"></a>
 
@@ -1238,41 +1001,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-29"></a>
-
-## DEC-29 — Quy tắc tuần có xét tuần trước không
-
-Cần quyết định: Quy tắc tuần có xét tuần trước không?
-
-Mã nguồn: E2-Q2. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### E2-Q2
-
-[Nguồn, dòng 445](../../../thuc-don-dinh-luong/srs/spec.md#L445). Nội dung đầy đủ:
-
-> Quy tắc tuần có xét tuần trước không
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-30"></a>
 
@@ -1294,13 +1029,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-31"></a>
 
@@ -1322,13 +1057,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-32"></a>
 
@@ -1350,13 +1085,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-33"></a>
 
@@ -1378,13 +1113,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-34"></a>
 
@@ -1398,7 +1133,7 @@ Mã nguồn: E2-Q8. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 [Nguồn, dòng 450](../../../thuc-don-dinh-luong/srs/spec.md#L450). Nội dung đầy đủ:
 
-> Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?
+> Có cần thu hồi và sửa **từng ngày** của thực đơn đã công bố, thay vì cả tuần?
 
 Phương án khuyến nghị đã có:
 
@@ -1406,13 +1141,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-35"></a>
 
@@ -1434,13 +1169,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-36"></a>
 
@@ -1462,13 +1197,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-37"></a>
 
@@ -1490,13 +1225,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-38"></a>
 
@@ -1510,7 +1245,7 @@ Mã nguồn: E2-Q5. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 [Nguồn, dòng 454](../../../thuc-don-dinh-luong/srs/spec.md#L454). Nội dung đầy đủ:
 
-> Khoảng định lượng chuẩn và mức chất độn cho phép lưu ở đâu: theo từng món (chính là qty_min–qty_max của công thức, khi đó BR-COST-008 tự thoả), hay có một bảng chuẩn theo loại nguyên liệu và kiểu món như bảng trong docx để mọi công thức phải nằm trong đó?
+> Khoảng định lượng chuẩn và mức chất độn cho phép lưu ở đâu: theo từng món (chính là `qty_min`–`qty_max` của công thức, khi đó `BR-COST-008` tự thoả), hay có một **bảng chuẩn theo loại nguyên liệu và kiểu món** như bảng trong docx để mọi công thức phải nằm trong đó?
 
 Phương án khuyến nghị đã có:
 
@@ -1518,125 +1253,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-39"></a>
-
-## DEC-39 — Món Healthy chỉ được luộc, hay hấp / áp chảo ít dầu / nướng cũng được tính?
-
-Cần quyết định: Món Healthy chỉ được luộc, hay hấp / áp chảo ít dầu / nướng cũng được tính?
-
-Mã nguồn: H-1. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### H-1
-
-[Nguồn, dòng 120](../../brainstorms/quy-tac-thuc-don.md#L120). Nội dung đầy đủ:
-
-> Món Healthy chỉ được luộc, hay hấp / áp chảo ít dầu / nướng cũng được tính?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-40"></a>
-
-## DEC-40 — "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?
-
-Cần quyết định: "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?
-
-Mã nguồn: H-2. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### H-2
-
-[Nguồn, dòng 121](../../brainstorms/quy-tac-thuc-don.md#L121). Nội dung đầy đủ:
-
-> "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-41"></a>
-
-## DEC-41 — Duyệt danh sách nhóm nguyên liệu chính nào để so trùng; sườn tách riêng hay gộp vào lợn?
-
-Cần quyết định: Duyệt danh sách nhóm nguyên liệu chính nào để so trùng; sườn tách riêng hay gộp vào lợn?
-
-Mã nguồn: H-3. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### H-3
-
-[Nguồn, dòng 122](../../brainstorms/quy-tac-thuc-don.md#L122). Nội dung đầy đủ:
-
-> Danh sách nhóm nguyên liệu chính để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-42"></a>
-
-## DEC-42 — Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày?
-
-Cần quyết định: Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày?
-
-Mã nguồn: H-4. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### H-4
-
-[Nguồn, dòng 123](../../brainstorms/quy-tac-thuc-don.md#L123). Nội dung đầy đủ:
-
-> Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-43"></a>
 
@@ -1658,41 +1281,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
-
-<a id="dec-44"></a>
-
-## DEC-44 — Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
-
-Cần quyết định: Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
-
-Mã nguồn: H-8. Người quyết định: Người soạn docx. Release: R2. [Buổi 2](meeting-agenda.md#buoi-2).
-
-### H-8
-
-[Nguồn, dòng 127](../../brainstorms/quy-tac-thuc-don.md#L127). Nội dung đầy đủ:
-
-> Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
-
-Phương án khuyến nghị đã có:
-
-Chưa có trong dòng nguồn.
-
-Phương án khác đã có:
-
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
-
-Tác động / phần chặn được nguồn mô tả:
-
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
-
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-45"></a>
 
@@ -1714,13 +1309,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > DAT_NHAT thận trọng nhưng có thể cao hơn cơ cấu chọn thực tế.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-46"></a>
 
@@ -1742,13 +1337,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-47"></a>
 
@@ -1770,13 +1365,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-48"></a>
 
@@ -1798,13 +1393,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-49"></a>
 
@@ -1826,13 +1421,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-50"></a>
 
@@ -1854,13 +1449,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-51"></a>
 
@@ -1882,13 +1477,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-52"></a>
 
@@ -1910,13 +1505,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-53"></a>
 
@@ -1938,13 +1533,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-54"></a>
 
@@ -1966,13 +1561,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-55"></a>
 
@@ -1986,7 +1581,7 @@ Mã nguồn: E3-Q12. Người quyết định: Giám đốc. Release: R3. [Buổ
 
 [Nguồn, dòng 25](../../../cost/review/decision-register.md#L25). Nội dung đầy đủ:
 
-> Khi tính BINH_QUAN hoặc DAT_NHAT, món chính Healthy (thường rẻ hơn) có được tính vào không
+> Khi tính `BINH_QUAN` hoặc `DAT_NHAT`, món chính Healthy (thường rẻ hơn) có được tính vào không
 
 Phương án khuyến nghị đã có:
 
@@ -1994,13 +1589,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-56"></a>
 
@@ -2022,13 +1617,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chưa có bằng chứng để tự quyết thay nghiệp vụ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-57"></a>
 
@@ -2050,13 +1645,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Dễ kiểm toán nhưng kế toán không sửa cờ lịch sử trực tiếp.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-58"></a>
 
@@ -2078,13 +1673,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Giảm rủi ro suy ra sai số suất; hạn chế loại suất nhiều món chính.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Release: BA-Q46. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-59"></a>
 
@@ -2106,13 +1701,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không tái dùng bảng khác cơ sở nếu chưa có quy tắc; tăng số bảng cần duyệt.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-60"></a>
 
@@ -2134,13 +1729,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không tự chọn NCC; lỗi ở một bước rollback cả hai thay đổi.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-61"></a>
 
@@ -2162,13 +1757,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Cần kho bền vững và migration; retry không được vượt quyền hiện tại.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-62"></a>
 
@@ -2190,13 +1785,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chốt khóa chống trùng theo nguyên liệu hay nguyên liệu/cơ sở trước thiết kế bảng.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-63"></a>
 
@@ -2218,13 +1813,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không trả Infinity/NaN, không biến delta% thành0 gây hiểu nhầm.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-64"></a>
 
@@ -2246,13 +1841,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Cần phân biệt số liệu người xem cost được biết với quyền xem đề nghị quản trị.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-65"></a>
 
@@ -2274,13 +1869,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Khi mới vượt ở CHAN cần trả lại hoặc giữ PENDING? phải chốt trạng thái; không tự chuyển.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-66"></a>
 
@@ -2302,13 +1897,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Dễ đối soát/retry nhưng phải sửa mọi ngày lỗi trước khi có kết quả tuần.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-67"></a>
 
@@ -2330,13 +1925,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không dùng mức tăng tùy ý để phát thông báo; cần tránh lặp cảnh báo đang mở.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-68"></a>
 
@@ -2358,13 +1953,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Tránh kết luận toàn bộ đã đánh giá, nhưng che mất một vi phạm đã chắc chắn; PO phải chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-69"></a>
 
@@ -2386,13 +1981,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không tăng phạm vi R3 để hoàn tất một màn mẫu.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Release: BA-Q45. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-70"></a>
 
@@ -2414,13 +2009,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Phải sửa câu chữ404-01 và đồng bộ các client; ngoài phạm vi vẫn dùng404 theo SYS.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-71"></a>
 
@@ -2434,7 +2029,7 @@ Mã nguồn: CK-Q01. Người quyết định: Kế toán, người phụ trách
 
 [Nguồn, dòng 91](../../../cost/accounting/business-rules.md#L91). Nội dung đầy đủ:
 
-> Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?
+> Chiết khấu % tính trên tiền suất **đã gồm VAT hay chưa VAT**? Cơ sở tính có bao gồm khoản phụ thu nào không?
 
 Phương án khuyến nghị đã có:
 
@@ -2442,13 +2037,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-72"></a>
 
@@ -2470,13 +2065,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-73"></a>
 
@@ -2498,13 +2093,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-74"></a>
 
@@ -2526,13 +2121,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-75"></a>
 
@@ -2554,13 +2149,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-76"></a>
 
@@ -2582,13 +2177,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-77"></a>
 
@@ -2610,13 +2205,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-78"></a>
 
@@ -2638,13 +2233,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-79"></a>
 
@@ -2666,13 +2261,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-80"></a>
 
@@ -2684,7 +2279,7 @@ Mã nguồn: DATA-COST-Q01. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q01
 
-[Nguồn, dòng 90](../../../cost/review/accountant-input.md#L90). Nội dung đầy đủ:
+[Nguồn, dòng 95](../../../cost/review/accountant-input.md#L95). Nội dung đầy đủ:
 
 > Ai phụ trách cung cấp và xác nhận10 món/10 ngày thực tế? Khi nào có dữ liệu?
 
@@ -2694,13 +2289,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-81"></a>
 
@@ -2712,7 +2307,7 @@ Mã nguồn: DATA-COST-Q02. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q02
 
-[Nguồn, dòng 91](../../../cost/review/accountant-input.md#L91). Nội dung đầy đủ:
+[Nguồn, dòng 96](../../../cost/review/accountant-input.md#L96). Nội dung đầy đủ:
 
 > File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?
 
@@ -2722,13 +2317,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-82"></a>
 
@@ -2740,7 +2335,7 @@ Mã nguồn: DATA-COST-Q03. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q03
 
-[Nguồn, dòng 92](../../../cost/review/accountant-input.md#L92). Nội dung đầy đủ:
+[Nguồn, dòng 97](../../../cost/review/accountant-input.md#L97). Nội dung đầy đủ:
 
 > Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?
 
@@ -2750,13 +2345,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-83"></a>
 
@@ -2768,7 +2363,7 @@ Mã nguồn: DATA-COST-Q04. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q04
 
-[Nguồn, dòng 93](../../../cost/review/accountant-input.md#L93). Nội dung đầy đủ:
+[Nguồn, dòng 98](../../../cost/review/accountant-input.md#L98). Nội dung đầy đủ:
 
 > Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?
 
@@ -2778,13 +2373,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-84"></a>
 
@@ -2796,7 +2391,7 @@ Mã nguồn: DATA-COST-Q05. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q05
 
-[Nguồn, dòng 94](../../../cost/review/accountant-input.md#L94). Nội dung đầy đủ:
+[Nguồn, dòng 99](../../../cost/review/accountant-input.md#L99). Nội dung đầy đủ:
 
 > Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?
 
@@ -2806,13 +2401,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-85"></a>
 
@@ -2824,7 +2419,7 @@ Mã nguồn: DATA-COST-Q06. Người quyết định: chưa rõ. Release: R3. [B
 
 ### DATA-COST-Q06
 
-[Nguồn, dòng 95](../../../cost/review/accountant-input.md#L95). Nội dung đầy đủ:
+[Nguồn, dòng 100](../../../cost/review/accountant-input.md#L100). Nội dung đầy đủ:
 
 > Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?
 
@@ -2834,13 +2429,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-86"></a>
 
@@ -2862,13 +2457,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-019; nguồn D-17/DL-07; quyền ghi đề xuất, chưa có workflow duyệt riêng
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-87"></a>
 
@@ -2890,13 +2485,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-NUTR-CALC-002; đề xuất tổ hợp tường minh, không sao chép cách chọn món đắt nhất Cost
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-88"></a>
 
@@ -2918,13 +2513,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > NFR-NUTR-001; chưa có ngưỡng nghiệm thu được duyệt
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-89"></a>
 
@@ -2946,13 +2541,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > DL-03/05/07, nghiệm thu R4; chưa có dữ liệu thật trong gói
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-90"></a>
 
@@ -2964,7 +2559,7 @@ Mã nguồn: AIO-Q02. Người quyết định: Chủ sản phẩm, dinh dưỡn
 
 ### AIO-Q02
 
-[Nguồn, dòng 14](../../../agent-noi-bo/review/questions.md#L14). Nội dung đầy đủ:
+[Nguồn, dòng 15](../../../agent-noi-bo/review/questions.md#L15). Nội dung đầy đủ:
 
 > Xác nhận R5 chỉ trả VALID nếu cost không vượt kể cả CANH_BAO; có cho người dùng xem phương án chưa đạt để sửa thủ công không?
 
@@ -2974,13 +2569,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-CHK-001; đề xuất NO_SOLUTION không cho áp dụng; không thay cổng MENU/Cost
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-91"></a>
 
@@ -2992,7 +2587,7 @@ Mã nguồn: AIO-Q03. Người quyết định: Dinh dưỡng viên, QA. Release
 
 ### AIO-Q03
 
-[Nguồn, dòng 15](../../../agent-noi-bo/review/questions.md#L15). Nội dung đầy đủ:
+[Nguồn, dòng 16](../../../agent-noi-bo/review/questions.md#L16). Nội dung đầy đủ:
 
 > 20 yêu cầu nghiệm thu gồm nhóm nào, dữ liệu khả thi nào, mẫu đo trước MVP và cách tính giảm 50% thời gian ra sao?
 
@@ -3002,13 +2597,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > NFR-AIO-001/002; không tính từ chối/timeout là một thực đơn đạt
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-92"></a>
 
@@ -3020,7 +2615,7 @@ Mã nguồn: AIO-Q04. Người quyết định: Giám đốc, Tech lead. Release
 
 ### AIO-Q04
 
-[Nguồn, dòng 16](../../../agent-noi-bo/review/questions.md#L16). Nội dung đầy đủ:
+[Nguồn, dòng 17](../../../agent-noi-bo/review/questions.md#L17). Nội dung đầy đủ:
 
 > Ai xem prompt/tool arguments, lưu bao lâu, mức che dữ liệu và quyền xuất log thế nào?
 
@@ -3030,13 +2625,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-LOG-001; mặc định thiết kế không có API xuất log
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-93"></a>
 
@@ -3048,7 +2643,7 @@ Mã nguồn: AIO-Q05. Người quyết định: Dinh dưỡng viên. Release: R5
 
 ### AIO-Q05
 
-[Nguồn, dòng 17](../../../agent-noi-bo/review/questions.md#L17). Nội dung đầy đủ:
+[Nguồn, dòng 18](../../../agent-noi-bo/review/questions.md#L18). Nội dung đầy đủ:
 
 > Kiêng kỵ diễn đạt tự do được ánh xạ nguyên liệu/món tới mức nào; xử lý nguyên liệu phụ và ghi chú dị ứng chưa đủ thế nào?
 
@@ -3058,13 +2653,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-GEN-001/EDIT-001; chưa rõ phải hỏi lại, không tư vấn điều trị
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-94"></a>
 
@@ -3076,7 +2671,7 @@ Mã nguồn: AIO-Q06. Người quyết định: Tech lead, BA. Release: R5. [Bu�
 
 ### AIO-Q06
 
-[Nguồn, dòng 18](../../../agent-noi-bo/review/questions.md#L18). Nội dung đầy đủ:
+[Nguồn, dòng 19](../../../agent-noi-bo/review/questions.md#L19). Nội dung đầy đủ:
 
 > Chốt giao diện adapter MENU kiểm nháp/ghi nháp và giao dịch apply, nơi lưu idempotency/quota, xử lý khóa và rollout?
 
@@ -3086,13 +2681,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-APLY-001; hợp đồng port đề xuất, chưa có endpoint MENU được triển khai
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-95"></a>
 
@@ -3114,13 +2709,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-96"></a>
 
@@ -3142,13 +2737,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-97"></a>
 
@@ -3170,13 +2765,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-98"></a>
 
@@ -3198,13 +2793,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-99"></a>
 
@@ -3226,13 +2821,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-100"></a>
 
@@ -3254,13 +2849,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-101"></a>
 
@@ -3282,13 +2877,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-102"></a>
 
@@ -3310,13 +2905,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-103"></a>
 
@@ -3338,13 +2933,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-104"></a>
 
@@ -3366,13 +2961,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-105"></a>
 
@@ -3394,13 +2989,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-106"></a>
 
@@ -3424,11 +3019,11 @@ Phương án khác đã có:
 
 > Lưu receipt tách transaction dễ triển khai từng phần nhưng có khoảng mất dấu kết quả; không khuyến nghị. Khóa dòng hay CAS là lựa chọn kỹ thuật cần benchmark/review, chưa chọn bằng tài liệu BA.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Tech lead xác nhận storage/unique/lock/CAS, giữ và dọn receipt/outbox, recovery; QA thực thi fault trước/sau commit theo ca hiện có. Không tự đặt retention hoặc số retry; duyệt hướng không chứng minh atomic runtime.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-107"></a>
 
@@ -3452,11 +3047,11 @@ Phương án khác đã có:
 
 > Gửi khóa tổ hợp đầy đủ thay lineId: rõ nguồn nhưng payload dài và client phải giữ nhiều khóa. Chỉ dishId không đủ nếu có nhiều dòng cùng món.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Review lineId tồn tại trong phạm vi revision, tạo dòng mới, kiểu lượng và quy đổi; đồng bộ Change/OrderRevision/PlanRevision/API/data/AC sau khi chốt. Không quyết nhiều MAIN hoặc mở O-02.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-108"></a>
 
@@ -3480,11 +3075,11 @@ Phương án khác đã có:
 
 > E6 tự giữ master khách tối thiểu: giảm phụ thuộc ban đầu nhưng thêm nghĩa vụ đồng bộ/chống trùng; không khuyến nghị trong phạm vi này.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Khách A đã có mã nhưng chưa có điểm: tạo điểm thuộc A; tạo điểm không tự tạo khách/account/grant. Tránh nhiều bản khách và tránh cấp quyền rộng để bù lỗi. Đánh đổi: onboarding phụ thuộc owner Nền tảng.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-109"></a>
 
@@ -3508,11 +3103,11 @@ Phương án khác đã có:
 
 > Tính đồng bộ lúc ghi/công bố nguồn: dễ gắn kết quả với phiên bản hơn nhưng tăng thời gian thao tác và phụ thuộc NUTR; không tính ghi ẩn dưới GET.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Owner MENU/NUTR review event/producer, DISH/MEAL, source reference, freshness, cache miss và projection. Chưa tự chọn thời gian cache, fallback hoặc mã lỗi mới; chưa mở profile/consent/thu sức khỏe.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-110"></a>
 
@@ -3536,11 +3131,11 @@ Phương án khác đã có:
 
 > Dùng nhiều default ngầm: payload ngắn hơn nhưng có thể đổi nghĩa nghiệp vụ khi client bỏ field. Cho phép null mọi optional: dễ nhập hơn nhưng làm mất phân biệt chưa cung cấp và chủ động xóa.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > API owner/QA quyết từng field còn gap, enum và giới hạn có căn cứ; chọn cụ thể omit/null cho từng nhánh và negative oracle. Đề xuất nguyên tắc không đóng 34DTO hoặc chốt toàn bộ limits/defaults/create-version.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-111"></a>
 
@@ -3564,11 +3159,11 @@ Phương án khác đã có:
 
 > Tuần atomic toàn bộ; mode áp dụng ngay kèm xử lý lựa chọn cũ; gửi nhắc qua kênh bên ngoài. Mỗi phương án cần thêm quy tắc và evidence tương ứng.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > 5 ngày, 1 ngày lỗi: hiển thị rõ 4 ngày đã ghi và 1 ngày chưa ghi. Giảm phải làm lại cả tuần nhưng UI phải báo kết quả từng ngày. Đề xuất tuần, mode, nhắc là ba lựa chọn có thể duyệt riêng.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-112"></a>
 
@@ -3590,13 +3185,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-113"></a>
 
@@ -3618,13 +3213,13 @@ Chưa có trong dòng nguồn.
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
-chưa rõ — nguồn chưa mô tả tác động theo từng phương án.
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-114"></a>
 
@@ -3636,7 +3231,7 @@ Mã nguồn: Q-13. Người quyết định: chưa rõ. Release: R7. [Buổi 5](
 
 ### Q-13
 
-[Nguồn, dòng 18](../../../giao-nhan-doanh-thu/review/questions.md#L18). Nội dung đầy đủ:
+[Nguồn, dòng 23](../../../giao-nhan-doanh-thu/review/questions.md#L23). Nội dung đầy đủ:
 
 > Khách không xác nhận số nhận thì xử lý thế nào, sau khoảng chờ nào và ai quyết định số tính tiền?
 
@@ -3646,13 +3241,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > ACK im lặng; số tính tiền và thống nhất/khóa kỳ liên quan
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q03. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-115"></a>
 
@@ -3664,7 +3259,7 @@ Mã nguồn: E7-Q01. Người quyết định: chưa rõ. Release: R7. [Buổi 5
 
 ### E7-Q01
 
-[Nguồn, dòng 19](../../../giao-nhan-doanh-thu/review/questions.md#L19). Nội dung đầy đủ:
+[Nguồn, dòng 24](../../../giao-nhan-doanh-thu/review/questions.md#L24). Nội dung đầy đủ:
 
 > Ai xác nhận link nhận hàng; cơ chế xác minh, hiệu lực, thu hồi/cấp lại là gì?
 
@@ -3674,13 +3269,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Link; CG01/08 chờ, không đặc tả thêm producer E6
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q04. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-116"></a>
 
@@ -3692,7 +3287,7 @@ Mã nguồn: E7-Q02. Người quyết định: chưa rõ. Release: R7. [Buổi 5
 
 ### E7-Q02
 
-[Nguồn, dòng 20](../../../giao-nhan-doanh-thu/review/questions.md#L20). Nội dung đầy đủ:
+[Nguồn, dòng 25](../../../giao-nhan-doanh-thu/review/questions.md#L25). Nội dung đầy đủ:
 
 > Ai thống nhất chênh lệch; giao nhiều lần/giao bù/nhận thừa/giảm trừ được duyệt và sửa thế nào?
 
@@ -3702,13 +3297,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > RES, tổng giao/nhận sau bù, tác động kỳ khóa
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q03. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-117"></a>
 
@@ -3716,11 +3311,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào?
 
-Mã nguồn: E7-Q03. Người quyết định: chưa rõ. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E7-Q03. Người quyết định: Kế toán. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E7-Q03
 
-[Nguồn, dòng 21](../../../giao-nhan-doanh-thu/review/questions.md#L21). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../giao-nhan-doanh-thu/review/questions.md#L26). Nội dung đầy đủ:
 
 > Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào?
 
@@ -3730,13 +3325,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > REV; giảm trừ khác CK riêng
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-118"></a>
 
@@ -3744,11 +3339,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể?
 
-Mã nguồn: E7-Q04. Người quyết định: chưa rõ. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E7-Q04. Người quyết định: Kế toán. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E7-Q04
 
-[Nguồn, dòng 22](../../../giao-nhan-doanh-thu/review/questions.md#L22). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../giao-nhan-doanh-thu/review/questions.md#L27). Nội dung đầy đủ:
 
 > Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể?
 
@@ -3758,13 +3353,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Tổng chính thức và R7
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-119"></a>
 
@@ -3772,11 +3367,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Phạm vi kỳ, chống chồng kỳ, điều kiện khóa, thu sau khóa, mở lại/tái đối soát/tái xuất thế nào?
 
-Mã nguồn: E7-Q05. Người quyết định: chưa rõ. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E7-Q05. Người quyết định: Kế toán. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E7-Q05
 
-[Nguồn, dòng 23](../../../giao-nhan-doanh-thu/review/questions.md#L23). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../giao-nhan-doanh-thu/review/questions.md#L28). Nội dung đầy đủ:
 
 > Phạm vi kỳ, chống chồng kỳ, điều kiện khóa, thu sau khóa, mở lại/tái đối soát/tái xuất thế nào?
 
@@ -3786,13 +3381,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > AGRE/LOCK và sửa sau REOPENED
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-120"></a>
 
@@ -3800,11 +3395,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Thu một phần/thừa, phân bổ nhiều kỳ, sửa/hủy chứng từ và hoàn tiền thế nào?
 
-Mã nguồn: E7-Q06. Người quyết định: chưa rõ. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E7-Q06. Người quyết định: Kế toán. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E7-Q06
 
-[Nguồn, dòng 24](../../../giao-nhan-doanh-thu/review/questions.md#L24). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../giao-nhan-doanh-thu/review/questions.md#L29). Nội dung đầy đủ:
 
 > Thu một phần/thừa, phân bổ nhiều kỳ, sửa/hủy chứng từ và hoàn tiền thế nào?
 
@@ -3814,13 +3409,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Thanh toán nâng cao/chống trùng nghiệp vụ
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-121"></a>
 
@@ -3828,11 +3423,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì?
 
-Mã nguồn: E7-Q07. Người quyết định: chưa rõ. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E7-Q07. Người quyết định: Kế toán. Release: R7. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E7-Q07
 
-[Nguồn, dòng 25](../../../giao-nhan-doanh-thu/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../giao-nhan-doanh-thu/review/questions.md#L30). Nội dung đầy đủ:
 
 > Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì?
 
@@ -3842,13 +3437,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > File bytes/mapping cột/thử nhập MISA
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-122"></a>
 
@@ -3860,7 +3455,7 @@ Mã nguồn: E7-Q08. Người quyết định: chưa rõ. Release: R7. [Buổi 5
 
 ### E7-Q08
 
-[Nguồn, dòng 26](../../../giao-nhan-doanh-thu/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../giao-nhan-doanh-thu/review/questions.md#L31). Nội dung đầy đủ:
 
 > Envelope, idempotency/receipt/retention, bộ lọc, scope role, audit link, profile tải/xuất dùng chuẩn nào?
 
@@ -3870,13 +3465,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Wire contract/persistence/fault/load
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q05. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-123"></a>
 
@@ -3888,7 +3483,7 @@ Mã nguồn: E8-Q01. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q01
 
-[Nguồn, dòng 18](../../../website-cong-khai/review/questions.md#L18). Nội dung đầy đủ:
+[Nguồn, dòng 23](../../../website-cong-khai/review/questions.md#L23). Nội dung đầy đủ:
 
 > DL-08: danh sách bài viết, URL, media và trạng thái WordPress gốc ở đâu; ai xác nhận inventory đầy đủ?
 
@@ -3898,13 +3493,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Mapping thật, mẫu số 100% URL, R8
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q06. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-124"></a>
 
@@ -3916,7 +3511,7 @@ Mã nguồn: E8-Q02. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q02
 
-[Nguồn, dòng 19](../../../website-cong-khai/review/questions.md#L19). Nội dung đầy đủ:
+[Nguồn, dòng 24](../../../website-cong-khai/review/questions.md#L24). Nội dung đầy đủ:
 
 > Giữ URL hay 301 theo tiêu chí nào; xử lý trùng/bài xóa, chữ hoa/dấu slash/query; ai duyệt mapping và rollback?
 
@@ -3926,13 +3521,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Kích hoạt redirect, bài xóa/trùng, cutover
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q06. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-125"></a>
 
@@ -3944,7 +3539,7 @@ Mã nguồn: E8-Q06. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q06
 
-[Nguồn, dòng 23](../../../website-cong-khai/review/questions.md#L23). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../website-cong-khai/review/questions.md#L28). Nội dung đầy đủ:
 
 > Lead vào CRM khi E10 chưa mở: lưu tạm ở đâu, trường bắt buộc, consent/version, thời gian lưu/xóa và receipt bàn giao thế nào?
 
@@ -3954,13 +3549,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Ghi lead thật, retention/xóa, hợp đồng E10
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q09. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-126"></a>
 
@@ -3972,7 +3567,7 @@ Mã nguồn: E8-Q07. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q07
 
-[Nguồn, dòng 24](../../../website-cong-khai/review/questions.md#L24). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../website-cong-khai/review/questions.md#L29). Nội dung đầy đủ:
 
 > Chống spam bằng cách nào; ai nhận thông báo qua kênh nào, xử lý lỗi/gửi lặp/thất lạc ra sao?
 
@@ -3982,13 +3577,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Provider chống spam, recipient, notification/retry
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q09. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-127"></a>
 
@@ -4000,7 +3595,7 @@ Mã nguồn: E8-Q08. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q08
 
-[Nguồn, dòng 25](../../../website-cong-khai/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../website-cong-khai/review/questions.md#L30). Nội dung đầy đủ:
 
 > Vai trò nào được soạn/duyệt/xuất bản/thu hồi; có bước duyệt không; chọn CMS nào?
 
@@ -4010,13 +3605,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Quyền runtime, bước duyệt, CMS/publication
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q10. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-128"></a>
 
@@ -4028,7 +3623,7 @@ Mã nguồn: E8-Q09. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q09
 
-[Nguồn, dòng 26](../../../website-cong-khai/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../website-cong-khai/review/questions.md#L31). Nội dung đầy đủ:
 
 > Ảnh/banner: quyền sử dụng, loại/dung lượng, crop/alt, vị trí/lịch hiển thị, duyệt, gỡ ảnh đang dùng thế nào?
 
@@ -4038,13 +3633,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Media pipeline, layout/lịch và quyền public asset
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q10. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-129"></a>
 
@@ -4056,7 +3651,7 @@ Mã nguồn: E8-Q10. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q10
 
-[Nguồn, dòng 27](../../../website-cong-khai/review/questions.md#L27). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../website-cong-khai/review/questions.md#L32). Nội dung đầy đủ:
 
 > BO-09 dùng công cụ nào; baseline tháng nào trước chuyển đổi, múi giờ/lọc bot/organic; cửa sổ sau 60 ngày và quyền truy cập số đo?
 
@@ -4066,13 +3661,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Đo BO-09, kết luận G-Next; baseline=0/thiếu chưa tính tỷ lệ
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q11. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-130"></a>
 
@@ -4084,7 +3679,7 @@ Mã nguồn: E8-Q11. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q11
 
-[Nguồn, dòng 28](../../../website-cong-khai/review/questions.md#L28). Nội dung đầy đủ:
+[Nguồn, dòng 33](../../../website-cong-khai/review/questions.md#L33). Nội dung đầy đủ:
 
 > Ai có quyền quản trị tên miền/DNS; hạ tầng, CMS/hosting, thời điểm chuyển đổi, rollback và người quyết định O-04?
 
@@ -4094,13 +3689,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > R8 start/cutover; đưa 054/055/059 lên Now
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q12. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-131"></a>
 
@@ -4112,7 +3707,7 @@ Mã nguồn: E8-Q12. Người quyết định: chưa rõ. Release: R8. [Buổi 7
 
 ### E8-Q12
 
-[Nguồn, dòng 29](../../../website-cong-khai/review/questions.md#L29). Nội dung đầy đủ:
+[Nguồn, dòng 34](../../../website-cong-khai/review/questions.md#L34). Nội dung đầy đủ:
 
 > Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì?
 
@@ -4122,13 +3717,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Wire contract, cache/CDN, tải và fault tolerance
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q12. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-132"></a>
 
@@ -4140,7 +3735,7 @@ Mã nguồn: E9-Q02. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q02
 
-[Nguồn, dòng 19](../../../agent-dinh-duong-vien/review/questions.md#L19). Nội dung đầy đủ:
+[Nguồn, dòng 24](../../../agent-dinh-duong-vien/review/questions.md#L24). Nội dung đầy đủ:
 
 > Ai dùng agent: khách vãng lai, khách có tài khoản hay cả hai; cách xác minh và gắn nhóm/quyền?
 
@@ -4150,13 +3745,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Mở phiên thật, quota theo người, audit guest
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q14. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-133"></a>
 
@@ -4168,7 +3763,7 @@ Mã nguồn: E9-Q03. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q03
 
-[Nguồn, dòng 20](../../../agent-dinh-duong-vien/review/questions.md#L20). Nội dung đầy đủ:
+[Nguồn, dòng 25](../../../agent-dinh-duong-vien/review/questions.md#L25). Nội dung đầy đủ:
 
 > Khẩu vị/kiêng kỵ được nhận theo danh mục nào, giới hạn ra sao; xử lý nội dung tự do có thông tin sức khỏe thế nào?
 
@@ -4178,13 +3773,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Nhận input thật, mapping kiêng kỵ; phạm vi sức khỏe vẫn đóng
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q14. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-134"></a>
 
@@ -4196,7 +3791,7 @@ Mã nguồn: E9-Q05. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q05
 
-[Nguồn, dòng 22](../../../agent-dinh-duong-vien/review/questions.md#L22). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../agent-dinh-duong-vien/review/questions.md#L27). Nội dung đầy đủ:
 
 > Khi không đạt ngưỡng cost, AIN trả kết quả gì mà không lộ lý do cost; có cho xem phương án chưa đạt không?
 
@@ -4206,13 +3801,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Nhánh vượt ngưỡng/CANH_BAO và kết quả công khai
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q16. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-135"></a>
 
@@ -4224,7 +3819,7 @@ Mã nguồn: E9-Q06. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q06
 
-[Nguồn, dòng 23](../../../agent-dinh-duong-vien/review/questions.md#L23). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../agent-dinh-duong-vien/review/questions.md#L28). Nội dung đầy đủ:
 
 > FEAT-062 gửi nháp ở đâu khi CRM chưa mở; ai được nhận/duyệt, thời hạn xử lý, trạng thái khách thấy và receipt nào?
 
@@ -4234,13 +3829,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Ghi nháp thật, chuyển giao, hiển thị kết quả xử lý; không mở E10
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q17. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-136"></a>
 
@@ -4252,7 +3847,7 @@ Mã nguồn: E9-Q07. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q07
 
-[Nguồn, dòng 24](../../../agent-dinh-duong-vien/review/questions.md#L24). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../agent-dinh-duong-vien/review/questions.md#L29). Nội dung đầy đủ:
 
 > FEAT-064: nhóm người dùng, số lượt, định nghĩa một lượt/cửa sổ/reset, trần chi phí ngày, đơn vị đo/tỷ giá/múi giờ, hành vi chạm trần?
 
@@ -4262,13 +3857,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Nhận lượt thật, quyết toán/hoàn lượt, trần/reset và retry
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q18. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-137"></a>
 
@@ -4280,7 +3875,7 @@ Mã nguồn: E9-Q08. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q08
 
-[Nguồn, dòng 25](../../../agent-dinh-duong-vien/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../agent-dinh-duong-vien/review/questions.md#L30). Nội dung đầy đủ:
 
 > Ai được xem/sửa/duyệt hạn mức; thay đổi có cần duyệt và có hiệu lực khi nào, xử lý lượt đang chạy?
 
@@ -4290,13 +3885,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Kích hoạt cấu hình; không tự trao quyền vì là Giám đốc
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q18. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-138"></a>
 
@@ -4308,7 +3903,7 @@ Mã nguồn: E9-Q09. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q09
 
-[Nguồn, dòng 26](../../../agent-dinh-duong-vien/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../agent-dinh-duong-vien/review/questions.md#L31). Nội dung đầy đủ:
 
 > Ai soạn và duyệt 30 yêu cầu thực đơn, 20 dò cost, 20 bệnh lý; oracle, lời nhắc bệnh lý bắt buộc, tiêu chí không chẩn đoán là gì?
 
@@ -4318,13 +3913,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Nghiệm thu R9; nội dung lời nhắc chưa xác nhận
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q16. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-139"></a>
 
@@ -4336,7 +3931,7 @@ Mã nguồn: E9-Q10. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q10
 
-[Nguồn, dòng 27](../../../agent-dinh-duong-vien/review/questions.md#L27). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../agent-dinh-duong-vien/review/questions.md#L32). Nội dung đầy đủ:
 
 > Lưu hội thoại bao lâu, ai xem, cơ chế đồng ý xử lý dữ liệu, xóa theo yêu cầu và xử lý bản sao/log/provider?
 
@@ -4346,13 +3941,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Lưu hội thoại thật, replay, xuất log, truyền dữ liệu provider
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q17. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-140"></a>
 
@@ -4364,7 +3959,7 @@ Mã nguồn: E9-Q13. Người quyết định: chưa rõ. Release: R9. [Buổi 8
 
 ### E9-Q13
 
-[Nguồn, dòng 30](../../../agent-dinh-duong-vien/review/questions.md#L30). Nội dung đầy đủ:
+[Nguồn, dòng 35](../../../agent-dinh-duong-vien/review/questions.md#L35). Nội dung đầy đủ:
 
 > Wire contract: idempotency, TTL, retry/deadline/concurrency, receipt đối soát, giao dịch quota/ledger và profile tải R9?
 
@@ -4374,13 +3969,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Freeze API/delta, fault tolerance và thử tải
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q19. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-141"></a>
 
@@ -4392,7 +3987,7 @@ Mã nguồn: E10-Q01. Người quyết định: Chủ nghiệp vụ chăm sóc k
 
 ### E10-Q01
 
-[Nguồn, dòng 25](../../../crm-ban-hang/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../crm-ban-hang/review/questions.md#L26). Nội dung đầy đủ:
 
 > Những trường liên hệ CRM nào cần lưu, ai được xem/sửa, lưu bao lâu và xử lý xóa thế nào?
 
@@ -4404,11 +3999,11 @@ Phương án khác đã có:
 
 > Chỉ tham chiếu kho liên hệ đã được phê duyệt.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-VIEW-001 / UC-CRM-001; FR-CUS-CONT-001 / UC-CRM-002
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-142"></a>
 
@@ -4420,7 +4015,7 @@ Mã nguồn: E10-Q02. Người quyết định: Chủ dữ liệu khách và Gi�
 
 ### E10-Q02
 
-[Nguồn, dòng 26](../../../crm-ban-hang/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../crm-ban-hang/review/questions.md#L27). Nội dung đầy đủ:
 
 > Tiêu chí phát hiện khách trùng, chuẩn hóa, mức tin cậy và bằng chứng nào được chấp nhận?
 
@@ -4432,11 +4027,11 @@ Phương án khác đã có:
 
 > Chỉ tiếp nhận cặp nghi trùng do người dùng chỉ ra; chưa chạy phát hiện tự động.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-DUP-001 / UC-CRM-004
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-143"></a>
 
@@ -4448,7 +4043,7 @@ Mã nguồn: E10-Q04. Người quyết định: Chủ dữ liệu khách, kế t
 
 ### E10-Q04
 
-[Nguồn, dòng 28](../../../crm-ban-hang/review/questions.md#L28). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../crm-ban-hang/review/questions.md#L29). Nội dung đầy đủ:
 
 > Hoàn tác gộp xử lý liên kết mới, xung đột sửa hồ sơ và giao dịch phát sinh sau gộp thế nào?
 
@@ -4460,11 +4055,11 @@ Phương án khác đã có:
 
 > Chỉ cho hoàn tác tự phục vụ khi chưa có liên kết mới; trường hợp khác xử lý theo hồ sơ riêng.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-MRG-001 / UC-CRM-005; FR-CUS-UNDO-001 / UC-CRM-006
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-144"></a>
 
@@ -4476,7 +4071,7 @@ Mã nguồn: E10-Q05. Người quyết định: Chăm sóc khách và vận hàn
 
 ### E10-Q05
 
-[Nguồn, dòng 29](../../../crm-ban-hang/review/questions.md#L29). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../crm-ban-hang/review/questions.md#L30). Nội dung đầy đủ:
 
 > Bằng chứng và quyền chuyển từng trạng thái vòng đời, cách tổng hợp khách có nhiều điểm là gì?
 
@@ -4488,11 +4083,11 @@ Phương án khác đã có:
 
 > Tự chuyển một số trạng thái sau khi bộ quy tắc và nguồn được duyệt.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-LIFE-001 / UC-CRM-007
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-145"></a>
 
@@ -4504,7 +4099,7 @@ Mã nguồn: E10-Q06. Người quyết định: Chăm sóc khách và vận hàn
 
 ### E10-Q06
 
-[Nguồn, dòng 30](../../../crm-ban-hang/review/questions.md#L30). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../crm-ban-hang/review/questions.md#L31). Nội dung đầy đủ:
 
 > Cửa sổ quan sát, ngưỡng nguy cơ rời, lịch nghỉ/ngoại lệ và cách xử lý dữ liệu đến muộn được quyết định thế nào?
 
@@ -4516,11 +4111,11 @@ Phương án khác đã có:
 
 > Theo dõi thủ công danh sách cần rà trước khi bật đánh giá tự động.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-LIFE-001 / UC-CRM-007; FR-CUS-RISK-001 / UC-CRM-008
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-146"></a>
 
@@ -4532,7 +4127,7 @@ Mã nguồn: E10-Q07. Người quyết định: Chủ nghiệp vụ bán hàng v
 
 ### E10-Q07
 
-[Nguồn, dòng 31](../../../crm-ban-hang/review/questions.md#L31). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../crm-ban-hang/review/questions.md#L32). Nội dung đầy đủ:
 
 > Giai đoạn phễu, chủ cơ hội, tiêu chí thắng/thua và mẫu số đo chuyển đổi theo kỳ/cohort là gì?
 
@@ -4544,11 +4139,11 @@ Phương án khác đã có:
 
 > Chỉ báo cáo số cơ hội từng giai đoạn, chưa công bố tỷ lệ chuyển đổi.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-OPP-001 / UC-CRM-009
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-147"></a>
 
@@ -4560,7 +4155,7 @@ Mã nguồn: E10-Q08. Người quyết định: Giám đốc và chủ nghiệp 
 
 ### E10-Q08
 
-[Nguồn, dòng 32](../../../crm-ban-hang/review/questions.md#L32). Nội dung đầy đủ:
+[Nguồn, dòng 33](../../../crm-ban-hang/review/questions.md#L33). Nội dung đầy đủ:
 
 > Ai duyệt báo giá, hiệu lực/thu hồi và bằng chứng chấp thuận đúng phiên bản được ghi thế nào?
 
@@ -4572,11 +4167,11 @@ Phương án khác đã có:
 
 > Ghi nhận bằng chứng thỏa thuận thủ công và người xác nhận thay luồng duyệt điện tử.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-OPP-001 / UC-CRM-009; FR-SALE-QUOT-001 / UC-CRM-010; FR-SALE-SAFE-001 / UC-CRM-012; FR-SALE-CONT-001 / UC-CRM-013
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-148"></a>
 
@@ -4588,7 +4183,7 @@ Mã nguồn: E10-Q09. Người quyết định: Dinh dưỡng viên và người
 
 ### E10-Q09
 
-[Nguồn, dòng 33](../../../crm-ban-hang/review/questions.md#L33). Nội dung đầy đủ:
+[Nguồn, dòng 34](../../../crm-ban-hang/review/questions.md#L34). Nội dung đầy đủ:
 
 > Điều kiện thực đơn được đính kèm báo giá, quyền chia sẻ và xử lý nguồn thay đổi/thu hồi là gì?
 
@@ -4600,11 +4195,11 @@ Phương án khác đã có:
 
 > Chỉ đính kèm tài liệu thủ công đã được người có quyền duyệt và kiểm nội dung.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-MENU-001 / UC-CRM-011; FR-SALE-SAFE-001 / UC-CRM-012
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-149"></a>
 
@@ -4616,7 +4211,7 @@ Mã nguồn: E10-Q10. Người quyết định: Giám đốc và kế toán ph�
 
 ### E10-Q10
 
-[Nguồn, dòng 34](../../../crm-ban-hang/review/questions.md#L34). Nội dung đầy đủ:
+[Nguồn, dòng 35](../../../crm-ban-hang/review/questions.md#L35). Nội dung đầy đủ:
 
 > Bằng chứng ký, người duyệt/kích hoạt, nhập hợp đồng hiện hữu và chấm dứt hợp đồng cần những bước nào?
 
@@ -4628,11 +4223,11 @@ Phương án khác đã có:
 
 > Quản lý tham chiếu kho hợp đồng đã duyệt, không dựng quy trình ký điện tử mới.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-CONT-001 / UC-CRM-013; FR-SALE-ACTV-001 / UC-CRM-014; FR-SALE-AMND-001 / UC-CRM-015
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-150"></a>
 
@@ -4644,7 +4239,7 @@ Mã nguồn: E10-Q11. Người quyết định: Kế toán và chủ nghiệp v�
 
 ### E10-Q11
 
-[Nguồn, dòng 35](../../../crm-ban-hang/review/questions.md#L35). Nội dung đầy đủ:
+[Nguồn, dòng 36](../../../crm-ban-hang/review/questions.md#L36). Nội dung đầy đủ:
 
 > Biên ngày từ–đến, múi giờ, ngày kết thúc bỏ trống và phạm vi giá khác điểm/ca được hiểu thế nào?
 
@@ -4656,11 +4251,11 @@ Phương án khác đã có:
 
 > Đề xuất phạm vi giá theo điểm/ca qua phiên thay đổi riêng nếu thực tế cần.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-CONT-001 / UC-CRM-013; FR-SALE-ACTV-001 / UC-CRM-014; FR-SALE-AMND-001 / UC-CRM-015; FR-SALE-PRIC-001 / UC-CRM-016
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-151"></a>
 
@@ -4672,7 +4267,7 @@ Mã nguồn: E10-Q12. Người quyết định: Kế toán, người duyệt h�
 
 ### E10-Q12
 
-[Nguồn, dòng 36](../../../crm-ban-hang/review/questions.md#L36). Nội dung đầy đủ:
+[Nguồn, dòng 37](../../../crm-ban-hang/review/questions.md#L37). Nội dung đầy đủ:
 
 > Phụ lục hồi tố, thu hồi/thay thế giá và ảnh hưởng đơn đã khóa hoặc kỳ đã đối soát được xử lý thế nào?
 
@@ -4684,11 +4279,11 @@ Phương án khác đã có:
 
 > Có quy trình điều chỉnh riêng với chứng từ và phê duyệt; không sửa trực tiếp lịch sử.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-SALE-ACTV-001 / UC-CRM-014; FR-SALE-AMND-001 / UC-CRM-015; FR-SALE-PRIC-001 / UC-CRM-016
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-152"></a>
 
@@ -4700,7 +4295,7 @@ Mã nguồn: E10-Q13. Người quyết định: Trưởng kỹ thuật, chủ c�
 
 ### E10-Q13
 
-[Nguồn, dòng 37](../../../crm-ban-hang/review/questions.md#L37). Nội dung đầy đủ:
+[Nguồn, dòng 38](../../../crm-ban-hang/review/questions.md#L38). Nội dung đầy đủ:
 
 > Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao?
 
@@ -4712,11 +4307,11 @@ Phương án khác đã có:
 
 > Tích hợp theo lô có đối soát được duyệt trước khi mở giao tiếp trực tiếp.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-LEAD-001 / UC-CRM-003; FR-SALE-QUOT-001 / UC-CRM-010; FR-SALE-SAFE-001 / UC-CRM-012; FR-SALE-PRIC-001 / UC-CRM-016
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-153"></a>
 
@@ -4728,7 +4323,7 @@ Mã nguồn: E10-Q14. Người quyết định: Giám đốc, chăm sóc khách,
 
 ### E10-Q14
 
-[Nguồn, dòng 38](../../../crm-ban-hang/review/questions.md#L38). Nội dung đầy đủ:
+[Nguồn, dòng 39](../../../crm-ban-hang/review/questions.md#L39). Nội dung đầy đủ:
 
 > Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu?
 
@@ -4740,11 +4335,11 @@ Phương án khác đã có:
 
 > Đối chiếu nhiều nguồn vận hành/kế toán rồi người có thẩm quyền duyệt danh sách thống nhất.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-CUS-VIEW-001 / UC-CRM-001; FR-SALE-ACTV-001 / UC-CRM-014
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-154"></a>
 
@@ -4756,7 +4351,7 @@ Mã nguồn: E11-Q01. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q01
 
-[Nguồn, dòng 25](../../../mua-hang-san-xuat/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../mua-hang-san-xuat/review/questions.md#L26). Nội dung đầy đủ:
 
 > Nhu cầu mua có trừ tồn khả dụng, hàng đang về và dự phòng không? Ngưỡng nào được dùng?
 
@@ -4766,13 +4361,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-074; không tính lượng mua ròng khi thiếu chính sách.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q21. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-155"></a>
 
@@ -4784,7 +4379,7 @@ Mã nguồn: E11-Q03. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q03
 
-[Nguồn, dòng 27](../../../mua-hang-san-xuat/review/questions.md#L27). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../mua-hang-san-xuat/review/questions.md#L28). Nội dung đầy đủ:
 
 > Lô đông lạnh/khô cần mã, hạn dùng, vị trí, đơn vị và quy tắc xuất nào?
 
@@ -4794,13 +4389,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Ghi lô chi tiết, phân bổ và xuất kho BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q21. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-156"></a>
 
@@ -4812,7 +4407,7 @@ Mã nguồn: E11-Q04. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q04
 
-[Nguồn, dòng 28](../../../mua-hang-san-xuat/review/questions.md#L28). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../mua-hang-san-xuat/review/questions.md#L29). Nội dung đầy đủ:
 
 > Nhận thiếu/thừa, nhiều lần, hàng hỏng, trả lại và chỉnh phiếu được xử lý ra sao?
 
@@ -4822,13 +4417,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Công nợ và đối chiếu thực mua còn thiếu căn cứ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q23. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-157"></a>
 
@@ -4840,7 +4435,7 @@ Mã nguồn: E11-Q05. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q05
 
-[Nguồn, dòng 29](../../../mua-hang-san-xuat/review/questions.md#L29). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../mua-hang-san-xuat/review/questions.md#L30). Nội dung đầy đủ:
 
 > Chụp ảnh nào, lúc nào, ai xác nhận; lưu bao lâu; có cần OCR hoặc làm việc offline không?
 
@@ -4850,13 +4445,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chứng từ thực và điều kiện hoàn tất phiếu BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q23. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-158"></a>
 
@@ -4868,7 +4463,7 @@ Mã nguồn: E11-Q06. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q06
 
-[Nguồn, dòng 30](../../../mua-hang-san-xuat/review/questions.md#L30). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../mua-hang-san-xuat/review/questions.md#L31). Nội dung đầy đủ:
 
 > Công nợ NCC ghi nhận theo sự kiện nào; kỳ đối chiếu, số đầu kỳ, thanh toán và điều chỉnh có căn cứ nào?
 
@@ -4878,13 +4473,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không tự tạo lịch trả nợ hoặc bù trừ; số dư/kỳ chính thức BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q24. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-159"></a>
 
@@ -4896,7 +4491,7 @@ Mã nguồn: E11-Q07. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q07
 
-[Nguồn, dòng 31](../../../mua-hang-san-xuat/review/questions.md#L31). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../mua-hang-san-xuat/review/questions.md#L32). Nội dung đầy đủ:
 
 > Thực mua được gán cho ngày phục vụ/cơ sở thế nào khi mua nhiều ngày, chuyển kho hoặc mua chung?
 
@@ -4906,13 +4501,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-076 không có tỷ lệ chính thức cho dòng chưa phân bổ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q25. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-160"></a>
 
@@ -4924,7 +4519,7 @@ Mã nguồn: E11-Q08. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q08
 
-[Nguồn, dòng 32](../../../mua-hang-san-xuat/review/questions.md#L32). Nội dung đầy đủ:
+[Nguồn, dòng 33](../../../mua-hang-san-xuat/review/questions.md#L33). Nội dung đầy đủ:
 
 > BO-02 dùng mẫu số, dấu/giá trị tuyệt đối, tập ngày và xử lý ngày không doanh thu như thế nào?
 
@@ -4934,13 +4529,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > R11 BLOCKED tới khi có công thức đo và dữ liệu thật; không dùng chênh tương đối 3 %.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q25. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-161"></a>
 
@@ -4952,7 +4547,7 @@ Mã nguồn: E11-Q09. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q09
 
-[Nguồn, dòng 33](../../../mua-hang-san-xuat/review/questions.md#L33). Nội dung đầy đủ:
+[Nguồn, dòng 34](../../../mua-hang-san-xuat/review/questions.md#L34). Nội dung đầy đủ:
 
 > Phân ca cần vai trò, năng lực, ca trùng và cách thay người như thế nào?
 
@@ -4962,13 +4557,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Kiểm đủ nhân lực và phân ca chính thức BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-162"></a>
 
@@ -4980,7 +4575,7 @@ Mã nguồn: E11-Q10. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q10
 
-[Nguồn, dòng 34](../../../mua-hang-san-xuat/review/questions.md#L34). Nội dung đầy đủ:
+[Nguồn, dòng 35](../../../mua-hang-san-xuat/review/questions.md#L35). Nội dung đầy đủ:
 
 > Checklist trước giao có mục nào; ai kiểm và ai cho phép giao khi có lỗi?
 
@@ -4990,13 +4585,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Cổng sẵn sàng giao và bàn giao E7 BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-163"></a>
 
@@ -5008,7 +4603,7 @@ Mã nguồn: E11-Q11. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q11
 
-[Nguồn, dòng 35](../../../mua-hang-san-xuat/review/questions.md#L35). Nội dung đầy đủ:
+[Nguồn, dòng 36](../../../mua-hang-san-xuat/review/questions.md#L36). Nội dung đầy đủ:
 
 > Mẫu lưu theo bữa hay từng món; lượng mẫu, nhiệt độ, hạn lưu, hủy mẫu và bằng chứng là gì?
 
@@ -5018,13 +4613,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > R11 cần 100% bữa có mẫu lưu, nhưng xác nhận mẫu hợp lệ còn BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-164"></a>
 
@@ -5036,7 +4631,7 @@ Mã nguồn: E11-Q12. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q12
 
-[Nguồn, dòng 36](../../../mua-hang-san-xuat/review/questions.md#L36). Nội dung đầy đủ:
+[Nguồn, dòng 37](../../../mua-hang-san-xuat/review/questions.md#L37). Nội dung đầy đủ:
 
 > Thay món tác động kế hoạch đã chốt/đang sản xuất và thông báo người liên quan thế nào?
 
@@ -5046,13 +4641,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Áp dụng thay đổi xuống E6/E7 BLOCKED; không quyết CG05/06/07.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q27. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-165"></a>
 
@@ -5064,7 +4659,7 @@ Mã nguồn: E11-Q13. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q13
 
-[Nguồn, dòng 37](../../../mua-hang-san-xuat/review/questions.md#L37). Nội dung đầy đủ:
+[Nguồn, dòng 38](../../../mua-hang-san-xuat/review/questions.md#L38). Nội dung đầy đủ:
 
 > Danh sách quyền E11, chuẩn API, khóa chống trùng, lưu receipt, xử lý đồng thời và tải nào được duyệt?
 
@@ -5074,13 +4669,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Kiểm tích hợp/độ bền và profile tải BLOCKED; E1-Q01–05 giữ mở.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q28. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-166"></a>
 
@@ -5092,7 +4687,7 @@ Mã nguồn: E11-Q14. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q14
 
-[Nguồn, dòng 38](../../../mua-hang-san-xuat/review/questions.md#L38). Nội dung đầy đủ:
+[Nguồn, dòng 39](../../../mua-hang-san-xuat/review/questions.md#L39). Nội dung đầy đủ:
 
 > Nhận hàng có cập nhật giá E3 không; chọn ngày hiệu lực, nguồn xác nhận VAT và giá có phần lẻ thế nào?
 
@@ -5102,13 +4697,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Port giá chỉ ranh giới; CK/DATA-COST và rounding chưa chốt.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q28. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-167"></a>
 
@@ -5120,7 +4715,7 @@ Mã nguồn: E11-Q15. Người quyết định: chưa rõ. Release: R11. [Buổi
 
 ### E11-Q15
 
-[Nguồn, dòng 39](../../../mua-hang-san-xuat/review/questions.md#L39). Nội dung đầy đủ:
+[Nguồn, dòng 40](../../../mua-hang-san-xuat/review/questions.md#L40). Nội dung đầy đủ:
 
 > Căn cứ dị ứng dùng cho kiểm thay món là gì khi không mở hồ sơ sức khỏe cá nhân?
 
@@ -5130,13 +4725,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Không tạo form sức khỏe; kiểm thay món thực BLOCKED khi thiếu dữ liệu/rule đã duyệt.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q27. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-168"></a>
 
@@ -5148,7 +4743,7 @@ Mã nguồn: E12-Q01. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q01
 
-[Nguồn, dòng 25](../../../phan-hoi-bao-cao/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../phan-hoi-bao-cao/review/questions.md#L26). Nội dung đầy đủ:
 
 > Thang đánh giá, tiêu chí, cách gộp điểm và thời điểm được đánh giá là gì?
 
@@ -5158,13 +4753,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-FB-RATE-001; nhận điểm và thống kê đánh giá thật BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-169"></a>
 
@@ -5176,7 +4771,7 @@ Mã nguồn: E12-Q02. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q02
 
-[Nguồn, dòng 26](../../../phan-hoi-bao-cao/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../phan-hoi-bao-cao/review/questions.md#L27). Nội dung đầy đủ:
 
 > Ai được gửi/xem phản hồi; xác minh QR, số lần gửi, sửa/rút, ẩn danh và trùng xử lý ra sao?
 
@@ -5186,13 +4781,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-079; E6 CG01/08 và quyền xem danh tính còn chờ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-170"></a>
 
@@ -5204,7 +4799,7 @@ Mã nguồn: E12-Q03. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q03
 
-[Nguồn, dòng 27](../../../phan-hoi-bao-cao/review/questions.md#L27). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../phan-hoi-bao-cao/review/questions.md#L28). Nội dung đầy đủ:
 
 > Khiếu nại có danh mục, SLA, phân công, bằng chứng và điều kiện đóng/mở lại nào?
 
@@ -5214,13 +4809,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-FB-CASE-001; xử lý/đóng thật BLOCKED; không tự điều chỉnh tiền E7.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-171"></a>
 
@@ -5232,7 +4827,7 @@ Mã nguồn: E12-Q04. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q04
 
-[Nguồn, dòng 28](../../../phan-hoi-bao-cao/review/questions.md#L28). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../phan-hoi-bao-cao/review/questions.md#L29). Nội dung đầy đủ:
 
 > Mẫu số tỷ lệ chọn là người được mời chọn, số suất hay chỉ người đã chọn; tập ngày/ca, đổi/hủy/chọn hộ xử lý thế nào?
 
@@ -5242,13 +4837,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-FB-SELR-001; R12-CHOICE và xếp hạng tỷ lệ BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q30. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-172"></a>
 
@@ -5260,7 +4855,7 @@ Mã nguồn: E12-Q05. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q05
 
-[Nguồn, dòng 29](../../../phan-hoi-bao-cao/review/questions.md#L29). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../phan-hoi-bao-cao/review/questions.md#L30). Nội dung đầy đủ:
 
 > Đề xuất cải tiến từ phản hồi được ai review, dùng cửa sổ quan sát nào, chuyển MENU ra sao?
 
@@ -5270,13 +4865,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-FB-PROP-001; xếp hạng/tự chuyển adapter chưa có căn cứ.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q30. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-173"></a>
 
@@ -5288,7 +4883,7 @@ Mã nguồn: E12-Q06. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q06
 
-[Nguồn, dòng 30](../../../phan-hoi-bao-cao/review/questions.md#L30). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../phan-hoi-bao-cao/review/questions.md#L31). Nội dung đầy đủ:
 
 > Danh mục chỉ số và định nghĩa từng dashboard PER-05/06/07/08 được chọn thế nào?
 
@@ -5298,13 +4893,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-RPT-ROLE-001; R12-DASH cần manifest chỉ số được duyệt.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-174"></a>
 
@@ -5316,7 +4911,7 @@ Mã nguồn: E12-Q07. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q07
 
-[Nguồn, dòng 31](../../../phan-hoi-bao-cao/review/questions.md#L31). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../phan-hoi-bao-cao/review/questions.md#L32). Nội dung đầy đủ:
 
 > Ai được xem cost, giá nhập, doanh thu, biên lợi nhuận và danh tính người phản hồi trong từng scope?
 
@@ -5326,13 +4921,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-RPT-CPCT-001, FR-AIO-DQA-001; ma trận quyền thật BLOCKED; E10-Q15 vẫn mở.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-175"></a>
 
@@ -5344,7 +4939,7 @@ Mã nguồn: E12-Q08. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q08
 
-[Nguồn, dòng 32](../../../phan-hoi-bao-cao/review/questions.md#L32). Nội dung đầy đủ:
+[Nguồn, dòng 33](../../../phan-hoi-bao-cao/review/questions.md#L33). Nội dung đầy đủ:
 
 > Cost % theo khách dùng tập ghép, nguồn số suất, phân bổ, mẫu số và trọng số nào; xử lý thiếu/0 thế nào?
 
@@ -5354,13 +4949,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-081 theo khách BLOCKED; E11-Q07/08, O-01 và E7 không tự chốt.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-176"></a>
 
@@ -5372,7 +4967,7 @@ Mã nguồn: E12-Q09. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q09
 
-[Nguồn, dòng 33](../../../phan-hoi-bao-cao/review/questions.md#L33). Nội dung đầy đủ:
+[Nguồn, dòng 34](../../../phan-hoi-bao-cao/review/questions.md#L34). Nội dung đầy đủ:
 
 > Đầu vào, phạm vi và bằng chứng review đề xuất FEAT-082/083 là gì?
 
@@ -5382,13 +4977,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Runtime/duyệt đề xuất thật BLOCKED; kế thừa AIO-Q01–06, không trả lời lại.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q32. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-177"></a>
 
@@ -5400,7 +4995,7 @@ Mã nguồn: E12-Q10. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q10
 
-[Nguồn, dòng 34](../../../phan-hoi-bao-cao/review/questions.md#L34). Nội dung đầy đủ:
+[Nguồn, dòng 35](../../../phan-hoi-bao-cao/review/questions.md#L35). Nội dung đầy đủ:
 
 > Giá lệch so với giá nào, theo đơn vị/VAT/kỳ nào; ngưỡng và hành vi cảnh báo là gì?
 
@@ -5410,13 +5005,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-PDEV-001; cảnh báo chính thức BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q32. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-178"></a>
 
@@ -5428,7 +5023,7 @@ Mã nguồn: E12-Q11. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q11
 
-[Nguồn, dòng 35](../../../phan-hoi-bao-cao/review/questions.md#L35). Nội dung đầy đủ:
+[Nguồn, dòng 36](../../../phan-hoi-bao-cao/review/questions.md#L36). Nội dung đầy đủ:
 
 > FEAT-084 được đọc trường CRM nào và ai review nhắc việc/nội dung báo giá nháp?
 
@@ -5438,13 +5033,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-CRMS-001/CRMQ-001; contract đọc/review chờ, không sửa E10.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q33. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-179"></a>
 
@@ -5456,7 +5051,7 @@ Mã nguồn: E12-Q12. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q12
 
-[Nguồn, dòng 36](../../../phan-hoi-bao-cao/review/questions.md#L36). Nội dung đầy đủ:
+[Nguồn, dòng 37](../../../phan-hoi-bao-cao/review/questions.md#L37). Nội dung đầy đủ:
 
 > FEAT-085 cho phép hỏi chỉ số nào, độ chi tiết nào và cách xử lý truy vấn có thể suy ngược số bị cấm?
 
@@ -5466,13 +5061,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-AIO-DQA-001; rubric số liệu và kiểm suy ngược cần review.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q33. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-180"></a>
 
@@ -5484,7 +5079,7 @@ Mã nguồn: E12-Q13. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q13
 
-[Nguồn, dòng 37](../../../phan-hoi-bao-cao/review/questions.md#L37). Nội dung đầy đủ:
+[Nguồn, dòng 38](../../../phan-hoi-bao-cao/review/questions.md#L38). Nội dung đầy đủ:
 
 > Nhóm người ăn phi y tế, nguồn mục tiêu, chỉ số/ngưỡng và thời kỳ áp dụng là gì?
 
@@ -5494,13 +5089,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-NUTR-GRPT-001/GRPC-001; không tự đặt kcal hoặc dung sai.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q34. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-181"></a>
 
@@ -5512,7 +5107,7 @@ Mã nguồn: E12-Q14. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q14
 
-[Nguồn, dòng 38](../../../phan-hoi-bao-cao/review/questions.md#L38). Nội dung đầy đủ:
+[Nguồn, dòng 39](../../../phan-hoi-bao-cao/review/questions.md#L39). Nội dung đầy đủ:
 
 > Ai duyệt/kích hoạt mục tiêu nhóm; ưu tiên mục tiêu trùng, hiệu lực và kết quả kiểm có chặn công bố không?
 
@@ -5522,13 +5117,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-086 activation và áp kết quả chính thức BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q34. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-182"></a>
 
@@ -5540,7 +5135,7 @@ Mã nguồn: E12-Q15. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q15
 
-[Nguồn, dòng 39](../../../phan-hoi-bao-cao/review/questions.md#L39). Nội dung đầy đủ:
+[Nguồn, dòng 40](../../../phan-hoi-bao-cao/review/questions.md#L40). Nội dung đầy đủ:
 
 > Nội dung đồng ý nhật ký, quyền chủ thể, rút đồng ý và phạm vi dữ liệu tối thiểu được duyệt thế nào?
 
@@ -5550,13 +5145,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FEAT-087 nhận thật BLOCKED; không mở O-03.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-183"></a>
 
@@ -5568,7 +5163,7 @@ Mã nguồn: E12-Q16. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q16
 
-[Nguồn, dòng 40](../../../phan-hoi-bao-cao/review/questions.md#L40). Nội dung đầy đủ:
+[Nguồn, dòng 41](../../../phan-hoi-bao-cao/review/questions.md#L41). Nội dung đầy đủ:
 
 > Nhật ký lưu bao lâu; xóa nội dung, bản sao, cache và audit cá nhân được chứng minh thế nào?
 
@@ -5578,13 +5173,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-NUTR-DDEL-001; vận hành xóa/retention BLOCKED.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-184"></a>
 
@@ -5596,7 +5191,7 @@ Mã nguồn: E12-Q17. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q17
 
-[Nguồn, dòng 41](../../../phan-hoi-bao-cao/review/questions.md#L41). Nội dung đầy đủ:
+[Nguồn, dòng 42](../../../phan-hoi-bao-cao/review/questions.md#L42). Nội dung đầy đủ:
 
 > Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào?
 
@@ -5606,13 +5201,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > FR-NUTR-DREC-001; nhận bữa thật BLOCKED; phần xem/xóa và ranh giới vẫn thiết kế độc lập.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-185"></a>
 
@@ -5624,7 +5219,7 @@ Mã nguồn: E12-Q18. Người quyết định: chưa rõ. Release: R12. [Buổi
 
 ### E12-Q18
 
-[Nguồn, dòng 42](../../../phan-hoi-bao-cao/review/questions.md#L42). Nội dung đầy đủ:
+[Nguồn, dòng 43](../../../phan-hoi-bao-cao/review/questions.md#L43). Nội dung đầy đủ:
 
 > Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào?
 
@@ -5634,13 +5229,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Freeze API, tích hợp, race và kiểm tải BLOCKED; E1-Q01–05/AIO-Q giữ nguyên.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q36. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-186"></a>
 
@@ -5652,7 +5247,7 @@ Mã nguồn: E13-Q01. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q01
 
-[Nguồn, dòng 25](../../../chi-phi-loi-nhuan/review/questions.md#L25). Nội dung đầy đủ:
+[Nguồn, dòng 26](../../../chi-phi-loi-nhuan/review/questions.md#L26). Nội dung đầy đủ:
 
 > Danh mục loại chi phí, tiêu chí trực tiếp/chung và chống trùng với khoản khoán E3 là gì?
 
@@ -5662,13 +5257,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Ghi nhận chính thức và tổng chi phí; FR-EXP-COST-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q37. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-187"></a>
 
@@ -5680,7 +5275,7 @@ Mã nguồn: E13-Q02. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q02
 
-[Nguồn, dòng 26](../../../chi-phi-loi-nhuan/review/questions.md#L26). Nội dung đầy đủ:
+[Nguồn, dòng 27](../../../chi-phi-loi-nhuan/review/questions.md#L27). Nội dung đầy đủ:
 
 > Kỳ chi phí có biên ngày, múi giờ, lịch khóa và người có quyền khóa nào?
 
@@ -5690,13 +5285,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Khóa kỳ và đồng bộ kỳ E7; FR-EXP-PER-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q37. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-188"></a>
 
@@ -5708,7 +5303,7 @@ Mã nguồn: E13-Q03. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q03
 
-[Nguồn, dòng 27](../../../chi-phi-loi-nhuan/review/questions.md#L27). Nội dung đầy đủ:
+[Nguồn, dòng 28](../../../chi-phi-loi-nhuan/review/questions.md#L28). Nội dung đầy đủ:
 
 > Nguồn giờ công thực tế và cách xác nhận giờ theo người/cơ sở/ca là gì?
 
@@ -5718,13 +5313,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chấm công chính thức; E11-Q09; FR-EXP-TIME-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q38. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-189"></a>
 
@@ -5736,7 +5331,7 @@ Mã nguồn: E13-Q04. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q04
 
-[Nguồn, dòng 28](../../../chi-phi-loi-nhuan/review/questions.md#L28). Nội dung đầy đủ:
+[Nguồn, dòng 29](../../../chi-phi-loi-nhuan/review/questions.md#L29). Nội dung đầy đủ:
 
 > Đơn giá nhân công hoặc bảng lương nào được dùng; hiệu lực, giờ đặc biệt, sửa sai xử lý ra sao?
 
@@ -5746,13 +5341,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Chi phí nhân công; FR-EXP-LAB-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q38. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-190"></a>
 
@@ -5760,11 +5355,11 @@ Tác động riêng cho từng lựa chọn chưa được nguồn phân định
 
 Cần quyết định: Giám đốc duyệt phương pháp phân bổ nào, cơ sở tính, phạm vi và thời gian hiệu lực ra sao?
 
-Mã nguồn: E13-Q05. Người quyết định: chưa rõ. Release: R13. [Buổi 5](meeting-agenda.md#buoi-5).
+Mã nguồn: E13-Q05. Người quyết định: Giám đốc. Release: R13. [Buổi 5](meeting-agenda.md#buoi-5).
 
 ### E13-Q05
 
-[Nguồn, dòng 29](../../../chi-phi-loi-nhuan/review/questions.md#L29). Nội dung đầy đủ:
+[Nguồn, dòng 30](../../../chi-phi-loi-nhuan/review/questions.md#L30). Nội dung đầy đủ:
 
 > Giám đốc duyệt phương pháp phân bổ nào, cơ sở tính, phạm vi và thời gian hiệu lực ra sao?
 
@@ -5774,13 +5369,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Phân bổ và lợi nhuận khách BLOCKED; FR-EXP-METH-001, FR-EXP-APRV-001, FR-EXP-ALLOC-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Căn cứ vai trò: docs/gia-phat/02-roadmap.md:103. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-191"></a>
 
@@ -5792,7 +5387,7 @@ Mã nguồn: E13-Q06. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q06
 
-[Nguồn, dòng 30](../../../chi-phi-loi-nhuan/review/questions.md#L30). Nội dung đầy đủ:
+[Nguồn, dòng 31](../../../chi-phi-loi-nhuan/review/questions.md#L31). Nội dung đầy đủ:
 
 > Chi phí chung cấp công ty được đưa về cơ sở nào và ở bước nào?
 
@@ -5802,13 +5397,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Tổng cơ sở và tổng công ty; FR-EXP-RECON-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q39. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-192"></a>
 
@@ -5820,7 +5415,7 @@ Mã nguồn: E13-Q07. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q07
 
-[Nguồn, dòng 31](../../../chi-phi-loi-nhuan/review/questions.md#L31). Nội dung đầy đủ:
+[Nguồn, dòng 32](../../../chi-phi-loi-nhuan/review/questions.md#L32). Nội dung đầy đủ:
 
 > Khách nhiều cơ sở, chuyển cơ sở và khách gộp ở E10 giữ khóa đối chiếu thế nào?
 
@@ -5830,13 +5425,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Tổng theo khách nhiều cơ sở; FR-EXP-PROF-001.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q39. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-193"></a>
 
@@ -5848,7 +5443,7 @@ Mã nguồn: E13-Q09. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q09
 
-[Nguồn, dòng 33](../../../chi-phi-loi-nhuan/review/questions.md#L33). Nội dung đầy đủ:
+[Nguồn, dòng 34](../../../chi-phi-loi-nhuan/review/questions.md#L34). Nội dung đầy đủ:
 
 > Làm tròn, phần dư, độ chính xác tiền và mẫu số bằng 0 được xử lý thế nào?
 
@@ -5858,13 +5453,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Phân bổ thực và biên lợi nhuận; không mượn dung sai Cost.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q40. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-194"></a>
 
@@ -5876,7 +5471,7 @@ Mã nguồn: E13-Q11. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q11
 
-[Nguồn, dòng 35](../../../chi-phi-loi-nhuan/review/questions.md#L35). Nội dung đầy đủ:
+[Nguồn, dòng 36](../../../chi-phi-loi-nhuan/review/questions.md#L36). Nội dung đầy đủ:
 
 > Quyền chi tiết PER-07/PER-08 theo cơ sở, nhóm kế toán, retention và audit lương được cấp thế nào?
 
@@ -5886,13 +5481,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Cấp quyền thật/lưu trữ; FR-EXP-SAFE-001; E1-Q01–05.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q42. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-195"></a>
 
@@ -5904,7 +5499,7 @@ Mã nguồn: E13-Q12. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q12
 
-[Nguồn, dòng 36](../../../chi-phi-loi-nhuan/review/questions.md#L36). Nội dung đầy đủ:
+[Nguồn, dòng 37](../../../chi-phi-loi-nhuan/review/questions.md#L37). Nội dung đầy đủ:
 
 > Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào?
 
@@ -5914,13 +5509,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Freeze API/tích hợp/tải; E7-Q08, E10-Q13, E11-Q13, E12-Q18.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q42. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-196"></a>
 
@@ -5932,7 +5527,7 @@ Mã nguồn: E13-Q13. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q13
 
-[Nguồn, dòng 37](../../../chi-phi-loi-nhuan/review/questions.md#L37). Nội dung đầy đủ:
+[Nguồn, dòng 38](../../../chi-phi-loi-nhuan/review/questions.md#L38). Nội dung đầy đủ:
 
 > Định nghĩa và quyền chỉ số lợi nhuận/biên lợi nhuận E13 chuyển sang E12 được duyệt thế nào?
 
@@ -5942,13 +5537,13 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > Biên lợi nhuận và kết nối dashboard; E12-Q06/07/08.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q43. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
 
 <a id="dec-197"></a>
 
@@ -5960,7 +5555,7 @@ Mã nguồn: E13-Q14. Người quyết định: chưa rõ. Release: R13. [Buổi
 
 ### E13-Q14
 
-[Nguồn, dòng 38](../../../chi-phi-loi-nhuan/review/questions.md#L38). Nội dung đầy đủ:
+[Nguồn, dòng 39](../../../chi-phi-loi-nhuan/review/questions.md#L39). Nội dung đầy đủ:
 
 > Bằng chứng R7, R11 hoàn tất và người xác nhận bộ đối chiếu độc lập R13 ở đâu?
 
@@ -5970,10 +5565,905 @@ Phương án khuyến nghị đã có:
 
 Phương án khác đã có:
 
-Chưa tách riêng; các lựa chọn nêu trong câu hỏi nguồn vẫn để mở.
+Chưa tách riêng; không tự chọn.
 
-Tác động / phần chặn được nguồn mô tả:
+Tác động / phần chặn:
 
 > R13 chưa nghiệm thu; không dùng kiểm mock thay dữ liệu thật.
 
-Tác động riêng cho từng lựa chọn chưa được nguồn phân định: cần xác nhận; không dùng tác động chung làm bằng chứng một phương án đã được chọn.
+Thẩm quyền: BA-Q43. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-198"></a>
+
+## DEC-198 — NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
+
+Cần quyết định: NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
+
+Mã nguồn: E1-Q06. Người quyết định: chưa rõ. Release: R5. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E1-Q06
+
+[Nguồn, dòng 28](../../../nen-tang/review/questions.md#L28). Nội dung đầy đủ:
+
+> NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
+
+Phương án khuyến nghị đã có:
+
+> Nguồn đề xuất phản hồi tiến trình đầu; chưa chọn thay NFR gốc.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> BLOCKED kết luận đạt phép đo phản hồi đầu E1/E5.
+
+Thẩm quyền: BA-Q47. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-199"></a>
+
+## DEC-199 — E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
+
+Cần quyết định: E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
+
+Mã nguồn: AIO-Q07. Người quyết định: chưa rõ. Release: R5. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### AIO-Q07
+
+[Nguồn, dòng 20](../../../agent-noi-bo/review/questions.md#L20). Nội dung đầy đủ:
+
+> E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
+
+Phương án khuyến nghị đã có:
+
+> Đối chiếu đề xuất E1-Q06; giữ hai chỉ số riêng, chưa chọn cách đo.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> BLOCKED nghiệm thu phép đo phản hồi đầu; AIO-Q01 và E1-Q06 còn mở.
+
+Thẩm quyền: BA-Q48. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-200"></a>
+
+## DEC-200 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Mã nguồn: E8-Q13. Người quyết định: chưa rõ. Release: R8. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E8-Q13
+
+[Nguồn, dòng 35](../../../website-cong-khai/review/questions.md#L35). Nội dung đầy đủ:
+
+> Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Phương án khuyến nghị đã có:
+
+> Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.
+
+Thẩm quyền: BA-Q49. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-201"></a>
+
+## DEC-201 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Mã nguồn: E9-Q15. Người quyết định: chưa rõ. Release: R9. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E9-Q15
+
+[Nguồn, dòng 37](../../../agent-dinh-duong-vien/review/questions.md#L37). Nội dung đầy đủ:
+
+> Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Phương án khuyến nghị đã có:
+
+> Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.
+
+Thẩm quyền: BA-Q50. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-202"></a>
+
+## DEC-202 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Mã nguồn: E10-Q16. Người quyết định: chưa rõ. Release: R10. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E10-Q16
+
+[Nguồn, dòng 41](../../../crm-ban-hang/review/questions.md#L41). Nội dung đầy đủ:
+
+> Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+
+Phương án khuyến nghị đã có:
+
+> Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.
+
+Thẩm quyền: BA-Q51. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-203"></a>
+
+## DEC-203 — Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
+
+Cần quyết định: Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
+
+Mã nguồn: ORD-Q15. Người quyết định: Chủ sản phẩm, phụ trách dữ liệu. Release: R6. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### ORD-Q15
+
+[Nguồn, dòng 41](../../../chon-mon-order/review/questions.md#L41). Nội dung đầy đủ:
+
+> Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-204"></a>
+
+## DEC-204 — Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
+
+Cần quyết định: Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
+
+Mã nguồn: E9-Q14. Người quyết định: chưa rõ. Release: R9. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E9-Q14
+
+[Nguồn, dòng 36](../../../agent-dinh-duong-vien/review/questions.md#L36). Nội dung đầy đủ:
+
+> Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
+
+Phương án khuyến nghị đã có:
+
+> Giữ gate đóng; sau quyết định mới review phạm vi persona, consent/quyền và contract FEAT-047; không xây nhánh gợi ý trước
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Toàn bộ gợi ý cá nhân/đọc hồ sơ/thu hoặc suy luận sức khỏe
+
+Thẩm quyền: BA-Q20. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-205"></a>
+
+## DEC-205 — Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
+
+Cần quyết định: Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
+
+Mã nguồn: AIO-Q01. Người quyết định: Giám đốc, Tech lead. Release: R5. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### AIO-Q01
+
+[Nguồn, dòng 14](../../../agent-noi-bo/review/questions.md#L14). Nội dung đầy đủ:
+
+> Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> O-04; không có mặc định ngân sách được duyệt
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-206"></a>
+
+## DEC-206 — O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
+
+Cần quyết định: O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
+
+Mã nguồn: E9-Q01. Người quyết định: chưa rõ. Release: R9. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E9-Q01
+
+[Nguồn, dòng 23](../../../agent-dinh-duong-vien/review/questions.md#L23). Nội dung đầy đủ:
+
+> O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
+
+Phương án khuyến nghị đã có:
+
+> So sánh phương án tự quản lý hoặc dịch vụ sau đánh giá dữ liệu; chưa chọn provider/model
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Toàn bộ gọi AI thật, cấu hình chi phí, release R9
+
+Thẩm quyền: BA-Q13. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-207"></a>
+
+## DEC-207 — Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?
+
+Cần quyết định: Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?
+
+Mã nguồn: CK-Q04. Người quyết định: Giám đốc, kế toán. Release: R3. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### CK-Q04
+
+[Nguồn, dòng 94](../../../cost/accounting/business-rules.md#L94). Nội dung đầy đủ:
+
+> Ai được lập/sửa khoản chiết khấu? Ai được duyệt; có phân cấp theo số tiền hoặc tỷ lệ không? Người lập có được tự duyệt không, ai thay khi người duyệt vắng?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-208"></a>
+
+## DEC-208 — Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
+
+Cần quyết định: Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
+
+Mã nguồn: E10-Q03. Người quyết định: Giám đốc và chủ dữ liệu khách. Release: R10. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E10-Q03
+
+[Nguồn, dòng 28](../../../crm-ban-hang/review/questions.md#L28). Nội dung đầy đủ:
+
+> Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
+
+Phương án khuyến nghị đã có:
+
+> Người duyệt khác người lập/sửa cuối; quyền gộp và hoàn tác riêng.
+
+Phương án khác đã có:
+
+> Hội đồng review từng đợt dữ liệu trước khi giao quyền vận hành.
+
+Tác động / phần chặn:
+
+> FR-CUS-DUP-001 / UC-CRM-004; FR-CUS-MRG-001 / UC-CRM-005; FR-CUS-UNDO-001 / UC-CRM-006
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-209"></a>
+
+## DEC-209 — Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
+
+Cần quyết định: Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
+
+Mã nguồn: E11-Q02. Người quyết định: chưa rõ. Release: R11. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E11-Q02
+
+[Nguồn, dòng 27](../../../mua-hang-san-xuat/review/questions.md#L27). Nội dung đầy đủ:
+
+> Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
+
+Phương án khuyến nghị đã có:
+
+> Dùng tách tạo/duyệt của E1; chưa gán vai trò duyệt hoặc hạn mức.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Đơn mua chỉ nháp; phát hành và sửa đơn đã duyệt BLOCKED; O-06 giữ mở.
+
+Thẩm quyền: BA-Q22. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-210"></a>
+
+## DEC-210 — Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
+
+Cần quyết định: Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
+
+Mã nguồn: E13-Q10. Người quyết định: chưa rõ. Release: R13. [Buổi 1](meeting-agenda.md#buoi-1).
+
+### E13-Q10
+
+[Nguồn, dòng 35](../../../chi-phi-loi-nhuan/review/questions.md#L35). Nội dung đầy đủ:
+
+> Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
+
+Phương án khuyến nghị đã có:
+
+> Bút toán riêng gắn bản gốc, lý do và người duyệt khác người lập/sửa cuối; không mở khóa tại E13.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Ghi nhận điều chỉnh chính thức; O-06; FR-EXP-ADJ-001.
+
+Thẩm quyền: BA-Q41. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-211"></a>
+
+## DEC-211 — Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách
+
+Cần quyết định: Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách?
+
+Mã nguồn: E6-CG-01. Người quyết định: BA, phụ trách khách, Tech lead/Auth. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+
+### E6-CG-01
+
+[Nguồn, dòng 7](../../../chon-mon-order/review/contract-gap-register.md#L7). Nội dung đầy đủ:
+
+> Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách
+
+Phương án khuyến nghị đã có:
+
+> Dùng một định danh thành viên nội bộ ổn định gắn danh sách đã được quản lý xác nhận; account và guest nếu được hỗ trợ cùng tham chiếu thành viên đó. Quản lý xác nhận đúng người trước khi cấp liên kết/mã kích hoạt dùng một lần; QR tại điểm chỉ dẫn vào luồng, không tự chứng minh danh tính. Khôi phục/thu hồi phải kiểm lại người nhận và lưu audit. Không dùng mã nhân viên công khai làm mật khẩu.
+
+Phương án khác đã có:
+
+> OTP qua số điện thoại đã xác minh: thuận tiện khôi phục nhưng cần chất lượng dữ liệu số điện thoại và dịch vụ gửi.
+
+Tác động / phần chặn:
+
+> Một người đổi điện thoại vẫn nối về cùng thành viên, không tự sinh người ăn mới; không gộp hai người chỉ vì trùng tên. Ưu điểm: tận dụng danh sách hiện có, chưa đòi số điện thoại cho tất cả. Đánh đổi: quản lý phải bàn giao mã riêng đúng người; không có kênh bàn giao an toàn thì chưa kích hoạt.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-212"></a>
+
+## DEC-212 — Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002
+
+Cần quyết định: Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002?
+
+Mã nguồn: E6-CG-02. Người quyết định: Chủ sản phẩm, BA, Tech lead. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+
+### E6-CG-02
+
+[Nguồn, dòng 8](../../../chon-mon-order/review/contract-gap-register.md#L8). Nội dung đầy đủ:
+
+> Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-213"></a>
+
+## DEC-213 — qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.
+
+Cần quyết định: qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.?
+
+Mã nguồn: NUTR-Q02. Người quyết định: Dinh dưỡng viên, bếp trưởng. Release: R4. [Buổi 3](meeting-agenda.md#buoi-3).
+
+### NUTR-Q02
+
+[Nguồn, dòng 14](../../../dinh-duong/review/questions.md#L14). Nội dung đầy đủ:
+
+> qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> FR-NUTR-CALC-001; công thức khung kế thừa ERD, chưa nghiệm thu dữ liệu
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-214"></a>
+
+## DEC-214 — Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06
+
+Cần quyết định: Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06?
+
+Mã nguồn: E6-CG-05. Người quyết định: Vận hành, người duyệt được chỉ định, BA. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+
+### E6-CG-05
+
+[Nguồn, dòng 11](../../../chon-mon-order/review/contract-gap-register.md#L11). Nội dung đầy đủ:
+
+> Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06
+
+Phương án khuyến nghị đã có:
+
+> Đề xuất lệnh chọn/chốt chỉ hợp lệ khi thời điểm kiểm hạn trong transaction theo đồng hồ server nhỏ hơn deadline hiệu lực; đúng deadline thuộc sau hạn. Thiếu nguồn/counter lệch thì giữ trạng thái cũ và NEEDS_ATTENTION. Vận hành lập yêu cầu xử lý nguồn; người duyệt được chỉ định, khác người tạo/sửa cuối, quyết định ngoại lệ. Retry kỹ thuật không gia hạn.
+
+Phương án khác đã có:
+
+> Xét thời điểm nhận request có bằng chứng đáng tin: thân thiện hơn với độ trễ nhưng cần contract queue/clock và xử lý request tồn đọng.
+
+Tác động / phần chặn:
+
+> Hạn 15:00 chỉ là ví dụ: request tới trước nhưng tới bước kiểm hạn lúc 15:00 không được coi hợp lệ chỉ nhờ giờ gửi. Chọn quy tắc rõ để kiểm race; đánh đổi: người dùng sát hạn có thể bị từ chối dù đã bấm trước hạn. Không dùng ví dụ làm giờ mặc định.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-215"></a>
+
+## DEC-215 — Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?
+
+Cần quyết định: Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?
+
+Mã nguồn: Q-16. Người quyết định: chưa rõ. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+
+### Q-16
+
+[Nguồn, dòng 423](../../00-ke-hoach-tong-the.md#L423). Nội dung đầy đủ:
+
+> Hạn chốt ca trưa 15:00 ngày D-1 và ngưỡng đổi sau chốt (5% / 10 suất / trước 06:00) có đúng thực tế không? Ngưỡng là "nhỏ hơn trong hai" hay "lớn hơn trong hai"?
+
+Phương án khuyến nghị đã có:
+
+Chưa có trong dòng nguồn.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+Chưa phân định tác động theo từng lựa chọn tại dòng nguồn; xem câu nguồn. Phần phụ thuộc BLOCKED, chưa dùng làm bằng chứng lựa chọn.
+
+Thẩm quyền: BA-Q02. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-216"></a>
+
+## DEC-216 — Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14
+
+Cần quyết định: Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14?
+
+Mã nguồn: E6-CG-06. Người quyết định: Bếp, vận hành, BA, Tech lead. Release: R6. [Buổi 4](meeting-agenda.md#buoi-4).
+
+### E6-CG-06
+
+[Nguồn, dòng 12](../../../chon-mon-order/review/contract-gap-register.md#L12). Nội dung đầy đủ:
+
+> Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14
+
+Phương án khuyến nghị đã có:
+
+> Worker tạo bản kế hoạch để kiểm tra; chỉ cho phát hành khi tập nguồn kỳ vọng có căn cứ, không còn nguồn thiếu và các revision được kiểm lại. Bản thiếu/UNKNOWN chỉ phục vụ xử lý, không coi đủ để sản xuất. Đề xuất vận hành được cấp quyền phát hành, bếp trưởng theo scope xác nhận đúng revision, rồi ghi bắt đầu sản xuất bằng thao tác riêng. Bản mới cần xác nhận riêng; ack cũ không áp cho bản mới.
+
+Phương án khác đã có:
+
+> Cho phát hành một phần với quyết định ngoại lệ, nhãn thiếu và người chịu trách nhiệm: linh hoạt nhưng tăng rủi ro thiếu suất, cần chính sách riêng.
+
+Tác động / phần chặn:
+
+> A+B+C là nguồn kỳ vọng nhưng mới có A+B: không gọi 2/2 là đủ. Bản 6 không kế thừa xác nhận bản 5. Giảm nguy cơ bếp dùng thiếu nguồn/bản cũ; đánh đổi: một nguồn chậm có thể giữ cả lần phát hành.
+
+Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-217"></a>
+
+## DEC-217 — Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
+
+Cần quyết định: Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
+
+Mã nguồn: E9-Q04. Người quyết định: chưa rõ. Release: R9. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E9-Q04
+
+[Nguồn, dòng 26](../../../agent-dinh-duong-vien/review/questions.md#L26). Nội dung đầy đủ:
+
+> Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
+
+Phương án khuyến nghị đã có:
+
+> Projection giá public riêng hoặc không hiển thị cho đến khi có nguồn; không dùng price_cap làm giá bán
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Hiển thị giá suất; không cam kết giá
+
+Thẩm quyền: BA-Q15. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-218"></a>
+
+## DEC-218 — FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
+
+Cần quyết định: FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
+
+Mã nguồn: E9-Q11. Người quyết định: chưa rõ. Release: R9. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E9-Q11
+
+[Nguồn, dòng 33](../../../agent-dinh-duong-vien/review/questions.md#L33). Nội dung đầy đủ:
+
+> FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
+
+Phương án khuyến nghị đã có:
+
+> Có thể dùng chung port kiểm thuần, hoặc bộ dựng riêng; không dùng lại credential/quota AIO
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Chốt adapter/bộ dựng và reuse; không sửa FEAT-057
+
+Thẩm quyền: BA-Q19. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-219"></a>
+
+## DEC-219 — Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
+
+Cần quyết định: Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
+
+Mã nguồn: E13-Q08. Người quyết định: chưa rõ. Release: R13. [Buổi 5](meeting-agenda.md#buoi-5).
+
+### E13-Q08
+
+[Nguồn, dòng 33](../../../chi-phi-loi-nhuan/review/questions.md#L33). Nội dung đầy đủ:
+
+> Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
+
+Phương án khuyến nghị đã có:
+
+> Cần manifest thành phần và định nghĩa có phiên bản; không suy lợi nhuận bằng doanh thu trừ riêng cost nguyên liệu.
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Kết quả chính thức, công thức lợi nhuận; O-01, CK-Q01–10, E10-Q15; FR-EXP-RECON-001.
+
+Thẩm quyền: BA-Q40. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+<a id="dec-220"></a>
+
+## DEC-220 — Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
+
+Cần quyết định: Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
+
+Mã nguồn: E9-Q12. Người quyết định: chưa rõ. Release: R9. [Buổi 7](meeting-agenda.md#buoi-7).
+
+### E9-Q12
+
+[Nguồn, dòng 34](../../../agent-dinh-duong-vien/review/questions.md#L34). Nội dung đầy đủ:
+
+> Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
+
+Phương án khuyến nghị đã có:
+
+> Projection có phiên bản nguồn, không coi thiếu là 0 hoặc không dị ứng; refresh phải kiểm lại
+
+Phương án khác đã có:
+
+Chưa tách riêng; không tự chọn.
+
+Tác động / phần chặn:
+
+> Kết quả thật, nhãn đầy đủ, mapping ngày/cỡ
+
+Thẩm quyền: BA-Q15. Trả lời để trống trong [sổ quyết định](decision-register.md); [sổ BA-Q](ba-open-questions.md).
+
+## Ánh xạ toàn bộ DEC cũ → DEC hiện hành
+
+Bảng này giữ mã sống sót nhỏ nhất khi gộp. Nhóm tách có bảng mã nguồn riêng ngay bên dưới; một mã cũ không tự bao phủ câu đã tách.
+
+| DEC cũ | DEC hiện hành | Căn cứ |
+| :--- | :--- | :--- |
+| DEC-01 | [DEC-01](#dec-01) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-02 | [DEC-02](#dec-02) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-03 | [DEC-03](#dec-03) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-04 | [DEC-04](#dec-04) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-05 | [DEC-05](#dec-05) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-06 | [DEC-06](#dec-06) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-07 | [DEC-07](#dec-07) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-08 | [DEC-08](#dec-08) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-09 | [DEC-09](#dec-09) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-10 | [DEC-10](#dec-10) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-11 | [DEC-11](#dec-11) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-12 | [DEC-12](#dec-12) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-13 | [DEC-13](#dec-13) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-14 | [DEC-14](#dec-14) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-15 | [DEC-15](#dec-15) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-16 | [DEC-16](#dec-16) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-17 | [DEC-17](#dec-17) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-18 | [DEC-18](#dec-18) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-19 | [DEC-19](#dec-19) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-20 | [DEC-20](#dec-20) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-21 | [DEC-21](#dec-21) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-22 | [DEC-22](#dec-22) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-23 | [DEC-23](#dec-23) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-24 | [DEC-24](#dec-24) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-25 | [DEC-25](#dec-25) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-26 | [DEC-26](#dec-26) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-27 | [DEC-27](#dec-27) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-28 | [DEC-28](#dec-28) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-29 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-30 | [DEC-30](#dec-30) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-31 | [DEC-31](#dec-31) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-32 | [DEC-32](#dec-32) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-33 | [DEC-33](#dec-33) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-34 | [DEC-34](#dec-34) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-35 | [DEC-35](#dec-35) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-36 | [DEC-36](#dec-36) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-37 | [DEC-37](#dec-37) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-38 | [DEC-38](#dec-38) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-39 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-40 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-41 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-42 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-43 | [DEC-43](#dec-43) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-44 | [DEC-27](#dec-27) | Một bản quy tắc DL-01 có phiên bản và chữ ký Người soạn docx; phải chứa đủ giá trị của từng câu con. |
+| DEC-45 | [DEC-45](#dec-45) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-46 | [DEC-46](#dec-46) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-47 | [DEC-47](#dec-47) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-48 | [DEC-48](#dec-48) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-49 | [DEC-49](#dec-49) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-50 | [DEC-50](#dec-50) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-51 | [DEC-51](#dec-51) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-52 | [DEC-52](#dec-52) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-53 | [DEC-53](#dec-53) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-54 | [DEC-54](#dec-54) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-55 | [DEC-55](#dec-55) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-56 | [DEC-56](#dec-56) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-57 | [DEC-57](#dec-57) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-58 | [DEC-58](#dec-58) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-59 | [DEC-59](#dec-59) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-60 | [DEC-60](#dec-60) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-61 | [DEC-61](#dec-61) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-62 | [DEC-62](#dec-62) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-63 | [DEC-63](#dec-63) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-64 | [DEC-64](#dec-64) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-65 | [DEC-65](#dec-65) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-66 | [DEC-66](#dec-66) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-67 | [DEC-67](#dec-67) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-68 | [DEC-68](#dec-68) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-69 | [DEC-69](#dec-69) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-70 | [DEC-70](#dec-70) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-71 | [DEC-71](#dec-71) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-72 | [DEC-72](#dec-72) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-73 | [DEC-73](#dec-73) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-74 | [DEC-74](#dec-74) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-75 | [DEC-75](#dec-75) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-76 | [DEC-76](#dec-76) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-77 | [DEC-77](#dec-77) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-78 | [DEC-78](#dec-78) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-79 | [DEC-79](#dec-79) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-80 | [DEC-80](#dec-80) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-81 | [DEC-81](#dec-81) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-82 | [DEC-82](#dec-82) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-83 | [DEC-83](#dec-83) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-84 | [DEC-84](#dec-84) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-85 | [DEC-85](#dec-85) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-86 | [DEC-86](#dec-86) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-87 | [DEC-87](#dec-87) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-88 | [DEC-88](#dec-88) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-89 | [DEC-89](#dec-89) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-90 | [DEC-90](#dec-90) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-91 | [DEC-91](#dec-91) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-92 | [DEC-92](#dec-92) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-93 | [DEC-93](#dec-93) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-94 | [DEC-94](#dec-94) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-95 | [DEC-95](#dec-95) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-96 | [DEC-96](#dec-96) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-97 | [DEC-97](#dec-97) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-98 | [DEC-98](#dec-98) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-99 | [DEC-99](#dec-99) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-100 | [DEC-100](#dec-100) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-101 | [DEC-101](#dec-101) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-102 | [DEC-102](#dec-102) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-103 | [DEC-103](#dec-103) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-104 | [DEC-104](#dec-104) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-105 | [DEC-105](#dec-105) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-106 | [DEC-106](#dec-106) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-107 | [DEC-107](#dec-107) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-108 | [DEC-108](#dec-108) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-109 | [DEC-109](#dec-109) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-110 | [DEC-110](#dec-110) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-111 | [DEC-111](#dec-111) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-112 | [DEC-112](#dec-112) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-113 | [DEC-113](#dec-113) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-114 | [DEC-114](#dec-114) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-115 | [DEC-115](#dec-115) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-116 | [DEC-116](#dec-116) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-117 | [DEC-117](#dec-117) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-118 | [DEC-118](#dec-118) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-119 | [DEC-119](#dec-119) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-120 | [DEC-120](#dec-120) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-121 | [DEC-121](#dec-121) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-122 | [DEC-122](#dec-122) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-123 | [DEC-123](#dec-123) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-124 | [DEC-124](#dec-124) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-125 | [DEC-125](#dec-125) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-126 | [DEC-126](#dec-126) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-127 | [DEC-127](#dec-127) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-128 | [DEC-128](#dec-128) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-129 | [DEC-129](#dec-129) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-130 | [DEC-130](#dec-130) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-131 | [DEC-131](#dec-131) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-132 | [DEC-132](#dec-132) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-133 | [DEC-133](#dec-133) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-134 | [DEC-134](#dec-134) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-135 | [DEC-135](#dec-135) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-136 | [DEC-136](#dec-136) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-137 | [DEC-137](#dec-137) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-138 | [DEC-138](#dec-138) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-139 | [DEC-139](#dec-139) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-140 | [DEC-140](#dec-140) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-141 | [DEC-141](#dec-141) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-142 | [DEC-142](#dec-142) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-143 | [DEC-143](#dec-143) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-144 | [DEC-144](#dec-144) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-145 | [DEC-145](#dec-145) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-146 | [DEC-146](#dec-146) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-147 | [DEC-147](#dec-147) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-148 | [DEC-148](#dec-148) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-149 | [DEC-149](#dec-149) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-150 | [DEC-150](#dec-150) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-151 | [DEC-151](#dec-151) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-152 | [DEC-152](#dec-152) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-153 | [DEC-153](#dec-153) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-154 | [DEC-154](#dec-154) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-155 | [DEC-155](#dec-155) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-156 | [DEC-156](#dec-156) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-157 | [DEC-157](#dec-157) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-158 | [DEC-158](#dec-158) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-159 | [DEC-159](#dec-159) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-160 | [DEC-160](#dec-160) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-161 | [DEC-161](#dec-161) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-162 | [DEC-162](#dec-162) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-163 | [DEC-163](#dec-163) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-164 | [DEC-164](#dec-164) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-165 | [DEC-165](#dec-165) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-166 | [DEC-166](#dec-166) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-167 | [DEC-167](#dec-167) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-168 | [DEC-168](#dec-168) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-169 | [DEC-169](#dec-169) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-170 | [DEC-170](#dec-170) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-171 | [DEC-171](#dec-171) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-172 | [DEC-172](#dec-172) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-173 | [DEC-173](#dec-173) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-174 | [DEC-174](#dec-174) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-175 | [DEC-175](#dec-175) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-176 | [DEC-176](#dec-176) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-177 | [DEC-177](#dec-177) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-178 | [DEC-178](#dec-178) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-179 | [DEC-179](#dec-179) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-180 | [DEC-180](#dec-180) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-181 | [DEC-181](#dec-181) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-182 | [DEC-182](#dec-182) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-183 | [DEC-183](#dec-183) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-184 | [DEC-184](#dec-184) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-185 | [DEC-185](#dec-185) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-186 | [DEC-186](#dec-186) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-187 | [DEC-187](#dec-187) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-188 | [DEC-188](#dec-188) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-189 | [DEC-189](#dec-189) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-190 | [DEC-190](#dec-190) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-191 | [DEC-191](#dec-191) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-192 | [DEC-192](#dec-192) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-193 | [DEC-193](#dec-193) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-194 | [DEC-194](#dec-194) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-195 | [DEC-195](#dec-195) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-196 | [DEC-196](#dec-196) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+| DEC-197 | [DEC-197](#dec-197) | Giữ nguyên: chưa đủ căn cứ một câu trả lời thay cho quyết định khác. |
+
+## Câu nguồn tách khỏi nhóm chủ đề
+
+| DEC cũ | Mã nguồn | DEC hiện hành | Lý do |
+| :--- | :--- | :--- | :--- |
+| DEC-01 | ORD-Q15 | [DEC-203](#dec-203) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-01 | E9-Q14 | [DEC-204](#dec-204) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-02 | AIO-Q01 | [DEC-205](#dec-205) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-02 | E9-Q01 | [DEC-206](#dec-206) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-03 | CK-Q04 | [DEC-207](#dec-207) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-03 | E10-Q03 | [DEC-208](#dec-208) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-03 | E11-Q02 | [DEC-209](#dec-209) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-03 | E13-Q10 | [DEC-210](#dec-210) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-07 | E6-CG-01 | [DEC-211](#dec-211) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-08 | E6-CG-02 | [DEC-212](#dec-212) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-09 | NUTR-Q02 | [DEC-213](#dec-213) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-10 | E6-CG-05 | [DEC-214](#dec-214) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-10 | Q-16 | [DEC-215](#dec-215) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-11 | E6-CG-06 | [DEC-216](#dec-216) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-12 | E9-Q04 | [DEC-217](#dec-217) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-13 | E9-Q11 | [DEC-218](#dec-218) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-14 | E13-Q08 | [DEC-219](#dec-219) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+| DEC-15 | E9-Q12 | [DEC-220](#dec-220) | Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng. |
+
+<a id="dec-29"></a>
+
+DEC-29 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.
+
+<a id="dec-39"></a>
+
+DEC-39 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.
+
+<a id="dec-40"></a>
+
+DEC-40 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.
+
+<a id="dec-41"></a>
+
+DEC-41 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.
+
+<a id="dec-42"></a>
+
+DEC-42 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.
+
+<a id="dec-44"></a>
+
+DEC-44 → [DEC-27](#dec-27); mã nguồn còn nguyên, chưa trả lời.

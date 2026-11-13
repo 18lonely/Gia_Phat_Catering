@@ -10,6 +10,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-04; E12-Q18</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -252,6 +258,11 @@
 </tbody></table></div>
 <p>Allowlist này là đề xuất contract, không xác nhận công cụ hiện hữu. FEAT-082 dùng MENU/COST; FEAT-083 dùng COST/PUR và tham chiếu E6; FEAT-084 chỉ CRM và nguồn E10 được phép; FEAT-085 dùng chỉ số được duyệt từ các port đọc. E5 kiểm giao quyền từng tool call, thu hồi giữa lượt và trước output; DB/service grants không cấp quyền ghi nghiệp vụ. E9/AIN không dùng quyền hoặc cache của AIO. Không webhook/callback công khai trong phạm vi; chưa có nhu cầu nên không đặt chữ ký giả.</p>
 <p>Review người thật không đồng nghĩa ghi nghiệp vụ. Muốn chuyển sang E2/E10/E11 phải đi quy trình nguồn riêng sau các gate, chưa đặc tả adapter apply.</p>
+<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
+<blockquote>
+<p>Chờ E12-Q18 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+</blockquote>
 </section><section id="doc-api-data-mapping-md" hidden><p><a href="api/data-mapping.md">Mở Markdown nguồn</a> · api/data-mapping.md</p><h1>Mapping dữ liệu và chỉ số E12</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -723,6 +734,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-06; E12-Q15, E12-Q16, E12-Q17</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -806,6 +823,9 @@
 <p>Nền tảng: <a href="../nen-tang/srs/spec.md">SRS</a>, <a href="../nen-tang/srs/erd.md">ERD</a>, <a href="../nen-tang/srs/schema.dbml">schema</a>; E1 giữ identity/scope/audit, BR-SEC-008/009/010 và NFR-PRIV-001/002. Schema giữ 65 bảng. E1-Q01–05 không đóng.</p>
 <p>R12 cần R6, R7, R10, R11 xong; G-Next vẫn cần bằng chứng BO-05/06/09. Chưa có bằng chứng đạt; mở tài liệu không miễn các điều kiện này. Giữ toàn bộ E8-Q01–12, O-01–O-06, DL-01 và câu nguồn trên, không hỏi lại hoặc chọn thay.</p>
 <p>FEAT-087 độc lập với O-03 vì không đọc eater_health_profiles, không nhận bệnh lý/chỉ số cơ thể, không suy luận và không gợi ý; chỉ sự kiện bữa đã ăn cùng snapshot suất. Chính sách identity/consent/retention/bằng chứng còn BLOCKED, nhưng không làm feature này chỉ gate. Bất kỳ mở rộng FEAT-046/047 là gate-only O-03, ngoài thiết kế hiện tại.</p>
+<blockquote>
+<p>Chờ E12-Q15, E12-Q16, E12-Q17 — XC-06. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-06</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
 </section><section id="doc-review-handoff-md" hidden><p><a href="review/handoff.md">Mở Markdown nguồn</a> · review/handoff.md</p><h1>Bàn giao gói BA nháp E12</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -847,6 +867,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-02; E12-Q08</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -991,6 +1017,9 @@
 <td align="left"></td>
 </tr>
 </tbody></table></div>
+<blockquote>
+<p>Chờ E12-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+</blockquote>
 </section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Từ điển dữ liệu đề xuất E12</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -1003,6 +1032,12 @@
 </tr>
 </thead>
 <tbody><tr>
+<td align="left">0.1.1</td>
+<td align="left">13/11/2026</td>
+<td align="left">BA</td>
+<td align="left">XC-04; E12-Q18</td>
+</tr>
+<tr>
 <td align="left">0.1.0</td>
 <td align="left">12/11/2026</td>
 <td align="left">BA</td>
@@ -1202,6 +1237,11 @@
 </tbody></table></div>
 <p>Trường bổ sung cho từng thực thể là trường logic, chưa freeze tên vật lý, độ dài hoặc DDL. ratingScale/value, category/nội dung/SLA chờ Q01–03; targets/effectiveRange chờ Q13/14; diary consent/retention/evidence chờ Q15–17. Không lưu raw sức khỏe kể cả người dùng cố gửi thêm field: schema đầu vào theo allowlist, không nhận ghi chú sức khỏe. Không thiết kế nội dung hồ sơ FEAT-046/047.</p>
 <p>Provenance gắn bất biến với kết quả; nguồn mới tạo bản kết quả mới, không sửa nhật ký cũ. Chính sách xóa bao gồm bản sao và nội dung cá nhân trong audit cần Q16; không tự chọn thời hạn. <a href="#doc-api-data-mapping-md">Mapping</a>.</p>
+<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
+<blockquote>
+<p>Chờ E12-Q18 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+</blockquote>
 </section><section id="doc-srs-error-matrix-md" hidden><p><a href="srs/error-matrix.md">Mở Markdown nguồn</a> · srs/error-matrix.md</p><h1>Ma trận lỗi E12</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
@@ -5333,4 +5373,4 @@
 <td align="left">E12-Q15/16; E1 NFR-PRIV-001</td>
 </tr>
 </tbody></table></div>
-</section></article></main><script>const sections=[...document.querySelectorAll("article>section")];function show(){let id=location.hash.slice(1);if(!sections.some(s=>s.id===id))id=sections[0].id;sections.forEach(s=>s.hidden=s.id!==id);}window.addEventListener("hashchange",show);show();document.querySelector("#search").oninput=e=>document.querySelectorAll("aside a").forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(e.target.value.toLowerCase()));</script></body></html>
+</section></article></main><script>const sections=[...document.querySelectorAll("article>section")];function show(){let id=location.hash.slice(1);if(!sections.some(s=>s.id===id))id=sections[0].id;sections.forEach(s=>s.hidden=s.id!==id);}window.addEventListener("hashchange",show);show();document.querySelector("#search").oninput=e=>document.querySelectorAll("aside a").forEach(a=>a.hidden=!a.textContent.toLowerCase().includes(e.target.value.toLowerCase()));</script><table aria-label="Lịch sử phiên bản"><tr><th>Phiên bản</th><th>Ngày</th><th>Người thực hiện</th><th>Nội dung</th></tr><tr><td>0.1.1</td><td>13/11/2026</td><td>BA</td><td>Render lại tài liệu XC-01–12; không phê duyệt nghiệp vụ</td></tr></table></body></html>

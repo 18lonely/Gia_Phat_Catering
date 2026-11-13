@@ -1,0 +1,52 @@
+[
+  {
+    "file": "docs/nen-tang/review/questions.md",
+    "code": "E1-Q06",
+    "question": "NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?",
+    "recommendation": "Nguồn đề xuất phản hồi tiến trình đầu; chưa chọn thay NFR gốc.",
+    "impact": "BLOCKED kết luận đạt phép đo phản hồi đầu E1/E5.",
+    "xc": "XC-12",
+    "decisionGroup": "DEC-198",
+    "answer": ""
+  },
+  {
+    "file": "docs/agent-noi-bo/review/questions.md",
+    "code": "AIO-Q07",
+    "question": "E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?",
+    "recommendation": "Đối chiếu đề xuất E1-Q06; giữ hai chỉ số riêng, chưa chọn cách đo.",
+    "impact": "BLOCKED nghiệm thu phép đo phản hồi đầu; AIO-Q01 và E1-Q06 còn mở.",
+    "xc": "XC-12",
+    "decisionGroup": "DEC-199",
+    "answer": ""
+  },
+  {
+    "file": "docs/website-cong-khai/review/questions.md",
+    "code": "E8-Q13",
+    "question": "Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?",
+    "recommendation": "Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.",
+    "impact": "BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.",
+    "xc": "XC-05",
+    "decisionGroup": "DEC-200",
+    "answer": ""
+  },
+  {
+    "file": "docs/agent-dinh-duong-vien/review/questions.md",
+    "code": "E9-Q15",
+    "question": "Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?",
+    "recommendation": "Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.",
+    "impact": "BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.",
+    "xc": "XC-05",
+    "decisionGroup": "DEC-201",
+    "answer": ""
+  },
+  {
+    "file": "docs/crm-ban-hang/review/questions.md",
+    "code": "E10-Q16",
+    "question": "Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?",
+    "recommendation": "Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng.",
+    "impact": "BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic.",
+    "xc": "XC-05",
+    "decisionGroup": "DEC-202",
+    "answer": ""
+  }
+]

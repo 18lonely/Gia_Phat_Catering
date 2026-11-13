@@ -1,14 +1,14 @@
 ---
 id: DOC-E11-API-API-SPEC-MD
 title: Hợp đồng API đề xuất E11
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e11, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Hợp đồng API đề xuất E11
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E11-Q13 |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu E11; giữ câu hỏi chưa có câu trả lời |
 
 ## Phạm vi và quy ước
@@ -230,3 +231,9 @@ Ví dụ lỗi: code ERR-PUR-409-11, message “Nguồn đã thay đổi”, det
 
 
 PriceInput giữ ingredientId, supplierId, kitchenId, quotedUnitPrice, priceBasis, căn cứ VAT và pricingEvidence theo E3. Không nhận priceVnd như số client được tin cậy. Chưa rõ phần lẻ thì BLOCKED normalization, không tự làm tròn. [Catalog máy đọc](endpoint-catalog.json).
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

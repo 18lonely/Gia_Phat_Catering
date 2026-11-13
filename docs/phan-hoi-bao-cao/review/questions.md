@@ -1,14 +1,14 @@
 ---
 id: DOC-E12-REVIEW-QUESTIONS-MD
 title: Câu hỏi mở E12
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e12, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Câu hỏi mở E12
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-02; E12-Q08 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; không đóng câu hỏi nguồn |
 
 Tất cả CHỜ TRẢ LỜI. Cột Trả lời để trống; khuyến nghị chỉ để review, không phải chính sách được chọn. Không hỏi lại người dùng trong phiên.
@@ -40,4 +41,6 @@ Tất cả CHỜ TRẢ LỜI. Cột Trả lời để trống; khuyến nghị c
 | E12-Q16 | Nhật ký lưu bao lâu; xóa nội dung, bản sao, cache và audit cá nhân được chứng minh thế nào? | Kế thừa xóa ≤ 72 giờ của nền; tách receipt/hoàn tất; không đặt retention hoặc xóa giao dịch nguồn. | FR-NUTR-DDEL-001; vận hành xóa/retention BLOCKED. |  |
 | E12-Q17 | Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào? | Cân nhắc xác nhận tự nguyện của người ăn có scope và snapshot; chưa chọn làm chính sách. Không suy từ order/giao/chọn món. | FR-NUTR-DREC-001; nhận bữa thật BLOCKED; phần xem/xóa và ranh giới vẫn thiết kế độc lập. |  |
 | E12-Q18 | Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào? | Adapter theo nguồn, quyền hiện tại và provenance; không tự đặt TTL, retry, quota hoặc chọn hạ tầng. | Freeze API, tích hợp, race và kiểm tải BLOCKED; E1-Q01–05/AIO-Q giữ nguyên. |  |
+
+> Chờ E12-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-02](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 

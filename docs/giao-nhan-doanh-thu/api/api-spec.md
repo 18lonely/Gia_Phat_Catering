@@ -1,13 +1,18 @@
 ---
 id: DOC-E7-API-API-SPEC-MD
 title: API đề xuất E7
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # API đề xuất E7
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E7-Q08 |
+
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -60,3 +65,9 @@ ExportRequest: period/version/templateRef; thiếu mẫu → BLOCKED. Chưa bi�
 ## Lỗi / retry / atomicity
 
 Lỗi chung401/403/404/stale409/dependency503/unknown500 và lỗi miền422 theo [matrix](../srs/error-matrix.md). Kỳ khóa409-02 chặn mọi POST ảnh hưởng snapshot, không chỉ disable nút. Ghi dữ liệu/audit/receipt nguyên tử là đề xuất cần persistence E7-Q08; chưa chọn lock strategy. Mất response=UNKNOWN; đối chiếu trước lệnh mới, không tự retry. Cùng chứng từ không cộng thu hai lần. Không trả token trong log/danh sách.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E7-Q08 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

@@ -1,14 +1,14 @@
 ---
 id: DOC-E10-API-API-SPEC-MD
 title: API và điểm nối đề xuất E10
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [crm, e10, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # API và điểm nối đề xuất E10
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E10-Q13 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E10; giữ mọi quyết định chưa có căn cứ ở trạng thái chờ |
 
 ## Ranh giới và quy ước
@@ -102,3 +103,9 @@ Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu c�
 ## Các hành động chuyển trạng thái chưa có wire contract riêng
 
 Ma trận trạng thái thể hiện các sự kiện nghiệp vụ để review, không khẳng định mọi cạnh đã có route runtime. Gửi/trả duyệt, chấp thuận/thu hồi/hết hạn báo giá và chấm dứt hợp đồng còn E10-Q08/10/13; không tự tạo endpoint hoặc chọn tác vụ nền khi chưa có quyết định. API-CRM-012 chỉ tạo bản phát hành sau kiểm bằng chứng duyệt, không thay toàn bộ quy trình duyệt. API-CRM-014 nhận amendmentRef/amendmentVersion khi kích hoạt một phụ lục thuộc hợp đồng; áp cùng kiểm nguyên tử và hiệu lực với bộ giá đầu. Phần workflow chưa đủ contract giữ BLOCKED, không tính route chưa tồn tại vào catalog.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E10-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

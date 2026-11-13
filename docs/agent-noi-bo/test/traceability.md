@@ -1,9 +1,10 @@
 # Ma trận truy vết — AIO
 
-Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.1 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-12; AIO-Q07 |
 | 0.1.0 | 2026-11-11 | BA | Khởi tạo gói MVP từ PRD/roadmap và thiết kế hiện có |
 
 Mỗi dòng là một kịch bản, không phải chứng nhận đủ kiểm thử mọi tổ hợp.
@@ -28,3 +29,13 @@ Mỗi dòng là một kịch bản, không phải chứng nhận đủ kiểm th
 | FEAT-023 | FR-AIO-OPS-001 | UC-AIO-006 | US-AIO-006 | AC-AIO-016 | TC-AIO-016 | API-AIO-006 | UI-AIO-03 | agent_runs, agent_tool_events, agent_run_contexts | NOT RUN |
 | FEAT-023 | FR-AIO-OPS-001 | UC-AIO-006 | US-AIO-006 | AC-AIO-017 | TC-AIO-017 | API-AIO-006 | UI-AIO-03 | agent_runs, agent_tool_events, agent_run_contexts | NOT RUN |
 | FEAT-023 | FR-AIO-OPS-001 | UC-AIO-006 | US-AIO-006 | AC-AIO-018 | TC-AIO-018 | API-AIO-006 | UI-AIO-03 | agent_runs, agent_tool_events, agent_run_contexts | BLOCKED: AIO-Q01 |
+
+## Bổ sung gate — XC-12
+
+> Chờ AIO-Q07 — XC-12. BLOCKED nghiệm thu phép đo phản hồi đầu; AIO-Q01 và E1-Q06 còn mở. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Phép đo/tích hợp này chưa có ca độc lập được xác nhận; cần truy vết sau quyết định. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
+
+| Câu hỏi bổ sung | Ca phụ thuộc | Trạng thái | Căn cứ |
+| :--- | :--- | :--- | :--- |
+| AIO-Q07 | TC-AIO-NFR-01 | BLOCKED (giữ từ trước; bổ sung gate) | XC-12; [sổ câu hỏi](../review/questions.md) |

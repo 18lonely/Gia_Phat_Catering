@@ -1,14 +1,14 @@
 ---
 id: DOC-E10-SRS-DATA-DICTIONARY-MD
 title: Từ điển dữ liệu và đề xuất E10
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [crm, e10, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Từ điển dữ liệu và đề xuất E10
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E10-Q13; XC-05; E10-Q16; XC-09; E10-Q13, E11-Q14, E13-Q09 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E10; giữ mọi quyết định chưa có căn cứ ở trạng thái chờ |
 
 [Schema 65 bảng](../../nen-tang/srs/schema.dbml) được đọc, không sửa. Không có bảng contracts, quotes, opportunities hay contacts đã được chứng minh trong schema hiện tại. Tên dưới chỉ là **đề xuất**, chưa quyết định số bảng vật lý, không DDL/migration.
@@ -34,6 +35,8 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 | order_pricing_snapshots.order_id/order_version/price_term_id | bigint; int; FK nullable; unique(order_id,order_version) | Bản chụp bất biến của nguồn; E10 không ghi ngược sau phụ lục hoặc gộp. |
 | audit_logs.actor_user_id/changes/reason/request_id | FK không null; JSON; varchar 500; char 36 | Audit bất biến; action gộp/hoàn tác cần mapping được duyệt, không tự thêm enum vào schema. |
 
+> Chờ E10-Q13, E11-Q14, E13-Q09 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+
 ## Cấu trúc đề xuất
 
 Mọi mã đề xuất truyền API dưới dạng chuỗi; khóa nội bộ và độ dài vật lý cuối chờ Q13. Không tự gán UUID hoặc khóa số cho bảng chưa được duyệt. Với trường string chưa có giới hạn nguồn, giới hạn cụ thể BLOCKED Q01/Q13; không triển khai kiểm runtime bằng số tùy ý.
@@ -49,4 +52,12 @@ Mọi mã đề xuất truyền API dưới dạng chuỗi; khóa nội bộ và
 | sale_contracts/amendments | id, customerRef, quoteRevisionRef, legacyEvidenceRef, signatureEvidenceRef, predecessorRef, status, version | Id PK; FK; quote/legacy ít nhất một nguồn; signature nullable khi nháp; predecessor nullable cho bản đầu | Hợp đồng nhiều phụ lục; phụ lục nhiều dòng loại suất; liên kết nguồn không mất khi gộp. |
 | sale_contract_price_links / hiệu lực lịch sử | contractRef, amendmentRef, priceTermRef, predecessorTermRef, effectiveFrom, effectiveTo, approvalRef | FK logic; date/date nullable theo Q11; approval nullable trước duyệt | Đề xuất nối vào customer_price_terms; không tự tạo bảng giá cạnh tranh. Mọi thay khoảng có lịch sử và quyết định Q12. |
 
+> Chờ E10-Q16 — XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+
 Quan hệ: customer → nhiều contact/điểm/cơ hội/hợp đồng; opportunity → nhiều quote, quote → nhiều revision; contract → nhiều amendment → nhiều price line theo loại suất; merge event nối hồ sơ và reversal. Không có FK từ E10 tới hồ sơ sức khỏe. [Mapping](../api/data-mapping.md).
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E10-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

@@ -1,0 +1,110 @@
+[
+  {
+    "old": "DEC-01",
+    "current": "DEC-203",
+    "sourceCode": "ORD-Q15",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-01",
+    "current": "DEC-204",
+    "sourceCode": "E9-Q14",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-02",
+    "current": "DEC-205",
+    "sourceCode": "AIO-Q01",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-02",
+    "current": "DEC-206",
+    "sourceCode": "E9-Q01",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-03",
+    "current": "DEC-207",
+    "sourceCode": "CK-Q04",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-03",
+    "current": "DEC-208",
+    "sourceCode": "E10-Q03",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-03",
+    "current": "DEC-209",
+    "sourceCode": "E11-Q02",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-03",
+    "current": "DEC-210",
+    "sourceCode": "E13-Q10",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-07",
+    "current": "DEC-211",
+    "sourceCode": "E6-CG-01",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-08",
+    "current": "DEC-212",
+    "sourceCode": "E6-CG-02",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-09",
+    "current": "DEC-213",
+    "sourceCode": "NUTR-Q02",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-10",
+    "current": "DEC-214",
+    "sourceCode": "E6-CG-05",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-10",
+    "current": "DEC-215",
+    "sourceCode": "Q-16",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-11",
+    "current": "DEC-216",
+    "sourceCode": "E6-CG-06",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-12",
+    "current": "DEC-217",
+    "sourceCode": "E9-Q04",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-13",
+    "current": "DEC-218",
+    "sourceCode": "E9-Q11",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-14",
+    "current": "DEC-219",
+    "sourceCode": "E13-Q08",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  },
+  {
+    "old": "DEC-15",
+    "current": "DEC-220",
+    "sourceCode": "E9-Q12",
+    "reason": "Chưa chứng minh cùng người ký hoặc một câu trả lời giải quyết đầy đủ cả hai phạm vi; giữ quyết định riêng."
+  }
+]

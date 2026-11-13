@@ -1,14 +1,14 @@
 ---
 id: DOC-E10-REVIEW-QUESTIONS-MD
 title: Câu hỏi mới E10 — chờ trả lời
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [crm, e10, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Câu hỏi mới E10 — chờ trả lời
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E10-Q16; XC-07; E10-Q03, O-06 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E10; giữ mọi quyết định chưa có căn cứ ở trạng thái chờ |
 
 Tất cả **CHỜ TRẢ LỜI**. Cột Trả lời và Nguồn/người/ngày để trống. Khuyến nghị là phương án review, không phải lựa chọn mặc định. Không hỏi lại câu của các gói nguồn. Cột ảnh hưởng dùng UC-CRM; FR tương ứng tra trực tiếp [RTM](../test/traceability.md).
@@ -37,4 +38,7 @@ Tất cả **CHỜ TRẢ LỜI**. Cột Trả lời và Nguồn/người/ngày �
 | E10-Q13 | Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao? | Không áp chuẩn nháp của E1/E6/E8/E9 thành hợp đồng đã cố định. | Trưởng kỹ thuật, chủ các nguồn và QA | FR-CUS-LEAD-001 / UC-CRM-003; FR-SALE-QUOT-001 / UC-CRM-010; FR-SALE-SAFE-001 / UC-CRM-012; FR-SALE-PRIC-001 / UC-CRM-016 | Adapter từng nguồn; khóa nghiệp vụ bền vững và đối soát sau timeout; profile theo nền. | Tích hợp theo lô có đối soát được duyệt trước khi mở giao tiếp trực tiếp. | CHỜ TRẢ LỜI |  |  |
 | E10-Q14 | Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu? | Cần mẫu số độc lập để chứng minh hai tiêu chí 100%; không lấy danh sách đã nhập làm mẫu số. | Giám đốc, chăm sóc khách, kế toán và QA | FR-CUS-VIEW-001 / UC-CRM-001; FR-SALE-ACTV-001 / UC-CRM-014 | Manifest nguồn có ngày chốt và chữ ký xác nhận, đối chiếu từng khách/hợp đồng, công khai thiếu. | Đối chiếu nhiều nguồn vận hành/kế toán rồi người có thẩm quyền duyệt danh sách thống nhất. | CHỜ TRẢ LỜI |  |  |
 | E10-Q15 | Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem? | Không thể tự suy từ cost nguyên liệu hoặc chọn cách trừ CK khi câu nguồn còn mở. | Kế toán và Giám đốc | FR-SALE-QUOT-001 / UC-CRM-010 | Giữ giá trị chưa xác định tới khi công thức/nguồn được duyệt; quyền riêng với báo giá. | Chỉ hiển thị cost có nguồn theo quyền và bỏ chỉ số biên lợi nhuận cho tới khi được duyệt. | CHỜ TRẢ LỜI |  |  |
+| E10-Q16 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | XC-05; DEC-202; nguồn srs/data-dictionary.md mục crm_intakes | chưa rõ | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. |  | CHỜ TRẢ LỜI |  |  |
+
+> Chờ E10-Q03, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-07](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 

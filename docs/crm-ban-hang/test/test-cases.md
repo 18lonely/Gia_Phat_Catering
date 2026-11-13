@@ -1,14 +1,14 @@
 ---
 id: DOC-E10-TEST-TEST-CASES-MD
 title: 48 ca chức năng E10
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [crm, e10, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # 48 ca chức năng E10
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E10-Q16; Giữ gate E10-Q16 |
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E10; giữ mọi quyết định chưa có căn cứ ở trạng thái chờ |
 
 Mỗi AC đúng một ca; 21 BLOCKED, 27 NOT RUN. Actual/Evidence để trống. Tiền điều kiện chung: môi trường sản phẩm cô lập và bộ dữ liệu có phê duyệt trước khi chạy; phiên này chỉ mô tả. NOT RUN áp cho invariant có oracle xác định, không có nghĩa triển khai đã sẵn sàng.
@@ -28,7 +29,7 @@ Mỗi AC đúng một ca; 21 BLOCKED, 27 NOT RUN. Actual/Evidence để trống.
 | TC-CRM-002-01 | AC-CRM-002-01 | FR-CUS-CONT-001 | Fixture synthetic TC-CRM-002-01; danh mục trường và quyền lưu liên hệ đã được duyệt | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. ghi đầu mối A từ nguồn xác minh qua API-CRM-002 / UI-CRM-01. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | tạo đúng một bản nháp liên hệ và audit, không tạo users hoặc service_points | E10-Q01; E6-CG-08 | BLOCKED |  |  |
 | TC-CRM-002-02 | AC-CRM-002-02 | FR-CUS-CONT-001 | Fixture synthetic TC-CRM-002-02; yêu cầu chứa role quản trị hoặc customerId ngoài phạm vi | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. gửi nháp liên hệ qua API-CRM-002 / UI-CRM-01. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | từ chối trường lạ hoặc phạm vi; không cấp quyền đặt món | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 | TC-CRM-002-03 | AC-CRM-002-03 | FR-CUS-CONT-001 | Fixture synthetic TC-CRM-002-03; quyết định thời gian lưu và xử lý xóa chưa có | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. yêu cầu lưu hoặc xóa thông tin liên hệ thật qua API-CRM-002 / UI-CRM-01. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | giữ BLOCKED E10-Q01; không dùng thời gian lưu audit làm thời gian lưu liên hệ | E10-Q01; E6-CG-08 | BLOCKED |  |  |
-| TC-CRM-003-01 | AC-CRM-003-01 | FR-CUS-LEAD-001 | Fixture synthetic TC-CRM-003-01; hai bên đã duyệt trường bàn giao, consent và đầu nhận | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. nhận đề xuất từ PORT-AIN-HANDOFF hoặc PORT-PUB-LEAD-HANDOFF qua API-CRM-003 / UI-CRM-02. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | receipt gắn đúng nguồn và hash sau ghi bền vững; trạng thái chờ người thật phân loại | E8-Q06/07/12; E9-Q06/10/13; E10-Q13 | BLOCKED |  |  |
+| TC-CRM-003-01 | AC-CRM-003-01 | FR-CUS-LEAD-001 | Fixture synthetic TC-CRM-003-01; hai bên đã duyệt trường bàn giao, consent và đầu nhận | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. nhận đề xuất từ PORT-AIN-HANDOFF hoặc PORT-PUB-LEAD-HANDOFF qua API-CRM-003 / UI-CRM-02. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | receipt gắn đúng nguồn và hash sau ghi bền vững; trạng thái chờ người thật phân loại | E8-Q06/07/12; E9-Q06/10/13; E10-Q13; chờ E10-Q16; XC-05 | BLOCKED |  |  |
 | TC-CRM-003-02 | AC-CRM-003-02 | FR-CUS-LEAD-001 | Fixture synthetic TC-CRM-003-02; đầu nhận hoặc consent chưa được duyệt | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. nhận đề xuất thật qua API-CRM-003 / UI-CRM-02. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | trả ERR-CRM-503-01; không báo đã vào CRM và không tự tạo customers | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 | TC-CRM-003-03 | AC-CRM-003-03 | FR-CUS-LEAD-001 | Fixture synthetic TC-CRM-003-03; phiếu đã lưu nhưng mất phản hồi | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. nhận lại cùng nguồn, revision và nội dung qua API-CRM-003 / UI-CRM-02. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | trả receipt cũ theo quyền hiện tại; khác hash cùng định danh trả ERR-CRM-409-02 | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 | TC-CRM-004-01 | AC-CRM-004-01 | FR-CUS-DUP-001 | Fixture synthetic TC-CRM-004-01; tiêu chí phát hiện đã được duyệt và cặp hồ sơ thuộc quyền | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. rà cặp nghi trùng và lập đề nghị qua API-CRM-004 / UI-CRM-03. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | lưu tiêu chí phiên bản, bằng chứng và lựa chọn từng trường; chưa thay mã khách | E10-Q02/03; E6-CG-08 | BLOCKED |  |  |
@@ -71,3 +72,9 @@ Mỗi AC đúng một ca; 21 BLOCKED, 27 NOT RUN. Actual/Evidence để trống.
 | TC-CRM-016-02 | AC-CRM-016-02 | FR-SALE-PRIC-001 | Fixture synthetic TC-CRM-016-02; không có hoặc có hơn một giá khớp, VAT cần thiết chưa rõ | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. tra giá qua API-CRM-016 / UI-CRM-09. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | UNRESOLVED hoặc ERR-CRM-409-03; không lấy giá 0 hoặc tự chọn giá mới nhất | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 | TC-CRM-016-03 | AC-CRM-016-03 | FR-SALE-PRIC-001 | Fixture synthetic TC-CRM-016-03; đơn lịch sử đã có pricingSnapshot và sau đó có phụ lục mới | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. xem hồ sơ đơn cũ qua API-CRM-016 / UI-CRM-09. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | vẫn dùng snapshot đúng order/version từ E6/Cost; không thay bằng kết quả tra giá hiện tại | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 
+
+## Bổ sung gate — XC-05
+
+> Chờ E10-Q16 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-CRM-003-01, TC-CRM-003-02, TC-CRM-003-03. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

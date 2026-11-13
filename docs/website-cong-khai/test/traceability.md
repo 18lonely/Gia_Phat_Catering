@@ -1,13 +1,18 @@
 ---
 id: DOC-E8-TEST-TRACEABILITY-MD
 title: RTM feature → FR → UC → story → API → UI → test
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # RTM feature → FR → UC → story → API → UI → test
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E8-Q13 |
+
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -29,3 +34,13 @@ Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 ba
 Phủ12/12 FR có luồng;6/6 feature có thiết kế nháp có điều kiện,0 E8 gate-only;36 AC/ca không phải36 mục tiêu nghiệm thu độc lập. BR/NFR và test hệ thống xem [system-cases](system-cases.md). API phụ trợ cùng FR trong catalog.
 
 FR-PUB-URLM-001 / UC-PUB-003 / US-PUB-003 còn truy vết API-PUB-016, UI-PUB-06 và TC-PUB-S05 cho chuyển nội dung bài thành nháp, đối chiếu sourceId/body/media/ngày gốc; API-PUB-003/UI-PUB-07 cho mapping URL. Nhánh import/CMS BLOCKED E8-Q01/02/08/09; không tự công bố sau chuyển.
+
+## Bổ sung gate — XC-05
+
+> Chờ E8-Q13 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+
+Ca liên quan: TC-PUB-007-H. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
+
+| Câu hỏi bổ sung | Ca phụ thuộc | Trạng thái | Căn cứ |
+| :--- | :--- | :--- | :--- |
+| E8-Q13 | TC-PUB-007-H, TC-PUB-008-H | BLOCKED (giữ từ trước; bổ sung gate) | XC-05; [sổ câu hỏi](../review/questions.md) |

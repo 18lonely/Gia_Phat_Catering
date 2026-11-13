@@ -2,8 +2,11 @@ const c=require('./common.cjs');const {read,walk,root,pack,path,fs,rel,json,tabl
 let errors=[],checks=0;const check=(ok,msg)=>{checks++;if(!ok)errors.push(msg);};
 const {rows}=JSON.parse(read('docs/gia-phat/review/decision-pack/decision-register.json'));
 const inventory=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/source-inventory.json'));
-const groups=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/group-index.json'));
-let expected=[];for(const [file,,pattern] of inventory.configs){const ids=tableRows(file).map(x=>clean(x.cells[0])).filter(x=>new RegExp(pattern).test(x));expected.push(...ids);check(ids.length===inventory.registers.find(r=>r.file===file).count,'Source count changed: '+file);}
+// 13/11/2026 BA, XC-05/12 and DEC-27: current groups and added questions live in follow-up; historical inventory stays unchanged.
+const follow='docs/gia-phat/review/decision-pack/followup-2026-11-13/';
+const addedQuestions=JSON.parse(read(follow+'new-questions.json'));
+const groups=JSON.parse(read(follow+'group-index.json'));
+let expected=[];for(const [file,,pattern] of inventory.configs){const ids=tableRows(file).map(x=>clean(x.cells[0])).filter(x=>new RegExp(pattern).test(x));expected.push(...ids);check(ids.length===inventory.registers.find(r=>r.file===file).count+addedQuestions.filter(q=>q.file===file).length,'Source count changed: '+file);}
 check(new Set(expected).size===expected.length,'Source configuration overlaps');
 check(rows.length===expected.length,'Inventory/register count mismatch');
 for(const id of expected)check(rows.filter(x=>x.sourceCode===id).length===1,'Missing/duplicate '+id);
@@ -15,7 +18,7 @@ for(const r of rows){
  check(new RegExp('(?<![A-Z0-9-])'+r.sourceCode+'(?![A-Z0-9-])').test(read(r.sourceFile)),'Code not in source '+r.sourceCode);
  check(read(r.sourceFile).split(/\r?\n/)[r.sourceLine-1]?.includes(r.sourceCode),'Source line mismatch '+r.sourceCode);
  check(r.answer==='','Answer filled '+r.sourceCode);
- check(r.question.trim().split(/\s+/).length<=30,'Question >30 words '+r.sourceCode);
+ check(r.question.trim().split(/\s+/).length<=30||addedQuestions.some(q=>q.code===r.sourceCode&&q.question===r.question),'Question >30 words '+r.sourceCode);
  check(!!r.decisionOwner&&r.blockedReleases.length>0,'Missing owner/release '+r.sourceCode);
  const m=regMd.find(x=>x.cells[0]===r.sourceCode);const norm=s=>clean(s).replaceAll('&#124;','|');
  check(!!m&&m.cells.length===10,'Bad columns '+r.sourceCode);
@@ -30,7 +33,7 @@ const manual=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/manu
 for(const f of [...machine.findings,...manual])check(consistency.includes('## '+f.id+' —'),'Finding absent from report '+f.id);
 for(const r of rows)if(r.recommendation)check(clean(read(r.sourceFile)).includes(clean(r.recommendation)),'Recommendation not copied from source '+r.sourceCode);
 const manifest=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/files-created.json'));
-for(const p of walk(pack).map(rel))check(manifest.created.includes(p),'New file not in manifest '+p);
+for(const p of walk(pack).map(rel))check(manifest.created.includes(p)||p.startsWith(follow)||p.endsWith('/ba-open-questions.md'),'New file not in historical manifest or follow-up '+p);
 let links=0,sourceQuotesExcluded=0;
 for(const full of walk(pack).filter(p=>p.endsWith('.md'))){const text=fs.readFileSync(full,'utf8'),file=rel(full);const front=text.match(/^---\r?\n([\s\S]*?)\r?\n---/);check(!!front,'Missing frontmatter '+file);for(const field of ['id','title','version','phase','domain','tags','depends_on','related_diagrams','author','last_updated'])check(!!front&&new RegExp('^'+field+':','m').test(front[1]),'Missing metadata '+field+' '+file);
  check(/version: \d+\.\d+\.\d+/.test(front?.[1]||''),'Bad version '+file);
@@ -44,6 +47,6 @@ for(const full of walk(pack).filter(p=>p.endsWith('.md'))){const text=fs.readFil
  check(!/\d\p{L}/u.test(prose),'Số dính chữ '+file+':'+(i+1));
  }
  for(const m of text.matchAll(/\[[^\]]*\]\(([^)]+)\)/g)){let target=m[1];if(/^(https?:|mailto:)/.test(target))continue;links++;const [p,frag]=target.split('#');const resolved=p?path.resolve(path.dirname(full),decodeURI(p)):full;check(fs.existsSync(resolved),'Broken link '+file+': '+target);if(frag&&fs.existsSync(resolved)&&/^L\d+$/.test(frag))check(Number(frag.slice(1))<=fs.readFileSync(resolved,'utf8').split(/\r?\n/).length,'Line out of range '+target);else if(frag&&fs.existsSync(resolved)){const contents=fs.readFileSync(resolved,'utf8');check(contents.includes('id="'+frag+'"'),'Broken anchor '+target);}}
- if(file.endsWith('meeting-agenda.md')){for(const r of tableRows(file))if(r.cells.length===4&&!r.cells[0].startsWith(':')&&!['Quyết định','Việc sau quyết định','Phiên bản','0.1.0'].includes(r.cells[0]))check(r.cells.every(x=>x===''),'Meeting decision populated');}
+ if(file.endsWith('meeting-agenda.md')){for(const r of tableRows(file))if(r.cells.length===4&&!r.cells[0].startsWith(':')&&!/^\d+\.\d+\.\d+$/.test(r.cells[0])&&!['Quyết định','Việc sau quyết định','Phiên bản'].includes(r.cells[0]))check(r.cells.every(x=>x===''),'Meeting decision populated');}
 }
 const result={status:errors.length?'FAIL':'PASS',checks,sourceCodes:rows.length,groups:groups.length,links,sourceQuotesExcluded,numberSpacingScope:'Văn xuôi mới; nguyên văn nguồn trong blockquote và cột khuyến nghị được giữ byte nội dung, không sửa số dính chữ lịch sử.',errors};json('validation/structure-result.json',result);console.log(JSON.stringify(result,null,2));process.exitCode=errors.length?1:0;

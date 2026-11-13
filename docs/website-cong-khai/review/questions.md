@@ -1,13 +1,18 @@
 ---
 id: DOC-E8-REVIEW-QUESTIONS-MD
 title: Sổ câu hỏi mở E8
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Sổ câu hỏi mở E8
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E8-Q13; XC-08; E8-Q05, E9-Q11 |
+
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -27,5 +32,8 @@ Tất cả **CHỜ TRẢ LỜI**. Trả lời và nguồn/người/ngày để t
 | E8-Q10 | BO-09 dùng công cụ nào; baseline tháng nào trước chuyển đổi, múi giờ/lọc bot/organic; cửa sổ sau 60 ngày và quyền truy cập số đo? | So phiên tự nhiên theo cùng công cụ/định nghĩa và kỳ so sánh tương đương; lưu bằng chứng baseline trước cutover | Đo BO-09, kết luận G-Next; baseline=0/thiếu chưa tính tỷ lệ |  |  |
 | E8-Q11 | Ai có quyền quản trị tên miền/DNS; hạ tầng, CMS/hosting, thời điểm chuyển đổi, rollback và người quyết định O-04? | Xác nhận quyền, diễn tập chuyển và rollback rồi mới chọn cửa sổ; không tự chọn nhà cung cấp hoặc ngày | R8 start/cutover; đưa 054/055/059 lên Now |  |  |
 | E8-Q12 | Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì? | Kế thừa nền khi tương thích; E4 dùng cursor/envelope khác nên adapter cần review, không tự freeze TTL/retry | Wire contract, cache/CDN, tải và fault tolerance |  |  |
+| E8-Q13 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. XC-05; DEC-200. Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. |  |  |
+
+> Chờ E8-Q05, E9-Q11 — XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Chỉ đồng bộ khi có nguồn quyết định và phạm vi áp dụng, không tự đóng từ kiểm tài liệu. [Phụ thuộc](dependencies.md). E6/E7 giữ nguyên chờ trả lời tại sổ gốc, không tạo câu hỏi thay thế.

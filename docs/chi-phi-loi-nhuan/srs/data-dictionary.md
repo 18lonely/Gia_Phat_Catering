@@ -1,14 +1,14 @@
 ---
 id: DOC-E13-SRS-DATA-DICTIONARY-MD
 title: Từ điển dữ liệu đề xuất E13
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 tags: [e13, exp, draft]
 depends_on: [DOC-PRD-GIA-PHAT]
 related_diagrams: []
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Từ điển dữ liệu đề xuất E13
 
@@ -16,6 +16,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E13-Q12 |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu FEAT-088; giữ các quyết định còn chờ |
 
 Schema nền giữ **65 bảng**. Không tạo DBML, SQL hay migration. Tên physical dưới đây chỉ đề xuất, không khẳng định bảng đã tồn tại. kitchens, customers và users đã có trong nền; chấm công không tự coi personRef là users.id. E7/E11 dùng tham chiếu logic, không giả có bảng vật lý.
@@ -89,3 +90,9 @@ Mọi thực thể đề xuất có id BIGINT UNSIGNED (20 chữ số tối đa,
 | status | status | ENUM | — | Không | — | PENDING / REJECTED / POSTED |
 
 Danh mục loại chi phí có version/effectiveRange/decisionRef đề xuất kèm Q01, chưa điền loại thực tế. Manifest nguồn tối thiểu gồm producer, sourceRef, revision/hash, kitchenRef, periodRange, customerRef nếu có, kind (dự toán/thực mua/doanh thu đối soát), completeness và capturedAt. Không dùng estimate thay actual.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E13-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

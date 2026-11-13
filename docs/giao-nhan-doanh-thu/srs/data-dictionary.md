@@ -1,13 +1,18 @@
 ---
 id: DOC-E7-SRS-DATA-DICTIONARY-MD
 title: Delta dữ liệu E7 — đề xuất chưa merge
-version: 0.1.0
+version: 0.1.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-13
 ---
 # Delta dữ liệu E7 — đề xuất chưa merge
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E7-Q08 |
+
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -27,3 +32,9 @@ Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / 
 Trường tối thiểu dùng kiểm toán: actor/time/before-after/reason/resourceVersion và request reference, kế thừa audit nền; độ dài, nullability vật lý, unique/index, precision và retention chưa quyết → BLOCKED E7-Q08. ID logic theo nền bigint qua API dạng chuỗi. Không có DDL hoặc bảng được merge. Các enum trong state diagram là nhãn đề xuất.
 
 Quan hệ logic: customer→period→lines→revenue snapshot→order/pricing snapshot; order→delivery→confirmation/discrepancy→resolution; period→receipt/reopen/export. Order/plan revision phụ thuộc delta E6 chưa freeze, không coi FK đó đã triển khai.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E7-Q08 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

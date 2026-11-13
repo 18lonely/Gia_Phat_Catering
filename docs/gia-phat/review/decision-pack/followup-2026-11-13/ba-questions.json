@@ -1,0 +1,798 @@
+[
+  {
+    "code": "BA-Q01",
+    "question": "Vai trò nào có thẩm quyền quyết định cung cấp, xác nhận nguồn và review độc lập bộ 10 món / 10 ngày Cost?",
+    "sources": [
+      "DATA-COST-Q01",
+      "DATA-COST-Q02",
+      "DATA-COST-Q03",
+      "DATA-COST-Q04",
+      "DATA-COST-Q05",
+      "DATA-COST-Q06"
+    ],
+    "groups": [
+      "DEC-80",
+      "DEC-81",
+      "DEC-82",
+      "DEC-83",
+      "DEC-84",
+      "DEC-85"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q02",
+    "question": "Vai trò nào có thẩm quyền quyết định hạn chốt và ngưỡng đổi sau chốt?",
+    "sources": [
+      "Q-16"
+    ],
+    "groups": [
+      "DEC-215"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q03",
+    "question": "Vai trò nào có thẩm quyền quyết định xử lý không xác nhận và chênh lệch giao nhận?",
+    "sources": [
+      "Q-13",
+      "E7-Q02"
+    ],
+    "groups": [
+      "DEC-114",
+      "DEC-116"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q04",
+    "question": "Vai trò nào có thẩm quyền quyết định xác minh người nhận qua link?",
+    "sources": [
+      "E7-Q01"
+    ],
+    "groups": [
+      "DEC-115"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q05",
+    "question": "Vai trò nào có thẩm quyền quyết định hợp đồng giao tiếp và tải E7?",
+    "sources": [
+      "E7-Q08"
+    ],
+    "groups": [
+      "DEC-122"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q06",
+    "question": "Vai trò nào có thẩm quyền quyết định inventory bài cũ và mapping URL?",
+    "sources": [
+      "E8-Q01",
+      "E8-Q02"
+    ],
+    "groups": [
+      "DEC-123",
+      "DEC-124"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q07",
+    "question": "Vai trò nào có thẩm quyền quyết định nguồn và điều kiện công khai giá?",
+    "sources": [
+      "E8-Q03"
+    ],
+    "groups": [
+      "DEC-12"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q08",
+    "question": "Vai trò nào có thẩm quyền quyết định nguồn thực đơn public và cách dựng mẫu?",
+    "sources": [
+      "E8-Q04",
+      "E8-Q05"
+    ],
+    "groups": [
+      "DEC-15",
+      "DEC-13"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q09",
+    "question": "Vai trò nào có thẩm quyền quyết định tiếp nhận lead, đồng ý và thông báo?",
+    "sources": [
+      "E8-Q06",
+      "E8-Q07"
+    ],
+    "groups": [
+      "DEC-125",
+      "DEC-126"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q10",
+    "question": "Vai trò nào có thẩm quyền quyết định quyền xuất bản nội dung và media?",
+    "sources": [
+      "E8-Q08",
+      "E8-Q09"
+    ],
+    "groups": [
+      "DEC-127",
+      "DEC-128"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q11",
+    "question": "Vai trò nào có thẩm quyền quyết định phương pháp đo BO-09?",
+    "sources": [
+      "E8-Q10"
+    ],
+    "groups": [
+      "DEC-129"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q12",
+    "question": "Vai trò nào có thẩm quyền quyết định hạ tầng, quyền tên miền và contract website?",
+    "sources": [
+      "E8-Q11",
+      "E8-Q12"
+    ],
+    "groups": [
+      "DEC-130",
+      "DEC-131"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q13",
+    "question": "Vai trò nào có thẩm quyền quyết định hạ tầng và xử lý dữ liệu agent phía khách?",
+    "sources": [
+      "E9-Q01"
+    ],
+    "groups": [
+      "DEC-206"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q14",
+    "question": "Vai trò nào có thẩm quyền quyết định đối tượng sử dụng và đầu vào kiêng kỵ phi y tế?",
+    "sources": [
+      "E9-Q02",
+      "E9-Q03"
+    ],
+    "groups": [
+      "DEC-132",
+      "DEC-133"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q15",
+    "question": "Vai trò nào có thẩm quyền quyết định giá và nguồn dữ liệu công khai?",
+    "sources": [
+      "E9-Q04",
+      "E9-Q12"
+    ],
+    "groups": [
+      "DEC-217",
+      "DEC-220"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q16",
+    "question": "Vai trò nào có thẩm quyền quyết định hành vi trả kết quả và bộ nghiệm thu R9?",
+    "sources": [
+      "E9-Q05",
+      "E9-Q09"
+    ],
+    "groups": [
+      "DEC-134",
+      "DEC-138"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q17",
+    "question": "Vai trò nào có thẩm quyền quyết định tiếp nhận nháp, đồng ý và lưu xóa hội thoại?",
+    "sources": [
+      "E9-Q06",
+      "E9-Q10"
+    ],
+    "groups": [
+      "DEC-135",
+      "DEC-139"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q18",
+    "question": "Vai trò nào có thẩm quyền quyết định hạn mức và quyền thay đổi hạn mức?",
+    "sources": [
+      "E9-Q07",
+      "E9-Q08"
+    ],
+    "groups": [
+      "DEC-136",
+      "DEC-137"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q19",
+    "question": "Vai trò nào có thẩm quyền quyết định tái dùng bộ kiểm và contract agent?",
+    "sources": [
+      "E9-Q11",
+      "E9-Q13"
+    ],
+    "groups": [
+      "DEC-218",
+      "DEC-140"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q20",
+    "question": "Vai trò nào có thẩm quyền quyết định điều kiện mở nhánh cá nhân sau O-03?",
+    "sources": [
+      "E9-Q14"
+    ],
+    "groups": [
+      "DEC-204"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q21",
+    "question": "Vai trò nào có thẩm quyền quyết định nhu cầu mua, tồn và lô?",
+    "sources": [
+      "E11-Q01",
+      "E11-Q03"
+    ],
+    "groups": [
+      "DEC-154",
+      "DEC-155"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q22",
+    "question": "Vai trò nào có thẩm quyền quyết định thẩm quyền duyệt và phát hành đơn mua?",
+    "sources": [
+      "E11-Q02"
+    ],
+    "groups": [
+      "DEC-209"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q23",
+    "question": "Vai trò nào có thẩm quyền quyết định nhận hàng và chứng từ?",
+    "sources": [
+      "E11-Q04",
+      "E11-Q05"
+    ],
+    "groups": [
+      "DEC-156",
+      "DEC-157"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q24",
+    "question": "Vai trò nào có thẩm quyền quyết định công nợ nhà cung cấp?",
+    "sources": [
+      "E11-Q06"
+    ],
+    "groups": [
+      "DEC-158"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q25",
+    "question": "Vai trò nào có thẩm quyền quyết định phân bổ thực mua và cách đo BO-02?",
+    "sources": [
+      "E11-Q07",
+      "E11-Q08"
+    ],
+    "groups": [
+      "DEC-159",
+      "DEC-160"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q26",
+    "question": "Vai trò nào có thẩm quyền quyết định phân ca, kiểm trước giao và mẫu lưu?",
+    "sources": [
+      "E11-Q09",
+      "E11-Q10",
+      "E11-Q11"
+    ],
+    "groups": [
+      "DEC-161",
+      "DEC-162",
+      "DEC-163"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q27",
+    "question": "Vai trò nào có thẩm quyền quyết định thay món và căn cứ dị ứng phi y tế?",
+    "sources": [
+      "E11-Q12",
+      "E11-Q15"
+    ],
+    "groups": [
+      "DEC-164",
+      "DEC-167"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q28",
+    "question": "Vai trò nào có thẩm quyền quyết định contract nhận hàng và nguồn giá Cost?",
+    "sources": [
+      "E11-Q13",
+      "E11-Q14"
+    ],
+    "groups": [
+      "DEC-165",
+      "DEC-166"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q29",
+    "question": "Vai trò nào có thẩm quyền quyết định đánh giá, quyền phản hồi và xử lý khiếu nại?",
+    "sources": [
+      "E12-Q01",
+      "E12-Q02",
+      "E12-Q03"
+    ],
+    "groups": [
+      "DEC-168",
+      "DEC-169",
+      "DEC-170"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q30",
+    "question": "Vai trò nào có thẩm quyền quyết định tỷ lệ chọn và đề xuất cải tiến?",
+    "sources": [
+      "E12-Q04",
+      "E12-Q05"
+    ],
+    "groups": [
+      "DEC-171",
+      "DEC-172"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q31",
+    "question": "Vai trò nào có thẩm quyền quyết định định nghĩa và quyền dashboard?",
+    "sources": [
+      "E12-Q06",
+      "E12-Q07",
+      "E12-Q08"
+    ],
+    "groups": [
+      "DEC-173",
+      "DEC-174",
+      "DEC-175"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q32",
+    "question": "Vai trò nào có thẩm quyền quyết định đề xuất thực đơn và cảnh báo giá?",
+    "sources": [
+      "E12-Q09",
+      "E12-Q10"
+    ],
+    "groups": [
+      "DEC-176",
+      "DEC-177"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q33",
+    "question": "Vai trò nào có thẩm quyền quyết định nguồn CRM và quyền hỏi chỉ số?",
+    "sources": [
+      "E12-Q11",
+      "E12-Q12"
+    ],
+    "groups": [
+      "DEC-178",
+      "DEC-179"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q34",
+    "question": "Vai trò nào có thẩm quyền quyết định mục tiêu dinh dưỡng nhóm phi y tế?",
+    "sources": [
+      "E12-Q13",
+      "E12-Q14"
+    ],
+    "groups": [
+      "DEC-180",
+      "DEC-181"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q35",
+    "question": "Vai trò nào có thẩm quyền quyết định đồng ý nhật ký, xóa và bằng chứng bữa đã ăn?",
+    "sources": [
+      "E12-Q15",
+      "E12-Q16",
+      "E12-Q17"
+    ],
+    "groups": [
+      "DEC-182",
+      "DEC-183",
+      "DEC-184"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q36",
+    "question": "Vai trò nào có thẩm quyền quyết định contract kỹ thuật E12?",
+    "sources": [
+      "E12-Q18"
+    ],
+    "groups": [
+      "DEC-185"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q37",
+    "question": "Vai trò nào có thẩm quyền quyết định loại chi phí và kỳ chi phí?",
+    "sources": [
+      "E13-Q01",
+      "E13-Q02"
+    ],
+    "groups": [
+      "DEC-186",
+      "DEC-187"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q38",
+    "question": "Vai trò nào có thẩm quyền quyết định nguồn giờ công và nguồn đơn giá nhân công?",
+    "sources": [
+      "E13-Q03",
+      "E13-Q04"
+    ],
+    "groups": [
+      "DEC-188",
+      "DEC-189"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q39",
+    "question": "Vai trò nào có thẩm quyền quyết định phân bổ cấp công ty và khóa đối chiếu khách nhiều cơ sở?",
+    "sources": [
+      "E13-Q06",
+      "E13-Q07"
+    ],
+    "groups": [
+      "DEC-191",
+      "DEC-192"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q40",
+    "question": "Vai trò nào có thẩm quyền quyết định thành phần kết quả kinh doanh, làm tròn và phần dư?",
+    "sources": [
+      "E13-Q08",
+      "E13-Q09"
+    ],
+    "groups": [
+      "DEC-219",
+      "DEC-193"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q41",
+    "question": "Vai trò nào có thẩm quyền quyết định điều chỉnh sau khóa?",
+    "sources": [
+      "E13-Q10"
+    ],
+    "groups": [
+      "DEC-210"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q42",
+    "question": "Vai trò nào có thẩm quyền quyết định quyền dữ liệu và contract E13?",
+    "sources": [
+      "E13-Q11",
+      "E13-Q12"
+    ],
+    "groups": [
+      "DEC-194",
+      "DEC-195"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q43",
+    "question": "Vai trò nào có thẩm quyền quyết định chỉ số chuyển E12 và bằng chứng nghiệm thu R13?",
+    "sources": [
+      "E13-Q13",
+      "E13-Q14"
+    ],
+    "groups": [
+      "DEC-196",
+      "DEC-197"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q44",
+    "kind": "release",
+    "question": "Các nhánh E1-Q03, N-04 chặn release nào, theo căn cứ gate nào?",
+    "sources": [
+      "E1-Q03",
+      "N-04"
+    ],
+    "groups": [
+      "DEC-18",
+      "DEC-24"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED kết luận gate release; chưa rõ không đồng nghĩa không chặn.",
+    "answer": ""
+  },
+  {
+    "code": "BA-Q45",
+    "kind": "release",
+    "question": "Các nhánh FLOW-COST-Q10 chặn release nào, theo căn cứ gate nào?",
+    "sources": [
+      "FLOW-COST-Q10"
+    ],
+    "groups": [
+      "DEC-69"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED kết luận gate release; chưa rõ không đồng nghĩa không chặn.",
+    "answer": ""
+  },
+  {
+    "code": "BA-Q46",
+    "kind": "release",
+    "question": "Các nhánh E3-Q15 chặn release nào, theo căn cứ gate nào?",
+    "sources": [
+      "E3-Q15"
+    ],
+    "groups": [
+      "DEC-58"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED kết luận gate release; chưa rõ không đồng nghĩa không chặn.",
+    "answer": ""
+  },
+  {
+    "code": "BA-Q47",
+    "question": "Vai trò nào có thẩm quyền quyết định nội dung E1-Q06 phát sinh từ XC-12?",
+    "sources": [
+      "E1-Q06"
+    ],
+    "groups": [
+      "DEC-198"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q48",
+    "question": "Vai trò nào có thẩm quyền quyết định nội dung AIO-Q07 phát sinh từ XC-12?",
+    "sources": [
+      "AIO-Q07"
+    ],
+    "groups": [
+      "DEC-199"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q49",
+    "question": "Vai trò nào có thẩm quyền quyết định nội dung E8-Q13 phát sinh từ XC-05?",
+    "sources": [
+      "E8-Q13"
+    ],
+    "groups": [
+      "DEC-200"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q50",
+    "question": "Vai trò nào có thẩm quyền quyết định nội dung E9-Q15 phát sinh từ XC-05?",
+    "sources": [
+      "E9-Q15"
+    ],
+    "groups": [
+      "DEC-201"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  },
+  {
+    "code": "BA-Q51",
+    "question": "Vai trò nào có thẩm quyền quyết định nội dung E10-Q16 phát sinh từ XC-05?",
+    "sources": [
+      "E10-Q16"
+    ],
+    "groups": [
+      "DEC-202"
+    ],
+    "recommendation": "",
+    "impact": "BLOCKED việc xác nhận người ký; không tự giao quyền từ persona.",
+    "answer": "",
+    "kind": "authority"
+  }
+]

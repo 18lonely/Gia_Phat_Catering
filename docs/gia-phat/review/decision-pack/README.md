@@ -1,7 +1,7 @@
 ---
 id: DOC-DECISION-PACK-README
 title: Gói chuẩn bị quyết định — Gia Phát
-version: 0.1.0
+version: 0.2.0
 phase: Review
 domain: Gia Phát
 tags: [decision-pack, draft, review]
@@ -16,9 +16,10 @@ Nháp · 13/11/2026 · Chuẩn bị quyết định, chưa phê duyệt.
 
 | Phiên bản | Ngày | Vai trò | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.2.0 | 13/11/2026 | BA | DEC-27; BA-Q; XC-01–12; gói rà tiếp |
 | 0.1.0 | 13/11/2026 | BA | Hợp nhất nguồn để review; giữ câu mở |
 
-Trong 5 phút: đọc 10 nhóm dưới; mở buổi họp theo vai trò; xem câu gốc trước khi ký. 219 mã nguồn, 197 nhóm; **0 câu được trả lời/đóng** trong gói. Độ phủ giữ **75/78**, 0 feature được duyệt, 0 ca sản phẩm đã chạy. FEAT-046/047/063 chỉ gate O-03.
+Trong 5 phút: đọc 10 nhóm dưới; mở buổi họp theo vai trò; xem câu gốc trước khi ký. 224 mã nguồn, 214 nhóm; **0 câu được trả lời/đóng** trong gói. Độ phủ giữ **75/78**, 0 feature được duyệt, 0 ca sản phẩm đã chạy. FEAT-046/047/063 chỉ gate O-03.
 
 - [DEC-01 — Phạm vi sức khỏe và điều kiện mở gợi ý cá nhân](decision-groups.md#dec-01) · [Buổi 1](meeting-agenda.md#buoi-1).
 - [DEC-02 — Nguồn lực, hạ tầng và cấu hình ngân sách AI](decision-groups.md#dec-02) · [Buổi 1](meeting-agenda.md#buoi-1).
@@ -38,3 +39,9 @@ Ba buổi đầu bao phủ gate MVP; buổi 4 ưu tiên CG01 → CG08 → CG05 �
 ## Prompt tiếp nối
 
 > Là BA tại D:\BA. Chỉ cập nhật tài liệu epic theo quyết định đã ký có nguồn. Mỗi lần xử lý một nhóm DEC trong gói decision-pack. Đọc sổ, các câu nguồn, phạm vi chữ ký và bằng chứng trước. Dùng skill cr để phân tích tác động tài liệu, dữ liệu/API, kiểm thử và phụ thuộc; không tự đặt story point hoặc ngày. Chỉ sửa phần được quyết định cho phép; phần mơ hồ giữ mở. Không lấy câu trả lời một phần làm đóng toàn nhóm. Giữ nguyên Cost/VAT/chiết khấu, NFR-COST-002, O-02/O-03 và trạng thái ca chưa chạy. Chụp baseline mới cho phiên đó, kiểm bảo toàn, báo cáo phạm vi thay đổi. Không backend, migration, gọi AI, commit hoặc xóa file. Nếu chưa có quyết định ký kèm nguồn, chỉ ghi thiếu bằng chứng và tiếp tục rà phần độc lập.
+
+## Rà tiếp ngày 13/11/2026
+
+[Sổ BA-Q](ba-open-questions.md) · [Báo cáo hiện hành](followup-2026-11-13/report.md) · [Xử lý XC](followup-2026-11-13/xc-resolution.md) · [Quy ước](followup-2026-11-13/conventions.md).
+
+6 trong 89 câu thiếu vai trò được làm rõ bằng nguồn; 83 câu còn lại có BA-Q. Cả 4 câu thiếu release có BA-Q. 197 nhóm gốc còn 209 sau khi gộp 6 nhóm và tách 18 câu có phạm vi/người ký khác; 5 câu mới đưa tổng lên 214 nhóm. 219 câu gốc giữ đủ, thêm 5 câu epic; câu hỏi thẩm quyền riêng không thay câu nghiệp vụ. XC-01 đã sửa; XC-04 đã sửa cách mô tả, contract vẫn chờ; 10 XC còn chờ quyết định. 0 câu được trả lời, 0 feature được duyệt, độ phủ giữ 75/78. Đây không phải BA được duyệt.

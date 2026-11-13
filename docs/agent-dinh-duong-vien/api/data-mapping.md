@@ -1,5 +1,10 @@
 # Mapping dữ liệu E9 → schema hiện có
 
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-05; E9-Q15 |
+
+
 Draft · 12/11/2026 · [DBML 65 bảng](../../nen-tang/srs/schema.dbml) và [ERD](../../nen-tang/srs/erd.md) chỉ đọc. Mọi mapping/adapter là đề xuất chưa freeze; không migration.
 
 | Field API / UI | Nguồn hiện có | Quy tắc chuyển / khoảng trống |
@@ -30,5 +35,7 @@ Draft · 12/11/2026 · [DBML 65 bảng](../../nen-tang/srs/schema.dbml) và [ERD
 | ain_limit_policies | id, groupRef, version, countPolicy, dailyCap, unit, timezone, effectiveAt, approvalRef | Giá trị chưa chọn; không ghi quá khứ; duyệt theo Q08 và E1 |
 | ain_budget_reservations | id, principal/group, dayKey, policyRef, runRef, upperBound, state, requestKey | Admission atomic; không release UNKNOWN; Q07/13 |
 | ain_usage_events | id, runRef, providerEventRef, dayKey, usageState, amount/unit, reservationRef, sourceHash | Unique event; không sửa mất lịch sử; confirmed/reserved reconciliation, unknown khác0 |
+
+> Chờ E9-Q15 — XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Sáu tên là delta sơ bộ để thảo luận, không cam kết sáu bảng vật lý hay schema mở rộng chính thức. Quan hệ proposal→candidate→run/session và reservation→policy/run→usage phải kiểm ownership/scope; không có quan hệ health profile. Encryption, retention/xóa/ẩn danh và audit guest chờ Q10; không lưu raw input chỉ vì agent_runs.request_text hiện NOT NULL. Cần adapter/tách kho an toàn trước reuse.

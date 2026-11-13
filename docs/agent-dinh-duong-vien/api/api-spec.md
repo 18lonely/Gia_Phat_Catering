@@ -1,5 +1,10 @@
 # API và allowlist công cụ — AIN E9
 
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.1 | 13/11/2026 | BA | XC-04; E9-Q13 |
+
+
 Draft · 12/11/2026 · Đề xuất để review, chưa freeze/triển khai; không gọi AI.
 
 ## Quy ước và ranh giới
@@ -63,3 +68,9 @@ Nếu kiểm quy tắc E2 cần cổng Cost nội bộ, E2/orchestrator tin cậ
 Trước phát sinh chi phí phải có upper bound thực sự cưỡng chế được cho bước đang nhận (bao gồm chi phí retry/tool phụ nếu provider tính). `confirmed + reservedOutstanding + proposedUpperBound ≤ cap` trong cùng ngày/policy. Không thể xác định/cưỡng chế upper bound thì **không nhận**; chỉ đối soát sau khi chạy không đủ bảo đảm R9. Khi phát sinh xác nhận, chuyển reserve sang confirmed một lần theo eventId; phần chưa rõ giữ chỗ. Timeout không đồng nghĩa provider không tính tiền. Rollover không xóa debt/reserve cũ; ngày hạch toán và xử lý xuyên ngày chờ Q07/13.
 
 Sửa cap không hồi tố; cap mới thấp hơn committed/reserved chặn lượt mới và báo quản trị, không giả tạo hoàn tiền. Không chuyển sang queue/quota AIO hoặc đổi identity/key để vượt trần. Không chọn model, giá token, số lượt, ngân sách, concurrency, TTL hoặc số lần retry trong gói này.
+
+## Quy ước tài liệu liên epic — XC-04
+
+[Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
+
+> Chờ E9-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
