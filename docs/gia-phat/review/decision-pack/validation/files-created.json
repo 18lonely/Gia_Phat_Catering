@@ -1,0 +1,36 @@
+{
+  "date": "13/11/2026",
+  "created": [
+    "docs/gia-phat/review/decision-pack/README.md",
+    "docs/gia-phat/review/decision-pack/cross-epic-consistency.md",
+    "docs/gia-phat/review/decision-pack/decision-groups.md",
+    "docs/gia-phat/review/decision-pack/decision-register.json",
+    "docs/gia-phat/review/decision-pack/decision-register.md",
+    "docs/gia-phat/review/decision-pack/meeting-agenda.md",
+    "docs/gia-phat/review/decision-pack/validation/assemble-register.cjs",
+    "docs/gia-phat/review/decision-pack/validation/baseline.json",
+    "docs/gia-phat/review/decision-pack/validation/check-decision-pack.cjs",
+    "docs/gia-phat/review/decision-pack/validation/common.cjs",
+    "docs/gia-phat/review/decision-pack/validation/cross-epic-result.json",
+    "docs/gia-phat/review/decision-pack/validation/delta-inventory.json",
+    "docs/gia-phat/review/decision-pack/validation/draft-register.json",
+    "docs/gia-phat/review/decision-pack/validation/files-created.json",
+    "docs/gia-phat/review/decision-pack/validation/finish-report.cjs",
+    "docs/gia-phat/review/decision-pack/validation/group-index.json",
+    "docs/gia-phat/review/decision-pack/validation/hash-check-decision-pack.cjs",
+    "docs/gia-phat/review/decision-pack/validation/hash-result.json",
+    "docs/gia-phat/review/decision-pack/validation/manual-findings.json",
+    "docs/gia-phat/review/decision-pack/validation/publish-summary.cjs",
+    "docs/gia-phat/review/decision-pack/validation/render-consistency.cjs",
+    "docs/gia-phat/review/decision-pack/validation/render-pack.cjs",
+    "docs/gia-phat/review/decision-pack/validation/report.md",
+    "docs/gia-phat/review/decision-pack/validation/scan-cross-epic.cjs",
+    "docs/gia-phat/review/decision-pack/validation/source-inventory.json",
+    "docs/gia-phat/review/decision-pack/validation/structure-result.json"
+  ],
+  "appendOnly": [
+    "docs/OVERVIEW.md",
+    "docs/project-dashboard.md"
+  ],
+  "note": "Danh mục đường dẫn; không tự băm chính manifest hoặc kết quả checker để tránh vòng lặp."
+}

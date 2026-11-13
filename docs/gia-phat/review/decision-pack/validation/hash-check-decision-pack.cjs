@@ -1,0 +1,6 @@
+const c=require('./common.cjs');const {read,root,pack,path,fs,walk,rel,json,hash}=c;
+const baseline=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/baseline.json'));
+let errors=[],unchanged=0,appended=[];const allowed=new Set(['docs/OVERVIEW.md','docs/project-dashboard.md']);
+for(const f of baseline.files){const p=path.join(root,f.path);if(!fs.existsSync(p)){errors.push('Deleted: '+f.path);continue;}const b=fs.readFileSync(p);if(hash(b)===f.sha256&&b.length===f.size){unchanged++;continue;}if(allowed.has(f.path)&&b.length>=f.size&&hash(b.subarray(0,f.size))===f.sha256)appended.push({file:f.path,bytes:b.length-f.size});else errors.push('Modified: '+f.path);}
+const old=new Set(baseline.files.map(f=>f.path));const newFiles=walk(path.join(root,'docs')).map(rel).filter(p=>!old.has(p));for(const p of newFiles)if(!p.startsWith('docs/gia-phat/review/decision-pack/'))errors.push('New file outside pack: '+p);
+const result={status:errors.length?'FAIL':'PASS',baselineFiles:baseline.files.length,unchanged,appendOnly:appended,newFiles:newFiles.length,modifiedOrDeleted:errors.filter(x=>/^(Modified|Deleted)/.test(x)).length,errors};json('validation/hash-result.json',result);console.log(JSON.stringify(result,null,2));process.exitCode=errors.length?1:0;

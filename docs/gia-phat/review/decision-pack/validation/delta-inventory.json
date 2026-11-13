@@ -1,0 +1,482 @@
+{
+  "schemaFile": "docs/nen-tang/srs/schema.dbml",
+  "schemaTables": 65,
+  "inventory": [
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 18,
+      "entity": "e7_delivery_notes",
+      "fields": "id ID; orderId ID; orderRevisionRef/planRevisionRef opaque; deliveredServings int; state; version int; evidenceRef | PK id; orderId→orders; số giao≥0; nguồn bắt buộc theo policy đã xác nhận; không dùng thiếu=0 | CG05/06/08; Q02",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 19,
+      "entity": "e7_receipt_confirmations",
+      "fields": "id; deliveryId; receivedServings int; actorRef; confirmedAt UTC; evidenceRef; version | Gắn phiếu/version; chưa có xác nhận thì chưa có số nhận, không default0. Sửa xác nhận cần policy, giữ lịch sử | CG01; Q01/02/13",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 20,
+      "entity": "e7_discrepancies / resolutions",
+      "fields": "id; deliveryId; description; evidenceRef; resolutionType; linkedSupplementRef; adjustmentBasis | Mỗi thỏa thuận gắn phần chênh và bằng chứng; không tự cả bù+giảm trừ. Chưa field tiền tự tính khi thiếu basis | Q02/03",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 21,
+      "entity": "e7_revenue_snapshots",
+      "fields": "id; orderId; orderRevisionRef; pricingSnapshotId; billableServings; basisEvidenceRef; grossAmountDue/revenueExVat decimal; contextStatus | Giữ nguồn bất biến; cùng order/version; kết quả chưa xác định nullable logic, không0. Số gốc snapshot không ghi đè | Q03/04/08",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 22,
+      "entity": "e7_reconciliation_periods / lines",
+      "fields": "id; customerId; fromDate/toDate; revision; state; sourceRefs; totals; completeness | Một tập nguồn có version; phạm vi/chồng kỳ và tái chụp cần duyệt; snapshot khóa bất biến | Q05",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 23,
+      "entity": "e7_cash_receipts",
+      "fields": "id; periodId; amount decimal; receivedDate; evidenceRef; version | Tiền dương, chứng từ/scope hợp lệ; uniqueness nghiệp vụ và allocation chưa freeze | Q06/08",
+      "existingNames": []
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 24,
+      "entity": "Reuse change_requests / approvals + liên kết kỳ",
+      "fields": "entityRef; requestVersion; periodVersion; creator/lastEditor; reason; decision | Đề xuất dùng workflow nền, không tạo hai nguồn duyệt; Giám đốc khác người lập/sửa cuối; lý do≥10 ký tự; yêu cầu không mở khóa | Q05/08; O-06",
+      "existingNames": [
+        "change_requests",
+        "approvals"
+      ]
+    },
+    {
+      "epic": "E7",
+      "file": "docs/giao-nhan-doanh-thu/srs/data-dictionary.md",
+      "line": 25,
+      "entity": "e7_export_runs",
+      "fields": "id; periodRef/revision; templateRef; status; errorSummary; fileRef; sourceFingerprint | FileRef chỉ có khi thật sự tạo; template chưa biết; giữ bytes/revision cũ khi kỳ mở lại | Q07/08",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 18,
+      "entity": "pub_content_revisions",
+      "fields": "contentRef, revision, type, title, slug, sanitizedBody, mediaRefs, status, publicRevisionRef | Public pointer chỉ revision được phép; revision cũ giữ nguồn, version chống ghi đè | E8-Q08",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 19,
+      "entity": "pub_url_mappings",
+      "fields": "inventoryRef, sourceURL, action, targetPath, revision, verification, activationEvidence | Một URL nguồn một quyết định trong revision, không vòng lặp; không coi bài xóa là miễn R8 | E8-Q01/02",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 20,
+      "entity": "pub_sample_projections",
+      "fields": "publicSampleRef, menuRef/version, recipeRefs, nutrientCalculationRef, publicPriceRef, eligibilityEvidence | Chỉ trường allowlist; pointer vào nguồn không công khai ID nội bộ | E8-Q03/04",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 21,
+      "entity": "pub_price_permissions",
+      "fields": "publicPriceRef, amount, displayBasis, approverEvidence, effectiveRange | Có thể thay bằng nguồn được xác nhận; không tự lấy ngưỡng giá | E8-Q03",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 22,
+      "entity": "pub_trial_contexts",
+      "fields": "trialRef, allowedInputs, publicResult, provenance | Không hồ sơ người ăn/health; có cần lưu và expiry chưa quyết | E8-Q05/12",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 23,
+      "entity": "pub_lead_intake",
+      "fields": "leadRef, minimalContact, source, consentVersion/evidence, trialRef?, receivedAt | Chỉ lưu khi policy đồng ý; nguồn đi cùng record, không dùng bảng khách thật | E8-Q06",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 24,
+      "entity": "pub_lead_handoffs",
+      "fields": "leadRef, handoffIdentity, state, receiptRef?, lastErrorCode | Chưa receipt không ACK; không enum/phễu CRM | E8-Q06/07",
+      "existingNames": []
+    },
+    {
+      "epic": "E8",
+      "file": "docs/website-cong-khai/srs/data-dictionary.md",
+      "line": 25,
+      "entity": "pub_media_metadata",
+      "fields": "fileRef, altText, rightsEvidenceRef, placements, revision | Chỉ file cho phép; ảnh/banner dùng revision nội dung | E8-Q09",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 27,
+      "entity": "ain_sessions",
+      "fields": "id, principalRef, identityPolicyVersion, consentRef, state, createdAt, expiresAt | Identity/retention Q02/10; không raw sức khỏe; không tự tạo users guest",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 28,
+      "entity": "ain_candidates",
+      "fields": "id, sessionRef, runRef, revision, parentRevision, canonicalHash, safeContent, evidenceRefs, sourceVersions, state | Unique(sessionRef,id,revision); evidence phải cùng hash; không official MENU",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 29,
+      "entity": "ain_proposals",
+      "fields": "id, ownerRef, candidateRef/revision/hash, source, contactRef, consentRef, requestKey/bodyHash, state, receiptRef | ACK chỉ khi lưu bền vững; unique(owner,route,key); Q06/10/13; không lead CRM giả",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 30,
+      "entity": "ain_limit_policies",
+      "fields": "id, groupRef, version, countPolicy, dailyCap, unit, timezone, effectiveAt, approvalRef | Giá trị chưa chọn; không ghi quá khứ; duyệt theo Q08 và E1",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 31,
+      "entity": "ain_budget_reservations",
+      "fields": "id, principal/group, dayKey, policyRef, runRef, upperBound, state, requestKey | Admission atomic; không release UNKNOWN; Q07/13",
+      "existingNames": []
+    },
+    {
+      "epic": "E9",
+      "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+      "line": 32,
+      "entity": "ain_usage_events",
+      "fields": "id, runRef, providerEventRef, dayKey, usageState, amount/unit, reservationRef, sourceHash | Unique event; không sửa mất lịch sử; confirmed/reserved reconciliation, unknown khác0",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 43,
+      "entity": "crm_contact_drafts",
+      "fields": "id, customerRef, displayName, contactRole, channels, sourceEvidenceRef, version | Id PK; customer FK logic; string; object theo Q01; Id; int; required theo policy | Chỉ nháp liên hệ; không đồng bộ master khi CG08 mở.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 44,
+      "entity": "crm_intakes",
+      "fields": "id, sourceSystem, sourceRef, sourceRevision, sourceHash, safeMenuRef, contactRef, consentRef, receiptRef | Id PK; strings required; safeMenuRef nullable; consent/contact theo nguồn | Unique(sourceSystem,sourceRef,sourceRevision); khác hash cùng khóa là xung đột; không raw chat.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 45,
+      "entity": "crm_merge_reviews/events",
+      "fields": "id, leftRef, rightRef, versions, fieldChoices, beforeImage, linkMap, decisionRef, reversalOf | Id; hai FK khách; JSON có schema; decisionRef nullable khi nháp; reversalOf nullable | Không xóa nguồn; ảnh trước có scope và quyền; quyết định/hoàn tác bất biến.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 46,
+      "entity": "crm_lifecycle_events/risk_evaluations",
+      "fields": "customerRef, previousState, nextState, evidenceRef, scheduleRefs, evaluationRef, completeness | FK; enum theo states; Id[]; state | Lịch ngoại lệ và ngưỡng chưa có; không lấy thiếu dữ liệu thành zero.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 47,
+      "entity": "sale_opportunities/events",
+      "fields": "id, customerOrIntakeRef, ownerRef, stage, evidenceRef, version | Id PK; FK logic; stage theo Q07; evidence nullable ở nháp | Một cơ hội nhiều báo giá; lịch sử sự kiện không ghi đè.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 48,
+      "entity": "sale_quote_revisions/publications",
+      "fields": "quoteRef, revisionNo, version, baseRevision, lines, terms, attachments, contentHash, publishedProjection | Id; int; int; FK logic nullable; JSON có schema; hash; projection nullable trước phát hành | Unique(quoteRef,revisionNo); revision đã phát hành bất biến; cost tách riêng.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 49,
+      "entity": "sale_contracts/amendments",
+      "fields": "id, customerRef, quoteRevisionRef, legacyEvidenceRef, signatureEvidenceRef, predecessorRef, status, version | Id PK; FK; quote/legacy ít nhất một nguồn; signature nullable khi nháp; predecessor nullable cho bản đầu | Hợp đồng nhiều phụ lục; phụ lục nhiều dòng loại suất; liên kết nguồn không mất khi gộp.",
+      "existingNames": []
+    },
+    {
+      "epic": "E10",
+      "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+      "line": 50,
+      "entity": "sale_contract_price_links / hiệu lực lịch sử",
+      "fields": "contractRef, amendmentRef, priceTermRef, predecessorTermRef, effectiveFrom, effectiveTo, approvalRef | FK logic; date/date nullable theo Q11; approval nullable trước duyệt | Đề xuất nối vào customer_price_terms; không tự tạo bảng giá cạnh tranh. Mọi thay khoảng có lịch sử và quyết định Q12.",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 51,
+      "entity": "demand / purchase_demands",
+      "fields": "planRef, estimateRef (Reference; không null khi tính); lines (Array); grossQty (Decimal); netBuyQty (Decimal nullable) | FR-PUR-DEM-001; Q01 và CG06; netBuyQty chưa tính",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 52,
+      "entity": "purchaseOrder / purchase_orders",
+      "fields": "supplierId (Id; bắt buộc khi lưu); demandRef (Reference); lines (Array không rỗng); approvalRef (Reference nullable) | FR-PUR-POD-001/POG; Q02; NCC do người lập chọn",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 53,
+      "entity": "lotScope / stock_lots",
+      "fields": "ingredientId (Id); storageType (Enum FROZEN/DRY); lotCode/expiry (chưa đặc tả theo Q03) | Chỉ ranh giới, không bắt buộc lô hàng tươi",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 54,
+      "entity": "goodsReceipt / goods_receipts",
+      "fields": "purchaseOrderRef (Reference); receivedQty, acceptedQty (Decimal; không âm; accepted ≤ received); receivedAt (Timestamp) | Q04; nhận nhiều lần không ghi đè lần cũ",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 55,
+      "entity": "receiptEvidence / receipt_evidence",
+      "fields": "receiptRef, fileRef (Reference; không null; unique logic cặp tham chiếu đề xuất) | Q05/Q13; liên kết không xác nhận giá",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 56,
+      "entity": "supplierBalance / supplier_balance_views",
+      "fields": "opening, obligations, payments, adjustments, closing (Decimal nullable); completeness (Enum) | Projection đọc; nguồn ghi nhận/kỳ Q06; không tạo sổ cái",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 57,
+      "entity": "comparison / purchase_comparisons",
+      "fields": "estimateRef, allocationRefs, measurementBasisRef (Reference); estimatedPct, actualPct, deltaPp (Decimal nullable) | Q07/08; ngày và cơ sở cùng phạm vi",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 58,
+      "entity": "comparisonLine / purchase_comparison_lines",
+      "fields": "ingredientId, estimateLineRef, receiptLineRef (Reference); quantity/unit/price hai phía | Không tự phân bổ hoặc sửa snapshot",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 59,
+      "entity": "productionShift / production_shifts",
+      "fields": "shiftRef, planRef (Reference); assignments (Array mã nhân sự/công việc) | Q09/CG06; không timestamp bắt đầu E6 tự sinh",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 60,
+      "entity": "qualityCheck / pre_delivery_checks",
+      "fields": "shiftRef, checklistRef (Reference); results (mục/kết quả/chứng cứ) | Q10; chưa định nghĩa checklist thực",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 61,
+      "entity": "retainedSample / retained_samples",
+      "fields": "mealRef (Reference); sampleCode (Text); evidenceRef (Reference nullable ở nháp) | Q11; chưa có hạn lưu/lượng mẫu/nhiệt độ",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 62,
+      "entity": "substitution / substitution_candidates",
+      "fields": "menuRef, menuVersion, originalDishId, replacementDishId, role (Reference/Enum); reason | Cùng vai trò; Q12; không ghi menu công bố",
+      "existingNames": []
+    },
+    {
+      "epic": "E11",
+      "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+      "line": 63,
+      "entity": "substitutionCheck / substitution_checks",
+      "fields": "candidateRef, candidateVersion; allergenResultRef, ruleResultRef, costResultRef (Reference nullable khi thiếu) | Ba kiểm đúng nguồn; thiếu một thì BLOCKED",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 27,
+      "entity": "feedback_rating",
+      "fields": "Đề xuất mới; ERD có khung feedbacks nhưng DBML chưa có bảng FB | mealRef, scaleRef, value, actorRef, scopeRef, receiptRef",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 28,
+      "entity": "feedback_case",
+      "fields": "Đề xuất mới | mealRef, categoryRef, nội dung về bữa, status, version, historyRefs",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 29,
+      "entity": "dish_metric_projection",
+      "fields": "Projection đề xuất, không thêm bảng source E6 | dishRef, scopeRef, choiceSourceRefs, numerator, denominatorDefinitionRef, denominator, rate, completeness",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 30,
+      "entity": "role_metric_projection",
+      "fields": "Projection đề xuất | metricDefinitionRef, value, unit, sourceRefs, asOf, completeness, missingReason",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 31,
+      "entity": "review_proposal",
+      "fields": "Tài liệu nháp đề xuất; không ghi MENU/CRM/PUR | kind, sourceRefs, sourceRevision, diff, checkRefs, reviewState",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 32,
+      "entity": "group_nutrition_target",
+      "fields": "Delta nhóm phi y tế đề xuất | groupRef, targets, sourceRef, version, effectiveRange, state",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 33,
+      "entity": "diary_consent",
+      "fields": "Delta riêng, không dùng eater_health_profiles | subjectRef, policyRef, agreedAt, withdrawnAt",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 34,
+      "entity": "diary_meal",
+      "fields": "Delta riêng, không liên kết hồ sơ sức khỏe | subjectRef, consumedMealRef, consumedAt, evidenceRef, nutritionSnapshotRef",
+      "existingNames": []
+    },
+    {
+      "epic": "E12",
+      "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+      "line": 35,
+      "entity": "diary_deletion_request",
+      "fields": "Delta quyền xóa đề xuất | subjectRef, scopeRef, receiptRef, state, completedEvidenceRef",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 25,
+      "entity": "expense_periods",
+      "fields": "| kitchen ref | kitchen_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK kitchens | Scope cơ sở |\n| from date / to date | from_date / to_date | DATE | — | Không | — | Biên ngày chờ Q02 |\n| status | status | ENUM | — | Không | — | OPEN / LOCKED |\n| locked snapshot ref | locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Bắt buộc khi khóa |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 34,
+      "entity": "expense_entries",
+      "fields": "| period ref | period_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Kỳ mở |\n| type version ref | type_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Danh mục Q01 chưa chọn |\n| amount | amount | DECIMAL | Chờ Q09 | Không | — | Tiền có đơn vị và căn cứ; không float |\n| customer ref | customer_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK customers | Bắt buộc với trực tiếp; null với chung |\n| source key / evidence ref | source_key / evidence_ref | STRING | Chờ Q12 | Không | Unique scope | Chống trùng với E3/E11 |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 44,
+      "entity": "attendance_sheets",
+      "fields": "| person ref | person_ref | STRING | Chờ Q03 | Không | Tham chiếu nguồn | Không mặc định người lao động có tài khoản users |\n| shift revision ref | shift_revision_ref | STRING | Chờ E11 | Không | Nguồn E11 | Phân ca không chứng minh đã làm |\n| kitchen ref / work date | kitchen_ref / work_date | BIGINT UNSIGNED / DATE | 20 chữ số / — | Không | FK kitchens | Theo cơ sở/ca |\n| hours | hours | DECIMAL | Chờ Q03 | Có | — | Null khi thiếu; 0 chỉ khi có xác nhận 0 giờ |\n| evidence ref / status | evidence_ref / status | STRING / ENUM | Chờ Q03 | Không | — | DRAFT / SUBMITTED / CONFIRMED / RETURNED |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 54,
+      "entity": "labor_cost_refs",
+      "fields": "| attendance version ref | attendance_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Bản công xác nhận |\n| rate version ref / payroll amount ref | rate_version_ref / payroll_amount_ref | STRING | Chờ Q04 | Có | Nguồn lương | Một cách tính được duyệt; không cộng hai nguồn |\n| amount | amount | DECIMAL | Chờ Q09 | Có | — | Null nếu thiếu nguồn; dữ liệu nhạy cảm |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 62,
+      "entity": "allocation_method_versions",
+      "fields": "| method ref / revision | method_ref / revision | BIGINT UNSIGNED / INTEGER | 20 chữ số / — | Không | Unique cặp | Phiên bản bất biến sau duyệt |\n| proposed basis / driver definition refs | proposed_basis / driver_definition_refs | JSON | Chờ Q05 | Có | — | Dữ liệu mô tả; không có default hoặc code thực thi |\n| scope / effective range | scope / effective_range | JSON | Chờ Q05 | Không | — | Cơ sở/kỳ; không tự xử lý chồng hiệu lực |\n| status | status | ENUM | — | Không | — | DRAFT / SUBMITTED / APPROVED / RETURNED |\n| approver ref / approved at / approval evidence ref / content hash | approver_ref / approved_at / approval_evidence_ref / content_hash | BIGINT UNSIGNED / TIME / STRING | Chờ Q12 | Có | Tham chiếu duyệt | Bắt buộc đủ khi APPROVED; khác lập/sửa cuối |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 72,
+      "entity": "profit_runs",
+      "fields": "| period snapshot ref / source manifest ref | period_snapshot_ref / source_manifest_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Cùng phạm vi, nguồn có version |\n| method version ref | method_version_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Null chỉ khi BLOCKED vì chưa có duyệt |\n| status / blocked reasons | status / blocked_reasons | ENUM / JSON | — | Không | — | DRAFT / BLOCKED / READY / RECONCILED |\n| facility result ref / definition version ref | facility_result_ref / definition_version_ref | STRING | Chờ Q08 | Có | Nguồn chuẩn | Không dùng tổng khách tự tạo làm số chuẩn |\n| customer results / unallocated effect / reconciliation delta | customer_results / unallocated_effect / reconciliation_delta | JSON / DECIMAL | Chờ Q09 | Có | — | Null nếu BLOCKED; tách từng cơ sở/khách; không gộp thiếu nguồn |\n",
+      "existingNames": []
+    },
+    {
+      "epic": "E13",
+      "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+      "line": 82,
+      "entity": "expense_adjustments",
+      "fields": "| original entry ref / locked snapshot ref | original_entry_ref / locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Giữ nguồn gốc bất biến |\n| adjustment amount / target period ref | adjustment_amount / target_period_ref | DECIMAL / BIGINT UNSIGNED | Chờ Q09/10 | Có | FK đề xuất | Dấu tăng/giảm; kỳ đích chưa chọn |\n| reason / evidence ref / approver ref | reason / evidence_ref / approver_ref | STRING / BIGINT UNSIGNED | Chờ Q10 | Có | — | Bắt buộc đủ trước POSTED |\n| status | status | ENUM | — | Không | — | PENDING / REJECTED / POSTED |\n",
+      "existingNames": []
+    }
+  ],
+  "note": "Đơn vị là dòng thực thể logic hoặc nhóm thực thể; không phải số bảng vật lý. Trường chung nằm ở từ điển được dẫn. E9 dẫn tiếp mapping như từ điển chỉ định."
+}

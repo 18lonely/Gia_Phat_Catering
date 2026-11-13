@@ -1,0 +1,13 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.resolve(__dirname,'../../../../..'),pack=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.resolve(root,p),'utf8').replace(/^\uFEFF/,'');
+const walk=p=>fs.readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(p,e.name)):[path.join(p,e.name)]);
+const rel=p=>path.relative(root,p).replaceAll('\\','/');
+const json=(name,x)=>fs.writeFileSync(path.join(pack,name),JSON.stringify(x,null,2)+'\n');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const link=(p,line,from=pack)=>path.relative(from,path.resolve(root,p)).replaceAll('\\','/')+(line?'#L'+line:'');
+const clean=s=>s.replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/[*`]/g,'').trim();
+const tableRows=p=>read(p).split(/\r?\n/).map((line,i)=>({cells:line.startsWith('|')?line.split('|').slice(1,-1).map(s=>s.trim()):[],line:i+1,raw:line})).filter(r=>r.cells.length);
+const fm=(id,title)=>`---\nid: DOC-DECISION-PACK-${id}\ntitle: ${title}\nversion: 0.1.0\nphase: Review\ndomain: Gia Phát\ntags: [decision-pack, draft, review]\ndepends_on: [DOC-PRD-GIA-PHAT]\nrelated_diagrams: []\nauthor: BA\nlast_updated: 2026-11-13\n---\n# ${title}\n\nNháp · 13/11/2026 · Chuẩn bị quyết định, chưa phê duyệt.\n\n| Phiên bản | Ngày | Vai trò | Nội dung |\n| :--- | :--- | :--- | :--- |\n| 0.1.0 | 13/11/2026 | BA | Hợp nhất nguồn để review; giữ câu mở |\n\n`;
+const md=(name,id,title,body)=>fs.writeFileSync(path.join(pack,name),fm(id,title)+body);
+module.exports={fs,path,root,pack,read,walk,rel,json,hash,link,clean,tableRows,fm,md};

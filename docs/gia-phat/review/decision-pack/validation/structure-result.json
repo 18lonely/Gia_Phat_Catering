@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": 13566,
+  "sourceCodes": 219,
+  "groups": 197,
+  "links": 1386,
+  "sourceQuotesExcluded": 646,
+  "numberSpacingScope": "Văn xuôi mới; nguyên văn nguồn trong blockquote và cột khuyến nghị được giữ byte nội dung, không sửa số dính chữ lịch sử.",
+  "errors": []
+}

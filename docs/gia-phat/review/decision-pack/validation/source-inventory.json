@@ -1,0 +1,496 @@
+{
+  "configs": [
+    [
+      "docs/gia-phat/01-prd.md",
+      "PRD",
+      "^O-0[1-6]$",
+      2
+    ],
+    [
+      "docs/nen-tang/review/questions.md",
+      "E1",
+      "^E1-Q",
+      2,
+      3
+    ],
+    [
+      "docs/nen-tang/srs/spec.md",
+      "E1",
+      "^(N-0[1-4]|Q-14|Q-18)$",
+      2
+    ],
+    [
+      "docs/thuc-don-dinh-luong/srs/spec.md",
+      "E2",
+      "^(DL-01|E2-Q[0-9]+)$",
+      2
+    ],
+    [
+      "docs/gia-phat/brainstorms/quy-tac-thuc-don.md",
+      "E2",
+      "^H-[1-9]$"
+    ],
+    [
+      "docs/cost/review/decision-register.md",
+      "E3",
+      "^(E3-Q[0-9]+|FLOW-COST-Q[0-9]+|QA-COST-Q01)$",
+      2
+    ],
+    [
+      "docs/cost/accounting/business-rules.md",
+      "E3",
+      "^CK-Q[0-9]+$",
+      3
+    ],
+    [
+      "docs/cost/review/accountant-input.md",
+      "E3",
+      "^DATA-COST-Q[0-9]+$"
+    ],
+    [
+      "docs/dinh-duong/review/questions.md",
+      "E4",
+      "^(NUTR-Q|DATA-NUTR-Q)",
+      2
+    ],
+    [
+      "docs/agent-noi-bo/review/questions.md",
+      "E5",
+      "^AIO-Q",
+      2
+    ],
+    [
+      "docs/chon-mon-order/review/questions.md",
+      "E6",
+      "^ORD-Q",
+      2
+    ],
+    [
+      "docs/chon-mon-order/review/contract-gap-register.md",
+      "E6",
+      "^E6-CG-",
+      2
+    ],
+    [
+      "docs/gia-phat/00-ke-hoach-tong-the.md",
+      "E6",
+      "^Q-16$"
+    ],
+    [
+      "docs/giao-nhan-doanh-thu/review/questions.md",
+      "E7",
+      "^(Q-13|E7-Q)",
+      null,
+      2
+    ],
+    [
+      "docs/website-cong-khai/review/questions.md",
+      "E8",
+      "^E8-Q",
+      null,
+      2
+    ],
+    [
+      "docs/agent-dinh-duong-vien/review/questions.md",
+      "E9",
+      "^E9-Q",
+      null,
+      2
+    ],
+    [
+      "docs/crm-ban-hang/review/questions.md",
+      "E10",
+      "^E10-Q",
+      3,
+      5
+    ],
+    [
+      "docs/mua-hang-san-xuat/review/questions.md",
+      "E11",
+      "^E11-Q",
+      null,
+      2
+    ],
+    [
+      "docs/phan-hoi-bao-cao/review/questions.md",
+      "E12",
+      "^E12-Q",
+      null,
+      2
+    ],
+    [
+      "docs/chi-phi-loi-nhuan/review/questions.md",
+      "E13",
+      "^E13-Q",
+      null,
+      2
+    ]
+  ],
+  "registers": [
+    {
+      "file": "docs/gia-phat/01-prd.md",
+      "epic": "PRD",
+      "count": 6,
+      "codes": [
+        "O-01",
+        "O-02",
+        "O-03",
+        "O-04",
+        "O-05",
+        "O-06"
+      ]
+    },
+    {
+      "file": "docs/nen-tang/review/questions.md",
+      "epic": "E1",
+      "count": 5,
+      "codes": [
+        "E1-Q01",
+        "E1-Q02",
+        "E1-Q03",
+        "E1-Q04",
+        "E1-Q05"
+      ]
+    },
+    {
+      "file": "docs/nen-tang/srs/spec.md",
+      "epic": "E1",
+      "count": 6,
+      "codes": [
+        "N-01",
+        "N-02",
+        "N-03",
+        "N-04",
+        "Q-14",
+        "Q-18"
+      ]
+    },
+    {
+      "file": "docs/thuc-don-dinh-luong/srs/spec.md",
+      "epic": "E2",
+      "count": 12,
+      "codes": [
+        "DL-01",
+        "E2-Q1",
+        "E2-Q2",
+        "E2-Q3",
+        "E2-Q4",
+        "E2-Q6",
+        "E2-Q7",
+        "E2-Q8",
+        "E2-Q9",
+        "E2-Q10",
+        "E2-Q11",
+        "E2-Q5"
+      ]
+    },
+    {
+      "file": "docs/gia-phat/brainstorms/quy-tac-thuc-don.md",
+      "epic": "E2",
+      "count": 9,
+      "codes": [
+        "H-1",
+        "H-2",
+        "H-3",
+        "H-4",
+        "H-5",
+        "H-6",
+        "H-7",
+        "H-8",
+        "H-9"
+      ]
+    },
+    {
+      "file": "docs/cost/review/decision-register.md",
+      "epic": "E3",
+      "count": 27,
+      "codes": [
+        "E3-Q1",
+        "E3-Q2",
+        "E3-Q3",
+        "E3-Q4",
+        "E3-Q5",
+        "E3-Q6",
+        "E3-Q7",
+        "E3-Q8",
+        "E3-Q9",
+        "E3-Q10",
+        "E3-Q11",
+        "E3-Q12",
+        "E3-Q13",
+        "E3-Q14",
+        "E3-Q15",
+        "E3-Q16",
+        "FLOW-COST-Q01",
+        "FLOW-COST-Q02",
+        "FLOW-COST-Q03",
+        "FLOW-COST-Q04",
+        "FLOW-COST-Q05",
+        "FLOW-COST-Q06",
+        "FLOW-COST-Q07",
+        "FLOW-COST-Q08",
+        "FLOW-COST-Q09",
+        "FLOW-COST-Q10",
+        "QA-COST-Q01"
+      ]
+    },
+    {
+      "file": "docs/cost/accounting/business-rules.md",
+      "epic": "E3",
+      "count": 10,
+      "codes": [
+        "CK-Q01",
+        "CK-Q02",
+        "CK-Q03",
+        "CK-Q04",
+        "CK-Q05",
+        "CK-Q06",
+        "CK-Q07",
+        "CK-Q08",
+        "CK-Q09",
+        "CK-Q10"
+      ]
+    },
+    {
+      "file": "docs/cost/review/accountant-input.md",
+      "epic": "E3",
+      "count": 6,
+      "codes": [
+        "DATA-COST-Q01",
+        "DATA-COST-Q02",
+        "DATA-COST-Q03",
+        "DATA-COST-Q04",
+        "DATA-COST-Q05",
+        "DATA-COST-Q06"
+      ]
+    },
+    {
+      "file": "docs/dinh-duong/review/questions.md",
+      "epic": "E4",
+      "count": 5,
+      "codes": [
+        "NUTR-Q01",
+        "NUTR-Q02",
+        "NUTR-Q03",
+        "NUTR-Q04",
+        "DATA-NUTR-Q01"
+      ]
+    },
+    {
+      "file": "docs/agent-noi-bo/review/questions.md",
+      "epic": "E5",
+      "count": 6,
+      "codes": [
+        "AIO-Q01",
+        "AIO-Q02",
+        "AIO-Q03",
+        "AIO-Q04",
+        "AIO-Q05",
+        "AIO-Q06"
+      ]
+    },
+    {
+      "file": "docs/chon-mon-order/review/questions.md",
+      "epic": "E6",
+      "count": 15,
+      "codes": [
+        "ORD-Q01",
+        "ORD-Q02",
+        "ORD-Q03",
+        "ORD-Q04",
+        "ORD-Q05",
+        "ORD-Q06",
+        "ORD-Q07",
+        "ORD-Q08",
+        "ORD-Q09",
+        "ORD-Q10",
+        "ORD-Q11",
+        "ORD-Q12",
+        "ORD-Q13",
+        "ORD-Q14",
+        "ORD-Q15"
+      ]
+    },
+    {
+      "file": "docs/chon-mon-order/review/contract-gap-register.md",
+      "epic": "E6",
+      "count": 14,
+      "codes": [
+        "E6-CG-01",
+        "E6-CG-02",
+        "E6-CG-03",
+        "E6-CG-04",
+        "E6-CG-05",
+        "E6-CG-06",
+        "E6-CG-07",
+        "E6-CG-08",
+        "E6-CG-09",
+        "E6-CG-10",
+        "E6-CG-11",
+        "E6-CG-12",
+        "E6-CG-13",
+        "E6-CG-14"
+      ]
+    },
+    {
+      "file": "docs/gia-phat/00-ke-hoach-tong-the.md",
+      "epic": "E6",
+      "count": 1,
+      "codes": [
+        "Q-16"
+      ]
+    },
+    {
+      "file": "docs/giao-nhan-doanh-thu/review/questions.md",
+      "epic": "E7",
+      "count": 9,
+      "codes": [
+        "Q-13",
+        "E7-Q01",
+        "E7-Q02",
+        "E7-Q03",
+        "E7-Q04",
+        "E7-Q05",
+        "E7-Q06",
+        "E7-Q07",
+        "E7-Q08"
+      ]
+    },
+    {
+      "file": "docs/website-cong-khai/review/questions.md",
+      "epic": "E8",
+      "count": 12,
+      "codes": [
+        "E8-Q01",
+        "E8-Q02",
+        "E8-Q03",
+        "E8-Q04",
+        "E8-Q05",
+        "E8-Q06",
+        "E8-Q07",
+        "E8-Q08",
+        "E8-Q09",
+        "E8-Q10",
+        "E8-Q11",
+        "E8-Q12"
+      ]
+    },
+    {
+      "file": "docs/agent-dinh-duong-vien/review/questions.md",
+      "epic": "E9",
+      "count": 14,
+      "codes": [
+        "E9-Q01",
+        "E9-Q02",
+        "E9-Q03",
+        "E9-Q04",
+        "E9-Q05",
+        "E9-Q06",
+        "E9-Q07",
+        "E9-Q08",
+        "E9-Q09",
+        "E9-Q10",
+        "E9-Q11",
+        "E9-Q12",
+        "E9-Q13",
+        "E9-Q14"
+      ]
+    },
+    {
+      "file": "docs/crm-ban-hang/review/questions.md",
+      "epic": "E10",
+      "count": 15,
+      "codes": [
+        "E10-Q01",
+        "E10-Q02",
+        "E10-Q03",
+        "E10-Q04",
+        "E10-Q05",
+        "E10-Q06",
+        "E10-Q07",
+        "E10-Q08",
+        "E10-Q09",
+        "E10-Q10",
+        "E10-Q11",
+        "E10-Q12",
+        "E10-Q13",
+        "E10-Q14",
+        "E10-Q15"
+      ]
+    },
+    {
+      "file": "docs/mua-hang-san-xuat/review/questions.md",
+      "epic": "E11",
+      "count": 15,
+      "codes": [
+        "E11-Q01",
+        "E11-Q02",
+        "E11-Q03",
+        "E11-Q04",
+        "E11-Q05",
+        "E11-Q06",
+        "E11-Q07",
+        "E11-Q08",
+        "E11-Q09",
+        "E11-Q10",
+        "E11-Q11",
+        "E11-Q12",
+        "E11-Q13",
+        "E11-Q14",
+        "E11-Q15"
+      ]
+    },
+    {
+      "file": "docs/phan-hoi-bao-cao/review/questions.md",
+      "epic": "E12",
+      "count": 18,
+      "codes": [
+        "E12-Q01",
+        "E12-Q02",
+        "E12-Q03",
+        "E12-Q04",
+        "E12-Q05",
+        "E12-Q06",
+        "E12-Q07",
+        "E12-Q08",
+        "E12-Q09",
+        "E12-Q10",
+        "E12-Q11",
+        "E12-Q12",
+        "E12-Q13",
+        "E12-Q14",
+        "E12-Q15",
+        "E12-Q16",
+        "E12-Q17",
+        "E12-Q18"
+      ]
+    },
+    {
+      "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+      "epic": "E13",
+      "count": 14,
+      "codes": [
+        "E13-Q01",
+        "E13-Q02",
+        "E13-Q03",
+        "E13-Q04",
+        "E13-Q05",
+        "E13-Q06",
+        "E13-Q07",
+        "E13-Q08",
+        "E13-Q09",
+        "E13-Q10",
+        "E13-Q11",
+        "E13-Q12",
+        "E13-Q13",
+        "E13-Q14"
+      ]
+    }
+  ],
+  "excludedEvidence": [
+    "E6-EVID-001",
+    "E6-EVID-002"
+  ],
+  "excludedFindings": "E6-RV-01–08 được truy vết trong CG; không tạo câu nghiệp vụ mới.",
+  "rows": 219
+}

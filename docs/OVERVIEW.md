@@ -223,3 +223,18 @@ Cost nguyên liệu gồm VAT phải trả NCC; cờ không yêu cầu hóa đơ
 Giữ chờ E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8-Q01–12; E9-Q01–14; E10-Q01–15; E11-Q01–15; E12-Q01–18; O-01–O-06; CK-Q01–10, DATA-COST-Q01–06; AIO-Q01–06, NUTR-Q01–04; DL-01; E1-Q01–05. Không hỏi lại hoặc tự đặc tả tiếp producer đang chờ.
 
 Baseline E13 chụp 1070 file cũ, lần đối chiếu ngay sau không phát hiện thay đổi. Bốn checker và ảnh desktop/mobile tại báo cáo E13; hai tổng quan chỉ append, schema giữ 65 bảng. Không sửa bằng chứng hash lịch sử E12. Không backend, migration, gọi mô hình AI, commit hoặc xóa file.
+
+
+## Mốc hiện hành — gói quyết định, 13/11/2026
+
+Theo yêu cầu người dùng, chuẩn bị gói quyết định cho 13 epic và PRD; không mở epic hoặc viết thêm đặc tả. Các mốc phía trên giữ nguyên byte và là lịch sử.
+
+[Đọc trong 5 phút](gia-phat/review/decision-pack/README.md) · [Sổ quyết định](gia-phat/review/decision-pack/decision-register.md) · [Nhóm quyết định](gia-phat/review/decision-pack/decision-groups.md) · [Chương trình họp](gia-phat/review/decision-pack/meeting-agenda.md) · [Rà nhất quán](gia-phat/review/decision-pack/cross-epic-consistency.md) · [Báo cáo kiểm](gia-phat/review/decision-pack/validation/report.md).
+
+219 mã câu hỏi/gap nguồn, 197 nhóm DEC, 9 buổi họp theo vai trò. Chênh +50 so với ước tính 169 do bổ sung các câu cũ còn mở và phân biệt mã bằng chứng E6 với câu hỏi; bảng đếm từng sổ và căn cứ nằm trong báo cáo. Các cột Trả lời/Quyết định để trống; 0 câu được đóng. Các nhóm chặn MVP đều ở buổi 1–3; buổi 4 ưu tiên E6 CG01/08/05/06 rồi CG12.
+
+Độ phủ thiết kế tài liệu nháp giữ **75/78 ≈ 96,2 %**. FEAT-046/047/063 chỉ gate O-03; không thu dữ liệu sức khỏe. Đây là gói chuẩn bị quyết định, **không phải BA được duyệt**: 0 feature được phê duyệt, 0 ca sản phẩm đã chạy. G-Now/G-Next và R1–R13 không tự được nghiệm thu.
+
+Rà liên epic ghi 12 phát hiện cần xác nhận; không sửa nguồn. Cost gồm VAT phải trả NCC, cờ không yêu cầu hóa đơn độc lập; chiết khấu riêng theo đơn không giảm phải trả NCC hoặc tự giảm tiền khách. NFR-COST-002 giữ ≤ 1 đ và ≤ 0,01 điểm phần trăm; BO-01/BO-02 là mục tiêu kinh doanh. FR-MENU-RCP-007 giữ gate O-02.
+
+Baseline gói chụp 1175 file cũ trong docs trước khi viết; chỉ hai tổng quan được append, schema giữ 65 bảng. Bốn sai lệch hash E12 do commit 71e2a4c đã được giải thích trong báo cáo, không khôi phục hoặc chụp lại baseline E12. Phiên sau chỉ xử lý từng DEC theo quyết định đã ký có nguồn, phân tích tác động bằng skill cr. Không backend, migration, gọi AI, commit hoặc xóa file.

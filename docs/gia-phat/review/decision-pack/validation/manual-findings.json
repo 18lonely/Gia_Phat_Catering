@@ -1,0 +1,329 @@
+[
+  {
+    "id": "XC-01",
+    "severity": "Cao",
+    "title": "O-01 về VAT đầu vào còn diễn đạt cũ trong ERD",
+    "refs": [
+      {
+        "file": "docs/nen-tang/srs/erd.md",
+        "line": 580,
+        "excerpt": "| Giá nhập | price_vnd | BIGINT | — | Không | — | > 0; trên 1 `buy_unit` | Có gồm VAT đầu vào hay không: [O-01] |"
+      },
+      {
+        "file": "docs/cost/accounting/business-rules.md",
+        "line": 18,
+        "excerpt": "| ACC-CONF-02 | Cost nguyên liệu dùng cả tiền VAT phải trả NCC | Giá dùng tính cost là giá mua có VAT phải trả; giá báo chưa VAT phải quy đổi, giá đã gồm VAT không cộng lần hai |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/dependencies.md",
+        "line": 31,
+        "excerpt": "[Nền SRS](../../nen-tang/srs/spec.md), [ERD](../../nen-tang/srs/erd.md), [DBML](../../nen-tang/srs/schema.dbml): quyền vai trò × cơ sở, tách tạo/duyệt BR-SEC-008, audit, snapshot. 65 bảng giữ nguyên; đề xuất EXP chỉ trong từ điển. ERD có diễn đạt cũ hỏi VAT đầu vào; nguyên tắc người dùng và ACC-CONF-02 xác nhận cost gồm VAT phải trả được ưu tiên, không sửa nguồn cũ."
+      }
+    ],
+    "description": "ERD còn hỏi giá nhập có gồm VAT đầu vào; xác nhận kế toán E3 và dependency E13 đã nêu cost gồm VAT phải trả. Đây là phần có câu trả lời ngầm, cần xác nhận phạm vi O-01 còn mở; VAT bán ra và khoản khoán chưa được đóng.",
+    "action": "Ở phiên có quyết định ký, đánh dấu phần VAT đầu vào đã có căn cứ và sửa diễn đạt cũ theo CR; giữ các nhánh O-01 chưa trả lời. Gốc ưu tiên: ACC-CONF-02 của E3.",
+    "owner": "Kế toán, BA",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-02",
+    "severity": "Cao",
+    "title": "Các mẫu số cost không được thay thế nhau",
+    "refs": [
+      {
+        "file": "docs/cost/srs/spec.md",
+        "line": 64,
+        "excerpt": "| Cost % | Cost suất ÷ doanh thu chưa VAT của suất × 100 |"
+      },
+      {
+        "file": "docs/mua-hang-san-xuat/review/questions.md",
+        "line": 32,
+        "excerpt": "| E11-Q08 | BO-02 dùng mẫu số, dấu/giá trị tuyệt đối, tập ngày và xử lý ngày không doanh thu như thế nào? | Đề nghị so hai tỷ lệ cùng phạm vi và cùng mẫu số đã duyệt; không thay mục tiêu ≤ 3 điểm phần trăm. | R11 BLOCKED tới khi có công thức đo và dữ liệu thật; không dùng chênh tương đối 3 %. |  |"
+      },
+      {
+        "file": "docs/phan-hoi-bao-cao/review/questions.md",
+        "line": 32,
+        "excerpt": "| E12-Q08 | Cost % theo khách dùng tập ghép, nguồn số suất, phân bổ, mẫu số và trọng số nào; xử lý thiếu/0 thế nào? | Giữ riêng cost % thực đơn và dự toán E3; không bình quân tỷ lệ hoặc suy từ số giao. Chờ định nghĩa tổng hợp có nguồn. | FEAT-081 theo khách BLOCKED; E11-Q07/08, O-01 và E7 không tự chốt. |  |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+        "line": 32,
+        "excerpt": "| E13-Q08 | Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao? | Cần manifest thành phần và định nghĩa có phiên bản; không suy lợi nhuận bằng doanh thu trừ riêng cost nguyên liệu. | Kết quả chính thức, công thức lợi nhuận; O-01, CK-Q01–10, E10-Q15; FR-EXP-RECON-001. |  |"
+      }
+    ],
+    "description": "E3 định nghĩa cost suất trên doanh thu chưa VAT; E11 hỏi mẫu số BO-02; E12 hỏi tập ghép/trọng số theo khách; E13 hỏi thành phần kết quả kinh doanh. Các chỉ số có liên quan nhưng chưa có ánh xạ được duyệt. Không phát hiện căn cứ để coi chúng là cùng một tỷ lệ.",
+    "action": "Lập bảng định nghĩa nguồn và bộ đối chiếu cùng phạm vi sau khi từng câu được ký. Dùng E3 làm gốc cost/VAT/chiết khấu, E7 làm gốc doanh thu. BO-01 ≤ 52 % và BO-02 ≤ 3 điểm phần trăm không phải dung sai NFR-COST-002.",
+    "owner": "Kế toán, Giám đốc, chủ dashboard",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-03",
+    "severity": "Cao",
+    "title": "Doanh thu E13 phụ thuộc số tính tiền và VAT E7 còn mở",
+    "refs": [
+      {
+        "file": "docs/giao-nhan-doanh-thu/review/questions.md",
+        "line": 21,
+        "excerpt": "| E7-Q03 | Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào? | Căn cứ từng đơn có evidence; không mặc định số nhận/số chốt. | REV; giảm trừ khác CK riêng |  |  |"
+      },
+      {
+        "file": "docs/giao-nhan-doanh-thu/review/questions.md",
+        "line": 22,
+        "excerpt": "| E7-Q04 | Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể? | Hiện phải trả, VAT, doanh thu trước VAT riêng; không mượn dung sai Cost. | Tổng chính thức và R7 |  |  |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/dependencies.md",
+        "line": 24,
+        "excerpt": "| E7 | [SRS](../../giao-nhan-doanh-thu/srs/spec.md), [câu hỏi](../../giao-nhan-doanh-thu/review/questions.md) | Doanh thu đã đối soát, scope khách/kỳ và revision | Q-13/E7-Q03/04/05/08 chưa đóng; không tự tính thu hoặc mở lại kỳ. |"
+      }
+    ],
+    "description": "E13 yêu cầu doanh thu đã đối soát có revision; E7 chưa chốt số tính tiền, căn cứ VAT và dung sai đối chiếu. Bản snapshot đề xuất không chứng minh doanh thu chính thức đã đủ nguồn.",
+    "action": "Giữ gate R13; sau quyết định E7 mới chuẩn hóa hợp đồng đọc doanh thu và evidence. Không suy số tính tiền từ số giao/nhận. Không mượn dung sai Cost cho R7/R13.",
+    "owner": "Kế toán, Giám đốc",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-04",
+    "severity": "Trung bình",
+    "title": "Tên và kiểu version/định danh ở delta chưa thống nhất",
+    "refs": [
+      {
+        "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+        "line": 34,
+        "excerpt": "| Phiên bản | version | Integer | Chờ contract | Không | — | Token kiểm khi ghi | Không tráo revision nguồn |"
+      },
+      {
+        "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
+        "line": 45,
+        "excerpt": "| Phiên bản | version | Opaque token | Chờ Q18 | Không khi sửa | — | So khớp, không mặc định lấy mới nhất | Khác revision bất biến của nguồn |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
+        "line": 23,
+        "excerpt": "Mọi thực thể đề xuất có id BIGINT UNSIGNED (20 chữ số tối đa, PK, không null), version INTEGER (không null), createdBy/createdAt và auditRef (không null); Khóa mới đề xuất kế thừa BIGINT UNSIGNED của nền; API truyền định danh dạng chuỗi để không mất chính xác. Trường liệt kê là enum logic, physical đề xuất VARCHAR(24) + CHECK theo nền, không phải MySQL ENUM. Thời điểm lưu UTC, ngày nghiệp vụ theo giờ Việt Nam; biên kỳ cụ thể vẫn chờ Q02. Độ dài trường chưa có căn cứ và lưu trữ chi tiết chờ Q12. Các trường lương không vào log thông thường. Không chọn precision hoặc retention từ ví dụ."
+      }
+    ],
+    "description": "E11 dùng Integer, E12 dùng opaque token, E13 dùng INTEGER và chọn BIGINT UNSIGNED đề xuất; E10 chưa chọn khóa vật lý mới. Đây là khác mức trừu tượng, chưa chứng minh mâu thuẫn runtime. Nếu consumer ép version thành số thì mất tính opaque.",
+    "action": "Tech lead xác nhận kiểu wire và mapping riêng từng nguồn; không đổi schema 65 bảng. Thống nhất quy ước reference/revision/version trước freeze.",
+    "owner": "Tech lead, chủ dữ liệu E10–E13",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-05",
+    "severity": "Trung bình",
+    "title": "Lead và proposal xuất hiện ở ba delta",
+    "refs": [
+      {
+        "file": "docs/website-cong-khai/srs/data-dictionary.md",
+        "line": 23,
+        "excerpt": "| pub_lead_intake | leadRef, minimalContact, source, consentVersion/evidence, trialRef?, receivedAt | Chỉ lưu khi policy đồng ý; nguồn đi cùng record, không dùng bảng khách thật | E8-Q06 |"
+      },
+      {
+        "file": "docs/agent-dinh-duong-vien/api/data-mapping.md",
+        "line": 29,
+        "excerpt": "| ain_proposals | id, ownerRef, candidateRef/revision/hash, source, contactRef, consentRef, requestKey/bodyHash, state, receiptRef | ACK chỉ khi lưu bền vững; unique(owner,route,key); Q06/10/13; không lead CRM giả |"
+      },
+      {
+        "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+        "line": 44,
+        "excerpt": "| crm_intakes | id, sourceSystem, sourceRef, sourceRevision, sourceHash, safeMenuRef, contactRef, consentRef, receiptRef | Id PK; strings required; safeMenuRef nullable; consent/contact theo nguồn | Unique(sourceSystem,sourceRef,sourceRevision); khác hash cùng khóa là xung đột; không raw chat. |"
+      }
+    ],
+    "description": "Ba cấu trúc có contact/consent/source/receipt cùng chức năng tiếp nhận nhưng khác producer và vòng đời. Chưa có tên bảng vật lý trùng chính xác; vẫn có nguy cơ ghi nhiều bản cho một nguồn hoặc coi receipt là duyệt.",
+    "action": "Xác nhận nguồn chủ, khóa bàn giao và phạm vi consent qua E8-Q06, E9-Q06/10, E10-Q13. Giữ các delta độc lập cho đến khi có quyết định; không tự gộp bảng.",
+    "owner": "Kinh doanh, phụ trách dữ liệu, Tech lead",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-06",
+    "severity": "Cao",
+    "title": "Đồng ý nhật ký khác đồng ý sức khỏe; bữa đã ăn cần evidence riêng",
+    "refs": [
+      {
+        "file": "docs/phan-hoi-bao-cao/review/questions.md",
+        "line": 39,
+        "excerpt": "| E12-Q15 | Nội dung đồng ý nhật ký, quyền chủ thể, rút đồng ý và phạm vi dữ liệu tối thiểu được duyệt thế nào? | Đồng ý tự nguyện riêng cho bữa đã ăn; không chọn sẵn, không ảnh hưởng chọn món; không hồ sơ sức khỏe. | FEAT-087 nhận thật BLOCKED; không mở O-03. |  |"
+      },
+      {
+        "file": "docs/phan-hoi-bao-cao/review/questions.md",
+        "line": 41,
+        "excerpt": "| E12-Q17 | Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào? | Cân nhắc xác nhận tự nguyện của người ăn có scope và snapshot; chưa chọn làm chính sách. Không suy từ order/giao/chọn món. | FR-NUTR-DREC-001; nhận bữa thật BLOCKED; phần xem/xóa và ranh giới vẫn thiết kế độc lập. |  |"
+      },
+      {
+        "file": "docs/phan-hoi-bao-cao/review/dependencies.md",
+        "line": 37,
+        "excerpt": "FEAT-087 độc lập với O-03 vì không đọc eater_health_profiles, không nhận bệnh lý/chỉ số cơ thể, không suy luận và không gợi ý; chỉ sự kiện bữa đã ăn cùng snapshot suất. Chính sách identity/consent/retention/bằng chứng còn BLOCKED, nhưng không làm feature này chỉ gate. Bất kỳ mở rộng FEAT-046/047 là gate-only O-03, ngoài thiết kế hiện tại."
+      },
+      {
+        "file": "docs/agent-dinh-duong-vien/review/questions.md",
+        "line": 31,
+        "excerpt": "| E9-Q14 | Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không? | Giữ gate đóng; sau quyết định mới review phạm vi persona, consent/quyền và contract FEAT-047; không xây nhánh gợi ý trước | Toàn bộ gợi ý cá nhân/đọc hồ sơ/thu hoặc suy luận sức khỏe | O-03; FR-NUTR-PROF-001/REC-001 |  |  |"
+      }
+    ],
+    "description": "Nguồn đã phân biệt FEAT-087 phi y tế với FEAT-046/047/063. Đây là câu trả lời ngầm về ranh giới, cần xác nhận; không trả lời consent/retention hoặc bằng chứng đã ăn. Chọn món, giao hàng và nhận hàng không chứng minh cá nhân đã ăn.",
+    "action": "Giữ nhóm O-03 riêng; trình E12-Q15/16/17 theo chính sách nhật ký. Không mở thu thập sức khỏe, không suy đã ăn từ E6/E7.",
+    "owner": "Giám đốc, phụ trách dữ liệu, Dinh dưỡng viên",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-07",
+    "severity": "Trung bình",
+    "title": "Người duyệt trong các epic mới vẫn chưa được O-06 chỉ định",
+    "refs": [
+      {
+        "file": "docs/mua-hang-san-xuat/review/questions.md",
+        "line": 26,
+        "excerpt": "| E11-Q02 | Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào? | Dùng tách tạo/duyệt của E1; chưa gán vai trò duyệt hoặc hạn mức. | Đơn mua chỉ nháp; phát hành và sửa đơn đã duyệt BLOCKED; O-06 giữ mở. |  |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+        "line": 34,
+        "excerpt": "| E13-Q10 | Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc? | Bút toán riêng gắn bản gốc, lý do và người duyệt khác người lập/sửa cuối; không mở khóa tại E13. | Ghi nhận điều chỉnh chính thức; O-06; FR-EXP-ADJ-001. |  |"
+      },
+      {
+        "file": "docs/crm-ban-hang/review/questions.md",
+        "line": 27,
+        "excerpt": "| E10-Q03 | Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào? | Gộp thay đổi cách truy lịch sử; O-06 và CG08 vẫn là câu nguồn chưa đóng. | Giám đốc và chủ dữ liệu khách | FR-CUS-DUP-001 / UC-CRM-004; FR-CUS-MRG-001 / UC-CRM-005; FR-CUS-UNDO-001 / UC-CRM-006 | Người duyệt khác người lập/sửa cuối; quyền gộp và hoàn tác riêng. | Hội đồng review từng đợt dữ liệu trước khi giao quyền vận hành. | CHỜ TRẢ LỜI |  |  |"
+      },
+      {
+        "file": "docs/nen-tang/srs/spec.md",
+        "line": 401,
+        "excerpt": "| O-06 | Ai duyệt ngoại lệ và ai thay khi vắng | Giám đốc | Vai trò `GIAM_DOC`, `FR-AUTH-RBAC-003`, `BR-SYS-002` |"
+      }
+    ],
+    "description": "Tách người lập/người sửa cuối khỏi người duyệt là nguyên tắc nền. Các epic mới đã mô tả approval nhưng người duyệt, hạn mức và người thay còn mở; không thể dùng tên persona để tự cấp quyền.",
+    "action": "Trình ma trận theo nghiệp vụ trong nhóm O-06; ghi phạm vi từng chữ ký. Các vai trò chỉ tham gia review chưa được tính là người có quyền quyết định.",
+    "owner": "Giám đốc, BA",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-08",
+    "severity": "Trung bình",
+    "title": "Hai chức năng dựng thực đơn public có khả năng dùng chung",
+    "refs": [
+      {
+        "file": "docs/website-cong-khai/review/questions.md",
+        "line": 22,
+        "excerpt": "| E8-Q05 | FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì? | Lọc mẫu được duyệt hoặc dựng qua bộ kiểm không lưu E2; chưa chọn. Không nới quy tắc cứng hoặc triển khai Agent E9 | Generation, kiểm quy tắc và giới hạn chính thức |  |  |"
+      },
+      {
+        "file": "docs/agent-dinh-duong-vien/review/questions.md",
+        "line": 28,
+        "excerpt": "| E9-Q11 | FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào? | Có thể dùng chung port kiểm thuần, hoặc bộ dựng riêng; không dùng lại credential/quota AIO | Chốt adapter/bộ dựng và reuse; không sửa FEAT-057 | E8-Q05; AIO-Q06 |  |  |"
+      },
+      {
+        "file": "docs/website-cong-khai/api/endpoint-catalog.json",
+        "line": 102,
+        "excerpt": "    \"path\": \"/v1/public/menu-trials\","
+      },
+      {
+        "file": "docs/agent-dinh-duong-vien/api/endpoint-catalog.json",
+        "line": 29,
+        "excerpt": "    \"path\": \"/v1/nutrition-agent/requests\","
+      }
+    ],
+    "description": "Quét path/method không thấy trùng, nhưng FEAT-057 và FEAT-060 cùng dựng thực đơn public; E9-Q11 đã hỏi dùng chung hay tách bộ dựng/port kiểm. Khác URL không chứng minh khác chức năng.",
+    "action": "Review quyết định dùng chung port kiểm hay bộ dựng riêng, giữ quyền và quota từng agent. Không tự hợp nhất endpoint hoặc dùng credential AIO cho AIN.",
+    "owner": "Tech lead, Dinh dưỡng viên, chủ website",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-09",
+    "severity": "Trung bình",
+    "title": "Dữ liệu giá có phần lẻ và giá cost nguyên đồng còn gate",
+    "refs": [
+      {
+        "file": "docs/crm-ban-hang/srs/data-dictionary.md",
+        "line": 30,
+        "excerpt": "| customer_price_terms.customer_id/meal_type_id/quoted_unit_price | bigint FK; bigint FK; decimal(18,6), không null | Nguồn giá hiện hữu; phạm vi không chồng ACTIVE theo customer + mealType. |"
+      },
+      {
+        "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
+        "line": 40,
+        "excerpt": "| Giá cost | effective_cost_unit_price | Integer money | Theo E3 | Có khi chưa xác định | — | Server chuẩn hóa gồm VAT; phần lẻ chờ | Không nhận số tin cậy từ client |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+        "line": 33,
+        "excerpt": "| E13-Q09 | Làm tròn, phần dư, độ chính xác tiền và mẫu số bằng 0 được xử lý thế nào? | Đối chiếu số gốc decimal; phần dư hiện riêng, không tự dồn cho khách cuối; chặn nếu chưa có quy tắc. | Phân bổ thực và biên lợi nhuận; không mượn dung sai Cost. |  |"
+      }
+    ],
+    "description": "E10 giữ quoted_unit_price decimal(18,6), E11 có giá cost Integer money và phần lẻ chờ review, E13 chưa chọn precision/làm tròn/phần dư. Các trường khác nghĩa nên không kết luận trùng kiểu sai; cần mapping để tránh cắt phần lẻ khi truyền nguồn.",
+    "action": "Chốt chuẩn hóa PriceInput và quy tắc làm tròn từng chỉ số theo nguồn. Giữ NFR-COST-002 ≤ 1 đ và ≤ 0,01 điểm phần trăm, không dùng làm quy tắc làm tròn mọi tiền.",
+    "owner": "Kế toán, Tech lead",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-10",
+    "severity": "Trung bình",
+    "title": "Chiết khấu riêng chưa có chính sách đưa vào lợi nhuận",
+    "refs": [
+      {
+        "file": "docs/cost/accounting/business-rules.md",
+        "line": 95,
+        "excerpt": "| CK-Q05 | Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai? | Cách xử lý khoản riêng, đối tượng và liên kết thanh toán | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN** — chưa trả lời |"
+      },
+      {
+        "file": "docs/cost/accounting/business-rules.md",
+        "line": 99,
+        "excerpt": "| CK-Q09 | Nếu chiết khấu đã chi trả/bù trừ rồi đơn mới đổi hoặc hủy, xử lý phần chênh lệch bằng thu hồi, bù kỳ sau hay khoản điều chỉnh riêng? Ai duyệt và cần chứng từ nào? | Khoản điều chỉnh sau xử lý; không xóa dấu vết giao dịch cũ | Kế toán, Giám đốc | **CHỜ XÁC NHẬN** — chưa trả lời |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/dependencies.md",
+        "line": 37,
+        "excerpt": "Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ “không yêu cầu hóa đơn” là cờ riêng, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn; không giảm số phải trả nhà cung cấp, không tự khấu trừ số khách phải trả. Chưa quyết định khoản chiết khấu đi vào lợi nhuận thế nào. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-01 (cost ≤ 52 % doanh thu) và BO-02 (≤ 3 điểm phần trăm) là mục tiêu kinh doanh, không là dung sai đối chiếu E13. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chỉ gate O-03."
+      }
+    ],
+    "description": "E3 giữ khoản chiết khấu riêng theo đơn; E13 hỏi cách ghi vào kết quả kinh doanh. Không có xung đột trực tiếp đã chứng minh, nhưng không thể tự trừ CK khỏi doanh thu hoặc phải trả NCC để tạo lợi nhuận.",
+    "action": "Kế toán xác nhận kỳ ghi nhận, trạng thái xử lý và cách chống đếm đôi. Giữ nguyên phải trả NCC và không tự khấu trừ tiền khách.",
+    "owner": "Kế toán, Giám đốc",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-11",
+    "severity": "Thấp",
+    "title": "MISA chỉ có câu nguồn E7; không tạo quyết định xuất MISA cho E11/E13",
+    "refs": [
+      {
+        "file": "docs/giao-nhan-doanh-thu/review/questions.md",
+        "line": 25,
+        "excerpt": "| E7-Q07 | Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì? | Nhận mẫu có version và thử nhập môi trường được cấp; chưa giả CSV/XLSX, cột, mã thuế/tài khoản. | File bytes/mapping cột/thử nhập MISA |  |  |"
+      },
+      {
+        "file": "docs/mua-hang-san-xuat/review/dependencies.md",
+        "line": 26,
+        "excerpt": "| E7 | Điểm nối kiểm trước giao, số giao/nhận và căn cứ doanh thu | Q-13/E7-Q01–08 chưa chốt; QC không là nhận hàng của khách, công nợ NCC không là phải thu khách; không tự lấy doanh thu làm mẫu số BO-02 |"
+      },
+      {
+        "file": "docs/chi-phi-loi-nhuan/review/questions.md",
+        "line": 36,
+        "excerpt": "| E13-Q12 | Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào? | Nguồn không đầy đủ thì BLOCKED; chụp manifest và không ghi lại snapshot cũ; chưa đặt TTL, SLA, định dạng xuất. | Freeze API/tích hợp/tải; E7-Q08, E10-Q13, E11-Q13, E12-Q18. |  |"
+      }
+    ],
+    "description": "E7 hỏi mẫu nhập MISA; E13 chỉ hỏi export nội bộ; E11 phân biệt công nợ NCC với phải thu khách. Không thấy căn cứ trong sổ để gộp cả ba thành một quyết định MISA.",
+    "action": "Giữ E7-Q07 riêng; BA hỏi lại phạm vi chỉ khi có nhu cầu xuất khác được xác nhận. Không tự đặt định dạng file, mapping hay nhà cung cấp.",
+    "owner": "Kế toán, BA",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  },
+  {
+    "id": "XC-12",
+    "severity": "Trung bình",
+    "title": "E1 và E5 diễn giải thời gian phản hồi đầu khác nhau",
+    "refs": [
+      {
+        "file": "docs/nen-tang/review/questions.md",
+        "line": 28,
+        "excerpt": "NFR-PERF-003 nói ký tự đầu≤5 giây nhưng E5 dùng polling2 giây: đề xuất coi đây là phản hồi tiến trình đầu tiên, không phải token AI đầu tiên; cần xác nhận cùng AIO-Q01, không tự đổi NFR gốc."
+      },
+      {
+        "file": "docs/agent-noi-bo/review/questions.md",
+        "line": 13,
+        "excerpt": "| AIO-Q01 | Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào? | Giám đốc, Tech lead | O-04; không có mặc định ngân sách được duyệt | CHỜ XÁC NHẬN |"
+      }
+    ],
+    "description": "E1 ghi ký tự đầu trong 5 giây; ghi chú E1 nêu polling E5 và đề xuất hiểu là phản hồi tiến trình đầu, không phải token đầu. Đây mới là đề xuất, không tự sửa NFR gốc.",
+    "action": "Tech lead và QA xác nhận cách đo sau khi O-04/AIO-Q01 có nguồn. Giữ giới hạn phản hồi và thời gian dựng thực đơn là hai chỉ số riêng.",
+    "owner": "Tech lead, QA, Giám đốc",
+    "method": "Đọc đối chiếu trực tiếp các đoạn được dẫn; không sửa nguồn, không đóng câu."
+  }
+]
