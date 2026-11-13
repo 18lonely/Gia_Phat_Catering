@@ -2,8 +2,8 @@
 
 Phiên bản 0.1.0 · 2026-11-10 · Draft · [Sơ đồ use case](../srs/usecase-diagram.md) · [SRS](../srs/spec.md)
 
-- **Tác nhân chính**: Hệ thống — được gọi từ `UC-MENU-007`, `UC-MENU-009`, và từ agent ở R5, R9.
-- **Phạm vi**: Module MENU — dịch vụ kiểm quy tắc.
+- **Tác nhân chính**: Hệ thống, được gọi từ `UC-MENU-007`, `UC-MENU-009`, và từ agent ở R5, R9.
+- **Phạm vi**: Module MENU, dịch vụ kiểm quy tắc.
 - **Cấp độ**: Fish level (chức năng con).
 - **Các bên liên quan & kỳ vọng**:
   - Dinh dưỡng viên: biết chính xác quy tắc nào vi phạm, ở ngày nào, món nào.

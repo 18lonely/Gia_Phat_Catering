@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-005-MD
-title: UC-FBR-005 — Xem dashboard theo bốn vai trò
+title: "UC-FBR-005: Xem dashboard theo bốn vai trò"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-005 — Xem dashboard theo bốn vai trò
+# UC-FBR-005: Xem dashboard theo bốn vai trò
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-081; màn UI-FBR-05.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-05, PER-06, PER-07, PER-08; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần bốn góc nhìn có nguồn, trạng thái thiếu và quyền riêng; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào roleView, dateRange, customerRef, kitchenRef. Nhánh nghiệp vụ thật cần E12-Q06/07/08; E7-Q03/04; E10-Q07; E11-Q07/08. Các gate chưa được coi là đạt.

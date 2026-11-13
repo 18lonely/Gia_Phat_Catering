@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-001-MD
-title: UC-AIN-001 — Mở phiên yêu cầu
+title: "UC-AIN-001: Mở phiên yêu cầu"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-001 — Mở phiên yêu cầu
+# UC-AIN-001: Mở phiên yêu cầu
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-SESS-001 / FEAT-060 / US-AIN-001.
 
 Trigger: Khách bắt đầu yêu cầu tư vấn thực đơn tập thể trên kênh được phép sử dụng agent.
 
-Tiền điều kiện — nghiệp vụ: Khách cung cấp kênh và bằng chứng identity/consent theo policy; không tự khai nhóm/quyền để được truy cập.
-Tiền điều kiện — gate còn mở: E9-Q02, E9-Q10 chưa chốt guest/identity/consent; chưa được mở phiên thật. O-03 vẫn đóng đối với cá nhân hóa sức khỏe.
+Tiền điều kiện (nghiệp vụ): Khách cung cấp kênh và bằng chứng identity/consent theo policy; không tự khai nhóm/quyền để được truy cập.
+Tiền điều kiện (gate còn mở): E9-Q02, E9-Q10 chưa chốt guest/identity/consent; chưa được mở phiên thật. O-03 vẫn đóng đối với cá nhân hóa sức khỏe.
 
 Luồng chính:
 1. Khách bắt đầu yêu cầu tại UI-AIN-01 và cung cấp channelRef cùng bằng chứng xác minh/consent được policy yêu cầu.

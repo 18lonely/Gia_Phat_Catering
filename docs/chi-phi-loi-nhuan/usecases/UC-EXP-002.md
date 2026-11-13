@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-002-MD
-title: UC-EXP-002 — Ghi chi phí theo cơ sở và loại
+title: "UC-EXP-002: Ghi chi phí theo cơ sở và loại"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-002 — Ghi chi phí theo cơ sở và loại
+# UC-EXP-002: Ghi chi phí theo cơ sở và loại
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: dòng chi phí thiếu chứng từ hoặc loại; khi gửi lưu thì ERR-EXP-422-01 và chỉ ra trường thiếu; không ghi dòng.
-- **4d — biên**: sourceKey đã nằm trong cost E3/E11 của cùng kỳ; khi nhập lại khoản đó thì ERR-EXP-409-03; không cộng hai lần.
+- **4c. Đặc thù**: dòng chi phí thiếu chứng từ hoặc loại; khi gửi lưu thì ERR-EXP-422-01 và chỉ ra trường thiếu; không ghi dòng.
+- **4d. Biên**: sourceKey đã nằm trong cost E3/E11 của cùng kỳ; khi nhập lại khoản đó thì ERR-EXP-409-03; không cộng hai lần.
 
 ## Quy tắc và truy vết
 

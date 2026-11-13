@@ -1,4 +1,4 @@
-# Wireframe Cost — hướng dẫn review
+# Wireframe Cost: hướng dẫn review
 
 Phiên bản 0.1.0 · 11/11/2026 · Draft.
 

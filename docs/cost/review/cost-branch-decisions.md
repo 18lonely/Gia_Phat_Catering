@@ -8,7 +8,7 @@ Phiên bản0.1.0 · 11/11/2026 · Phương án thiết kế để review; chưa
 
 Người dùng yêu cầu tiếp tục hoàn thiện thiết kế; các câu chiết khấu CK-Q01–10 vẫn để hỏi sau. Bảng này chọn **phương án đề xuất cụ thể** để dev đánh giá, không ghi là chủ sở hữu đã phê duyệt. Nhánh còn gate chưa mở production; không đổi các ca BLOCKED thành PASS.
 
-## 1. Giá/tham số đổi khi PENDING — FLOW-COST-Q06
+## 1. Giá/tham số đổi khi PENDING (FLOW-COST-Q06)
 
 Đề xuất: khi duyệt cuối, đọc lại giá/params theo ngày phục vụ nhưng giữ công thức đã gắn vào MENU; kiểm đủ cơ sở và khóa revision đầu vào. Nếu giá tiếp tục đổi trong transaction thì không commit trên bộ số hỗn hợp: retry có giới hạn/đối soát theo hợp đồng Tech lead. Snapshot và APPROVED phải commit cùng giao dịch.
 
@@ -21,7 +21,7 @@ Người dùng yêu cầu tiếp tục hoàn thiện thiết kế; các câu chi
 
 **Cần trả lời:** có chấp nhận kiểm lại tại duyệt cuối không; giữ PENDING hay trả DRAFT; có yêu cầu người duyệt xác nhận lại khi số thay đổi? Chủ sở hữu: Giám đốc/kế toán. Liên quan TC-COST-018-02, MEAL005/006, snapshot transaction. Không sửa snapshot vòng duyệt cũ.
 
-## 2. Dự toán tuần có ngày lỗi — FLOW-COST-Q07
+## 2. Dự toán tuần có ngày lỗi (FLOW-COST-Q07)
 
 Đề xuất all-or-nothing toàn batch: validate toàn bộ ngày, chụp version inputs, tính rồi commit tất cả bản ngày và khóa batch cùng giao dịch. Bất kỳ ngày lỗi trả lỗi theo ngày và `committedCount:0`. Batch retry cùng key/body trả cùng kết quả; không cấp version bản ngày bằng MAX+1 ngoài khóa transaction.
 
@@ -29,7 +29,7 @@ Thành công đề xuất: batchKey,items[{date,estimateId,version}],weeklyLines
 
 **Cần trả lời:** cả tuần nguyên tử hay cho lưu ngày hợp lệ; cách gộp/làm tròn bảng tuần có được chốt như trên không? Chủ sở hữu: kế toán/DD. Chưa cập nhật success contract cuối của API-COST batch và TC-COST-023 sang sẵn sàng chạy khi chưa trả lời.
 
-## 3. Bảng món đặc thù — E3-Q16
+## 3. Bảng món đặc thù (E3-Q16)
 
 Đề xuất chỉ nhận APPROVED cùng dish/portion/kitchen, công thức đúng phiên bản dự kiến dùng, ngày lập không sau ngày phục vụ và tuổi tính theo ngày lập <=N ngày (N từ cấu hình có hiệu lực). Lưu rõ ngày lập và ngày tính giá; không dùng hai ngày thay thế nhau. Bảng A không tự hợp lệ cho B. Ranh giới89/90/91 khi N90: đề xuất hợp lệ/hợp lệ/không hợp lệ.
 

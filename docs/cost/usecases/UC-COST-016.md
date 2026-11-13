@@ -6,7 +6,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 2026-11-11 | BA | Khởi tạo từ SRS Cost v0.1.1 và ERD v0.3.0 |
 
-- **Tác nhân chính/hỗ trợ:** Người nội bộ được phép xem cost — vai trò cụ thể chờ chốt.
+- **Tác nhân chính/hỗ trợ:** Người nội bộ được phép xem cost, vai trò cụ thể chờ chốt.
 - **Phạm vi:** Nền tảng Gia Phát, phân hệ Cost; các bước MENU/SYS được gọi qua phân hệ tương ứng.
 - **Cấp độ:** Sea level.
 - **Quyền:** Đề xuất cần cost.price.read và cost.cost.read; chưa được coi là quyền đã cấp.
@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Có kết quả giả định hoặc lý do chưa tính được; dữ liệu nghiệp vụ không thay đổi.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-ALR-005`.
-- **Điểm chạm:** SCR-COST-18 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-18, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

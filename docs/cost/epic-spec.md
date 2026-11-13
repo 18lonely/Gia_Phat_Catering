@@ -1,4 +1,4 @@
-# Đặc tả Epic E3 — Cost
+# Đặc tả Epic E3 (Cost)
 
 ## Metadata
 
@@ -10,7 +10,7 @@
 | Phân hệ | COST |
 | Tính năng PRD | `FEAT-014` → `FEAT-018` |
 | Phiên bản | 0.6.0 |
-| Trạng thái | Draft — **cách tính cost chưa chốt**: 4 điểm mở ở mục 2.6 quyết định công thức |
+| Trạng thái | Draft: **cách tính cost chưa chốt**: 4 điểm mở ở mục 2.6 quyết định công thức |
 | Ngày | 2026-11-11 |
 | Tài liệu liên quan | [PRD](../gia-phat/01-prd.md) · [Roadmap](../gia-phat/02-roadmap.md) · [Bảng quy tắc](../gia-phat/brainstorms/quy-tac-thuc-don.md) (nhóm G) · [SRS epic thực đơn](../thuc-don-dinh-luong/srs/spec.md) · [ERD](../nen-tang/srs/erd.md) (mục 5) · `Yêu cầu về thực đơn và cost tp.docx` (phần "Quy chuẩn kiểm soát cost") |
 
@@ -30,9 +30,9 @@ Sau epic này, khi dinh dưỡng viên dựng một thực đơn, hệ thống c
 
 | Mục tiêu (PRD) | Epic này đóng góp |
 | :--- | :--- |
-| KR1.1 — 100% ngày phục vụ có cost dự toán ≤ 52% | Trực tiếp: tính cost và chặn ở bước gửi duyệt |
-| KR1.2 — chênh lệch cost thực mua so với dự toán ≤ 3 điểm phần trăm | Một nửa: epic này tạo ra **dự toán**; số thực mua có ở R11 |
-| KR2.2 — giảm thời gian dựng thực đơn | Gián tiếp: thay bảng tính cost làm tay |
+| KR1.1: 100% ngày phục vụ có cost dự toán ≤ 52% | Trực tiếp: tính cost và chặn ở bước gửi duyệt |
+| KR1.2: chênh lệch cost thực mua so với dự toán ≤ 3 điểm phần trăm | Một nửa: epic này tạo ra **dự toán**; số thực mua có ở R11 |
+| KR2.2: giảm thời gian dựng thực đơn | Gián tiếp: thay bảng tính cost làm tay |
 
 ### 1.3 Người dùng
 
@@ -49,12 +49,12 @@ Sau epic này, khi dinh dưỡng viên dựng một thực đơn, hệ thống c
 
 | Trong epic | Ngoài epic |
 | :--- | :--- |
-| Danh mục nhà cung cấp (tối thiểu: tên, loại, liên hệ) | Đơn mua, nhận hàng, công nợ nhà cung cấp — R11 |
-| Giá nhập theo nguyên liệu × nhà cung cấp × cơ sở × ngày hiệu lực | Giá nhập tự cập nhật từ phiếu nhận hàng — R11 |
-| Nhập giá từ bảng tính | Đối chiếu dự toán với thực mua (`FEAT-076`) — R11 |
-| Cost món theo công thức hiệu lực | Chi phí nhân công, gas, điện, khấu hao; lợi nhuận theo khách — R13 |
-| Cost suất, cost % theo ngày, so với ngưỡng | Số suất thật từ order — R6 (R3 dùng số suất dự kiến nhập tay, [E3-Q8]) |
-| Bảng dự toán theo docx mục IV | Agent rà soát thực đơn khi giá đổi (`FEAT-082`) — R12 |
+| Danh mục nhà cung cấp (tối thiểu: tên, loại, liên hệ) | Đơn mua, nhận hàng, công nợ nhà cung cấp (R11) |
+| Giá nhập theo nguyên liệu × nhà cung cấp × cơ sở × ngày hiệu lực | Giá nhập tự cập nhật từ phiếu nhận hàng (R11) |
+| Nhập giá từ bảng tính | Đối chiếu dự toán với thực mua (`FEAT-076`) (R11) |
+| Cost món theo công thức hiệu lực | Chi phí nhân công, gas, điện, khấu hao; lợi nhuận theo khách (R13) |
+| Cost suất, cost % theo ngày, so với ngưỡng | Số suất thật từ order: R6 (R3 dùng số suất dự kiến nhập tay, [E3-Q8]) |
+| Bảng dự toán theo docx mục IV | Agent rà soát thực đơn khi giá đổi (`FEAT-082`) (R12) |
 | 8 quy tắc `BR-COST` cần giá nhập, đăng ký vào bộ kiểm quy tắc của E2 | |
 | Bước kiểm cost ở cổng gửi duyệt thực đơn | |
 | Cảnh báo giá cũ và cảnh báo thực đơn vượt ngưỡng do giá đổi | |
@@ -65,7 +65,7 @@ Sau epic này, khi dinh dưỡng viên dựng một thực đơn, hệ thống c
 
 ## 2. Cấu trúc chi tiết
 
-### 2.1 Công thức tính — phương án đang đề xuất
+### 2.1 Công thức tính: phương án đang đề xuất
 
 Viết lại từ ERD mục 5.3, bổ sung các lựa chọn cần quyết. **Chưa phải công thức chính thức.**
 
@@ -96,7 +96,7 @@ Bốn chỗ chưa chốt làm kết quả khác nhau:
 
 Mỗi nhóm ứng với một nhóm `FR-COST-[FEATURE]-[SEQ]` sẽ viết ở SRS của epic.
 
-#### `FEAT-014` Bảng giá nhập — nhóm FR `FR-COST-SUP`, `FR-COST-PRC`
+#### `FEAT-014` Bảng giá nhập: nhóm FR `FR-COST-SUP`, `FR-COST-PRC`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -112,7 +112,7 @@ Mỗi nhóm ứng với một nhóm `FR-COST-[FEATURE]-[SEQ]` sẽ viết ở SR
 | CAP-PRC-09 | Cảnh báo khi giá mới lệch quá X% so với giá trước | P1 | Bắt lỗi gõ nhầm (25.000 thành 250.000); X là tham số |
 | CAP-PRC-10 | Có cần người thứ hai duyệt giá nhập không | Chưa xếp | [E3-Q6] |
 
-#### `FEAT-015` Cost món — nhóm FR `FR-COST-DISH`
+#### `FEAT-015` Cost món: nhóm FR `FR-COST-DISH`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -124,7 +124,7 @@ Mỗi nhóm ứng với một nhóm `FR-COST-[FEATURE]-[SEQ]` sẽ viết ở SR
 | CAP-DISH-06 | Bảng tính cost riêng cho món đặc thù: lập, gửi duyệt, duyệt; món đặc thù chưa có bảng tính đã duyệt thì không vào được thực đơn | P0 | `BR-COST-007` |
 | CAP-DISH-07 | Gợi ý nhóm cost (thấp / cao) của món từ cost đã tính | P1 | Thay cho việc gắn tay; ngưỡng phân nhóm: [E3-Q7] |
 
-#### `FEAT-016` Cost suất và ngưỡng — nhóm FR `FR-COST-MEAL`, `FR-COST-RUL`
+#### `FEAT-016` Cost suất và ngưỡng: nhóm FR `FR-COST-MEAL`, `FR-COST-RUL`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -140,7 +140,7 @@ Mỗi nhóm ứng với một nhóm `FR-COST-[FEATURE]-[SEQ]` sẽ viết ở SR
 | CAP-RUL-02 | Quy tắc cân đối: món chính cost cao đi với món phụ cost thấp | P1 | `BR-COST-006`; định nghĩa "cao", "thấp": [E3-Q7] |
 | CAP-RUL-03 | Dịch vụ "đạt / không đạt ngân sách" cho agent phía khách: nhận một thực đơn, trả đúng một giá trị có/không cho mỗi ngày | P0 | Không trả con số; `BR-SEC-010` |
 
-#### `FEAT-017` Bảng dự toán — nhóm FR `FR-COST-EST`
+#### `FEAT-017` Bảng dự toán: nhóm FR `FR-COST-EST`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -149,17 +149,17 @@ Mỗi nhóm ứng với một nhóm `FR-COST-[FEATURE]-[SEQ]` sẽ viết ở SR
 | CAP-EST-03 | Gộp dự toán theo nguyên liệu cho cả tuần | P0 | Một nguyên liệu dùng ở nhiều món, nhiều ngày |
 | CAP-EST-04 | Dự toán theo cơ sở, dùng giá của cơ sở đó | P0 | Hai cơ sở có thể mua giá khác nhau |
 | CAP-EST-05 | Quy đổi tổng định lượng sang đơn vị mua (gram → kg; có tính hao hụt nếu áp dụng) | P0 | [E3-Q2] |
-| CAP-EST-06 | Xuất bảng dự toán ra bảng tính và PDF | P1 | — |
+| CAP-EST-06 | Xuất bảng dự toán ra bảng tính và PDF | P1 | Không có |
 | CAP-EST-07 | Lưu bảng dự toán kèm thời điểm và giá đã dùng; lập lại thì tạo bản mới | P0 | Để đối chiếu với thực mua ở R11 |
 
-#### `FEAT-018` Cảnh báo khi giá biến động — nhóm FR `FR-COST-ALR`
+#### `FEAT-018` Cảnh báo khi giá biến động: nhóm FR `FR-COST-ALR`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
 | CAP-ALR-01 | Khi có giá mới, tính lại cost % của mọi thực đơn đã duyệt hoặc đã công bố còn ngày phục vụ từ hôm nay trở đi | P1 | Chạy nền |
 | CAP-ALR-02 | Thực đơn nào có ngày vượt ngưỡng do giá mới thì báo dinh dưỡng viên và Giám đốc | P1 | `BR-COST-011` |
-| CAP-ALR-03 | Màn hình liệt kê thực đơn bị ảnh hưởng: ngày, cost % cũ → mới, nguyên liệu gây ra | P1 | — |
-| CAP-ALR-04 | "Chặn chuyển bếp cho đến khi xử lý" | Chưa xếp | Docx yêu cầu rà soát trước khi triển khai; R3 chưa có bước chuyển bếp — làm ở R6 hay R11: [E3-Q10] |
+| CAP-ALR-03 | Màn hình liệt kê thực đơn bị ảnh hưởng: ngày, cost % cũ → mới, nguyên liệu gây ra | P1 | Không có |
+| CAP-ALR-04 | "Chặn chuyển bếp cho đến khi xử lý" | Chưa xếp | Docx yêu cầu rà soát trước khi triển khai; R3 chưa có bước chuyển bếp: làm ở R6 hay R11: [E3-Q10] |
 | CAP-ALR-05 | Xem trước: nếu đổi giá nguyên liệu X thành Y thì những thực đơn nào vượt ngưỡng | P2 | Hỗ trợ đàm phán giá |
 
 ### 2.3 Quyền xem cost
@@ -168,10 +168,10 @@ Giá nhập và cost là dữ liệu nội bộ nhạy cảm. Đề xuất, chi 
 
 | Dữ liệu | Dinh dưỡng viên | Kế toán | Giám đốc | Quản lý cơ sở | Bếp trưởng | Agent Nội bộ | Agent phía khách |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Giá nhập | Xem | Nhập | Xem | Xem (cơ sở mình) | — | Theo người dùng | **Không** |
-| Cost món, cost suất, cost % | Xem | Xem | Xem | Xem (cơ sở mình) | — | Theo người dùng | **Không** |
+| Giá nhập | Xem | Nhập | Xem | Xem (cơ sở mình) | Không | Theo người dùng | **Không** |
+| Cost món, cost suất, cost % | Xem | Xem | Xem | Xem (cơ sở mình) | Không | Theo người dùng | **Không** |
 | Bảng dự toán | Lập | Xem | Xem | Xem (cơ sở mình) | Xem số lượng, không xem giá | Theo người dùng | **Không** |
-| "Đạt / không đạt ngân sách" | — | — | — | — | — | — | Có |
+| "Đạt / không đạt ngân sách" | Không | Không | Không | Không | Không | Không | Có |
 
 Bếp trưởng có được xem giá không: [E3-Q11].
 
@@ -192,10 +192,10 @@ Tiêu chí nghiệm thu R3 đồng bộ NFR-COST-002:10 món lệch không quá1
 
 | Phụ thuộc | Loại | Chặn |
 | :--- | :--- | :--- |
-| R2 — nguyên liệu, công thức, thực đơn, bộ kiểm quy tắc, chỗ móc gửi duyệt | Kỹ thuật | Toàn epic |
-| DL-02 — kế toán xác nhận VAT và thành phần cost ([O-01]) | Nghiệp vụ | R3.3 |
-| DL-06 — bảng giá nhập hiện hành theo nhà cung cấp | Dữ liệu | Nghiệm thu R3.1 |
-| DL-01 — con số của 8 quy tắc cost | Nghiệp vụ | R3.3 |
+| R2: nguyên liệu, công thức, thực đơn, bộ kiểm quy tắc, chỗ móc gửi duyệt | Kỹ thuật | Toàn epic |
+| DL-02: kế toán xác nhận VAT và thành phần cost ([O-01]) | Nghiệp vụ | R3.3 |
+| DL-06: bảng giá nhập hiện hành theo nhà cung cấp | Dữ liệu | Nghiệm thu R3.1 |
+| DL-01: con số của 8 quy tắc cost | Nghiệp vụ | R3.3 |
 | Bảng tính cost tay của kế toán cho 10 món và 10 ngày mẫu | Dữ liệu | Nghiệm thu R3.2, R3.3 |
 
 | Mã | Rủi ro | Giảm thiểu |
@@ -215,7 +215,7 @@ Giữ nguyên trạng thái mở. Bốn điểm in đậm quyết định công 
 | :--- | :--- | :--- | :--- |
 | **O-01** | Cost gồm những khoản nào; khoản nào khoán; thuế suất VAT; giá nhập có gồm VAT đầu vào không | Kế toán | `CAP-MEAL-01`, `04`; R3.3 |
 | **E3-Q1** | Cost phần món chính tính thế nào khi 3 món có cost khác nhau: món đắt nhất, bình quân, theo tỷ lệ chọn, hay món mặc định | Giám đốc, kế toán | `CAP-MEAL-01`; R3.3 |
-| **E3-Q2** | Định lượng "món sống" trong docx đã gồm xương, vỏ chưa — tức có nhân thêm hao hụt khi tính cost và khi tính lượng mua không | Người soạn docx, bếp trưởng | `CAP-DISH-01`, `CAP-EST-05`; R3.2 |
+| **E3-Q2** | Định lượng "món sống" trong docx đã gồm xương, vỏ chưa: tức có nhân thêm hao hụt khi tính cost và khi tính lượng mua không | Người soạn docx, bếp trưởng | `CAP-DISH-01`, `CAP-EST-05`; R3.2 |
 | **E3-Q4** | Một nguyên liệu có nhiều nhà cung cấp thì giá nào dùng để tính cost | Kế toán | `CAP-PRC-02`; R3.1 |
 | E3-Q3 | Hai cơ sở có mua giá khác nhau không; nếu có, kiểm ngưỡng theo cơ sở nào khi một thực đơn dùng chung cho cả hai | Kế toán | `CAP-EST-04`, `CAP-MEAL-01` |
 | E3-Q5 | Tần suất cập nhật giá thực tế: hằng ngày theo chợ, hằng tuần, hay khi nhà cung cấp báo giá | Kế toán | `CAP-PRC-07`; rủi ro E3-R1 |

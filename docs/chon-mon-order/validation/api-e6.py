@@ -39,7 +39,7 @@ last_updated: 2026-11-11
 ---
 # Hợp đồng API E6 để review
 
-**Draft — 25 HTTP endpoint + 2 port nội bộ. Chưa backend; không endpoint ghi sức khỏe.**
+**Draft: 25 HTTP endpoint + 2 port nội bộ. Chưa backend; không endpoint ghi sức khỏe.**
 
 | Phiên bản | Ngày | Nội dung |
 | :--- | :--- | :--- |

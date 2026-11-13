@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-002-MD
-title: UC-AIN-002 — Yêu cầu thực đơn tập thể
+title: "UC-AIN-002: Yêu cầu thực đơn tập thể"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-002 — Yêu cầu thực đơn tập thể
+# UC-AIN-002: Yêu cầu thực đơn tập thể
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-GEN-001 / FEAT-060 / US-AIN-002.
 
 Trigger: Khách đã xác định nhu cầu suất ăn và gửi yêu cầu dựng thực đơn cho tuần/ngày phục vụ.
 
-Tiền điều kiện — nghiệp vụ: Có sessionRef hợp lệ và loại suất/số suất/ngày, khẩu vị/kiêng kỵ theo danh mục được phép.
-Tiền điều kiện — gate còn mở: E9-Q01, E9-Q03, E9-Q07, E9-Q11, E9-Q12, E9-Q13 chặn provider, đầu vào, quota, bộ dựng và nguồn/contract. O-03 không mở nhánh sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có sessionRef hợp lệ và loại suất/số suất/ngày, khẩu vị/kiêng kỵ theo danh mục được phép.
+Tiền điều kiện (gate còn mở): E9-Q01, E9-Q03, E9-Q07, E9-Q11, E9-Q12, E9-Q13 chặn provider, đầu vào, quota, bộ dựng và nguồn/contract. O-03 không mở nhánh sức khỏe.
 
 Luồng chính:
 1. Khách gửi sessionRef, loại suất, số suất nguyên dương, tuần/ngày và lựa chọn khẩu vị/kiêng kỵ tại UI-AIN-01.

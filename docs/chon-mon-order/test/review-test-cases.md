@@ -26,7 +26,7 @@ TC-E6-019-1/3 và AC tương ứng là ca liên thông producer+read: worker chu
 
 API/port: API-ORD-006, API-ORD-007; UI-ORD-01. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-001-1 / AC-E6-001-1 | nhân viên được cấp quyền quản trị khách A và hợp đồng hợp lệ | cấp vai trò người đặt tổng cho user U ở A | tài khoản chỉ có quyền A; audit ghi người cấp và phạm vi | BLOCKED ORD-Q01 |
 | TC-E6-001-2 / AC-E6-001-2 | U là người đặt tổng A | U cấp quyền nội bộ cho mình | 403 ERR-ORD-403-01; không thay user_roles | NOT RUN |
@@ -36,7 +36,7 @@ API/port: API-ORD-006, API-ORD-007; UI-ORD-01. Priority P0.
 
 API/port: API-ORD-008; UI-ORD-02. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-002-1 / AC-E6-002-1 | QR A ACTIVE và identity policy đã được duyệt | xác minh và đăng ký với identity hợp lệ | liên kết eater với tài khoản và A; không cấp quyền người đặt tổng | BLOCKED ORD-Q01 |
 | TC-E6-002-2 / AC-E6-002-2 | QR đã ROTATED | đăng ký bằng token cũ | 401 ERR-ORD-401-01; không tạo eater | NOT RUN |
@@ -46,7 +46,7 @@ API/port: API-ORD-008; UI-ORD-02. Priority P0.
 
 API/port: API-ORD-009; UI-ORD-02. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-003-1 / AC-E6-003-1 | QR A ACTIVE, policy định danh đã chốt | mở phiên guest ngày 2026-11-16 tại điểm A1 | phiên trả scope A/A1/ngày và expiresAt; không có quyền chọn tuần | BLOCKED ORD-Q01 |
 | TC-E6-003-2 / AC-E6-003-2 | phiên guest thuộc A1 ngày 16 | gọi ngày 17 hoặc điểm B1 | 404 ERR-ORD-404-01; không trả thực đơn ngoài scope | NOT RUN |
@@ -56,7 +56,7 @@ API/port: API-ORD-009; UI-ORD-02. Priority P0.
 
 API/port: API-ORD-010, API-ORD-011, API-ORD-012; UI-ORD-03. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-004-1 / AC-E6-004-1 | người đặt tổng A có QR ACTIVE version hiện tại | quay vòng QR với lý do | token cũ ROTATED; chỉ trả token mới một lần; lịch sử giữ nguyên | BLOCKED ORD-Q02 |
 | TC-E6-004-2 / AC-E6-004-2 | danh sách thuộc khách B | người đặt tổng A đọc danh sách | 404 ERR-ORD-404-01; không lộ tên người ăn B | NOT RUN |
@@ -66,7 +66,7 @@ API/port: API-ORD-010, API-ORD-011, API-ORD-012; UI-ORD-03. Priority P0.
 
 API/port: API-ORD-013, API-ORD-014, API-ORD-026; UI-ORD-04. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-005-1 / AC-E6-005-1 | DDV được phân công khách A | lưu điểm A1, bếp K1 và lịch thứ Hai ca LUNCH | điểm thuộc A, lịch duy nhất theo điểm/ca/thứ, version tăng | BLOCKED ORD-Q03 |
 | TC-E6-005-2 / AC-E6-005-2 | A1 thuộc A | lưu lịch với customer B | 422 ERR-ORD-422-04; không tạo quan hệ chéo khách | NOT RUN |
@@ -76,7 +76,7 @@ API/port: API-ORD-013, API-ORD-014, API-ORD-026; UI-ORD-04. Priority P0.
 
 API/port: API-ORD-015, API-ORD-016; UI-ORD-05. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-006-1 / AC-E6-006-1 | loại suất đã duyệt và policy hiệu lực đã xác nhận | người đặt tổng lưu định mức chung | version định mức mới tham chiếu loại suất, giá và cơ cấu; không tạo giá riêng theo người | BLOCKED ORD-Q04 |
 | TC-E6-006-2 / AC-E6-006-2 | chưa có định mức hiệu lực | người ăn chọn món | 422 ERR-ORD-422-01; không ghi lựa chọn | NOT RUN |
@@ -86,7 +86,7 @@ API/port: API-ORD-015, API-ORD-016; UI-ORD-05. Priority P0.
 
 API/port: API-ORD-001, API-ORD-002, API-ORD-017; UI-ORD-06. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-007-1 / AC-E6-007-1 | eater E chọn A version 1 trước hạn, giá tổ hợp B hợp lệ | đổi A sang B version 1 và replay cùng key/body | version 2; A giảm 1, B tăng 1 đúng một lần | BLOCKED ORD-Q01, ORD-Q04 |
 | TC-E6-007-2 / AC-E6-007-2 | định mức synthetic 40000đ, tổ hợp 40001đ | gửi chọn tổ hợp | 422 ERR-ORD-422-01; lựa chọn/counter không đổi | NOT RUN |
@@ -96,7 +96,7 @@ API/port: API-ORD-001, API-ORD-002, API-ORD-017; UI-ORD-06. Priority P0.
 
 API/port: API-ORD-018; UI-ORD-07. Priority P1.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-008-1 / AC-E6-008-1 | tài khoản có 5 ngày công bố còn mở, ORD-Q05 đã chốt | gửi lựa chọn tuần kèm version từng ngày | trả biên nhận nêu từng ngày và kết quả toàn yêu cầu theo policy đã duyệt | BLOCKED ORD-Q05 |
 | TC-E6-008-2 / AC-E6-008-2 | guest QR chỉ có phạm vi ngày | gửi lựa chọn tuần | 403 ERR-ORD-403-01; không ghi ngày nào | NOT RUN |
@@ -106,7 +106,7 @@ API/port: API-ORD-018; UI-ORD-07. Priority P1.
 
 API/port: API-ORD-003, API-ORD-004, API-ORD-019; UI-ORD-08. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-009-1 / AC-E6-009-1 | synthetic S=60,C=10,T=100 và ORD-Q06 đã duyệt | gửi tổng | SUBMITTED; còn 30 suất chưa phân bổ; chưa gán default trước khóa | BLOCKED ORD-Q06 |
 | TC-E6-009-2 / AC-E6-009-2 | synthetic S=60,C=10,T=65 | gửi tổng | đề xuất 422 ERR-ORD-422-02; không xóa 5 lựa chọn; chờ ORD-Q06 | BLOCKED ORD-Q06 |
@@ -116,7 +116,7 @@ API/port: API-ORD-003, API-ORD-004, API-ORD-019; UI-ORD-08. Priority P0.
 
 API/port: PORT-LOCK; UI-ORD-09. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-010-1 / AC-E6-010-1 | synthetic T=100,S=60,C=10; default A hợp lệ | scheduler khóa | D=30 cho A; MAIN tổng 100; không tạo 30 eater giả | BLOCKED ORD-Q06, ORD-Q07 |
 | TC-E6-010-2 / AC-E6-010-2 | default không thuộc MAIN ngày công bố | scheduler khóa | 422 ERR-ORD-422-03; không phát hành kế hoạch | NOT RUN |
@@ -126,7 +126,7 @@ API/port: PORT-LOCK; UI-ORD-09. Priority P0.
 
 API/port: PORT-LOCK, API-ORD-020; UI-ORD-09. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-011-1 / AC-E6-011-1 | đã gửi tổng và đủ snapshot, deadline cấu hình hợp lệ | scheduler khóa scope điểm/ngày/ca | order LOCKED; một revision và một outbox event bền vững | BLOCKED Q-16, ORD-Q07 |
 | TC-E6-011-2 / AC-E6-011-2 | clock server đúng bằng deadline | người ăn gửi PUT | đề xuất 409 ERR-ORD-409-01; không ghi; biên deadline chờ ORD-Q07 | BLOCKED Q-16, ORD-Q07 |
@@ -136,7 +136,7 @@ API/port: PORT-LOCK, API-ORD-020; UI-ORD-09. Priority P0.
 
 API/port: API-ORD-005, API-ORD-021, API-ORD-022; UI-ORD-10. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-012-1 / AC-E6-012-1 | order LOCKED rev1; ngưỡng và người duyệt đã chốt | người khác người tạo/sửa cuối duyệt delta hợp lệ | tạo rev2, giữ rev1; bếp nhận delta có nguồn rev2 | BLOCKED Q-16, O-06, ORD-Q08 |
 | TC-E6-012-2 / AC-E6-012-2 | đề nghị PENDING do U tạo | U tự duyệt | 403 ERR-ORD-403-01; order vẫn rev1 | NOT RUN |
@@ -146,7 +146,7 @@ API/port: API-ORD-005, API-ORD-021, API-ORD-022; UI-ORD-10. Priority P0.
 
 API/port: API-ORD-003, API-ORD-004; UI-ORD-11. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-013-1 / AC-E6-013-1 | DDV được giao A có chứng cứ synthetic điện thoại | nhập hộ total, coordinatorLines,source PHONE,evidenceRef,reason | order ghi người thao tác, nguồn và bằng chứng; giữ lựa chọn cá nhân | BLOCKED ORD-Q06 |
 | TC-E6-013-2 / AC-E6-013-2 | người ăn tự chọn có phiên hợp lệ | gửi source ZALO để giả vai DDV | 403 ERR-ORD-403-01; không ghi order | NOT RUN |
@@ -156,7 +156,7 @@ API/port: API-ORD-003, API-ORD-004; UI-ORD-11. Priority P0.
 
 API/port: PORT-REM, API-ORD-023; UI-ORD-09. Priority P1.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-014-1 / AC-E6-014-1 | kênh đã được duyệt, người nhận có định danh và còn đủ điều kiện | scheduler lập nhắc trước hạn | chỉ nhắc người chưa chọn đúng scope; có eventId/kết quả gửi | BLOCKED Q-14 |
 | TC-E6-014-2 / AC-E6-014-2 | Q-14 chưa chốt hoặc thiếu cấu hình kênh | job nhắc chạy | BLOCKED_CONFIGURATION; không gọi SMS/Zalo/email | NOT RUN |
@@ -166,7 +166,7 @@ API/port: PORT-REM, API-ORD-023; UI-ORD-09. Priority P1.
 
 API/port: API-ORD-024; UI-ORD-05. Priority P1.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-015-1 / AC-E6-015-1 | khách chưa có lựa chọn và policy ngày hiệu lực đã duyệt | người đặt tổng tắt chọn món | người ăn không ghi mới; người đặt tổng dùng luồng tổng/nhập thay theo quyền | BLOCKED ORD-Q09 |
 | TC-E6-015-2 / AC-E6-015-2 | khách đã tắt chọn từ đầu ngày | người ăn PUT trực tiếp | 409 ERR-ORD-409-01; không thay số suất | NOT RUN |
@@ -176,7 +176,7 @@ API/port: API-ORD-024; UI-ORD-05. Priority P1.
 
 API/port: API-ORD-001; UI-ORD-06. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-016-1 / AC-E6-016-1 | món thuộc menu PUBLISHED có nguồn dinh dưỡng đủ | người ăn mở chi tiết | hiện định lượng sống, kcal/đạm/béo/bột đường, dị ứng và nhãn ước tính | NOT RUN |
 | TC-E6-016-2 / AC-E6-016-2 | thiếu dữ liệu dinh dưỡng một nguyên liệu | mở tổ hợp | totals=null và lý do thiếu; không hiển thị 0 như kết quả thật | NOT RUN |
@@ -186,7 +186,7 @@ API/port: API-ORD-001; UI-ORD-06. Priority P0.
 
 API/port: GATE-046; UI-ORD-12. Priority P1.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-017-1 / AC-E6-017-1 | O-03 còn mở | người dùng mở hồ sơ | thấy chưa mở tính năng; không có form hoặc request thu sức khỏe | NOT RUN |
 | TC-E6-017-2 / AC-E6-017-2 | client cố gửi bệnh lý khi gate đóng | gọi đường ghi chưa công bố | không ghi dữ liệu; không tạo consent ngầm; contract chưa mở | NOT RUN |
@@ -196,7 +196,7 @@ API/port: GATE-046; UI-ORD-12. Priority P1.
 
 API/port: GATE-047; UI-ORD-12. Priority P1.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-018-1 / AC-E6-018-1 | O-03 còn mở | người ăn mở gợi ý | tính năng chưa mở; chọn món thủ công vẫn có theo quyền | NOT RUN |
 | TC-E6-018-2 / AC-E6-018-2 | không có consent/hồ sơ hợp lệ | yêu cầu suy bệnh từ lịch sử chọn | không suy diễn và không tự tạo hồ sơ | NOT RUN |
@@ -206,7 +206,7 @@ API/port: GATE-047; UI-ORD-12. Priority P1.
 
 API/port: API-ORD-020, API-ORD-025; UI-ORD-13. Priority P0.
 
-| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |
+| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | TC-E6-019-1 / AC-E6-019-1 | 2 order khóa cùng bếp/ca, MAIN A lần lượt 60 và 40 | worker tổng hợp và bếp đọc kế hoạch | A=100; hiện source revision từng order, plan revision và thời điểm | BLOCKED ORD-Q10 |
 | TC-E6-019-2 / AC-E6-019-2 | bếp K1 yêu cầu kế hoạch K2 | GET theo id K2 | 404 ERR-ORD-404-01; không lộ tổng K2 | NOT RUN |

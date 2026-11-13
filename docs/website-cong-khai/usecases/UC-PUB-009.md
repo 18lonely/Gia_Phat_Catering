@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-009-MD
-title: UC-PUB-009 — Soạn và sửa nội dung
+title: "UC-PUB-009: Soạn và sửa nội dung"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-009 — Soạn và sửa nội dung
+# UC-PUB-009: Soạn và sửa nội dung
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò ng
 
 Trigger: Người soạn có nội dung trang, bài viết hoặc banner cần bổ sung/chỉnh sửa trước khi công bố.
 
-Tiền điều kiện — nghiệp vụ: Người soạn có phiên và quyền soạn; khi sửa phải có content và version đang làm việc.
-Tiền điều kiện — gate còn mở: E8-Q08/09 về CMS, quyền và media chưa chốt; persona không tự cấp quyền runtime.
+Tiền điều kiện (nghiệp vụ): Người soạn có phiên và quyền soạn; khi sửa phải có content và version đang làm việc.
+Tiền điều kiện (gate còn mở): E8-Q08/09 về CMS, quyền và media chưa chốt; persona không tự cấp quyền runtime.
 
 Luồng chính:
 1. Người soạn chọn nội dung tại UI-PUB-06, xem revision/version đang sửa hoặc bắt đầu nháp mới.

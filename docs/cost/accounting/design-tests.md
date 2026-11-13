@@ -2,11 +2,11 @@
 
 Phiên bản0.1.0 ·11/11/2026 ·18 ca, chưa chạy backend. Khác12 ca TC-ACC-001–012: bộ này truy vết hợp đồng/dữ liệu/UI; không cộng hai bộ thành số ca độc lập đã nghiệm thu.
 
-## US-ACC-001 — FR-ACC-001
+## US-ACC-001: FR-ACC-001
 
 Nguồn: API-COST-005/006/007/012/013/014; API-ACC-001; ingredient_prices; SCR-ACC-01. Gate: Rounding giá mua; policy migration.
 
-### TC-ACC-D01-01 — Giá hai cách ghi cho cùng cost
+### TC-ACC-D01-01: Giá hai cách ghi cho cùng cost
 
 ```gherkin
 Scenario: AC-ACC-D01-01
@@ -15,9 +15,9 @@ Scenario: AC-ACC-D01-01
   Then cùng giá cost108000;70g cùng7560, không cộng VAT hai lần
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Rounding giá mua; policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Rounding giá mua); policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D01-02 — Thiếu VAT và phần lẻ
+### TC-ACC-D01-02: Thiếu VAT và phần lẻ
 
 ```gherkin
 Scenario: AC-ACC-D01-02
@@ -26,9 +26,9 @@ Scenario: AC-ACC-D01-02
   Then không ghi giá ở cả hai; báo thiếu VAT hoặc rounding-unresolved, không tự làm tròn
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Rounding giá mua; policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Rounding giá mua); policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D01-03 — Lô nguyên tử và legacy
+### TC-ACC-D01-03: Lô nguyên tử và legacy
 
 ```gherkin
 Scenario: AC-ACC-D01-03
@@ -37,13 +37,13 @@ Scenario: AC-ACC-D01-03
   Then không ghi lô; legacy gắn cờ, snapshot không bị chuẩn hóa lại
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Rounding giá mua; policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Rounding giá mua); policy migration; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-## US-ACC-002 — FR-ACC-002
+## US-ACC-002: FR-ACC-002
 
 Nguồn: API-ACC-002; order_pricing_snapshots; SCR-ACC-02. Gate: Sale context và quyền mới.
 
-### TC-ACC-D02-01 — Cờ hóa đơn độc lập
+### TC-ACC-D02-01: Cờ hóa đơn độc lập
 
 ```gherkin
 Scenario: AC-ACC-D02-01
@@ -52,9 +52,9 @@ Scenario: AC-ACC-D02-01
   Then amountDue đều4000000; revenueExVat=4000000/1.08, không đổi do cờ
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Sale context và quyền mới; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Sale context và quyền mới); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D02-02 — Không suy diễn doanh thu
+### TC-ACC-D02-02: Không suy diễn doanh thu
 
 ```gherkin
 Scenario: AC-ACC-D02-02
@@ -63,9 +63,9 @@ Scenario: AC-ACC-D02-02
   Then UNRESOLVED; revenueExVat=null; không trả doanh thu0 hoặc gross giả là net
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Sale context và quyền mới; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Sale context và quyền mới); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D02-03 — Phạm vi order/snapshot
+### TC-ACC-D02-03: Phạm vi order/snapshot
 
 ```gherkin
 Scenario: AC-ACC-D02-03
@@ -74,13 +74,13 @@ Scenario: AC-ACC-D02-03
   Then 404 ngoài scope hoặc409 snapshot không thuộc order; không lộ dữ liệuB
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Sale context và quyền mới; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Sale context và quyền mới); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-## US-ACC-003 — FR-ACC-003
+## US-ACC-003: FR-ACC-003
 
 Nguồn: API-ACC-003; Không ghi; đọc order_pricing_snapshots; SCR-ACC-03. Gate: CK-Q01/02/03/04/10.
 
-### TC-ACC-D03-01 — Hai cách tính
+### TC-ACC-D03-01: Hai cách tính
 
 ```gherkin
 Scenario: AC-ACC-D03-01
@@ -89,9 +89,9 @@ Scenario: AC-ACC-D03-01
   Then khoản thử200000;amountDue4000000;canConfirm=false, chưa thanh toán
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q01/02/03/04/10; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q01/02/03/04/10); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D03-02 — Basis chưa chốt
+### TC-ACC-D03-02: Basis chưa chốt
 
 ```gherkin
 Scenario: AC-ACC-D03-02
@@ -100,9 +100,9 @@ Scenario: AC-ACC-D03-02
   Then calculatedAmount=null và câuCK-Q01; không thay bằng0
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q01/02/03/04/10; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q01/02/03/04/10); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D03-03 — Không cộng hai kiểu
+### TC-ACC-D03-03: Không cộng hai kiểu
 
 ```gherkin
 Scenario: AC-ACC-D03-03
@@ -111,13 +111,13 @@ Scenario: AC-ACC-D03-03
   Then 422; không tự cộng hai khoản; preview không ghi order/draft
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q01/02/03/04/10; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q01/02/03/04/10); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-## US-ACC-004 — FR-ACC-004
+## US-ACC-004: FR-ACC-004
 
 Nguồn: API-ACC-004/005/006; order_discount_records; order_discount_events; SCR-ACC-03/04. Gate: CK-Q04; chưa duyệt/chi trả.
 
-### TC-ACC-D04-01 — Lưu draft có lịch sử
+### TC-ACC-D04-01: Lưu draft có lịch sử
 
 ```gherkin
 Scenario: AC-ACC-D04-01
@@ -126,9 +126,9 @@ Scenario: AC-ACC-D04-01
   Then DRAFT khoản thử200000;event DRAFT_CREATED;amountDue không đổi
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q04; chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q04); chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D04-02 — Retry không tạo trùng
+### TC-ACC-D04-02: Retry không tạo trùng
 
 ```gherkin
 Scenario: AC-ACC-D04-02
@@ -137,9 +137,9 @@ Scenario: AC-ACC-D04-02
   Then lần cùng trả bản cũ; khác hash409; chỉ một draft/event tạo
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q04; chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q04); chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D04-03 — Không vượt gate
+### TC-ACC-D04-03: Không vượt gate
 
 ```gherkin
 Scenario: AC-ACC-D04-03
@@ -148,13 +148,13 @@ Scenario: AC-ACC-D04-03
   Then không chuyển trạng thái/không ghi thanh toán; thiếu quyền bị403
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q04; chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q04); chưa duyệt/chi trả; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-## US-ACC-005 — FR-ACC-005
+## US-ACC-005: FR-ACC-005
 
 Nguồn: API-ACC-007/008; customer_price_terms; SCR-ACC-02. Gate: Quyền terms và activation sales policy.
 
-### TC-ACC-D05-01 — Nháp chưa đủ vẫn thể hiện thiếu
+### TC-ACC-D05-01: Nháp chưa đủ vẫn thể hiện thiếu
 
 ```gherkin
 Scenario: AC-ACC-D05-01
@@ -163,9 +163,9 @@ Scenario: AC-ACC-D05-01
   Then DRAFT; không kích hoạt; không tự gánrate0
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Quyền terms và activation sales policy; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Quyền terms và activation sales policy); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D05-02 — Khoảng ngày sai
+### TC-ACC-D05-02: Khoảng ngày sai
 
 ```gherkin
 Scenario: AC-ACC-D05-02
@@ -174,9 +174,9 @@ Scenario: AC-ACC-D05-02
   Then 422 và không tạo term
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Quyền terms và activation sales policy; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Quyền terms và activation sales policy); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D05-03 — Không hồi tố context
+### TC-ACC-D05-03: Không hồi tố context
 
 ```gherkin
 Scenario: AC-ACC-D05-03
@@ -185,13 +185,13 @@ Scenario: AC-ACC-D05-03
   Then snapshot order cũ giữ nguyên; không tự đổi tiền phải trả
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — Quyền terms và activation sales policy; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (Quyền terms và activation sales policy); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-## US-ACC-006 — FR-ACC-006
+## US-ACC-006: FR-ACC-006
 
 Nguồn: Sự kiện nội bộ order.changed; order_discount_records; order_discount_events; order_pricing_snapshots; SCR-ACC-04. Gate: CK-Q07/08/09; chỉ cơ chế đánh dấu review.
 
-### TC-ACC-D06-01 — Đổi số suất
+### TC-ACC-D06-01: Đổi số suất
 
 ```gherkin
 Scenario: AC-ACC-D06-01
@@ -200,9 +200,9 @@ Scenario: AC-ACC-D06-01
   Then draft NEEDS_REVIEW; giữ giá trị cũ để so, không tự sửa200000 thành160000 và không chi tiền
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q07/08/09; chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q07/08/09); chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D06-02 — Sự kiện lặp
+### TC-ACC-D06-02: Sự kiện lặp
 
 ```gherkin
 Scenario: AC-ACC-D06-02
@@ -211,9 +211,9 @@ Scenario: AC-ACC-D06-02
   Then không thêm event duplicate, không nhân khoản chiết khấu
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q07/08/09; chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q07/08/09); chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 
-### TC-ACC-D06-03 — Hủy khi chưa rõ chính sách
+### TC-ACC-D06-03: Hủy khi chưa rõ chính sách
 
 ```gherkin
 Scenario: AC-ACC-D06-03
@@ -222,5 +222,5 @@ Scenario: AC-ACC-D06-03
   Then giữ dấu vết, yêu cầuCK-Q08/09; không xóa khoản hoặc tự thu hồi/bù trừ
 ```
 
-Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — CK-Q07/08/09; chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.
+Bước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED (chờ CK-Q07/08/09); chỉ cơ chế đánh dấu review; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.
 

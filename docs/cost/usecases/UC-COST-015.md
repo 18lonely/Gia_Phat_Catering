@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Agent chỉ có kết quả tổng hợp, không có số liệu hay lý do đủ để truy ngược theo ngày.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-RUL-003`.
-- **Điểm chạm:** SVC-COST-01 (không phải màn hình) — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SVC-COST-01 (không phải màn hình), xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

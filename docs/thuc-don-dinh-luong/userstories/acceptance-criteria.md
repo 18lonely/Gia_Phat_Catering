@@ -1,4 +1,4 @@
-# Tiêu chí Chấp nhận (Acceptance Criteria — Gherkin BDD) — Epic E2 · Thực đơn & Định lượng
+# Tiêu chí Chấp nhận (Acceptance Criteria: Gherkin BDD) (epic E2 · Thực đơn & Định lượng)
 
 ## Metadata
 
@@ -28,9 +28,9 @@
 
 ---
 
-# Lát R2.1 — Danh mục
+# Lát R2.1: Danh mục
 
-## US-MENU-01 — Tạo và sửa nguyên liệu
+## US-MENU-01: Tạo và sửa nguyên liệu
 
 ```gherkin
 Feature: Tạo và sửa nguyên liệu
@@ -82,7 +82,7 @@ Feature: Tạo và sửa nguyên liệu
     Then hệ thống không ghi đè và trả lỗi "ERR-SYS-409-02"
 ```
 
-## US-MENU-02 — Ngừng dùng nguyên liệu
+## US-MENU-02: Ngừng dùng nguyên liệu
 
 ```gherkin
 Feature: Ngừng dùng nguyên liệu
@@ -109,7 +109,7 @@ Feature: Ngừng dùng nguyên liệu
     And công thức "SUPERSEDED" vẫn hiển thị được tên nguyên liệu này
 ```
 
-## US-MENU-03 — Tìm và lọc nguyên liệu
+## US-MENU-03: Tìm và lọc nguyên liệu
 
 ```gherkin
 Feature: Tìm và lọc nguyên liệu
@@ -138,7 +138,7 @@ Feature: Tìm và lọc nguyên liệu
     And gọi trực tiếp lệnh tạo nguyên liệu trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-04 — Quản lý nhóm nguyên liệu
+## US-MENU-04: Quản lý nhóm nguyên liệu
 
 ```gherkin
 Feature: Quản lý nhóm nguyên liệu chính
@@ -161,7 +161,7 @@ Feature: Quản lý nhóm nguyên liệu chính
     Then nhóm không bị huỷ và hệ thống trả lỗi "ERR-SYS-409-01"
 ```
 
-## US-MENU-05 — Khai mùa vụ
+## US-MENU-05: Khai mùa vụ
 
 ```gherkin
 Feature: Khai mùa vụ của rau
@@ -183,7 +183,7 @@ Feature: Khai mùa vụ của rau
     And tháng 12 và tháng 1 được coi là trong mùa, tháng 6 là ngoài mùa
 ```
 
-## US-MENU-06 — Quản lý phương pháp chế biến
+## US-MENU-06: Quản lý phương pháp chế biến
 
 ```gherkin
 Feature: Quản lý phương pháp chế biến
@@ -207,7 +207,7 @@ Feature: Quản lý phương pháp chế biến
     Then hệ thống không lưu và trả lỗi "ERR-SYS-409-01" kèm danh sách món Healthy đang dùng
 ```
 
-## US-MENU-07 — Tạo món nháp
+## US-MENU-07: Tạo món nháp
 
 ```gherkin
 Feature: Tạo món ở trạng thái nháp
@@ -248,7 +248,7 @@ Feature: Tạo món ở trạng thái nháp
     Then mỗi trong 12 thuộc tính ảnh hưởng quy tắc hiển thị một dòng định nghĩa và ít nhất 1 ví dụ
 ```
 
-## US-MENU-08 — Khai cặp món kỵ nhau
+## US-MENU-08: Khai cặp món kỵ nhau
 
 ```gherkin
 Feature: Khai cặp món không xếp cùng ngày
@@ -271,7 +271,7 @@ Feature: Khai cặp món không xếp cùng ngày
     Then hệ thống trả lỗi "ERR-MENU-409-01"
 ```
 
-## US-MENU-09 — Tìm và lọc món
+## US-MENU-09: Tìm và lọc món
 
 ```gherkin
 Feature: Tìm và lọc món
@@ -294,7 +294,7 @@ Feature: Tìm và lọc món
     Then không có nút sửa và không có thẻ "Giá bán"
 ```
 
-## US-MENU-10 — Gửi duyệt món
+## US-MENU-10: Gửi duyệt món
 
 ```gherkin
 Feature: Gửi duyệt món nháp
@@ -327,7 +327,7 @@ Feature: Gửi duyệt món nháp
     Then hệ thống trả lỗi "ERR-MENU-422-06"
 ```
 
-## US-MENU-11 — Duyệt hoặc trả lại món
+## US-MENU-11: Duyệt hoặc trả lại món
 
 ```gherkin
 Feature: Duyệt hoặc trả lại món
@@ -370,7 +370,7 @@ Feature: Duyệt hoặc trả lại món
     And DDV nhận thông báo kèm nguyên văn lý do
 ```
 
-## US-MENU-12 — Tải mẫu và kiểm tệp nhập
+## US-MENU-12: Tải mẫu và kiểm tệp nhập
 
 ```gherkin
 Feature: Kiểm tệp bảng tính trước khi nhập
@@ -415,7 +415,7 @@ Feature: Kiểm tệp bảng tính trước khi nhập
     And DDV nhận thông báo khi kiểm xong, mở lại được kết quả
 ```
 
-## US-MENU-13 — Nhập tệp đã kiểm sạch
+## US-MENU-13: Nhập tệp đã kiểm sạch
 
 ```gherkin
 Feature: Nhập dữ liệu từ tệp đã kiểm
@@ -450,9 +450,9 @@ Feature: Nhập dữ liệu từ tệp đã kiểm
 
 ---
 
-# Lát R2.2 — Công thức, giá bán, loại suất
+# Lát R2.2: Công thức, giá bán, loại suất
 
-## US-MENU-14 — Lập công thức nháp
+## US-MENU-14: Lập công thức nháp
 
 ```gherkin
 Feature: Lập công thức nháp
@@ -497,7 +497,7 @@ Feature: Lập công thức nháp
     Then công thức được lưu, không báo "ERR-MENU-422-10"
 ```
 
-## US-MENU-15 — Tạo nguyên liệu trong lúc soạn công thức
+## US-MENU-15: Tạo nguyên liệu trong lúc soạn công thức
 
 ```gherkin
 Feature: Tạo nguyên liệu còn thiếu khi đang soạn công thức
@@ -523,7 +523,7 @@ Feature: Tạo nguyên liệu còn thiếu khi đang soạn công thức
     Then không có nguyên liệu nào được tạo và 3 dòng giữ nguyên
 ```
 
-## US-MENU-16 — Duyệt hoặc trả lại công thức
+## US-MENU-16: Duyệt hoặc trả lại công thức
 
 ```gherkin
 Feature: Duyệt hoặc trả lại công thức
@@ -561,7 +561,7 @@ Feature: Duyệt hoặc trả lại công thức
     And DDV nhận thông báo kèm lý do
 ```
 
-## US-MENU-17 — Tạo phiên bản công thức mới
+## US-MENU-17: Tạo phiên bản công thức mới
 
 ```gherkin
 Feature: Tạo phiên bản mới từ công thức đang hiệu lực
@@ -591,7 +591,7 @@ Feature: Tạo phiên bản mới từ công thức đang hiệu lực
     Then không có nút "Tạo phiên bản mới"
 ```
 
-## US-MENU-18 — Lấy đúng công thức hiệu lực theo ngày
+## US-MENU-18: Lấy đúng công thức hiệu lực theo ngày
 
 ```gherkin
 Feature: Công thức hiệu lực theo ngày phục vụ
@@ -615,7 +615,7 @@ Feature: Công thức hiệu lực theo ngày phục vụ
     Then hệ thống trả lỗi "ERR-MENU-404-01" nêu tên món "Gà rán" và ngày 15/11
 ```
 
-## US-MENU-19 — So sánh hai phiên bản công thức
+## US-MENU-19: So sánh hai phiên bản công thức
 
 ```gherkin
 Feature: So sánh phiên bản công thức
@@ -639,7 +639,7 @@ Feature: So sánh phiên bản công thức
     Then màn hình hiện bảng định lượng, không hiện phần so sánh
 ```
 
-## US-MENU-20 — Đặt giá bán
+## US-MENU-20: Đặt giá bán
 
 ```gherkin
 Feature: Đặt giá bán cho món
@@ -673,7 +673,7 @@ Feature: Đặt giá bán cho món
     Then giá được lưu ở trạng thái "PENDING"
 ```
 
-## US-MENU-21 — Duyệt giá bán và lấy giá hiệu lực
+## US-MENU-21: Duyệt giá bán và lấy giá hiệu lực
 
 ```gherkin
 Feature: Duyệt giá bán
@@ -709,7 +709,7 @@ Feature: Duyệt giá bán
     Then giá chuyển trạng thái "REJECTED" và không bao giờ được dùng
 ```
 
-## US-MENU-22 — Lịch sử giá bán
+## US-MENU-22: Lịch sử giá bán
 
 ```gherkin
 Feature: Lịch sử giá bán của món
@@ -731,7 +731,7 @@ Feature: Lịch sử giá bán của món
     Then hệ thống trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-23 — Tạo loại suất
+## US-MENU-23: Tạo loại suất
 
 ```gherkin
 Feature: Tạo và kích hoạt loại suất
@@ -762,7 +762,7 @@ Feature: Tạo và kích hoạt loại suất
     Then "Suất 35.000đ" không có trong danh sách chọn loại suất
 ```
 
-## US-MENU-24 — Khoá cơ cấu loại suất
+## US-MENU-24: Khoá cơ cấu loại suất
 
 ```gherkin
 Feature: Khoá cơ cấu loại suất đã có thực đơn gửi duyệt
@@ -793,7 +793,7 @@ Feature: Khoá cơ cấu loại suất đã có thực đơn gửi duyệt
     And không tạo được thực đơn mới cho loại suất này
 ```
 
-## US-MENU-25 — Đánh dấu loại suất công khai
+## US-MENU-25: Đánh dấu loại suất công khai
 
 ```gherkin
 Feature: Đánh dấu loại suất công khai
@@ -815,7 +815,7 @@ Feature: Đánh dấu loại suất công khai
     Then hệ thống trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-26 — Đề nghị sửa thuộc tính món đang dùng
+## US-MENU-26: Đề nghị sửa thuộc tính món đang dùng
 
 ```gherkin
 Feature: Đề nghị sửa thuộc tính món đang dùng
@@ -855,7 +855,7 @@ Feature: Đề nghị sửa thuộc tính món đang dùng
     Then đề nghị chuyển trạng thái "WITHDRAWN", món không đổi và sửa lại được
 ```
 
-## US-MENU-27 — Duyệt đề nghị thay đổi
+## US-MENU-27: Duyệt đề nghị thay đổi
 
 ```gherkin
 Feature: Duyệt hoặc trả lại đề nghị thay đổi
@@ -893,7 +893,7 @@ Feature: Duyệt hoặc trả lại đề nghị thay đổi
     Then đề nghị chuyển "REJECTED" và món không đổi
 ```
 
-## US-MENU-28 — Ngừng dùng món
+## US-MENU-28: Ngừng dùng món
 
 ```gherkin
 Feature: Ngừng dùng món
@@ -925,7 +925,7 @@ Feature: Ngừng dùng món
     And lần gửi duyệt kế tiếp của thực đơn đó bị chặn bởi "ERR-MENU-422-17"
 ```
 
-## US-MENU-29 — Ảnh món
+## US-MENU-29: Ảnh món
 
 ```gherkin
 Feature: Gắn ảnh cho món
@@ -953,7 +953,7 @@ Feature: Gắn ảnh cho món
     Then hệ thống trả lỗi "ERR-SYS-415-01" (kiểm theo nội dung tệp)
 ```
 
-## US-MENU-30 — Nhập công thức và giá bán từ bảng tính
+## US-MENU-30: Nhập công thức và giá bán từ bảng tính
 
 ```gherkin
 Feature: Nhập công thức và giá bán từ bảng tính
@@ -992,11 +992,11 @@ Feature: Nhập công thức và giá bán từ bảng tính
 
 ---
 
-# Lát R2.3 — Thực đơn và bộ kiểm quy tắc
+# Lát R2.3: Thực đơn và bộ kiểm quy tắc
 
 Dữ liệu nền dùng chung cho lát này: loại suất "Suất 40.000đ" (3 món chính đưa ra, 2 món phụ, có rau, có canh, ngưỡng giá 40.000 đồng) ở trạng thái "ACTIVE"; mọi món nêu tên đều "ACTIVE", có công thức và giá hiệu lực, trừ khi kịch bản nói khác.
 
-## US-MENU-31 — Tạo thực đơn tuần
+## US-MENU-31: Tạo thực đơn tuần
 
 ```gherkin
 Feature: Tạo thực đơn nháp cho một loại suất và một tuần
@@ -1030,7 +1030,7 @@ Feature: Tạo thực đơn nháp cho một loại suất và một tuần
     Then thực đơn mới được tạo
 ```
 
-## US-MENU-32 — Xếp món vào ô
+## US-MENU-32: Xếp món vào ô
 
 ```gherkin
 Feature: Xếp, đổi, bỏ món ở từng ô
@@ -1081,7 +1081,7 @@ Feature: Xếp, đổi, bỏ món ở từng ô
     Then hệ thống trả lỗi "ERR-MENU-409-07"
 ```
 
-## US-MENU-33 — Chọn món mặc định
+## US-MENU-33: Chọn món mặc định
 
 ```gherkin
 Feature: Chọn món mặc định cho từng ngày
@@ -1111,7 +1111,7 @@ Feature: Chọn món mặc định cho từng ngày
     Then chỉ "Cá kho" có nhãn "MẶC ĐỊNH"
 ```
 
-## US-MENU-34 — Xem danh sách và chi tiết thực đơn
+## US-MENU-34: Xem danh sách và chi tiết thực đơn
 
 ```gherkin
 Feature: Xem thực đơn
@@ -1139,7 +1139,7 @@ Feature: Xem thực đơn
     Then màn hình ghi "Chưa có thực đơn" và có nút "Tạo thực đơn"
 ```
 
-## US-MENU-35 — Huỷ thực đơn nháp
+## US-MENU-35: Huỷ thực đơn nháp
 
 ```gherkin
 Feature: Huỷ thực đơn nháp
@@ -1168,9 +1168,9 @@ Feature: Huỷ thực đơn nháp
     Then hệ thống trả lỗi "ERR-SYS-422-01"
 ```
 
-## US-MENU-36 — Kiểm quy tắc cấp ngày
+## US-MENU-36: Kiểm quy tắc cấp ngày
 
-Các kịch bản dưới đây kiểm **khung** của bộ kiểm bằng hai quy tắc mà docx nêu rõ con số (3 món chính; nem – nộm). Bộ kịch bản cho từng quy tắc còn lại — mỗi quy tắc 1 ca đạt và 1 ca vi phạm — viết sau khi DL-01 duyệt con số.
+Các kịch bản dưới đây kiểm **khung** của bộ kiểm bằng hai quy tắc mà docx nêu rõ con số (3 món chính; nem – nộm). Bộ kịch bản cho từng quy tắc còn lại (mỗi quy tắc 1 ca đạt và 1 ca vi phạm) viết sau khi DL-01 duyệt con số.
 
 ```gherkin
 Feature: Kiểm quy tắc cấp ngày sau mỗi thay đổi
@@ -1219,7 +1219,7 @@ Feature: Kiểm quy tắc cấp ngày sau mỗi thay đổi
     Then bảng kiểm không có kết quả nào của "BR-MENU-034"
 ```
 
-## US-MENU-37 — Kiểm quy tắc cấp tuần
+## US-MENU-37: Kiểm quy tắc cấp tuần
 
 Con số trong kịch bản (2 ngày liền, 1 lần mỗi tuần) là giá trị đề xuất của bảng quy tắc, dùng làm ví dụ; thay bằng giá trị được duyệt ở DL-01.
 
@@ -1263,7 +1263,7 @@ Feature: Kiểm quy tắc xét trên cả tuần
 
 Kịch bản AC-MENU-37-3 giả định ngày nghỉ **không** ngắt chuỗi (chỉ đếm ngày phục vụ). Đây là cách hiểu của SRS mục 3.3.2; cần người soạn docx xác nhận cùng [H-2].
 
-## US-MENU-38 — Điểm quy tắc và trạng thái "đã kiểm"
+## US-MENU-38: Điểm quy tắc và trạng thái "đã kiểm"
 
 ```gherkin
 Feature: Điểm quy tắc và chuyển trạng thái đã kiểm
@@ -1307,7 +1307,7 @@ Feature: Điểm quy tắc và chuyển trạng thái đã kiểm
     Then thực đơn về trạng thái "DRAFT"
 ```
 
-## US-MENU-39 — Kiểm ngưỡng giá suất
+## US-MENU-39: Kiểm ngưỡng giá suất
 
 Toàn bộ story viết theo phương án đang đề xuất; nếu [E2-Q1] được trả lời khác, viết lại.
 
@@ -1341,7 +1341,7 @@ Feature: Kiểm tổng giá bán của mỗi tổ hợp suất so với ngưỡn
     Then tổng giá được tính bằng 24000 cho ngày 30/11 và 26000 cho ngày 01/12
 ```
 
-## US-MENU-40 — Lý do chấp nhận cho cảnh báo mức nặng
+## US-MENU-40: Lý do chấp nhận cho cảnh báo mức nặng
 
 ```gherkin
 Feature: Ghi lý do chấp nhận cảnh báo mức nặng
@@ -1371,7 +1371,7 @@ Feature: Ghi lý do chấp nhận cảnh báo mức nặng
     Then việc gửi duyệt không bị chặn vì thiếu lý do
 ```
 
-## US-MENU-41 — Kiểm thực đơn chưa lưu
+## US-MENU-41: Kiểm thực đơn chưa lưu
 
 ```gherkin
 Feature: Kiểm quy tắc cho thực đơn chưa lưu
@@ -1399,7 +1399,7 @@ Feature: Kiểm quy tắc cho thực đơn chưa lưu
     Then hệ thống trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-42 — Xem danh mục quy tắc
+## US-MENU-42: Xem danh mục quy tắc
 
 ```gherkin
 Feature: Xem danh mục quy tắc
@@ -1422,7 +1422,7 @@ Feature: Xem danh mục quy tắc
     And gọi trực tiếp lệnh đề nghị sửa quy tắc trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-43 — Đề nghị sửa quy tắc
+## US-MENU-43: Đề nghị sửa quy tắc
 
 ```gherkin
 Feature: Đề nghị sửa danh mục quy tắc
@@ -1467,9 +1467,9 @@ Feature: Đề nghị sửa danh mục quy tắc
 
 ---
 
-# Lát R2.4 — Duyệt, công bố và phần P1
+# Lát R2.4: Duyệt, công bố và phần P1
 
-## US-MENU-44 — Gửi duyệt thực đơn
+## US-MENU-44: Gửi duyệt thực đơn
 
 ```gherkin
 Feature: Gửi duyệt thực đơn
@@ -1521,7 +1521,7 @@ Feature: Gửi duyệt thực đơn
     Then thực đơn giữ trạng thái cũ và hiện thông báo của bộ kiểm đó
 ```
 
-## US-MENU-45 — Duyệt hoặc trả lại thực đơn
+## US-MENU-45: Duyệt hoặc trả lại thực đơn
 
 ```gherkin
 Feature: Duyệt hoặc trả lại thực đơn
@@ -1564,7 +1564,7 @@ Feature: Duyệt hoặc trả lại thực đơn
     Then thực đơn vẫn gắn v1
 ```
 
-## US-MENU-46 — Trang chờ duyệt
+## US-MENU-46: Trang chờ duyệt
 
 ```gherkin
 Feature: Trang tổng hợp nội dung chờ duyệt
@@ -1607,7 +1607,7 @@ Feature: Trang tổng hợp nội dung chờ duyệt
     Then hệ thống trả lỗi "ERR-AUTH-403-02"
 ```
 
-## US-MENU-47 — Thông báo duyệt
+## US-MENU-47: Thông báo duyệt
 
 ```gherkin
 Feature: Thông báo khi có nội dung chờ duyệt và khi có kết quả
@@ -1635,7 +1635,7 @@ Feature: Thông báo khi có nội dung chờ duyệt và khi có kết quả
     Then ND1 không nhận thông báo chờ duyệt cho món đó
 ```
 
-## US-MENU-48 — Công bố thực đơn
+## US-MENU-48: Công bố thực đơn
 
 ```gherkin
 Feature: Công bố thực đơn đã duyệt
@@ -1667,7 +1667,7 @@ Feature: Công bố thực đơn đã duyệt
     Then không có nút "Công bố"
 ```
 
-## US-MENU-49 — Thu hồi và sửa lại
+## US-MENU-49: Thu hồi và sửa lại
 
 ```gherkin
 Feature: Thu hồi thực đơn đã công bố và sửa lại
@@ -1703,7 +1703,7 @@ Feature: Thu hồi thực đơn đã công bố và sửa lại
     Then hệ thống phát sự kiện "thực đơn bị thu hồi" mang mã thực đơn và lý do
 ```
 
-## US-MENU-50 — Hai người duyệt khi điểm thấp
+## US-MENU-50: Hai người duyệt khi điểm thấp
 
 Toàn bộ story phụ thuộc [O-06]: không thực hiện được nếu Gia Phát chỉ có một người duyệt.
 
@@ -1737,7 +1737,7 @@ Feature: Thực đơn điểm thấp cần hai người duyệt
     Then thực đơn về "DRAFT" và quyết định duyệt của ND1 không còn hiệu lực cho vòng sau
 ```
 
-## US-MENU-51 — Sao chép thực đơn
+## US-MENU-51: Sao chép thực đơn
 
 ```gherkin
 Feature: Sao chép thực đơn từ tuần khác
@@ -1769,7 +1769,7 @@ Feature: Sao chép thực đơn từ tuần khác
     Then bộ kiểm chạy trên bản sao và bảng kiểm hiện kết quả theo quy tắc hiện hành
 ```
 
-## US-MENU-52 — Lịch sử món đã dùng
+## US-MENU-52: Lịch sử món đã dùng
 
 ```gherkin
 Feature: Lịch sử món 4 tuần gần nhất khi chọn món
@@ -1798,7 +1798,7 @@ Feature: Lịch sử món 4 tuần gần nhất khi chọn món
     Then dòng "Cá kho" ghi "chưa dùng 4 tuần gần nhất"
 ```
 
-## US-MENU-53 — Xuất PDF
+## US-MENU-53: Xuất PDF
 
 ```gherkin
 Feature: Xuất thực đơn tuần ra PDF
@@ -1814,7 +1814,7 @@ Feature: Xuất thực đơn tuần ra PDF
   Scenario: Xuất thực đơn chưa công bố
     Given thực đơn ở trạng thái "DRAFT"
     When DDV chọn "Xuất PDF"
-    Then mỗi trang của tệp có dòng "BẢN NHÁP — CHƯA CÔNG BỐ"
+    Then mỗi trang của tệp có dòng "BẢN NHÁP: CHƯA CÔNG BỐ"
 
   @AC-MENU-53-3 @error
   Scenario: Vai trò chỉ xem xuất thực đơn chưa công bố

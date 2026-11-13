@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-EPIC-SPEC-MD
-title: E13 — Chi phí và lợi nhuận
+title: "E13: Chi phí và lợi nhuận"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# E13 — Chi phí và lợi nhuận
+# E13: Chi phí và lợi nhuận
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

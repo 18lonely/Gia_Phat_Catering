@@ -1,4 +1,4 @@
-# Luồng người dùng (User Flow) — Epic E2 · Thực đơn & Định lượng
+# Luồng người dùng (User Flow): Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
@@ -8,7 +8,7 @@
 | Phiên bản | 0.1.0 |
 | Trạng thái | Draft |
 | Ngày | 2026-11-10 |
-| Mặt tiền | Trang quản trị nội bộ — `admin.comgiaphat.com` |
+| Mặt tiền | Trang quản trị nội bộ: `admin.comgiaphat.com` |
 | Tài liệu liên quan | [SRS epic](../srs/spec.md) · [Sơ đồ use case](../srs/usecase-diagram.md) · [Epic-spec](../epic-spec.md) |
 
 Quy ước: **[ĐỀ XUẤT]** chờ duyệt · **[O-xx] / [E2-Qx]** điểm mở, giữ nguyên trạng thái mở. Tên màn hình, đường dẫn và cách bố trí là [ĐỀ XUẤT]; chưa có buổi làm việc nào với người dùng thật về giao diện.
@@ -43,7 +43,7 @@ Người dùng của epic: Dinh dưỡng viên (tạo), Người duyệt (duyệ
 | `SCR-MENU-14` | Chi tiết duyệt | `/approvals/:type/:id` | Người duyệt | `UC-MENU-010` | Xem nội dung theo loại; duyệt; trả lại kèm lý do |
 | `SCR-MENU-15` | Danh mục quy tắc | `/menu/rules` | Dinh dưỡng viên, Người duyệt | `UC-MENU-013` | Xem; đề nghị sửa |
 | `SCR-MENU-16` | Nhập từ bảng tính | `/menu/import` | Dinh dưỡng viên | `UC-MENU-012` | Tải mẫu, tải tệp, kiểm tra, xem lỗi, nhập |
-| `SCR-SYS-01` | Trung tâm thông báo | (thanh trên cùng) | Tất cả | — | Thuộc epic nền tảng; là lối vào `SCR-MENU-13`, `14` và các màn hình chi tiết |
+| `SCR-SYS-01` | Trung tâm thông báo | (thanh trên cùng) | Tất cả | Chưa có | Thuộc epic nền tảng; là lối vào `SCR-MENU-13`, `14` và các màn hình chi tiết |
 
 Vai trò chỉ có quyền xem thấy `SCR-MENU-01`, `04`, `05` (không có nút sửa), `09` và `12` (chỉ thực đơn đã công bố). Người không có quyền mở đường dẫn khác nhận `ERR-AUTH-403-02`.
 
@@ -93,7 +93,7 @@ flowchart LR
 
 Mỗi luồng có một sơ đồ và một bảng phủ tình huống. Ký hiệu trong bảng: **H** = luồng thuận lợi · **E** = lỗi · **B** = tình huống biên.
 
-### 4.1 F1 — Đưa một món mới vào danh mục
+### 4.1 F1: Đưa một món mới vào danh mục
 
 Use case: `UC-MENU-001`, `002`, `004`, `005`, `010`.
 
@@ -139,7 +139,7 @@ flowchart TD
 | F1-13 | B | Rời màn hình khi form có thay đổi chưa lưu | Hộp xác nhận "Bỏ thay đổi chưa lưu?" | [ĐỀ XUẤT] |
 | F1-14 | B | Người khác vừa sửa cùng món | Thông báo tải lại; giữ giá trị người dùng vừa nhập để đối chiếu | `ERR-SYS-409-02` |
 
-### 4.2 F2 — Dựng và gửi duyệt thực đơn tuần
+### 4.2 F2: Dựng và gửi duyệt thực đơn tuần
 
 Use case: `UC-MENU-007`, `008`, `009`. Đây là luồng chính của epic.
 
@@ -191,12 +191,12 @@ flowchart TD
 | F2-13 | B | Bỏ món đang là mặc định | Món mặc định của ngày bị xoá; thực đơn về `DRAFT`; ngày đó hiện nhãn "chưa có món mặc định" | `UC-MENU-007` 9b |
 | F2-14 | B | Sửa thực đơn `CHECKED` làm phát sinh vi phạm cứng | Trạng thái về `DRAFT`; nút Gửi duyệt tắt | `UC-MENU-007` 10a |
 | F2-15 | B | Quy tắc tuần xét ngày của tuần trước nhưng tuần trước chưa có thực đơn | Chỉ tính trong tuần hiện tại; bảng kiểm ghi chú "không có dữ liệu tuần trước" | `UC-MENU-008` 3a; [E2-Q2] |
-| F2-16 | B | Chưa có món `ACTIVE` nào cho một vai trò | Hộp chọn món hiện trạng thái rỗng kèm liên kết tạo món | — |
+| F2-16 | B | Chưa có món `ACTIVE` nào cho một vai trò | Hộp chọn món hiện trạng thái rỗng kèm liên kết tạo món | Không áp dụng |
 | F2-17 | B | Bộ kiểm chưa trả kết quả sau 2 giây | Bảng kiểm hiện "đang kiểm"; nút Gửi duyệt tắt cho đến khi có kết quả | `NFR-MENU-001` |
 | F2-18 | B | Hai người cùng sửa một thực đơn | Người lưu sau nhận thông báo tải lại | `ERR-SYS-409-02` |
 | F2-19 | B | Màn hình hẹp hơn 768 px | Lưới chuyển thành xem từng ngày, vuốt ngang để đổi ngày; bảng kiểm thành ngăn kéo từ dưới lên | `NFR-USE-001`; [ĐỀ XUẤT] |
 
-### 4.3 F3 — Duyệt
+### 4.3 F3: Duyệt
 
 Use case: `UC-MENU-010`.
 
@@ -231,11 +231,11 @@ flowchart TD
 | F3-07 | B | Thực đơn cần 2 người duyệt | Sau người thứ nhất: nhãn "đã duyệt 1/2"; người đó không duyệt lần hai được | `BR-MNU-008` |
 | F3-08 | B | Mục đã được người khác xử lý | Thông báo và tải lại trạng thái | `ERR-SYS-409-02` |
 | F3-09 | B | Đề nghị thay đổi đã lỗi thời | Nhãn "lỗi thời"; không duyệt được; người đề nghị được báo gửi lại | `UC-MENU-010` 7c |
-| F3-10 | B | Không có gì chờ duyệt | Trạng thái rỗng: "Không có nội dung chờ duyệt" | — |
+| F3-10 | B | Không có gì chờ duyệt | Trạng thái rỗng: "Không có nội dung chờ duyệt" | Không áp dụng |
 | F3-11 | B | Duyệt công thức phiên bản mới | Màn hình hiện so sánh với phiên bản đang hiệu lực (`SCR-MENU-07`) | `UC-MENU-004` A5 |
 | F3-12 | B | Duyệt thực đơn có cảnh báo | Mỗi cảnh báo mức nặng hiện kèm lý do chấp nhận của người dựng | `BR-MNU-006` |
 
-### 4.4 F4 — Công bố, thu hồi, sửa lại
+### 4.4 F4: Công bố, thu hồi, sửa lại
 
 Use case: `UC-MENU-011`.
 
@@ -263,9 +263,9 @@ flowchart TD
 | F4-04 | B | Thu hồi khi một số ngày của tuần đã phục vụ | R2: vẫn thu hồi cả tuần. Cách xử lý theo ngày: [E2-Q8] | `UC-MENU-011` |
 | F4-05 | B | Sửa lại sau thu hồi khi thuộc tính món hoặc quy tắc đã đổi | Kết quả kiểm tính lại theo giá trị hiện hành; có thể phát sinh vi phạm mới | `UC-MENU-011` A2 |
 | F4-06 | B | Vai trò chỉ xem mở thực đơn chưa công bố bằng đường dẫn trực tiếp | "Không tìm thấy dữ liệu" | `ERR-SYS-404-01` |
-| F4-07 | B | Xuất PDF thực đơn chưa công bố | Tệp có dòng "BẢN NHÁP — CHƯA CÔNG BỐ" ở đầu mỗi trang | [ĐỀ XUẤT] |
+| F4-07 | B | Xuất PDF thực đơn chưa công bố | Tệp có dòng "BẢN NHÁP: CHƯA CÔNG BỐ" ở đầu mỗi trang | [ĐỀ XUẤT] |
 
-### 4.5 F5 — Nhập dữ liệu gốc từ bảng tính
+### 4.5 F5: Nhập dữ liệu gốc từ bảng tính
 
 Use case: `UC-MENU-012`.
 
@@ -298,7 +298,7 @@ flowchart TD
 | F5-08 | B | Rời trang khi đang kiểm nền | Việc kiểm tiếp tục; kết quả mở lại được từ thông báo | `NFR-MENU-003` |
 | F5-09 | B | Dữ liệu hệ thống đổi giữa lúc kiểm và lúc nhập | Không ghi gì; yêu cầu kiểm lại | `UC-MENU-012` 7a |
 
-### 4.6 F6 — Sửa món đang dùng và sửa quy tắc
+### 4.6 F6: Sửa món đang dùng và sửa quy tắc
 
 Use case: `UC-MENU-003`, `013`. Hai luồng cùng một mẫu: đề nghị → duyệt → áp dụng.
 
@@ -345,7 +345,7 @@ flowchart TD
 | Màn hình | Bình thường | Rỗng | Trạng thái riêng |
 | :--- | :--- | :--- | :--- |
 | `SCR-MENU-01` Nguyên liệu | Bảng phân trang 20 dòng; lọc nhóm, loại bảo quản, trạng thái | "Chưa có nguyên liệu" + nút Thêm + liên kết Nhập từ bảng tính | Lọc không ra kết quả: "Không có nguyên liệu khớp bộ lọc" + nút Xoá lọc |
-| `SCR-MENU-02` Form nguyên liệu | Ô hao hụt chỉ hiện khi tích "có xương/vỏ" | — | Nguyên liệu đang dùng trong công thức: ô đơn vị và hệ số bị khoá kèm chú giải số công thức |
+| `SCR-MENU-02` Form nguyên liệu | Ô hao hụt chỉ hiện khi tích "có xương/vỏ" | Không áp dụng | Nguyên liệu đang dùng trong công thức: ô đơn vị và hệ số bị khoá kèm chú giải số công thức |
 | `SCR-MENU-04` Món | Bảng có cột vai trò, nhóm, phương pháp, Healthy, trạng thái | "Chưa có món" + nút Thêm + liên kết Nhập | Món có đề nghị chờ duyệt: nhãn "chờ duyệt thay đổi" |
 | `SCR-MENU-05` Chi tiết món | 4 thẻ | Thẻ Công thức rỗng: "Món chưa có công thức" + nút Thêm. Thẻ Giá rỗng: "Món chưa có giá bán" | Vai trò chỉ xem: không có nút sửa; thẻ Giá ẩn với `QL_CO_SO`, `BEP_TRUONG` |
 | `SCR-MENU-06` Soạn công thức | Bảng dòng; đơn vị tự điền | 1 dòng trống sẵn | Công thức không phải nháp: chỉ đọc + nút "Tạo phiên bản mới" |
@@ -353,11 +353,11 @@ flowchart TD
 | `SCR-MENU-09` Thực đơn | Bảng theo tuần; nhãn trạng thái và điểm | "Chưa có thực đơn" + nút Tạo | Vai trò chỉ xem: chỉ thấy thực đơn đã công bố |
 | `SCR-MENU-10` Soạn thực đơn | Lưới + bảng kiểm | Mọi ô trống; bảng kiểm ghi "Xếp món để bắt đầu kiểm" | Đang kiểm: bảng kiểm hiện "đang kiểm", giữ kết quả cũ mờ đi. Mất kết nối: khoá lưới |
 | `SCR-MENU-11` Chọn món | Danh sách có ô tìm | "Chưa có món đang dùng cho vị trí này" + liên kết tạo món | Món đã có trong ngày: hiện mờ, không chọn được |
-| `SCR-MENU-12` Xem thực đơn | Lưới chỉ đọc + bảng kiểm đã đóng băng | — | Nút theo trạng thái: `APPROVED` → Công bố; `PUBLISHED` → Thu hồi, Xuất PDF; `WITHDRAWN` → Sửa |
-| `SCR-MENU-13` Chờ duyệt | Danh sách nhóm theo loại, có số đếm | "Không có nội dung chờ duyệt" | — |
-| `SCR-MENU-14` Chi tiết duyệt | Nội dung + nút Duyệt, Trả lại | — | Người xem là người tạo: nút Duyệt tắt kèm chú giải. Đã xử lý: chỉ đọc |
+| `SCR-MENU-12` Xem thực đơn | Lưới chỉ đọc + bảng kiểm đã đóng băng | Không áp dụng | Nút theo trạng thái: `APPROVED` → Công bố; `PUBLISHED` → Thu hồi, Xuất PDF; `WITHDRAWN` → Sửa |
+| `SCR-MENU-13` Chờ duyệt | Danh sách nhóm theo loại, có số đếm | "Không có nội dung chờ duyệt" | Không áp dụng |
+| `SCR-MENU-14` Chi tiết duyệt | Nội dung + nút Duyệt, Trả lại | Không áp dụng | Người xem là người tạo: nút Duyệt tắt kèm chú giải. Đã xử lý: chỉ đọc |
 | `SCR-MENU-15` Quy tắc | Bảng: mã, tên, loại, điểm phạt, phạm vi, tham số, bật/tắt | Không xảy ra (danh mục nạp sẵn) | Quy tắc có đề nghị chờ duyệt: nhãn và nút Sửa tắt |
-| `SCR-MENU-16` Nhập | 3 bước: chọn loại → kiểm → nhập | — | Đang kiểm nền: thanh tiến độ. Có lỗi: bảng lỗi + nút tải danh sách lỗi |
+| `SCR-MENU-16` Nhập | 3 bước: chọn loại → kiểm → nhập | Không áp dụng | Đang kiểm nền: thanh tiến độ. Có lỗi: bảng lỗi + nút tải danh sách lỗi |
 
 ---
 
@@ -370,7 +370,7 @@ flowchart TD
 | `UC-MENU-003` | F6 | `SCR-MENU-05` | 2 / 3 / 3 (chung F6) |
 | `UC-MENU-004` | F1 | `SCR-MENU-06`, `07` | Chung F1 |
 | `UC-MENU-005` | F1 | `SCR-MENU-05` thẻ Giá | Chung F1 |
-| `UC-MENU-006` | — | `SCR-MENU-08` | Phủ ở bảng trạng thái; luồng là một form đơn |
+| `UC-MENU-006` | Không áp dụng | `SCR-MENU-08` | Phủ ở bảng trạng thái; luồng là một form đơn |
 | `UC-MENU-007`, `008`, `009` | F2 | `SCR-MENU-09`, `10`, `11` | 1 / 9 / 9 |
 | `UC-MENU-010` | F3 | `SCR-MENU-13`, `14` | 2 / 4 / 6 |
 | `UC-MENU-011` | F4 | `SCR-MENU-12` | 1 / 2 / 4 |
@@ -392,7 +392,7 @@ Tổng: 6 luồng, 69 tình huống (8 thuận lợi, 29 lỗi, 32 biên), 16 m�
 | `ERR-MENU-422-07` | `SCR-MENU-03` | Món đã chọn ở ô A không hiện ở ô B | Lỗi tại ô món B |
 | `ERR-MENU-409-03` | `SCR-MENU-06` | Công thức không phải nháp hiện chỉ đọc | Thông báo kèm nút "Tạo phiên bản mới" |
 | `ERR-MENU-422-21` | `SCR-MENU-06` | Ô ngày hiệu lực không cho chọn ngày trước hôm nay và ngày không sau phiên bản hiện có | Lỗi tại ô ngày hiệu lực |
-| `ERR-MENU-409-04` | `SCR-MENU-05` thẻ Giá | — | Lỗi tại ô ngày hiệu lực |
+| `ERR-MENU-409-04` | `SCR-MENU-05` thẻ Giá | Không áp dụng | Lỗi tại ô ngày hiệu lực |
 | `ERR-MENU-409-10` | `SCR-MENU-05` thẻ Giá | Giá đã hiệu lực không có nút sửa, huỷ | Thông báo kèm gợi ý đặt giá mới |
 | `ERR-MENU-422-12` | `SCR-MENU-08` | Giới hạn giá trị nhập của từng ô | Lỗi tại ô sai |
 | `ERR-MENU-409-05` | `SCR-MENU-08` | Khoá các ô cơ cấu khi đã có thực đơn gửi duyệt | Thông báo kèm nút "Tạo loại suất mới" |
@@ -418,7 +418,7 @@ Giữ nguyên trạng thái mở.
 | E2-Q8 | Thu hồi theo từng ngày | `SCR-MENU-12`: nút Thu hồi ở cấp tuần hay cấp ngày |
 | E2-Q9 | Tự công bố khi duyệt xong | `SCR-MENU-12`: có nút Công bố không |
 | E2-Q10 | Nhập cập nhật | `SCR-MENU-16`: thêm chế độ cập nhật |
-| — | Thiết bị dinh dưỡng viên và người duyệt thật sự dùng (máy tính hay điện thoại) — URD đánh dấu cần phỏng vấn | Quyết định ưu tiên bố cục nào cho `SCR-MENU-10`, `13`, `14` |
+| Không áp dụng | Thiết bị dinh dưỡng viên và người duyệt thật sự dùng (máy tính hay điện thoại): URD đánh dấu cần phỏng vấn | Quyết định ưu tiên bố cục nào cho `SCR-MENU-10`, `13`, `14` |
 
 ## 8. Lịch sử sửa đổi
 

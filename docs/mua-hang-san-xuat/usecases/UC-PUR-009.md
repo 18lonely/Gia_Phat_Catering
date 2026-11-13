@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-009-MD
-title: UC-PUR-009 — Giải thích nguồn chênh lệch
+title: "UC-PUR-009: Giải thích nguồn chênh lệch"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-009 — Giải thích nguồn chênh lệch
+# UC-PUR-009: Giải thích nguồn chênh lệch
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Người không có cost.cost.read yêu cầu tiền: Không trả tiền hoặc cost trong body/lỗi/log hiển thị (ERR-PUR-403-11).
-- Bước 4 — Giá E3 mới có hiệu lực sau bản dự toán: Giữ giá snapshot dự toán; giá mới không sửa lịch sử.
-- Bước 4 — thiếu policy/nguồn tại E11-Q07/08/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Người không có cost.cost.read yêu cầu tiền: Không trả tiền hoặc cost trong body/lỗi/log hiển thị (ERR-PUR-403-11).
+- Bước 4: Giá E3 mới có hiệu lực sau bản dự toán: Giữ giá snapshot dự toán; giá mới không sửa lịch sử.
+- Bước 4: thiếu policy/nguồn tại E11-Q07/08/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

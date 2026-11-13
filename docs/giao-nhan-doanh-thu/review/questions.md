@@ -30,8 +30,8 @@ Tất cả **CHỜ TRẢ LỜI**. Cột trả lời để trống, phương án 
 | E7-Q07 | Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì? | Nhận mẫu có version và thử nhập môi trường được cấp; chưa giả CSV/XLSX, cột, mã thuế/tài khoản. | File bytes/mapping cột/thử nhập MISA |  |  |
 | E7-Q08 | Envelope, idempotency/receipt/retention, bộ lọc, scope role, audit link, profile tải/xuất dùng chuẩn nào? | Kế thừa an toàn nền; review kỹ thuật, không đặt TTL/retry/limits tùy ý. | Wire contract/persistence/fault/load |  |  |
 
-> Chờ E7-Q07 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-11](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E7-Q07: XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-11](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
-> Chờ E7-Q03, E7-Q04 — XC-03. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-03](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E7-Q03, E7-Q04: XC-03. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-03](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 E6-CG-01/08/05/06 giữ CHỜ TRẢ LỜI trong [sổ E6 duy nhất](../../chon-mon-order/review/contract-gap-register.md), không hỏi lại. 14/14 CG OPEN. CK-Q01–10, DATA-COST-Q01–06, NFR-COST-002, O-02/O-03/O-04, E6-EVID-001/002 không đổi. Chỉ đóng khi có bằng chứng/phạm vi quyết định, không vì kiểm tài liệu.

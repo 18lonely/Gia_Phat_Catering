@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-004-MD
-title: UC-AIN-004 — Giải thích thực đơn
+title: "UC-AIN-004: Giải thích thực đơn"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-004 — Giải thích thực đơn
+# UC-AIN-004: Giải thích thực đơn
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-EXPL-001 / FEAT-061 / US-AIN-004.
 
 Trigger: Khi xem candidate đã kiểm, khách hỏi về món, định lượng, bảng kiểm công khai hoặc dinh dưỡng của phương án.
 
-Tiền điều kiện — nghiệp vụ: Có candidateRef/revision thuộc phiên và chủ đề giải thích nằm trong allowlist đã duyệt.
-Tiền điều kiện — gate còn mở: E9-Q04, E9-Q05, E9-Q12 chưa chốt giá public, phản hồi nhánh kinh tế và nguồn; O-03 vẫn đóng đối với sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có candidateRef/revision thuộc phiên và chủ đề giải thích nằm trong allowlist đã duyệt.
+Tiền điều kiện (gate còn mở): E9-Q04, E9-Q05, E9-Q12 chưa chốt giá public, phản hồi nhánh kinh tế và nguồn; O-03 vẫn đóng đối với sức khỏe.
 
 Luồng chính:
 1. Khách chọn mục cần giải thích tại UI-AIN-02, gửi candidateRef/revision và topic được phép.

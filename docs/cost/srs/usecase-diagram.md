@@ -1,4 +1,4 @@
-# Sơ đồ use case và ma trận truy vết — Cost
+# Sơ đồ use case và ma trận truy vết (Cost)
 
 Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review nghiệp vụ.
 
@@ -32,7 +32,7 @@ Có **16 use case**, bao phủ **43/45 FR Cost bằng luồng**, và **2/45 FR c
 
 Nguồn quyền duy nhất: [SRS Cost mục 2.2](spec.md). Quyền đọc danh sách khoản khoán và quyền mô phỏng P2 còn cần làm rõ, xem FLOW-COST-Q05/Q10.
 
-## Sơ đồ 1 — Nguồn giá và cost món
+## Sơ đồ 1: Nguồn giá và cost món
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,7 @@ flowchart LR
  GD["Giám đốc"]
  RD["Người có quyền đọc cost"]
  JOB["Bộ lập lịch SYS"]
- subgraph COST["Module Cost — giá và món"]
+ subgraph COST["Module Cost: giá và món"]
   U1(["UC-COST-001<br/>Quản lý NCC"])
   U2(["UC-COST-002<br/>Nhập và quản lý giá"])
   U3(["UC-COST-003<br/>Nhập lưới"])
@@ -49,7 +49,7 @@ flowchart LR
   U5(["UC-COST-005<br/>Theo dõi giá"])
   U6(["UC-COST-006<br/>Xem và so sánh cost món"])
   U7(["UC-COST-007<br/>Lập và duyệt bảng đặc thù"])
-  U16(["UC-COST-016<br/>Mô phỏng giá — P2"])
+  U16(["UC-COST-016<br/>Mô phỏng giá (P2)"])
  end
  KT --> U1
  KT --> U2
@@ -66,7 +66,7 @@ flowchart LR
 
 UC-COST-003/004 tái sử dụng kiểm dữ liệu giá của 002, không bao gồm toàn bộ nhánh huỷ/đổi tham chiếu của 002. UC-COST-016 chỉ là nhánh P2 có thể gọi trước nhập giá; không tự lưu giá. Tác nhân cụ thể của mô phỏng chờ quyết định quyền.
 
-## Sơ đồ 2 — Ngân sách, khoản khoán và duyệt
+## Sơ đồ 2: Ngân sách, khoản khoán và duyệt
 
 ```mermaid
 flowchart LR
@@ -76,7 +76,7 @@ flowchart LR
  MENU["Quy trình MENU"]
  SYS["Người quản lý tham số"]
  AG["Agent Dinh dưỡng viên"]
- subgraph COST["Module Cost — ngân sách"]
+ subgraph COST["Module Cost: ngân sách"]
   U8(["UC-COST-008<br/>Khoản khoán"])
   U9(["UC-COST-009<br/>Kiểm ngân sách thực đơn"])
   U10(["UC-COST-010<br/>Cổng duyệt và snapshot"])
@@ -95,7 +95,7 @@ flowchart LR
 
 UC-COST-015 không include giao diện phân rã của UC-COST-009: chỉ tái sử dụng tính toán phía server, tuyệt đối không trả dữ liệu nội bộ của 009 cho agent.
 
-## Sơ đồ 3 — Dự toán và cảnh báo
+## Sơ đồ 3: Dự toán và cảnh báo
 
 ```mermaid
 flowchart LR
@@ -104,7 +104,7 @@ flowchart LR
  CHEF["Bếp trưởng"]
  JOB["Hàng đợi giá SYS"]
  ALERT["Người có cost.alert.read"]
- subgraph COST["Module Cost — dự toán và cảnh báo"]
+ subgraph COST["Module Cost: dự toán và cảnh báo"]
   U12(["UC-COST-012<br/>Lập dự toán"])
   U13(["UC-COST-013<br/>Xem / xuất dự toán"])
   U14(["UC-COST-014<br/>Tính lại và xử lý cảnh báo"])
@@ -171,7 +171,7 @@ Mỗi dòng là một FR được định nghĩa trong SRS, không đếm số l
 | `FR-COST-MEAL-004` | [UC-COST-008](../usecases/UC-COST-008.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-MEAL-005` | [UC-COST-010](../usecases/UC-COST-010.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-MEAL-006` | [UC-COST-010](../usecases/UC-COST-010.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
-| `FR-COST-MEAL-007` | Chưa có luồng thực hiện | Chờ quyết định: E3-Q9 — ngoại lệ vượt ngưỡng; nhắc trong UC-COST-010, không có nút bỏ qua CHAN |
+| `FR-COST-MEAL-007` | Chưa có luồng thực hiện | Chờ quyết định: E3-Q9, ngoại lệ vượt ngưỡng; nhắc trong UC-COST-010, không có nút bỏ qua CHAN |
 | `FR-COST-MEAL-008` | [UC-COST-011](../usecases/UC-COST-011.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-RUL-001` | [UC-COST-009](../usecases/UC-COST-009.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-RUL-002` | [UC-COST-009](../usecases/UC-COST-009.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
@@ -186,7 +186,7 @@ Mỗi dòng là một FR được định nghĩa trong SRS, không đếm số l
 | `FR-COST-ALR-001` | [UC-COST-014](../usecases/UC-COST-014.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-ALR-002` | [UC-COST-014](../usecases/UC-COST-014.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 | `FR-COST-ALR-003` | [UC-COST-014](../usecases/UC-COST-014.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
-| `FR-COST-ALR-004` | Chưa có luồng thực hiện | Chờ quyết định: E3-Q10 — chặn chuyển bếp; nhắc trong UC-COST-014, chưa hiện thực R3 |
+| `FR-COST-ALR-004` | Chưa có luồng thực hiện | Chờ quyết định: E3-Q10, chặn chuyển bếp; nhắc trong UC-COST-014, chưa hiện thực R3 |
 | `FR-COST-ALR-005` | [UC-COST-016](../usecases/UC-COST-016.md) | Có luồng nháp; giữ ưu tiên và điểm mở của SRS |
 
 Đã có [API](../api/api-spec.md), [wireframe](../html-wireframe/cost-workbench.html), [backlog/AC](../userstories/backlog.md) và [test case](../test/test-cases.md) nháp. Tiếp theo: review FLOW-COST-Qxx, checklist và oracle trước khi triển khai/chạy test. Đây chưa phải bằng chứng triển khai hoặc nghiệm thu chức năng.

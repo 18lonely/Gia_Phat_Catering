@@ -1,4 +1,4 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA giao-nhan-doanh-thu</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>giao-nhan-doanh-thu</h1><p>34 tài liệu · 4 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/revenue-workbench.html">revenue-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">API đề xuất E7</a><a href="#doc-api-data-mapping-md">Mapping API → schema hiện có → UI</a><a href="#doc-epic-spec-md">E7 — Giao nhận &amp; doanh thu</a><a href="#doc-review-dependencies-md">Phụ thuộc E6 → E7 và cổng nguồn</a><a href="#doc-review-handoff-md">Bàn giao BA nháp E7</a><a href="#doc-review-questions-md">Sổ câu hỏi mở E7</a><a href="#doc-srs-data-dictionary-md">Delta dữ liệu E7 — đề xuất chưa merge</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E7</a><a href="#doc-srs-spec-md">SRS E7 — Giao nhận, doanh thu và đối soát</a><a href="#doc-srs-states-md">State diagram E7</a><a href="#doc-test-checklist-md">Checklist kiểm E7</a><a href="#doc-test-evidence-protocol-md">Protocol bằng chứng E7</a><a href="#doc-test-fixtures-README-md">Fixture synthetic E7</a><a href="#doc-test-system-cases-md">Ca hệ thống, rule và NFR E7</a><a href="#doc-test-test-cases-md">Test cases E7</a><a href="#doc-test-traceability-md">RTM E7</a><a href="#doc-ui-screens-md">Màn hình và quyền E7</a><a href="#doc-ui-user-flow-md">User flow E7 — happy/error/edge</a><a href="#doc-usecases-index-md">Danh mục use case E7</a><a href="#doc-usecases-UC-DLV-001-md">UC-DLV-001 — Lập phiếu giao nhận</a><a href="#doc-usecases-UC-DLV-002-md">UC-DLV-002 — Xác nhận số nhận qua link</a><a href="#doc-usecases-UC-DLV-003-md">UC-DLV-003 — Lập biên bản chênh lệch</a><a href="#doc-usecases-UC-DLV-004-md">UC-DLV-004 — Ghi thỏa thuận xử lý chênh lệch</a><a href="#doc-usecases-UC-FIN-005-md">UC-FIN-005 — Tính doanh thu từ số tính tiền</a><a href="#doc-usecases-UC-FIN-006-md">UC-FIN-006 — Tra cứu doanh thu và nguồn</a><a href="#doc-usecases-UC-FIN-007-md">UC-FIN-007 — Lập kỳ đối soát</a><a href="#doc-usecases-UC-FIN-008-md">UC-FIN-008 — Ghi nhận thống nhất đối soát</a><a href="#doc-usecases-UC-FIN-009-md">UC-FIN-009 — Ghi nhận thu tiền</a><a href="#doc-usecases-UC-FIN-010-md">UC-FIN-010 — Khóa kỳ đối soát</a><a href="#doc-usecases-UC-FIN-011-md">UC-FIN-011 — Đề nghị mở lại kỳ</a><a href="#doc-usecases-UC-FIN-012-md">UC-FIN-012 — Duyệt hoặc từ chối mở lại kỳ</a><a href="#doc-usecases-UC-FIN-013-md">UC-FIN-013 — Chuẩn bị và yêu cầu xuất MISA</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria E7 — Given / When / Then</a><a href="#doc-userstories-backlog-md">Backlog E7</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>API đề xuất E7</h1>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA giao-nhan-doanh-thu</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>giao-nhan-doanh-thu</h1><p>34 tài liệu · 4 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/revenue-workbench.html">revenue-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">API đề xuất E7</a><a href="#doc-api-data-mapping-md">Mapping API → schema hiện có → UI</a><a href="#doc-epic-spec-md">E7: Giao nhận &amp; doanh thu</a><a href="#doc-review-dependencies-md">Phụ thuộc E6 → E7 và cổng nguồn</a><a href="#doc-review-handoff-md">Bàn giao BA nháp E7</a><a href="#doc-review-questions-md">Sổ câu hỏi mở E7</a><a href="#doc-srs-data-dictionary-md">Delta dữ liệu E7: đề xuất chưa merge</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E7</a><a href="#doc-srs-spec-md">SRS E7: Giao nhận, doanh thu và đối soát</a><a href="#doc-srs-states-md">State diagram E7</a><a href="#doc-test-checklist-md">Checklist kiểm E7</a><a href="#doc-test-evidence-protocol-md">Protocol bằng chứng E7</a><a href="#doc-test-fixtures-README-md">Fixture synthetic E7</a><a href="#doc-test-system-cases-md">Ca hệ thống, rule và NFR E7</a><a href="#doc-test-test-cases-md">Test cases E7</a><a href="#doc-test-traceability-md">RTM E7</a><a href="#doc-ui-screens-md">Màn hình và quyền E7</a><a href="#doc-ui-user-flow-md">User flow E7: happy/error/edge</a><a href="#doc-usecases-index-md">Danh mục use case E7</a><a href="#doc-usecases-UC-DLV-001-md">UC-DLV-001: Lập phiếu giao nhận</a><a href="#doc-usecases-UC-DLV-002-md">UC-DLV-002: Xác nhận số nhận qua link</a><a href="#doc-usecases-UC-DLV-003-md">UC-DLV-003: Lập biên bản chênh lệch</a><a href="#doc-usecases-UC-DLV-004-md">UC-DLV-004: Ghi thỏa thuận xử lý chênh lệch</a><a href="#doc-usecases-UC-FIN-005-md">UC-FIN-005: Tính doanh thu từ số tính tiền</a><a href="#doc-usecases-UC-FIN-006-md">UC-FIN-006: Tra cứu doanh thu và nguồn</a><a href="#doc-usecases-UC-FIN-007-md">UC-FIN-007: Lập kỳ đối soát</a><a href="#doc-usecases-UC-FIN-008-md">UC-FIN-008: Ghi nhận thống nhất đối soát</a><a href="#doc-usecases-UC-FIN-009-md">UC-FIN-009: Ghi nhận thu tiền</a><a href="#doc-usecases-UC-FIN-010-md">UC-FIN-010: Khóa kỳ đối soát</a><a href="#doc-usecases-UC-FIN-011-md">UC-FIN-011: Đề nghị mở lại kỳ</a><a href="#doc-usecases-UC-FIN-012-md">UC-FIN-012: Duyệt hoặc từ chối mở lại kỳ</a><a href="#doc-usecases-UC-FIN-013-md">UC-FIN-013: Chuẩn bị và yêu cầu xuất MISA</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria E7 (Given / When / Then)</a><a href="#doc-userstories-backlog-md">Backlog E7</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>API đề xuất E7</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <h2>Ranh giới</h2>
 <p>18 endpoint đề xuất (13 luồng chính +5 đọc bổ sung); không server. Input logic không là wire shape E6. Không callback/webhook/MISA connector ngoài PRD. <a href="api/endpoint-catalog.json">Catalog</a> · <a href="#doc-api-data-mapping-md">Mapping</a>.</p>
@@ -295,7 +295,7 @@
 </tr>
 </tbody></table></div>
 <p>API đọc bổ sung014–018 dùng cùng mapping, không tạo dữ liệu. DTO tiền dùng chuỗi decimal đề xuất, số suất int; ID chuỗi. Kiểu/length/nullability wire chi tiết E7-Q08 chưa freeze. Không serialize inputs_snapshot/secret/cost vào projection khách.</p>
-</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E7 — Giao nhận &amp; doanh thu</h1>
+</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E7: Giao nhận &amp; doanh thu</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <h2>Mục tiêu và phạm vi</h2>
 <p>Khép vòng từ order đến đối soát theo <a href="../gia-phat/01-prd.md">PRD</a> và <a href="../gia-phat/02-roadmap.md">roadmap</a>. Chỉ dẫn người dùng 12/11/2026 mở tài liệu E7 thay lệnh cũ không mở E7–E13 <strong>chỉ đối với E7</strong>. E8–E13 chưa mở. E6 dừng chờ CG01/08/05/06, không đặc tả tiếp producer hoặc giả contract freeze.</p>
@@ -543,7 +543,7 @@
 </tr>
 </tbody></table></div>
 <p>E6-CG-01/08/05/06 giữ CHỜ TRẢ LỜI trong <a href="../chon-mon-order/review/contract-gap-register.md">sổ E6 duy nhất</a>, không hỏi lại. 14/14 CG OPEN. CK-Q01–10, DATA-COST-Q01–06, NFR-COST-002, O-02/O-03/O-04, E6-EVID-001/002 không đổi. Chỉ đóng khi có bằng chứng/phạm vi quyết định, không vì kiểm tài liệu.</p>
-</section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Delta dữ liệu E7 — đề xuất chưa merge</h1>
+</section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Delta dữ liệu E7: đề xuất chưa merge</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>65 bảng chung giữ nguyên. DBML có orders.status DELIVERED/CONFIRMED/DISPUTED/RECONCILED nhưng chưa có thực thể phiếu/kỳ/thu/MISA, không đủ làm bằng chứng persistence. Không sửa orders.status từ E7 khi chưa có contract tác động nguồn. <a href="#doc-api-data-mapping-md">Mapping</a>.</p>
 <div class="table-wrap"><table>
@@ -739,14 +739,14 @@
 </tr>
 </tbody></table></div>
 <p>Mã đề xuất consumer E7, không đổi E6. Log không chứa token/upstream body. 503 hiển thị mã gate, không là quyền thay policy.</p>
-</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E7 — Giao nhận, doanh thu và đối soát</h1>
+</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E7: Giao nhận, doanh thu và đối soát</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <h2>1. Giới thiệu</h2>
 <p><a href="../gia-phat/01-prd.md">PRD</a> · <a href="#doc-epic-spec-md">Epic</a> · <a href="../nen-tang/srs/spec.md">Nền tảng</a> · <a href="../cost/accounting/business-rules.md">Kế toán</a>.</p>
 <p>Phiếu ghi sự kiện giao/nhận theo suất. Kỳ đối soát là tập dữ liệu một khách/khoảng ngày. Revision là bản nguồn; version là token thay đổi, không tráo hai khái niệm.</p>
 <h2>2. Tổng quan</h2>
 <p>Bếp/vận hành ghi giao, đại diện khách xác nhận, kế toán đối soát/thu tiền, Giám đốc duyệt mở lại. <a href="#doc-ui-screens-md">Quyền/UI</a> là đề xuất, không tự cấp quyền chỉ vì role đã có. Web desktop/mobile; phiên này HTML offline. <a href="#doc-review-dependencies-md">Phụ thuộc</a> chặn E6/auth/link; <a href="#doc-review-questions-md">câu hỏi</a> chặn Q-13, căn cứ tiền, mẫu MISA. CG01/08/05/06 chỉ là cổng đầu vào, không đặc tả cách producer vượt cổng.</p>
-<h2>3.1 FR — tất cả P0 theo PRD</h2>
+<h2>3.1 FR: tất cả P0 theo PRD</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -760,7 +760,7 @@
 </thead>
 <tbody><tr>
 <td align="left">FR-DLV-NOTE-001 / FEAT-049</td>
-<td align="left">Lập phiếu giao nhận — Bếp trưởng / quản lý cơ sở</td>
+<td align="left">Lập phiếu giao nhận: Bếp trưởng / quản lý cơ sở</td>
 <td align="left">orderId, orderRevisionRef, planRevisionRef, số giao, bằng chứng giao</td>
 <td align="left">Đối chiếu scope và nguồn; giữ số chốt/số giao riêng, ghi phiếu và provenance, không sửa order E6</td>
 <td align="left">Phiếu chờ khách xác nhận</td>
@@ -768,7 +768,7 @@
 </tr>
 <tr>
 <td align="left">FR-DLV-ACK-001 / FEAT-049</td>
-<td align="left">Xác nhận số nhận qua link — Đại diện khách được xác minh</td>
+<td align="left">Xác nhận số nhận qua link: Đại diện khách được xác minh</td>
 <td align="left">deliveryId, số nhận, version, bằng chứng xác nhận</td>
 <td align="left">Chỉ ghi khi người nhận được xác minh đúng scope theo policy đã duyệt; mở link không là xác nhận; giữ số nhận thực và dấu vết</td>
 <td align="left">Xác nhận nhận hoặc chênh lệch</td>
@@ -776,7 +776,7 @@
 </tr>
 <tr>
 <td align="left">FR-DLV-DIFF-001 / FEAT-050</td>
-<td align="left">Lập biên bản chênh lệch — Dinh dưỡng viên / vận hành được cấp quyền</td>
+<td align="left">Lập biên bản chênh lệch: Dinh dưỡng viên / vận hành được cấp quyền</td>
 <td align="left">deliveryId, số giao/nhận tham chiếu, mô tả, evidenceRef</td>
 <td align="left">Giữ bằng chứng hai phía; so sánh số giao/nhận; thiếu số nhận thì chưa xác định chênh, không điền 0</td>
 <td align="left">Biên bản có version, liên kết phiếu</td>
@@ -784,7 +784,7 @@
 </tr>
 <tr>
 <td align="left">FR-DLV-RES-001 / FEAT-050</td>
-<td align="left">Ghi thỏa thuận xử lý chênh lệch — Vận hành được cấp quyền</td>
+<td align="left">Ghi thỏa thuận xử lý chênh lệch: Vận hành được cấp quyền</td>
 <td align="left">discrepancyId, phương án giao bù/giảm trừ, evidenceRef, version</td>
 <td align="left">Ghi thỏa thuận hai phía; giao bù gắn phiếu gốc và số bù thực; giảm trừ giữ dòng điều chỉnh riêng; không tự cộng cả hai cách cho một phần thiếu</td>
 <td align="left">Thỏa thuận và nguồn số tính tiền</td>
@@ -792,7 +792,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-REV-001 / FEAT-051</td>
-<td align="left">Tính doanh thu từ số tính tiền — Kế toán doanh thu</td>
+<td align="left">Tính doanh thu từ số tính tiền: Kế toán doanh thu</td>
 <td align="left">orderRevisionRef, pricingSnapshotId, billableServings, basisEvidenceRef</td>
 <td align="left">Kiểm căn cứ số tính tiền và giá chụp đúng order/version; tính số tính tiền × giá chụp; tách phải trả, VAT/doanh thu chưa VAT và CK riêng; thiếu context thì chưa xác định</td>
 <td align="left">Bản tính nháp có provenance</td>
@@ -800,7 +800,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-VIEW-001 / FEAT-051</td>
-<td align="left">Tra cứu doanh thu và nguồn — Kế toán doanh thu</td>
+<td align="left">Tra cứu doanh thu và nguồn: Kế toán doanh thu</td>
 <td align="left">customerId, fromDate, toDate, trạng thái</td>
 <td align="left">Đọc bản tính có sẵn theo scope; tách dòng đủ/thiếu; không cộng dòng chưa xác định như 0 vào tổng hoàn tất</td>
 <td align="left">Danh sách, nguồn và tổng có nhãn đủ/thiếu</td>
@@ -808,7 +808,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-REC-001 / FEAT-052</td>
-<td align="left">Lập kỳ đối soát — Kế toán doanh thu</td>
+<td align="left">Lập kỳ đối soát: Kế toán doanh thu</td>
 <td align="left">customerId, fromDate, toDate, revenueRefs</td>
 <td align="left">Chụp tập nguồn/version; liệt kê dòng thiếu/tranh chấp, không bỏ dòng lỗi để báo đủ</td>
 <td align="left">Kỳ nháp và danh sách chặn</td>
@@ -816,7 +816,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-AGRE-001 / FEAT-052</td>
-<td align="left">Ghi nhận thống nhất đối soát — Kế toán và đại diện khách</td>
+<td align="left">Ghi nhận thống nhất đối soát: Kế toán và đại diện khách</td>
 <td align="left">periodId, version, agreementEvidenceRef</td>
 <td align="left">Đối chiếu tổng và nguồn đúng revision với bằng chứng khách; còn chênh lệch chưa thống nhất; không tự ghi thu</td>
 <td align="left">Kỳ thống nhất có bằng chứng</td>
@@ -824,7 +824,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-RCPT-001 / FEAT-052</td>
-<td align="left">Ghi nhận thu tiền — Kế toán doanh thu</td>
+<td align="left">Ghi nhận thu tiền: Kế toán doanh thu</td>
 <td align="left">periodId, số tiền, ngày nhận, chứng từ, version</td>
 <td align="left">Kiểm tiền dương, đúng khách/kỳ và chứng từ; ghi khoản thu có dấu vết; không suy đã thu từ thống nhất hoặc xuất MISA</td>
 <td align="left">Khoản thu và còn phải thu riêng</td>
@@ -832,7 +832,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-LOCK-001 / FEAT-052</td>
-<td align="left">Khóa kỳ đối soát — Kế toán doanh thu</td>
+<td align="left">Khóa kỳ đối soát: Kế toán doanh thu</td>
 <td align="left">periodId, version, nguồn quyết định</td>
 <td align="left">Kiểm đủ nguồn/điều kiện khóa đã được duyệt; giữ snapshot bất biến; chặn mọi đường ghi ảnh hưởng kỳ</td>
 <td align="left">Kỳ LOCKED và audit</td>
@@ -840,7 +840,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-RREQ-001 / FEAT-052</td>
-<td align="left">Đề nghị mở lại kỳ — Kế toán doanh thu</td>
+<td align="left">Đề nghị mở lại kỳ: Kế toán doanh thu</td>
 <td align="left">periodId, version, lý do, nội dung sửa, evidenceRef</td>
 <td align="left">Kỳ phải khóa; lý do ≥10 ký tự theo nền; tạo yêu cầu, không mở khóa</td>
 <td align="left">Yêu cầu chờ Giám đốc, kỳ vẫn khóa</td>
@@ -848,7 +848,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-RDEC-001 / FEAT-052</td>
-<td align="left">Duyệt hoặc từ chối mở lại kỳ — Giám đốc</td>
+<td align="left">Duyệt hoặc từ chối mở lại kỳ: Giám đốc</td>
 <td align="left">requestId, requestVersion, periodVersion, approve/reject, reason</td>
 <td align="left">Kiểm Giám đốc khác người lập/sửa cuối theo BR-SEC-008; đúng version mới mở; từ chối giữ khóa; giữ snapshot cũ, sửa sau mở phải đối soát lại</td>
 <td align="left">Quyết định; kỳ REOPENED hoặc LOCKED</td>
@@ -856,7 +856,7 @@
 </tr>
 <tr>
 <td align="left">FR-FIN-MISA-001 / FEAT-053</td>
-<td align="left">Chuẩn bị và yêu cầu xuất MISA — Kế toán doanh thu</td>
+<td align="left">Chuẩn bị và yêu cầu xuất MISA: Kế toán doanh thu</td>
 <td align="left">periodId, revision, templateRef đã xác nhận</td>
 <td align="left">Kiểm quyền/nguồn kỳ và mẫu nhập/mapping được duyệt; ghi yêu cầu xuất có nguồn/trạng thái/lỗi; thiếu mẫu thì chặn, không tự tạo cột</td>
 <td align="left">Yêu cầu xuất; file chỉ sau mapping được duyệt</td>
@@ -1884,7 +1884,7 @@
 </tr>
 </tbody></table></div>
 <p>Quyền chi tiết E7-Q08 chưa cấp bằng tài liệu; server kiểm theo FR-AUTH-RBAC-001: ngoài scope404/thiếu quyền403. <a href="html-wireframe/revenue-workbench.html">Wireframe</a> có 8 màn synthetic, không backend.</p>
-</section><section id="doc-ui-user-flow-md" hidden><p><a href="ui/user-flow.md">Mở Markdown nguồn</a> · ui/user-flow.md</p><h1>User flow E7 — happy/error/edge</h1>
+</section><section id="doc-ui-user-flow-md" hidden><p><a href="ui/user-flow.md">Mở Markdown nguồn</a> · ui/user-flow.md</p><h1>User flow E7: happy/error/edge</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <figure><svg id="g4" width="983.148681640625" xmlns="http://www.w3.org/2000/svg" class="flowchart" height="2448" viewBox="4 4 983.148681640625 2448" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#g4{font-family:Arial;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#g4 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#g4 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#g4 .error-icon{fill:#552222;}#g4 .error-text{fill:#552222;stroke:#552222;}#g4 .edge-thickness-normal{stroke-width:1px;}#g4 .edge-thickness-thick{stroke-width:3.5px;}#g4 .edge-pattern-solid{stroke-dasharray:0;}#g4 .edge-thickness-invisible{stroke-width:0;fill:none;}#g4 .edge-pattern-dashed{stroke-dasharray:3;}#g4 .edge-pattern-dotted{stroke-dasharray:2;}#g4 .marker{fill:#666;stroke:#666;}#g4 .marker.cross{stroke:#666;}#g4 svg{font-family:Arial;font-size:16px;}#g4 p{margin:0;}#g4 .label{font-family:Arial;color:#000000;}#g4 .cluster-label text{fill:#333;}#g4 .cluster-label span{color:#333;}#g4 .cluster-label span p{background-color:transparent;}#g4 .label text,#g4 span{fill:#000000;color:#000000;}#g4 .node rect,#g4 .node circle,#g4 .node ellipse,#g4 .node polygon,#g4 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#g4 .rough-node .label text,#g4 .node .label text,#g4 .image-shape .label,#g4 .icon-shape .label{text-anchor:middle;}#g4 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#g4 .rough-node .label,#g4 .node .label,#g4 .image-shape .label,#g4 .icon-shape .label{text-align:center;}#g4 .node.clickable{cursor:pointer;}#g4 .root .anchor path{fill:#666!important;stroke-width:0;stroke:#666;}#g4 .arrowheadPath{fill:#333333;}#g4 .edgePaths .path{stroke:#666;stroke-width:1px;}#g4 .flowchart-link{stroke:#666;fill:none;}#g4 .edgeLabel{background-color:white;text-align:center;}#g4 .edgeLabel p{background-color:white;}#g4 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#g4 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#g4 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#g4 .cluster text{fill:#333;}#g4 .cluster span{color:#333;}#g4 .node .collapsed-indicator{fill:#707070;stroke:none;opacity:0.6;}#g4 .node .collapsed-separator{stroke:#707070;stroke-width:0.75px;}#g4 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:Arial;font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#g4 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#g4 rect.text{fill:none;stroke-width:0;}#g4 .icon-shape,#g4 .image-shape{background-color:white;text-align:center;}#g4 .icon-shape p,#g4 .image-shape p{background-color:white;padding:2px;}#g4 .icon-shape .label rect,#g4 .image-shape .label rect{opacity:0.5;background-color:white;fill:white;}#g4 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#g4 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#g4 .node .neo-node{stroke:#999;}#g4 [data-look="neo"].node rect,#g4 [data-look="neo"].cluster rect,#g4 [data-look="neo"].node polygon{stroke:url(#g4-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#g4 [data-look="neo"].swimlane.cluster rect{filter:none;}#g4 [data-look="neo"].node path{stroke:url(#g4-gradient);stroke-width:1px;}#g4 [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#g4 [data-look="neo"].node .neo-line path{stroke:#999;filter:none;}#g4 [data-look="neo"].node circle{stroke:url(#g4-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#g4 [data-look="neo"].node circle .state-start{fill:#000000;}#g4 [data-look="neo"].icon-shape .icon{fill:url(#g4-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#g4 [data-look="neo"].icon-shape .icon-neo path{stroke:url(#g4-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#g4 :root{--mermaid-font-family:Arial;}</style><g><marker id="g4_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="g4_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="g4_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></path></marker><marker id="g4_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></polygon></marker><marker id="g4_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="g4_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="g4_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="g4_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="g4_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="g4_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="g4_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"></path></marker><marker id="g4_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edges edgePaths"><path d="M183.15000000000003,108L183.15000000000003,144" id="g4-L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6MTgzLjE1MDAwMDAwMDAwMDAzLCJ5IjoxMDh9LHsieCI6MTgzLjE1MDAwMDAwMDAwMDAzLCJ5IjoxNDh9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M153.48333333333338,316.333309173584L153.48333333333338,346L153.48333333333338,358.9289321881345Q153.48333333333338,366 146.4122655214679,366L95.07106781186548,366Q88,366 88,373.0710678118655L88,443" id="g4-L_B_X_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 182.8217315673828 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_B_X_0" data-points="W3sieCI6MTUzLjQ4MzMzMzMzMzMzMzM4LCJ5IjozMTYuMzMzMzA5MTczNTg0fSx7IngiOjE1My40ODMzMzMzMzMzMzMzOCwieSI6MzQ2fSx7IngiOjE1My40ODMzMzMzMzMzMzMzOCwieSI6MzY2fSx7IngiOjg4LCJ5IjozNjZ9LHsieCI6ODgsInkiOjQ0N31d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M212.81666666666672,316.333309173584L212.81666666666672,346L212.81666666666672,358.9289321881345Q212.81666666666672,366 219.8877344785322,366L272.9289321881345,366Q280,366 280,373.0710678118655L280,443" id="g4-L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 184.521728515625 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6MjEyLjgxNjY2NjY2NjY2NjcyLCJ5IjozMTYuMzMzMzA5MTczNTg0fSx7IngiOjIxMi44MTY2NjY2NjY2NjY3MiwieSI6MzQ2fSx7IngiOjIxMi44MTY2NjY2NjY2NjY3MiwieSI6MzY2fSx7IngiOjI4MCwieSI6MzY2fSx7IngiOjI4MCwieSI6NDQ3fV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M280,519L280,555" id="g4-L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MjgwLCJ5Ijo1MTl9LHsieCI6MjgwLCJ5Ijo1NTl9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M254.33333333333331,707.3332509994507L254.33333333333331,733L254.33333333333331,830" id="g4-L_D_Q_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 118.666748046875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_D_Q_0" data-points="W3sieCI6MjU0LjMzMzMzMzMzMzMzMzMxLCJ5Ijo3MDcuMzMzMjUwOTk5NDUwN30seyJ4IjoyNTQuMzMzMzMzMzMzMzMzMzEsInkiOjczM30seyJ4IjoyNTQuMzMzMzMzMzMzMzMzMzEsInkiOjgzNH1d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M305.66666666666663,707.3332509994507L305.66666666666663,733L305.66666666666663,745.9289321881345Q305.66666666666663,753 312.7377344785321,753L450.2622655214679,753Q457.33333333333337,753 457.33333333333337,760.0710678118655L457.33333333333337,830" id="g4-L_D_E_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 265.005126953125 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_D_E_0" data-points="W3sieCI6MzA1LjY2NjY2NjY2NjY2NjYzLCJ5Ijo3MDcuMzMzMjUwOTk5NDUwN30seyJ4IjozMDUuNjY2NjY2NjY2NjY2NjMsInkiOjczM30seyJ4IjozMDUuNjY2NjY2NjY2NjY2NjMsInkiOjc1M30seyJ4Ijo0NTcuMzMzMzMzMzMzMzMzMzcsInkiOjc1M30seyJ4Ijo0NTcuMzMzMzMzMzMzMzMzMzcsInkiOjgzNH1d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M431.6666666666667,982.3332509994507L431.6666666666667,1008L431.6666666666667,1105" id="g4-L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 118.666748046875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6NDMxLjY2NjY2NjY2NjY2NjcsInkiOjk4Mi4zMzMyNTA5OTk0NTA3fSx7IngiOjQzMS42NjY2NjY2NjY2NjY3LCJ5IjoxMDA4fSx7IngiOjQzMS42NjY2NjY2NjY2NjY3LCJ5IjoxMTA5fV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M483,982.3332509994507L483,1008L483,1020.9289321881345Q483,1028 490.0710678118655,1028L520.5955988548012,1028Q527.6666666666667,1028 527.6666666666667,1035.0710678118655L527.6666666666667,1145L527.6666666666667,1193.9289321881345Q527.6666666666667,1201 520.5955988548012,1201L482.73773447853216,1201Q475.6666666666667,1201 475.6666666666667,1208.0710678118655L475.6666666666667,1217" id="g4-L_E_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 316.6767883300781 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_E_G_0" data-points="W3sieCI6NDgzLCJ5Ijo5ODIuMzMzMjUwOTk5NDUwN30seyJ4Ijo0ODMsInkiOjEwMDh9LHsieCI6NDgzLCJ5IjoxMDI4fSx7IngiOjUyNy42NjY2NjY2NjY2NjY3LCJ5IjoxMDI4fSx7IngiOjUyNy42NjY2NjY2NjY2NjY3LCJ5IjoxMTQ1fSx7IngiOjUyNy42NjY2NjY2NjY2NjY3LCJ5IjoxMjAxfSx7IngiOjQ3NS42NjY2NjY2NjY2NjY3LCJ5IjoxMjAxfSx7IngiOjQ3NS42NjY2NjY2NjY2NjY3LCJ5IjoxMjIxfV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M431.6666666666667,1181L431.6666666666667,1217" id="g4-L_F_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_F_G_0" data-points="W3sieCI6NDMxLjY2NjY2NjY2NjY2NjcsInkiOjExODF9LHsieCI6NDMxLjY2NjY2NjY2NjY2NjcsInkiOjEyMjF9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M453.6666666666667,1293L453.6666666666667,1329" id="g4-L_G_H_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_G_H_0" data-points="W3sieCI6NDUzLjY2NjY2NjY2NjY2NjcsInkiOjEyOTN9LHsieCI6NDUzLjY2NjY2NjY2NjY2NjcsInkiOjEzMzN9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M428,1481.3332509994507L428,1507L428,1519.9289321881345Q428,1527 420.9289321881345,1527L419.68773447853215,1527Q412.6166666666667,1527 412.6166666666667,1534.0710678118655L412.6166666666667,1604" id="g4-L_H_Y_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 128.7218017578125 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_H_Y_0" data-points="W3sieCI6NDI4LCJ5IjoxNDgxLjMzMzI1MDk5OTQ1MDd9LHsieCI6NDI4LCJ5IjoxNTA3fSx7IngiOjQyOCwieSI6MTUyN30seyJ4Ijo0MTIuNjE2NjY2NjY2NjY2NywieSI6MTUyN30seyJ4Ijo0MTIuNjE2NjY2NjY2NjY2NywieSI6MTYwOH1d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M479.33333333333337,1481.3332509994507L479.33333333333337,1507L479.33333333333337,1519.9289321881345Q479.33333333333337,1527 486.40440114519885,1527L597.5455988548013,1527Q604.6166666666667,1527 604.6166666666667,1534.0710678118655L604.6166666666667,1604" id="g4-L_H_I_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 238.62181091308594 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_H_I_0" data-points="W3sieCI6NDc5LjMzMzMzMzMzMzMzMzM3LCJ5IjoxNDgxLjMzMzI1MDk5OTQ1MDd9LHsieCI6NDc5LjMzMzMzMzMzMzMzMzM3LCJ5IjoxNTA3fSx7IngiOjQ3OS4zMzMzMzMzMzMzMzMzNywieSI6MTUyN30seyJ4Ijo2MDQuNjE2NjY2NjY2NjY2NywieSI6MTUyN30seyJ4Ijo2MDQuNjE2NjY2NjY2NjY2NywieSI6MTYwOH1d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M565.0166666666667,1680L565.0166666666667,1692.9289321881345Q565.0166666666667,1700 557.9455988548011,1700L258.4710678118655,1700Q251.4,1700 251.4,1707.0710678118655L251.4,1736" id="g4-L_I_J_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 360.2884826660156 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_I_J_0" data-points="W3sieCI6NTY1LjAxNjY2NjY2NjY2NjcsInkiOjE2ODB9LHsieCI6NTY1LjAxNjY2NjY2NjY2NjcsInkiOjE3MDB9LHsieCI6MjUxLjQsInkiOjE3MDB9LHsieCI6MjUxLjQsInkiOjE3NDB9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M591.4166666666666,1680L591.4166666666666,1712.9289321881345Q591.4166666666666,1720 584.3455988548012,1720L450.47106781186545,1720Q443.4,1720 443.4,1727.0710678118655L443.4,1736" id="g4-L_I_K_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 194.6884765625 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_I_K_0" data-points="W3sieCI6NTkxLjQxNjY2NjY2NjY2NjYsInkiOjE2ODB9LHsieCI6NTkxLjQxNjY2NjY2NjY2NjYsInkiOjE3MjB9LHsieCI6NDQzLjQsInkiOjE3MjB9LHsieCI6NDQzLjQsInkiOjE3NDB9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M421.4,1812L421.4,1824.9289321881345Q421.4,1832 414.3289321881345,1832L358.22106781186545,1832Q351.15,1832 351.15,1839.0710678118655L351.15,1911" id="g4-L_K_L_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 159.9218292236328 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_K_L_0" data-points="W3sieCI6NDIxLjQsInkiOjE4MTJ9LHsieCI6NDIxLjQsInkiOjE4MzJ9LHsieCI6MzUxLjE1LCJ5IjoxODMyfSx7IngiOjM1MS4xNSwieSI6MTkxNX1d" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M351.15,1987L351.15,2062.9289321881347Q351.15,2070 358.22106781186545,2070L414.07893218813456,2070Q421.15000000000003,2070 421.15000000000003,2077.0710678118653L421.15000000000003,2110L421.15000000000003,2150.500036239624" id="g4-L_L_M_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 224.17181396484375 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_L_M_0" data-points="W3sieCI6MzUxLjE1LCJ5IjoxOTg3fSx7IngiOjM1MS4xNSwieSI6MjA3MH0seyJ4Ijo0MjEuMTUwMDAwMDAwMDAwMDMsInkiOjIwNzB9LHsieCI6NDIxLjE1MDAwMDAwMDAwMDAzLCJ5IjoyMTEwfSx7IngiOjQyMS4xNTAwMDAwMDAwMDAwMywieSI6MjE1NC41MDAwMzYyMzk2MjR9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M465.65000000000003,2110L465.65000000000003,2077.0710678118653Q465.65000000000003,2070 472.7210678118655,2070L528.5789321881346,2070Q535.65,2070 535.65,2062.9289321881347L535.65,1839.0710678118655Q535.65,1832 528.5789321881346,1832L472.47106781186545,1832Q465.4,1832 465.4,1824.9289321881345L465.4,1816" id="g4-L_M_K_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 419.5936279296875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_M_K_0" data-points="W3sieCI6NDY1LjY1MDAwMDAwMDAwMDAzLCJ5IjoyMTEwfSx7IngiOjQ2NS42NTAwMDAwMDAwMDAwMywieSI6MjA3MH0seyJ4Ijo1MzUuNjUsInkiOjIwNzB9LHsieCI6NTM1LjY1LCJ5IjoxODMyfSx7IngiOjQ2NS40LCJ5IjoxODMyfSx7IngiOjQ2NS40LCJ5IjoxODEyfV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M510.15000000000003,2154.500036239624L510.15000000000003,2110L510.15000000000003,2097.0710678118653Q510.15000000000003,2090 517.2210678118655,2090L672.0229426048011,2090Q679.0940104166666,2090 679.0940104166666,2082.9289321881347L679.0940104166666,1951L679.0940104166666,1727.0710678118655Q679.0940104166666,1720 672.0229426048011,1720L624.8877344785321,1720Q617.8166666666666,1720 617.8166666666666,1712.9289321881345L617.8166666666666,1684" id="g4-L_M_I_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 686.0650024414062 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_M_I_0" data-points="W3sieCI6NTEwLjE1MDAwMDAwMDAwMDAzLCJ5IjoyMTU0LjUwMDAzNjIzOTYyNH0seyJ4Ijo1MTAuMTUwMDAwMDAwMDAwMDMsInkiOjIxMTB9LHsieCI6NTEwLjE1MDAwMDAwMDAwMDAzLCJ5IjoyMDkwfSx7IngiOjY3OS4wOTQwMTA0MTY2NjY2LCJ5IjoyMDkwfSx7IngiOjY3OS4wOTQwMTA0MTY2NjY2LCJ5IjoxOTUxfSx7IngiOjY3OS4wOTQwMTA0MTY2NjY2LCJ5IjoxNzIwfSx7IngiOjYxNy44MTY2NjY2NjY2NjY2LCJ5IjoxNzIwfSx7IngiOjYxNy44MTY2NjY2NjY2NjY2LCJ5IjoxNjgwfV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M644.2166666666667,1680L644.2166666666667,1692.9289321881345Q644.2166666666667,1700 651.2877344785322,1700L800.0776301048011,1700Q807.1486979166666,1700 807.1486979166666,1707.0710678118655L807.1486979166666,1736" id="g4-L_I_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 209.60379028320312 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_I_N_0" data-points="W3sieCI6NjQ0LjIxNjY2NjY2NjY2NjcsInkiOjE2ODB9LHsieCI6NjQ0LjIxNjY2NjY2NjY2NjcsInkiOjE3MDB9LHsieCI6ODA3LjE0ODY5NzkxNjY2NjYsInkiOjE3MDB9LHsieCI6ODA3LjE0ODY5NzkxNjY2NjYsInkiOjE3NDB9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M807.1486979166666,1812L807.1486979166666,1848" id="g4-L_N_O_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_N_O_0" data-points="W3sieCI6ODA3LjE0ODY5NzkxNjY2NjYsInkiOjE4MTJ9LHsieCI6ODA3LjE0ODY5NzkxNjY2NjYsInkiOjE4NTJ9XQ==" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M777.4820312500001,2020.333309173584L777.4820312500001,2050L777.4820312500001,2062.9289321881347Q777.4820312500001,2070 770.4109634381346,2070L718.2197657285321,2070Q711.1486979166666,2070 711.1486979166666,2077.0710678118653L711.1486979166666,2344" id="g4-L_O_P_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 380.6719055175781 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_O_P_0" data-points="W3sieCI6Nzc3LjQ4MjAzMTI1MDAwMDEsInkiOjIwMjAuMzMzMzA5MTczNTg0fSx7IngiOjc3Ny40ODIwMzEyNTAwMDAxLCJ5IjoyMDUwfSx7IngiOjc3Ny40ODIwMzEyNTAwMDAxLCJ5IjoyMDcwfSx7IngiOjcxMS4xNDg2OTc5MTY2NjY2LCJ5IjoyMDcwfSx7IngiOjcxMS4xNDg2OTc5MTY2NjY2LCJ5IjoyMzQ4fV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path><path d="M836.8153645833333,2020.333309173584L836.8153645833333,2050L836.8153645833333,2062.9289321881347Q836.8153645833333,2070 843.8864323951989,2070L896.0776301048011,2070Q903.1486979166666,2070 903.1486979166666,2077.0710678118653L903.1486979166666,2344" id="g4-L_O_R_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 380.671875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_O_R_0" data-points="W3sieCI6ODM2LjgxNTM2NDU4MzMzMzMsInkiOjIwMjAuMzMzMzA5MTczNTg0fSx7IngiOjgzNi44MTUzNjQ1ODMzMzMzLCJ5IjoyMDUwfSx7IngiOjgzNi44MTUzNjQ1ODMzMzMzLCJ5IjoyMDcwfSx7IngiOjkwMy4xNDg2OTc5MTY2NjY2LCJ5IjoyMDcwfSx7IngiOjkwMy4xNDg2OTc5MTY2NjY2LCJ5IjoyMzQ4fV0=" data-look="neo" marker-end="url(#g4_flowchart-v2-pointEnd-margin)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(87.68359375, 396.5)"><g class="label" data-id="L_B_X_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-25.1328125" y="0" width="50.3671875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Không</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(279.77734375, 396.5)"><g class="label" data-id="L_B_C_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(254.01692708333331, 783.5)"><g class="label" data-id="L_D_Q_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-25.1328125" y="0" width="50.3671875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Không</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(457.11067708333337, 783.5)"><g class="label" data-id="L_D_E_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(431.4440104166667, 1058.5)"><g class="label" data-id="L_E_F_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(527.3502604166667, 1058.5)"><g class="label" data-id="L_E_G_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-25.1328125" y="0" width="50.3671875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Không</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(412.3002604166667, 1557.5)"><g class="label" data-id="L_H_Y_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-25.1328125" y="0" width="50.3671875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Không</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(604.3940104166667, 1557.5)"><g class="label" data-id="L_H_I_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(535.4546875, 1951)"><g class="label" data-id="L_M_K_0" transform="translate(0, -10)"><g><rect class="background" style="" x="-68.3046875" y="-1" width="136.609375" height="22"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Chưa</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> hoặc</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> từ</tspan><tspan font-style="normal" class="text-inner-tspan" font-weight="normal"> chối</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(678.8713541666666, 1776)"><g class="label" data-id="L_M_I_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(710.8322916666666, 2209)"><g class="label" data-id="L_O_P_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-25.1328125" y="0" width="50.3671875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Không</tspan></tspan></text></g></g></g><g class="edgeLabel" transform="translate(902.9260416666666, 2209)"><g class="label" data-id="L_O_R_0" transform="translate(-0.05078125, -10.5)"><g><rect class="background" style="" x="-12.2265625" y="0" width="24.5546875" height="21"></rect><text y="-10.1" text-anchor="middle" style=""><tspan class="text-outer-tspan row" x="0" y="-0.1em" dy="1.1em" text-anchor="middle"><tspan font-style="normal" class="text-inner-tspan" font-weight="normal">Có</tspan></tspan></text></g></g></g></g><g class="nodes"><g class="node default" id="g4-flowchart-A-0" data-look="neo" transform="translate(183.15000000000003, 60)"><rect class="basic label-container" style="" x="-76" y="-48" width="152" height="96"></rect><g class="label" style="" transform="translate(-60, -36)"><rect></rect><foreignObject width="120" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI01 Phiếu giao - nguồn có điều kiện</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-B-1" data-look="neo" transform="translate(183.15000000000003, 247)"><polygon points="99,0 198,-99 99,-198 0,-99" class="label-container" transform="translate(-98.5, 99)"></polygon><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Nguồn và quyền đủ?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-X-3" data-look="neo" transform="translate(88, 483)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Hiện gate CG - không ghi</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-C-5" data-look="neo" transform="translate(280, 483)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI02 Khách xác nhận link</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-D-7" data-look="neo" transform="translate(280, 646)"><polygon points="87,0 174,-87 87,-174 0,-87" class="label-container" transform="translate(-86.5, 87)"></polygon><g class="label" style="" transform="translate(-60, -12)"><rect></rect><foreignObject width="120" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: nowrap; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Khách trả lời?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-Q-9" data-look="neo" transform="translate(254.33333333333331, 870)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>BLOCKED Q13 - giữ chờ</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-E-11" data-look="neo" transform="translate(457.33333333333337, 921)"><polygon points="87,0 174,-87 87,-174 0,-87" class="label-container" transform="translate(-86.5, 87)"></polygon><g class="label" style="" transform="translate(-60, -12)"><rect></rect><foreignObject width="120" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: nowrap; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Có chênh lệch?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-F-13" data-look="neo" transform="translate(431.6666666666667, 1145)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI03 Biên bản và thỏa thuận</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-G-15" data-look="neo" transform="translate(453.6666666666667, 1257)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI04 Số tính tiền và giá chụp</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-H-19" data-look="neo" transform="translate(453.6666666666667, 1420)"><polygon points="87,0 174,-87 87,-174 0,-87" class="label-container" transform="translate(-86.5, 87)"></polygon><g class="label" style="" transform="translate(-60, -12)"><rect></rect><foreignObject width="120" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: nowrap; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Đủ căn cứ tính?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-Y-21" data-look="neo" transform="translate(412.6166666666667, 1644)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>BLOCKED Q03 Q04</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-I-23" data-look="neo" transform="translate(604.6166666666667, 1644)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI05 Đối soát đúng revision</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-J-25" data-look="neo" transform="translate(251.4, 1776)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI06 Thu tiền riêng</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-K-27" data-look="neo" transform="translate(443.4, 1776)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI05 Khóa có điều kiện</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-L-29" data-look="neo" transform="translate(351.15, 1951)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI07 Yêu cầu mở lại</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-M-31" data-look="neo" transform="translate(465.65000000000003, 2209)"><polygon points="99,0 198,-99 99,-198 0,-99" class="label-container" transform="translate(-98.5, 99)"></polygon><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Giám đốc duyệt?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-N-37" data-look="neo" transform="translate(807.1486979166666, 1776)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>UI08 Kiểm mẫu MISA</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-O-39" data-look="neo" transform="translate(807.1486979166666, 1951)"><polygon points="99,0 198,-99 99,-198 0,-99" class="label-container" transform="translate(-98.5, 99)"></polygon><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Mẫu được duyệt?</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-P-41" data-look="neo" transform="translate(711.1486979166667, 2384)"><rect class="basic label-container" style="" x="-76" y="-36" width="152" height="72"></rect><g class="label" style="" transform="translate(-60, -24)"><rect></rect><foreignObject width="120" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>BLOCKED Q07 - không file giả</p></span></div></foreignObject></g></g><g class="node default" id="g4-flowchart-R-43" data-look="neo" transform="translate(903.1486979166666, 2396)"><rect class="basic label-container" style="" x="-76" y="-48" width="152" height="96"></rect><g class="label" style="" transform="translate(-60, -36)"><rect></rect><foreignObject width="120" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 120px; text-align: center; width: 120px;"><span class="nodeLabel"><p>Xuất và thử nhập - chưa thực thi</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="g4-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><defs><filter id="g4-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><linearGradient id="g4-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="hsl(0, 0%, 83.3333333333%)" stop-opacity="1"></stop><stop offset="100%" stop-color="hsl(0, 0%, 88.9215686275%)" stop-opacity="1"></stop></linearGradient></svg><figcaption><a href="srs/diagrams/ui-user-flow-1.html">Mở sơ đồ lớn</a> · <a href="srs/diagrams/ui-user-flow-1.svg" download>Tải SVG</a></figcaption></figure>
 
@@ -1941,27 +1941,27 @@
 </section><section id="doc-usecases-index-md" hidden><p><a href="usecases/index.md">Mở Markdown nguồn</a> · usecases/index.md</p><h1>Danh mục use case E7</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <ul>
-<li><a href="#doc-usecases-UC-DLV-001-md">UC-DLV-001 — Lập phiếu giao nhận</a></li>
-<li><a href="#doc-usecases-UC-DLV-002-md">UC-DLV-002 — Xác nhận số nhận qua link</a></li>
-<li><a href="#doc-usecases-UC-DLV-003-md">UC-DLV-003 — Lập biên bản chênh lệch</a></li>
-<li><a href="#doc-usecases-UC-DLV-004-md">UC-DLV-004 — Ghi thỏa thuận xử lý chênh lệch</a></li>
-<li><a href="#doc-usecases-UC-FIN-005-md">UC-FIN-005 — Tính doanh thu từ số tính tiền</a></li>
-<li><a href="#doc-usecases-UC-FIN-006-md">UC-FIN-006 — Tra cứu doanh thu và nguồn</a></li>
-<li><a href="#doc-usecases-UC-FIN-007-md">UC-FIN-007 — Lập kỳ đối soát</a></li>
-<li><a href="#doc-usecases-UC-FIN-008-md">UC-FIN-008 — Ghi nhận thống nhất đối soát</a></li>
-<li><a href="#doc-usecases-UC-FIN-009-md">UC-FIN-009 — Ghi nhận thu tiền</a></li>
-<li><a href="#doc-usecases-UC-FIN-010-md">UC-FIN-010 — Khóa kỳ đối soát</a></li>
-<li><a href="#doc-usecases-UC-FIN-011-md">UC-FIN-011 — Đề nghị mở lại kỳ</a></li>
-<li><a href="#doc-usecases-UC-FIN-012-md">UC-FIN-012 — Duyệt hoặc từ chối mở lại kỳ</a></li>
-<li><a href="#doc-usecases-UC-FIN-013-md">UC-FIN-013 — Chuẩn bị và yêu cầu xuất MISA</a></li>
+<li><a href="#doc-usecases-UC-DLV-001-md">UC-DLV-001: Lập phiếu giao nhận</a></li>
+<li><a href="#doc-usecases-UC-DLV-002-md">UC-DLV-002: Xác nhận số nhận qua link</a></li>
+<li><a href="#doc-usecases-UC-DLV-003-md">UC-DLV-003: Lập biên bản chênh lệch</a></li>
+<li><a href="#doc-usecases-UC-DLV-004-md">UC-DLV-004: Ghi thỏa thuận xử lý chênh lệch</a></li>
+<li><a href="#doc-usecases-UC-FIN-005-md">UC-FIN-005: Tính doanh thu từ số tính tiền</a></li>
+<li><a href="#doc-usecases-UC-FIN-006-md">UC-FIN-006: Tra cứu doanh thu và nguồn</a></li>
+<li><a href="#doc-usecases-UC-FIN-007-md">UC-FIN-007: Lập kỳ đối soát</a></li>
+<li><a href="#doc-usecases-UC-FIN-008-md">UC-FIN-008: Ghi nhận thống nhất đối soát</a></li>
+<li><a href="#doc-usecases-UC-FIN-009-md">UC-FIN-009: Ghi nhận thu tiền</a></li>
+<li><a href="#doc-usecases-UC-FIN-010-md">UC-FIN-010: Khóa kỳ đối soát</a></li>
+<li><a href="#doc-usecases-UC-FIN-011-md">UC-FIN-011: Đề nghị mở lại kỳ</a></li>
+<li><a href="#doc-usecases-UC-FIN-012-md">UC-FIN-012: Duyệt hoặc từ chối mở lại kỳ</a></li>
+<li><a href="#doc-usecases-UC-FIN-013-md">UC-FIN-013: Chuẩn bị và yêu cầu xuất MISA</a></li>
 </ul>
-</section><section id="doc-usecases-UC-DLV-001-md" hidden><p><a href="usecases/UC-DLV-001.md">Mở Markdown nguồn</a> · usecases/UC-DLV-001.md</p><h1>UC-DLV-001 — Lập phiếu giao nhận</h1>
+</section><section id="doc-usecases-UC-DLV-001-md" hidden><p><a href="usecases/UC-DLV-001.md">Mở Markdown nguồn</a> · usecases/UC-DLV-001.md</p><h1>UC-DLV-001: Lập phiếu giao nhận</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-DLV-NOTE-001 · FEAT-049 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-01.</p>
 <p>Level: Sea level. Actor chính: Bếp trưởng hoặc quản lý cơ sở phụ trách giao hàng. Bên quan tâm: người nhận cần đối chiếu số giao; kế toán cần nguồn phiếu để đối soát.</p>
 <p>Trigger: Bếp trưởng ghi nhận số suất thực giao của chuyến hàng theo kế hoạch sản xuất.</p>
-<p>Tiền điều kiện — nghiệp vụ: Người lập có phiên và quyền tại cơ sở; đơn hàng và bản kế hoạch nguồn tồn tại.
-Tiền điều kiện — gate còn mở: E6-CG-05/06/08 và E7-Q02 chưa có quyết định/evidence cho luồng thành công; chỉ mô tả xử lý khi đầu vào được xác nhận hợp lệ.</p>
+<p>Tiền điều kiện (nghiệp vụ): Người lập có phiên và quyền tại cơ sở; đơn hàng và bản kế hoạch nguồn tồn tại.
+Tiền điều kiện (gate còn mở): E6-CG-05/06/08 và E7-Q02 chưa có quyết định/evidence cho luồng thành công; chỉ mô tả xử lý khi đầu vào được xác nhận hợp lệ.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Bếp trưởng chọn đơn hàng tại UI-E7-01; hệ thống hiển thị khách, điểm, ngày/ca và số chốt từ nguồn được phép đọc.</li>
@@ -1983,13 +1983,13 @@ Bảo đảm tối thiểu: Lỗi trước khi ghi không tạo phiếu một ph
 <li>5a. Mất phản hồi khi lưu: hệ thống hiển thị kết quả chưa rõ; bếp trưởng đối chiếu phiếu/nguồn trước lệnh mới. Trạng thái lưu chưa xác định, replay vẫn BLOCKED E7-Q08.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-001-1, AC-E7-001-2, AC-E7-001-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-DLV-002-md" hidden><p><a href="usecases/UC-DLV-002.md">Mở Markdown nguồn</a> · usecases/UC-DLV-002.md</p><h1>UC-DLV-002 — Xác nhận số nhận qua link</h1>
+</section><section id="doc-usecases-UC-DLV-002-md" hidden><p><a href="usecases/UC-DLV-002.md">Mở Markdown nguồn</a> · usecases/UC-DLV-002.md</p><h1>UC-DLV-002: Xác nhận số nhận qua link</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-DLV-ACK-001 · FEAT-049 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-02.</p>
 <p>Level: Sea level. Actor chính: Người đặt tổng kiêm người nhận của khách, được xác minh quyền xác nhận. Bên quan tâm: bếp cần số nhận thực; kế toán cần bằng chứng khách xác nhận.</p>
 <p>Trigger: Sau khi nhận hàng, đại diện khách bấm link của phiếu giao để xác nhận số suất đã nhận.</p>
-<p>Tiền điều kiện — nghiệp vụ: Phiếu giao tồn tại và thuộc phạm vi khách; người nhận có bằng chứng số nhận thực tế.
-Tiền điều kiện — gate còn mở: E6-CG-01/08, E7-Q01 và Q-13 chưa được chốt. Luồng dưới chỉ áp dụng khi cơ chế xác minh/quyền đã được duyệt; không chọn loại token hay thời hạn link.</p>
+<p>Tiền điều kiện (nghiệp vụ): Phiếu giao tồn tại và thuộc phạm vi khách; người nhận có bằng chứng số nhận thực tế.
+Tiền điều kiện (gate còn mở): E6-CG-01/08, E7-Q01 và Q-13 chưa được chốt. Luồng dưới chỉ áp dụng khi cơ chế xác minh/quyền đã được duyệt; không chọn loại token hay thời hạn link.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Đại diện khách truy cập link; hệ thống kiểm điều kiện xác minh và phạm vi phiếu trước khi hiển thị UI-E7-02.</li>
@@ -2010,13 +2010,13 @@ Bảo đảm tối thiểu: Mở link không làm phát sinh xác nhận. Lỗi 
 <li>5a. Mất phản hồi sau khi gửi: hệ thống báo chưa rõ kết quả; đại diện khách đối chiếu xác nhận/version trước lệnh mới. Chưa kết luận đã lưu hay chưa, replay E7-Q08 vẫn BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-002-1, AC-E7-002-2, AC-E7-002-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-DLV-003-md" hidden><p><a href="usecases/UC-DLV-003.md">Mở Markdown nguồn</a> · usecases/UC-DLV-003.md</p><h1>UC-DLV-003 — Lập biên bản chênh lệch</h1>
+</section><section id="doc-usecases-UC-DLV-003-md" hidden><p><a href="usecases/UC-DLV-003.md">Mở Markdown nguồn</a> · usecases/UC-DLV-003.md</p><h1>UC-DLV-003: Lập biên bản chênh lệch</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-DLV-DIFF-001 · FEAT-050 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-03.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH được cấp quyền xử lý giao nhận. Bên quan tâm: khách và bếp cần giữ bằng chứng hai phía; kế toán cần căn cứ xử lý phần lệch.</p>
 <p>Trigger: Dinh dưỡng viên nhận phản ánh số suất nhận khác số giao trên phiếu.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có phiếu giao để tham chiếu; người lập có quyền tại khách/cơ sở liên quan.
-Tiền điều kiện — gate còn mở: E7-Q02 và E6-CG-08 chặn phần chưa có quyền/quy trình và nguồn được xác nhận.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có phiếu giao để tham chiếu; người lập có quyền tại khách/cơ sở liên quan.
+Tiền điều kiện (gate còn mở): E7-Q02 và E6-CG-08 chặn phần chưa có quyền/quy trình và nguồn được xác nhận.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Dinh dưỡng viên chọn deliveryId tại UI-E7-03 và xem số giao, số nhận cùng bằng chứng nguồn.</li>
@@ -2038,13 +2038,13 @@ Bảo đảm tối thiểu: Hệ thống giữ riêng bằng chứng hai phía, 
 <li>5b. Mất phản hồi khi ghi: hệ thống báo kết quả chưa rõ; dinh dưỡng viên đối chiếu biên bản/version trước lệnh mới, không kết luận chưa lưu. Replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-003-1, AC-E7-003-2, AC-E7-003-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-DLV-004-md" hidden><p><a href="usecases/UC-DLV-004.md">Mở Markdown nguồn</a> · usecases/UC-DLV-004.md</p><h1>UC-DLV-004 — Ghi thỏa thuận xử lý chênh lệch</h1>
+</section><section id="doc-usecases-UC-DLV-004-md" hidden><p><a href="usecases/UC-DLV-004.md">Mở Markdown nguồn</a> · usecases/UC-DLV-004.md</p><h1>UC-DLV-004: Ghi thỏa thuận xử lý chênh lệch</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-DLV-RES-001 · FEAT-050 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-03.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH được cấp quyền vận hành giao nhận. Bên quan tâm: khách cần thực hiện đúng thỏa thuận; kế toán cần tách giao bù, giảm trừ và chiết khấu.</p>
 <p>Trigger: Khách và Gia Phát có thỏa thuận xử lý phần chênh lệch đã ghi trên biên bản.</p>
-<p>Tiền điều kiện — nghiệp vụ: Biên bản chênh lệch và phiếu gốc tồn tại; người ghi có quyền xử lý, có bằng chứng thỏa thuận hai phía.
-Tiền điều kiện — gate còn mở: E7-Q02/03; CK-Q07–09 khi liên quan CK. Luồng có điều kiện, chưa chọn cách duyệt hay quy đổi giảm trừ.</p>
+<p>Tiền điều kiện (nghiệp vụ): Biên bản chênh lệch và phiếu gốc tồn tại; người ghi có quyền xử lý, có bằng chứng thỏa thuận hai phía.
+Tiền điều kiện (gate còn mở): E7-Q02/03; CK-Q07–09 khi liên quan CK. Luồng có điều kiện, chưa chọn cách duyệt hay quy đổi giảm trừ.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Dinh dưỡng viên chọn discrepancyId tại UI-E7-03 và đối chiếu phần lệch với phiếu giao/nhận gốc.</li>
@@ -2066,13 +2066,13 @@ Bảo đảm tối thiểu: Không có thỏa thuận hợp lệ thì tiền ph�
 <li>6a. Mất phản hồi ghi: hệ thống báo chưa rõ kết quả; dinh dưỡng viên đối chiếu thỏa thuận/version trước lệnh mới. Chưa kết luận trạng thái lưu, replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-004-1, AC-E7-004-2, AC-E7-004-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-005-md" hidden><p><a href="usecases/UC-FIN-005.md">Mở Markdown nguồn</a> · usecases/UC-FIN-005.md</p><h1>UC-FIN-005 — Tính doanh thu từ số tính tiền</h1>
+</section><section id="doc-usecases-UC-FIN-005-md" hidden><p><a href="usecases/UC-FIN-005.md">Mở Markdown nguồn</a> · usecases/UC-FIN-005.md</p><h1>UC-FIN-005: Tính doanh thu từ số tính tiền</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-REV-001 · FEAT-051 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-04.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: khách cần số phải trả đúng căn cứ; kế toán cần truy giá và thuế của đơn.</p>
 <p>Trigger: Kế toán có căn cứ số suất tính tiền của đơn giao và cần lập bản tính doanh thu để đối soát.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có order revision, giá chụp và bằng chứng số tính tiền; kế toán có quyền tại khách tương ứng.
-Tiền điều kiện — gate còn mở: E7-Q03/04, Q-13, E6-CG-04/05/07 chưa chốt căn cứ/nguồn và cách xử lý thuế, làm tròn. Luồng thành công chỉ có điều kiện.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có order revision, giá chụp và bằng chứng số tính tiền; kế toán có quyền tại khách tương ứng.
+Tiền điều kiện (gate còn mở): E7-Q03/04, Q-13, E6-CG-04/05/07 chưa chốt căn cứ/nguồn và cách xử lý thuế, làm tròn. Luồng thành công chỉ có điều kiện.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn đơn tại UI-E7-04 và tham chiếu orderRevisionRef, pricingSnapshotId.</li>
@@ -2093,13 +2093,13 @@ Bảo đảm tối thiểu: Thiếu căn cứ thì doanh thu chưa xác định,
 <li>6a. Mất phản hồi ghi: hệ thống báo chưa rõ kết quả; kế toán đối chiếu bản tính/version trước lệnh mới. Chưa xác định đã lưu hay chưa; replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-005-1, AC-E7-005-2, AC-E7-005-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-006-md" hidden><p><a href="usecases/UC-FIN-006.md">Mở Markdown nguồn</a> · usecases/UC-FIN-006.md</p><h1>UC-FIN-006 — Tra cứu doanh thu và nguồn</h1>
+</section><section id="doc-usecases-UC-FIN-006-md" hidden><p><a href="usecases/UC-FIN-006.md">Mở Markdown nguồn</a> · usecases/UC-FIN-006.md</p><h1>UC-FIN-006: Tra cứu doanh thu và nguồn</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-VIEW-001 · FEAT-051 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-04.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: kế toán cần xem tổng cùng mức đầy đủ của nguồn, khách cần dữ liệu đúng phạm vi.</p>
 <p>Trigger: Kế toán cần rà doanh thu của một khách trong khoảng ngày trước khi chuẩn bị đối soát.</p>
-<p>Tiền điều kiện — nghiệp vụ: Kế toán có phiên và quyền đọc doanh thu; khoảng tra cứu có thể chưa có bản tính nào.
-Tiền điều kiện — gate còn mở: E7-Q04/08 và E6-CG-08 còn chặn cách tổng hợp, bộ lọc và nguồn/scope; không coi hợp đồng đã freeze.</p>
+<p>Tiền điều kiện (nghiệp vụ): Kế toán có phiên và quyền đọc doanh thu; khoảng tra cứu có thể chưa có bản tính nào.
+Tiền điều kiện (gate còn mở): E7-Q04/08 và E6-CG-08 còn chặn cách tổng hợp, bộ lọc và nguồn/scope; không coi hợp đồng đã freeze.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán nhập customerId, fromDate, toDate và trạng thái cần lọc tại UI-E7-04.</li>
@@ -2119,13 +2119,13 @@ Bảo đảm tối thiểu: GET không ghi bản tính, không sửa E6 hoặc k
 <li>5a. Không nhận được phản hồi tra cứu: giao diện chưa có kết quả để đối chiếu; GET không phát sinh lệnh ghi hay replay nghiệp vụ. Quy ước kỹ thuật E7-Q08 vẫn BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-006-1, AC-E7-006-2, AC-E7-006-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-007-md" hidden><p><a href="usecases/UC-FIN-007.md">Mở Markdown nguồn</a> · usecases/UC-FIN-007.md</p><h1>UC-FIN-007 — Lập kỳ đối soát</h1>
+</section><section id="doc-usecases-UC-FIN-007-md" hidden><p><a href="usecases/UC-FIN-007.md">Mở Markdown nguồn</a> · usecases/UC-FIN-007.md</p><h1>UC-FIN-007: Lập kỳ đối soát</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-REC-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-05.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: đại diện khách cần biết tập giao nhận được đối soát; kế toán cần giữ nguồn từng dòng.</p>
 <p>Trigger: Kế toán bắt đầu đối soát doanh thu của một khách cho khoảng ngày cần kiểm tra.</p>
-<p>Tiền điều kiện — nghiệp vụ: Kế toán có quyền tại khách; các nguồn doanh thu có thể có dòng thiếu hoặc tranh chấp cần liệt kê.
-Tiền điều kiện — gate còn mở: E7-Q05, Q-13 và E6-CG-08 chưa chốt phạm vi/điều kiện kỳ và nguồn; không tự chọn cách chống chồng kỳ.</p>
+<p>Tiền điều kiện (nghiệp vụ): Kế toán có quyền tại khách; các nguồn doanh thu có thể có dòng thiếu hoặc tranh chấp cần liệt kê.
+Tiền điều kiện (gate còn mở): E7-Q05, Q-13 và E6-CG-08 chưa chốt phạm vi/điều kiện kỳ và nguồn; không tự chọn cách chống chồng kỳ.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn khách, fromDate, toDate và revenueRefs tại UI-E7-05.</li>
@@ -2146,13 +2146,13 @@ Bảo đảm tối thiểu: Hệ thống không bỏ dòng lỗi để báo đ�
 <li>5a. Mất phản hồi tạo kỳ: hệ thống báo chưa rõ kết quả; kế toán đối chiếu kỳ/version trước lệnh mới. Trạng thái lưu chưa xác định, replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-007-1, AC-E7-007-2, AC-E7-007-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-008-md" hidden><p><a href="usecases/UC-FIN-008.md">Mở Markdown nguồn</a> · usecases/UC-FIN-008.md</p><h1>UC-FIN-008 — Ghi nhận thống nhất đối soát</h1>
+</section><section id="doc-usecases-UC-FIN-008-md" hidden><p><a href="usecases/UC-FIN-008.md">Mở Markdown nguồn</a> · usecases/UC-FIN-008.md</p><h1>UC-FIN-008: Ghi nhận thống nhất đối soát</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-AGRE-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-05.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Actor hỗ trợ: Người đặt tổng kiêm đại diện khách xác nhận đối soát. Bên quan tâm: hai phía cần thống nhất cùng một bản số liệu.</p>
 <p>Trigger: Kế toán nhận bằng chứng khách thống nhất biên bản của kỳ đối soát.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có kỳ để đối soát và bằng chứng khách gắn với tập nguồn/revision; kế toán có quyền ghi nhận.
-Tiền điều kiện — gate còn mở: E7-Q05, Q-13 và E6-CG-01/08 chưa chốt điều kiện thống nhất, xác minh khách và nguồn.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có kỳ để đối soát và bằng chứng khách gắn với tập nguồn/revision; kế toán có quyền ghi nhận.
+Tiền điều kiện (gate còn mở): E7-Q05, Q-13 và E6-CG-01/08 chưa chốt điều kiện thống nhất, xác minh khách và nguồn.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn periodId tại UI-E7-05; hệ thống hiển thị tổng, version và các nguồn của kỳ.</li>
@@ -2173,13 +2173,13 @@ Bảo đảm tối thiểu: Không dùng bằng chứng của revision cũ cho b
 <li>5a. Mất phản hồi ghi: hệ thống báo chưa rõ kết quả; kế toán đối chiếu kỳ và bằng chứng trước lệnh mới. Chưa xác định đã lưu hay chưa, replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-008-1, AC-E7-008-2, AC-E7-008-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-009-md" hidden><p><a href="usecases/UC-FIN-009.md">Mở Markdown nguồn</a> · usecases/UC-FIN-009.md</p><h1>UC-FIN-009 — Ghi nhận thu tiền</h1>
+</section><section id="doc-usecases-UC-FIN-009-md" hidden><p><a href="usecases/UC-FIN-009.md">Mở Markdown nguồn</a> · usecases/UC-FIN-009.md</p><h1>UC-FIN-009: Ghi nhận thu tiền</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-RCPT-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-06.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: khách cần khoản thanh toán được ghi đúng kỳ; kế toán cần đối chiếu chứng từ và số còn phải thu.</p>
 <p>Trigger: Kế toán nhận chứng từ khách thanh toán cho kỳ đối soát.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có kỳ và chứng từ thu thuộc khách; kế toán có quyền ghi khoản thu.
-Tiền điều kiện — gate còn mở: E7-Q06 về thu một phần/thừa, phân bổ và sửa/hủy; E7-Q05 về thu sau khóa. Chưa mở các nhánh thanh toán nâng cao.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có kỳ và chứng từ thu thuộc khách; kế toán có quyền ghi khoản thu.
+Tiền điều kiện (gate còn mở): E7-Q06 về thu một phần/thừa, phân bổ và sửa/hủy; E7-Q05 về thu sau khóa. Chưa mở các nhánh thanh toán nâng cao.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn periodId tại UI-E7-06, đối chiếu khách, phải trả và các khoản đã thu.</li>
@@ -2199,13 +2199,13 @@ Bảo đảm tối thiểu: Lỗi không tạo khoản thu một phần, không 
 <li>5a. Mất phản hồi lệnh thu: hệ thống hiển thị chưa rõ kết quả; kế toán đối chiếu chứng từ và khoản thu trước thao tác mới. Trạng thái lưu chưa xác định, replay BLOCKED E7-Q08.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-009-1, AC-E7-009-2, AC-E7-009-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-010-md" hidden><p><a href="usecases/UC-FIN-010.md">Mở Markdown nguồn</a> · usecases/UC-FIN-010.md</p><h1>UC-FIN-010 — Khóa kỳ đối soát</h1>
+</section><section id="doc-usecases-UC-FIN-010-md" hidden><p><a href="usecases/UC-FIN-010.md">Mở Markdown nguồn</a> · usecases/UC-FIN-010.md</p><h1>UC-FIN-010: Khóa kỳ đối soát</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-LOCK-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-05.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: khách và kế toán cần bảo toàn bản đối soát đã thống nhất.</p>
 <p>Trigger: Kế toán hoàn tất đối chiếu kỳ và yêu cầu khóa bản số liệu đủ điều kiện.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có kỳ đã thống nhất và nguồn quyết định khóa; kế toán có quyền khóa kỳ.
-Tiền điều kiện — gate còn mở: E7-Q05 và Q-13 chưa chốt điều kiện khóa, xử lý phiếu khách im lặng; luồng thành công chưa có evidence thực tế.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có kỳ đã thống nhất và nguồn quyết định khóa; kế toán có quyền khóa kỳ.
+Tiền điều kiện (gate còn mở): E7-Q05 và Q-13 chưa chốt điều kiện khóa, xử lý phiếu khách im lặng; luồng thành công chưa có evidence thực tế.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn periodId tại UI-E7-05 và rà tổng, tập nguồn cùng trạng thái thống nhất.</li>
@@ -2226,13 +2226,13 @@ Bảo đảm tối thiểu: Thiếu điều kiện thì không khóa; lỗi khô
 <li>5a. Mất phản hồi: hệ thống báo chưa rõ kết quả; kế toán tra trạng thái/version kỳ trước lệnh mới. Chưa xác định đã khóa hay chưa, replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-010-1, AC-E7-010-2, AC-E7-010-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-011-md" hidden><p><a href="usecases/UC-FIN-011.md">Mở Markdown nguồn</a> · usecases/UC-FIN-011.md</p><h1>UC-FIN-011 — Đề nghị mở lại kỳ</h1>
+</section><section id="doc-usecases-UC-FIN-011-md" hidden><p><a href="usecases/UC-FIN-011.md">Mở Markdown nguồn</a> · usecases/UC-FIN-011.md</p><h1>UC-FIN-011: Đề nghị mở lại kỳ</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-RREQ-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-07.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: Giám đốc cần biết lý do và nội dung sửa; khách cần bản khóa cũ không bị thay trước duyệt.</p>
 <p>Trigger: Kế toán phát hiện nội dung cần sửa trong kỳ đối soát đã khóa.</p>
-<p>Tiền điều kiện — nghiệp vụ: Kỳ đang LOCKED; kế toán có quyền lập đề nghị và bằng chứng cho nội dung cần sửa.
-Tiền điều kiện — gate còn mở: E7-Q05 về mở lại/tái đối soát; O-06 về ủy quyền giữ mở, không tự cấp người duyệt thay.</p>
+<p>Tiền điều kiện (nghiệp vụ): Kỳ đang LOCKED; kế toán có quyền lập đề nghị và bằng chứng cho nội dung cần sửa.
+Tiền điều kiện (gate còn mở): E7-Q05 về mở lại/tái đối soát; O-06 về ủy quyền giữ mở, không tự cấp người duyệt thay.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn periodId tại UI-E7-07 và xem snapshot khóa cùng version kỳ.</li>
@@ -2253,13 +2253,13 @@ Bảo đảm tối thiểu: Tạo yêu cầu không cấp quyền sửa kỳ; l�
 <li>5a. Mất phản hồi: hệ thống báo chưa rõ kết quả lập đề nghị; kế toán tra yêu cầu/version trước lệnh mới. Kỳ không được coi là đã mở, replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-011-1, AC-E7-011-2, AC-E7-011-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-012-md" hidden><p><a href="usecases/UC-FIN-012.md">Mở Markdown nguồn</a> · usecases/UC-FIN-012.md</p><h1>UC-FIN-012 — Duyệt hoặc từ chối mở lại kỳ</h1>
+</section><section id="doc-usecases-UC-FIN-012-md" hidden><p><a href="usecases/UC-FIN-012.md">Mở Markdown nguồn</a> · usecases/UC-FIN-012.md</p><h1>UC-FIN-012: Duyệt hoặc từ chối mở lại kỳ</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-RDEC-001 · FEAT-052 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-07.</p>
 <p>Level: Sea level. Actor chính: Giám đốc. Bên quan tâm: kế toán cần quyết định để xử lý sai lệch; khách cần giữ bản đối soát khóa và dấu vết thay đổi.</p>
 <p>Trigger: Giám đốc nhận đề nghị mở lại kỳ có lý do và bằng chứng từ kế toán.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có yêu cầu mở lại chờ quyết định và kỳ khóa; Giám đốc khác người lập/sửa cuối theo BR-SEC-008.
-Tiền điều kiện — gate còn mở: E7-Q05 về vòng mở lại; O-06 không tự cấp người thay. Luồng không xác nhận các policy này đã được duyệt.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có yêu cầu mở lại chờ quyết định và kỳ khóa; Giám đốc khác người lập/sửa cuối theo BR-SEC-008.
+Tiền điều kiện (gate còn mở): E7-Q05 về vòng mở lại; O-06 không tự cấp người thay. Luồng không xác nhận các policy này đã được duyệt.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Giám đốc xem yêu cầu tại UI-E7-07, gồm lý do, nội dung sửa, bằng chứng và người lập/sửa cuối.</li>
@@ -2280,13 +2280,13 @@ Bảo đảm tối thiểu: Không tự cấp quyền duyệt cho Admin/người
 <li>5b. Mất phản hồi ghi quyết định: hệ thống báo kết quả chưa rõ; Giám đốc đối chiếu yêu cầu/kỳ trước lệnh mới. Không suy kỳ đã mở hoặc chưa mở; replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-012-1, AC-E7-012-2, AC-E7-012-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-usecases-UC-FIN-013-md" hidden><p><a href="usecases/UC-FIN-013.md">Mở Markdown nguồn</a> · usecases/UC-FIN-013.md</p><h1>UC-FIN-013 — Chuẩn bị và yêu cầu xuất MISA</h1>
+</section><section id="doc-usecases-UC-FIN-013-md" hidden><p><a href="usecases/UC-FIN-013.md">Mở Markdown nguồn</a> · usecases/UC-FIN-013.md</p><h1>UC-FIN-013: Chuẩn bị và yêu cầu xuất MISA</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <p>FR: FR-FIN-MISA-001 · FEAT-053 · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · UI-E7-08.</p>
 <p>Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâm: kế toán cần file đúng mẫu nhập MISA và truy được kỳ nguồn.</p>
 <p>Trigger: Kế toán cần chuyển số liệu kỳ đối soát sang MISA theo mẫu nhập đã được xác nhận.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có kỳ/revision để xuất và quyền xuất của kế toán; mẫu nhập cùng mapping phải được xác nhận trước khi có file.
-Tiền điều kiện — gate còn mở: E7-Q07/08 về mẫu, mapping và hợp đồng xuất; E7-Q05 về kỳ được phép xuất. Hiện chưa có căn cứ tạo cột hoặc thử nhập thực tế.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có kỳ/revision để xuất và quyền xuất của kế toán; mẫu nhập cùng mapping phải được xác nhận trước khi có file.
+Tiền điều kiện (gate còn mở): E7-Q07/08 về mẫu, mapping và hợp đồng xuất; E7-Q05 về kỳ được phép xuất. Hiện chưa có căn cứ tạo cột hoặc thử nhập thực tế.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Kế toán chọn periodId và revision tại UI-E7-08 để rà nguồn kỳ.</li>
@@ -2307,250 +2307,250 @@ Bảo đảm tối thiểu: Thiếu mẫu không tạo file giả; không sửa 
 <li>5a. Mất phản hồi: hệ thống báo chưa rõ kết quả; kế toán tra yêu cầu xuất/version trước lệnh mới. Chưa xác định đã tạo hay chưa; replay E7-Q08 BLOCKED.</li>
 </ul>
 <p>BR-E7-001/002/003/010 và BR miền tại SRS. <a href="#doc-userstories-acceptance-criteria-md">AC</a>: AC-E7-013-1, AC-E7-013-2, AC-E7-013-3. <a href="#doc-test-test-cases-md">Test</a> cùng 3 mục tiêu, không cộng thành 6.</p>
-</section><section id="doc-userstories-acceptance-criteria-md" hidden><p><a href="userstories/acceptance-criteria.md">Mở Markdown nguồn</a> · userstories/acceptance-criteria.md</p><h1>Acceptance criteria E7 — Given / When / Then</h1>
+</section><section id="doc-userstories-acceptance-criteria-md" hidden><p><a href="userstories/acceptance-criteria.md">Mở Markdown nguồn</a> · userstories/acceptance-criteria.md</p><h1>Acceptance criteria E7 (Given / When / Then)</h1>
 <p>Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.</p>
 <h2>US-DLV-001 / FR-DLV-NOTE-001</h2>
-<h3>AC-E7-001-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-001-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given số chốt synthetic 100, số giao 98, nguồn được xác nhận hợp lệ theo giả định
 When lập phiếu giao 98
 Then giữ số chốt 100 và giao 98; không sửa order
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E6-CG-05/06/08; E7-Q02.</p>
-<h3>AC-E7-001-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-001-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given số giao -1
 When lưu phiếu
 Then ERR-DLV-422-01; không tạo phiếu
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E6-CG-05/06/08; E7-Q02.</p>
-<h3>AC-E7-001-3 — Biên / an toàn</h3>
+<h3>AC-E7-001-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given order revision nguồn đã thay
 When lưu phiếu tham chiếu bản cũ
 Then ERR-E7-409-01; không tự chuyển revision
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E6-CG-05/06/08; E7-Q02.</p>
 <h2>US-DLV-002 / FR-DLV-ACK-001</h2>
-<h3>AC-E7-002-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-002-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given phiếu synthetic giao 98 và quyền link được xác minh theo policy giả định hợp lệ
 When nhập nhận 98 và xác nhận
 Then lưu số nhận 98, actor/thời điểm và version
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E6-CG-01/08; E7-Q01; Q-13.</p>
-<h3>AC-E7-002-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-002-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given link bị thu hồi hoặc không đủ scope
 When xác nhận nhận
 Then ERR-E7-403-01; không ghi số nhận
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E6-CG-01/08; E7-Q01; Q-13.</p>
-<h3>AC-E7-002-3 — Biên / an toàn</h3>
+<h3>AC-E7-002-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given khách không trả lời
 When đến thời điểm chờ xử lý
 Then BLOCKED Q-13; không tự lấy số giao/chốt làm số nhận
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E6-CG-01/08; E7-Q01; Q-13.</p>
 <h2>US-DLV-003 / FR-DLV-DIFF-001</h2>
-<h3>AC-E7-003-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-003-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given phiếu synthetic giao 100 nhận 98 có bằng chứng
 When lập biên bản
 Then ghi chênh 2, chưa tự giảm tiền
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q02; E6-CG-08.</p>
-<h3>AC-E7-003-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-003-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given thiếu bằng chứng nhận
 When kết luận chênh lệch đã thống nhất
 Then ERR-DLV-422-02; giữ nháp
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q02; E6-CG-08.</p>
-<h3>AC-E7-003-3 — Biên / an toàn</h3>
+<h3>AC-E7-003-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given phiếu thuộc kỳ khóa
 When sửa số làm thay đổi kỳ
 Then ERR-FIN-409-02; cần mở lại hợp lệ
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q02; E6-CG-08.</p>
 <h2>US-DLV-004 / FR-DLV-RES-001</h2>
-<h3>AC-E7-004-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-004-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given thiếu synthetic 2 suất, thỏa thuận bù 2 và phiếu bù được xác nhận
 When ghi xử lý
 Then giữ phiếu gốc, liên kết bù, không đếm hai lần
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q02/03; CK-Q07–09 khi liên quan CK.</p>
-<h3>AC-E7-004-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-004-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given chưa có thỏa thuận
 When áp giảm trừ
 Then ERR-DLV-422-02; không đổi phải trả
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q02/03; CK-Q07–09 khi liên quan CK.</p>
-<h3>AC-E7-004-3 — Biên / an toàn</h3>
+<h3>AC-E7-004-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given phần thiếu đã giao bù
 When thêm giảm trừ cùng phần thiếu
 Then BLOCKED E7-Q02; không tự cộng hai cách
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q02/03; CK-Q07–09 khi liên quan CK.</p>
 <h2>US-FIN-005 / FR-FIN-REV-001</h2>
-<h3>AC-E7-005-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-005-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given synthetic số tính tiền 100 có căn cứ, giá chụp 40000 gồm VAT thử 8%, CK riêng 200000
 When tính doanh thu
 Then phải trả 4000000, CK 200000 riêng, trước VAT 4000000/1.08 trước làm tròn; không phải trả 3800000
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q03/04; Q-13; E6-CG-04/05/07.</p>
-<h3>AC-E7-005-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-005-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given context giá UNKNOWN hoặc số tính tiền không có căn cứ
 When tính chính thức
 Then ERR-FIN-422-01; chưa xác định, không điền 0
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q03/04; Q-13; E6-CG-04/05/07.</p>
-<h3>AC-E7-005-3 — Biên / an toàn</h3>
+<h3>AC-E7-005-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given giá hiện tại đổi 42000 sau order
 When tính lại cùng snapshot
 Then vẫn dùng giá chụp 40000
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q03/04; Q-13; E6-CG-04/05/07.</p>
 <h2>US-FIN-006 / FR-FIN-VIEW-001</h2>
-<h3>AC-E7-006-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-006-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given hai bản tính synthetic hợp lệ trong scope
 When lọc khách/ngày
 Then trả đúng tập và nguồn số tính tiền/giá chụp
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q04/08; E6-CG-08.</p>
-<h3>AC-E7-006-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-006-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given khách ngoài scope
 When tra cứu
 Then ERR-E7-404-01; không lộ tên hoặc tổng
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q04/08; E6-CG-08.</p>
-<h3>AC-E7-006-3 — Biên / an toàn</h3>
+<h3>AC-E7-006-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given khoảng ngày không có dữ liệu
 When tra cứu
 Then trả danh sách rỗng, không tạo calculation qua GET
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q04/08; E6-CG-08.</p>
 <h2>US-FIN-007 / FR-FIN-REC-001</h2>
-<h3>AC-E7-007-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-007-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given synthetic tập doanh thu tháng có nguồn hợp lệ
 When lập kỳ
 Then kỳ nháp giữ tập nguồn và tổng, chưa tự thống nhất
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; Q-13; E6-CG-08.</p>
-<h3>AC-E7-007-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-007-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given fromDate sau toDate
 When lập kỳ
 Then ERR-FIN-422-02; không tạo kỳ
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; Q-13; E6-CG-08.</p>
-<h3>AC-E7-007-3 — Biên / an toàn</h3>
+<h3>AC-E7-007-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given có phiếu chưa được khách xác nhận
 When chuẩn bị chốt kỳ
 Then BLOCKED Q-13; dòng chờ không bị bỏ qua
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; Q-13; E6-CG-08.</p>
 <h2>US-FIN-008 / FR-FIN-AGRE-001</h2>
-<h3>AC-E7-008-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-008-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given kỳ synthetic đủ nguồn và biên bản khách khớp revision
 When ghi thống nhất
 Then lưu evidence/revision; số đã thu không đổi
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; Q-13; E6-CG-01/08.</p>
-<h3>AC-E7-008-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-008-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given tổng biên bản khác tổng kỳ
 When ghi thống nhất
 Then ERR-FIN-422-02; giữ chưa thống nhất
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; Q-13; E6-CG-01/08.</p>
-<h3>AC-E7-008-3 — Biên / an toàn</h3>
+<h3>AC-E7-008-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given nguồn kỳ thay khi khách đang xác nhận
 When ghi theo bản cũ
 Then ERR-E7-409-01; không áp bằng chứng cũ cho bản mới
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; Q-13; E6-CG-01/08.</p>
 <h2>US-FIN-009 / FR-FIN-RCPT-001</h2>
-<h3>AC-E7-009-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-009-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given kỳ mở synthetic phải trả 4000000, chứng từ thu 1000000 hợp lệ
 When ghi thu 1000000
 Then đã thu 1000000, còn 3000000; phải trả gốc không đổi
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q06; E7-Q05 về thu sau khóa.</p>
-<h3>AC-E7-009-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-009-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given tiền thu -1
 When ghi thu
 Then ERR-FIN-422-03; không tạo khoản thu
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q06; E7-Q05 về thu sau khóa.</p>
-<h3>AC-E7-009-3 — Biên / an toàn</h3>
+<h3>AC-E7-009-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given mất phản hồi lệnh thu
 When định gửi thao tác mới
 Then hiện chưa rõ kết quả, đối chiếu chứng từ; replay BLOCKED E7-Q08
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q06; E7-Q05 về thu sau khóa.</p>
 <h2>US-FIN-010 / FR-FIN-LOCK-001</h2>
-<h3>AC-E7-010-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-010-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given kỳ synthetic đã thống nhất và đủ điều kiện khóa giả định được duyệt
 When khóa kỳ
 Then snapshot giữ nguyên, mọi sửa số bị chặn
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; Q-13.</p>
-<h3>AC-E7-010-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-010-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given còn nguồn chưa xác định
 When khóa kỳ
 Then ERR-FIN-422-02; không khóa
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; Q-13.</p>
-<h3>AC-E7-010-3 — Biên / an toàn</h3>
+<h3>AC-E7-010-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given hai lệnh khóa cùng version
 When ghi cạnh tranh
 Then một chuyển trạng thái; lệnh còn lại ERR-E7-409-01
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; Q-13.</p>
 <h2>US-FIN-011 / FR-FIN-RREQ-001</h2>
-<h3>AC-E7-011-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-011-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given kỳ synthetic khóa, lý do hợp lệ và bằng chứng
 When gửi đề nghị
 Then yêu cầu chờ; số liệu kỳ vẫn khóa
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; O-06 về ủy quyền giữ mở.</p>
-<h3>AC-E7-011-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-011-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given lý do dưới 10 ký tự
 When gửi đề nghị
 Then ERR-FIN-422-02; không lưu
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; O-06 về ủy quyền giữ mở.</p>
-<h3>AC-E7-011-3 — Biên / an toàn</h3>
+<h3>AC-E7-011-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given đề nghị chưa duyệt
 When sửa doanh thu kỳ
 Then ERR-FIN-409-02; chờ không là mở
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; O-06 về ủy quyền giữ mở.</p>
 <h2>US-FIN-012 / FR-FIN-RDEC-001</h2>
-<h3>AC-E7-012-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-012-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given Giám đốc synthetic khác người lập/sửa cuối, yêu cầu hợp lệ
 When duyệt đúng version
 Then kỳ REOPENED, snapshot khóa cũ còn nguyên
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q05; O-06 không tự cấp người thay.</p>
-<h3>AC-E7-012-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-012-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given người duyệt là người lập hoặc không phải Giám đốc
 When duyệt
 Then ERR-E7-403-01; kỳ vẫn khóa
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; O-06 không tự cấp người thay.</p>
-<h3>AC-E7-012-3 — Biên / an toàn</h3>
+<h3>AC-E7-012-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given Giám đốc chọn từ chối
 When ghi quyết định
 Then yêu cầu từ chối, kỳ LOCKED, số liệu không đổi
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q05; O-06 không tự cấp người thay.</p>
 <h2>US-FIN-013 / FR-FIN-MISA-001</h2>
-<h3>AC-E7-013-1 — Thành công có điều kiện</h3>
+<h3>AC-E7-013-1: Thành công có điều kiện</h3>
 <pre><code class="language-gherkin">Given kỳ synthetic hợp lệ, mẫu nhập/mapping MISA đã duyệt trong môi trường thử
 When xuất và thử nhập MISA
 Then file được nhận; lưu evidence nhập, không ghi đã thu
 </code></pre>
 <p>Trạng thái kiểm: BLOCKED. Gate happy path: E7-Q07/08; E7-Q05 về kỳ được phép xuất.</p>
-<h3>AC-E7-013-2 — Lỗi nghiệp vụ</h3>
+<h3>AC-E7-013-2: Lỗi nghiệp vụ</h3>
 <pre><code class="language-gherkin">Given chưa có mẫu chính thức
 When yêu cầu xuất
 Then ERR-FIN-422-04; không file/cột giả
 </code></pre>
 <p>Trạng thái kiểm: NOT RUN. Gate happy path: E7-Q07/08; E7-Q05 về kỳ được phép xuất.</p>
-<h3>AC-E7-013-3 — Biên / an toàn</h3>
+<h3>AC-E7-013-3: Biên / an toàn</h3>
 <pre><code class="language-gherkin">Given kỳ đã mở lại sau xuất
 When xem file cũ
 Then hiện revision cũ và cần rà lại, không sửa bytes cũ hoặc coi hiện hành

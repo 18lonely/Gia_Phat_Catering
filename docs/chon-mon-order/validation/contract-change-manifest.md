@@ -2,7 +2,7 @@
 
 So hash trước/sau với contract-baseline-sha256.json; bao gồm artifact sinh lại, không tính là số tính năng mới.
 
-## File mới — 9
+## File mới: 9
 
 - `docs/chon-mon-order/api/delta-contract-review.md`
 - `docs/chon-mon-order/review/contract-handoff.md`
@@ -14,7 +14,7 @@ So hash trước/sau với contract-baseline-sha256.json; bao gồm artifact sin
 - `docs/chon-mon-order/validation/contract-check-result.json`
 - `docs/chon-mon-order/validation/contract-report.md`
 
-## File thay đổi — 15
+## File thay đổi: 15
 
 - `docs/chon-mon-order/api/api-spec.md`
 - `docs/chon-mon-order/api/data-mapping.md`

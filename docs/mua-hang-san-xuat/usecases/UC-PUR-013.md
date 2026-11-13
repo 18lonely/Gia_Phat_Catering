@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-013-MD
-title: UC-PUR-013 — Lập ứng viên món thay thế
+title: "UC-PUR-013: Lập ứng viên món thay thế"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-013 — Lập ứng viên món thay thế
+# UC-PUR-013: Lập ứng viên món thay thế
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Đổi món MAIN sang SOUP: Chặn khác vai trò, không tạo thay thế hợp lệ (ERR-PUR-422-23).
-- Bước 4 — Món có tên giống nhưng vai trò khác: So mã vai trò, không so chuỗi tên món.
-- Bước 4 — thiếu policy/nguồn tại E11-Q12/15; O-02: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Đổi món MAIN sang SOUP: Chặn khác vai trò, không tạo thay thế hợp lệ (ERR-PUR-422-23).
+- Bước 4: Món có tên giống nhưng vai trò khác: So mã vai trò, không so chuỗi tên món.
+- Bước 4: thiếu policy/nguồn tại E11-Q12/15; O-02: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

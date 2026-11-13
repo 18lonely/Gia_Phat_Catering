@@ -78,8 +78,8 @@ Allowlist này là đề xuất contract, không xác nhận công cụ hiện h
 
 Review người thật không đồng nghĩa ghi nghiệp vụ. Muốn chuyển sang E2/E10/E11 phải đi quy trình nguồn riêng sau các gate, chưa đặc tả adapter apply.
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E12-Q18 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E12-Q18: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

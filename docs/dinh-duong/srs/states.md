@@ -1,15 +1,15 @@
 ---
 id: DOC-DINH-DUONG-SRS-STATES
-title: Trạng thái — Dinh dưỡng
+title: "Trạng thái: Dinh dưỡng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Trạng thái — Dinh dưỡng
+# Trạng thái: Dinh dưỡng
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

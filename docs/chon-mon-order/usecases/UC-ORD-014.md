@@ -1,13 +1,13 @@
 ---
 id: DOC-E6-USECASES-UC-ORD-014
-title: UC-ORD-014 — Nhắc người chưa chọn
+title: "UC-ORD-014: Nhắc người chưa chọn"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-ORD-014 — Nhắc người chưa chọn
+# UC-ORD-014: Nhắc người chưa chọn
 
 **Draft để review · cập nhật 12/11/2026 · Chưa duyệt nghiệp vụ, chưa triển khai backend/UAT.**
 
@@ -18,7 +18,7 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 | 0.2.0 | 2026-11-11 | Bổ sung chi tiết E6, giữ gate và mã gốc |
 | 0.2.1 | 2026-11-12 | Phân biệt đọc, ghi, worker và gate theo catalog; giữ policy mở |
 
-- **ID / mức:** UC-ORD-014 / Sea — mục tiêu nghiệp vụ.
+- **ID / mức:** UC-ORD-014 / Sea (mục tiêu nghiệp vụ).
 - **Truy vết:** FEAT-043 / P1; FR-ORD-REM-001; US-E6-014; PORT-REM, API-ORD-023; UI-ORD-09.
 - **Actor chính:** Scheduler khởi tạo lịch nhắc; service/worker có scope thực hiện PORT-REM. Người vận hành có quyền chỉ đọc ReminderRun trên UI-ORD-09 qua API-ORD-023.
 - **Bên quan tâm:** người ăn cần giữ đúng lựa chọn; người đặt tổng cần số suất giải thích được; bếp cần nguồn phiên bản; BA cần không che điểm mở.
@@ -37,12 +37,12 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 
 ## Nhánh rẽ và ngoại lệ
 
-- **2a — đầu vào/quyền nghiệp vụ:** Given Q-14 chưa chốt hoặc thiếu cấu hình kênh; When job nhắc chạy; Then BLOCKED_CONFIGURATION; không gọi SMS/Zalo/email.
-- **3a — biên/đồng thời:** Given event nhắc đã thành công; When worker nhận lại eventId; Then không gửi lần hai; đối soát kết quả không tạo thông báo trùng.
-- **3b — quyền/eligibility đổi:** worker kiểm lại trước gửi và không gửi người ngoài phạm vi; người vận hành đọc lịch sử cũng phải qua kiểm quyền HTTP riêng.
-- **4a — mất phản hồi worker/provider:** đối soát eventId/kết quả gửi trước retry để tránh trùng; không tự đổi eventId hoặc coi GET reminder-runs là lệnh gửi lại. Retry/retention còn Q-14/E1-Q04.
-- **4b — nguồn người nhận đổi:** kiểm lại eligibility trước gửi; không dùng template stale-write409 hoặc yêu cầu người dùng gửi version cho PORT-REM.
-- **4c — thiếu cấu hình/phụ thuộc gián đoạn:** phân biệt BLOCKED_CONFIGURATION với kết quả gửi chưa xác định; không tự báo SENT hoặc giả rollback provider. HTTP503 chỉ áp dụng route HTTP theo ma trận lỗi.
+- **2a. Đầu vào/quyền nghiệp vụ:** Given Q-14 chưa chốt hoặc thiếu cấu hình kênh; When job nhắc chạy; Then BLOCKED_CONFIGURATION; không gọi SMS/Zalo/email.
+- **3a. Biên/đồng thời:** Given event nhắc đã thành công; When worker nhận lại eventId; Then không gửi lần hai; đối soát kết quả không tạo thông báo trùng.
+- **3b. Quyền/eligibility đổi:** worker kiểm lại trước gửi và không gửi người ngoài phạm vi; người vận hành đọc lịch sử cũng phải qua kiểm quyền HTTP riêng.
+- **4a. Mất phản hồi worker/provider:** đối soát eventId/kết quả gửi trước retry để tránh trùng; không tự đổi eventId hoặc coi GET reminder-runs là lệnh gửi lại. Retry/retention còn Q-14/E1-Q04.
+- **4b. Nguồn người nhận đổi:** kiểm lại eligibility trước gửi; không dùng template stale-write409 hoặc yêu cầu người dùng gửi version cho PORT-REM.
+- **4c. Thiếu cấu hình/phụ thuộc gián đoạn:** phân biệt BLOCKED_CONFIGURATION với kết quả gửi chưa xác định; không tự báo SENT hoặc giả rollback provider. HTTP503 chỉ áp dụng route HTTP theo ma trận lỗi.
 
 ## Quy tắc, dữ liệu và kiểm thử
 
@@ -54,6 +54,6 @@ Dữ liệu: notifications; delta outbox/dedupe. Bộ ba AC: AC-E6-014-1, AC-E6-
 
 API-ORD-023 là GET: actor có quyền yêu cầu query/path theo catalog, kiểm lại quyền/scope mỗi lần. Kết quả là dữ liệu đọc, không tạo receipt, commit nghiệp vụ hoặc tăng version; không dùng Idempotency-Key. Mất phản hồi có thể đọc lại, không tự chốt số lần/giãn cách retry. Nguồn đổi được trình bày theo version/nguồn trả về; không mặc định lỗi stale-write 409 chỉ vì đọc lại. Timeout không được giả thành danh sách rỗng hoặc dữ liệu đã đủ.
 
-## Kết quả rà UC — 12/11/2026
+## Kết quả rà UC ngày 12/11/2026
 
 Đối chiếu [ma trận rà 19 UC](../review/uc-operation-review.md). Gap liên quan: E6-CG-12 tại [sổ gap chung](../review/contract-gap-register.md); DOCUMENT_CLARIFIED, chưa đóng gap. Mã FR/US/AC/TC và trạng thái test giữ nguyên.

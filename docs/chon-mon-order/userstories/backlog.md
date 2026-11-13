@@ -9,7 +9,7 @@ last_updated: 2026-11-12
 ---
 # Backlog capability E6
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -39,10 +39,10 @@ Story point chưa ước lượng; mỗi dòng dưới là capability story chư
 | US-E6-018 | FEAT-047; FR-NUTR-REC-001 | Là người ăn có tài khoản, tôi muốn thấy cổng GATE-047 chưa mở; không thu hồ sơ hoặc chạy thuật toán gợi ý. | O-03 |
 | US-E6-019 | FEAT-048; FR-PLAN-MEAL-001 | Là bếp trưởng/quản lý cơ sở, tôi muốn GET kế hoạch/revision do worker chuẩn bị; đọc không build/publish/ack/start-production. | ORD-Q10 |
 
-## Bổ sung 0.2.0 — điều kiện review
+## Bổ sung 0.2.0: điều kiện review
 
 19 mã story trên được giữ để không phá truy vết. [57 AC](acceptance-criteria.md), [19 UC](../srs/usecase-diagram.md), [RTM đầy đủ liên kết](../test/traceability.md) và [57 ca bổ sung](../test/review-test-cases.md) thay nhận định “chỉ có AC chọn/chốt”. Nội dung chi tiết mỗi story nằm ở UC/AC tương ứng số thứ tự; chưa story point hay nhãn sprint-ready. Story 017/018 chỉ đặc tả gate, chưa có happy path sức khỏe được duyệt.
 
 Definition of Ready đề xuất: có người duyệt và nguồn quyết định cho các gate tác động; chốt API/data delta; fixture/expected được QA review; policy deadline/identity/version rõ. Definition of Done phần mềm phải gồm build, security/load test, evidence và pilot theo roadmap; tài liệu này không đạt thay phần mềm.
 
-Làm rõ 12/11/2026 — DOCUMENT_CLARIFIED: grant phạm vi A trong ví dụ synthetic chỉ là scope yêu cầu, không chốt một/nhiều công ty. GET không retry bằng Idempotency-Key. Căn cứ [ma trận UC](../review/uc-operation-review.md), [catalog](../api/endpoint-catalog.json), SRS và AC/TC cùng số; không đổi mã story/gate hoặc tạo capability mới.
+Làm rõ 12/11/2026: DOCUMENT_CLARIFIED: grant phạm vi A trong ví dụ synthetic chỉ là scope yêu cầu, không chốt một/nhiều công ty. GET không retry bằng Idempotency-Key. Căn cứ [ma trận UC](../review/uc-operation-review.md), [catalog](../api/endpoint-catalog.json), SRS và AC/TC cùng số; không đổi mã story/gate hoặc tạo capability mới.

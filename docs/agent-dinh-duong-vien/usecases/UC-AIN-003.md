@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-003-MD
-title: UC-AIN-003 — Kiểm và xem phương án
+title: "UC-AIN-003: Kiểm và xem phương án"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-003 — Kiểm và xem phương án
+# UC-AIN-003: Kiểm và xem phương án
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-CHK-001 / FEAT-060 / US-AIN-003.
 
 Trigger: Candidate của lượt dựng/chỉnh sẵn sàng để worker kiểm, sau đó khách tra kết quả của lượt đó.
 
-Tiền điều kiện — nghiệp vụ: Có runRef, candidateRevision/hash và phiên bản nguồn; khách có quyền sở hữu lượt chạy.
-Tiền điều kiện — gate còn mở: E9-Q05, E9-Q12, E9-Q13 chặn kết quả nhánh kinh tế, nguồn và adapter; O-03 không mở cá nhân hóa sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có runRef, candidateRevision/hash và phiên bản nguồn; khách có quyền sở hữu lượt chạy.
+Tiền điều kiện (gate còn mở): E9-Q05, E9-Q12, E9-Q13 chặn kết quả nhánh kinh tế, nguồn và adapter; O-03 không mở cá nhân hóa sức khỏe.
 
 Luồng chính:
 1. Worker lấy candidate canonical của run, revision/hash và phiên bản nguồn cần kiểm.

@@ -18,7 +18,7 @@ Nháp · 13/11/2026 · Chưa có quyết định mới.
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 13/11/2026 | BA | Rà XC-01–12 và DEC; giữ câu trả lời trống |
 
-XC-04 — quy ước tài liệu đề xuất, không là contract đã duyệt. Phần kiểu truyền thực tế vẫn BLOCKED theo câu kỹ thuật từng epic.
+XC-04: quy ước tài liệu đề xuất, không là contract đã duyệt. Phần kiểu truyền thực tế vẫn BLOCKED theo câu kỹ thuật từng epic.
 
 | Khái niệm | Cách ghi thống nhất trong tài liệu | Căn cứ |
 | :--- | :--- | :--- |

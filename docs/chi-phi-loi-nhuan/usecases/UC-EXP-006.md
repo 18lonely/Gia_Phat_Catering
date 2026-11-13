@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-006-MD
-title: UC-EXP-006 — Ghi duyệt phương pháp của Giám đốc
+title: "UC-EXP-006: Ghi duyệt phương pháp của Giám đốc"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-006 — Ghi duyệt phương pháp của Giám đốc
+# UC-EXP-006: Ghi duyệt phương pháp của Giám đốc
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: người duyệt cũng là người lập/sửa cuối; khi gửi chấp thuận thì ERR-EXP-403-01; không có quyết định hiệu lực.
-- **4d — biên**: hash nội dung thay đổi từ lúc mở màn duyệt; khi gửi duyệt hash cũ thì ERR-EXP-409-02; yêu cầu đọc lại, không duyệt nhầm bản.
+- **4c. Đặc thù**: người duyệt cũng là người lập/sửa cuối; khi gửi chấp thuận thì ERR-EXP-403-01; không có quyết định hiệu lực.
+- **4d. Biên**: hash nội dung thay đổi từ lúc mở màn duyệt; khi gửi duyệt hash cũ thì ERR-EXP-409-02; yêu cầu đọc lại, không duyệt nhầm bản.
 
 ## Quy tắc và truy vết
 

@@ -1,4 +1,4 @@
-# Bàn giao E6 — sổ gap và hiện diện DTO
+# Bàn giao E6: sổ gap và hiện diện DTO
 
 11/11/2026 · BA draft; tiếp nối [adapter handoff](adapter-handoff.md), không thay snapshot cũ. [Báo cáo/file thay đổi](../validation/dto-report.md) · [Preview](../preview.html).
 

@@ -1,6 +1,6 @@
-# ERD và từ điển dữ liệu — AIO
+# ERD và từ điển dữ liệu (AIO)
 
-Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.0 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -38,22 +38,22 @@ menus.agent_run_id chỉ run áp dụng gần nhất; lịch sử mọi apply tr
 | scope_snapshot | json | Không | not null | Cơ sở yêu cầu, actor/service; không phải grant |
 | input_snapshot | json | Không | not null | GenerateInput hoặc RevisionInput cùng nguồn đã resolve |
 | base_menu_id | bigint | Có | ref: > menus.id | Menu gốc khi sửa |
-| base_version | int | Có | — | Version menu nguồn |
-| candidate_revision | int | Có | — | >=1 khi có candidate |
-| candidate_hash | varchar(64) | Có | — | Hash payload do server tính |
-| candidate_snapshot | json | Có | — | Chỉ populated cho VALID; gồm days/diff; không ghi đè sau terminal |
-| evidence_snapshot | json | Có | — | Rule/cost versions, checkedAt, inputHash, nutrition refs nếu có |
-| outcome | varchar(24) | Có | — | VALID/NEEDS_INPUT/NO_SOLUTION/BLOCKED_DATA/TIMEOUT/DEPENDENCY_ERROR |
-| questions | json | Có | — | Câu hỏi và blocking reasons có mã; không lưu secret |
+| base_version | int | Có | Không áp dụng | Version menu nguồn |
+| candidate_revision | int | Có | Không áp dụng | >=1 khi có candidate |
+| candidate_hash | varchar(64) | Có | Không áp dụng | Hash payload do server tính |
+| candidate_snapshot | json | Có | Không áp dụng | Chỉ populated cho VALID; gồm days/diff; không ghi đè sau terminal |
+| evidence_snapshot | json | Có | Không áp dụng | Rule/cost versions, checkedAt, inputHash, nutrition refs nếu có |
+| outcome | varchar(24) | Có | Không áp dụng | VALID/NEEDS_INPUT/NO_SOLUTION/BLOCKED_DATA/TIMEOUT/DEPENDENCY_ERROR |
+| questions | json | Có | Không áp dụng | Câu hỏi và blocking reasons có mã; không lưu secret |
 | deadline_at | datetime(3) | Không | not null | acceptedAt+60 giây |
-| model_code | varchar(120) | Có | — | Chưa chọn model thì null |
-| prompt_version | varchar(40) | Có | — | Phiên bản prompt được dùng |
+| model_code | varchar(120) | Có | Không áp dụng | Chưa chọn model thì null |
+| prompt_version | varchar(40) | Có | Không áp dụng | Phiên bản prompt được dùng |
 | usage_status | varchar(16) | Không | not null, default: 'UNKNOWN' | UNKNOWN/ESTIMATED/CONFIRMED |
 | applied_menu_id | bigint | Có | ref: > menus.id | Null trước apply |
-| applied_menu_version | int | Có | — | Menu version kết quả để replay |
-| application_key | varchar(128) | Có | — | Key apply; một run chỉ một apply |
-| application_hash | varchar(64) | Có | — | Hash ApplyInput |
-| applied_at | datetime(3) | Có | — | UTC commit apply |
+| applied_menu_version | int | Có | Không áp dụng | Menu version kết quả để replay |
+| application_key | varchar(128) | Có | Không áp dụng | Key apply; một run chỉ một apply |
+| application_hash | varchar(64) | Có | Không áp dụng | Hash ApplyInput |
+| applied_at | datetime(3) | Có | Không áp dụng | UTC commit apply |
 
 Unique/index: `(actor_id, request_route, request_key) [unique]`.
 
@@ -67,11 +67,11 @@ Unique/index: `(actor_id, request_route, request_key) [unique]`.
 | tool_name | varchar(80) | Không | not null | Allowlist tool hoặc lifecycle event |
 | status | varchar(24) | Không | not null | STARTED/SUCCEEDED/FAILED/IGNORED; lifecycle có QUEUED/RUNNING/DONE/REJECTED |
 | request_id | varchar(64) | Không | not null | Correlation id |
-| argument_hash | varchar(64) | Có | — | Hash input đã chuẩn hóa |
-| result_hash | varchar(64) | Có | — | Hash output |
+| argument_hash | varchar(64) | Có | Không áp dụng | Hash input đã chuẩn hóa |
+| result_hash | varchar(64) | Có | Không áp dụng | Hash output |
 | safe_summary | json | Không | not null | Chi tiết đã lọc: args/result lỗi, không token; quyền lọc lại khi đọc |
 | started_at | datetime(3) | Không | not null | UTC |
-| finished_at | datetime(3) | Có | — | Null khi đang gọi |
+| finished_at | datetime(3) | Có | Không áp dụng | Null khi đang gọi |
 
 Unique/index: `(run_id, seq) [unique]`.
 

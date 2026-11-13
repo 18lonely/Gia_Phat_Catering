@@ -1,6 +1,6 @@
 ---
 id: DOC-GIA-PHAT-PROGRESS-STATUS-2026-11-12
-title: Rà tiến độ tài liệu BA Gia Phát — 12/11/2026
+title: Rà tiến độ tài liệu BA Gia Phát ngày 12/11/2026
 version: 0.1.0
 phase: Review
 domain: Gia Phát
@@ -9,7 +9,7 @@ depends_on: [DOC-PRD-GIA-PHAT]
 author: BA
 last_updated: 2026-11-12
 ---
-# Rà tiến độ tài liệu BA Gia Phát — 12/11/2026
+# Rà tiến độ tài liệu BA Gia Phát ngày 12/11/2026
 
 Nháp · Chỉ đo hồ sơ tài liệu, không đo phần mềm. Nguồn số liệu: [OVERVIEW](../../OVERVIEW.md), [dashboard](../../project-dashboard.md), handoff và báo cáo kiểm của từng epic, [PRD](../01-prd.md), [roadmap](../02-roadmap.md). Không sửa file nào trong số này.
 
@@ -19,7 +19,7 @@ Nháp · Chỉ đo hồ sơ tài liệu, không đo phần mềm. Nguồn số l
 | :--- | :--- | :--- |
 | Tổng feature theo PRD | 78 | FEAT-001 → FEAT-088 |
 | Feature có thiết kế tài liệu nháp | **60 / 78 ≈ 76,9 %** | E1–E5: 23 · E6: 17 · E7: 5 · E8: 6 · E9: 5 · E10: 4 |
-| Feature chỉ đặc tả cổng chặn (gate-only) | 3 | FEAT-046, FEAT-047, FEAT-063 — chờ O-03, không tính vào độ phủ |
+| Feature chỉ đặc tả cổng chặn (gate-only) | 3 | FEAT-046, FEAT-047, FEAT-063: chờ O-03, không tính vào độ phủ |
 | Feature chưa mở tài liệu | **15** | E11: FEAT-074–078 (5) · E12: FEAT-079–087 (9) · E13: FEAT-088 (1) |
 | Feature được stakeholder phê duyệt | 0 | Toàn bộ là nháp có điều kiện |
 | Ca kiểm thử sản phẩm đã chạy | 0 | Mọi ca NOT RUN hoặc BLOCKED |
@@ -44,9 +44,9 @@ Ký hiệu: ✔ có tài liệu nháp · ◐ có một phần / có điều ki�
 | E8 Website công khai | 6 | 12 · 12 · 12 | 36 + 12 hệ thống | 16 HTTP + 1 port | 9 | ✔ | ◐ | ✔ | ✘ | ✘ |
 | E9 Agent dinh dưỡng viên | 5 + 1 gate | 13 · 13 · 13 | 39 + 13 hệ thống | 11 HTTP + 4 port | 7 | ✔ | ◐ | ✔ | ✘ | ✘ |
 | E10 CRM bán hàng | 4 | 16 · 16 · 16 | 48 + 10 hệ thống | 23 HTTP + 7 port | 9 | ✔ | ◐ | ✔ | ✘ | ✘ |
-| E11 Mua hàng & sản xuất | 5 | — | — | — | — | ✘ | ✘ | ✘ | ✘ | ✘ |
-| E12 Phản hồi & báo cáo | 9 | — | — | — | — | ✘ | ✘ | ✘ | ✘ | ✘ |
-| E13 Chi phí & lợi nhuận | 1 | — | — | — | — | ✘ | ✘ | ✘ | ✘ | ✘ |
+| E11 Mua hàng & sản xuất | 5 | Chưa có | Chưa có | Chưa có | Chưa có | ✘ | ✘ | ✘ | ✘ | ✘ |
+| E12 Phản hồi & báo cáo | 9 | Chưa có | Chưa có | Chưa có | Chưa có | ✘ | ✘ | ✘ | ✘ | ✘ |
+| E13 Chi phí & lợi nhuận | 1 | Chưa có | Chưa có | Chưa có | Chưa có | ✘ | ✘ | ✘ | ✘ | ✘ |
 
 Các bộ ca hệ thống/invariant có overlap với ca chức năng nên không cộng dồn thành tỷ lệ nghiệm thu. Số liệu E6–E10 lấy từ handoff/báo cáo kiểm của từng gói; E1–E5 lấy từ [dashboard](../../project-dashboard.md).
 

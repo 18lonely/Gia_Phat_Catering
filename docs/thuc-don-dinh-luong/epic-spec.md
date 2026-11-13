@@ -1,4 +1,4 @@
-# Đặc tả Epic E2 — Thực đơn & Định lượng
+# Đặc tả Epic E2: Thực đơn & Định lượng
 
 ## Metadata
 
@@ -30,9 +30,9 @@ Epic này tạo ra **dữ liệu gốc** mà mọi epic sau đứng trên: cost 
 
 | Mục tiêu (PRD) | Epic này đóng góp |
 | :--- | :--- |
-| KR2.1 — 100% thực đơn công bố không vi phạm quy tắc cứng | Trực tiếp: bộ kiểm quy tắc và cổng duyệt |
-| KR2.2 — giảm ≥ 50% thời gian dựng thực đơn | Một phần: kiểm tự động thay cho rà tay; phần còn lại ở E5 |
-| KR1.1 — 100% ngày có cost ≤ 52% | Gián tiếp: cung cấp công thức và định lượng cho E3 |
+| KR2.1: 100% thực đơn công bố không vi phạm quy tắc cứng | Trực tiếp: bộ kiểm quy tắc và cổng duyệt |
+| KR2.2: giảm ≥ 50% thời gian dựng thực đơn | Một phần: kiểm tự động thay cho rà tay; phần còn lại ở E5 |
+| KR1.1: 100% ngày có cost ≤ 52% | Gián tiếp: cung cấp công thức và định lượng cho E3 |
 
 ### 1.3 Người dùng
 
@@ -47,12 +47,12 @@ Epic này tạo ra **dữ liệu gốc** mà mọi epic sau đứng trên: cost 
 
 | Trong epic | Ngoài epic |
 | :--- | :--- |
-| Danh mục nguyên liệu, nhóm nguyên liệu, phương pháp chế biến, chất gây dị ứng | Giá nhập, cost món, cost suất, bảng dự toán — E3 |
-| Món với 12 thuộc tính; cặp món kỵ nhau | 4 chỉ số dinh dưỡng — E4 |
-| Công thức có phiên bản, định lượng min–max | Agent dựng thực đơn — E5 |
-| Giá bán món | Thực đơn riêng theo công ty khách, hiển thị cho khách, chọn món — E6 |
-| Loại suất | Món thay thế khi thiếu hàng (`FEAT-078`) — R11 |
-| Thực đơn tuần, món mặc định mỗi ngày | Mục tiêu dinh dưỡng theo nhóm người ăn — R12 |
+| Danh mục nguyên liệu, nhóm nguyên liệu, phương pháp chế biến, chất gây dị ứng | Giá nhập, cost món, cost suất, bảng dự toán (E3) |
+| Món với 12 thuộc tính; cặp món kỵ nhau | 4 chỉ số dinh dưỡng (E4) |
+| Công thức có phiên bản, định lượng min–max | Agent dựng thực đơn (E5) |
+| Giá bán món | Thực đơn riêng theo công ty khách, hiển thị cho khách, chọn món (E6) |
+| Loại suất | Món thay thế khi thiếu hàng (`FEAT-078`) (R11) |
+| Thực đơn tuần, món mặc định mỗi ngày | Mục tiêu dinh dưỡng theo nhóm người ăn (R12) |
 | Bộ kiểm quy tắc thực đơn | |
 | Duyệt và công bố | |
 | Nhập dữ liệu gốc từ bảng tính | |
@@ -67,7 +67,7 @@ Bảng `menus` có cột `customer_id` từ đầu, nhưng trong R2 chỉ dùng 
 
 Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết ở SRS của epic.
 
-#### `FEAT-006` Danh mục nguyên liệu — nhóm FR `FR-MENU-ING`
+#### `FEAT-006` Danh mục nguyên liệu: nhóm FR `FR-MENU-ING`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -78,7 +78,7 @@ Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết 
 | CAP-ING-05 | Khai mùa vụ của rau | P1 | `BR-MENU-018` |
 | CAP-ING-06 | Không cho huỷ nguyên liệu đang nằm trong công thức hiệu lực | P0 | `ERR-SYS-409-01` |
 
-#### `FEAT-007` Danh mục món — nhóm FR `FR-MENU-DISH`
+#### `FEAT-007` Danh mục món: nhóm FR `FR-MENU-DISH`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -90,29 +90,29 @@ Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết 
 | CAP-DISH-06 | Duyệt món: người duyệt khác người tạo; chỉ món `ACTIVE` vào được thực đơn | P0 | `BR-SEC-008` |
 | CAP-DISH-07 | Không cho gắn cờ Healthy nếu phương pháp chế biến không thuộc danh sách ít dầu mỡ | P0 | `BR-MENU-003` |
 | CAP-DISH-08 | Ảnh món | P1 | Dùng cho website và cổng khách |
-| CAP-DISH-09 | Tìm và lọc món theo vai trò, nhóm nguyên liệu, phương pháp, trạng thái | P0 | — |
+| CAP-DISH-09 | Tìm và lọc món theo vai trò, nhóm nguyên liệu, phương pháp, trạng thái | P0 | Không có |
 
-#### `FEAT-008` Công thức có phiên bản — nhóm FR `FR-MENU-RCP`
+#### `FEAT-008` Công thức có phiên bản: nhóm FR `FR-MENU-RCP`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
 | CAP-RCP-01 | Tạo công thức: danh sách nguyên liệu, đánh dấu nguyên liệu chính, định lượng sống tối thiểu – tối đa – chuẩn | P0 | Docx ghi khoảng, ví dụ 65–70g |
 | CAP-RCP-02 | Duyệt công thức; công thức `ACTIVE` không sửa được | P0 | `BR-SEC-008` |
 | CAP-RCP-03 | Tạo phiên bản mới từ phiên bản đang hiệu lực, có ngày hiệu lực | P0 | Phiên bản cũ chuyển `SUPERSEDED` |
-| CAP-RCP-04 | So sánh hai phiên bản | P1 | — |
+| CAP-RCP-04 | So sánh hai phiên bản | P1 | Không có |
 | CAP-RCP-05 | Kiểm định lượng nguyên liệu chính nằm trong khoảng chuẩn và chất độn không vượt mức | P0 | `BR-COST-008`, `009` |
 | CAP-RCP-06 | Nhiều cỡ định lượng cho một món | Chưa xếp | Phụ thuộc [O-02]; mô hình dữ liệu đã chừa cột `portion_code` |
-| CAP-RCP-07 | Món `ACTIVE` phải có ít nhất 1 công thức `ACTIVE` | P0 | — |
+| CAP-RCP-07 | Món `ACTIVE` phải có ít nhất 1 công thức `ACTIVE` | P0 | Không có |
 
-#### `FEAT-010` Giá bán món — nhóm FR `FR-MENU-PRC`
+#### `FEAT-010` Giá bán món: nhóm FR `FR-MENU-PRC`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
 | CAP-PRC-01 | Đặt giá bán cho món, có ngày hiệu lực; giá đã gồm VAT | P0 | [D-15], [D-18] |
-| CAP-PRC-02 | Duyệt giá; giá đã hiệu lực không sửa, chỉ thêm giá mới | P0 | — |
-| CAP-PRC-03 | Xem lịch sử giá của một món | P1 | — |
+| CAP-PRC-02 | Duyệt giá; giá đã hiệu lực không sửa, chỉ thêm giá mới | P0 | Không có |
+| CAP-PRC-03 | Xem lịch sử giá của một món | P1 | Không có |
 
-#### `FEAT-009` Loại suất — nhóm FR `FR-MENU-MTY`
+#### `FEAT-009` Loại suất: nhóm FR `FR-MENU-MTY`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -120,7 +120,7 @@ Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết 
 | CAP-MTY-02 | Đánh dấu loại suất công khai | P1 | Dùng ở E8 |
 | CAP-MTY-03 | Không cho sửa cơ cấu loại suất đã có thực đơn công bố; phải tạo loại suất mới | P0 | Tránh làm sai thực đơn đã duyệt |
 
-#### `FEAT-011` Thực đơn kỳ — nhóm FR `FR-MENU-MNU`
+#### `FEAT-011` Thực đơn kỳ: nhóm FR `FR-MENU-MNU`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
@@ -128,20 +128,20 @@ Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết 
 | CAP-MNU-02 | Xếp món vào từng ngày theo vị trí: món chính, món phụ, rau, canh | P0 | Số ô theo cấu hình loại suất |
 | CAP-MNU-03 | Chọn món mặc định cho từng ngày trong các món chính | P0 | [D-14] |
 | CAP-MNU-04 | Kiểm tổng giá bán của mọi tổ hợp món chính + phụ + rau + canh không vượt ngưỡng giá của loại suất | P0 | `BR-COST-012`; chi tiết: [E2-Q1] |
-| CAP-MNU-05 | Sao chép thực đơn từ một tuần trước làm bản nháp | P1 | — |
+| CAP-MNU-05 | Sao chép thực đơn từ một tuần trước làm bản nháp | P1 | Không có |
 | CAP-MNU-06 | Xem lịch sử món đã dùng 4 tuần gần nhất khi đang dựng | P1 | Hỗ trợ tránh lặp |
-| CAP-MNU-07 | Chọn ngày phục vụ trong tuần (bỏ ngày nghỉ) | P0 | — |
-| CAP-MNU-08 | In hoặc xuất thực đơn tuần | P1 | — |
+| CAP-MNU-07 | Chọn ngày phục vụ trong tuần (bỏ ngày nghỉ) | P0 | Không có |
+| CAP-MNU-08 | In hoặc xuất thực đơn tuần | P1 | Không có |
 
-#### `FEAT-012` Bộ kiểm quy tắc — nhóm FR `FR-MENU-RUL`
+#### `FEAT-012` Bộ kiểm quy tắc: nhóm FR `FR-MENU-RUL`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
-| CAP-RUL-01 | Chạy toàn bộ quy tắc đang áp dụng mỗi khi thực đơn nháp thay đổi; kết quả hiện trong ≤ 2 giây | P0 | — |
-| CAP-RUL-02 | Quy tắc cứng không đạt → chặn gửi duyệt | P0 | — |
-| CAP-RUL-03 | Quy tắc mềm không đạt → cảnh báo và trừ điểm; hiện điểm tổng trên thang 100 | P0 | — |
+| CAP-RUL-01 | Chạy toàn bộ quy tắc đang áp dụng mỗi khi thực đơn nháp thay đổi; kết quả hiện trong ≤ 2 giây | P0 | Không có |
+| CAP-RUL-02 | Quy tắc cứng không đạt → chặn gửi duyệt | P0 | Không có |
+| CAP-RUL-03 | Quy tắc mềm không đạt → cảnh báo và trừ điểm; hiện điểm tổng trên thang 100 | P0 | Không có |
 | CAP-RUL-04 | Mỗi vi phạm nêu rõ quy tắc nào, ngày nào, món nào | P0 | Ví dụ "Thịt lợn xuất hiện 3 ngày liền: T2, T3, T4" |
-| CAP-RUL-05 | Quy tắc mềm–nặng không đạt phải ghi lý do chấp nhận mới gửi duyệt được | P0 | — |
+| CAP-RUL-05 | Quy tắc mềm–nặng không đạt phải ghi lý do chấp nhận mới gửi duyệt được | P0 | Không có |
 | CAP-RUL-06 | Điểm dưới ngưỡng `QUY_TAC_DIEM_TOI_THIEU` → cần người duyệt thứ hai | P1 | Ngưỡng đề xuất 80 |
 | CAP-RUL-07 | Quản lý danh mục quy tắc: bật/tắt, sửa con số, đổi loại cứng/mềm, có duyệt | P0 | Con số nằm trong dữ liệu, không trong mã |
 | CAP-RUL-08 | Quy tắc "ngày liên tiếp" xét cả ngày cuối của tuần trước | P0 | [E2-Q2] |
@@ -149,19 +149,19 @@ Mỗi năng lực ứng với một nhóm `FR-MENU-[FEATURE]-[SEQ]` sẽ viết 
 
 **Quy tắc chạy trong R2**: 31 quy tắc `BR-MENU` và 4 quy tắc `BR-COST` không cần giá nhập (`008`, `009`, `010`, `012`). 8 quy tắc `BR-COST` còn lại cần giá nhập nên bật ở R3. Con số cuối cùng phụ thuộc kết quả duyệt DL-01.
 
-#### `FEAT-013` Duyệt và công bố — nhóm FR `FR-MENU-APV`
+#### `FEAT-013` Duyệt và công bố: nhóm FR `FR-MENU-APV`
 
 | Mã | Năng lực | Ưu tiên | Ghi chú |
 | :--- | :--- | :---: | :--- |
 | CAP-APV-01 | Gửi duyệt thực đơn; người duyệt khác người tạo và người sửa cuối | P0 | `BR-SEC-008` |
-| CAP-APV-02 | Duyệt hoặc trả lại kèm lý do | P0 | — |
-| CAP-APV-03 | Công bố thực đơn đã duyệt; kết quả kiểm quy tắc đóng băng | P0 | — |
-| CAP-APV-04 | Thu hồi thực đơn đã công bố, bắt buộc lý do | P0 | Ảnh hưởng tới lựa chọn món ở E6 — xử lý ở SRS E6 |
+| CAP-APV-02 | Duyệt hoặc trả lại kèm lý do | P0 | Không có |
+| CAP-APV-03 | Công bố thực đơn đã duyệt; kết quả kiểm quy tắc đóng băng | P0 | Không có |
+| CAP-APV-04 | Thu hồi thực đơn đã công bố, bắt buộc lý do | P0 | Ảnh hưởng tới lựa chọn món ở E6: xử lý ở SRS E6 |
 | CAP-APV-05 | Sửa thực đơn đã công bố: thu hồi → sửa → kiểm → duyệt lại | P0 | Không sửa trực tiếp |
 | CAP-APV-06 | Thông báo cho người duyệt khi có nội dung chờ duyệt, và cho người tạo khi có kết quả | P0 | `FR-SYS-NTF-001` |
 | CAP-APV-07 | Chỗ móc để E3 thêm bước kiểm cost trước khi duyệt | P0 | R2 chưa kiểm cost |
 
-#### Nhập dữ liệu gốc — nhóm FR `FR-MENU-IMP`
+#### Nhập dữ liệu gốc: nhóm FR `FR-MENU-IMP`
 
 Không có trong danh mục PRD nhưng cần để nghiệm thu R2 (roadmap DL-03 → DL-05).
 
@@ -178,7 +178,7 @@ Không có trong danh mục PRD nhưng cần để nghiệm thu R2 (roadmap DL-0
 | Món | `DRAFT` → `PENDING` → `ACTIVE` → `INACTIVE` | Gửi duyệt → duyệt → ngừng dùng. Trả lại: `PENDING` → `DRAFT` |
 | Công thức | `DRAFT` → `PENDING` → `ACTIVE` → `SUPERSEDED` | Phiên bản mới `ACTIVE` làm phiên bản cũ thành `SUPERSEDED` |
 | Giá bán món | `PENDING` → `APPROVED` | Có hiệu lực từ `effective_from` |
-| Loại suất | `DRAFT` → `ACTIVE` → `INACTIVE` | — |
+| Loại suất | `DRAFT` → `ACTIVE` → `INACTIVE` | Không áp dụng |
 | Thực đơn | `DRAFT` → `CHECKED` → `PENDING` → `APPROVED` → `PUBLISHED` → `WITHDRAWN` | `CHECKED` = không còn vi phạm quy tắc cứng. Trả lại: `PENDING` → `DRAFT`. Sửa sau thu hồi: `WITHDRAWN` → `DRAFT` |
 
 Sơ đồ trạng thái đầy đủ viết ở bước `/state`.
@@ -200,11 +200,11 @@ Tiêu chí nghiệm thu của cả R2 theo roadmap: đủ 30 món có đủ thu�
 
 | Phụ thuộc | Loại | Chặn |
 | :--- | :--- | :--- |
-| R1 — tài khoản, phân quyền, nhật ký, tham số, thông báo | Kỹ thuật | Toàn epic |
-| DL-01 — người soạn docx duyệt 43 quy tắc, trả lời H-1 → H-9 | Nghiệp vụ | R2.1 (H-3, H-8), R2.3 (toàn bộ) |
-| DL-03 → DL-05 — danh sách nguyên liệu, 30 món, công thức, giá bán | Dữ liệu | Nghiệm thu R2.1, R2.2 |
-| [O-02] — một hay nhiều cỡ định lượng | Nghiệp vụ | R2.2 |
-| [O-06] — ai duyệt | Nghiệp vụ | R2.4 |
+| R1: tài khoản, phân quyền, nhật ký, tham số, thông báo | Kỹ thuật | Toàn epic |
+| DL-01: người soạn docx duyệt 43 quy tắc, trả lời H-1 → H-9 | Nghiệp vụ | R2.1 (H-3, H-8), R2.3 (toàn bộ) |
+| DL-03 → DL-05: danh sách nguyên liệu, 30 món, công thức, giá bán | Dữ liệu | Nghiệm thu R2.1, R2.2 |
+| [O-02]: một hay nhiều cỡ định lượng | Nghiệp vụ | R2.2 |
+| [O-06]: ai duyệt | Nghiệp vụ | R2.4 |
 
 ### 2.5 Rủi ro của epic
 

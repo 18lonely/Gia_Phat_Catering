@@ -111,7 +111,7 @@ s+='\n'+addition
 schema.write_text(s,encoding='utf-8')
 erd=ROOT/'docs/nen-tang/srs/erd.md';e=erd.read_text(encoding='utf-8').replace('| Phiên bản | 0.3.0 |','| Phiên bản | 0.4.0 |').replace('| 0.3.0 | 2026','| 0.4.0 | 2026-11-11 | BA | Thêm4 bảng thiết kế kế toán và metadata giá mua; giữ thao tác phụ thuộc CK ở trạng thái gated; chưa migration. |\n| 0.3.0 | 2026',1)
 e+='''
-## Bổ sung mô hình kế toán — CR-COST-2026-001
+## Bổ sung mô hình kế toán (CR-COST-2026-001)
 
 Thiết kế nháp được đồng bộ vào DBML v0.4.0; **không phải migration đã chạy**. Tổng61 bảng,15 bảng Cost hiện có và4 bảng mở rộng kế toán liên kết CUS/ORD. [Hợp đồng](../../cost/api/accounting-contract.md), [backlog](../../cost/userstories/accounting-backlog.md), [nhánh mở](../../cost/review/cost-branch-decisions.md).
 
@@ -140,7 +140,7 @@ Orders hiện là một loại suất mỗi điểm/ngày/ca; order_dish_lines l
 
 ### Từ điển dữ liệu bổ sung
 '''
-blocks=[('ingredient_prices — cột bổ sung',s.split('Table ingredient_prices {',1)[1].split('\n}',1)[0])]+re.findall(r'Table (\w+) \{([\s\S]*?)\n\}',addition)
+blocks=[('ingredient_prices: cột bổ sung',s.split('Table ingredient_prices {',1)[1].split('\n}',1)[0])]+re.findall(r'Table (\w+) \{([\s\S]*?)\n\}',addition)
 for name,body in blocks:
     e+=f'\n#### `{name}`\n\n| Cột vật lý | Kiểu | Null? | Khóa / ràng buộc / mặc định | Diễn giải |\n| :--- | :--- | :--- | :--- | :--- |\n'
     for line in body.splitlines():
@@ -150,7 +150,7 @@ for name,body in blocks:
         if name.startswith('ingredient_prices') and field not in ['price_vnd','quoted_unit_price','price_basis','vat_rate_pct','vat_unit_amount','pricing_evidence','pricing_verified_at','pricing_verified_by','normalization_version']:continue
         note=re.search(r"note: '([^']*)'",attrs);desc=note.group(1).replace('|','/') if note else field
         constraints=re.sub(r",? ?note: '[^']*'",'',attrs)
-        e+=f"| {field} | {typ} | {'Không' if 'not null' in attrs or 'pk' in attrs else 'Có'} | {constraints or '—'} | {desc} |\n"
+        e+=f"| {field} | {typ} | {'Không' if 'not null' in attrs or 'pk' in attrs else 'Có'} | {constraints or 'Không áp dụng'} | {desc} |\n"
 erd.write_text(e,encoding='utf-8')
 
 catalog=B/'api/endpoint-catalog.json';a=json.loads(catalog.read_text(encoding='utf-8'));a['version']='0.2.0';a['accountingExtension']='accounting-contract.md';a['types']['PriceInput']='ingredientId:Id!, supplierId:Id!, kitchenId:Id|null!, quotedUnitPrice:Decimal!, priceBasis:INCLUSIVE|EXCLUSIVE|FINAL_CONFIRMED!, vatRatePct:Decimal? hoặc vatUnitAmount:Decimal? (EXCLUSIVE đúng một), pricingEvidence:string(1..1000)!, effectiveFrom:Date!, isReference:boolean!, sourceFileId:Id?, confirmationToken:string?; không nhận priceVnd từ client, server chuẩn hóa; kết quả phải nguyên đồng theo baseline, phần lẻ gate rounding'

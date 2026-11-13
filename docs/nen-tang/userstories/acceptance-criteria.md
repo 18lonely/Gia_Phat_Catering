@@ -9,7 +9,7 @@ last_updated: 2026-11-11
 ---
 # AC E1
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -17,7 +17,7 @@ last_updated: 2026-11-11
 
 Mọi scenario là thiết kế; dữ liệuU1/K1 và thời gian mô phỏng là fixture, không tài khoản thật.
 
-## AC-CORE-001-1 — US-CORE-001
+## AC-CORE-001-1: US-CORE-001
 
 ```gherkin
 Scenario: Đăng nhập nội bộ / 1
@@ -28,7 +28,7 @@ Scenario: Đăng nhập nội bộ / 1
 
 FR-AUTH-LGN-001; NOT RUN.
 
-## AC-CORE-001-2 — US-CORE-001
+## AC-CORE-001-2: US-CORE-001
 
 ```gherkin
 Scenario: Đăng nhập nội bộ / 2
@@ -39,7 +39,7 @@ Scenario: Đăng nhập nội bộ / 2
 
 FR-AUTH-LGN-001; NOT RUN.
 
-## AC-CORE-001-3 — US-CORE-001
+## AC-CORE-001-3: US-CORE-001
 
 ```gherkin
 Scenario: Đăng nhập nội bộ / 3
@@ -50,7 +50,7 @@ Scenario: Đăng nhập nội bộ / 3
 
 FR-AUTH-LGN-001; NOT RUN.
 
-## AC-CORE-002-1 — US-CORE-002
+## AC-CORE-002-1: US-CORE-002
 
 ```gherkin
 Scenario: Làm mới phiên / 1
@@ -61,7 +61,7 @@ Scenario: Làm mới phiên / 1
 
 FR-AUTH-LGN-002; NOT RUN.
 
-## AC-CORE-002-2 — US-CORE-002
+## AC-CORE-002-2: US-CORE-002
 
 ```gherkin
 Scenario: Làm mới phiên / 2
@@ -72,7 +72,7 @@ Scenario: Làm mới phiên / 2
 
 FR-AUTH-LGN-002; NOT RUN.
 
-## AC-CORE-002-3 — US-CORE-002
+## AC-CORE-002-3: US-CORE-002
 
 ```gherkin
 Scenario: Làm mới phiên / 3
@@ -83,18 +83,18 @@ Scenario: Làm mới phiên / 3
 
 FR-AUTH-LGN-002; NOT RUN.
 
-## AC-CORE-003-1 — US-CORE-003
+## AC-CORE-003-1: US-CORE-003
 
 ```gherkin
 Scenario: Đăng xuất / 1
   Given U1 có hai phiên S1/S2
-  When thực hiện đăng xuất với input: —
+  When thực hiện đăng xuất với input: không áp dụng
   Then Thu hồi phiên hiện tại; tuỳ chọn thu hồi mọi phiên của mình. Kết quả: Phiên bị vô hiệu
 ```
 
 FR-AUTH-LGN-003; NOT RUN.
 
-## AC-CORE-003-2 — US-CORE-003
+## AC-CORE-003-2: US-CORE-003
 
 ```gherkin
 Scenario: Đăng xuất / 2
@@ -105,7 +105,7 @@ Scenario: Đăng xuất / 2
 
 FR-AUTH-LGN-003; NOT RUN.
 
-## AC-CORE-003-3 — US-CORE-003
+## AC-CORE-003-3: US-CORE-003
 
 ```gherkin
 Scenario: Đăng xuất / 3
@@ -116,7 +116,7 @@ Scenario: Đăng xuất / 3
 
 FR-AUTH-LGN-003; NOT RUN.
 
-## AC-CORE-004-1 — US-CORE-004
+## AC-CORE-004-1: US-CORE-004
 
 ```gherkin
 Scenario: Xác thực 2 bước / 1
@@ -127,7 +127,7 @@ Scenario: Xác thực 2 bước / 1
 
 FR-AUTH-LGN-004; BLOCKED: N-04, E1-Q03.
 
-## AC-CORE-004-2 — US-CORE-004
+## AC-CORE-004-2: US-CORE-004
 
 ```gherkin
 Scenario: Xác thực 2 bước / 2
@@ -138,7 +138,7 @@ Scenario: Xác thực 2 bước / 2
 
 FR-AUTH-LGN-004; BLOCKED: N-04, E1-Q03.
 
-## AC-CORE-004-3 — US-CORE-004
+## AC-CORE-004-3: US-CORE-004
 
 ```gherkin
 Scenario: Xác thực 2 bước / 3
@@ -149,7 +149,7 @@ Scenario: Xác thực 2 bước / 3
 
 FR-AUTH-LGN-004; BLOCKED: N-04, E1-Q03.
 
-## AC-CORE-005-1 — US-CORE-005
+## AC-CORE-005-1: US-CORE-005
 
 ```gherkin
 Scenario: Đổi mật khẩu / 1
@@ -160,7 +160,7 @@ Scenario: Đổi mật khẩu / 1
 
 FR-AUTH-PWD-001; NOT RUN.
 
-## AC-CORE-005-2 — US-CORE-005
+## AC-CORE-005-2: US-CORE-005
 
 ```gherkin
 Scenario: Đổi mật khẩu / 2
@@ -171,7 +171,7 @@ Scenario: Đổi mật khẩu / 2
 
 FR-AUTH-PWD-001; NOT RUN.
 
-## AC-CORE-005-3 — US-CORE-005
+## AC-CORE-005-3: US-CORE-005
 
 ```gherkin
 Scenario: Đổi mật khẩu / 3
@@ -182,7 +182,7 @@ Scenario: Đổi mật khẩu / 3
 
 FR-AUTH-PWD-001; NOT RUN.
 
-## AC-CORE-006-1 — US-CORE-006
+## AC-CORE-006-1: US-CORE-006
 
 ```gherkin
 Scenario: Cấp lại mật khẩu / 1
@@ -193,7 +193,7 @@ Scenario: Cấp lại mật khẩu / 1
 
 FR-AUTH-PWD-002; NOT RUN.
 
-## AC-CORE-006-2 — US-CORE-006
+## AC-CORE-006-2: US-CORE-006
 
 ```gherkin
 Scenario: Cấp lại mật khẩu / 2
@@ -204,7 +204,7 @@ Scenario: Cấp lại mật khẩu / 2
 
 FR-AUTH-PWD-002; NOT RUN.
 
-## AC-CORE-006-3 — US-CORE-006
+## AC-CORE-006-3: US-CORE-006
 
 ```gherkin
 Scenario: Cấp lại mật khẩu / 3
@@ -215,7 +215,7 @@ Scenario: Cấp lại mật khẩu / 3
 
 FR-AUTH-PWD-002; NOT RUN.
 
-## AC-CORE-007-1 — US-CORE-007
+## AC-CORE-007-1: US-CORE-007
 
 ```gherkin
 Scenario: Tạo tài khoản nội bộ / 1
@@ -226,7 +226,7 @@ Scenario: Tạo tài khoản nội bộ / 1
 
 FR-AUTH-ACC-001; NOT RUN.
 
-## AC-CORE-007-2 — US-CORE-007
+## AC-CORE-007-2: US-CORE-007
 
 ```gherkin
 Scenario: Tạo tài khoản nội bộ / 2
@@ -237,7 +237,7 @@ Scenario: Tạo tài khoản nội bộ / 2
 
 FR-AUTH-ACC-001; NOT RUN.
 
-## AC-CORE-007-3 — US-CORE-007
+## AC-CORE-007-3: US-CORE-007
 
 ```gherkin
 Scenario: Tạo tài khoản nội bộ / 3
@@ -248,7 +248,7 @@ Scenario: Tạo tài khoản nội bộ / 3
 
 FR-AUTH-ACC-001; NOT RUN.
 
-## AC-CORE-008-1 — US-CORE-008
+## AC-CORE-008-1: US-CORE-008
 
 ```gherkin
 Scenario: Khoá / mở khoá tài khoản / 1
@@ -259,7 +259,7 @@ Scenario: Khoá / mở khoá tài khoản / 1
 
 FR-AUTH-ACC-002; NOT RUN.
 
-## AC-CORE-008-2 — US-CORE-008
+## AC-CORE-008-2: US-CORE-008
 
 ```gherkin
 Scenario: Khoá / mở khoá tài khoản / 2
@@ -270,7 +270,7 @@ Scenario: Khoá / mở khoá tài khoản / 2
 
 FR-AUTH-ACC-002; NOT RUN.
 
-## AC-CORE-008-3 — US-CORE-008
+## AC-CORE-008-3: US-CORE-008
 
 ```gherkin
 Scenario: Khoá / mở khoá tài khoản / 3
@@ -281,7 +281,7 @@ Scenario: Khoá / mở khoá tài khoản / 3
 
 FR-AUTH-ACC-002; NOT RUN.
 
-## AC-CORE-009-1 — US-CORE-009
+## AC-CORE-009-1: US-CORE-009
 
 ```gherkin
 Scenario: Sửa vai trò và cơ sở / 1
@@ -292,7 +292,7 @@ Scenario: Sửa vai trò và cơ sở / 1
 
 FR-AUTH-ACC-003; NOT RUN.
 
-## AC-CORE-009-2 — US-CORE-009
+## AC-CORE-009-2: US-CORE-009
 
 ```gherkin
 Scenario: Sửa vai trò và cơ sở / 2
@@ -303,7 +303,7 @@ Scenario: Sửa vai trò và cơ sở / 2
 
 FR-AUTH-ACC-003; NOT RUN.
 
-## AC-CORE-009-3 — US-CORE-009
+## AC-CORE-009-3: US-CORE-009
 
 ```gherkin
 Scenario: Sửa vai trò và cơ sở / 3
@@ -314,7 +314,7 @@ Scenario: Sửa vai trò và cơ sở / 3
 
 FR-AUTH-ACC-003; NOT RUN.
 
-## AC-CORE-010-1 — US-CORE-010
+## AC-CORE-010-1: US-CORE-010
 
 ```gherkin
 Scenario: Xem nhật ký đăng nhập / 1
@@ -325,7 +325,7 @@ Scenario: Xem nhật ký đăng nhập / 1
 
 FR-AUTH-ACC-004; NOT RUN.
 
-## AC-CORE-010-2 — US-CORE-010
+## AC-CORE-010-2: US-CORE-010
 
 ```gherkin
 Scenario: Xem nhật ký đăng nhập / 2
@@ -336,7 +336,7 @@ Scenario: Xem nhật ký đăng nhập / 2
 
 FR-AUTH-ACC-004; NOT RUN.
 
-## AC-CORE-010-3 — US-CORE-010
+## AC-CORE-010-3: US-CORE-010
 
 ```gherkin
 Scenario: Xem nhật ký đăng nhập / 3
@@ -347,7 +347,7 @@ Scenario: Xem nhật ký đăng nhập / 3
 
 FR-AUTH-ACC-004; NOT RUN.
 
-## AC-CORE-011-1 — US-CORE-011
+## AC-CORE-011-1: US-CORE-011
 
 ```gherkin
 Scenario: Kiểm quyền mỗi yêu cầu / 1
@@ -358,7 +358,7 @@ Scenario: Kiểm quyền mỗi yêu cầu / 1
 
 FR-AUTH-RBAC-001; NOT RUN.
 
-## AC-CORE-011-2 — US-CORE-011
+## AC-CORE-011-2: US-CORE-011
 
 ```gherkin
 Scenario: Kiểm quyền mỗi yêu cầu / 2
@@ -369,7 +369,7 @@ Scenario: Kiểm quyền mỗi yêu cầu / 2
 
 FR-AUTH-RBAC-001; NOT RUN.
 
-## AC-CORE-011-3 — US-CORE-011
+## AC-CORE-011-3: US-CORE-011
 
 ```gherkin
 Scenario: Kiểm quyền mỗi yêu cầu / 3
@@ -380,18 +380,18 @@ Scenario: Kiểm quyền mỗi yêu cầu / 3
 
 FR-AUTH-RBAC-001; NOT RUN.
 
-## AC-CORE-012-1 — US-CORE-012
+## AC-CORE-012-1: US-CORE-012
 
 ```gherkin
 Scenario: Xem ma trận vai trò – quyền / 1
   Given Người có quyền xem matrix nội bộ
-  When thực hiện xem ma trận vai trò – quyền với input: —
+  When thực hiện xem ma trận vai trò – quyền với input: không áp dụng
   Then Hiển thị vai trò nào có quyền nào. Bản đầu chỉ đọc; thay đổi ma trận qua bản phát hành. Kết quả: Ma trận
 ```
 
 FR-AUTH-RBAC-002; NOT RUN.
 
-## AC-CORE-012-2 — US-CORE-012
+## AC-CORE-012-2: US-CORE-012
 
 ```gherkin
 Scenario: Xem ma trận vai trò – quyền / 2
@@ -402,7 +402,7 @@ Scenario: Xem ma trận vai trò – quyền / 2
 
 FR-AUTH-RBAC-002; NOT RUN.
 
-## AC-CORE-012-3 — US-CORE-012
+## AC-CORE-012-3: US-CORE-012
 
 ```gherkin
 Scenario: Xem ma trận vai trò – quyền / 3
@@ -413,7 +413,7 @@ Scenario: Xem ma trận vai trò – quyền / 3
 
 FR-AUTH-RBAC-002; NOT RUN.
 
-## AC-CORE-013-1 — US-CORE-013
+## AC-CORE-013-1: US-CORE-013
 
 ```gherkin
 Scenario: Uỷ quyền duyệt khi vắng / 1
@@ -424,7 +424,7 @@ Scenario: Uỷ quyền duyệt khi vắng / 1
 
 FR-AUTH-RBAC-003; BLOCKED: O-06.
 
-## AC-CORE-013-2 — US-CORE-013
+## AC-CORE-013-2: US-CORE-013
 
 ```gherkin
 Scenario: Uỷ quyền duyệt khi vắng / 2
@@ -435,7 +435,7 @@ Scenario: Uỷ quyền duyệt khi vắng / 2
 
 FR-AUTH-RBAC-003; BLOCKED: O-06.
 
-## AC-CORE-013-3 — US-CORE-013
+## AC-CORE-013-3: US-CORE-013
 
 ```gherkin
 Scenario: Uỷ quyền duyệt khi vắng / 3
@@ -446,18 +446,18 @@ Scenario: Uỷ quyền duyệt khi vắng / 3
 
 FR-AUTH-RBAC-003; BLOCKED: O-06.
 
-## AC-CORE-014-1 — US-CORE-014
+## AC-CORE-014-1: US-CORE-014
 
 ```gherkin
 Scenario: Tài khoản dịch vụ cho agent / 1
   Given svc-agent-noi-bo có allowlist; người hỏi chỉ có quyềnK1
-  When thực hiện tài khoản dịch vụ cho agent với input: —
-  Then Hai tài khoản tách biệt: `svc-agent-noi-bo`, `svc-agent-dinh-duong-vien`. Mỗi tài khoản có danh sách quyền gắn cứng, không đăng nhập qua giao diện. Kết quả: —
+  When thực hiện tài khoản dịch vụ cho agent với input: không áp dụng
+  Then Hai tài khoản tách biệt: `svc-agent-noi-bo`, `svc-agent-dinh-duong-vien`. Mỗi tài khoản có danh sách quyền gắn cứng, không đăng nhập qua giao diện. Kết quả: không áp dụng
 ```
 
 FR-AUTH-SVC-001; NOT RUN.
 
-## AC-CORE-014-2 — US-CORE-014
+## AC-CORE-014-2: US-CORE-014
 
 ```gherkin
 Scenario: Tài khoản dịch vụ cho agent / 2
@@ -468,7 +468,7 @@ Scenario: Tài khoản dịch vụ cho agent / 2
 
 FR-AUTH-SVC-001; NOT RUN.
 
-## AC-CORE-014-3 — US-CORE-014
+## AC-CORE-014-3: US-CORE-014
 
 ```gherkin
 Scenario: Tài khoản dịch vụ cho agent / 3
@@ -479,18 +479,18 @@ Scenario: Tài khoản dịch vụ cho agent / 3
 
 FR-AUTH-SVC-001; NOT RUN.
 
-## AC-CORE-015-1 — US-CORE-015
+## AC-CORE-015-1: US-CORE-015
 
 ```gherkin
 Scenario: Ghi nhật ký thay đổi / 1
   Given Thao tác sửa giá có actor/service và requestId
-  When thực hiện ghi nhật ký thay đổi với input: — (tự động)
+  When thực hiện ghi nhật ký thay đổi với input: không có (tự động)
   Then Mọi lệnh tạo, sửa, huỷ, duyệt trên bảng nghiệp vụ sinh 1 bản ghi nhật ký trong cùng giao dịch cơ sở dữ liệu: ai, lúc nào, thực thể, mã bản ghi, hành động, giá trị cũ → mới của từng trường đổi, lý do, mã yêu cầu. Nếu thao tác do agent thực hiện: ghi cả tài khoản dịch vụ và người dùng đang dùng agent. Kết quả: Bản ghi nhật ký
 ```
 
 FR-SYS-AUD-001; NOT RUN.
 
-## AC-CORE-015-2 — US-CORE-015
+## AC-CORE-015-2: US-CORE-015
 
 ```gherkin
 Scenario: Ghi nhật ký thay đổi / 2
@@ -501,7 +501,7 @@ Scenario: Ghi nhật ký thay đổi / 2
 
 FR-SYS-AUD-001; NOT RUN.
 
-## AC-CORE-015-3 — US-CORE-015
+## AC-CORE-015-3: US-CORE-015
 
 ```gherkin
 Scenario: Ghi nhật ký thay đổi / 3
@@ -512,7 +512,7 @@ Scenario: Ghi nhật ký thay đổi / 3
 
 FR-SYS-AUD-001; NOT RUN.
 
-## AC-CORE-016-1 — US-CORE-016
+## AC-CORE-016-1: US-CORE-016
 
 ```gherkin
 Scenario: Tra cứu nhật ký / 1
@@ -523,7 +523,7 @@ Scenario: Tra cứu nhật ký / 1
 
 FR-SYS-AUD-002; NOT RUN.
 
-## AC-CORE-016-2 — US-CORE-016
+## AC-CORE-016-2: US-CORE-016
 
 ```gherkin
 Scenario: Tra cứu nhật ký / 2
@@ -534,7 +534,7 @@ Scenario: Tra cứu nhật ký / 2
 
 FR-SYS-AUD-002; NOT RUN.
 
-## AC-CORE-016-3 — US-CORE-016
+## AC-CORE-016-3: US-CORE-016
 
 ```gherkin
 Scenario: Tra cứu nhật ký / 3
@@ -545,18 +545,18 @@ Scenario: Tra cứu nhật ký / 3
 
 FR-SYS-AUD-002; NOT RUN.
 
-## AC-CORE-017-1 — US-CORE-017
+## AC-CORE-017-1: US-CORE-017
 
 ```gherkin
 Scenario: Bắt buộc lý do / 1
   Given Thao tác sửa vai trò yêu cầu reason
   When thực hiện bắt buộc lý do với input: lý do
-  Then Thao tác thuộc danh sách ở `BR-AUD-001` bị từ chối nếu thiếu lý do từ 10 ký tự. Kết quả: —
+  Then Thao tác thuộc danh sách ở `BR-AUD-001` bị từ chối nếu thiếu lý do từ 10 ký tự. Kết quả: không áp dụng
 ```
 
 FR-SYS-AUD-003; NOT RUN.
 
-## AC-CORE-017-2 — US-CORE-017
+## AC-CORE-017-2: US-CORE-017
 
 ```gherkin
 Scenario: Bắt buộc lý do / 2
@@ -567,7 +567,7 @@ Scenario: Bắt buộc lý do / 2
 
 FR-SYS-AUD-003; NOT RUN.
 
-## AC-CORE-017-3 — US-CORE-017
+## AC-CORE-017-3: US-CORE-017
 
 ```gherkin
 Scenario: Bắt buộc lý do / 3
@@ -578,7 +578,7 @@ Scenario: Bắt buộc lý do / 3
 
 FR-SYS-AUD-003; NOT RUN.
 
-## AC-CORE-018-1 — US-CORE-018
+## AC-CORE-018-1: US-CORE-018
 
 ```gherkin
 Scenario: Huỷ thay cho xoá / 1
@@ -589,7 +589,7 @@ Scenario: Huỷ thay cho xoá / 1
 
 FR-SYS-AUD-004; NOT RUN.
 
-## AC-CORE-018-2 — US-CORE-018
+## AC-CORE-018-2: US-CORE-018
 
 ```gherkin
 Scenario: Huỷ thay cho xoá / 2
@@ -600,7 +600,7 @@ Scenario: Huỷ thay cho xoá / 2
 
 FR-SYS-AUD-004; NOT RUN.
 
-## AC-CORE-018-3 — US-CORE-018
+## AC-CORE-018-3: US-CORE-018
 
 ```gherkin
 Scenario: Huỷ thay cho xoá / 3
@@ -611,7 +611,7 @@ Scenario: Huỷ thay cho xoá / 3
 
 FR-SYS-AUD-004; NOT RUN.
 
-## AC-CORE-019-1 — US-CORE-019
+## AC-CORE-019-1: US-CORE-019
 
 ```gherkin
 Scenario: Quản lý tham số / 1
@@ -622,7 +622,7 @@ Scenario: Quản lý tham số / 1
 
 FR-SYS-PRM-001; NOT RUN.
 
-## AC-CORE-019-2 — US-CORE-019
+## AC-CORE-019-2: US-CORE-019
 
 ```gherkin
 Scenario: Quản lý tham số / 2
@@ -633,7 +633,7 @@ Scenario: Quản lý tham số / 2
 
 FR-SYS-PRM-001; NOT RUN.
 
-## AC-CORE-019-3 — US-CORE-019
+## AC-CORE-019-3: US-CORE-019
 
 ```gherkin
 Scenario: Quản lý tham số / 3
@@ -644,7 +644,7 @@ Scenario: Quản lý tham số / 3
 
 FR-SYS-PRM-001; NOT RUN.
 
-## AC-CORE-020-1 — US-CORE-020
+## AC-CORE-020-1: US-CORE-020
 
 ```gherkin
 Scenario: Duyệt thay đổi tham số / 1
@@ -655,7 +655,7 @@ Scenario: Duyệt thay đổi tham số / 1
 
 FR-SYS-PRM-002; NOT RUN.
 
-## AC-CORE-020-2 — US-CORE-020
+## AC-CORE-020-2: US-CORE-020
 
 ```gherkin
 Scenario: Duyệt thay đổi tham số / 2
@@ -666,7 +666,7 @@ Scenario: Duyệt thay đổi tham số / 2
 
 FR-SYS-PRM-002; NOT RUN.
 
-## AC-CORE-020-3 — US-CORE-020
+## AC-CORE-020-3: US-CORE-020
 
 ```gherkin
 Scenario: Duyệt thay đổi tham số / 3
@@ -677,7 +677,7 @@ Scenario: Duyệt thay đổi tham số / 3
 
 FR-SYS-PRM-002; NOT RUN.
 
-## AC-CORE-021-1 — US-CORE-021
+## AC-CORE-021-1: US-CORE-021
 
 ```gherkin
 Scenario: Tạo thông báo trong hệ thống / 1
@@ -688,7 +688,7 @@ Scenario: Tạo thông báo trong hệ thống / 1
 
 FR-SYS-NTF-001; NOT RUN.
 
-## AC-CORE-021-2 — US-CORE-021
+## AC-CORE-021-2: US-CORE-021
 
 ```gherkin
 Scenario: Tạo thông báo trong hệ thống / 2
@@ -699,7 +699,7 @@ Scenario: Tạo thông báo trong hệ thống / 2
 
 FR-SYS-NTF-001; NOT RUN.
 
-## AC-CORE-021-3 — US-CORE-021
+## AC-CORE-021-3: US-CORE-021
 
 ```gherkin
 Scenario: Tạo thông báo trong hệ thống / 3
@@ -710,18 +710,18 @@ Scenario: Tạo thông báo trong hệ thống / 3
 
 FR-SYS-NTF-001; NOT RUN.
 
-## AC-CORE-022-1 — US-CORE-022
+## AC-CORE-022-1: US-CORE-022
 
 ```gherkin
 Scenario: Trạng thái thông báo / 1
   Given U1 có thông báoNEW của mình
   When thực hiện trạng thái thông báo với input: mã thông báo, trạng thái
-  Then 3 trạng thái: mới, đã xem, đã xử lý. Danh sách lọc theo trạng thái; hiện số thông báo mới trên thanh điều hướng. Kết quả: —
+  Then 3 trạng thái: mới, đã xem, đã xử lý. Danh sách lọc theo trạng thái; hiện số thông báo mới trên thanh điều hướng. Kết quả: không áp dụng
 ```
 
 FR-SYS-NTF-002; NOT RUN.
 
-## AC-CORE-022-2 — US-CORE-022
+## AC-CORE-022-2: US-CORE-022
 
 ```gherkin
 Scenario: Trạng thái thông báo / 2
@@ -732,7 +732,7 @@ Scenario: Trạng thái thông báo / 2
 
 FR-SYS-NTF-002; NOT RUN.
 
-## AC-CORE-022-3 — US-CORE-022
+## AC-CORE-022-3: US-CORE-022
 
 ```gherkin
 Scenario: Trạng thái thông báo / 3
@@ -743,7 +743,7 @@ Scenario: Trạng thái thông báo / 3
 
 FR-SYS-NTF-002; NOT RUN.
 
-## AC-CORE-023-1 — US-CORE-023
+## AC-CORE-023-1: US-CORE-023
 
 ```gherkin
 Scenario: Gửi qua kênh ngoài / 1
@@ -754,7 +754,7 @@ Scenario: Gửi qua kênh ngoài / 1
 
 FR-SYS-NTF-003; BLOCKED: Q-14.
 
-## AC-CORE-023-2 — US-CORE-023
+## AC-CORE-023-2: US-CORE-023
 
 ```gherkin
 Scenario: Gửi qua kênh ngoài / 2
@@ -765,7 +765,7 @@ Scenario: Gửi qua kênh ngoài / 2
 
 FR-SYS-NTF-003; BLOCKED: Q-14.
 
-## AC-CORE-023-3 — US-CORE-023
+## AC-CORE-023-3: US-CORE-023
 
 ```gherkin
 Scenario: Gửi qua kênh ngoài / 3
@@ -776,7 +776,7 @@ Scenario: Gửi qua kênh ngoài / 3
 
 FR-SYS-NTF-003; BLOCKED: Q-14.
 
-## AC-CORE-024-1 — US-CORE-024
+## AC-CORE-024-1: US-CORE-024
 
 ```gherkin
 Scenario: Tải tệp lên / 1
@@ -787,7 +787,7 @@ Scenario: Tải tệp lên / 1
 
 FR-SYS-FILE-001; NOT RUN.
 
-## AC-CORE-024-2 — US-CORE-024
+## AC-CORE-024-2: US-CORE-024
 
 ```gherkin
 Scenario: Tải tệp lên / 2
@@ -798,7 +798,7 @@ Scenario: Tải tệp lên / 2
 
 FR-SYS-FILE-001; NOT RUN.
 
-## AC-CORE-024-3 — US-CORE-024
+## AC-CORE-024-3: US-CORE-024
 
 ```gherkin
 Scenario: Tải tệp lên / 3
@@ -809,18 +809,18 @@ Scenario: Tải tệp lên / 3
 
 FR-SYS-FILE-001; NOT RUN.
 
-## AC-CORE-025-1 — US-CORE-025
+## AC-CORE-025-1: US-CORE-025
 
 ```gherkin
 Scenario: Tác vụ nền / 1
   Given JobJ1 có eventId và khóa lịch
-  When thực hiện tác vụ nền với input: —
-  Then Hàng đợi có: thử lại với khoảng cách tăng dần, tối đa 5 lần; hàng đợi lỗi cho tác vụ hỏng hẳn; khoá chống chạy trùng cho tác vụ định giờ. `QUAN_TRI` xem được trạng thái và chạy lại tác vụ lỗi. Kết quả: —
+  When thực hiện tác vụ nền với input: không áp dụng
+  Then Hàng đợi có: thử lại với khoảng cách tăng dần, tối đa 5 lần; hàng đợi lỗi cho tác vụ hỏng hẳn; khoá chống chạy trùng cho tác vụ định giờ. `QUAN_TRI` xem được trạng thái và chạy lại tác vụ lỗi. Kết quả: không áp dụng
 ```
 
 FR-SYS-JOB-001; NOT RUN.
 
-## AC-CORE-025-2 — US-CORE-025
+## AC-CORE-025-2: US-CORE-025
 
 ```gherkin
 Scenario: Tác vụ nền / 2
@@ -831,7 +831,7 @@ Scenario: Tác vụ nền / 2
 
 FR-SYS-JOB-001; NOT RUN.
 
-## AC-CORE-025-3 — US-CORE-025
+## AC-CORE-025-3: US-CORE-025
 
 ```gherkin
 Scenario: Tác vụ nền / 3
@@ -842,18 +842,18 @@ Scenario: Tác vụ nền / 3
 
 FR-SYS-JOB-001; NOT RUN.
 
-## AC-CORE-026-1 — US-CORE-026
+## AC-CORE-026-1: US-CORE-026
 
 ```gherkin
 Scenario: Kiểm tra sức khoẻ / 1
   Given API/DB/Redis/queue hoạt động
-  When thực hiện kiểm tra sức khoẻ với input: —
+  When thực hiện kiểm tra sức khoẻ với input: không áp dụng
   Then Điểm kiểm tra `/v1/health` trả trạng thái API, MySQL, Redis, hàng đợi; dùng cho cân bằng tải và giám sát. Kết quả: Trạng thái từng thành phần
 ```
 
 FR-SYS-HLT-001; NOT RUN.
 
-## AC-CORE-026-2 — US-CORE-026
+## AC-CORE-026-2: US-CORE-026
 
 ```gherkin
 Scenario: Kiểm tra sức khoẻ / 2
@@ -864,7 +864,7 @@ Scenario: Kiểm tra sức khoẻ / 2
 
 FR-SYS-HLT-001; NOT RUN.
 
-## AC-CORE-026-3 — US-CORE-026
+## AC-CORE-026-3: US-CORE-026
 
 ```gherkin
 Scenario: Kiểm tra sức khoẻ / 3

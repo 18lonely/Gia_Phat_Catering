@@ -8,7 +8,7 @@ Phiên bản0.1.0 ·11/11/2026 · Draft, phụ thuộc CR-COST-2026-001.
 
 Ưu tiên P0 là đề xuất bên trong extension khi được đưa vào release, không tự thêm vào R3. SP là sơ bộ3/story, đội dev phải ước lượng lại. FR-ACC-001–006 là mã yêu cầu thiết kế mới, chưa nâng thành yêu cầu baseline đã được chủ sở hữu duyệt. Các quyền mới chưa cấp; story không sẵn sàng triển khai production trước gate. [Hợp đồng](../api/accounting-contract.md), [mô hình](../../nen-tang/srs/erd.md), [wireframe](../html-wireframe/accounting-workbench.html), [CK câu hỏi](../accounting/business-rules.md).
 
-## US-ACC-001 — Chuẩn hóa giá mua
+## US-ACC-001: Chuẩn hóa giá mua
 
 Là một kế toán mua hàng, tôi muốn nhập giá báo theo cách ghi VAT để cost dùng đúng số phải trả.
 
@@ -21,7 +21,7 @@ Là một kế toán mua hàng, tôi muốn nhập giá báo theo cách ghi VAT 
 | Gate | Rounding giá mua; policy migration |
 | AC/test | [AC và test](../accounting/design-tests.md), nhóm US-ACC-001 |
 
-## US-ACC-002 — Context giá và hóa đơn
+## US-ACC-002: Context giá và hóa đơn
 
 Là một kế toán được cấp quyền, tôi muốn xem điều kiện giá chụp theo đơn để không nhầm yêu cầu hóa đơn với thuế suất.
 
@@ -34,7 +34,7 @@ Là một kế toán được cấp quyền, tôi muốn xem điều kiện giá
 | Gate | Sale context và quyền mới |
 | AC/test | [AC và test](../accounting/design-tests.md), nhóm US-ACC-002 |
 
-## US-ACC-003 — Tính thử khoản riêng
+## US-ACC-003: Tính thử khoản riêng
 
 Là một kế toán được cấp quyền, tôi muốn xem chiết khấu riêng trước khi ghi để kiểm số mà không thay tiền đơn.
 
@@ -47,7 +47,7 @@ Là một kế toán được cấp quyền, tôi muốn xem chiết khấu riê
 | Gate | CK-Q01/02/03/04/10 |
 | AC/test | [AC và test](../accounting/design-tests.md), nhóm US-ACC-003 |
 
-## US-ACC-004 — Lưu bản nháp khoản riêng
+## US-ACC-004: Lưu bản nháp khoản riêng
 
 Là một kế toán được cấp quyền, tôi muốn lưu điều kiện chiết khấu theo đơn để review và truy lại điều kiện.
 
@@ -60,7 +60,7 @@ Là một kế toán được cấp quyền, tôi muốn lưu điều kiện chi
 | Gate | CK-Q04; chưa duyệt/chi trả |
 | AC/test | [AC và test](../accounting/design-tests.md), nhóm US-ACC-004 |
 
-## US-ACC-005 — Thỏa thuận giá nháp
+## US-ACC-005: Thỏa thuận giá nháp
 
 Là một kế toán được cấp quyền, tôi muốn ghi cách báo giá và yêu cầu hóa đơn khách để chuẩn bị dữ liệu hợp đồng có nguồn.
 
@@ -73,7 +73,7 @@ Là một kế toán được cấp quyền, tôi muốn ghi cách báo giá và
 | Gate | Quyền terms và activation sales policy |
 | AC/test | [AC và test](../accounting/design-tests.md), nhóm US-ACC-005 |
 
-## US-ACC-006 — Đơn đổi cần rà lại
+## US-ACC-006: Đơn đổi cần rà lại
 
 Là một kế toán được cấp quyền, tôi muốn biết khoản riêng chịu ảnh hưởng khi đơn đổi để không dùng nhầm số lượng cũ để chi trả.
 

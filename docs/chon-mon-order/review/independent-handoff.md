@@ -1,4 +1,4 @@
-# Bàn giao E6 — phần độc lập với policy mở
+# Bàn giao E6: phần độc lập với policy mở
 
 11/11/2026 · Draft BA; không backend/migration/E7–E13. Mốc bổ sung của [handoff trước](handoff.md), giữ nguyên bản cũ. [Preview](../preview.html) · [Báo cáo kiểm/file thay đổi](../validation/independent-report.md).
 

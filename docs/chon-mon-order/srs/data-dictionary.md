@@ -63,11 +63,11 @@ erDiagram
   customer_qr_codes ||--o{ qr_sessions : proposed
 ```
 
-## Bổ sung consistency độc lập — 11/11/2026
+## Bổ sung consistency độc lập ngày 11/11/2026
 
 Xem [mapping consistency](../api/data-mapping.md) và [manifest/lifecycle](lock-plan-review.md). Phân biệt token tổng, version order, revision order/plan; lock thành công không hứa plan đã sẵn sàng. Các trường completeness/ack/publish vẫn là delta review, chưa thêm vào catalog hoặc wireframe; không thay E6-EVID-001/002.
 
-## Chuẩn hóa alias logic — 11/11/2026
+## Chuẩn hóa alias logic ngày 11/11/2026
 
 | Ngữ cảnh | Tên dùng trong tài liệu delta | Alias / tên vật lý hiện hữu | Cách đọc |
 | :--- | :--- | :--- | :--- |

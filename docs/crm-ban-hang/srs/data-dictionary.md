@@ -35,7 +35,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 | order_pricing_snapshots.order_id/order_version/price_term_id | bigint; int; FK nullable; unique(order_id,order_version) | Bản chụp bất biến của nguồn; E10 không ghi ngược sau phụ lục hoặc gộp. |
 | audit_logs.actor_user_id/changes/reason/request_id | FK không null; JSON; varchar 500; char 36 | Audit bất biến; action gộp/hoàn tác cần mapping được duyệt, không tự thêm enum vào schema. |
 
-> Chờ E10-Q13, E11-Q14, E13-Q09 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E10-Q13, E11-Q14, E13-Q09: XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 ## Cấu trúc đề xuất
 
@@ -52,12 +52,12 @@ Mọi mã đề xuất truyền API dưới dạng chuỗi; khóa nội bộ và
 | sale_contracts/amendments | id, customerRef, quoteRevisionRef, legacyEvidenceRef, signatureEvidenceRef, predecessorRef, status, version | Id PK; FK; quote/legacy ít nhất một nguồn; signature nullable khi nháp; predecessor nullable cho bản đầu | Hợp đồng nhiều phụ lục; phụ lục nhiều dòng loại suất; liên kết nguồn không mất khi gộp. |
 | sale_contract_price_links / hiệu lực lịch sử | contractRef, amendmentRef, priceTermRef, predecessorTermRef, effectiveFrom, effectiveTo, approvalRef | FK logic; date/date nullable theo Q11; approval nullable trước duyệt | Đề xuất nối vào customer_price_terms; không tự tạo bảng giá cạnh tranh. Mọi thay khoảng có lịch sử và quyết định Q12. |
 
-> Chờ E10-Q16 — XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E10-Q16: XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Quan hệ: customer → nhiều contact/điểm/cơ hội/hợp đồng; opportunity → nhiều quote, quote → nhiều revision; contract → nhiều amendment → nhiều price line theo loại suất; merge event nối hồ sơ và reversal. Không có FK từ E10 tới hồ sơ sức khỏe. [Mapping](../api/data-mapping.md).
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E10-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E10-Q13: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

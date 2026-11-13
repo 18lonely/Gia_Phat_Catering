@@ -36,6 +36,6 @@ Draft · 12/11/2026 · [DBML 65 bảng](../../nen-tang/srs/schema.dbml) và [ERD
 | ain_budget_reservations | id, principal/group, dayKey, policyRef, runRef, upperBound, state, requestKey | Admission atomic; không release UNKNOWN; Q07/13 |
 | ain_usage_events | id, runRef, providerEventRef, dayKey, usageState, amount/unit, reservationRef, sourceHash | Unique event; không sửa mất lịch sử; confirmed/reserved reconciliation, unknown khác0 |
 
-> Chờ E9-Q15 — XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E9-Q15: XC-05. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-05](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Sáu tên là delta sơ bộ để thảo luận, không cam kết sáu bảng vật lý hay schema mở rộng chính thức. Quan hệ proposal→candidate→run/session và reservation→policy/run→usage phải kiểm ownership/scope; không có quan hệ health profile. Encryption, retention/xóa/ẩn danh và audit guest chờ Q10; không lưu raw input chỉ vì agent_runs.request_text hiện NOT NULL. Cần adapter/tách kho an toàn trước reuse.

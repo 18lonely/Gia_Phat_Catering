@@ -1,4 +1,4 @@
-# Test Cases — Epic E2 · Thực đơn & Định lượng
+# Test Cases: Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
@@ -6,7 +6,7 @@
 | :--- | :--- |
 | Template | `43-test-cases.md` · BA-Kit v1.0 |
 | Phiên bản | 0.1.2 |
-| Trạng thái | Draft — chưa có QA rà; chưa chạy lần nào (phần mềm chưa được xây) |
+| Trạng thái | Draft: chưa có QA rà; chưa chạy lần nào (phần mềm chưa được xây) |
 | Ngày | 2026-11-11 |
 | Căn cứ | [Test checklist v0.1.0](checklist.md) · [Tiêu chí nghiệm thu v0.1.0](../userstories/acceptance-criteria.md) · [SRS epic v0.3.0](../srs/spec.md) · [SRS nền tảng](../../nen-tang/srs/spec.md) |
 
@@ -14,8 +14,8 @@
 
 Tài liệu gồm hai phần:
 
-- **Phần A — Test case chức năng**: mỗi kịch bản nghiệm thu thành một test case. Phần này được **sinh tự động** từ file tiêu chí nghiệm thu (Given → tiền điều kiện, When → bước, Then → kết quả mong đợi), nên nội dung khớp từng chữ với kịch bản gốc. Khi tiêu chí nghiệm thu đổi, sinh lại phần này.
-- **Phần B — Test case bổ sung**: viết tay từ các nhóm của checklist mà tiêu chí nghiệm thu không phủ: phân quyền và bảo mật, dữ liệu biên, toàn vẹn dữ liệu, hiệu năng, tích hợp, nhập bảng tính.
+- **Phần A: Test case chức năng**: mỗi kịch bản nghiệm thu thành một test case. Phần này được **sinh tự động** từ file tiêu chí nghiệm thu (Given → tiền điều kiện, When → bước, Then → kết quả mong đợi), nên nội dung khớp từng chữ với kịch bản gốc. Khi tiêu chí nghiệm thu đổi, sinh lại phần này.
+- **Phần B: Test case bổ sung**: viết tay từ các nhóm của checklist mà tiêu chí nghiệm thu không phủ: phân quyền và bảo mật, dữ liệu biên, toàn vẹn dữ liệu, hiệu năng, tích hợp, nhập bảng tính.
 
 **Chưa có trong tài liệu này**
 
@@ -29,7 +29,7 @@ Tài liệu gồm hai phần:
 
 | Mục | Quy ước |
 | :--- | :--- |
-| Mã test case chức năng | `TC-MENU-{story}{số kịch bản}` — ví dụ `TC-MENU-0103` là kịch bản 3 của `US-MENU-01` |
+| Mã test case chức năng | `TC-MENU-{story}{số kịch bản}`: ví dụ `TC-MENU-0103` là kịch bản 3 của `US-MENU-01` |
 | Mã test case bổ sung | `TC-MENU-{nhóm}-{số}` với nhóm `S` bảo mật · `B` biên · `D` dữ liệu · `P` hiệu năng · `I` tích hợp · `X` nhập bảng tính |
 | Loại | Thuận lợi · Lỗi · Biên (theo thẻ của kịch bản gốc) |
 | Trạng thái | **Sẵn sàng** = chạy được khi có phần mềm · **Chờ {mã}** = kịch bản viết theo cách xử lý tạm, phải rà lại khi điểm mở có câu trả lời |
@@ -50,9 +50,9 @@ Dùng cho mọi test case trừ khi tiền điều kiện ghi khác. Chi tiết 
 
 ---
 
-# Phần A — Test case chức năng
+# Phần A: Test case chức năng
 
-## US-MENU-01 — Tạo và sửa nguyên liệu
+## US-MENU-01: Tạo và sửa nguyên liệu
 
 Yêu cầu: `FR-MENU-ING-001`, `002` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Checklist: `CL-F-01`
 
@@ -66,7 +66,7 @@ Yêu cầu: `FR-MENU-ING-001`, `002` · Use case: `UC-MENU-001` · Ưu tiên: P0
 | `TC-MENU-0106` | `AC-MENU-01-6` | Biên | Không sửa được đơn vị của nguyên liệu đang nằm trong công thức hiệu lực | • nguyên liệu "Cá trắm" nằm trong 2 công thức ở trạng thái "ACTIVE" | 1. DDV sửa đơn vị dùng của "Cá trắm" từ "g" sang "kg" | • hệ thống không lưu thay đổi<br>• trả lỗi "ERR-MENU-409-02" nêu số công thức là 2 | Sẵn sàng |
 | `TC-MENU-0107` | `AC-MENU-01-7` | Biên | Hai người sửa cùng một nguyên liệu | • DDV và một tài khoản khác cùng mở nguyên liệu "Cà chua" ở phiên bản 3<br>• tài khoản kia đã lưu thay đổi trước | 1. DDV lưu thay đổi của mình | • hệ thống không ghi đè và trả lỗi "ERR-SYS-409-02" | Sẵn sàng |
 
-## US-MENU-02 — Ngừng dùng nguyên liệu
+## US-MENU-02: Ngừng dùng nguyên liệu
 
 Yêu cầu: `FR-MENU-ING-003` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Checklist: `CL-F-02`
 
@@ -76,7 +76,7 @@ Yêu cầu: `FR-MENU-ING-003` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Che
 | `TC-MENU-0202` | `AC-MENU-02-2` | Lỗi | Ngừng dùng nguyên liệu đang nằm trong công thức hiệu lực | • nguyên liệu "Cá trắm" nằm trong công thức "ACTIVE" của món "Cá kho" và "Cá rán" | 1. DDV chọn "Ngừng dùng" cho "Cá trắm" | • nguyên liệu giữ trạng thái "ACTIVE"<br>• hệ thống trả lỗi "ERR-SYS-409-01" kèm danh sách 2 công thức | Sẵn sàng |
 | `TC-MENU-0203` | `AC-MENU-02-3` | Biên | Nguyên liệu chỉ còn trong công thức đã thay thế | • nguyên liệu "Đường thắng" chỉ nằm trong công thức ở trạng thái "SUPERSEDED" | 1. DDV chọn "Ngừng dùng" và nhập lý do hợp lệ | • nguyên liệu chuyển trạng thái "INACTIVE"<br>• công thức "SUPERSEDED" vẫn hiển thị được tên nguyên liệu này | Sẵn sàng |
 
-## US-MENU-03 — Tìm và lọc nguyên liệu
+## US-MENU-03: Tìm và lọc nguyên liệu
 
 Yêu cầu: `FR-MENU-ING-004` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Checklist: `CL-F-03`
 
@@ -87,7 +87,7 @@ Yêu cầu: `FR-MENU-ING-004` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Che
 | `TC-MENU-0303` | `AC-MENU-03-3` | Biên | Bộ lọc không ra kết quả | Bộ dữ liệu nền | 1. BT tìm theo tên "xyz không tồn tại" | • danh sách hiện thông báo "Không có nguyên liệu khớp bộ lọc" và nút "Xoá lọc" | Sẵn sàng |
 | `TC-MENU-0304` | `AC-MENU-03-4` | Lỗi | Vai trò chỉ xem không có nút sửa | Bộ dữ liệu nền | 1. BT mở danh sách nguyên liệu | • không có nút "Thêm nguyên liệu"<br>• gọi trực tiếp lệnh tạo nguyên liệu trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-04 — Quản lý nhóm nguyên liệu
+## US-MENU-04: Quản lý nhóm nguyên liệu
 
 Yêu cầu: `FR-MENU-ING-005` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Checklist: `CL-F-04`
 
@@ -97,7 +97,7 @@ Yêu cầu: `FR-MENU-ING-005` · Use case: `UC-MENU-001` · Ưu tiên: P0 · Che
 | `TC-MENU-0402` | `AC-MENU-04-2` | Lỗi | Tên nhóm trùng | • đã có nhóm "Cá" | 1. DDV tạo nhóm "cá" | • hệ thống trả lỗi "ERR-MENU-409-01" | Sẵn sàng |
 | `TC-MENU-0403` | `AC-MENU-04-3` | Biên | Không huỷ được nhóm đang được dùng | • nhóm "Cá" có 6 nguyên liệu và 5 món | 1. DDV huỷ nhóm "Cá" | • nhóm không bị huỷ và hệ thống trả lỗi "ERR-SYS-409-01" | Sẵn sàng |
 
-## US-MENU-05 — Khai mùa vụ
+## US-MENU-05: Khai mùa vụ
 
 Yêu cầu: `FR-MENU-ING-006` · Use case: `UC-MENU-001` · Ưu tiên: P1 · Checklist: `CL-F-05`
 
@@ -107,7 +107,7 @@ Yêu cầu: `FR-MENU-ING-006` · Use case: `UC-MENU-001` · Ưu tiên: P1 · Che
 | `TC-MENU-0502` | `AC-MENU-05-2` | Lỗi | Tháng ngoài khoảng 1–12 | Bộ dữ liệu nền | 1. DDV khai mùa vụ từ tháng 0 đến tháng 13 | • hệ thống trả lỗi "ERR-MENU-422-03" | Sẵn sàng |
 | `TC-MENU-0503` | `AC-MENU-05-3` | Biên | Mùa vụ vắt qua cuối năm | Bộ dữ liệu nền | 1. DDV khai mùa vụ của "Cải thảo" từ tháng 10 đến tháng 2 | • khoảng mùa được lưu<br>• tháng 12 và tháng 1 được coi là trong mùa, tháng 6 là ngoài mùa | Sẵn sàng |
 
-## US-MENU-06 — Quản lý phương pháp chế biến
+## US-MENU-06: Quản lý phương pháp chế biến
 
 Yêu cầu: `FR-MENU-DISH-007` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Checklist: `CL-F-06`
 
@@ -117,7 +117,7 @@ Yêu cầu: `FR-MENU-DISH-007` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Ch
 | `TC-MENU-0602` | `AC-MENU-06-2` | Lỗi | Tên phương pháp trùng | • đã có phương pháp "Kho" | 1. DDV tạo phương pháp "kho" | • hệ thống trả lỗi "ERR-MENU-409-01" | Sẵn sàng |
 | `TC-MENU-0603` | `AC-MENU-06-3` | Biên | Bỏ cờ ít dầu mỡ khi đang có món Healthy dùng phương pháp đó | • món "Cá hấp" ở trạng thái "ACTIVE", có cờ Healthy, dùng phương pháp "Hấp" | 1. DDV bỏ cờ "ít dầu mỡ" của phương pháp "Hấp" | • hệ thống không lưu và trả lỗi "ERR-SYS-409-01" kèm danh sách món Healthy đang dùng | Sẵn sàng |
 
-## US-MENU-07 — Tạo món nháp
+## US-MENU-07: Tạo món nháp
 
 Yêu cầu: `FR-MENU-DISH-001` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Checklist: `CL-F-07`
 
@@ -130,7 +130,7 @@ Yêu cầu: `FR-MENU-DISH-001` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Ch
 | `TC-MENU-0705` | `AC-MENU-07-5` | Biên | Món gốc chỉ một cấp | • món "Thịt kho tàu" có món gốc là "Thịt kho trứng cút" | 1. DDV tạo món mới và chọn món gốc là "Thịt kho tàu" | • hệ thống trả lỗi "ERR-MENU-422-05" | Sẵn sàng |
 | `TC-MENU-0706` | `AC-MENU-07-6` | Biên | Mỗi thuộc tính có chú giải | Bộ dữ liệu nền | 1. DDV mở form tạo món | • mỗi trong 12 thuộc tính ảnh hưởng quy tắc hiển thị một dòng định nghĩa và ít nhất 1 ví dụ | Sẵn sàng |
 
-## US-MENU-08 — Khai cặp món kỵ nhau
+## US-MENU-08: Khai cặp món kỵ nhau
 
 Yêu cầu: `FR-MENU-DISH-008` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Checklist: `CL-F-08`
 
@@ -140,9 +140,9 @@ Yêu cầu: `FR-MENU-DISH-008` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Ch
 | `TC-MENU-0802` | `AC-MENU-08-2` | Lỗi | Hai món của cặp giống nhau | Bộ dữ liệu nền | 1. DDV khai cặp "Nem rán" – "Nem rán" | • hệ thống trả lỗi "ERR-MENU-422-07" | Sẵn sàng |
 | `TC-MENU-0803` | `AC-MENU-08-3` | Biên | Cặp đã có theo thứ tự ngược | • đã có cặp "Nem rán" – "Nộm" | 1. DDV khai cặp "Nộm" – "Nem rán" | • hệ thống trả lỗi "ERR-MENU-409-01" | Sẵn sàng |
 
-## US-MENU-09 — Tìm và lọc món
+## US-MENU-09: Tìm và lọc món
 
-Yêu cầu: `FR-MENU-DISH-006` · Use case: — · Ưu tiên: P0 · Checklist: `CL-F-09`
+Yêu cầu: `FR-MENU-DISH-006` · Use case:, · Ưu tiên: P0 · Checklist: `CL-F-09`
 
 | TC ID | AC | Loại | Tên | Tiền điều kiện | Bước thực hiện | Kết quả mong đợi | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -150,7 +150,7 @@ Yêu cầu: `FR-MENU-DISH-006` · Use case: — · Ưu tiên: P0 · Checklist: `
 | `TC-MENU-0902` | `AC-MENU-09-2` | Biên | Món có đề nghị thay đổi đang chờ duyệt | • món "Sườn sốt chua ngọt" có 1 đề nghị thay đổi ở trạng thái "PENDING" | 1. DDV mở danh sách món | • dòng "Sườn sốt chua ngọt" hiện nhãn "chờ duyệt thay đổi" và trạng thái vẫn là "ACTIVE" | Sẵn sàng |
 | `TC-MENU-0903` | `AC-MENU-09-3` | Lỗi | Vai trò chỉ xem không thấy giá bán | Bộ dữ liệu nền | 1. BT mở chi tiết một món | • không có nút sửa và không có thẻ "Giá bán" | Sẵn sàng |
 
-## US-MENU-10 — Gửi duyệt món
+## US-MENU-10: Gửi duyệt món
 
 Yêu cầu: `FR-MENU-DISH-003` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Checklist: `CL-F-10`
 
@@ -161,7 +161,7 @@ Yêu cầu: `FR-MENU-DISH-003` · Use case: `UC-MENU-002` · Ưu tiên: P0 · Ch
 | `TC-MENU-1003` | `AC-MENU-10-3` | Biên | Gửi duyệt nhiều món, một món không đạt | • DDV chọn 3 món nháp, trong đó "Gà rán" chưa có công thức | 1. DDV gửi duyệt cả 3 món | • 2 món chuyển "PENDING", "Gà rán" giữ "DRAFT"<br>• kết quả báo "2 thành công, 1 lỗi" kèm lý do của "Gà rán" | Sẵn sàng |
 | `TC-MENU-1004` | `AC-MENU-10-4` | Biên | Món có công thức chỉ ở trạng thái nháp | • món "Bò xào" có 1 công thức ở trạng thái "DRAFT" | 1. DDV gửi duyệt món "Bò xào" | • hệ thống trả lỗi "ERR-MENU-422-06" | Sẵn sàng |
 
-## US-MENU-11 — Duyệt hoặc trả lại món
+## US-MENU-11: Duyệt hoặc trả lại món
 
 Yêu cầu: `FR-MENU-DISH-004` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-11`
 
@@ -174,7 +174,7 @@ Yêu cầu: `FR-MENU-DISH-004` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Ch
 | `TC-MENU-1105` | `AC-MENU-11-5` | Lỗi | Trả lại không có lý do | Bộ dữ liệu nền | 1. ND1 chọn "Trả lại" món "Cá hấp" và để trống lý do | • món giữ trạng thái "PENDING" và hệ thống trả lỗi "ERR-SYS-422-01" | Sẵn sàng |
 | `TC-MENU-1106` | `AC-MENU-11-6` | Biên | Trả lại có lý do | Bộ dữ liệu nền | 1. ND1 trả lại món "Cá hấp" với lý do "Thuộc tính kết cấu chưa đúng" | • món về trạng thái "DRAFT"<br>• DDV nhận thông báo kèm nguyên văn lý do | Sẵn sàng |
 
-## US-MENU-12 — Tải mẫu và kiểm tệp nhập
+## US-MENU-12: Tải mẫu và kiểm tệp nhập
 
 Yêu cầu: `FR-MENU-IMP-001`, `002` · Use case: `UC-MENU-012` · Ưu tiên: P0 · Checklist: `CL-F-12`
 
@@ -187,7 +187,7 @@ Yêu cầu: `FR-MENU-IMP-001`, `002` · Use case: `UC-MENU-012` · Ưu tiên: P0
 | `TC-MENU-1205` | `AC-MENU-12-5` | Biên | Hai dòng trong tệp trùng tên nhau | • tệp món có dòng 5 và dòng 9 cùng tên "Cá kho riềng" | 1. DDV chọn "Kiểm tra" | • cả dòng 5 và dòng 9 đều bị đánh dấu lỗi | Sẵn sàng |
 | `TC-MENU-1206` | `AC-MENU-12-6` | Biên | Việc kiểm kéo dài hơn 5 giây | • tệp 2.000 dòng cần hơn 5 giây để kiểm | 1. DDV chọn "Kiểm tra" rồi rời trang | • việc kiểm tiếp tục chạy nền<br>• DDV nhận thông báo khi kiểm xong, mở lại được kết quả | Sẵn sàng |
 
-## US-MENU-13 — Nhập tệp đã kiểm sạch
+## US-MENU-13: Nhập tệp đã kiểm sạch
 
 Yêu cầu: `FR-MENU-IMP-003` · Use case: `UC-MENU-012` · Ưu tiên: P0 · Checklist: `CL-F-13`
 
@@ -198,7 +198,7 @@ Yêu cầu: `FR-MENU-IMP-003` · Use case: `UC-MENU-012` · Ưu tiên: P0 · Che
 | `TC-MENU-1303` | `AC-MENU-13-3` | Lỗi | Dữ liệu hệ thống thay đổi giữa lúc kiểm và lúc nhập | • tệp món đã qua kiểm tra không lỗi<br>• sau đó một tài khoản khác tạo món trùng tên với dòng 8 của tệp | 1. DDV chọn "Nhập" | • không có món nào được tạo<br>• hệ thống trả lỗi "ERR-MENU-422-20" và yêu cầu kiểm lại | Sẵn sàng |
 | `TC-MENU-1304` | `AC-MENU-13-4` | Biên | Món nhập vào không tự hiệu lực | • DDV vừa nhập 40 món | 1. DDV mở hộp chọn món của một thực đơn | • không món nào trong 40 món xuất hiện | Sẵn sàng |
 
-## US-MENU-14 — Lập công thức nháp
+## US-MENU-14: Lập công thức nháp
 
 Yêu cầu: `FR-MENU-RCP-001`, `002` · Use case: `UC-MENU-004` · Ưu tiên: P0 · Checklist: `CL-F-14`
 
@@ -212,7 +212,7 @@ Yêu cầu: `FR-MENU-RCP-001`, `002` · Use case: `UC-MENU-004` · Ưu tiên: P0
 | `TC-MENU-1406` | `AC-MENU-14-6` | Biên | Ba giá trị định lượng bằng nhau | Bộ dữ liệu nền | 1. DDV lưu dòng "Trứng cút" tối thiểu 3, chuẩn 3, tối đa 3 | • dòng được chấp nhận | Sẵn sàng |
 | `TC-MENU-1407` | `AC-MENU-14-7` | Biên | Rau và canh không bắt buộc khớp nhóm | • món "Canh chua" có vai trò "Canh" và nhóm nguyên liệu chính "Rau" | 1. DDV lưu công thức có nguyên liệu chính duy nhất là "Cá trắm" | • công thức được lưu, không báo "ERR-MENU-422-10" | Sẵn sàng |
 
-## US-MENU-15 — Tạo nguyên liệu trong lúc soạn công thức
+## US-MENU-15: Tạo nguyên liệu trong lúc soạn công thức
 
 Yêu cầu: `FR-MENU-ING-001` · Use case: `UC-MENU-004` · Ưu tiên: P0 · Checklist: `CL-F-15`
 
@@ -222,7 +222,7 @@ Yêu cầu: `FR-MENU-ING-001` · Use case: `UC-MENU-004` · Ưu tiên: P0 · Che
 | `TC-MENU-1502` | `AC-MENU-15-2` | Lỗi | Nguyên liệu mới trùng tên | • đã có nguyên liệu "Cá trắm" | 1. DDV tạo "Cá trắm" trong ngăn "Nguyên liệu mới" | • ngăn không đóng và hiện lỗi "ERR-MENU-409-01"<br>• các dòng công thức đã nhập giữ nguyên | Sẵn sàng |
 | `TC-MENU-1503` | `AC-MENU-15-3` | Biên | Đóng ngăn mà không lưu | • DDV đã nhập 3 dòng công thức chưa lưu và mở ngăn "Nguyên liệu mới" | 1. DDV chọn "Huỷ" | • không có nguyên liệu nào được tạo và 3 dòng giữ nguyên | Sẵn sàng |
 
-## US-MENU-16 — Duyệt hoặc trả lại công thức
+## US-MENU-16: Duyệt hoặc trả lại công thức
 
 Yêu cầu: `FR-MENU-RCP-003` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-16`
 
@@ -234,7 +234,7 @@ Yêu cầu: `FR-MENU-RCP-003` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Che
 | `TC-MENU-1604` | `AC-MENU-16-4` | Lỗi | Sửa công thức đã gửi duyệt | • công thức v1 của "Gà rán" ở trạng thái "PENDING" | 1. DDV sửa định lượng của một dòng | • hệ thống trả lỗi "ERR-MENU-409-03" | Sẵn sàng |
 | `TC-MENU-1605` | `AC-MENU-16-5` | Biên | Trả lại công thức | Bộ dữ liệu nền | 1. ND1 trả lại công thức v1 của "Gà rán" với lý do "Định lượng gà thấp hơn bảng chuẩn" | • công thức về trạng thái "DRAFT" và DDV sửa được<br>• DDV nhận thông báo kèm lý do | Sẵn sàng |
 
-## US-MENU-17 — Tạo phiên bản công thức mới
+## US-MENU-17: Tạo phiên bản công thức mới
 
 Yêu cầu: `FR-MENU-RCP-004` · Use case: `UC-MENU-004` · Ưu tiên: P0 · Checklist: `CL-F-17`
 
@@ -245,7 +245,7 @@ Yêu cầu: `FR-MENU-RCP-004` · Use case: `UC-MENU-004` · Ưu tiên: P0 · Che
 | `TC-MENU-1703` | `AC-MENU-17-3` | Biên | Thực đơn đã gắn phiên bản cũ không đổi | • thực đơn tuần sau ở trạng thái "PUBLISHED" đã gắn công thức v2 của "Cá sốt cà chua" | 1. v3 được duyệt với ngày hiệu lực nằm trong tuần sau | • thực đơn đó vẫn gắn v2 | Sẵn sàng |
 | `TC-MENU-1704` | `AC-MENU-17-4` | Biên | Đang có một bản nháp | • "Cá sốt cà chua" đã có công thức v3 ở trạng thái "DRAFT" | 1. DDV mở công thức v2 | • không có nút "Tạo phiên bản mới" | Sẵn sàng |
 
-## US-MENU-18 — Lấy đúng công thức hiệu lực theo ngày
+## US-MENU-18: Lấy đúng công thức hiệu lực theo ngày
 
 Yêu cầu: `FR-MENU-RCP-005` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-18`
 
@@ -255,7 +255,7 @@ Yêu cầu: `FR-MENU-RCP-005` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-1802` | `AC-MENU-18-2` | Biên | Hai phiên bản, ngày phục vụ đúng ngày chuyển tiếp | • "Thịt kho trứng cút" có v1 hiệu lực từ 01/08 và v2 hiệu lực từ 23/11, cùng "ACTIVE" | 1. hệ thống lấy công thức cho ngày 22/11 và ngày 23/11 | • kết quả lần lượt là v1 và v2 | Sẵn sàng |
 | `TC-MENU-1803` | `AC-MENU-18-3` | Lỗi | Chưa có công thức hiệu lực cho ngày đó | • "Gà rán" chỉ có công thức v1 "ACTIVE" hiệu lực từ 16/11 | 1. hệ thống lấy công thức của "Gà rán" cho ngày 15/11 | • hệ thống trả lỗi "ERR-MENU-404-01" nêu tên món "Gà rán" và ngày 15/11 | Sẵn sàng |
 
-## US-MENU-19 — So sánh hai phiên bản công thức
+## US-MENU-19: So sánh hai phiên bản công thức
 
 Yêu cầu: `FR-MENU-RCP-006` · Use case: `UC-MENU-004`, `010` · Ưu tiên: P1 · Checklist: `CL-F-19`
 
@@ -265,7 +265,7 @@ Yêu cầu: `FR-MENU-RCP-006` · Use case: `UC-MENU-004`, `010` · Ưu tiên: P1
 | `TC-MENU-1902` | `AC-MENU-19-2` | Biên | Hai phiên bản giống hệt nhau | Bộ dữ liệu nền | 1. ND1 so sánh hai phiên bản có cùng các dòng và định lượng | • màn hình ghi "Không có khác biệt" | Sẵn sàng |
 | `TC-MENU-1903` | `AC-MENU-19-3` | Lỗi | Công thức đầu tiên không có gì để so sánh | • "Gà rán" chỉ có công thức v1 | 1. ND1 mở chi tiết duyệt công thức v1 | • màn hình hiện bảng định lượng, không hiện phần so sánh | Sẵn sàng |
 
-## US-MENU-20 — Đặt giá bán
+## US-MENU-20: Đặt giá bán
 
 Yêu cầu: `FR-MENU-PRC-001` · Use case: `UC-MENU-005` · Ưu tiên: P0 · Checklist: `CL-F-20`
 
@@ -277,7 +277,7 @@ Yêu cầu: `FR-MENU-PRC-001` · Use case: `UC-MENU-005` · Ưu tiên: P0 · Che
 | `TC-MENU-2004` | `AC-MENU-20-4` | Lỗi | Trùng ngày hiệu lực | • món "Bò xào" đã có giá hiệu lực từ 01/12 | 1. DDV đặt giá khác cũng hiệu lực từ 01/12 | • hệ thống trả lỗi "ERR-MENU-409-04" | Sẵn sàng |
 | `TC-MENU-2005` | `AC-MENU-20-5` | Biên | Giá bằng 0 | Bộ dữ liệu nền | 1. DDV đặt giá 0 đồng, hiệu lực từ D+1 | • giá được lưu ở trạng thái "PENDING" | Sẵn sàng |
 
-## US-MENU-21 — Duyệt giá bán và lấy giá hiệu lực
+## US-MENU-21: Duyệt giá bán và lấy giá hiệu lực
 
 Yêu cầu: `FR-MENU-PRC-002`, `003` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-21`
 
@@ -289,7 +289,7 @@ Yêu cầu: `FR-MENU-PRC-002`, `003` · Use case: `UC-MENU-010` · Ưu tiên: P0
 | `TC-MENU-2104` | `AC-MENU-21-4` | Biên | Giá đã hiệu lực không sửa, không huỷ được | • giá 24000 đồng của "Bò xào" ở trạng thái "APPROVED", hiệu lực từ ngày đã qua | 1. DDV sửa hoặc huỷ giá này | • giá không đổi và hệ thống trả lỗi "ERR-MENU-409-10" | Sẵn sàng |
 | `TC-MENU-2105` | `AC-MENU-21-5` | Biên | Trả lại giá | Bộ dữ liệu nền | 1. ND1 trả lại giá 26000 đồng với lý do "Tăng quá nhanh so với tháng trước" | • giá chuyển trạng thái "REJECTED" và không bao giờ được dùng | Sẵn sàng |
 
-## US-MENU-22 — Lịch sử giá bán
+## US-MENU-22: Lịch sử giá bán
 
 Yêu cầu: `FR-MENU-PRC-004` · Use case: `UC-MENU-005` · Ưu tiên: P1 · Checklist: `CL-F-22`
 
@@ -299,7 +299,7 @@ Yêu cầu: `FR-MENU-PRC-004` · Use case: `UC-MENU-005` · Ưu tiên: P1 · Che
 | `TC-MENU-2202` | `AC-MENU-22-2` | Biên | Món chưa có giá | Bộ dữ liệu nền | 1. DDV mở thẻ "Giá bán" của món chưa có giá | • màn hình ghi "Món chưa có giá bán" | Sẵn sàng |
 | `TC-MENU-2203` | `AC-MENU-22-3` | Lỗi | Vai trò không có quyền xem giá | Bộ dữ liệu nền | 1. BT gọi trực tiếp lệnh xem lịch sử giá | • hệ thống trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-23 — Tạo loại suất
+## US-MENU-23: Tạo loại suất
 
 Yêu cầu: `FR-MENU-MTY-001`, `002` · Use case: `UC-MENU-006` · Ưu tiên: P0 · Checklist: `CL-F-23`
 
@@ -310,7 +310,7 @@ Yêu cầu: `FR-MENU-MTY-001`, `002` · Use case: `UC-MENU-006` · Ưu tiên: P0
 | `TC-MENU-2303` | `AC-MENU-23-3` | Biên | Số món phụ ở biên | Bộ dữ liệu nền | 1. DDV tạo loại suất với 0 món phụ<br>2. DDV tạo loại suất với 6 món phụ | (sau bước 1) loại suất được lưu<br>(sau bước 2) hệ thống trả lỗi "ERR-MENU-422-12" | Sẵn sàng |
 | `TC-MENU-2304` | `AC-MENU-23-4` | Biên | Loại suất nháp chưa dùng được | • loại suất "Suất 35.000đ" ở trạng thái "DRAFT" | 1. DDV tạo thực đơn mới | • "Suất 35.000đ" không có trong danh sách chọn loại suất | Sẵn sàng |
 
-## US-MENU-24 — Khoá cơ cấu loại suất
+## US-MENU-24: Khoá cơ cấu loại suất
 
 Yêu cầu: `FR-MENU-MTY-003` · Use case: `UC-MENU-006` · Ưu tiên: P0 · Checklist: `CL-F-24`
 
@@ -321,7 +321,7 @@ Yêu cầu: `FR-MENU-MTY-003` · Use case: `UC-MENU-006` · Ưu tiên: P0 · Che
 | `TC-MENU-2403` | `AC-MENU-24-3` | Biên | Tên vẫn sửa được | • "Suất 40.000đ" có thực đơn ở trạng thái "PUBLISHED" | 1. DDV đổi tên thành "Suất tiêu chuẩn 40.000đ" | • tên mới được lưu | Sẵn sàng |
 | `TC-MENU-2404` | `AC-MENU-24-4` | Biên | Ngừng loại suất không ảnh hưởng thực đơn đã công bố | • "Suất 40.000đ" có thực đơn tuần sau ở trạng thái "PUBLISHED" | 1. DDV ngừng loại suất | • thực đơn tuần sau vẫn ở trạng thái "PUBLISHED"<br>• không tạo được thực đơn mới cho loại suất này | Sẵn sàng |
 
-## US-MENU-25 — Đánh dấu loại suất công khai
+## US-MENU-25: Đánh dấu loại suất công khai
 
 Yêu cầu: `FR-MENU-MTY-004` · Use case: `UC-MENU-006` · Ưu tiên: P1 · Checklist: `CL-F-25`
 
@@ -331,7 +331,7 @@ Yêu cầu: `FR-MENU-MTY-004` · Use case: `UC-MENU-006` · Ưu tiên: P1 · Che
 | `TC-MENU-2502` | `AC-MENU-25-2` | Biên | Bật cờ khi loại suất đã có thực đơn công bố | • "Suất 40.000đ" có thực đơn "PUBLISHED" | 1. DDV bật cờ "công khai" | • cờ được lưu (cờ này không thuộc cơ cấu bị khoá) | Sẵn sàng |
 | `TC-MENU-2503` | `AC-MENU-25-3` | Lỗi | Vai trò chỉ xem không bật được | Bộ dữ liệu nền | 1. BT gọi trực tiếp lệnh bật cờ "công khai" | • hệ thống trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-26 — Đề nghị sửa thuộc tính món đang dùng
+## US-MENU-26: Đề nghị sửa thuộc tính món đang dùng
 
 Yêu cầu: `FR-MENU-DISH-002` · Use case: `UC-MENU-003` · Ưu tiên: P0 · Checklist: `CL-F-26`
 
@@ -344,7 +344,7 @@ Yêu cầu: `FR-MENU-DISH-002` · Use case: `UC-MENU-003` · Ưu tiên: P0 · Ch
 | `TC-MENU-2605` | `AC-MENU-26-5` | Biên | Món đã có đề nghị đang chờ | • món "Sườn sốt chua ngọt" có 1 đề nghị ở trạng thái "PENDING" | 1. DDV mở món | • các ô thuộc tính bị khoá và có nút "Rút đề nghị" | Sẵn sàng |
 | `TC-MENU-2606` | `AC-MENU-26-6` | Biên | Rút đề nghị | Bộ dữ liệu nền | 1. DDV chọn "Rút đề nghị" | • đề nghị chuyển trạng thái "WITHDRAWN", món không đổi và sửa lại được | Sẵn sàng |
 
-## US-MENU-27 — Duyệt đề nghị thay đổi
+## US-MENU-27: Duyệt đề nghị thay đổi
 
 Yêu cầu: `FR-MENU-DISH-002`, `FR-MENU-RUL-006` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-27`
 
@@ -356,7 +356,7 @@ Yêu cầu: `FR-MENU-DISH-002`, `FR-MENU-RUL-006` · Use case: `UC-MENU-010` · 
 | `TC-MENU-2704` | `AC-MENU-27-4` | Biên | Thực đơn đã gửi duyệt giữ kết quả cũ | • một thực đơn "PENDING" có món "Sườn sốt chua ngọt" | 1. đề nghị đổi vị chua của món được duyệt | • kết quả kiểm quy tắc của thực đơn đó không đổi | Sẵn sàng |
 | `TC-MENU-2705` | `AC-MENU-27-5` | Biên | Trả lại đề nghị | Bộ dữ liệu nền | 1. ND1 trả lại đề nghị với lý do hợp lệ | • đề nghị chuyển "REJECTED" và món không đổi | Sẵn sàng |
 
-## US-MENU-28 — Ngừng dùng món
+## US-MENU-28: Ngừng dùng món
 
 Yêu cầu: `FR-MENU-DISH-005` · Use case: `UC-MENU-003` · Ưu tiên: P0 · Checklist: `CL-F-28`
 
@@ -367,7 +367,7 @@ Yêu cầu: `FR-MENU-DISH-005` · Use case: `UC-MENU-003` · Ưu tiên: P0 · Ch
 | `TC-MENU-2803` | `AC-MENU-28-3` | Biên | Món chỉ nằm trong thực đơn đã phục vụ xong | • món "Mực xào" chỉ nằm trong thực đơn "PUBLISHED" có ngày phục vụ cuối là hôm qua | 1. DDV chọn "Ngừng dùng" với lý do hợp lệ | • món chuyển trạng thái "INACTIVE" | Sẵn sàng |
 | `TC-MENU-2804` | `AC-MENU-28-4` | Biên | Món nằm trong thực đơn nháp | • món "Mực xào" nằm trong một thực đơn "DRAFT" | 1. DDV ngừng dùng món | • món chuyển "INACTIVE"<br>• lần gửi duyệt kế tiếp của thực đơn đó bị chặn bởi "ERR-MENU-422-17" | Sẵn sàng |
 
-## US-MENU-29 — Ảnh món
+## US-MENU-29: Ảnh món
 
 Yêu cầu: `FR-MENU-DISH-009` · Use case: `UC-MENU-002` · Ưu tiên: P1 · Checklist: `CL-F-29`
 
@@ -378,7 +378,7 @@ Yêu cầu: `FR-MENU-DISH-009` · Use case: `UC-MENU-002` · Ưu tiên: P1 · Ch
 | `TC-MENU-2903` | `AC-MENU-29-3` | Biên | Kích thước ở biên | Bộ dữ liệu nền | 1. DDV tải ảnh PNG đúng 10 MB<br>2. DDV tải ảnh PNG lớn hơn 10 MB | (sau bước 1) ảnh được lưu<br>(sau bước 2) hệ thống trả lỗi "ERR-SYS-413-01" | Sẵn sàng |
 | `TC-MENU-2904` | `AC-MENU-29-4` | Biên | Tệp đổi đuôi | Bộ dữ liệu nền | 1. DDV tải tệp PDF đã đổi tên thành ".jpg" | • hệ thống trả lỗi "ERR-SYS-415-01" (kiểm theo nội dung tệp) | Sẵn sàng |
 
-## US-MENU-30 — Nhập công thức và giá bán từ bảng tính
+## US-MENU-30: Nhập công thức và giá bán từ bảng tính
 
 Yêu cầu: `FR-MENU-IMP-001` → `003` · Use case: `UC-MENU-012` · Ưu tiên: P0 · Checklist: `CL-F-30`
 
@@ -390,7 +390,7 @@ Yêu cầu: `FR-MENU-IMP-001` → `003` · Use case: `UC-MENU-012` · Ưu tiên:
 | `TC-MENU-3004` | `AC-MENU-30-4` | Lỗi | Công thức trong tệp vi phạm khoảng định lượng | • tệp công thức có dòng 20 với tối thiểu 70, chuẩn 65 | 1. DDV chọn "Kiểm tra" | • dòng 20 bị báo lỗi "ERR-MENU-422-09" | Sẵn sàng |
 | `TC-MENU-3005` | `AC-MENU-30-5` | Biên | Món trong tệp thiếu nguyên liệu chính | • các dòng của món "Cá kho" trong tệp không có dòng nào đánh dấu nguyên liệu chính | 1. DDV chọn "Kiểm tra" | • mọi dòng của "Cá kho" bị báo lỗi "ERR-MENU-422-08" | Sẵn sàng |
 
-## US-MENU-31 — Tạo thực đơn tuần
+## US-MENU-31: Tạo thực đơn tuần
 
 Yêu cầu: `FR-MENU-MNU-001` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-31`
 
@@ -402,7 +402,7 @@ Yêu cầu: `FR-MENU-MNU-001` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-3104` | `AC-MENU-31-4` | Biên | Tuần có ngày nghỉ | Bộ dữ liệu nền | 1. DDV tạo thực đơn chỉ chọn T2, T3, T5, T6 | • thực đơn có đúng 4 ngày | Sẵn sàng |
 | `TC-MENU-3105` | `AC-MENU-31-5` | Biên | Tạo lại sau khi thực đơn cũ đã huỷ | • thực đơn của "Suất 40.000đ" tuần 16/11/2026 đã bị huỷ | 1. DDV tạo thực đơn mới cho cùng loại suất và tuần | • thực đơn mới được tạo | Sẵn sàng |
 
-## US-MENU-32 — Xếp món vào ô
+## US-MENU-32: Xếp món vào ô
 
 Yêu cầu: `FR-MENU-MNU-002` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-32`
 
@@ -416,7 +416,7 @@ Yêu cầu: `FR-MENU-MNU-002` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-3206` | `AC-MENU-32-6` | Biên | Món bị ngừng dùng trong lúc hộp chọn đang mở | • DDV đang mở hộp chọn món và "Mực xào" còn trong danh sách<br>• một tài khoản khác ngừng dùng "Mực xào" | 1. DDV chọn "Mực xào" | • hệ thống trả lỗi "ERR-MENU-422-14" và làm mới danh sách | Sẵn sàng |
 | `TC-MENU-3207` | `AC-MENU-32-7` | Biên | Sửa thực đơn không còn ở trạng thái soạn | • thực đơn ở trạng thái "PENDING" | 1. DDV gọi lệnh đổi món ở một ô | • hệ thống trả lỗi "ERR-MENU-409-07" | Sẵn sàng |
 
-## US-MENU-33 — Chọn món mặc định
+## US-MENU-33: Chọn món mặc định
 
 Yêu cầu: `FR-MENU-MNU-003` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-33`
 
@@ -427,7 +427,7 @@ Yêu cầu: `FR-MENU-MNU-003` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-3303` | `AC-MENU-33-3` | Biên | Bỏ món đang là mặc định | • "Thịt kho trứng cút" là món mặc định của T2 và thực đơn ở trạng thái "CHECKED" | 1. DDV bỏ "Thịt kho trứng cút" khỏi T2 | • T2 không còn món mặc định<br>• thực đơn về trạng thái "DRAFT" | Sẵn sàng |
 | `TC-MENU-3304` | `AC-MENU-33-4` | Biên | Đổi món mặc định | • "Thịt kho trứng cút" là món mặc định của T2 | 1. DDV chọn "Cá kho" làm món mặc định của T2 | • chỉ "Cá kho" có nhãn "MẶC ĐỊNH" | Sẵn sàng |
 
-## US-MENU-34 — Xem danh sách và chi tiết thực đơn
+## US-MENU-34: Xem danh sách và chi tiết thực đơn
 
 Yêu cầu: `FR-MENU-MNU-007` · Use case: `UC-MENU-011` · Ưu tiên: P0 · Checklist: `CL-F-34`
 
@@ -438,7 +438,7 @@ Yêu cầu: `FR-MENU-MNU-007` · Use case: `UC-MENU-011` · Ưu tiên: P0 · Che
 | `TC-MENU-3403` | `AC-MENU-34-3` | Lỗi | Mở thực đơn chưa công bố bằng đường dẫn trực tiếp | Bộ dữ liệu nền | 1. BT mở đường dẫn của thực đơn "DRAFT" | • hệ thống trả lỗi "ERR-SYS-404-01" | Sẵn sàng |
 | `TC-MENU-3404` | `AC-MENU-34-4` | Biên | Chưa có thực đơn nào | • chưa có thực đơn nào | 1. DDV mở danh sách thực đơn | • màn hình ghi "Chưa có thực đơn" và có nút "Tạo thực đơn" | Sẵn sàng |
 
-## US-MENU-35 — Huỷ thực đơn nháp
+## US-MENU-35: Huỷ thực đơn nháp
 
 Yêu cầu: `FR-MENU-MNU-009` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-35`
 
@@ -449,7 +449,7 @@ Yêu cầu: `FR-MENU-MNU-009` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-3503` | `AC-MENU-35-3` | Biên | Huỷ thực đơn đã kiểm | • thực đơn ở trạng thái "CHECKED" | 1. DDV huỷ với lý do hợp lệ | • thực đơn bị huỷ | Sẵn sàng |
 | `TC-MENU-3504` | `AC-MENU-35-4` | Lỗi | Thiếu lý do | Bộ dữ liệu nền | 1. DDV chọn "Huỷ thực đơn" và để trống lý do | • hệ thống trả lỗi "ERR-SYS-422-01" | Sẵn sàng |
 
-## US-MENU-36 — Kiểm quy tắc cấp ngày
+## US-MENU-36: Kiểm quy tắc cấp ngày
 
 Yêu cầu: `FR-MENU-RUL-001`, `003` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Checklist: `CL-F-36`
 
@@ -463,7 +463,7 @@ Yêu cầu: `FR-MENU-RUL-001`, `003` · Use case: `UC-MENU-008` · Ưu tiên: P0
 | `TC-MENU-3606` | `AC-MENU-36-6` | Biên | Thời gian phản hồi | • thực đơn 6 ngày, mỗi ngày 7 món | 1. bộ kiểm chạy 50 lần | • p95 thời gian phản hồi không vượt 2 giây | Sẵn sàng |
 | `TC-MENU-3607` | `AC-MENU-36-7` | Biên | Quy tắc bị tắt không chạy | • quy tắc "BR-MENU-034" đã được tắt trong danh mục | 1. DDV xếp "Nem rán" và "Nộm" cùng ngày | • bảng kiểm không có kết quả nào của "BR-MENU-034" | Sẵn sàng |
 
-## US-MENU-37 — Kiểm quy tắc cấp tuần
+## US-MENU-37: Kiểm quy tắc cấp tuần
 
 Yêu cầu: `FR-MENU-RUL-001` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Checklist: `CL-F-37`
 
@@ -475,7 +475,7 @@ Yêu cầu: `FR-MENU-RUL-001` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Che
 | `TC-MENU-3704` | `AC-MENU-37-4` | Biên | Biến thể đổi tên được đếm theo món gốc | • "Thịt kho tàu" có món gốc là "Thịt kho trứng cút"<br>• T2 có "Thịt kho trứng cút", T5 có "Thịt kho tàu" | 1. bộ kiểm chạy | • có 1 kết quả không đạt "BR-MENU-013" ghi 2 lần xuất hiện ở T2 và T5 | Sẵn sàng |
 | `TC-MENU-3705` | `AC-MENU-37-5` | Biên | Không có thực đơn tuần trước | • loại suất chưa có thực đơn cho tuần liền trước | 1. bộ kiểm chạy | • quy tắc tuần chỉ xét các ngày của tuần hiện tại<br>• bảng kiểm ghi chú "không có dữ liệu tuần trước" | Chờ E2-Q2 |
 
-## US-MENU-38 — Điểm quy tắc và trạng thái "đã kiểm"
+## US-MENU-38: Điểm quy tắc và trạng thái "đã kiểm"
 
 Yêu cầu: `FR-MENU-RUL-001` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Checklist: `CL-F-38`
 
@@ -488,7 +488,7 @@ Yêu cầu: `FR-MENU-RUL-001` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Che
 | `TC-MENU-3805` | `AC-MENU-38-5` | Lỗi | Vi phạm bắt buộc không trừ điểm nhưng chặn trạng thái | • thực đơn đủ món, đủ món mặc định, có 1 vi phạm bắt buộc và không có cảnh báo | 1. bộ kiểm chạy | • điểm quy tắc là 100<br>• thực đơn giữ trạng thái "DRAFT" và nút "Gửi duyệt" tắt | Sẵn sàng |
 | `TC-MENU-3806` | `AC-MENU-38-6` | Biên | Thực đơn đã kiểm rơi về nháp | • thực đơn ở trạng thái "CHECKED" | 1. DDV đổi một món làm phát sinh vi phạm bắt buộc | • thực đơn về trạng thái "DRAFT" | Sẵn sàng |
 
-## US-MENU-39 — Kiểm ngưỡng giá suất
+## US-MENU-39: Kiểm ngưỡng giá suất
 
 Yêu cầu: `FR-MENU-MNU-004` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Checklist: `CL-F-39`
 
@@ -499,7 +499,7 @@ Yêu cầu: `FR-MENU-MNU-004` · Use case: `UC-MENU-007` · Ưu tiên: P0 · Che
 | `TC-MENU-3903` | `AC-MENU-39-3` | Biên | Tổng đúng bằng ngưỡng | • T3 có món phụ, rau, canh tổng 16000 và một món chính giá 24000 | 1. bộ kiểm chạy | • không có kết quả không đạt "BR-COST-012" cho món chính đó | Chờ E2-Q1 |
 | `TC-MENU-3904` | `AC-MENU-39-4` | Biên | Dùng giá hiệu lực tại ngày phục vụ | • "Bò xào" có giá 24000 đến hết 30/11 và 26000 từ 01/12 | 1. bộ kiểm chạy cho ngày 30/11 và ngày 01/12 | • tổng giá được tính bằng 24000 cho ngày 30/11 và 26000 cho ngày 01/12 | Sẵn sàng |
 
-## US-MENU-40 — Lý do chấp nhận cho cảnh báo mức nặng
+## US-MENU-40: Lý do chấp nhận cho cảnh báo mức nặng
 
 Yêu cầu: `FR-MENU-RUL-004` · Use case: `UC-MENU-007`, `008` · Ưu tiên: P0 · Checklist: `CL-F-40`
 
@@ -510,7 +510,7 @@ Yêu cầu: `FR-MENU-RUL-004` · Use case: `UC-MENU-007`, `008` · Ưu tiên: P0
 | `TC-MENU-4003` | `AC-MENU-40-3` | Biên | Lý do tự xoá khi cảnh báo hết | • DDV đã ghi lý do cho cảnh báo "BR-MENU-030" của T4 | 1. DDV đổi món làm T4 chỉ còn 1 món vị chua | • cảnh báo biến mất và lý do đã ghi bị xoá<br>• nếu cảnh báo đó xuất hiện lại sau này, ô lý do trống | Sẵn sàng |
 | `TC-MENU-4004` | `AC-MENU-40-4` | Biên | Cảnh báo mức vừa và nhẹ không cần lý do | • thực đơn chỉ có cảnh báo điểm phạt 2 và 1 | 1. DDV gửi duyệt | • việc gửi duyệt không bị chặn vì thiếu lý do | Sẵn sàng |
 
-## US-MENU-41 — Kiểm thực đơn chưa lưu
+## US-MENU-41: Kiểm thực đơn chưa lưu
 
 Yêu cầu: `FR-MENU-RUL-002` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Checklist: `CL-F-41`
 
@@ -521,7 +521,7 @@ Yêu cầu: `FR-MENU-RUL-002` · Use case: `UC-MENU-008` · Ưu tiên: P0 · Che
 | `TC-MENU-4103` | `AC-MENU-41-3` | Biên | Tải đồng thời | Bộ dữ liệu nền | 1. 20 lời gọi kiểm thực đơn chưa lưu được gửi đồng thời | • p95 thời gian phản hồi không vượt 2 giây và không lời gọi nào lỗi | Sẵn sàng |
 | `TC-MENU-4104` | `AC-MENU-41-4` | Lỗi | Tài khoản không có quyền | Bộ dữ liệu nền | 1. BT gọi lệnh kiểm thực đơn chưa lưu | • hệ thống trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-42 — Xem danh mục quy tắc
+## US-MENU-42: Xem danh mục quy tắc
 
 Yêu cầu: `FR-MENU-RUL-005` · Use case: `UC-MENU-013` · Ưu tiên: P0 · Checklist: `CL-F-42`
 
@@ -531,7 +531,7 @@ Yêu cầu: `FR-MENU-RUL-005` · Use case: `UC-MENU-013` · Ưu tiên: P0 · Che
 | `TC-MENU-4202` | `AC-MENU-42-2` | Biên | Quy tắc có đề nghị đang chờ duyệt | • quy tắc "BR-MENU-012" có 1 đề nghị thay đổi "PENDING" | 1. DDV mở danh mục quy tắc | • dòng "BR-MENU-012" hiện nhãn "chờ duyệt thay đổi", giá trị hiển thị là giá trị đang áp dụng | Sẵn sàng |
 | `TC-MENU-4203` | `AC-MENU-42-3` | Lỗi | Vai trò chỉ xem không sửa được | Bộ dữ liệu nền | 1. BT mở danh mục quy tắc | • không có nút "Sửa"<br>• gọi trực tiếp lệnh đề nghị sửa quy tắc trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-43 — Đề nghị sửa quy tắc
+## US-MENU-43: Đề nghị sửa quy tắc
 
 Yêu cầu: `FR-MENU-RUL-006` · Use case: `UC-MENU-013` · Ưu tiên: P0 · Checklist: `CL-F-43`
 
@@ -544,7 +544,7 @@ Yêu cầu: `FR-MENU-RUL-006` · Use case: `UC-MENU-013` · Ưu tiên: P0 · Che
 | `TC-MENU-4305` | `AC-MENU-43-5` | Biên | Quy tắc mới chặt hơn làm thực đơn đã kiểm rơi về nháp | • một thực đơn "CHECKED" đạt khi quy tắc "BR-MENU-010" đang tắt | 1. đề nghị bật "BR-MENU-010" được duyệt và thực đơn được kiểm lại<br>2. thực đơn có 2 món chính cùng nhóm nguyên liệu trong một ngày | • thực đơn về trạng thái "DRAFT" và hiện nhãn "cần kiểm lại" trong danh sách | Sẵn sàng |
 | `TC-MENU-4306` | `AC-MENU-43-6` | Biên | Thực đơn đã gửi duyệt giữ kết quả cũ | • một thực đơn "PENDING" có kết quả kiểm K | 1. một đề nghị sửa quy tắc được duyệt | • kết quả kiểm của thực đơn đó vẫn là K | Chờ E2-Q11 |
 
-## US-MENU-44 — Gửi duyệt thực đơn
+## US-MENU-44: Gửi duyệt thực đơn
 
 Yêu cầu: `FR-MENU-APV-001`, `006` · Use case: `UC-MENU-009` · Ưu tiên: P0 · Checklist: `CL-F-44`
 
@@ -558,7 +558,7 @@ Yêu cầu: `FR-MENU-APV-001`, `006` · Use case: `UC-MENU-009` · Ưu tiên: P0
 | `TC-MENU-4406` | `AC-MENU-44-6` | Biên | Điểm dưới ngưỡng cần hai người duyệt | • tham số "QUY_TAC_DIEM_TOI_THIEU" là 80 và thực đơn có điểm 74 | 1. DDV gửi duyệt thành công | • thực đơn hiện "chờ duyệt 0/2" | Sẵn sàng |
 | `TC-MENU-4407` | `AC-MENU-44-7` | Biên | Bộ kiểm đăng ký thêm báo không đạt | • một bộ kiểm khác đã đăng ký vào bước gửi duyệt và trả kết quả không đạt | 1. DDV chọn "Gửi duyệt" | • thực đơn giữ trạng thái cũ và hiện thông báo của bộ kiểm đó | Sẵn sàng |
 
-## US-MENU-45 — Duyệt hoặc trả lại thực đơn
+## US-MENU-45: Duyệt hoặc trả lại thực đơn
 
 Yêu cầu: `FR-MENU-APV-002` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-45`
 
@@ -571,7 +571,7 @@ Yêu cầu: `FR-MENU-APV-002` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Che
 | `TC-MENU-4505` | `AC-MENU-45-5` | Biên | Trả lại có lý do | Bộ dữ liệu nền | 1. ND1 trả lại với lý do "Thứ Tư có 3 món chiên, đề nghị đổi" | • thực đơn về "DRAFT", DDV sửa được và nhận thông báo kèm lý do<br>• lần gửi duyệt sau bắt đầu vòng duyệt mới từ 0 | Sẵn sàng |
 | `TC-MENU-4506` | `AC-MENU-45-6` | Biên | Công thức đổi sau khi thực đơn đã duyệt | • thực đơn "APPROVED" gắn công thức v1 của "Thịt kho trứng cút" | 1. công thức v2 của món đó được duyệt và có hiệu lực trong tuần của thực đơn | • thực đơn vẫn gắn v1 | Sẵn sàng |
 
-## US-MENU-46 — Trang chờ duyệt
+## US-MENU-46: Trang chờ duyệt
 
 Yêu cầu: `FR-MENU-DISH-004`, `RCP-003`, `PRC-002`, `APV-002` · Use case: `UC-MENU-010` · Ưu tiên: P0 · Checklist: `CL-F-46`
 
@@ -584,7 +584,7 @@ Yêu cầu: `FR-MENU-DISH-004`, `RCP-003`, `PRC-002`, `APV-002` · Use case: `UC
 | `TC-MENU-4605` | `AC-MENU-46-5` | Lỗi | Tài khoản không có quyền duyệt | Bộ dữ liệu nền | 1. DDV mở đường dẫn trang "Chờ duyệt" | • hệ thống trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 | `TC-MENU-4606` | `AC-MENU-46-6` | Biên | Duyệt bằng quyền được uỷ đã hết hạn | • ND2 được ND1 uỷ quyền duyệt thực đơn đến hết hôm qua | 1. ND2 duyệt một thực đơn | • hệ thống trả lỗi "ERR-AUTH-403-02" | Sẵn sàng |
 
-## US-MENU-47 — Thông báo duyệt
+## US-MENU-47: Thông báo duyệt
 
 Yêu cầu: `FR-SYS-NTF-001` · Use case: `UC-MENU-009`, `010` · Ưu tiên: P0 · Checklist: `CL-F-47`
 
@@ -595,7 +595,7 @@ Yêu cầu: `FR-SYS-NTF-001` · Use case: `UC-MENU-009`, `010` · Ưu tiên: P0 
 | `TC-MENU-4703` | `AC-MENU-47-3` | Biên | Gửi duyệt nhiều món một lần | Bộ dữ liệu nền | 1. DDV gửi duyệt 10 món trong một lần | • mỗi người duyệt nhận 1 thông báo gộp ghi "10 món chờ duyệt", không phải 10 thông báo | Sẵn sàng |
 | `TC-MENU-4704` | `AC-MENU-47-4` | Lỗi | Người gửi không tự nhận thông báo chờ duyệt | • ND1 vừa có quyền tạo vừa có quyền duyệt | 1. ND1 gửi duyệt một món do mình tạo | • ND1 không nhận thông báo chờ duyệt cho món đó | Sẵn sàng |
 
-## US-MENU-48 — Công bố thực đơn
+## US-MENU-48: Công bố thực đơn
 
 Yêu cầu: `FR-MENU-APV-003` · Use case: `UC-MENU-011` · Ưu tiên: P0 · Checklist: `CL-F-48`
 
@@ -606,7 +606,7 @@ Yêu cầu: `FR-MENU-APV-003` · Use case: `UC-MENU-011` · Ưu tiên: P0 · Che
 | `TC-MENU-4803` | `AC-MENU-48-3` | Biên | Ngày phục vụ đầu tiên là ngày mai | • thực đơn "APPROVED" có ngày phục vụ đầu tiên là D+1 | 1. DDV chọn "Công bố" | • thực đơn chuyển "PUBLISHED" | Sẵn sàng |
 | `TC-MENU-4804` | `AC-MENU-48-4` | Biên | Thực đơn chưa duyệt không có nút công bố | • thực đơn ở trạng thái "PENDING" | 1. DDV mở thực đơn | • không có nút "Công bố" | Sẵn sàng |
 
-## US-MENU-49 — Thu hồi và sửa lại
+## US-MENU-49: Thu hồi và sửa lại
 
 Yêu cầu: `FR-MENU-APV-004`, `005` · Use case: `UC-MENU-011` · Ưu tiên: P0 · Checklist: `CL-F-49`
 
@@ -618,7 +618,7 @@ Yêu cầu: `FR-MENU-APV-004`, `005` · Use case: `UC-MENU-011` · Ưu tiên: P0
 | `TC-MENU-4904` | `AC-MENU-49-4` | Biên | Kết quả kiểm tính lại theo giá trị hiện hành | • sau khi thực đơn được công bố, thuộc tính vị chua của một món trong thực đơn đã đổi thành "Có" | 1. DDV thu hồi, chọn "Sửa" và bộ kiểm chạy | • kết quả kiểm dùng thuộc tính mới của món đó | Sẵn sàng |
 | `TC-MENU-4905` | `AC-MENU-49-5` | Biên | Thu hồi phát sự kiện cho phân hệ khác | Bộ dữ liệu nền | 1. DDV thu hồi thực đơn | • hệ thống phát sự kiện "thực đơn bị thu hồi" mang mã thực đơn và lý do | Sẵn sàng |
 
-## US-MENU-50 — Hai người duyệt khi điểm thấp
+## US-MENU-50: Hai người duyệt khi điểm thấp
 
 Yêu cầu: `FR-MENU-RUL-007` · Use case: `UC-MENU-010` · Ưu tiên: P1 · Checklist: `CL-F-50`
 
@@ -629,7 +629,7 @@ Yêu cầu: `FR-MENU-RUL-007` · Use case: `UC-MENU-010` · Ưu tiên: P1 · Che
 | `TC-MENU-5003` | `AC-MENU-50-3` | Biên | Điểm đúng bằng ngưỡng | • tham số "QUY_TAC_DIEM_TOI_THIEU" là 80 và thực đơn có điểm 80 | 1. DDV gửi duyệt | • thực đơn cần 1 người duyệt | Sẵn sàng |
 | `TC-MENU-5004` | `AC-MENU-50-4` | Biên | Người thứ hai trả lại | • ND1 đã duyệt thực đơn cần 2 người duyệt | 1. ND2 trả lại với lý do hợp lệ | • thực đơn về "DRAFT" và quyết định duyệt của ND1 không còn hiệu lực cho vòng sau | Chờ O-06 |
 
-## US-MENU-51 — Sao chép thực đơn
+## US-MENU-51: Sao chép thực đơn
 
 Yêu cầu: `FR-MENU-MNU-005` · Use case: `UC-MENU-007` · Ưu tiên: P1 · Checklist: `CL-F-51`
 
@@ -640,7 +640,7 @@ Yêu cầu: `FR-MENU-MNU-005` · Use case: `UC-MENU-007` · Ưu tiên: P1 · Che
 | `TC-MENU-5103` | `AC-MENU-51-3` | Biên | Thực đơn nguồn có món đã ngừng dùng | • thực đơn nguồn có "Mực xào" ở T3 và "Mực xào" đã "INACTIVE" | 1. DDV sao chép | • ô tương ứng của T3 để trống<br>• màn hình liệt kê "Mực xào" trong danh sách món bị bỏ | Sẵn sàng |
 | `TC-MENU-5104` | `AC-MENU-51-4` | Biên | Thực đơn sao chép được kiểm ngay | Bộ dữ liệu nền | 1. DDV sao chép một thực đơn | • bộ kiểm chạy trên bản sao và bảng kiểm hiện kết quả theo quy tắc hiện hành | Sẵn sàng |
 
-## US-MENU-52 — Lịch sử món đã dùng
+## US-MENU-52: Lịch sử món đã dùng
 
 Yêu cầu: `FR-MENU-MNU-006` · Use case: `UC-MENU-007` · Ưu tiên: P1 · Checklist: `CL-F-52`
 
@@ -651,21 +651,21 @@ Yêu cầu: `FR-MENU-MNU-006` · Use case: `UC-MENU-007` · Ưu tiên: P1 · Che
 | `TC-MENU-5203` | `AC-MENU-52-3` | Biên | Không tính loại suất khác | • "Cá kho" chỉ xuất hiện trong thực đơn của "Suất 35.000đ" | 1. DDV mở hộp chọn món cho "Suất 40.000đ" | • dòng "Cá kho" ghi "chưa dùng 4 tuần gần nhất" | Sẵn sàng |
 | `TC-MENU-5204` | `AC-MENU-52-4` | Lỗi | Không tính thực đơn nháp và đã huỷ | • "Cá kho" chỉ xuất hiện trong một thực đơn "DRAFT" của tuần trước | 1. DDV mở hộp chọn món | • dòng "Cá kho" ghi "chưa dùng 4 tuần gần nhất" | Sẵn sàng |
 
-## US-MENU-53 — Xuất PDF
+## US-MENU-53: Xuất PDF
 
 Yêu cầu: `FR-MENU-MNU-008` · Use case: `UC-MENU-011` · Ưu tiên: P1 · Checklist: `CL-F-53`
 
 | TC ID | AC | Loại | Tên | Tiền điều kiện | Bước thực hiện | Kết quả mong đợi | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `TC-MENU-5301` | `AC-MENU-53-1` | Thuận lợi | Xuất thực đơn đã công bố | • thực đơn "PUBLISHED" 6 ngày | 1. DDV chọn "Xuất PDF" | • tệp PDF có lưới 6 cột ngày × 7 dòng vị trí với tên món, đánh dấu món mặc định<br>• tiêu đề ghi tên loại suất và khoảng ngày của tuần | Sẵn sàng |
-| `TC-MENU-5302` | `AC-MENU-53-2` | Biên | Xuất thực đơn chưa công bố | • thực đơn ở trạng thái "DRAFT" | 1. DDV chọn "Xuất PDF" | • mỗi trang của tệp có dòng "BẢN NHÁP — CHƯA CÔNG BỐ" | Sẵn sàng |
+| `TC-MENU-5302` | `AC-MENU-53-2` | Biên | Xuất thực đơn chưa công bố | • thực đơn ở trạng thái "DRAFT" | 1. DDV chọn "Xuất PDF" | • mỗi trang của tệp có dòng "BẢN NHÁP: CHƯA CÔNG BỐ" | Sẵn sàng |
 | `TC-MENU-5303` | `AC-MENU-53-3` | Lỗi | Vai trò chỉ xem xuất thực đơn chưa công bố | Bộ dữ liệu nền | 1. BT gọi lệnh xuất PDF của thực đơn "DRAFT" | • hệ thống trả lỗi "ERR-SYS-404-01" | Sẵn sàng |
 | `TC-MENU-5304` | `AC-MENU-53-4` | Biên | Tệp không chứa giá và cost | Bộ dữ liệu nền | 1. DDV xuất PDF một thực đơn | • tệp không có giá bán, giá nhập hay cost | Sẵn sàng |
 
 
 ---
 
-# Phần B — Test case bổ sung
+# Phần B: Test case bổ sung
 
 ## B.1 Phân quyền và bảo mật
 
@@ -750,7 +750,7 @@ Mỗi test case chạy lần lượt các giá trị trong cột "Giá trị →
 
 ## B.4 Hiệu năng
 
-Chạy trên môi trường có cấu hình bằng môi trường vận hành thật (`NFR-PERF-001`). Cấu hình đó chưa xác định — chờ [O-04].
+Chạy trên môi trường có cấu hình bằng môi trường vận hành thật (`NFR-PERF-001`). Cấu hình đó chưa xác định: chờ [O-04].
 
 | TC ID | Checklist | Dữ liệu | Bước | Kết quả mong đợi | Tham chiếu |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -770,7 +770,7 @@ Chạy trên môi trường có cấu hình bằng môi trường vận hành th
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `TC-MENU-I-01` | `CL-I-01` | 2 tài khoản có quyền duyệt món; ND1 có thêm quyền tạo | (1) DDV gửi duyệt 10 món một lần. (2) ND1 gửi duyệt 1 món do mình tạo. (3) ND2 trả lại 1 món của DDV | (1) ND1 và ND2 mỗi người 1 thông báo ghi "10 món". (2) Chỉ ND2 nhận thông báo. (3) DDV nhận 1 thông báo có lý do, liên kết mở đúng món | `BR-MNU-010` |
 | `TC-MENU-I-02` | `CL-I-02` | Tham số `QUY_TAC_DIEM_TOI_THIEU` = 80; thực đơn A điểm 85 đang `PENDING` (cần 1 người); thực đơn B điểm 85 đang `CHECKED` | Đổi tham số thành 90 (có duyệt); gửi duyệt B | A vẫn cần 1 người duyệt; B cần 2 người duyệt | `FR-SYS-PRM-001` |
-| `TC-MENU-I-03` | `CL-I-03` | — | Chạy `TC-MENU-S-10` | Như `TC-MENU-S-10` | `FR-AUTH-RBAC-003` |
+| `TC-MENU-I-03` | `CL-I-03` | Không áp dụng | Chạy `TC-MENU-S-10` | Như `TC-MENU-S-10` | `FR-AUTH-RBAC-003` |
 | `TC-MENU-I-04` | `CL-I-04` | Có món ở cả 4 trạng thái; món `ACTIVE` có công thức ở cả 4 trạng thái | Gọi dịch vụ tra cứu món và công thức đã duyệt | Chỉ trả món `ACTIVE` và công thức `ACTIVE` hiệu lực theo ngày yêu cầu | SRS 2.1 |
 | `TC-MENU-I-05` | `CL-I-05` | Có thực đơn ở cả 6 trạng thái | (1) Gọi dịch vụ tra cứu thực đơn đã công bố. (2) Thu hồi thực đơn `PUBLISHED`, gọi lại ngay | (1) Chỉ trả thực đơn `PUBLISHED`. (2) Thực đơn vừa thu hồi không còn trong kết quả | SRS 2.1 |
 | `TC-MENU-I-06` | `CL-I-06` | 5 thực đơn đã lưu có vi phạm khác nhau | Với mỗi thực đơn: lấy kết quả kiểm đã lưu; gửi cùng nội dung qua lệnh kiểm chưa lưu bằng tài khoản dịch vụ | 5 cặp kết quả giống hệt nhau | `FR-MENU-RUL-002` |
@@ -778,7 +778,7 @@ Chạy trên môi trường có cấu hình bằng môi trường vận hành th
 | `TC-MENU-I-08` | `CL-I-08` | Thực đơn `CHECKED`; một bộ kiểm giả luôn trả "không đạt" | (1) Đăng ký bộ kiểm giả, gửi duyệt. (2) Gỡ bộ kiểm giả, gửi duyệt | (1) Thực đơn giữ `CHECKED`, hiện thông báo của bộ kiểm giả. (2) Thực đơn chuyển `PENDING`. Mã của phân hệ MENU không đổi giữa hai lần | `FR-MENU-APV-006` |
 | `TC-MENU-I-09` | `CL-I-09` | Món có ảnh | Lấy liên kết ảnh; mở ngay; mở lại sau 16 phút; mở bằng tài khoản không đăng nhập | Lần đầu mở được; sau 16 phút liên kết hết hạn; ảnh không truy cập được nếu không có chữ ký hợp lệ | `FR-SYS-FILE-001` |
 
-## B.6 Nhập bảng tính — theo cột
+## B.6 Nhập bảng tính: theo cột
 
 Mỗi test case dùng một tệp chứa đúng các lỗi nêu ở cột "Dữ liệu", mỗi lỗi một dòng, cùng ít nhất 3 dòng hợp lệ. Kết quả chung: `ERR-MENU-422-20`, nút Nhập bị khoá, 0 bản ghi được tạo, trừ khi ghi khác.
 
@@ -883,7 +883,7 @@ Khi viết phần B có 11 chỗ SRS v0.2.0 chưa quy định. **Cả 11 chỗ �
 | 0.1.0 | 2026-11-11 | BA | Khởi tạo: phần A sinh từ tiêu chí nghiệm thu v0.1.0; phần B viết từ checklist v0.1.0 |
 | 0.1.1 | 2026-11-11 | BA | Điền kết quả mong đợi cho 13 ô "SRS chưa nêu" theo SRS epic v0.3.0; thêm `BR-CAT-021` → `023` vào bảng độ phủ |
 
-## Bổ sung thiết kế ca quy tắc — 11/11/2026
+## Bổ sung thiết kế ca quy tắc ngày 11/11/2026
 
 [86ca đạt/vi phạm](rule-test-cases.md) đã viết theo đề xuất hiện hành cho43quy tắc. Tất cả vẫn BLOCKED DL-01/điểm mở nguồn; chưa phải khoảng140ca rule được QA chốt và chưa chạy engine. [RTM chuẩn hóa](traceability.md) giữ bộ story/AC/test baseline hiện có.
 

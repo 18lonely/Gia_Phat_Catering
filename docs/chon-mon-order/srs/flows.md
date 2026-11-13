@@ -1,15 +1,15 @@
 ---
 id: DOC-CHON-MON-ORDER-SRS-FLOWS
-title: Sequence E6 — race chọn món và khóa
+title: "Sequence E6: race chọn món và khóa"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# Sequence E6 — race chọn món và khóa
+# Sequence E6: race chọn món và khóa
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

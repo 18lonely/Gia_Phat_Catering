@@ -8,7 +8,7 @@ const rows=JSON.parse(read('validation/design-index.json')),cat=JSON.parse(read(
 ck('5 features exact',JSON.stringify([...new Set(rows.map(r=>r.feature))])===JSON.stringify(['FEAT-074','FEAT-075','FEAT-076','FEAT-077','FEAT-078']));
 const definitions=[...rows.flatMap(r=>[r.fr,r.uc,r.us,r.api,r.br,r.err,...r.ac,...r.tc]),...cat.ports.map(p=>p.id),'NFR-PUR-001','NFR-PUR-002','NFR-PUR-003','NFR-PUR-004','NFR-PUR-005','ERR-PUR-409-11','ERR-PUR-503-11','ERR-PUR-422-99'];
 ck('Unique new IDs',new Set(definitions).size===definitions.length);
-// 13/11/2026 BA — XC-04: historical baseline references a removed uc-refresh folder.
+// 13/11/2026 BA, XC-04: historical baseline references a removed uc-refresh folder.
 // Check current E1-E10 declarations, not references added by later reports or previews.
 // Historical baseline remains unchanged; session diff checker verifies file preservation.
 const priorDirs=['nen-tang','thuc-don-dinh-luong','cost','dinh-duong','agent-noi-bo','chon-mon-order','giao-nhan-doanh-thu','website-cong-khai','agent-dinh-duong-vien','crm-ban-hang'];
@@ -24,10 +24,10 @@ for(const r of rows){
  ck('FR defined '+r.fr,read('srs/spec.md').includes(r.fr));
  ck('UC Cockburn '+r.uc,fs.existsSync(path.join(base,'usecases',r.uc+'.md'))&&['Actor','Trigger','Tiền điều kiện','Hậu điều kiện','Luồng chính','Ngoại lệ',r.fr].every(x=>read('usecases/'+r.uc+'.md').includes(x)));
  ck('Story '+r.us,[r.us,r.fr,r.uc].every(x=>read('userstories/backlog.md').includes(x)));
- for(let j=0;j<3;j++){const ac=read('userstories/acceptance-criteria.md').split('### '+r.ac[j]+' ')[1]?.split('### ')[0]||'';ck('GWT '+r.ac[j],['Given ','When ','Then '].every(x=>ac.includes(x)));ck('Case '+r.tc[j],fixture.cases.some(t=>t.id===r.tc[j]&&t.ac===r.ac[j]&&t.fr===r.fr&&t.expected===r.scenarios[j][1])&&read('test/test-cases.md').includes(r.tc[j]));}
+ for(let j=0;j<3;j++){const ac=read('userstories/acceptance-criteria.md').split('### '+r.ac[j]+':')[1]?.split('### ')[0]||'';ck('GWT '+r.ac[j],['Given ','When ','Then '].every(x=>ac.includes(x)));ck('Case '+r.tc[j],fixture.cases.some(t=>t.id===r.tc[j]&&t.ac===r.ac[j]&&t.fr===r.fr&&t.expected===r.scenarios[j][1])&&read('test/test-cases.md').includes(r.tc[j]));}
  const line=read('test/traceability.md').split('\n').find(l=>l.startsWith('| '+r.feature+' | '+r.fr+' |'))||'';
  ck('RTM complete '+r.fr,[r.uc,r.us,...r.ac,...r.tc,r.api,r.screen].every(x=>line.includes(x)));
- ck('API backtrace '+r.api,cat.endpoints.some(e=>e.id===r.api&&e.fr.includes(r.fr))&&read('api/api-spec.md').includes('## '+r.api+' —')&&read('api/data-mapping.md').includes(r.api));
+ ck('API backtrace '+r.api,cat.endpoints.some(e=>e.id===r.api&&e.fr.includes(r.fr))&&read('api/api-spec.md').includes('## '+r.api+':')&&read('api/data-mapping.md').includes(r.api));
  ck('Screen '+r.screen,read('ui/screens.md').includes(r.screen)&&read('html-wireframe/purchase-workbench.html').includes('id="'+r.screen+'"'));
 }
 for(const e of [...cat.endpoints,...cat.ports])ck('Every API has valid FR '+e.id,e.fr.length>0&&e.fr.every(f=>rows.some(r=>r.fr===f)));

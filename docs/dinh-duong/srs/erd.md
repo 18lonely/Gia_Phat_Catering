@@ -1,6 +1,6 @@
-# ERD và từ điển dữ liệu — NUTR
+# ERD và từ điển dữ liệu (NUTR)
 
-Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.0 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -53,7 +53,7 @@ Unique/index: `(ingredient_id, version) [unique]`.
 | kind | varchar(8) | Không | not null | DISH hoặc MEAL |
 | recipe_id | bigint | Có | ref: > recipes.id | Bắt buộc với DISH, null với MEAL |
 | menu_id | bigint | Có | ref: > menus.id | Bắt buộc với MEAL, null với DISH |
-| menu_version | int | Có | — | Bắt buộc khi MEAL |
+| menu_version | int | Có | Không áp dụng | Bắt buộc khi MEAL |
 | service_date | date | Không | not null | Ngày nghiệp vụ Việt Nam |
 | scope_snapshot | json | Không | not null | Id cơ sở nguồn; dùng kiểm scope hiện tại, không cấp quyền từ snapshot |
 | inputs_snapshot | json | Không | not null | Breakdown, recipe/nutrient versions, selectedItemIds và tất cả giá trị quy đổi; không chỉ FK |

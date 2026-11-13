@@ -1,4 +1,4 @@
-# Sơ đồ Use Case — Epic E2 · Thực đơn & Định lượng
+# Sơ đồ Use Case: Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
@@ -22,7 +22,7 @@ Sơ đồ cho biết ai làm được việc gì trong phân hệ MENU ở đợ
 | Người duyệt | Chính | `GIAM_DOC`, hoặc người được uỷ quyền | Ai giữ vai trò này: [O-06] |
 | Quản lý cơ sở, bếp trưởng, kế toán (A-07, A-08, A-09) | Hỗ trợ | `QL_CO_SO`, `BEP_TRUONG`, `KT_*` | Chỉ xem |
 | Agent Nội bộ, Agent Dinh dưỡng viên (A-12, A-11) | Hệ thống | Tài khoản dịch vụ | Gọi `UC-MENU-008` từ R5, R9; ngoài phạm vi R2 |
-| Bộ hẹn giờ (A-13) | Hệ thống | — | Chuyển công thức cũ sang `SUPERSEDED` vào ngày hiệu lực |
+| Bộ hẹn giờ (A-13) | Hệ thống | Không áp dụng | Chuyển công thức cũ sang `SUPERSEDED` vào ngày hiệu lực |
 
 ## 3. Sơ đồ
 

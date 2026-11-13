@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-REVIEW-QUESTIONS-MD
-title: Câu hỏi mới E10 — chờ trả lời
+title: "Câu hỏi mới E10: chờ trả lời"
 version: 0.1.1
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-13
 ---
-# Câu hỏi mới E10 — chờ trả lời
+# Câu hỏi mới E10: chờ trả lời
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 
@@ -40,5 +40,5 @@ Tất cả **CHỜ TRẢ LỜI**. Cột Trả lời và Nguồn/người/ngày �
 | E10-Q15 | Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem? | Không thể tự suy từ cost nguyên liệu hoặc chọn cách trừ CK khi câu nguồn còn mở. | Kế toán và Giám đốc | FR-SALE-QUOT-001 / UC-CRM-010 | Giữ giá trị chưa xác định tới khi công thức/nguồn được duyệt; quyền riêng với báo giá. | Chỉ hiển thị cost có nguồn theo quyền và bỏ chỉ số biên lợi nhuận cho tới khi được duyệt. | CHỜ TRẢ LỜI |  |  |
 | E10-Q16 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | XC-05; DEC-202; nguồn srs/data-dictionary.md mục crm_intakes | chưa rõ | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. |  | CHỜ TRẢ LỜI |  |  |
 
-> Chờ E10-Q03, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-07](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E10-Q03, O-06: XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-07](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 

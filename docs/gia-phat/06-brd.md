@@ -1,4 +1,4 @@
-# Tài liệu Yêu cầu Nghiệp vụ (BRD) — Nền tảng Gia Phát
+# Tài liệu Yêu cầu Nghiệp vụ (BRD): Nền tảng Gia Phát
 
 ## Metadata
 
@@ -7,7 +7,7 @@
 | Template | `06-brd.md` · BA-Kit v1.0 |
 | Sản phẩm | Website công khai + cổng khách hàng/người ăn + quản trị nội bộ + 2 AI agent |
 | Phiên bản | v0.1.0 |
-| Trạng thái | **Bản nháp chờ duyệt** — chưa có số liệu tài chính (mục 8), còn 6 điểm mở (mục 11) |
+| Trạng thái | **Bản nháp chờ duyệt**: chưa có số liệu tài chính (mục 8), còn 6 điểm mở (mục 11) |
 | Ngày | 10/11/2026 |
 | Người duyệt | Giám đốc Gia Phát (xem điểm mở O-06) |
 | Tài liệu liên quan | [Kế hoạch tổng thể](00-ke-hoach-tong-the.md) · [Bảng quy tắc thực đơn](brainstorms/quy-tac-thuc-don.md) · [Phân tích bản thiết kế cũ](../../GiaPhat_PhanTich_ThietKe.md) · `GiaPhat_CMAP_CRM.html` bản 1.0 · `Yêu cầu về thực đơn và cost tp.docx` |
@@ -80,7 +80,7 @@ Mọi mức mục tiêu dưới đây là **[ĐỀ XUẤT]**; cột "Hiện tạ
 | BO-07 | Rút ngắn đối soát | Số ngày từ cuối kỳ đến khi khách ký biên bản đối soát | [CẦN SỐ LIỆU] | ≤ 5 ngày làm việc | 2 kỳ sau khi có FIN |
 | BO-08 | Website sinh lead đo được | Số lead/tháng từ form và từ công cụ dựng thực đơn, có nguồn | Không đo được | 100% lead có nguồn; số lượng mục tiêu [CẦN SỐ LIỆU] | Từ ngày site mới chạy |
 | BO-09 | Không mất thứ hạng tìm kiếm khi bỏ WordPress | Số phiên truy cập tự nhiên/tháng | [CẦN SỐ LIỆU] | ≥ 90% mức trước chuyển đổi, đo sau 60 ngày | 60 ngày sau chuyển đổi |
-| BO-10 | Chịu được giờ cao điểm | Số người dùng đồng thời hệ thống phục vụ với p95 API ≤ 300 ms (đọc), ≤ 800 ms (ghi) | — | 1000 | Kiểm thử tải trước khi mở cho người ăn |
+| BO-10 | Chịu được giờ cao điểm | Số người dùng đồng thời hệ thống phục vụ với p95 API ≤ 300 ms (đọc), ≤ 800 ms (ghi) | Chưa xác định | 1000 | Kiểm thử tải trước khi mở cho người ăn |
 
 ---
 
@@ -116,7 +116,7 @@ Mọi mức mục tiêu dưới đây là **[ĐỀ XUẤT]**; cột "Hiện tạ
 | X-06 | Đồng bộ tự động với Zalo cá nhân | Không có cách kết nối hợp lệ |
 | X-07 | Ghi lượng thức ăn bỏ thừa | Gia Phát chưa thu thập; để sau |
 
-Trường học, bệnh viện và tiệc cỗ: chưa xác định trong hay ngoài phạm vi bản đầu — điểm mở O-05.
+Trường học, bệnh viện và tiệc cỗ: chưa xác định trong hay ngoài phạm vi bản đầu, điểm mở O-05.
 
 ---
 
@@ -130,7 +130,7 @@ Trường học, bệnh viện và tiệc cỗ: chưa xác định trong hay ngo
 | Kế toán | Chủ nghiệp vụ giá nhập, doanh thu, đối soát | Định nghĩa cost, VAT, khớp MISA | Trả lời H-6, H-7 của bảng quy tắc |
 | Người đặt tổng (công ty khách) | Đặt định mức, chốt tổng số suất | Ít thao tác, số liệu đối soát rõ | Thử nghiệm |
 | Người ăn | Chọn món, đánh giá | Được chọn, biết mình ăn gì | Thử nghiệm |
-| Khách vãng lai | Xem thực đơn mẫu, dùng công cụ | Giá và chất lượng minh bạch | — |
+| Khách vãng lai | Xem thực đơn mẫu, dùng công cụ | Giá và chất lượng minh bạch | Không áp dụng |
 | Đội phát triển | Xây và vận hành | Yêu cầu rõ, dữ liệu gốc sẵn | Điểm mở O-04 |
 
 ---
@@ -156,14 +156,14 @@ Mã phân hệ và mã tính năng lấy từ mục 4 và 5 của kế hoạch t
 | BN-13 | Lead từ form và từ công cụ dựng thực đơn tự vào CRM, kèm nguồn và thực đơn khách đã dựng | BO-08 | PUB-06, CUS | P0 |
 | BN-14 | Agent Nội bộ dựng thực đơn tuần đạt BN-04 từ 3 đầu vào: loại suất, tuần, danh sách kiêng kỵ | BO-03 | AIO-01 | P0 |
 | BN-15 | Agent Dinh dưỡng viên tạo thực đơn tuần cho tập thể và gửi về Gia Phát ở trạng thái nháp | BO-08 | AIN-01 → 04 | P0 |
-| BN-16 | Agent phía khách không truy cập được bảng giá nhập và cost; kiểm soát ở tầng công cụ và quyền cơ sở dữ liệu | — (kiểm soát) | AIN | P0 |
+| BN-16 | Agent phía khách không truy cập được bảng giá nhập và cost; kiểm soát ở tầng công cụ và quyền cơ sở dữ liệu | Không áp dụng (kiểm soát) | AIN | P0 |
 | BN-17 | Mọi thực đơn do AI tạo phải qua người duyệt trước khi công bố | BO-04 | MENU-07 | P0 |
 | BN-18 | Toàn bộ bài viết cũ giữ nguyên URL hoặc chuyển hướng 301 | BO-09 | PUB-02 | P0 |
-| BN-19 | Dữ liệu sức khoẻ cá nhân chỉ thu khi người ăn đồng ý bằng thao tác rõ ràng; người ăn xoá được dữ liệu của mình | — (pháp lý) | AUTH-05, NUTR-04 | P1 |
+| BN-19 | Dữ liệu sức khoẻ cá nhân chỉ thu khi người ăn đồng ý bằng thao tác rõ ràng; người ăn xoá được dữ liệu của mình | Không áp dụng (pháp lý) | AUTH-05, NUTR-04 | P1 |
 | BN-20 | Gợi ý cá nhân: nên chọn món nào trong 3 món theo hồ sơ đã khai | BO-05 | AIN-05, NUTR-05 | P1 |
 | BN-21 | Cảnh báo khi giá nhập đổi làm thực đơn đã duyệt vượt ngưỡng | BO-01 | COST-06, AIO-02 | P1 |
 | BN-22 | Đối chiếu cost dự toán với thực mua theo ngày và cơ sở | BO-02 | COST-07, AIO-04 | P1 |
-| BN-23 | Hỏi đáp số liệu bằng lời, giới hạn theo quyền của người hỏi, chỉ đọc | — | AIO-06 | P2 |
+| BN-23 | Hỏi đáp số liệu bằng lời, giới hạn theo quyền của người hỏi, chỉ đọc | Không áp dụng | AIO-06 | P2 |
 
 ---
 
@@ -174,8 +174,8 @@ Danh sách đầy đủ 43 quy tắc nằm ở [bảng quy tắc thực đơn](b
 | Mã | Quy tắc | Trạng thái |
 |---|---|---|
 | BR-COST-001 | Cost thực phẩm mỗi ngày ÷ doanh thu suất ăn ≤ 52% | Từ docx |
-| BR-COST-002 | Doanh thu làm mẫu số là giá suất đã trừ VAT | [ĐỀ XUẤT] — xem ví dụ dưới |
-| BR-COST-003 | Thành phần tính vào cost | **Chưa chốt** — điểm mở O-01 |
+| BR-COST-002 | Doanh thu làm mẫu số là giá suất đã trừ VAT | [ĐỀ XUẤT]: xem ví dụ dưới |
+| BR-COST-003 | Thành phần tính vào cost | **Chưa chốt**: điểm mở O-01 |
 | BR-COST-012 | Tổng giá bán các món người ăn chọn ≤ định mức suất của công ty | [ĐÃ CHỐT D-12, D-21] |
 | BR-MENU-001, 002 | Mỗi ngày đúng số món chính của loại suất, trong đó đúng 1 món Healthy | Từ docx |
 
@@ -312,7 +312,7 @@ Theo `rules/15-change-request-impact-matrix.md`, bốn góc độ:
 
 | Góc độ | Tác động |
 |---|---|
-| Tài liệu | Bản HTML cần cập nhật: mục 0 (bỏ "mỗi công ty một người đặt tổng nhập số"), mục 2 (thang 7 loại số lượng — thêm cấp món/suất), mục 3 (người ăn không còn ẩn danh), mục 4 (kiến trúc phân hệ, ERD), mục 5 (lộ trình). Bản HTML hiện **không còn là nguồn đúng** cho các phần này. |
+| Tài liệu | Bản HTML cần cập nhật: mục 0 (bỏ "mỗi công ty một người đặt tổng nhập số"), mục 2 (thang 7 loại số lượng: thêm cấp món/suất), mục 3 (người ăn không còn ẩn danh), mục 4 (kiến trúc phân hệ, ERD), mục 5 (lộ trình). Bản HTML hiện **không còn là nguồn đúng** cho các phần này. |
 | Kỹ thuật | Thêm 8 nhóm thực thể: người dùng/vai trò, cơ sở, nguyên liệu, giá nhập, loại suất, giá bán món, người ăn + lựa chọn món, thành phần dinh dưỡng. Thêm hàng đợi và worker cho AI. Thêm site công khai có SSR. |
 | Kiểm thử | Chưa có test case nào từ bản cũ nên không có gì bị vô hiệu. Phát sinh 3 nhóm kiểm thử mới: kiểm thử tải 1000 người dùng đồng thời, kiểm thử bộ quy tắc (43 quy tắc), kiểm thử hành vi 2 agent. |
 | Kế hoạch & rủi ro | Lộ trình 4 giai đoạn của bản HTML bị thay bằng 13 epic chia 3 đợt. Cost chuyển từ giai đoạn 3 lên đợt đầu. Thời lượng chưa ước tính được (O-04). |

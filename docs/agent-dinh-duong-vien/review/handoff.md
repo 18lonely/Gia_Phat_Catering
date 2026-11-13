@@ -1,4 +1,4 @@
-# Bàn giao E9 — 12/11/2026
+# Bàn giao E9 ngày 12/11/2026
 
 ## Gói này gồm gì
 

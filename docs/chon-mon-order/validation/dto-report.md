@@ -1,4 +1,4 @@
-# Báo cáo E6 — hợp nhất gap và DTO
+# Báo cáo E6: hợp nhất gap và DTO
 
 11/11/2026 · BA/tài liệu; baseline dto-baseline-sha256.json, không Git. Không chạy generator, không sửa wireframe hoặc snapshot bàn giao cũ.
 

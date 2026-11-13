@@ -1,4 +1,4 @@
-# RTM MENU — chuẩn hóa tham chiếu hiện có
+# RTM MENU: chuẩn hóa tham chiếu hiện có
 
 Phiên bản0.1.0 · 2026-11-11 · Draft. Sinh từ backlog/AC/test hiện có; mở rộng mã rút gọn, không tự bổ sung độ phủ. Ca quy tắc riêng nằm tại [rule-test-cases.md](rule-test-cases.md).
 
@@ -22,7 +22,7 @@ Phiên bản0.1.0 · 2026-11-11 · Draft. Sinh từ backlog/AC/test hiện có; 
 | FR-MENU-DISH-004 | US-MENU-11 | UC-MENU-010 | AC-MENU-11-1, AC-MENU-11-2, AC-MENU-11-3, AC-MENU-11-4, AC-MENU-11-5, AC-MENU-11-6 | TC-MENU-1101, TC-MENU-1102, TC-MENU-1103, TC-MENU-1104, TC-MENU-1105, TC-MENU-1106 | Thiết kế; chưa chạy backend |
 | FR-MENU-DISH-004 | US-MENU-46 | UC-MENU-010 | AC-MENU-46-1, AC-MENU-46-2, AC-MENU-46-3, AC-MENU-46-4, AC-MENU-46-5, AC-MENU-46-6 | TC-MENU-4601, TC-MENU-4602, TC-MENU-4603, TC-MENU-4604, TC-MENU-4605, TC-MENU-4606 | Thiết kế; chưa chạy backend |
 | FR-MENU-DISH-005 | US-MENU-28 | UC-MENU-003 | AC-MENU-28-1, AC-MENU-28-2, AC-MENU-28-3, AC-MENU-28-4 | TC-MENU-2801, TC-MENU-2802, TC-MENU-2803, TC-MENU-2804 | Thiết kế; chưa chạy backend |
-| FR-MENU-DISH-006 | US-MENU-09 | — | AC-MENU-09-1, AC-MENU-09-2, AC-MENU-09-3 | TC-MENU-0901, TC-MENU-0902, TC-MENU-0903 | Thiết kế; chưa chạy backend |
+| FR-MENU-DISH-006 | US-MENU-09 | Chưa có | AC-MENU-09-1, AC-MENU-09-2, AC-MENU-09-3 | TC-MENU-0901, TC-MENU-0902, TC-MENU-0903 | Thiết kế; chưa chạy backend |
 | FR-MENU-DISH-007 | US-MENU-06 | UC-MENU-002 | AC-MENU-06-1, AC-MENU-06-2, AC-MENU-06-3 | TC-MENU-0601, TC-MENU-0602, TC-MENU-0603 | Thiết kế; chưa chạy backend |
 | FR-MENU-DISH-008 | US-MENU-08 | UC-MENU-002 | AC-MENU-08-1, AC-MENU-08-2, AC-MENU-08-3 | TC-MENU-0801, TC-MENU-0802, TC-MENU-0803 | Thiết kế; chưa chạy backend |
 | FR-MENU-DISH-009 | US-MENU-29 | UC-MENU-002 | AC-MENU-29-1, AC-MENU-29-2, AC-MENU-29-3, AC-MENU-29-4 | TC-MENU-2901, TC-MENU-2902, TC-MENU-2903, TC-MENU-2904 | Thiết kế; chưa chạy backend |
@@ -64,7 +64,7 @@ Phiên bản0.1.0 · 2026-11-11 · Draft. Sinh từ backlog/AC/test hiện có; 
 | FR-MENU-RCP-004 | US-MENU-17 | UC-MENU-004 | AC-MENU-17-1, AC-MENU-17-2, AC-MENU-17-3, AC-MENU-17-4 | TC-MENU-1701, TC-MENU-1702, TC-MENU-1703, TC-MENU-1704 | Thiết kế; chưa chạy backend |
 | FR-MENU-RCP-005 | US-MENU-18 | UC-MENU-007 | AC-MENU-18-1, AC-MENU-18-2, AC-MENU-18-3 | TC-MENU-1801, TC-MENU-1802, TC-MENU-1803 | Thiết kế; chưa chạy backend |
 | FR-MENU-RCP-006 | US-MENU-19 | UC-MENU-004`, `010 | AC-MENU-19-1, AC-MENU-19-2, AC-MENU-19-3 | TC-MENU-1901, TC-MENU-1902, TC-MENU-1903 | Thiết kế; chưa chạy backend |
-| FR-MENU-RCP-007 | — | — | — | — | CHƯA CÓ mapping story cụ thể; review phạm vi/hoãn |
+| FR-MENU-RCP-007 | Chưa có | Chưa có | Chưa có | Chưa có | CHƯA CÓ mapping story cụ thể; review phạm vi/hoãn |
 | FR-MENU-RUL-001 | US-MENU-36 | UC-MENU-008 | AC-MENU-36-1, AC-MENU-36-2, AC-MENU-36-3, AC-MENU-36-4, AC-MENU-36-5, AC-MENU-36-6, AC-MENU-36-7 | TC-MENU-3601, TC-MENU-3602, TC-MENU-3603, TC-MENU-3604, TC-MENU-3605, TC-MENU-3606, TC-MENU-3607 | Thiết kế; chưa chạy backend |
 | FR-MENU-RUL-001 | US-MENU-37 | UC-MENU-008 | AC-MENU-37-1, AC-MENU-37-2, AC-MENU-37-3, AC-MENU-37-4, AC-MENU-37-5 | TC-MENU-3701, TC-MENU-3702, TC-MENU-3703, TC-MENU-3704, TC-MENU-3705 | Thiết kế; chưa chạy backend |
 | FR-MENU-RUL-001 | US-MENU-38 | UC-MENU-008 | AC-MENU-38-1, AC-MENU-38-2, AC-MENU-38-3, AC-MENU-38-4, AC-MENU-38-5, AC-MENU-38-6 | TC-MENU-3801, TC-MENU-3802, TC-MENU-3803, TC-MENU-3804, TC-MENU-3805, TC-MENU-3806 | Thiết kế; chưa chạy backend |

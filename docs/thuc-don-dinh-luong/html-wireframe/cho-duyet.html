@@ -93,7 +93,7 @@ body.off button:not([data-st]):not(.back):not(.open){pointer-events:none;opacity
 <body>
 
 <div class="wfbar" role="note">
- <b>WIREFRAME · SCR-MENU-13 / 14</b><span>Chờ duyệt — dữ liệu là <u>minh họa</u></span>
+ <b>WIREFRAME · SCR-MENU-13 / 14</b><span>Chờ duyệt: dữ liệu là <u>minh họa</u></span>
  <span class="sp"></span><span>Xem trạng thái:</span>
  <button data-st="normal" class="on">Bình thường</button>
  <button data-st="empty">Rỗng</button>
@@ -155,31 +155,31 @@ body.off button:not([data-st]):not(.back):not(.open){pointer-events:none;opacity
 
 <script>
 'use strict';
-/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+/* ====== DỮ LIỆU MINH HỌA: không phải dữ liệu thật của Gia Phát ====== */
 const ME='Người duyệt 1';
 const TYPES=[['dish','Món'],['recipe','Công thức'],['price','Giá bán'],['change','Đề nghị thay đổi'],['menu','Thực đơn']];
 const SAMPLE=[
  {id:'d1',type:'dish',title:'Cá hấp',by:'Dinh dưỡng viên',at:'09/11 14:20',desc:'Món chính · Cá · Hấp · Healthy',
-  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Cá'],['Phương pháp chế biến','Hấp (ít dầu mỡ)'],['Healthy','Có'],['Vị chua','Không'],['Kết cấu','Trung tính'],['Thanh nhẹ','Có'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Có — cần bảng tính cost riêng'],['Chất gây dị ứng','Cá']],recipe:'r0',recipeState:'ACTIVE'},
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Cá'],['Phương pháp chế biến','Hấp (ít dầu mỡ)'],['Healthy','Có'],['Vị chua','Không'],['Kết cấu','Trung tính'],['Thanh nhẹ','Có'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Có: cần bảng tính cost riêng'],['Chất gây dị ứng','Cá']],recipe:'r0',recipeState:'ACTIVE'},
  {id:'d2',type:'dish',title:'Gà rán',by:'Dinh dưỡng viên',at:'09/11 15:02',desc:'Món chính · Gà · Chiên',
-  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Gà'],['Phương pháp chế biến','Chiên'],['Healthy','Không'],['Vị chua','Không'],['Kết cấu','Khô'],['Thanh nhẹ','Không'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Không'],['Chất gây dị ứng','—']],recipe:'r1',recipeState:'PENDING'},
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Gà'],['Phương pháp chế biến','Chiên'],['Healthy','Không'],['Vị chua','Không'],['Kết cấu','Khô'],['Thanh nhẹ','Không'],['Cầu kỳ','Không'],['Chịu vận chuyển','Có'],['Phù hợp bếp lớn','Có'],['Nhóm cost','Cao'],['Đặc thù','Không'],['Chất gây dị ứng','Không áp dụng']],recipe:'r1',recipeState:'PENDING'},
  {id:'d3',type:'dish',title:'Tôm luộc',by:'Dinh dưỡng viên',editedBy:ME,at:'10/11 08:40',desc:'Món chính · Tôm · Luộc · Healthy',
-  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Tôm'],['Phương pháp chế biến','Luộc (ít dầu mỡ)'],['Healthy','Có'],['Nhóm cost','Cao'],['Đặc thù','Có — cần bảng tính cost riêng'],['Chất gây dị ứng','Giáp xác']],recipe:'r0',recipeState:'ACTIVE'},
- {id:'r1',type:'recipe',title:'Gà rán — công thức v1',by:'Dinh dưỡng viên',at:'09/11 15:00',desc:'Phiên bản đầu tiên · hiệu lực từ 16/11/2026',dish:'Gà rán',
+  attrs:[['Vai trò','Món chính'],['Nhóm nguyên liệu chính','Tôm'],['Phương pháp chế biến','Luộc (ít dầu mỡ)'],['Healthy','Có'],['Nhóm cost','Cao'],['Đặc thù','Có: cần bảng tính cost riêng'],['Chất gây dị ứng','Giáp xác']],recipe:'r0',recipeState:'ACTIVE'},
+ {id:'r1',type:'recipe',title:'Gà rán: công thức v1',by:'Dinh dưỡng viên',at:'09/11 15:00',desc:'Phiên bản đầu tiên · hiệu lực từ 16/11/2026',dish:'Gà rán',
   lines:[['Gà','Có','140','145','150','g'],['Dầu ăn','Không','10','10','12','ml'],['Bột chiên','Không','8','10','10','g']]},
- {id:'r2',type:'recipe',title:'Thịt kho trứng cút — công thức v2',by:'Dinh dưỡng viên',at:'10/11 09:15',desc:'Thay v1 · hiệu lực từ 23/11/2026',dish:'Thịt kho trứng cút',reason:'Giá thịt lợn tăng; giảm định lượng thịt về mức sàn của bảng chuẩn.',
-  diff:[['Thịt lợn','Có','65–70 g · chuẩn 70','65–70 g · chuẩn 65','chg'],['Trứng cút','Không','3 quả','3 quả',''],['Hành khô','Không','—','3 g','add'],['Đường thắng','Không','5 g','—','del']]},
- {id:'p1',type:'price',title:'Cá hấp — 22.000đ',by:'Dinh dưỡng viên',at:'09/11 14:25',desc:'Giá đầu tiên · hiệu lực từ 01/12/2026',cur:'Chưa có',next:'22.000đ',from:'01/12/2026'},
- {id:'p2',type:'price',title:'Bò xào — 26.000đ',by:'Dinh dưỡng viên',at:'10/11 09:30',desc:'Đang 24.000đ · hiệu lực từ 01/12/2026',cur:'24.000đ (từ 01/10/2026)',next:'26.000đ',from:'01/12/2026'},
- {id:'c1',type:'change',title:'Sườn sốt chua ngọt — đổi thuộc tính',by:'Dinh dưỡng viên',at:'10/11 10:05',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Sườn sốt chua ngọt',reason:'Gắn thiếu vị chua khi tạo món; bộ kiểm đang bỏ sót quy tắc BR-MENU-030.',
+ {id:'r2',type:'recipe',title:'Thịt kho trứng cút: công thức v2',by:'Dinh dưỡng viên',at:'10/11 09:15',desc:'Thay v1 · hiệu lực từ 23/11/2026',dish:'Thịt kho trứng cút',reason:'Giá thịt lợn tăng; giảm định lượng thịt về mức sàn của bảng chuẩn.',
+  diff:[['Thịt lợn','Có','65–70 g · chuẩn 70','65–70 g · chuẩn 65','chg'],['Trứng cút','Không','3 quả','3 quả',''],['Hành khô','Không','Không áp dụng','3 g','add'],['Đường thắng','Không','5 g','Không áp dụng','del']]},
+ {id:'p1',type:'price',title:'Cá hấp: 22.000đ',by:'Dinh dưỡng viên',at:'09/11 14:25',desc:'Giá đầu tiên · hiệu lực từ 01/12/2026',cur:'Chưa có',next:'22.000đ',from:'01/12/2026'},
+ {id:'p2',type:'price',title:'Bò xào: 26.000đ',by:'Dinh dưỡng viên',at:'10/11 09:30',desc:'Đang 24.000đ · hiệu lực từ 01/12/2026',cur:'24.000đ (từ 01/10/2026)',next:'26.000đ',from:'01/12/2026'},
+ {id:'c1',type:'change',title:'Sườn sốt chua ngọt: đổi thuộc tính',by:'Dinh dưỡng viên',at:'10/11 10:05',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Sườn sốt chua ngọt',reason:'Gắn thiếu vị chua khi tạo món; bộ kiểm đang bỏ sót quy tắc BR-MENU-030.',
   changes:[['Vị chua','Không','Có']],impact:'2 thực đơn nháp có món này sẽ được kiểm lại. Thực đơn đang chờ duyệt và đã duyệt giữ kết quả cũ.'},
- {id:'c2',type:'change',title:'BR-MENU-012 — đổi tham số',by:'Dinh dưỡng viên',at:'10/11 10:20',desc:'Quy tắc · số ngày liên tiếp tối đa',target:'Quy tắc: Nhóm nguyên liệu không quá N ngày liền',reason:'Thịt lợn là nguyên liệu dùng nhiều nhất; giới hạn 2 ngày làm gần như mọi thực đơn bị cảnh báo.',
+ {id:'c2',type:'change',title:'BR-MENU-012: đổi tham số',by:'Dinh dưỡng viên',at:'10/11 10:20',desc:'Quy tắc · số ngày liên tiếp tối đa',target:'Quy tắc: Nhóm nguyên liệu không quá N ngày liền',reason:'Thịt lợn là nguyên liệu dùng nhiều nhất; giới hạn 2 ngày làm gần như mọi thực đơn bị cảnh báo.',
   changes:[['max_consecutive_days','2','3']],impact:'Quy tắc được nới lỏng. Áp dụng cho mọi thực đơn nháp từ lần kiểm kế tiếp.'},
- {id:'c3',type:'change',title:'Đậu rán — đổi thuộc tính',by:'Dinh dưỡng viên',at:'08/11 16:40',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Đậu rán',reason:'Sửa phương pháp chế biến cho đúng.',stale:true,
+ {id:'c3',type:'change',title:'Đậu rán: đổi thuộc tính',by:'Dinh dưỡng viên',at:'08/11 16:40',desc:'Món đang dùng · 1 thuộc tính',target:'Món: Đậu rán',reason:'Sửa phương pháp chế biến cho đúng.',stale:true,
   changes:[['Phương pháp chế biến','Rán','Chiên']],impact:''},
- {id:'m1',type:'menu',title:'Suất 40.000đ — tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:00',desc:'Điểm 91 · 0 vi phạm bắt buộc · 3 cảnh báo',score:91,need:1,done:[],
+ {id:'m1',type:'menu',title:'Suất 40.000đ: tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:00',desc:'Điểm 91 · 0 vi phạm bắt buộc · 3 cảnh báo',score:91,need:1,done:[],
   warns:[['BR-MENU-012','−3','Lợn ở món chính 3 ngày liền (T2, T3, T4) · giới hạn 2','Khách yêu cầu có thịt lợn mỗi ngày đầu tuần; đã đổi cách chế biến mỗi ngày.'],['BR-MENU-030','−3','T5: Cá sốt cà chua, Dưa chua cùng vị chua · giới hạn 1','Dưa chua là món ăn kèm lượng nhỏ, bếp đề nghị giữ.'],['BR-MENU-016','−2','Bắp cải luộc lặp T2 và T3','']]},
- {id:'m2',type:'menu',title:'Suất 35.000đ — tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:30',desc:'Điểm 74 · 0 vi phạm bắt buộc · 9 cảnh báo · cần 2 người duyệt',score:74,need:2,done:[],
+ {id:'m2',type:'menu',title:'Suất 35.000đ: tuần 23/11 – 28/11/2026',by:'Dinh dưỡng viên',at:'10/11 11:30',desc:'Điểm 74 · 0 vi phạm bắt buộc · 9 cảnh báo · cần 2 người duyệt',score:74,need:2,done:[],
   warns:[['BR-MENU-013','−3','Thịt lợn luộc xuất hiện 2 lần (T3, T6) · giới hạn 1','Thiếu món Healthy đã duyệt trong mức giá này.'],['BR-MENU-020','−3','T2: Thịt kho đậu, Cá kho cùng kho','Hai món kho khác nhóm nguyên liệu, bếp chạy song song được.'],['BR-MENU-022','−3','T4: 3 món chiên · giới hạn 2','Sẽ thay Trứng cuộn bằng Giò lụa nếu người duyệt yêu cầu.']],more:6}
 ];
 const GRID=[['Vị trí','T2','T3','T4','T5','T6','T7'],['Món chính 1','Thịt kho trứng cút','Thịt rang tôm','Thịt lợn luộc ★','Bò sốt vang','Cá sốt cà chua','Sườn sốt chua ngọt'],['Món chính 2','Cá kho','Gà rán','Bò xào','Ếch chiên','Gà kho gừng','Cá rán'],['Món chính 3','Gà luộc ★','Cá hấp','Cá rán','Tôm luộc','Thịt lợn luộc','Gà luộc'],['Món phụ 1','Đậu rán','Trứng cuộn','Giò lụa','Cá cơm rang','Lạc rang','Su su xào thịt'],['Món phụ 2','Lạc rang','Khoai tây xào thịt','Su su xào thịt','Trứng đúc thịt','Dưa chua','Đậu rán'],['Rau','Bắp cải luộc','Bắp cải luộc','Cải thảo luộc','Rau muống luộc','Cải chíp luộc','Củ quả luộc'],['Canh','Canh rau cải','Canh bí','Canh mồng tơi','Canh khoai','Canh rau cải','Canh bí']];
@@ -240,14 +240,14 @@ function bulk(type){
 /* ====== SCR-MENU-14 ====== */
 function tbl(head,rows,cls){return `<div class="tblwrap"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,j)=>`<td${cls&&cls[j]?` class="${cls[j]}"`:''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
 function body(i){
- if(i.type==='dish')return `<div class="sect"><h3>Thuộc tính</h3><dl class="kv">${i.attrs.map(a=>`<dt>${a[0]}</dt><dd>${a[1]}</dd>`).join('')}</dl></div><div class="sect"><h3>Công thức đi kèm</h3>${i.recipeState==='ACTIVE'||approvedRecipes.has(i.recipe)?'Đã có công thức đang hiệu lực.':'Công thức <b>chưa duyệt</b> — đang nằm ở nhóm Công thức của danh sách chờ duyệt. Duyệt món sẽ bị chặn cho đến khi công thức được duyệt.'}</div>`;
+ if(i.type==='dish')return `<div class="sect"><h3>Thuộc tính</h3><dl class="kv">${i.attrs.map(a=>`<dt>${a[0]}</dt><dd>${a[1]}</dd>`).join('')}</dl></div><div class="sect"><h3>Công thức đi kèm</h3>${i.recipeState==='ACTIVE'||approvedRecipes.has(i.recipe)?'Đã có công thức đang hiệu lực.':'Công thức <b>chưa duyệt</b>: đang nằm ở nhóm Công thức của danh sách chờ duyệt. Duyệt món sẽ bị chặn cho đến khi công thức được duyệt.'}</div>`;
  if(i.type==='recipe'&&i.lines)return `<div class="sect"><h3>Định lượng sống cho 1 suất · ${i.dish}</h3>${tbl(['Nguyên liệu','Nguyên liệu chính','Tối thiểu','Chuẩn','Tối đa','Đơn vị'],i.lines,['','','num','num','num',''])}</div>`;
- if(i.type==='recipe')return `<div class="sect"><h3>Lý do tạo phiên bản mới</h3>${i.reason}</div><div class="sect"><h3>So sánh với phiên bản đang hiệu lực · ${i.dish}</h3>${tbl(['Nguyên liệu','Nguyên liệu chính','v1 (đang hiệu lực)','v2 (đề nghị)','Thay đổi'],i.diff.map(d=>[d[0],d[1],d[4]==='add'?'—':`<span class="${d[4]==='del'?'del':''}">${d[2]}</span>`,d[4]==='del'?'—':`<span class="${d[4]?'chg':''}">${d[3]}</span>`,{chg:'Đổi định lượng',add:'Thêm',del:'Bỏ','':'—'}[d[4]]]))}</div>`;
+ if(i.type==='recipe')return `<div class="sect"><h3>Lý do tạo phiên bản mới</h3>${i.reason}</div><div class="sect"><h3>So sánh với phiên bản đang hiệu lực · ${i.dish}</h3>${tbl(['Nguyên liệu','Nguyên liệu chính','v1 (đang hiệu lực)','v2 (đề nghị)','Thay đổi'],i.diff.map(d=>[d[0],d[1],d[4]==='add'?'Không áp dụng':`<span class="${d[4]==='del'?'del':''}">${d[2]}</span>`,d[4]==='del'?'Không áp dụng':`<span class="${d[4]?'chg':''}">${d[3]}</span>`,{chg:'Đổi định lượng',add:'Thêm',del:'Bỏ','':'Không áp dụng'}[d[4]]]))}</div>`;
  if(i.type==='price')return `<div class="sect"><h3>Giá bán (đã gồm VAT)</h3><dl class="kv"><dt>Giá đang hiệu lực</dt><dd>${i.cur}</dd><dt>Giá đề nghị</dt><dd><b>${i.next}</b></dd><dt>Hiệu lực từ</dt><dd>${i.from}</dd></dl></div><div class="sect"><h3>Lưu ý</h3>Giá đã hiệu lực không sửa được; muốn đổi phải tạo giá mới (BR-CAT-016).</div>`;
  if(i.type==='change')return `<div class="sect"><h3>Đối tượng</h3>${i.target}</div><div class="sect"><h3>Thay đổi đề nghị</h3>${tbl(['Trường','Giá trị hiện tại','Giá trị đề nghị'],i.changes.map(c=>[c[0],c[1],`<span class="chg">${c[2]}</span>`]))}</div><div class="sect"><h3>Lý do</h3>${i.reason}</div>${i.stale?'<div class="sect"><h3>Trạng thái</h3>Bản ghi gốc đã thay đổi sau khi đề nghị được gửi. Đề nghị này <b>không duyệt được</b>; người đề nghị đã được báo gửi lại.</div>':`<div class="sect"><h3>Ảnh hưởng</h3>${i.impact}</div>`}`;
- return `<div class="sect"><h3>Kết quả kiểm quy tắc</h3><dl class="kv"><dt>Điểm quy tắc</dt><dd><b>${i.score} / 100</b>${i.score<80?' — dưới 80, cần 2 người duyệt (BR-MNU-008)':''}</dd><dt>Vi phạm bắt buộc</dt><dd>0</dd><dt>Người đã duyệt</dt><dd>${i.done.length?i.done.join(', '):'Chưa có'} (${i.done.length}/${i.need})</dd></dl></div>
+ return `<div class="sect"><h3>Kết quả kiểm quy tắc</h3><dl class="kv"><dt>Điểm quy tắc</dt><dd><b>${i.score} / 100</b>${i.score<80?': dưới 80, cần 2 người duyệt (BR-MNU-008)':''}</dd><dt>Vi phạm bắt buộc</dt><dd>0</dd><dt>Người đã duyệt</dt><dd>${i.done.length?i.done.join(', '):'Chưa có'} (${i.done.length}/${i.need})</dd></dl></div>
   <div class="sect"><h3>Thực đơn (★ = món mặc định)</h3>${tbl(GRID[0],GRID.slice(1))}</div>
-  <div class="sect"><h3>Cảnh báo và lý do chấp nhận của người dựng</h3>${i.warns.map(w=>`<div class="warn"><span class="code">${w[0]}</span> <span class="tag${w[1]==='−3'?'':' dash'}">CẢNH BÁO ${w[1]}</span><div>${w[2]}</div>${w[3]?`<div class="why">Lý do: ${w[3]}</div>`:'<div class="ds">Mức vừa — không bắt buộc lý do.</div>'}</div>`).join('')}${i.more?`<div class="ds" style="margin-top:6px">… và ${i.more} cảnh báo mức vừa và nhẹ khác.</div>`:''}</div>`;
+  <div class="sect"><h3>Cảnh báo và lý do chấp nhận của người dựng</h3>${i.warns.map(w=>`<div class="warn"><span class="code">${w[0]}</span> <span class="tag${w[1]==='−3'?'':' dash'}">CẢNH BÁO ${w[1]}</span><div>${w[2]}</div>${w[3]?`<div class="why">Lý do: ${w[3]}</div>`:'<div class="ds">Mức vừa: không bắt buộc lý do.</div>'}</div>`).join('')}${i.more?`<div class="ds" style="margin-top:6px">… và ${i.more} cảnh báo mức vừa và nhẹ khác.</div>`:''}</div>`;
 }
 function openDetail(id){
  cur=items.find(x=>x.id===id);showMsg('');

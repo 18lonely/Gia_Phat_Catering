@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-007-MD
-title: UC-PUB-007 — Gửi form tư vấn
+title: "UC-PUB-007: Gửi form tư vấn"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-007 — Gửi form tư vấn
+# UC-PUB-007: Gửi form tư vấn
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai cần tư vấn suất ăn. Bê
 
 Trigger: Sau khi tìm hiểu dịch vụ hoặc xem mẫu thử, khách gửi nhu cầu để Gia Phát liên hệ tư vấn.
 
-Tiền điều kiện — nghiệp vụ: Có form và nội dung consent để khách đọc; trialRef chỉ có khi khách thực sự đã dựng mẫu.
-Tiền điều kiện — gate còn mở: E8-Q06/07 chưa chốt trường bắt buộc, nơi lưu, consent, chống spam và thông báo. Không giả nơi nhận CRM đã sẵn sàng.
+Tiền điều kiện (nghiệp vụ): Có form và nội dung consent để khách đọc; trialRef chỉ có khi khách thực sự đã dựng mẫu.
+Tiền điều kiện (gate còn mở): E8-Q06/07 chưa chốt trường bắt buộc, nơi lưu, consent, chống spam và thông báo. Không giả nơi nhận CRM đã sẵn sàng.
 
 Luồng chính:
 1. Khách nhập thông tin liên hệ tối thiểu tại UI-PUB-05, đọc nội dung consent và thể hiện đồng ý theo bản được duyệt.

@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-DLV-002-MD
-title: UC-DLV-002 — Xác nhận số nhận qua link
+title: "UC-DLV-002: Xác nhận số nhận qua link"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-DLV-002 — Xác nhận số nhận qua link
+# UC-DLV-002: Xác nhận số nhận qua link
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Người đặt tổng kiêm người nhận c�
 
 Trigger: Sau khi nhận hàng, đại diện khách bấm link của phiếu giao để xác nhận số suất đã nhận.
 
-Tiền điều kiện — nghiệp vụ: Phiếu giao tồn tại và thuộc phạm vi khách; người nhận có bằng chứng số nhận thực tế.
-Tiền điều kiện — gate còn mở: E6-CG-01/08, E7-Q01 và Q-13 chưa được chốt. Luồng dưới chỉ áp dụng khi cơ chế xác minh/quyền đã được duyệt; không chọn loại token hay thời hạn link.
+Tiền điều kiện (nghiệp vụ): Phiếu giao tồn tại và thuộc phạm vi khách; người nhận có bằng chứng số nhận thực tế.
+Tiền điều kiện (gate còn mở): E6-CG-01/08, E7-Q01 và Q-13 chưa được chốt. Luồng dưới chỉ áp dụng khi cơ chế xác minh/quyền đã được duyệt; không chọn loại token hay thời hạn link.
 
 Luồng chính:
 1. Đại diện khách truy cập link; hệ thống kiểm điều kiện xác minh và phạm vi phiếu trước khi hiển thị UI-E7-02.

@@ -1,4 +1,4 @@
-# Tiêu chí evidence QA — adapter, receipt và manifest E6
+# Tiêu chí evidence QA: adapter, receipt và manifest E6
 
 11/11/2026 · Mẫu chuẩn bị, chưa chạy backend/UAT. Bổ sung [12ca INV](invariant-cases.md), [fixture](fixtures/README.md) và [delta contract](../api/delta-contract-review.md); không thêm mã TC hoặc thay trạng thái ca cũ.
 
@@ -41,11 +41,11 @@ Có thể review số học/shape fixture và traceability ngay; đó là DOCUME
 
 Không sửa hành vi wireframe trong phiên này; các giới hạn trên phải đi cùng khi dùng screenshot/demo review. Test UI cũ chỉ xác minh mock/viewport, không được dùng làm Actual cho bộ INV hoặc contract cuối.
 
-## Review adapter — 11/11/2026
+## Review adapter ngày 11/11/2026
 
 Đối với [adapter review](../api/adapter-contract-review.md), lưu provenance đủ để đối chiếu kind DISH/MEAL, menu/recipe versions, ngày và source freshness trong artifact có quyền; không đưa raw breakdown vào response người ăn. Dùng [6oracle synthetic](fixtures/adapter-synthetic.json), Actual vẫn chưa có. Schema/expected kiểm được không chứng minh adapter đã lọc ở runtime.
 
-## Bằng chứng theo loại thao tác — 12/11/2026
+## Bằng chứng theo loại thao tác ngày 12/11/2026
 
 DOCUMENT_CLARIFIED. Dùng cùng caseId hiện có, không thêm ca hoặc đổi NOT RUN/BLOCKED. Đối chiếu [UC](../review/uc-operation-review.md), [catalog](../api/endpoint-catalog.json) và [hướng dẫn57ca](review-test-cases.md). Mọi dữ liệu minh họa/fixture là synthetic.
 

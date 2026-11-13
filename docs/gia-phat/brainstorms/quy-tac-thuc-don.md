@@ -1,26 +1,26 @@
-# Bảng quy tắc xây dựng thực đơn & kiểm soát cost — bản đề xuất để duyệt
+# Bảng quy tắc xây dựng thực đơn & kiểm soát cost: bản đề xuất để duyệt
 
 | Trường | Giá trị |
 |---|---|
-| Phiên bản | v0.1.0 — **bản đề xuất, chưa có hiệu lực** |
+| Phiên bản | v0.1.0: **bản đề xuất, chưa có hiệu lực** |
 | Ngày | 10/11/2026 |
 | Nguồn | `Yêu cầu về thực đơn và cost tp.docx` |
-| Người duyệt | Người soạn file docx (dinh dưỡng viên / bếp trưởng) — riêng nhóm COST cần thêm kế toán |
+| Người duyệt | Người soạn file docx (dinh dưỡng viên / bếp trưởng): riêng nhóm COST cần thêm kế toán |
 | Dùng cho | Bộ kiểm quy tắc MENU-06, bộ kiểm cost COST-03, và cả hai AI agent |
 
 ## Cách duyệt
 
 Mỗi dòng là một câu trong file docx đã được viết lại thành dạng máy kiểm được. Mọi **con số trong cột "Đề xuất" là do tôi đề nghị**, chưa phải số của Gia Phát. Với từng dòng, người duyệt đánh dấu một trong ba:
 
-- **Đ** — đồng ý nguyên văn
-- **S** — sửa (ghi con số hoặc loại mới vào cột "Sửa thành")
-- **B** — bỏ, không đưa vào hệ thống
+- **Đ**: đồng ý nguyên văn
+- **S**: sửa (ghi con số hoặc loại mới vào cột "Sửa thành")
+- **B**: bỏ, không đưa vào hệ thống
 
 **Loại quy tắc**
 
 | Loại | Hệ thống làm gì khi vi phạm |
 |---|---|
-| **Cứng** | Chặn — không cho gửi duyệt/công bố thực đơn. AI agent không được đề xuất thực đơn vi phạm. |
+| **Cứng** | Chặn: không cho gửi duyệt/công bố thực đơn. AI agent không được đề xuất thực đơn vi phạm. |
 | **Mềm – nặng** | Cảnh báo đỏ, trừ 3 điểm; muốn công bố phải ghi lý do. |
 | **Mềm – vừa** | Cảnh báo vàng, trừ 2 điểm. |
 | **Mềm – nhẹ** | Ghi chú, trừ 1 điểm. |
@@ -119,12 +119,12 @@ Mỗi thực đơn tuần bắt đầu từ 100 điểm. Đề xuất: dưới 8
 |---|---|
 | H-1 | Món Healthy chỉ được **luộc**, hay hấp / áp chảo ít dầu / nướng cũng được tính? |
 | H-2 | "Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)? |
-| H-3 | Danh sách **nhóm nguyên liệu chính** để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn? |
+| H-3 | Danh sách **nhóm nguyên liệu chính** để máy so trùng: đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn? |
 | H-4 | Ngoài "nem – nộm" còn những cặp món nào không được xếp cùng ngày? |
 | H-5 | Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào? |
 | H-6 | Suất ăn đang xuất hoá đơn với thuế suất VAT bao nhiêu? (Cần kế toán trả lời.) |
 | H-7 | Hiện tại khi tính 52%, kế toán/bếp đang cộng những khoản nào? Gạo, gia vị, dầu ăn, tráng miệng có tính không? |
-| H-8 | Danh sách **phương pháp chế biến** — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì? |
+| H-8 | Danh sách **phương pháp chế biến**: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì? |
 | H-9 | Bảng định lượng hiện chỉ có 23 dòng cho mức 40k. Khi dinh dưỡng viên tạo loại suất giá khác, định lượng **giữ nguyên theo món** (giá suất khác nhau do số món khác nhau), hay cùng một món có **nhiều cỡ định lượng** với giá khác nhau? |
 
 ## Thuộc tính mỗi món phải có để máy kiểm được các quy tắc trên

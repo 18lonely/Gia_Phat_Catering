@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-005-MD
-title: UC-PUB-005 — Xem thực đơn mẫu có giá
+title: "UC-PUB-005: Xem thực đơn mẫu có giá"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-005 — Xem thực đơn mẫu có giá
+# UC-PUB-005: Xem thực đơn mẫu có giá
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai tìm hiểu suất ăn tập th
 
 Trigger: Khách xem một thực đơn tuần mẫu để cân nhắc dịch vụ suất ăn.
 
-Tiền điều kiện — nghiệp vụ: Có publicSampleId và ngày hiển thị cần tra cứu; khách không cần tài khoản.
-Tiền điều kiện — gate còn mở: E8-Q03/04 về giá được phép công khai và nguồn thực đơn/dinh dưỡng chưa chốt; luồng đủ dữ liệu chỉ có điều kiện.
+Tiền điều kiện (nghiệp vụ): Có publicSampleId và ngày hiển thị cần tra cứu; khách không cần tài khoản.
+Tiền điều kiện (gate còn mở): E8-Q03/04 về giá được phép công khai và nguồn thực đơn/dinh dưỡng chưa chốt; luồng đủ dữ liệu chỉ có điều kiện.
 
 Luồng chính:
 1. Khách chọn mẫu tại UI-PUB-03; hệ thống nhận publicSampleId và ngày hiển thị.

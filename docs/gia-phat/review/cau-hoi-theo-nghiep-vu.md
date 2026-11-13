@@ -14,7 +14,7 @@ last_updated: 2026-11-13
 
 Nháp · 13/11/2026 · Danh sách để hỏi, **chưa có câu nào được trả lời**.
 
-Trích từ [Sổ quyết định hợp nhất](decision-pack/decision-register.md) v0.1.1: 224 câu, nhóm theo nghiệp vụ (epic), trong mỗi nghiệp vụ xếp theo mức độ quan trọng. Cột **Câu hỏi** dẫn tới đúng dòng câu gốc; cột **Nhóm** dẫn tới phân tích nhóm quyết định. Khi trả lời, cập nhật ở tài liệu nguồn và sổ quyết định — file này chỉ để điều hướng.
+Trích từ [Sổ quyết định hợp nhất](decision-pack/decision-register.md) v0.1.1: 224 câu, nhóm theo nghiệp vụ (epic), trong mỗi nghiệp vụ xếp theo mức độ quan trọng. Cột **Câu hỏi** dẫn tới đúng dòng câu gốc; cột **Nhóm** dẫn tới phân tích nhóm quyết định. Khi trả lời, cập nhật ở tài liệu nguồn và sổ quyết định, file này chỉ để điều hướng.
 
 ## Quy ước mức độ
 
@@ -25,7 +25,7 @@ Trích từ [Sổ quyết định hợp nhất](decision-pack/decision-register.
 | 🟡 Trung bình | P-NEXT | Đợt Next (R6–R9) |
 | 🟢 Thấp | P-LATER | Đợt Later (R10–R13) |
 
-Người quyết định “chưa rõ” hoặc release “chưa rõ” cần BA xác minh trước khi hỏi — xem [sổ BA-Q](decision-pack/ba-open-questions.md).
+Người quyết định “chưa rõ” hoặc release “chưa rõ” cần BA xác minh trước khi hỏi: xem [sổ BA-Q](decision-pack/ba-open-questions.md).
 
 ## Tổng hợp
 
@@ -47,7 +47,7 @@ Người quyết định “chưa rõ” hoặc release “chưa rõ” cần BA
 | [E13 · Chi phí & lợi nhuận](#e13-chi-phi-loi-nhuan) | – | – | – | 14 | 14 |
 | **Tổng** | **87** | **4** | **70** | **63** | **224** |
 
-## Theo người quyết định — chỉ mức 🔴 Cao
+## Theo người quyết định: chỉ mức 🔴 Cao
 
 Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những câu nào trước MVP.
 
@@ -86,7 +86,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## PRD · Tổng thể sản phẩm
 
-### 🔴 Cao — 4 câu
+### 🔴 Cao: 4 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -95,7 +95,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | O-04 | [Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách](../01-prd.md#L253) | Giám đốc | R1, R5 | [DEC-02](decision-pack/decision-groups.md#dec-02) |  |
 | O-06 | [Ai duyệt ngoại lệ và ai thay khi vắng](../01-prd.md#L255) | Giám đốc | R1 | [DEC-03](decision-pack/decision-groups.md#dec-03) |  |
 
-### 🟡 Trung bình — 2 câu
+### 🟡 Trung bình: 2 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -104,7 +104,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E1 · Nền tảng
 
-### 🔴 Cao — 9 câu
+### 🔴 Cao: 9 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -118,14 +118,14 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | Q-18 | [Số người ăn, số công ty, số điểm giao mỗi ngày](../../nen-tang/srs/spec.md#L408) | Giám đốc | R1 | [DEC-26](decision-pack/decision-groups.md#dec-26) | Chặn: 1 ca (gate trực tiếp) |
 | E1-Q06 | [NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?](../../nen-tang/review/questions.md#L28) | chưa rõ | R5 | [DEC-198](decision-pack/decision-groups.md#dec-198) | Đề xuất: Nguồn đề xuất phản hồi tiến trình đầu; chưa chọn thay NFR gốc. |
 
-### 🟠 Khá cao — 2 câu
+### 🟠 Khá cao: 2 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | E1-Q03 | [MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?](../../nen-tang/review/questions.md#L25) | Giám đốc, Tech lead | chưa rõ | [DEC-18](decision-pack/decision-groups.md#dec-18) | Chặn: 3 ca (gate trực tiếp)<br>Đề xuất: P1 gated; không tự triển khai chỉ dựa ô nhập6 số |
 | N-04 | [Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?](../../nen-tang/srs/spec.md#L406) | Giám đốc | chưa rõ | [DEC-24](decision-pack/decision-groups.md#dec-24) | Chặn: 5 ca (gate trực tiếp) |
 
-### 🟡 Trung bình — 1 câu
+### 🟡 Trung bình: 1 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -133,7 +133,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E2 · Thực đơn & định lượng
 
-### 🔴 Cao — 21 câu
+### 🔴 Cao: 21 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -156,12 +156,12 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | H-5 | [Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào?](../brainstorms/quy-tac-thuc-don.md#L124) | Dinh dưỡng viên | R2 | [DEC-43](decision-pack/decision-groups.md#dec-43) |  |
 | H-6 | [Suất ăn đang xuất hoá đơn với thuế suất VAT bao nhiêu? (Cần kế toán trả lời.)](../brainstorms/quy-tac-thuc-don.md#L125) | Kế toán | R2 | [DEC-05](decision-pack/decision-groups.md#dec-05) |  |
 | H-7 | [Hiện tại khi tính 52%, kế toán/bếp đang cộng những khoản nào? Gạo, gia vị, dầu ăn, tráng miệng có tính không?](../brainstorms/quy-tac-thuc-don.md#L126) | Kế toán | R2 | [DEC-05](decision-pack/decision-groups.md#dec-05) |  |
-| H-8 | [Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?](../brainstorms/quy-tac-thuc-don.md#L127) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
+| H-8 | [Danh sách phương pháp chế biến: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?](../brainstorms/quy-tac-thuc-don.md#L127) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
 | H-9 | [Loại suất giá khác giữ định lượng từng món hay dùng nhiều cỡ định lượng với giá khác nhau?](../brainstorms/quy-tac-thuc-don.md#L128) | Dinh dưỡng viên | R2 | [DEC-04](decision-pack/decision-groups.md#dec-04) |  |
 
 ## E3 · Cost
 
-### 🔴 Cao — 41 câu
+### 🔴 Cao: 41 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -183,7 +183,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | FLOW-COST-Q01 | [Huỷ giá tham chiếu tương lai khi cùng ngày còn báo giá khác thì chọn giá thay thế thế nào?](../../cost/review/decision-register.md#L30) | Kế toán | R3 | [DEC-60](decision-pack/decision-groups.md#dec-60) | Đề xuất: Yêu cầu chọn giá thay thế trong cùng giao dịch hủy, nếu còn báo giá khác cùng nhóm. |
 | FLOW-COST-Q02 | [Chống gửi trùng và đối soát khi mất phản hồi: request key/phiên bản/lịch sử trả ra thế nào?](../../cost/review/decision-register.md#L31) | Tech lead và BA | R3 | [DEC-61](decision-pack/decision-groups.md#dec-61) | Chặn: 6 ca (gate trực tiếp)<br>Đề xuất: Review phương án API hiện có: key/hash theo actor/method/path, TTL24h, đối soát, commit nguyên tử. |
 | FLOW-COST-Q03 | [Cảnh báo giá cũ/nhà cung cấp ngừng được lưu, đóng và chống trùng thế nào?](../../cost/review/decision-register.md#L32) | BA, kế toán, Tech lead | R3 | [DEC-62](decision-pack/decision-groups.md#dec-62) | Chặn: 2 ca (gate trực tiếp)<br>Đề xuất: Tạo thiết kế cảnh báo nguyên liệu riêng, không dùng cost_alerts bắt buộc menu_day_id. |
-| FLOW-COST-Q04 | [Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?](../../cost/review/decision-register.md#L33) | Kế toán, UX/BA | R3 | [DEC-63](decision-pack/decision-groups.md#dec-63) | Chặn: 2 ca (gate trực tiếp)<br>Đề xuất: Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được. |
+| FLOW-COST-Q04 | [Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?](../../cost/review/decision-register.md#L33) | Kế toán, UX/BA | R3 | [DEC-63](decision-pack/decision-groups.md#dec-63) | Chặn: 2 ca (gate trực tiếp)<br>Đề xuất: Ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được. |
 | FLOW-COST-Q05 | [Ai được đọc danh sách/chi tiết khoản khoán?](../../cost/review/decision-register.md#L34) | Giám đốc, BA | R3 | [DEC-64](decision-pack/decision-groups.md#dec-64) | Đề xuất: Xác nhận ma trận đọc danh mục quản trị riêng với quyền xem khoản trong phân rã cost. |
 | FLOW-COST-Q06 | [Giá/tham số đổi trong thời gian PENDING: kiểm lại tại duyệt cuối hay chụp bộ giá lúc gửi? Nếu vượt mới thì trả lại thế nào?](../../cost/review/decision-register.md#L35) | Giám đốc, kế toán | R3 | [DEC-65](decision-pack/decision-groups.md#dec-65) | Chặn: 1 ca (gate trực tiếp)<br>Đề xuất: Cân nhắc kiểm lại tại duyệt cuối; nếu đủ điều kiện thì chụp bộ vừa kiểm cùng transaction. |
 | FLOW-COST-Q07 | [Lập tuần có một ngày lỗi thì rollback cả tuần hay lưu ngày hợp lệ?](../../cost/review/decision-register.md#L36) | Kế toán, dinh dưỡng viên | R3 | [DEC-66](decision-pack/decision-groups.md#dec-66) | Chặn: 3 ca (gate trực tiếp)<br>Đề xuất: Cân nhắc all-or-nothing cho cả batch tuần; trả lỗi theo ngày, không ghi ngày hợp lệ khi có lỗi. |
@@ -207,7 +207,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | DATA-COST-Q05 | [Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?](../../cost/review/accountant-input.md#L99) | chưa rõ | R3 | [DEC-84](decision-pack/decision-groups.md#dec-84) |  |
 | DATA-COST-Q06 | [Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?](../../cost/review/accountant-input.md#L100) | chưa rõ | R3 | [DEC-85](decision-pack/decision-groups.md#dec-85) |  |
 
-### 🟠 Khá cao — 2 câu
+### 🟠 Khá cao: 2 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -216,7 +216,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E4 · Dinh dưỡng
 
-### 🔴 Cao — 5 câu
+### 🔴 Cao: 5 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -228,7 +228,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E5 · Agent Nội bộ
 
-### 🔴 Cao — 7 câu
+### 🔴 Cao: 7 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -242,7 +242,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E6 · Chọn món & order
 
-### 🟡 Trung bình — 30 câu
+### 🟡 Trung bình: 30 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -279,7 +279,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E7 · Giao nhận & doanh thu
 
-### 🟡 Trung bình — 9 câu
+### 🟡 Trung bình: 9 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -295,7 +295,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E8 · Website công khai
 
-### 🟡 Trung bình — 13 câu
+### 🟡 Trung bình: 13 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -315,7 +315,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E9 · Agent Dinh dưỡng viên
 
-### 🟡 Trung bình — 15 câu
+### 🟡 Trung bình: 15 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -337,7 +337,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E10 · CRM & bán hàng
 
-### 🟢 Thấp — 16 câu
+### 🟢 Thấp: 16 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -360,7 +360,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E11 · Mua hàng & sản xuất
 
-### 🟢 Thấp — 15 câu
+### 🟢 Thấp: 15 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -382,7 +382,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E12 · Phản hồi & báo cáo
 
-### 🟢 Thấp — 18 câu
+### 🟢 Thấp: 18 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -407,7 +407,7 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 ## E13 · Chi phí & lợi nhuận
 
-### 🟢 Thấp — 14 câu
+### 🟢 Thấp: 14 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |

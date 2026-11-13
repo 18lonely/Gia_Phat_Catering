@@ -1,4 +1,4 @@
-# Bàn giao E6 — adapter và validation route
+# Bàn giao E6: adapter và validation route
 
 11/11/2026 · BA draft. Tiếp nối [contract handoff](contract-handoff.md), giữ snapshot cũ. [Báo cáo kiểm/file thay đổi](../validation/adapter-report.md) · [Preview](../preview.html).
 

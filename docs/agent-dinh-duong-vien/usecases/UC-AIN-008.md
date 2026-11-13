@@ -1,23 +1,23 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-008-MD
-title: UC-AIN-008 — Từ chối gợi ý cá nhân khi gate đóng
+title: "UC-AIN-008: Từ chối gợi ý cá nhân khi gate đóng"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-008 — Từ chối gợi ý cá nhân khi gate đóng
+# UC-AIN-008: Từ chối gợi ý cá nhân khi gate đóng
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
-Level: Sea level — GATE-ONLY. Actor chính: Người ăn có tài khoản (PER-03) hoặc người ăn qua QR (PER-04) muốn biết tính năng có khả dụng hay không. Bên quan tâm: người ăn không bị yêu cầu hồ sơ khi phạm vi chưa được duyệt.
+Level: Sea level (GATE-ONLY). Actor chính: Người ăn có tài khoản (PER-03) hoặc người ăn qua QR (PER-04) muốn biết tính năng có khả dụng hay không. Bên quan tâm: người ăn không bị yêu cầu hồ sơ khi phạm vi chưa được duyệt.
 Truy vết: FR-AIN-GATE-001 / FEAT-063 / US-AIN-008.
 
 Trigger: Người ăn tìm chức năng gợi ý cá nhân và kiểm tra khả năng sử dụng.
 
-Tiền điều kiện — nghiệp vụ: O-03 còn đóng và FEAT-047 chỉ gate; yêu cầu chỉ xem khả dụng, không có profile hoặc consent sức khỏe.
-Tiền điều kiện — gate còn mở: E9-Q14 và quyết định O-03 chưa có căn cứ mở. Không giả các gate đã được duyệt; đây chỉ là luồng chặn an toàn.
+Tiền điều kiện (nghiệp vụ): O-03 còn đóng và FEAT-047 chỉ gate; yêu cầu chỉ xem khả dụng, không có profile hoặc consent sức khỏe.
+Tiền điều kiện (gate còn mở): E9-Q14 và quyết định O-03 chưa có căn cứ mở. Không giả các gate đã được duyệt; đây chỉ là luồng chặn an toàn.
 
 Luồng chính:
 1. Người ăn yêu cầu xem khả dụng của gợi ý cá nhân tại UI-AIN-07.

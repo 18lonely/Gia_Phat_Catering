@@ -37,6 +37,6 @@ Script render-diagrams của skill có đường dẫn cũ `.agents/skills/skill
 
 Cost nguyên liệu gồmVAT phải trảNCC; không yêu cầu hóa đơn là cờ riêng, không suyVAT0. Chiết khấu% hoặc tiền/suất là khoản riêng theođơn, không tự giảm phải trả. CK-Q01–10 vẫn chờ, DATA-COST-Q01–06 vẫn trong phiếu kế toán, chưa có10món/10ngày thật. NFR-COST-002: cost món lệch≤1đ, cost% ngày≤0,01điểm phần trăm. Không viết backend/migration trong đợt này.
 
-## Bổ sung tiếp nối E6 — 11/11/2026
+## Bổ sung tiếp nối E6 ngày 11/11/2026
 
 Mô tả E6 khởi đầu trong báo cáo này là mốc lịch sử. [Gói E6 v0.2 mới](../../chon-mon-order/review/handoff.md) bổ sung19UC,57AC,26HTTP endpoint,2port,13màn vàRTM; các gate vẫn mở, schema65bảng không đổi, chưa backend/UAT. Dùng báo cáo E6 để xem bằng chứng kiểm riêng; không ghi đè kết quả46sơ đồ/12màn của E1–E5.

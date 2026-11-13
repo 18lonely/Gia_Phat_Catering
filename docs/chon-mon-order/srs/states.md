@@ -1,15 +1,15 @@
 ---
 id: DOC-CHON-MON-ORDER-SRS-STATES
-title: Trạng thái E6 — order và đề nghị đổi
+title: "Trạng thái E6: order và đề nghị đổi"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Trạng thái E6 — order và đề nghị đổi
+# Trạng thái E6: order và đề nghị đổi
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -31,11 +31,11 @@ stateDiagram-v2
 | SUBMITTED | Đổi trước hạn | Clock server còn mở,version đúng | SUBMITTED version+1 | Người có quyền |
 | SUBMITTED | Hạn chốt | Total/default đủ,khóa scope,snapshot nguyên tử | LOCKED | Scheduler |
 | LOCKED | Duyệt đổi | Đề nghị riêng,Q-16/O-06 đã chốt,base revision đúng | LOCKED revision mới | Người duyệt |
-| LOCKED | Xác nhận bắt đầu sản xuất — chưa chốt | Sự kiện/quyền theo ORD-Q14, nguồn kế hoạch xác định | IN_PRODUCTION — transition chưa mở | Vận hành theo quyền cần chốt |
+| LOCKED | Xác nhận bắt đầu sản xuất: chưa chốt | Sự kiện/quyền theo ORD-Q14, nguồn kế hoạch xác định | IN_PRODUCTION (transition chưa mở) | Vận hành theo quyền cần chốt |
 
 IN_PRODUCTION là điểm bàn giao, không terminal toàn vòng đời; DELIVERED/CONFIRMED/DISPUTED/RECONCILED thuộc E7. Không có transition tự đi tiếp khi thiếu total/default. Đề nghị đổi độc lập: PENDING→APPROVED/REJECTED; bản rejected không sửa order. Trạng thái đề nghị là đề xuất chưa mergeDB.
 
-## Bổ sung 0.2.0 — job, đề nghị và kế hoạch
+## Bổ sung 0.2.0: job, đề nghị và kế hoạch
 
 ```mermaid
 stateDiagram-v2

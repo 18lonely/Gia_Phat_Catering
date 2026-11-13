@@ -1,4 +1,4 @@
-# Đối chiếu fixture E6 — 12/11/2026
+# Đối chiếu fixture E6 ngày 12/11/2026
 
 DOCUMENT_CLARIFIED · Chỉ BA, chưa backend/migration/E7–E13. Workspace D:/BA không Git/AGENTS.md. Đã đọc các tài liệu yêu cầu, kiểm kê và đọc4/4file fixture; áp dụng skill test-cases và rule/template hiện có tại .claude/ba-kit. Không sinh ca hoặc sổ gap mới.
 

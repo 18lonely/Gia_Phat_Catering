@@ -1,15 +1,15 @@
 ---
 id: DOC-AGENT-NOI-BO-SRS-FLOWS
-title: Luồng tuần tự — Agent Nội bộ
+title: "Luồng tuần tự: Agent Nội bộ"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Luồng tuần tự — Agent Nội bộ
+# Luồng tuần tự: Agent Nội bộ
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

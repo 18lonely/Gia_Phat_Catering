@@ -32,12 +32,12 @@ tc='# AC và test thiết kế kế toán\n\nPhiên bản0.1.0 ·11/11/2026 ·18
 for n,item in enumerate(items,1):
  title,actor,want,why,fr,api,tables,screen,priority,sp,gate,cases=item;sid=f'US-ACC-{n:03}'
  entry=dict(id=sid,fr=fr,api=api,tables=tables,screen=screen,gate=gate,cases=[])
- md+=f'## {sid} — {title}\n\nLà một {actor}, tôi muốn {want} để {why}.\n\n| Trường | Nội dung |\n| :--- | :--- |\n| FR / ưu tiên / SP sơ bộ | {fr} / {priority} / {sp} |\n| API | {api} |\n| Dữ liệu | {tables} |\n| Màn | {screen} |\n| Gate | {gate} |\n| AC/test | [AC và test](../accounting/design-tests.md), nhóm {sid} |\n\n'
- tc+=f'## {sid} — {fr}\n\nNguồn: {api}; {tables}; {screen}. Gate: {gate}.\n\n'
+ md+=f'## {sid}: {title}\n\nLà một {actor}, tôi muốn {want} để {why}.\n\n| Trường | Nội dung |\n| :--- | :--- |\n| FR / ưu tiên / SP sơ bộ | {fr} / {priority} / {sp} |\n| API | {api} |\n| Dữ liệu | {tables} |\n| Màn | {screen} |\n| Gate | {gate} |\n| AC/test | [AC và test](../accounting/design-tests.md), nhóm {sid} |\n\n'
+ tc+=f'## {sid}: {fr}\n\nNguồn: {api}; {tables}; {screen}. Gate: {gate}.\n\n'
  for j,(title,g,w,t) in enumerate(cases,1):
   aid=f'AC-ACC-D{n:02}-{j:02}';tid=f'TC-ACC-D{n:02}-{j:02}'
   entry['cases'].append(dict(id=tid,ac=aid,given=g,when=w,then=t,status='BLOCKED_POLICY_OR_ENVIRONMENT'))
-  tc+=f'### {tid} — {title}\n\n```gherkin\nScenario: {aid}\n  Given {g}\n  When {w}\n  Then {t}\n```\n\nBước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED — {gate}; chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / —.\n\n'
+  tc+=f'### {tid}: {title}\n\n```gherkin\nScenario: {aid}\n  Given {g}\n  When {w}\n  Then {t}\n```\n\nBước QA: tạo fixture trên ở môi trường test; gọi API hoặc sự kiện đúng version; kiểm response và bản ghi trước/sau, quyền, audit. Expected: Then ở trên. Trạng thái: **BLOCKED ({gate}); chưa có môi trường/backend**. Actual/evidence/defect: Chưa chạy / chưa có / chưa có.\n\n'
  data.append(entry)
 (B/'userstories/accounting-backlog.md').write_text(md,encoding='utf-8')
 (B/'accounting/design-tests.md').write_text(tc,encoding='utf-8')

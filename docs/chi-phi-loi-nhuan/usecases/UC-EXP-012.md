@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-012-MD
-title: UC-EXP-012 — Kiểm nguồn và truy nguyên lần báo cáo
+title: "UC-EXP-012: Kiểm nguồn và truy nguyên lần báo cáo"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-012 — Kiểm nguồn và truy nguyên lần báo cáo
+# UC-EXP-012: Kiểm nguồn và truy nguyên lần báo cáo
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: thiếu một nguồn trong manifest cần thiết; khi yêu cầu đánh dấu đủ dữ liệu thì ERR-EXP-422-02; nguồn thiếu không có giá trị 0 thay thế.
-- **4d — biên**: nguồn E7 có revision mới sau lần chạy; khi đọc lần chạy cũ và đề nghị làm mới thì bản cũ bất biến; lần mới phải kiểm lại gate và có id khác.
+- **4c. Đặc thù**: thiếu một nguồn trong manifest cần thiết; khi yêu cầu đánh dấu đủ dữ liệu thì ERR-EXP-422-02; nguồn thiếu không có giá trị 0 thay thế.
+- **4d. Biên**: nguồn E7 có revision mới sau lần chạy; khi đọc lần chạy cũ và đề nghị làm mới thì bản cũ bất biến; lần mới phải kiểm lại gate và có id khác.
 
 ## Quy tắc và truy vết
 

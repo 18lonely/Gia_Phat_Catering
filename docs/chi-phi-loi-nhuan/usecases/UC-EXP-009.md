@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-009-MD
-title: UC-EXP-009 — Đối chiếu lợi nhuận với từng cơ sở
+title: "UC-EXP-009: Đối chiếu lợi nhuận với từng cơ sở"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-009 — Đối chiếu lợi nhuận với từng cơ sở
+# UC-EXP-009: Đối chiếu lợi nhuận với từng cơ sở
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: cơ sở 200, tổng khách 250, chưa phân bổ có tác động -50; khi mở đối chiếu thì hiện cầu nối 250 - 50 = 200, nhưng R13 vẫn chưa đạt vì khách chưa phân bổ hết.
-- **4d — biên**: cơ sở 200, tổng khách 250, phần chưa phân bổ -40; khi mở đối chiếu thì delta -10 hiện rõ; không giấu 10 vào khách cuối, không dùng dung sai Cost.
+- **4c. Đặc thù**: cơ sở 200, tổng khách 250, chưa phân bổ có tác động -50; khi mở đối chiếu thì hiện cầu nối 250 - 50 = 200, nhưng R13 vẫn chưa đạt vì khách chưa phân bổ hết.
+- **4d. Biên**: cơ sở 200, tổng khách 250, phần chưa phân bổ -40; khi mở đối chiếu thì delta -10 hiện rõ; không giấu 10 vào khách cuối, không dùng dung sai Cost.
 
 ## Quy tắc và truy vết
 

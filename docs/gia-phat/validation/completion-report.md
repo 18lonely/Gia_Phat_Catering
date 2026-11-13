@@ -49,6 +49,6 @@ python docs/cost/validation/check-reconciliation.py
 
 Renderer và UI checker dùng thư viện đã có ở `$env:TEMP/gia-phat-cost-validation/node_modules`; có thể truyền thư mục dependency khác làm tham số đầu. Không cần CDN/mạng để mở preview đã xuất. Không có backend, provider AI, dữ liệu kế toán thật hoặc UAT trong phạm vi kiểm này.
 
-## Bổ sung tiếp nối E6 — 11/11/2026
+## Bổ sung tiếp nối E6 ngày 11/11/2026
 
 Mô tả E6 khởi đầu trong báo cáo này là mốc lịch sử. [Gói E6 v0.2 mới](../../chon-mon-order/validation/report.md) bổ sung19UC,57AC,26HTTP endpoint,2port,13màn vàRTM; các gate vẫn mở, schema65bảng không đổi, chưa backend/UAT. Dùng báo cáo E6 để xem bằng chứng kiểm riêng; không ghi đè kết quả46sơ đồ/12màn của E1–E5.

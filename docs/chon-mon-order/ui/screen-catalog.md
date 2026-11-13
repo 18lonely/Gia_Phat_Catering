@@ -34,7 +34,7 @@ Desktop: sidebar + nội dung; mobile: thanh màn cuộn riêng, form một cộ
 
 Review E6-RV-08: màn09 cho phép sửa default rồi bấm khóa để xem nhánh thành công; demo **giả định đã được phép xử lý nguồn sau hạn**. Không mô phỏng cấp quyền ngoại lệ/quyết định gia hạn; không dùng demo làm bằng chứng ai cũng được retry với nguồn mới. Xem [DR-03](../review/decision-review.md).
 
-## Bổ sung consistency độc lập — 11/11/2026
+## Bổ sung consistency độc lập ngày 11/11/2026
 
 Xem [mapping UI/API/data](../api/data-mapping.md) và [lifecycle review](../srs/lock-plan-review.md). Phân biệt token tổng, version order, revision order/plan; lock thành công không hứa plan đã sẵn sàng. Các trường completeness/ack/publish vẫn là delta review, chưa thêm vào catalog hoặc wireframe; không thay E6-EVID-001/002.
 

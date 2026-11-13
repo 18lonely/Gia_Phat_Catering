@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-005-MD
-title: UC-PUR-005 — Ghi phiếu nhận hàng nháp
+title: "UC-PUR-005: Ghi phiếu nhận hàng nháp"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-005 — Ghi phiếu nhận hàng nháp
+# UC-PUR-005: Ghi phiếu nhận hàng nháp
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Chấp nhận 9 kg khi chỉ nhận 8 kg: Chặn dữ liệu mâu thuẫn, không ghi phiếu (ERR-PUR-422-15).
-- Bước 4 — Hai lần nhận cùng đơn: Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có.
-- Bước 4 — thiếu policy/nguồn tại E11-Q04/13: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Chấp nhận 9 kg khi chỉ nhận 8 kg: Chặn dữ liệu mâu thuẫn, không ghi phiếu (ERR-PUR-422-15).
+- Bước 4: Hai lần nhận cùng đơn: Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có.
+- Bước 4: thiếu policy/nguồn tại E11-Q04/13: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

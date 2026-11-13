@@ -51,7 +51,7 @@
     "method": "GET",
     "path": "/v1/nutrition-agent/requests/{id}",
     "permission": "owner scope + AIN service intersection; control ports not public",
-    "requestResponse": "— → SafeRun",
+    "requestResponse": "Không có body → SafeRun",
     "success": 200,
     "errors": [
       "ERR-AIN-400-01",
@@ -143,7 +143,7 @@
     "method": "GET",
     "path": "/v1/nutrition-agent/proposals/{id}",
     "permission": "owner scope + AIN service intersection; control ports not public",
-    "requestResponse": "— → SafeProposalStatus",
+    "requestResponse": "Không có body → SafeProposalStatus",
     "success": 200,
     "errors": [
       "ERR-AIN-400-01",
@@ -166,7 +166,7 @@
     "method": "GET",
     "path": "/v1/nutrition-agent/personal-availability",
     "permission": "read availability only",
-    "requestResponse": "— → {state:CLOSED}",
+    "requestResponse": "Không có body → {state:CLOSED}",
     "success": 200,
     "errors": [
       "ERR-AIN-400-01",
@@ -304,7 +304,7 @@
     "method": "GET",
     "path": "/v1/nutrition-agent/admin/limits",
     "permission": "explicit ain.limits.read",
-    "requestResponse": "— → policy revisions, no values until configured",
+    "requestResponse": "Không có body → policy revisions, no values until configured",
     "success": 200,
     "errors": [
       "ERR-AIN-401-01",

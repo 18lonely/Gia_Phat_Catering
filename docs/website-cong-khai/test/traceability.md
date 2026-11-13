@@ -35,9 +35,9 @@ Phủ12/12 FR có luồng;6/6 feature có thiết kế nháp có điều kiện,
 
 FR-PUB-URLM-001 / UC-PUB-003 / US-PUB-003 còn truy vết API-PUB-016, UI-PUB-06 và TC-PUB-S05 cho chuyển nội dung bài thành nháp, đối chiếu sourceId/body/media/ngày gốc; API-PUB-003/UI-PUB-07 cho mapping URL. Nhánh import/CMS BLOCKED E8-Q01/02/08/09; không tự công bố sau chuyển.
 
-## Bổ sung gate — XC-05
+## Bổ sung gate (XC-05)
 
-> Chờ E8-Q13 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E8-Q13: XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Ca liên quan: TC-PUB-007-H. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
 

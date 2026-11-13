@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-012-MD
-title: UC-PUB-012 — Quản lý ảnh và banner
+title: "UC-PUB-012: Quản lý ảnh và banner"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-012 — Quản lý ảnh và banner
+# UC-PUB-012: Quản lý ảnh và banner
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò qu
 
 Trigger: Người quản trị chuẩn bị ảnh/banner cho nội dung hoặc cần thay/gỡ ảnh đã gắn vào trang.
 
-Tiền điều kiện — nghiệp vụ: Có fileRef, thông tin quyền sử dụng và nội dung/vị trí liên quan; người thao tác có phiên và quyền quản lý media.
-Tiền điều kiện — gate còn mở: E8-Q09/08 chưa chốt loại/dung lượng ảnh, vị trí/lịch và quyền public asset; không tự mở loại ảnh mới.
+Tiền điều kiện (nghiệp vụ): Có fileRef, thông tin quyền sử dụng và nội dung/vị trí liên quan; người thao tác có phiên và quyền quản lý media.
+Tiền điều kiện (gate còn mở): E8-Q09/08 chưa chốt loại/dung lượng ảnh, vị trí/lịch và quyền public asset; không tự mở loại ảnh mới.
 
 Luồng chính:
 1. Người quản trị chọn ảnh/banner tại UI-PUB-09 và cung cấp fileRef.

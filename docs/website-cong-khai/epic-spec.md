@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-EPIC-SPEC-MD
-title: E8 — Website công khai
+title: "E8: Website công khai"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# E8 — Website công khai
+# E8: Website công khai
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 

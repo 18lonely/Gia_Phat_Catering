@@ -1,24 +1,24 @@
 ---
 id: DOC-NEN-TANG-USECASES-UC-CORE-012
-title: UC-CORE-012 — Xem ma trận vai trò – quyền
+title: "UC-CORE-012: Xem ma trận vai trò – quyền"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# UC-CORE-012 — Xem ma trận vai trò – quyền
+# UC-CORE-012: Xem ma trận vai trò – quyền
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 2026-11-11 | BA | Bổ sung theo kế hoạch; giữ điểm mở và xác nhận đã có |
 
-Mức Sea level (port kỹ thuật: Fish level). Actor: quản trị hoặc người được cấp quyền theo SRS; hệ thống hỗ trợ AUTH/SYS. Bên quan tâm: người vận hành cần đúng quyền và có audit. Trigger: Xem ma trận vai trò – quyền. Tiền điều kiện: Người có quyền xem matrix nội bộ. FR: FR-AUTH-RBAC-002; BR: —. Thành công: Ma trận. Bảo đảm tối thiểu: không ghi nghiệp vụ một phần hoặc lộ bí mật.
+Mức Sea level (port kỹ thuật: Fish level). Actor: quản trị hoặc người được cấp quyền theo SRS; hệ thống hỗ trợ AUTH/SYS. Bên quan tâm: người vận hành cần đúng quyền và có audit. Trigger: Xem ma trận vai trò – quyền. Tiền điều kiện: Người có quyền xem matrix nội bộ. FR: FR-AUTH-RBAC-002; BR: không áp dụng. Thành công: Ma trận. Bảo đảm tối thiểu: không ghi nghiệp vụ một phần hoặc lộ bí mật.
 
 1. Actor mở UI-CORE-02 hoặc module gọi port được cấp quyền.
-2. Hệ thống kiểm phiên, quyền và scope; nhận —.
+2. Hệ thống kiểm phiên, quyền và scope; không cần dữ liệu đầu vào.
 3. Hiển thị vai trò nào có quyền nào. Bản đầu chỉ đọc; thay đổi ma trận qua bản phát hành.
 4. Trả kết quả, requestId và trạng thái; UI không báo thành công khi mất response.
 

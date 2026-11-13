@@ -58,8 +58,8 @@ Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 ba
 | TC-PUB-012-B | AC-PUB-012-B | FR-PUB-MEDI-001 | chưa có quyết định E8-Q09/08; fixture synthetic | 1. Mở UI-PUB-09. 2. Chuẩn bị dữ liệu theo Given. 3. Gọi API-PUB-012 / thao tác thực hiện nhánh phụ thuộc. 4. Đối chiếu response, UI và read-back nếu ghi. | Giữ BLOCKED E8-Q09/08; không ghi/công bố hoặc bịa dữ liệu phụ thuộc | NOT RUN |  |  |
 
 
-## Bổ sung gate — XC-05
+## Bổ sung gate (XC-05)
 
-> Chờ E8-Q13 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E8-Q13: XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Ca liên quan: TC-PUB-007-H, TC-PUB-007-E, TC-PUB-007-B, TC-PUB-008-H, TC-PUB-008-E. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

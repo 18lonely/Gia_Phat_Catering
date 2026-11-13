@@ -1,4 +1,4 @@
-# Bàn giao E6 — review delta và evidence
+# Bàn giao E6: review delta và evidence
 
 11/11/2026 · BA draft. Tiếp nối [handoff độc lập](independent-handoff.md); không ghi đè snapshot cũ. [Báo cáo/file thay đổi](../validation/contract-report.md) · [Preview](../preview.html).
 

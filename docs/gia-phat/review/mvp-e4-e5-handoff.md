@@ -1,4 +1,4 @@
-# Gói review BA — Dinh dưỡng và Agent Nội bộ MVP
+# Gói review BA: Dinh dưỡng và Agent Nội bộ MVP
 
 Phiên bản 0.1.0 · 2026-11-11 · **Draft, chưa ký duyệt nghiệp vụ, chưa triển khai backend.**
 
@@ -14,7 +14,7 @@ Phiên bản 0.1.0 · 2026-11-11 · **Draft, chưa ký duyệt nghiệp vụ, ch
 
 ## 2. Tài liệu review
 
-| Thành phần | E4 — Dinh dưỡng | E5 — Agent Nội bộ |
+| Thành phần | E4: Dinh dưỡng | E5: Agent Nội bộ |
 | :--- | :--- | :--- |
 | Phạm vi | FEAT-019/020, R4 | FEAT-021/022/023, R5 |
 | SRS | [5 FR, 5 BR, 4 NFR](../../dinh-duong/srs/spec.md) | [6 FR, 6 BR, 4 NFR](../../agent-noi-bo/srs/spec.md) |

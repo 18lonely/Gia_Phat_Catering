@@ -1,4 +1,4 @@
-# Tài liệu Yêu cầu Người dùng (URD) — Nền tảng Gia Phát
+# Tài liệu Yêu cầu Người dùng (URD): Nền tảng Gia Phát
 
 ## Metadata
 
@@ -6,7 +6,7 @@
 |---|---|
 | Template | `05-urd.md` · BA-Kit v1.0 |
 | Phiên bản | v0.1.0 |
-| Trạng thái | **Bản nháp** — dựng từ tài liệu, **chưa phỏng vấn người dùng thật** (xem mục 7) |
+| Trạng thái | **Bản nháp**: dựng từ tài liệu, **chưa phỏng vấn người dùng thật** (xem mục 7) |
 | Ngày | 10/11/2026 |
 | Tài liệu liên quan | [BRD](06-brd.md) · [Kế hoạch tổng thể](00-ke-hoach-tong-the.md) · [Bảng quy tắc thực đơn](brainstorms/quy-tac-thuc-don.md) |
 
@@ -38,7 +38,7 @@ Theo `rules/17-actor-role-definition.md`.
 | A-10 | Giám đốc | Chính | Quản trị | Có |
 | A-11 | Agent Dinh dưỡng viên | Hệ thống | Website, cổng | Tài khoản dịch vụ |
 | A-12 | Agent Nội bộ | Hệ thống | Quản trị | Tài khoản dịch vụ, quyền theo người dùng |
-| A-13 | Bộ hẹn giờ hệ thống | Hệ thống | — | Khoá số tại hạn chốt, gửi nhắc, tính nhu cầu nguyên liệu |
+| A-13 | Bộ hẹn giờ hệ thống | Hệ thống | Không áp dụng | Khoá số tại hạn chốt, gửi nhắc, tính nhu cầu nguyên liệu |
 
 ---
 
@@ -56,13 +56,13 @@ Chân dung theo **vai trò**, không gắn tên hay tuổi giả định.
 | Mục tiêu | Thực đơn đúng quy chuẩn, cost không vượt ngưỡng, khách không rời | Docx; BRD BO-01, BO-04 |
 | Khó khăn | Mọi quy tắc phải tự nhớ và tự kiểm; cost chỉ biết sau khi đã mua; là điểm duy nhất nắm lịch sử khách | BRD P-01, P-02, P-04 |
 | Rủi ro với dự án | Khối lượng nhập dữ liệu gốc dồn vào một người | BRD R-01, R-02 |
-| Thiết bị, thời điểm dùng | [CẦN PHỎNG VẤN] | — |
+| Thiết bị, thời điểm dùng | [CẦN PHỎNG VẤN] | Chưa xác định |
 
 ### 2.2 A-10 · Giám đốc
 
 | Mục | Nội dung | Nguồn |
 |---|---|---|
-| Vai trò | Duyệt giá, hợp đồng, ngoại lệ; nhìn toàn dòng vận hành. Vai trò này là **giả định** trong bản HTML — điểm mở O-06 | Bản HTML, mục 0 |
+| Vai trò | Duyệt giá, hợp đồng, ngoại lệ; nhìn toàn dòng vận hành. Vai trò này là **giả định** trong bản HTML: điểm mở O-06 | Bản HTML, mục 0 |
 | Mục tiêu | Biết biên lợi nhuận theo ngày và theo khách; chỉ can thiệp khi có ngoại lệ | Bản HTML, "Tháp điều hành" |
 | Khó khăn | Số liệu nằm rải ở Sheets, giấy và điện thoại cá nhân | BRD H-01 → H-03 |
 | Cần từ hệ thống | Dashboard cost %, doanh thu, công nợ, khách có nguy cơ rời; hỏi số liệu bằng lời | D-07 |
@@ -75,7 +75,7 @@ Chân dung theo **vai trò**, không gắn tên hay tuổi giả định.
 | Việc đang làm | Nhập Sheets chi phí, nhập–xuất nguyên liệu, công nợ nhà cung cấp, doanh thu, lương; dùng MISA riêng | Bản HTML, mục 0 |
 | Việc sẽ làm | Nhập giá nhập theo nhà cung cấp và ngày; đặt hàng phần thiếu; đối soát, khoá kỳ, xuất file MISA | D-13; bản HTML chặng 4, 10b |
 | Khó khăn | Nhập lại số liệu người khác đã ghi; đối soát cuối tháng bằng tay | BRD P-03 |
-| Chia việc giữa 2 kế toán (theo mảng hay theo cơ sở) | [CẦN PHỎNG VẤN] — bản HTML cũng ghi "cần xác nhận" | Bản HTML, mục 0 |
+| Chia việc giữa 2 kế toán (theo mảng hay theo cơ sở) | [CẦN PHỎNG VẤN]: bản HTML cũng ghi "cần xác nhận" | Bản HTML, mục 0 |
 
 ### 2.4 A-07 · Quản lý cơ sở và A-08 · Bếp trưởng
 
@@ -85,7 +85,7 @@ Chân dung theo **vai trò**, không gắn tên hay tuổi giả định.
 | Việc đang làm | Điều hành bếp, lập chấm công, ghi chi tiêu trên giấy; sơ chế, chế biến, chia suất | Bản HTML, mục 0 |
 | Việc sẽ làm | Xem kế hoạch theo **món** cho ngày mai; ghi số sản xuất, số giao; nhận nguyên liệu; lưu mẫu | D-04; bản HTML chặng 5–9 |
 | Cần từ hệ thống | Số suất từng món chính biết trước giờ mua hàng; phiếu sản xuất xem được trên điện thoại | Bản HTML chặng 5 |
-| Mối lo với việc người ăn tự chọn | Số theo món biến động, khó chuẩn bị | BRD R-07 — [CẦN PHỎNG VẤN] |
+| Mối lo với việc người ăn tự chọn | Số theo món biến động, khó chuẩn bị | BRD R-07: [CẦN PHỎNG VẤN] |
 
 ### 2.5 A-02 · Người đặt tổng (kiêm A-03 Người nhận)
 
@@ -95,7 +95,7 @@ Chân dung theo **vai trò**, không gắn tên hay tuổi giả định.
 | Việc đang làm | Gửi số suất cho Gia Phát qua Zalo | Bản HTML chặng 3 |
 | Việc sẽ làm | Đặt định mức suất của công ty; xem tổng lựa chọn theo món; chốt tổng số suất; xác nhận số nhận; xem đối soát; dùng Agent Dinh dưỡng viên để yêu cầu thực đơn | D-14, D-21, D-06 |
 | Mục tiêu | Ít thao tác hơn nhắn Zalo; số liệu cuối tháng không tranh cãi | BRD BO-06, BO-07 |
-| Có sẵn lòng chuyển từ Zalo sang cổng không | [CẦN PHỎNG VẤN] — BRD AS-02 | — |
+| Có sẵn lòng chuyển từ Zalo sang cổng không | [CẦN PHỎNG VẤN]: BRD AS-02 | Chưa xác định |
 
 ### 2.6 A-04, A-05 · Người ăn
 
@@ -105,8 +105,8 @@ Chân dung theo **vai trò**, không gắn tên hay tuổi giả định.
 | Việc đang làm | Ăn suất được phát, không chọn | BRD H-06 |
 | Việc sẽ làm | Quét QR công ty; chọn 1 trong 3 món chính mỗi ngày trong định mức; xem định lượng, dinh dưỡng, dị ứng; đánh giá bữa ăn | D-04, D-19, D-21 |
 | Hai kiểu dùng | **Qua QR**: chọn món, không lưu gì. **Có tài khoản**: thêm lịch sử, đặt trước cả tuần, hồ sơ dinh dưỡng và gợi ý cá nhân | D-03, D-06 |
-| Điều kiện dùng | Có điện thoại vào được web — BRD AS-01 | [CẦN PHỎNG VẤN] với nhóm công nhân |
-| Thời điểm chọn món (trước mấy ngày, lúc nào trong ngày) | [CẦN PHỎNG VẤN] | — |
+| Điều kiện dùng | Có điện thoại vào được web: BRD AS-01 | [CẦN PHỎNG VẤN] với nhóm công nhân |
+| Thời điểm chọn món (trước mấy ngày, lúc nào trong ngày) | [CẦN PHỎNG VẤN] | Chưa xác định |
 
 ### 2.7 A-01 · Khách vãng lai
 
@@ -127,7 +127,7 @@ Bốn chặng theo skill: Nhận biết → Xem → Thao tác → Nhận kết q
 
 | Chặng | Người ăn làm gì | Hệ thống đáp lại | Điểm dễ hỏng |
 |---|---|---|---|
-| Nhận biết | Thấy mã QR công ty tại nơi làm việc, hoặc nhận nhắc trước hạn chốt | — | Không biết có tính năng; kênh nhắc chưa chốt (Q-14) |
+| Nhận biết | Thấy mã QR công ty tại nơi làm việc, hoặc nhận nhắc trước hạn chốt | Không áp dụng | Không biết có tính năng; kênh nhắc chưa chốt (Q-14) |
 | Xem | Quét QR, thấy 3 món chính của ngày kèm định lượng, 4 chỉ số dinh dưỡng, dị ứng | Trang mở từ bộ nhớ đệm; hiện giờ còn lại đến hạn chốt | Mạng yếu trong xưởng |
 | Thao tác | Chọn 1 món; nếu có tài khoản thì chọn luôn cho các ngày còn lại trong tuần | Ghi lựa chọn; chặn tổ hợp vượt định mức công ty (BR-COST-012) | Bấm nhiều lần; nhiều người cùng chọn sát hạn chốt |
 | Nhận kết quả | Thấy xác nhận món đã chọn; đổi được trước hạn chốt | Sau hạn chốt: khoá; người chưa chọn nhận món mặc định (D-14) | Người ăn không biết mình đã bị gán món mặc định |
@@ -137,16 +137,16 @@ Bốn chặng theo skill: Nhận biết → Xem → Thao tác → Nhận kết q
 | Chặng | Người đặt tổng làm gì | Hệ thống đáp lại | Điểm dễ hỏng |
 |---|---|---|---|
 | Nhận biết | Nhận nhắc trước hạn chốt | Gửi nhắc kèm số người chưa chọn | Kênh nhắc chưa chốt (Q-14) |
-| Xem | Mở cổng, thấy tổng theo từng món chính, số người chưa chọn, món mặc định | Số cập nhật theo lựa chọn mới nhất | — |
+| Xem | Mở cổng, thấy tổng theo từng món chính, số người chưa chọn, món mặc định | Số cập nhật theo lựa chọn mới nhất | Không có |
 | Thao tác | Nhập tổng số suất của ngày; sửa phân bổ cho phần chưa chọn nếu muốn; bấm chốt | Kiểm tra hợp đồng, điểm phục vụ, ca còn hiệu lực | Chốt trễ sau hạn → đi luồng "đổi sau chốt" |
-| Nhận kết quả | Thấy bản chốt có phiên bản; sau khi giao thì xác nhận số nhận | Phát hành kế hoạch cho cơ sở và kế toán | Số chốt nhỏ hơn số người đã chọn — cần quy tắc xử lý ở SRS |
+| Nhận kết quả | Thấy bản chốt có phiên bản; sau khi giao thì xác nhận số nhận | Phát hành kế hoạch cho cơ sở và kế toán | Số chốt nhỏ hơn số người đã chọn: cần quy tắc xử lý ở SRS |
 
 ### 3.3 J-03 · Dinh dưỡng viên dựng thực đơn tuần
 
 | Chặng | Dinh dưỡng viên làm gì | Hệ thống đáp lại | Điểm dễ hỏng |
 |---|---|---|---|
 | Nhận biết | Đến kỳ dựng thực đơn, hoặc nhận cảnh báo giá nhập làm thực đơn cũ vượt ngưỡng | Cảnh báo BR-COST-011 | Giá nhập chưa cập nhật (BR-COST-005) |
-| Xem | Mở loại suất, xem thực đơn các tuần trước và điểm quy tắc | Hiện lịch sử món đã dùng để tránh lặp | — |
+| Xem | Mở loại suất, xem thực đơn các tuần trước và điểm quy tắc | Hiện lịch sử món đã dùng để tránh lặp | Không có |
 | Thao tác | Yêu cầu Agent Nội bộ tạo bản nháp; đổi món bằng tay hoặc bằng lời | Agent chỉ dùng món đã duyệt; bộ kiểm quy tắc và cost chạy lại sau mỗi thay đổi | Thiếu món đã duyệt đủ thuộc tính → agent không dựng được |
 | Nhận kết quả | Thấy bảng kiểm: quy tắc đạt/vi phạm, cost %, bảng dự toán; gửi duyệt; công bố | Chặn công bố khi vi phạm quy tắc cứng hoặc vượt ngưỡng | Người duyệt thứ hai chưa xác định (O-06) |
 
@@ -155,7 +155,7 @@ Bốn chặng theo skill: Nhận biết → Xem → Thao tác → Nhận kết q
 | Chặng | Khách làm gì | Hệ thống đáp lại | Điểm dễ hỏng |
 |---|---|---|---|
 | Nhận biết | Tìm kiếm trên mạng, thấy Facebook, hoặc được giới thiệu | Trang đích tải được từ kết quả tìm kiếm | Mất thứ hạng sau khi bỏ WordPress (BRD R-05) |
-| Xem | Xem thực đơn mẫu có giá suất, định lượng, dinh dưỡng | — | Giá công khai để đối thủ xem được — đã chấp nhận ở D-10 |
+| Xem | Xem thực đơn mẫu có giá suất, định lượng, dinh dưỡng | Không áp dụng | Giá công khai để đối thủ xem được: đã chấp nhận ở D-10 |
 | Thao tác | Dựng thử thực đơn theo mức giá và số suất; hỏi Agent Dinh dưỡng viên | Agent trả thực đơn mẫu đạt quy tắc; giới hạn số lượt | Khách hỏi ngoài phạm vi (bệnh lý, cam kết giá) |
 | Nhận kết quả | Gửi yêu cầu tư vấn kèm thực đơn vừa dựng | Tạo lead trong CRM có nguồn; báo dinh dưỡng viên | Lead không ai nhận trong 24 giờ |
 
@@ -164,7 +164,7 @@ Bốn chặng theo skill: Nhận biết → Xem → Thao tác → Nhận kết q
 | Chặng | Kế toán làm gì | Hệ thống đáp lại | Điểm dễ hỏng |
 |---|---|---|---|
 | Nhận biết | Có chứng từ mua hàng mới, hoặc đến cuối kỳ | Cảnh báo giá quá cũ | Chứng từ viết tay từ tiểu thương |
-| Xem | Xem giá hiện hành theo nguyên liệu và nhà cung cấp; xem doanh thu ngày đã ghi nhận | — | — |
+| Xem | Xem giá hiện hành theo nguyên liệu và nhà cung cấp; xem doanh thu ngày đã ghi nhận | Không áp dụng | Không có |
 | Thao tác | Nhập giá mới có ngày hiệu lực; lập biên bản đối soát | Tính lại cost các thực đơn chịu ảnh hưởng | Nhập sai đơn vị (kg, bìa, quả) |
 | Nhận kết quả | Thấy thực đơn nào vượt ngưỡng; khách ký biên bản; khoá kỳ; xuất file MISA | Báo dinh dưỡng viên và Giám đốc | Định nghĩa cost chưa chốt (O-01) |
 

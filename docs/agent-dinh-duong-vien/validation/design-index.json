@@ -118,7 +118,7 @@
       "ui": "UI-AIN-02",
       "method": "GET",
       "route": "/v1/nutrition-agent/requests/{id}",
-      "dto": "— → SafeRun",
+      "dto": "Không có body → SafeRun",
       "scenarios": [
         [
           "candidate đúng nguồn và máy E2 không vi phạm cứng",
@@ -262,7 +262,7 @@
       "ui": "UI-AIN-04",
       "method": "GET",
       "route": "/v1/nutrition-agent/proposals/{id}",
-      "dto": "— → SafeProposalStatus",
+      "dto": "Không có body → SafeProposalStatus",
       "scenarios": [
         [
           "proposal đã tiếp nhận bền vững thuộc chủ thể",
@@ -298,7 +298,7 @@
       "ui": "UI-AIN-07",
       "method": "GET",
       "route": "/v1/nutrition-agent/personal-availability",
-      "dto": "— → {state:CLOSED}",
+      "dto": "Không có body → {state:CLOSED}",
       "scenarios": [
         [
           "gate O-03 đóng",

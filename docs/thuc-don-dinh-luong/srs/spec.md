@@ -1,14 +1,14 @@
-# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS) — Epic E2 · Thực đơn & Định lượng
+# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS): Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
 | Trường | Giá trị |
 | :--- | :--- |
-| Epic | E2 · `thuc-don-dinh-luong` — đợt phát hành R2 (v0.2.0) |
+| Epic | E2 · `thuc-don-dinh-luong`: đợt phát hành R2 (v0.2.0) |
 | Phân hệ | MENU |
 | Tính năng PRD | `FEAT-006` → `FEAT-013` |
 | Phiên bản | 0.3.3 |
-| Trạng thái | Draft — **phần 3.3 (bộ kiểm quy tắc) mới có khung và cách tính; con số từng quy tắc chờ DL-01** |
+| Trạng thái | Draft: **phần 3.3 (bộ kiểm quy tắc) mới có khung và cách tính; con số từng quy tắc chờ DL-01** |
 | Ngày | 2026-11-11 |
 | Tiêu chuẩn | IEEE Std 830-1998 / ISO/IEC/IEEE 29148 |
 
@@ -72,18 +72,18 @@ MENU là một module trong API NestJS. Nó dùng AUTH và SYS của nền tản
 
 | Quyền | `DINH_DUONG_VIEN` | `GIAM_DOC` | `QL_CO_SO`, `BEP_TRUONG` | `KT_MUA_HANG`, `KT_DOANH_THU` |
 | :--- | :---: | :---: | :---: | :---: |
-| `menu.catalog.read` — xem nguyên liệu, món, công thức | ✓ | ✓ | ✓ | ✓ |
-| `menu.catalog.write` — tạo, sửa, huỷ nguyên liệu, món, công thức, loại suất | ✓ | — | — | — |
-| `menu.catalog.approve` — duyệt món, công thức | — | ✓ | — | — |
-| `menu.price.read` — xem giá bán món | ✓ | ✓ | — | ✓ |
-| `menu.price.write` — đặt giá bán | ✓ | — | — | — |
-| `menu.price.approve` — duyệt giá bán | — | ✓ | — | — |
-| `menu.menu.read` — xem thực đơn mọi trạng thái | ✓ | ✓ | Chỉ `PUBLISHED` | Chỉ `PUBLISHED` |
-| `menu.menu.write` — dựng, sửa, gửi duyệt, công bố, thu hồi | ✓ | — | — | — |
-| `menu.menu.approve` — duyệt thực đơn | — | ✓ | — | — |
-| `menu.rule.write` — đề nghị sửa danh mục quy tắc | ✓ | — | — | — |
-| `menu.rule.approve` — duyệt sửa danh mục quy tắc | — | ✓ | — | — |
-| `menu.import` — nhập từ bảng tính | ✓ | — | — | — |
+| `menu.catalog.read`: xem nguyên liệu, món, công thức | ✓ | ✓ | ✓ | ✓ |
+| `menu.catalog.write`: tạo, sửa, huỷ nguyên liệu, món, công thức, loại suất | ✓ | Không | Không | Không |
+| `menu.catalog.approve`: duyệt món, công thức | Không | ✓ | Không | Không |
+| `menu.price.read`: xem giá bán món | ✓ | ✓ | Không | ✓ |
+| `menu.price.write`: đặt giá bán | ✓ | Không | Không | Không |
+| `menu.price.approve`: duyệt giá bán | Không | ✓ | Không | Không |
+| `menu.menu.read`: xem thực đơn mọi trạng thái | ✓ | ✓ | Chỉ `PUBLISHED` | Chỉ `PUBLISHED` |
+| `menu.menu.write`: dựng, sửa, gửi duyệt, công bố, thu hồi | ✓ | Không | Không | Không |
+| `menu.menu.approve`: duyệt thực đơn | Không | ✓ | Không | Không |
+| `menu.rule.write`: đề nghị sửa danh mục quy tắc | ✓ | Không | Không | Không |
+| `menu.rule.approve`: duyệt sửa danh mục quy tắc | Không | ✓ | Không | Không |
+| `menu.import`: nhập từ bảng tính | ✓ | Không | Không | Không |
 
 Cột `GIAM_DOC` là người duyệt theo giả định của bản thiết kế cũ; người duyệt thật và người thay khi vắng: [O-06]. Quyền duyệt chuyển được qua `FR-AUTH-RBAC-003`.
 
@@ -103,18 +103,18 @@ Theo mục 2.4 của epic-spec: R1, DL-01, DL-03 → DL-05, [O-02], [O-06].
 
 ### 3.1 Yêu cầu chức năng
 
-#### Nguyên liệu — `FEAT-006`
+#### Nguyên liệu: `FEAT-006`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-MENU-ING-001` | Tạo nguyên liệu | P0 | Tạo nguyên liệu ở trạng thái `ACTIVE`. Hệ thống cấp mã. | tên, nhóm, đơn vị mua, đơn vị dùng, hệ số quy đổi, loại bảo quản, có xương/vỏ, tỷ lệ hao hụt, nguồn cung ổn định | Nguyên liệu | `BR-CAT-001`, `002`, `003` | `ERR-MENU-409-01`, `ERR-MENU-422-01`, `ERR-MENU-422-02` |
 | `FR-MENU-ING-002` | Sửa nguyên liệu | P0 | Sửa mọi trường trừ mã. Sửa đơn vị dùng hoặc hệ số quy đổi bị chặn nếu nguyên liệu đang nằm trong công thức `ACTIVE`. | như trên + `version` | Nguyên liệu | `BR-CAT-004` | `ERR-MENU-409-02`, `ERR-SYS-409-02` |
 | `FR-MENU-ING-003` | Ngừng dùng / huỷ nguyên liệu | P0 | Chuyển `INACTIVE` hoặc huỷ. Bị chặn nếu đang nằm trong công thức `ACTIVE`; lỗi trả kèm danh sách công thức. | mã, lý do | Trạng thái mới | `BR-CAT-005` | `ERR-SYS-409-01` |
-| `FR-MENU-ING-004` | Danh sách và tìm nguyên liệu | P0 | Lọc theo tên, nhóm, loại bảo quản, trạng thái; phân trang. | bộ lọc | Danh sách | — | — |
+| `FR-MENU-ING-004` | Danh sách và tìm nguyên liệu | P0 | Lọc theo tên, nhóm, loại bảo quản, trạng thái; phân trang. | bộ lọc | Danh sách | Không áp dụng | Không áp dụng |
 | `FR-MENU-ING-005` | Quản lý nhóm nguyên liệu | P0 | Tạo, sửa, huỷ nhóm; mỗi nhóm khai nguồn đạm (thịt, cá, trứng, thuỷ sản, đậu, không). Danh sách khởi tạo: [H-3] | tên, nguồn đạm | Nhóm | `BR-CAT-005` | `ERR-MENU-409-01` |
-| `FR-MENU-ING-006` | Khai mùa vụ | P1 | Một nguyên liệu có 0 hoặc nhiều khoảng tháng trong mùa. | mã nguyên liệu, tháng từ, tháng đến | Mùa vụ | — | `ERR-MENU-422-03` |
+| `FR-MENU-ING-006` | Khai mùa vụ | P1 | Một nguyên liệu có 0 hoặc nhiều khoảng tháng trong mùa. | mã nguyên liệu, tháng từ, tháng đến | Mùa vụ | Không áp dụng | `ERR-MENU-422-03` |
 
-#### Món — `FEAT-007`
+#### Món: `FEAT-007`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
@@ -123,68 +123,68 @@ Theo mục 2.4 của epic-spec: R1, DL-01, DL-03 → DL-05, [O-02], [O-06].
 | `FR-MENU-DISH-003` | Gửi duyệt món | P0 | `DRAFT` → `PENDING`. Điều kiện: đủ thuộc tính bắt buộc và có ít nhất 1 công thức ở trạng thái `PENDING` hoặc `ACTIVE`. | mã món | Món `PENDING` | `BR-CAT-009` | `ERR-MENU-422-06` |
 | `FR-MENU-DISH-004` | Duyệt / trả lại món | P0 | Duyệt: `PENDING` → `ACTIVE`. Trả lại: → `DRAFT` kèm lý do. Duyệt được nhiều món một lần. | danh sách mã, quyết định, lý do | Trạng thái mới | `BR-SEC-008`, `BR-CAT-009` | `ERR-SYS-403-01`, `ERR-MENU-422-06` |
 | `FR-MENU-DISH-005` | Ngừng dùng món | P0 | `ACTIVE` → `INACTIVE`. Bị chặn nếu món nằm trong thực đơn `PUBLISHED` có ngày phục vụ từ hôm nay trở đi. Món nằm trong thực đơn `DRAFT`/`CHECKED` hoặc thực đơn đã phục vụ xong **không** bị chặn; thực đơn nháp chứa món đã ngừng sẽ bị chặn ở bước gửi duyệt (`ERR-MENU-422-17`). | mã, lý do | Trạng thái mới | `BR-CAT-005` | `ERR-SYS-409-01` |
-| `FR-MENU-DISH-006` | Danh sách và tìm món | P0 | Lọc theo tên, vai trò, nhóm nguyên liệu, phương pháp, Healthy, trạng thái; phân trang. | bộ lọc | Danh sách | — | — |
+| `FR-MENU-DISH-006` | Danh sách và tìm món | P0 | Lọc theo tên, vai trò, nhóm nguyên liệu, phương pháp, Healthy, trạng thái; phân trang. | bộ lọc | Danh sách | Không áp dụng | Không áp dụng |
 | `FR-MENU-DISH-007` | Quản lý phương pháp chế biến | P0 | Mỗi phương pháp có 2 cờ: là chiên/rán; là ít dầu mỡ. Danh sách khởi tạo: [H-8]; phương pháp nào là ít dầu mỡ: [H-1]. Không bỏ được cờ ít dầu mỡ khi còn món Healthy đang dùng phương pháp đó. | tên, 2 cờ | Phương pháp | `BR-CAT-005`, `BR-CAT-020` | `ERR-MENU-409-01`, `ERR-SYS-409-01` |
-| `FR-MENU-DISH-008` | Quản lý cặp món kỵ nhau | P0 | Khai cặp 2 món không được xếp cùng ngày. Danh sách khởi tạo: [H-4] | món A, món B, ghi chú | Cặp kỵ | — | `ERR-MENU-409-01`, `ERR-MENU-422-07` |
-| `FR-MENU-DISH-009` | Ảnh món | P1 | Gắn 1 ảnh cho món qua `FR-SYS-FILE-001`. | mã món, tệp | — | — | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
+| `FR-MENU-DISH-008` | Quản lý cặp món kỵ nhau | P0 | Khai cặp 2 món không được xếp cùng ngày. Danh sách khởi tạo: [H-4] | món A, món B, ghi chú | Cặp kỵ | Không áp dụng | `ERR-MENU-409-01`, `ERR-MENU-422-07` |
+| `FR-MENU-DISH-009` | Ảnh món | P1 | Gắn 1 ảnh cho món qua `FR-SYS-FILE-001`. | mã món, tệp | Không áp dụng | Không áp dụng | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
 
-#### Công thức — `FEAT-008`
+#### Công thức: `FEAT-008`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-MENU-RCP-001` | Tạo công thức | P0 | Tạo công thức `DRAFT` cho một món: ≥ 1 dòng nguyên liệu, ≥ 1 dòng đánh dấu nguyên liệu chính. Mỗi dòng: định lượng tối thiểu, tối đa, chuẩn; đơn vị tự lấy từ đơn vị dùng của nguyên liệu. | mã món, cỡ định lượng (mặc định `STD`), ngày hiệu lực, các dòng | Công thức `DRAFT`, phiên bản kế tiếp | `BR-CAT-010`, `011`, `012`, `021`, `022` | `ERR-MENU-422-08`, `ERR-MENU-422-09`, `ERR-MENU-422-10`, `ERR-MENU-422-21` |
 | `FR-MENU-RCP-002` | Sửa công thức nháp | P0 | Chỉ sửa được khi `DRAFT`. | như trên + `version` | Công thức | `BR-CAT-013` | `ERR-MENU-409-03` |
 | `FR-MENU-RCP-003` | Gửi duyệt, duyệt, trả lại công thức | P0 | `DRAFT` → `PENDING` → `ACTIVE` hoặc về `DRAFT`. Khi duyệt: nếu ngày hiệu lực ≤ hôm nay thì phiên bản `ACTIVE` trước đó cùng món, cùng cỡ chuyển `SUPERSEDED`; nếu ngày hiệu lực ở tương lai thì cả hai cùng `ACTIVE` và tác vụ nền chuyển phiên bản cũ vào ngày hiệu lực. | mã, quyết định, lý do | Trạng thái mới | `BR-SEC-008`, `BR-CAT-014` | `ERR-SYS-403-01` |
-| `FR-MENU-RCP-004` | Tạo phiên bản mới | P0 | Sao chép một phiên bản `ACTIVE` thành `DRAFT` với số phiên bản kế tiếp. | mã công thức, ngày hiệu lực, lý do | Công thức `DRAFT` | `BR-CAT-013`, `BR-AUD-001` | — |
+| `FR-MENU-RCP-004` | Tạo phiên bản mới | P0 | Sao chép một phiên bản `ACTIVE` thành `DRAFT` với số phiên bản kế tiếp. | mã công thức, ngày hiệu lực, lý do | Công thức `DRAFT` | `BR-CAT-013`, `BR-AUD-001` | Không áp dụng |
 | `FR-MENU-RCP-005` | Lấy công thức hiệu lực | P0 | Trả công thức `ACTIVE` của món và cỡ định lượng có ngày hiệu lực lớn nhất không vượt ngày D. | mã món, cỡ, ngày D | Công thức | `BR-CAT-014` | `ERR-MENU-404-01` |
-| `FR-MENU-RCP-006` | So sánh hai phiên bản | P1 | Hiện từng dòng nguyên liệu thêm, bớt, đổi định lượng. | 2 mã công thức | Bảng khác biệt | — | — |
-| `FR-MENU-RCP-007` | Nhiều cỡ định lượng | Chưa xếp | Một món có nhiều công thức với cỡ định lượng khác nhau, mỗi cỡ một giá bán. Có làm hay không: [O-02]. Nếu không làm, mọi công thức dùng cỡ `STD`. | — | — | — | — |
+| `FR-MENU-RCP-006` | So sánh hai phiên bản | P1 | Hiện từng dòng nguyên liệu thêm, bớt, đổi định lượng. | 2 mã công thức | Bảng khác biệt | Không áp dụng | Không áp dụng |
+| `FR-MENU-RCP-007` | Nhiều cỡ định lượng | Chưa xếp | Một món có nhiều công thức với cỡ định lượng khác nhau, mỗi cỡ một giá bán. Có làm hay không: [O-02]. Nếu không làm, mọi công thức dùng cỡ `STD`. | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
 
-#### Giá bán món — `FEAT-010`
+#### Giá bán món: `FEAT-010`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-MENU-PRC-001` | Đặt giá bán | P0 | Tạo giá `PENDING` cho một món và cỡ định lượng; giá đã gồm VAT [D-15]. | mã món, cỡ, giá, ngày hiệu lực | Giá `PENDING` | `BR-CAT-015`, `016` | `ERR-MENU-422-11`, `ERR-MENU-409-04` |
 | `FR-MENU-PRC-002` | Duyệt / trả lại giá | P0 | `PENDING` → `APPROVED`. Giá `APPROVED` không sửa, không huỷ nếu ngày hiệu lực đã đến. | mã, quyết định, lý do | Trạng thái mới | `BR-SEC-008`, `BR-CAT-016` | `ERR-SYS-403-01`, `ERR-MENU-409-10` |
-| `FR-MENU-PRC-003` | Lấy giá hiệu lực | P0 | Trả giá `APPROVED` có ngày hiệu lực lớn nhất không vượt ngày D. | mã món, cỡ, ngày D | Giá | — | `ERR-MENU-404-02` |
-| `FR-MENU-PRC-004` | Lịch sử giá | P1 | Danh sách giá của một món theo thời gian. | mã món | Danh sách | — | — |
+| `FR-MENU-PRC-003` | Lấy giá hiệu lực | P0 | Trả giá `APPROVED` có ngày hiệu lực lớn nhất không vượt ngày D. | mã món, cỡ, ngày D | Giá | Không áp dụng | `ERR-MENU-404-02` |
+| `FR-MENU-PRC-004` | Lịch sử giá | P1 | Danh sách giá của một món theo thời gian. | mã món | Danh sách | Không áp dụng | Không áp dụng |
 
-#### Loại suất — `FEAT-009`
+#### Loại suất: `FEAT-009`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-MENU-MTY-001` | Tạo loại suất | P0 | Tạo ở trạng thái `DRAFT`. | tên, ngưỡng giá (gồm VAT), số món chính đưa ra, số món chính được chọn, số món phụ, có rau, có canh | Loại suất | `BR-CAT-017` | `ERR-MENU-422-12` |
-| `FR-MENU-MTY-002` | Kích hoạt / ngừng loại suất | P0 | `DRAFT` → `ACTIVE` → `INACTIVE`. Ngừng không ảnh hưởng thực đơn đã công bố. | mã, lý do | Trạng thái mới | — | — |
+| `FR-MENU-MTY-002` | Kích hoạt / ngừng loại suất | P0 | `DRAFT` → `ACTIVE` → `INACTIVE`. Ngừng không ảnh hưởng thực đơn đã công bố. | mã, lý do | Trạng thái mới | Không áp dụng | Không áp dụng |
 | `FR-MENU-MTY-003` | Sửa loại suất | P0 | Tên và cờ công khai: sửa bất kỳ lúc nào. Cơ cấu (ngưỡng giá, số món, rau, canh): chỉ sửa khi chưa có thực đơn nào từ `PENDING` trở đi. | như `001` + `version` | Loại suất | `BR-CAT-018` | `ERR-MENU-409-05` |
-| `FR-MENU-MTY-004` | Đánh dấu công khai | P1 | Loại suất công khai hiện trên website ở E8. | mã, cờ | — | — | — |
+| `FR-MENU-MTY-004` | Đánh dấu công khai | P1 | Loại suất công khai hiện trên website ở E8. | mã, cờ | Không áp dụng | Không áp dụng | Không áp dụng |
 
-#### Thực đơn tuần — `FEAT-011`
+#### Thực đơn tuần: `FEAT-011`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-MENU-MNU-001` | Tạo thực đơn tuần | P0 | Tạo thực đơn `DRAFT` cho một loại suất `ACTIVE` và một tuần; chọn các ngày phục vụ trong tuần. Các ngày được phép: [E2-Q3] | loại suất, ngày thứ Hai của tuần, danh sách ngày phục vụ | Thực đơn `DRAFT` với các ngày trống | `BR-MNU-001` | `ERR-MENU-409-06`, `ERR-MENU-422-13` |
 | `FR-MENU-MNU-002` | Xếp món vào ngày | P0 | Thêm, đổi, bỏ món ở một vị trí của một ngày. Chỉ chọn được món `ACTIVE` có vai trò khớp vị trí. Hệ thống gắn công thức hiệu lực tại ngày phục vụ. Sau mỗi thay đổi, bộ kiểm chạy lại (`FR-MENU-RUL-001`). | mã ngày, vị trí, mã món | Ngày đã cập nhật + kết quả kiểm | `BR-MNU-002`, `003` | `ERR-MENU-422-14`, `ERR-MENU-404-01`, `ERR-MENU-409-07` |
-| `FR-MENU-MNU-003` | Chọn món mặc định | P0 | Đặt một trong các món chính của ngày làm món mặc định. Bỏ món đang là mặc định khỏi ngày thì món mặc định bị xoá. | mã ngày, mã món | — | `BR-MNU-004` | `ERR-MENU-422-15` |
-| `FR-MENU-MNU-004` | Kiểm ngưỡng giá suất | P0 | Với mỗi ngày và mỗi món chính: giá món chính + tổng giá các món phụ + giá rau + giá canh (giá hiệu lực tại ngày phục vụ) không vượt ngưỡng giá của loại suất. Cách kiểm này là [ĐỀ XUẤT]; cách đúng: [E2-Q1] | — (chạy cùng bộ kiểm) | Đạt / không đạt theo từng món chính | `BR-COST-012` | `ERR-MENU-404-02` |
+| `FR-MENU-MNU-003` | Chọn món mặc định | P0 | Đặt một trong các món chính của ngày làm món mặc định. Bỏ món đang là mặc định khỏi ngày thì món mặc định bị xoá. | mã ngày, mã món | Không áp dụng | `BR-MNU-004` | `ERR-MENU-422-15` |
+| `FR-MENU-MNU-004` | Kiểm ngưỡng giá suất | P0 | Với mỗi ngày và mỗi món chính: giá món chính + tổng giá các món phụ + giá rau + giá canh (giá hiệu lực tại ngày phục vụ) không vượt ngưỡng giá của loại suất. Cách kiểm này là [ĐỀ XUẤT]; cách đúng: [E2-Q1] | Không áp dụng (chạy cùng bộ kiểm) | Đạt / không đạt theo từng món chính | `BR-COST-012` | `ERR-MENU-404-02` |
 | `FR-MENU-MNU-005` | Sao chép thực đơn | P1 | Tạo bản `DRAFT` cho tuần đích từ một thực đơn bất kỳ cùng loại suất. Món không còn `ACTIVE` bị bỏ trống và được liệt kê. Món mặc định của từng ngày được sao chép theo (trừ khi món đó bị bỏ trống). Mỗi ô gắn công thức hiệu lực tại ngày phục vụ mới. Bộ kiểm chạy ngay trên bản sao. | mã thực đơn nguồn, tuần đích | Thực đơn `DRAFT` | `BR-MNU-001` | `ERR-MENU-409-06` |
-| `FR-MENU-MNU-006` | Lịch sử món đã dùng | P1 | Khi chọn món, hiện mỗi món đã xuất hiện ngày nào trong 4 tuần gần nhất của cùng loại suất. Chỉ tính thực đơn ở trạng thái `PUBLISHED`; không tính thực đơn nháp, chờ duyệt, đã thu hồi, đã huỷ, và không tính loại suất khác. | loại suất, tuần | Bảng món × ngày | — | — |
-| `FR-MENU-MNU-007` | Xem và danh sách thực đơn | P0 | Lọc theo loại suất, tuần, trạng thái. Vai trò không có quyền ghi chỉ thấy `PUBLISHED`. | bộ lọc | Danh sách / chi tiết | — | — |
-| `FR-MENU-MNU-008` | Xuất thực đơn | P1 | Xuất thực đơn tuần ra PDF: ngày × vị trí × tên món, đánh dấu món mặc định; tiêu đề ghi loại suất và khoảng ngày. Tệp **không** chứa giá bán, giá nhập hay cost. Thực đơn chưa `PUBLISHED` có dòng "BẢN NHÁP — CHƯA CÔNG BỐ" trên mỗi trang. | mã thực đơn | Tệp PDF | — | — |
-| `FR-MENU-MNU-009` | Huỷ thực đơn nháp | P0 | Huỷ thực đơn `DRAFT` hoặc `CHECKED`. | mã, lý do | — | — | `ERR-MENU-409-08` |
+| `FR-MENU-MNU-006` | Lịch sử món đã dùng | P1 | Khi chọn món, hiện mỗi món đã xuất hiện ngày nào trong 4 tuần gần nhất của cùng loại suất. Chỉ tính thực đơn ở trạng thái `PUBLISHED`; không tính thực đơn nháp, chờ duyệt, đã thu hồi, đã huỷ, và không tính loại suất khác. | loại suất, tuần | Bảng món × ngày | Không áp dụng | Không áp dụng |
+| `FR-MENU-MNU-007` | Xem và danh sách thực đơn | P0 | Lọc theo loại suất, tuần, trạng thái. Vai trò không có quyền ghi chỉ thấy `PUBLISHED`. | bộ lọc | Danh sách / chi tiết | Không áp dụng | Không áp dụng |
+| `FR-MENU-MNU-008` | Xuất thực đơn | P1 | Xuất thực đơn tuần ra PDF: ngày × vị trí × tên món, đánh dấu món mặc định; tiêu đề ghi loại suất và khoảng ngày. Tệp **không** chứa giá bán, giá nhập hay cost. Thực đơn chưa `PUBLISHED` có dòng "BẢN NHÁP: CHƯA CÔNG BỐ" trên mỗi trang. | mã thực đơn | Tệp PDF | Không áp dụng | Không áp dụng |
+| `FR-MENU-MNU-009` | Huỷ thực đơn nháp | P0 | Huỷ thực đơn `DRAFT` hoặc `CHECKED`. | mã, lý do | Không áp dụng | Không áp dụng | `ERR-MENU-409-08` |
 
-#### Bộ kiểm quy tắc — `FEAT-012`
+#### Bộ kiểm quy tắc: `FEAT-012`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-MENU-RUL-001` | Kiểm thực đơn | P0 | Chạy mọi quy tắc đang áp dụng trên một thực đơn. Trả kết quả từng quy tắc, điểm quy tắc, và cờ "còn vi phạm cứng". Ghi kết quả vào `menu_rule_results`, thay kết quả cũ. Với quy tắc cost, chỉ người có `cost.cost.read` nhận cost % và số tiền; người thiếu quyền chỉ nhận đạt/không đạt. API phải loại bỏ số nhạy cảm cả trong detail và thông báo lỗi, không chỉ ẩn ở UI (`FR-COST-RUL-002`, `NFR-COST-005`). Cách tính từng quy tắc ở mục 3.3. | mã thực đơn | Danh sách kết quả, điểm, cờ | Toàn bộ `BR-MENU`, `BR-COST` đang bật | — |
+| `FR-MENU-RUL-001` | Kiểm thực đơn | P0 | Chạy mọi quy tắc đang áp dụng trên một thực đơn. Trả kết quả từng quy tắc, điểm quy tắc, và cờ "còn vi phạm cứng". Ghi kết quả vào `menu_rule_results`, thay kết quả cũ. Với quy tắc cost, chỉ người có `cost.cost.read` nhận cost % và số tiền; người thiếu quyền chỉ nhận đạt/không đạt. API phải loại bỏ số nhạy cảm cả trong detail và thông báo lỗi, không chỉ ẩn ở UI (`FR-COST-RUL-002`, `NFR-COST-005`). Cách tính từng quy tắc ở mục 3.3. | mã thực đơn | Danh sách kết quả, điểm, cờ | Toàn bộ `BR-MENU`, `BR-COST` đang bật | Không áp dụng |
 | `FR-MENU-RUL-002` | Kiểm thực đơn chưa lưu | P0 | Như `001` nhưng nhận nội dung thực đơn trong yêu cầu và không ghi gì. Dùng cho agent ở E5, E9 thử phương án. | loại suất, tuần, các ngày và món | Như `001` | Như `001` | `ERR-MENU-422-14` |
-| `FR-MENU-RUL-003` | Chi tiết vi phạm | P0 | Mỗi kết quả không đạt nêu: mã quy tắc, tên, loại, ngày liên quan, món liên quan, giá trị đo được, giới hạn. | — | Ví dụ: "BR-MENU-012 · Thịt lợn ở món chính 3 ngày liền (T2, T3, T4) · giới hạn 2" | — | — |
-| `FR-MENU-RUL-004` | Ghi lý do chấp nhận | P0 | Với quy tắc mềm–nặng không đạt, người dựng ghi lý do ≥ 10 ký tự. Lý do bị xoá nếu lần kiểm sau quy tắc đó đạt. | mã kết quả, lý do | — | `BR-MNU-006` | `ERR-SYS-422-01` |
-| `FR-MENU-RUL-005` | Danh mục quy tắc | P0 | Xem danh sách quy tắc: mã, tên, loại, điểm phạt, phạm vi ngày/tuần, tham số, đang bật. | — | Danh sách | — | — |
+| `FR-MENU-RUL-003` | Chi tiết vi phạm | P0 | Mỗi kết quả không đạt nêu: mã quy tắc, tên, loại, ngày liên quan, món liên quan, giá trị đo được, giới hạn. | Không áp dụng | Ví dụ: "BR-MENU-012 · Thịt lợn ở món chính 3 ngày liền (T2, T3, T4) · giới hạn 2" | Không áp dụng | Không áp dụng |
+| `FR-MENU-RUL-004` | Ghi lý do chấp nhận | P0 | Với quy tắc mềm–nặng không đạt, người dựng ghi lý do ≥ 10 ký tự. Lý do bị xoá nếu lần kiểm sau quy tắc đó đạt. | mã kết quả, lý do | Không áp dụng | `BR-MNU-006` | `ERR-SYS-422-01` |
+| `FR-MENU-RUL-005` | Danh mục quy tắc | P0 | Xem danh sách quy tắc: mã, tên, loại, điểm phạt, phạm vi ngày/tuần, tham số, đang bật. | Không áp dụng | Danh sách | Không áp dụng | Không áp dụng |
 | `FR-MENU-RUL-006` | Sửa quy tắc | P0 | Đề nghị bật/tắt, đổi loại, đổi điểm phạt, đổi tham số. Có hiệu lực sau khi duyệt. Thực đơn `DRAFT`, `CHECKED` được kiểm lại bằng quy tắc mới ở lần kiểm kế tiếp; thực đơn từ `PENDING` trở đi giữ kết quả lúc gửi duyệt ([E2-Q11]). | mã quy tắc, giá trị mới, lý do | Đề nghị chờ duyệt | `BR-SEC-008`, `BR-MNU-007`, `BR-AUD-001` | `ERR-SYS-403-01`, `ERR-MENU-422-16` |
-| `FR-MENU-RUL-007` | Cần người duyệt thứ hai khi điểm thấp | P1 | Thực đơn có điểm dưới tham số `QUY_TAC_DIEM_TOI_THIEU` cần 2 người duyệt khác nhau. | — | — | `BR-MNU-008` | — |
+| `FR-MENU-RUL-007` | Cần người duyệt thứ hai khi điểm thấp | P1 | Thực đơn có điểm dưới tham số `QUY_TAC_DIEM_TOI_THIEU` cần 2 người duyệt khác nhau. | Không áp dụng | Không áp dụng | `BR-MNU-008` | Không áp dụng |
 
-#### Duyệt và công bố — `FEAT-013`
+#### Duyệt và công bố: `FEAT-013`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
@@ -192,14 +192,14 @@ Theo mục 2.4 của epic-spec: R1, DL-01, DL-03 → DL-05, [O-02], [O-06].
 | `FR-MENU-APV-002` | Duyệt / trả lại thực đơn | P0 | Duyệt: → `APPROVED`, đóng băng kết quả kiểm và công thức đã gắn. Trả lại: → `DRAFT` kèm lý do. Thông báo cho người tạo. | mã, quyết định, lý do | Trạng thái mới | `BR-SEC-008`, `BR-MNU-008` | `ERR-SYS-403-01` |
 | `FR-MENU-APV-003` | Công bố | P0 | `APPROVED` → `PUBLISHED`. Từ lúc này thực đơn xuất hiện ở dịch vụ tra cứu thực đơn đã công bố. | mã | Thực đơn `PUBLISHED` | `BR-MNU-009` | `ERR-MENU-409-09` |
 | `FR-MENU-APV-004` | Thu hồi | P0 | `PUBLISHED` → `WITHDRAWN`, bắt buộc lý do. Phát sự kiện để E6 xử lý lựa chọn món đã có. | mã, lý do | Thực đơn `WITHDRAWN` | `BR-AUD-001` | `ERR-SYS-422-01` |
-| `FR-MENU-APV-005` | Sửa sau thu hồi | P0 | `WITHDRAWN` → `DRAFT`; sau đó đi lại toàn bộ chu trình kiểm, duyệt, công bố. | mã | Thực đơn `DRAFT` | — | — |
-| `FR-MENU-APV-006` | Chỗ móc kiểm cost | P0 | `FR-MENU-APV-001` gọi một danh sách bộ kiểm trước khi chuyển trạng thái. R2 đăng ký bộ kiểm quy tắc; R3 đăng ký thêm bộ kiểm cost mà không sửa MENU. Vượt ngưỡng chỉ chặn ở chế độ `CHAN`; `CANH_BAO` không chặn do vượt ngưỡng, nhưng thiếu giá/VAT hoặc bảng tính món đặc thù hợp lệ vẫn không đủ điều kiện gửi duyệt. Chế độ và mặc định là đề xuất theo SRS Cost. | — | — | — | — |
+| `FR-MENU-APV-005` | Sửa sau thu hồi | P0 | `WITHDRAWN` → `DRAFT`; sau đó đi lại toàn bộ chu trình kiểm, duyệt, công bố. | mã | Thực đơn `DRAFT` | Không áp dụng | Không áp dụng |
+| `FR-MENU-APV-006` | Chỗ móc kiểm cost | P0 | `FR-MENU-APV-001` gọi một danh sách bộ kiểm trước khi chuyển trạng thái. R2 đăng ký bộ kiểm quy tắc; R3 đăng ký thêm bộ kiểm cost mà không sửa MENU. Vượt ngưỡng chỉ chặn ở chế độ `CHAN`; `CANH_BAO` không chặn do vượt ngưỡng, nhưng thiếu giá/VAT hoặc bảng tính món đặc thù hợp lệ vẫn không đủ điều kiện gửi duyệt. Chế độ và mặc định là đề xuất theo SRS Cost. | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
 
 #### Nhập từ bảng tính
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-MENU-IMP-001` | Tải mẫu | P0 | 4 mẫu `.xlsx`: nguyên liệu, món, công thức, giá bán. Mỗi mẫu có dòng tiêu đề, dòng ví dụ, và trang liệt kê giá trị hợp lệ của các cột liệt kê. | loại mẫu | Tệp `.xlsx` | — | — |
+| `FR-MENU-IMP-001` | Tải mẫu | P0 | 4 mẫu `.xlsx`: nguyên liệu, món, công thức, giá bán. Mỗi mẫu có dòng tiêu đề, dòng ví dụ, và trang liệt kê giá trị hợp lệ của các cột liệt kê. | loại mẫu | Tệp `.xlsx` | Không áp dụng | Không áp dụng |
 | `FR-MENU-IMP-002` | Kiểm tệp nhập | P0 | Đọc tệp, kiểm từng dòng theo đúng quy tắc của FR tạo tương ứng, trả danh sách lỗi theo số dòng và cột. Không ghi gì. Tối đa 2.000 dòng mỗi tệp. | loại, tệp | Số dòng hợp lệ, danh sách lỗi | Như FR tạo tương ứng; `BR-CAT-023` | `ERR-MENU-422-20`, `ERR-SYS-413-01`, `ERR-SYS-415-01` |
 | `FR-MENU-IMP-003` | Thực hiện nhập | P0 | Chỉ chạy khi tệp không còn lỗi. Ghi toàn bộ trong một giao dịch: tất cả hoặc không gì cả. Món và công thức vào `DRAFT`; giá vào `PENDING`; nguyên liệu vào `ACTIVE`. | loại, tệp | Số bản ghi đã tạo | `BR-CAT-019` | `ERR-MENU-422-20` |
 
@@ -209,41 +209,41 @@ Các quy tắc xây thực đơn (`BR-MENU-001` → `051`, `BR-COST-001` → `01
 
 | Mã BR | Tên quy tắc | Phát biểu (KHI – THÌ) | Ngoại lệ |
 | :--- | :--- | :--- | :--- |
-| `BR-CAT-001` | Tên không trùng | KHI tạo hoặc sửa nguyên liệu, món, nhóm, phương pháp, loại suất THÌ tên (bỏ dấu cách thừa, không phân biệt hoa thường) không trùng bản ghi chưa huỷ cùng loại | — |
-| `BR-CAT-002` | Hệ số quy đổi | Hệ số quy đổi > 0. KHI đơn vị mua là `kg` và đơn vị dùng là `g` THÌ hệ số phải bằng 1000 | — |
+| `BR-CAT-001` | Tên không trùng | KHI tạo hoặc sửa nguyên liệu, món, nhóm, phương pháp, loại suất THÌ tên (bỏ dấu cách thừa, không phân biệt hoa thường) không trùng bản ghi chưa huỷ cùng loại | Không áp dụng |
+| `BR-CAT-002` | Hệ số quy đổi | Hệ số quy đổi > 0. KHI đơn vị mua là `kg` và đơn vị dùng là `g` THÌ hệ số phải bằng 1000 | Không áp dụng |
 | `BR-CAT-003` | Hao hụt bắt buộc | KHI nguyên liệu có xương hoặc vỏ THÌ tỷ lệ hao hụt bắt buộc, trong khoảng 0,01–99,99 | `BR-COST-010` |
 | `BR-CAT-004` | Khoá đơn vị khi đang dùng | KHI nguyên liệu nằm trong công thức `ACTIVE` THÌ không sửa được đơn vị dùng và hệ số quy đổi | Tạo nguyên liệu mới thay thế |
-| `BR-CAT-005` | Không huỷ khi đang dùng | KHI một bản ghi danh mục đang được bản ghi hiệu lực khác tham chiếu THÌ không huỷ, không ngừng dùng được | — |
+| `BR-CAT-005` | Không huỷ khi đang dùng | KHI một bản ghi danh mục đang được bản ghi hiệu lực khác tham chiếu THÌ không huỷ, không ngừng dùng được | Không áp dụng |
 | `BR-CAT-006` | Healthy cần phương pháp ít dầu mỡ | KHI món gắn cờ Healthy THÌ phương pháp chế biến phải có cờ ít dầu mỡ | `BR-MENU-003`; danh sách: [H-1] |
-| `BR-CAT-007` | Món gốc một cấp | KHI gắn món gốc THÌ món gốc phải cùng vai trò, không phải chính nó, và bản thân món gốc không có món gốc | — |
-| `BR-CAT-008` | Thuộc tính ảnh hưởng quy tắc | Các thuộc tính: vai trò, nhóm nguyên liệu chính, phương pháp, món gốc, Healthy, vị chua, kết cấu, thanh nhẹ, cầu kỳ, chịu vận chuyển, phù hợp bếp lớn, nhóm cost, đặc thù. KHI sửa một trong số này trên món `ACTIVE` THÌ cần duyệt lại | — |
-| `BR-CAT-009` | Món hoạt động cần công thức | KHI duyệt món THÌ món phải có ≥ 1 công thức `ACTIVE`. Duyệt món và công thức đầu tiên của nó trong cùng một lần được phép | — |
-| `BR-CAT-010` | Cấu trúc công thức | Công thức có ≥ 1 dòng; ≥ 1 dòng là nguyên liệu chính; một nguyên liệu xuất hiện tối đa 1 lần; mọi nguyên liệu ở trạng thái `ACTIVE` | — |
-| `BR-CAT-011` | Khoảng định lượng | 0 < tối thiểu ≤ chuẩn ≤ tối đa | — |
+| `BR-CAT-007` | Món gốc một cấp | KHI gắn món gốc THÌ món gốc phải cùng vai trò, không phải chính nó, và bản thân món gốc không có món gốc | Không áp dụng |
+| `BR-CAT-008` | Thuộc tính ảnh hưởng quy tắc | Các thuộc tính: vai trò, nhóm nguyên liệu chính, phương pháp, món gốc, Healthy, vị chua, kết cấu, thanh nhẹ, cầu kỳ, chịu vận chuyển, phù hợp bếp lớn, nhóm cost, đặc thù. KHI sửa một trong số này trên món `ACTIVE` THÌ cần duyệt lại | Không áp dụng |
+| `BR-CAT-009` | Món hoạt động cần công thức | KHI duyệt món THÌ món phải có ≥ 1 công thức `ACTIVE`. Duyệt món và công thức đầu tiên của nó trong cùng một lần được phép | Không áp dụng |
+| `BR-CAT-010` | Cấu trúc công thức | Công thức có ≥ 1 dòng; ≥ 1 dòng là nguyên liệu chính; một nguyên liệu xuất hiện tối đa 1 lần; mọi nguyên liệu ở trạng thái `ACTIVE` | Không áp dụng |
+| `BR-CAT-011` | Khoảng định lượng | 0 < tối thiểu ≤ chuẩn ≤ tối đa | Không áp dụng |
 | `BR-CAT-012` | Nhóm nguyên liệu chính khớp món | KHI món có vai trò món chính hoặc món phụ THÌ ít nhất 1 dòng nguyên liệu chính của công thức thuộc nhóm nguyên liệu chính của món | Rau, canh không áp dụng |
 | `BR-CAT-013` | Công thức đã duyệt là bất biến | KHI công thức ở `PENDING`, `ACTIVE`, `SUPERSEDED` THÌ không sửa được nội dung; thay đổi qua phiên bản mới | `PENDING` bị trả lại về `DRAFT` thì sửa được |
-| `BR-CAT-014` | Một công thức hiệu lực mỗi ngày | Với mỗi món, cỡ định lượng và ngày D, có đúng 1 công thức hiệu lực: bản `ACTIVE` có ngày hiệu lực lớn nhất ≤ D | — |
-| `BR-CAT-015` | Giá bán hợp lệ | Giá bán là số nguyên ≥ 0, bội số của 100 đồng | — |
-| `BR-CAT-016` | Giá đã hiệu lực là bất biến | KHI giá `APPROVED` có ngày hiệu lực ≤ hôm nay THÌ không sửa, không huỷ; giá mới là dòng mới có ngày hiệu lực > hôm nay | — |
-| `BR-CAT-017` | Cấu hình loại suất | Ngưỡng giá > 0 và là bội số của 100 đồng; số món chính đưa ra ≥ số món chính được chọn ≥ 1; số món phụ từ 0 đến 5 | — |
+| `BR-CAT-014` | Một công thức hiệu lực mỗi ngày | Với mỗi món, cỡ định lượng và ngày D, có đúng 1 công thức hiệu lực: bản `ACTIVE` có ngày hiệu lực lớn nhất ≤ D | Không áp dụng |
+| `BR-CAT-015` | Giá bán hợp lệ | Giá bán là số nguyên ≥ 0, bội số của 100 đồng | Không áp dụng |
+| `BR-CAT-016` | Giá đã hiệu lực là bất biến | KHI giá `APPROVED` có ngày hiệu lực ≤ hôm nay THÌ không sửa, không huỷ; giá mới là dòng mới có ngày hiệu lực > hôm nay | Không áp dụng |
+| `BR-CAT-017` | Cấu hình loại suất | Ngưỡng giá > 0 và là bội số của 100 đồng; số món chính đưa ra ≥ số món chính được chọn ≥ 1; số món phụ từ 0 đến 5 | Không áp dụng |
 | `BR-CAT-018` | Khoá cơ cấu loại suất | KHI loại suất có thực đơn từ `PENDING` trở đi THÌ không sửa được cơ cấu | Tạo loại suất mới |
 | `BR-CAT-019` | Nhập không bỏ qua duyệt | Dữ liệu nhập từ bảng tính không vào thẳng `ACTIVE`/`APPROVED` | Nguyên liệu (không có bước duyệt) |
 | `BR-CAT-020` | Giữ cờ ít dầu mỡ khi còn món Healthy dùng | KHI bỏ cờ ít dầu mỡ của một phương pháp chế biến mà còn món `ACTIVE` hoặc `PENDING` có cờ Healthy dùng phương pháp đó THÌ không lưu, trả danh sách món | Bỏ cờ Healthy của các món đó trước (qua đề nghị thay đổi) |
-| `BR-CAT-021` | Độ chính xác của số | Hệ số quy đổi tối đa 4 chữ số thập phân; tỷ lệ hao hụt tối đa 2; định lượng tối đa 3. KHI nhập nhiều chữ số thập phân hơn THÌ từ chối, không tự làm tròn (`ERR-MENU-422-01`, `ERR-MENU-422-02`, `ERR-MENU-422-09` tương ứng) | — |
+| `BR-CAT-021` | Độ chính xác của số | Hệ số quy đổi tối đa 4 chữ số thập phân; tỷ lệ hao hụt tối đa 2; định lượng tối đa 3. KHI nhập nhiều chữ số thập phân hơn THÌ từ chối, không tự làm tròn (`ERR-MENU-422-01`, `ERR-MENU-422-02`, `ERR-MENU-422-09` tương ứng) | Không áp dụng |
 | `BR-CAT-022` | Ngày hiệu lực của công thức | KHI lưu hoặc gửi duyệt công thức THÌ ngày hiệu lực phải từ hôm nay trở đi, và phải **sau** ngày hiệu lực của mọi phiên bản `ACTIVE` hoặc `PENDING` khác của cùng món và cùng cỡ định lượng. Vi phạm → `ERR-MENU-422-21` | Công thức đầu tiên của món chỉ cần từ hôm nay trở đi |
-| `BR-CAT-023` | Quy ước đọc tệp nhập | (a) Đọc cột theo **tên cột**, không theo vị trí: đổi thứ tự cột được chấp nhận. (b) Cột không có trong mẫu bị bỏ qua, kèm cảnh báo nêu tên cột; thiếu cột của mẫu thì từ chối. (c) Dòng trống hoàn toàn bị bỏ qua. (d) Dấu cách đầu và cuối ô được cắt. (e) Ô số lưu ở dạng văn bản được đọc như số nếu phân tích được. (f) Dấu thập phân nhận cả phẩy và chấm; không nhận dấu phân cách hàng nghìn. (g) Thứ tự dòng không quan trọng: món gốc có thể nằm sau món biến thể; các dòng công thức của một món được gộp theo tên món, không cần liền nhau. (h) Chỉ đọc trang tính có tên đúng mẫu; trang khác bị bỏ qua kèm cảnh báo. (i) Chỉ nhận `.xlsx` không đặt mật khẩu | — |
+| `BR-CAT-023` | Quy ước đọc tệp nhập | (a) Đọc cột theo **tên cột**, không theo vị trí: đổi thứ tự cột được chấp nhận. (b) Cột không có trong mẫu bị bỏ qua, kèm cảnh báo nêu tên cột; thiếu cột của mẫu thì từ chối. (c) Dòng trống hoàn toàn bị bỏ qua. (d) Dấu cách đầu và cuối ô được cắt. (e) Ô số lưu ở dạng văn bản được đọc như số nếu phân tích được. (f) Dấu thập phân nhận cả phẩy và chấm; không nhận dấu phân cách hàng nghìn. (g) Thứ tự dòng không quan trọng: món gốc có thể nằm sau món biến thể; các dòng công thức của một món được gộp theo tên món, không cần liền nhau. (h) Chỉ đọc trang tính có tên đúng mẫu; trang khác bị bỏ qua kèm cảnh báo. (i) Chỉ nhận `.xlsx` không đặt mật khẩu | Không áp dụng |
 | `BR-MNU-001` | Một thực đơn mỗi loại suất mỗi tuần | KHI tạo hoặc sao chép thực đơn THÌ không tồn tại thực đơn chưa huỷ, chưa thu hồi của cùng loại suất và tuần | Thực đơn riêng theo khách: E6, [E2-Q4] |
 | `BR-MNU-002` | Số ô theo loại suất | Mỗi ngày có đúng: số món chính đưa ra ô món chính, số món phụ ô món phụ, 1 ô rau nếu có rau, 1 ô canh nếu có canh. Không thêm được món vượt số ô | `BR-MENU-001`, `004`, `005` |
-| `BR-MNU-003` | Một món một lần mỗi ngày | Một món xuất hiện tối đa 1 lần trong một ngày | — |
+| `BR-MNU-003` | Một món một lần mỗi ngày | Một món xuất hiện tối đa 1 lần trong một ngày | Không áp dụng |
 | `BR-MNU-004` | Món mặc định | Món mặc định phải là một món chính của ngày đó | [D-14] |
-| `BR-MNU-005` | Điều kiện gửi duyệt | KHI gửi duyệt THÌ: mọi ô của mọi ngày đã có món; mọi ngày có món mặc định; mọi món còn `ACTIVE`; không còn quy tắc cứng không đạt | — |
-| `BR-MNU-006` | Lý do cho vi phạm mềm–nặng | KHI gửi duyệt mà còn quy tắc mềm có điểm phạt 3 không đạt THÌ mỗi vi phạm đó phải có lý do chấp nhận | — |
-| `BR-MNU-007` | Giới hạn sửa quy tắc | Điểm phạt quy tắc mềm là 1, 2 hoặc 3; quy tắc cứng có điểm phạt 0. Tham số số học phải ≥ 0; tham số kiểu đếm (số ngày, số món, số lần) phải là số nguyên | — |
-| `BR-MNU-008` | Hai người duyệt khi điểm thấp | KHI điểm quy tắc < `QUY_TAC_DIEM_TOI_THIEU` THÌ cần 2 người duyệt khác nhau, cả hai khác người tạo. Điểm đúng bằng ngưỡng cần 1 người duyệt. KHI một người trả lại THÌ thực đơn về `DRAFT` và mọi quyết định duyệt của vòng đó mất hiệu lực; lần gửi duyệt sau là vòng mới, duyệt lại từ đầu | Không thực hiện được nếu chỉ có một người duyệt — [O-06] |
-| `BR-MNU-009` | Công bố không quá muộn | KHI công bố THÌ ngày phục vụ đầu tiên của thực đơn phải sau hôm nay | — |
-| `BR-MNU-010` | Thông báo duyệt | KHI một lần gửi duyệt gồm nhiều mục cùng loại THÌ mỗi người có quyền duyệt nhận **một** thông báo gộp ghi số mục. Người gửi không nhận thông báo chờ duyệt cho nội dung của chính mình, kể cả khi người đó có quyền duyệt | — |
+| `BR-MNU-005` | Điều kiện gửi duyệt | KHI gửi duyệt THÌ: mọi ô của mọi ngày đã có món; mọi ngày có món mặc định; mọi món còn `ACTIVE`; không còn quy tắc cứng không đạt | Không áp dụng |
+| `BR-MNU-006` | Lý do cho vi phạm mềm–nặng | KHI gửi duyệt mà còn quy tắc mềm có điểm phạt 3 không đạt THÌ mỗi vi phạm đó phải có lý do chấp nhận | Không áp dụng |
+| `BR-MNU-007` | Giới hạn sửa quy tắc | Điểm phạt quy tắc mềm là 1, 2 hoặc 3; quy tắc cứng có điểm phạt 0. Tham số số học phải ≥ 0; tham số kiểu đếm (số ngày, số món, số lần) phải là số nguyên | Không áp dụng |
+| `BR-MNU-008` | Hai người duyệt khi điểm thấp | KHI điểm quy tắc < `QUY_TAC_DIEM_TOI_THIEU` THÌ cần 2 người duyệt khác nhau, cả hai khác người tạo. Điểm đúng bằng ngưỡng cần 1 người duyệt. KHI một người trả lại THÌ thực đơn về `DRAFT` và mọi quyết định duyệt của vòng đó mất hiệu lực; lần gửi duyệt sau là vòng mới, duyệt lại từ đầu | Không thực hiện được nếu chỉ có một người duyệt: [O-06] |
+| `BR-MNU-009` | Công bố không quá muộn | KHI công bố THÌ ngày phục vụ đầu tiên của thực đơn phải sau hôm nay | Không áp dụng |
+| `BR-MNU-010` | Thông báo duyệt | KHI một lần gửi duyệt gồm nhiều mục cùng loại THÌ mỗi người có quyền duyệt nhận **một** thông báo gộp ghi số mục. Người gửi không nhận thông báo chờ duyệt cho nội dung của chính mình, kể cả khi người đó có quyền duyệt | Không áp dụng |
 
-### 3.3 Bộ kiểm quy tắc — cách tính
+### 3.3 Bộ kiểm quy tắc: cách tính
 
 #### 3.3.1 Khung chung
 
@@ -257,26 +257,26 @@ Các quy tắc xây thực đơn (`BR-MENU-001` → `051`, `BR-COST-001` → `01
 
 #### 3.3.2 Cách tính từng quy tắc chạy trong R2
 
-Cột "Tham số" là tên khoá trong `menu_rules.params`. **Giá trị, loại cứng/mềm và điểm phạt lấy từ bảng quy tắc sau khi DL-01 duyệt** — tài liệu này không lặp lại con số để tránh hai nơi lệch nhau.
+Cột "Tham số" là tên khoá trong `menu_rules.params`. **Giá trị, loại cứng/mềm và điểm phạt lấy từ bảng quy tắc sau khi DL-01 duyệt**: tài liệu này không lặp lại con số để tránh hai nơi lệch nhau.
 
 | Mã | Phạm vi | Tham số | Cách tính (không đạt khi…) |
 | :--- | :---: | :--- | :--- |
-| `BR-MENU-001` | DAY | — | Số món ở ô món chính ≠ số món chính đưa ra của loại suất |
+| `BR-MENU-001` | DAY | Không áp dụng | Số món ở ô món chính ≠ số món chính đưa ra của loại suất |
 | `BR-MENU-002` | DAY | `healthy_count` | Số món chính có cờ Healthy ≠ `healthy_count` |
-| `BR-MENU-003` | DAY | — | Có món Healthy mà phương pháp không có cờ ít dầu mỡ |
-| `BR-MENU-004` | DAY | — | Thiếu rau hoặc canh khi loại suất yêu cầu |
-| `BR-MENU-005` | DAY | — | Số món phụ ≠ số món phụ của loại suất |
-| `BR-MENU-010` | DAY | — | Có 2 món chính cùng nhóm nguyên liệu chính |
+| `BR-MENU-003` | DAY | Không áp dụng | Có món Healthy mà phương pháp không có cờ ít dầu mỡ |
+| `BR-MENU-004` | DAY | Không áp dụng | Thiếu rau hoặc canh khi loại suất yêu cầu |
+| `BR-MENU-005` | DAY | Không áp dụng | Số món phụ ≠ số món phụ của loại suất |
+| `BR-MENU-010` | DAY | Không áp dụng | Có 2 món chính cùng nhóm nguyên liệu chính |
 | `BR-MENU-011` | DAY | `max_pairs` | Số cặp (món phụ, món chính) cùng nhóm nguyên liệu chính > `max_pairs` |
 | `BR-MENU-012` | WEEK | `max_consecutive_days` | Một nhóm nguyên liệu chính có mặt ở món chính trong số ngày phục vụ liên tiếp > `max_consecutive_days`. Thịt lợn có giới hạn riêng hay không: [H-2] |
 | `BR-MENU-013` | WEEK | `max_per_week` | Một món gốc (xem `014`) xuất hiện > `max_per_week` lần trong tuần |
-| `BR-MENU-014` | — | — | Không phải quy tắc kiểm; là cách đếm: món có món gốc được đếm theo món gốc |
+| `BR-MENU-014` | Không áp dụng | Không áp dụng | Không phải quy tắc kiểm; là cách đếm: món có món gốc được đếm theo món gốc |
 | `BR-MENU-015` | WEEK | `min_groups` | Số nhóm nguyên liệu chính khác nhau ở món chính trong tuần < `min_groups` |
 | `BR-MENU-016` | WEEK | `min_gap_days` | Cùng một món rau xuất hiện ở 2 ngày phục vụ cách nhau < `min_gap_days` |
 | `BR-MENU-017` | WEEK | `min_gap_days` | Như `016` cho canh |
-| `BR-MENU-018` | DAY | — | Rau của ngày có khai mùa vụ và tháng của ngày phục vụ nằm ngoài mọi khoảng mùa |
+| `BR-MENU-018` | DAY | Không áp dụng | Rau của ngày có khai mùa vụ và tháng của ngày phục vụ nằm ngoài mọi khoảng mùa |
 | `BR-MENU-019` | WEEK | `max_per_week` | Một món phụ (theo món gốc) xuất hiện > `max_per_week` lần |
-| `BR-MENU-020` | DAY | — | 2 món chính không Healthy cùng phương pháp chế biến |
+| `BR-MENU-020` | DAY | Không áp dụng | 2 món chính không Healthy cùng phương pháp chế biến |
 | `BR-MENU-021` | DAY | `max_fried_sides` | Số món phụ có phương pháp chiên > `max_fried_sides` |
 | `BR-MENU-022` | DAY | `max_fried` | Số món (mọi vai trò) có phương pháp chiên > `max_fried` |
 | `BR-MENU-023` | DAY | `max_same_method` | Có phương pháp chế biến xuất hiện ở > `max_same_method` món |
@@ -284,18 +284,18 @@ Cột "Tham số" là tên khoá trong `menu_rules.params`. **Giá trị, loại
 | `BR-MENU-031` | DAY | `max_sauce` | Số món kết cấu `SAUCE` > `max_sauce` |
 | `BR-MENU-032` | DAY | `max_dry` | Số món kết cấu `DRY`, không tính ô rau, > `max_dry` |
 | `BR-MENU-033` | DAY | `min_light` | Số món có cờ thanh nhẹ ở ô món chính và món phụ < `min_light` |
-| `BR-MENU-034` | DAY | — | Có 2 món của ngày thuộc một cặp kỵ nhau (so theo món gốc) |
+| `BR-MENU-034` | DAY | Không áp dụng | Có 2 món của ngày thuộc một cặp kỵ nhau (so theo món gốc) |
 | `BR-MENU-040` | DAY | `max_complex` | Số món có cờ cầu kỳ > `max_complex` |
 | `BR-MENU-041` | WEEK | `max_complex` | Tổng số lượt món cầu kỳ trong tuần > `max_complex` |
-| `BR-MENU-042` | DAY | — | Có món không chịu vận chuyển. Trong R2 thực đơn chưa gắn với điểm giao nên quy tắc chỉ cảnh báo có món loại này; kiểm theo thời gian giao viết ở E6 |
-| `BR-MENU-043` | DAY | — | Có món không có cờ phù hợp bếp lớn |
-| `BR-MENU-044` | DAY | — | Có món mà nguyên liệu chính trong công thức không có cờ nguồn cung ổn định |
+| `BR-MENU-042` | DAY | Không áp dụng | Có món không chịu vận chuyển. Trong R2 thực đơn chưa gắn với điểm giao nên quy tắc chỉ cảnh báo có món loại này; kiểm theo thời gian giao viết ở E6 |
+| `BR-MENU-043` | DAY | Không áp dụng | Có món không có cờ phù hợp bếp lớn |
+| `BR-MENU-044` | DAY | Không áp dụng | Có món mà nguyên liệu chính trong công thức không có cờ nguồn cung ổn định |
 | `BR-MENU-050` | WEEK | `min_protein_sources` | Số nguồn đạm khác nhau (theo nhóm nguyên liệu chính của món chính và món phụ) < `min_protein_sources` |
-| `BR-MENU-051` | — | — | Chưa có định nghĩa [H-5]; không chạy |
-| `BR-COST-008` | — | — | Kiểm khi lưu công thức, không phải khi kiểm thực đơn: định lượng chuẩn của nguyên liệu chính nằm ngoài khoảng chuẩn. Khoảng chuẩn lấy từ đâu: [E2-Q5] |
-| `BR-COST-009` | — | — | Kiểm khi lưu công thức: tổng định lượng nguyên liệu không phải chính vượt mức cho phép. Mức cho phép lấy từ đâu: [E2-Q5] |
-| `BR-COST-010` | — | — | Kiểm khi lưu nguyên liệu: `BR-CAT-003` |
-| `BR-COST-012` | DAY | — | `FR-MENU-MNU-004` |
+| `BR-MENU-051` | Không áp dụng | Không áp dụng | Chưa có định nghĩa [H-5]; không chạy |
+| `BR-COST-008` | Không áp dụng | Không áp dụng | Kiểm khi lưu công thức, không phải khi kiểm thực đơn: định lượng chuẩn của nguyên liệu chính nằm ngoài khoảng chuẩn. Khoảng chuẩn lấy từ đâu: [E2-Q5] |
+| `BR-COST-009` | Không áp dụng | Không áp dụng | Kiểm khi lưu công thức: tổng định lượng nguyên liệu không phải chính vượt mức cho phép. Mức cho phép lấy từ đâu: [E2-Q5] |
+| `BR-COST-010` | Không áp dụng | Không áp dụng | Kiểm khi lưu nguyên liệu: `BR-CAT-003` |
+| `BR-COST-012` | DAY | Không áp dụng | `FR-MENU-MNU-004` |
 
 Quy tắc `BR-COST-001` → `007`, `011` cần giá nhập: đặc tả ở SRS epic `cost`.
 
@@ -387,10 +387,10 @@ Phát sinh khi viết SRS này.
 
 | Tài liệu | Cần bổ sung | Trạng thái |
 | :--- | :--- | :--- |
-| `schema.dbml`, ERD | Chỗ lưu giá trị đề nghị khi món `ACTIVE` chờ duyệt lại thuộc tính (`FR-MENU-DISH-002`) | ✅ Bảng `change_requests` — ERD v0.2.0 mục 3.5 |
-| `schema.dbml`, ERD | Thực đơn cần 2 người duyệt (`BR-MNU-008`) | ✅ Bảng `approvals` — ERD v0.2.0 mục 3.5 |
+| `schema.dbml`, ERD | Chỗ lưu giá trị đề nghị khi món `ACTIVE` chờ duyệt lại thuộc tính (`FR-MENU-DISH-002`) | ✅ Bảng `change_requests`: ERD v0.2.0 mục 3.5 |
+| `schema.dbml`, ERD | Thực đơn cần 2 người duyệt (`BR-MNU-008`) | ✅ Bảng `approvals`: ERD v0.2.0 mục 3.5 |
 | `schema.dbml`, ERD | Đề nghị sửa quy tắc chờ duyệt (`FR-MENU-RUL-006`) | ✅ Bảng `change_requests` |
-| Bảng quy tắc | Thêm cột phạm vi (ngày/tuần) và tên tham số cho khớp mục 3.3.2 | Chưa làm — nên làm cùng lúc người soạn docx duyệt (DL-01) để họ không phải đọc hai phiên bản |
+| Bảng quy tắc | Thêm cột phạm vi (ngày/tuần) và tên tham số cho khớp mục 3.3.2 | Chưa làm: nên làm cùng lúc người soạn docx duyệt (DL-01) để họ không phải đọc hai phiên bản |
 
 Hệ quả với FR đã viết: một món `ACTIVE` đang có đề nghị `PENDING` hiển thị nhãn "chờ duyệt thay đổi" nhưng **vẫn ở trạng thái `ACTIVE`** với giá trị cũ, không chuyển về `PENDING` như mô tả ban đầu ở `FR-MENU-DISH-002`. Trạng thái `PENDING` của món chỉ dùng cho món mới chưa từng được duyệt.
 
@@ -453,14 +453,14 @@ Giữ nguyên trạng thái mở.
 | E2-Q11 | Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt) | Người duyệt | `FR-MENU-RUL-006`; `UC-MENU-013` |
 | E2-Q5 | Khoảng định lượng chuẩn và mức chất độn cho phép lưu ở đâu: theo từng món (chính là `qty_min`–`qty_max` của công thức, khi đó `BR-COST-008` tự thoả), hay có một **bảng chuẩn theo loại nguyên liệu và kiểu món** như bảng trong docx để mọi công thức phải nằm trong đó? | Dinh dưỡng viên | `BR-COST-008`, `009` |
 
-## Phụ thuộc E4/E5 — bản thiết kế ngày 11/11/2026
+## Phụ thuộc E4/E5: bản thiết kế ngày 11/11/2026
 
 [Dinh dưỡng](../../dinh-duong/srs/spec.md) đọc recipe_items.qty_std và nguồn dinh dưỡng; không dùng COST_AP_HAO_HUT để đổi công thức. [Agent Nội bộ](../../agent-noi-bo/api/api-spec.md) gọi FR-MENU-RUL-002 và API-COST-025 với cùng candidate/version; apply chỉ tạo DRAFT, không tự duyệt/công bố. Adapter MENU và tính nguyên tử chờ AIO-Q06. Đề xuất chỉ trả candidate VALID khi cost không vượt kể cả CANH_BAO (AIO-Q02 còn mở); cổng MENU hiện hành vẫn giữ nguyên. Chưa có API/worker/backend triển khai trong gói này.
 
-## Hồ sơ bổ sung để review — 11/11/2026
+## Hồ sơ bổ sung để review ngày 11/11/2026
 
 [Preview toàn hồ sơ](../preview.html) · [API](../api/api-spec.md) · [Luồng tuần tự](flows.md) · [Trạng thái](states.md) · [Gap](../gap-analysis.md). Gói bổ sung không tự đóng câu hỏi, thay quy tắc nghiệp vụ hoặc chứng minh backend đã triển khai. [Bàn giao](../../gia-phat/review/ba-completion-handoff.md).
 
-## Liên kết phụ thuộc E6 — bổ sung 11/11/2026
+## Liên kết phụ thuộc E6: bổ sung 11/11/2026
 
 [Gói E6 để review](../../chon-mon-order/preview.html) · [Hợp đồng phụ thuộc](../../chon-mon-order/review/dependencies.md) · [Đối chiếu schema](../../chon-mon-order/srs/data-dictionary.md). E6 giữ nguồn công bố/quyền và quy tắc của phân hệ này; delta chưa merge, không thay gate hoặc chứng minh phần mềm đã triển khai.

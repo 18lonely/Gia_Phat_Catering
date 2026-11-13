@@ -42,5 +42,5 @@ Tất cả CHỜ TRẢ LỜI. Cột Trả lời để trống; khuyến nghị c
 | E12-Q17 | Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào? | Cân nhắc xác nhận tự nguyện của người ăn có scope và snapshot; chưa chọn làm chính sách. Không suy từ order/giao/chọn món. | FR-NUTR-DREC-001; nhận bữa thật BLOCKED; phần xem/xóa và ranh giới vẫn thiết kế độc lập. |  |
 | E12-Q18 | Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào? | Adapter theo nguồn, quyền hiện tại và provenance; không tự đặt TTL, retry, quota hoặc chọn hạ tầng. | Freeze API, tích hợp, race và kiểm tải BLOCKED; E1-Q01–05/AIO-Q giữ nguyên. |  |
 
-> Chờ E12-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-02](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E12-Q08: XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-02](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 

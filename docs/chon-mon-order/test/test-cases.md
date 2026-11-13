@@ -9,7 +9,7 @@ last_updated: 2026-11-12
 ---
 # Ca kiểm trọng yếu E6
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -31,7 +31,7 @@ Bộ10 ca trọng yếu ban đầu, chưa đủ19story. Mọi dữ liệu minh h
 | TC-E6-QR-01 | FR-AUTH-QSES-001 | hai thiết bị cùng người quaQR | gửi hai lựa chọn | expected cụ thể chỉ được chốt sau ORD-Q01; không tuyên bố cookie đã chống trùng | BLOCKED ORD-Q01 |
 | TC-E6-PLAN-01 | FR-PLAN-MEAL-001 | hai event cùng order revision đã khóa | redeliver cảhai tới worker/service principal; lưu event/source refs và snapshot trước/sau | một hiệu ứng plan; snapshot nguồn và delta giữ version | BLOCKED ORD-Q10 |
 
-## Hướng dẫn thực thi đã đối chiếu — 12/11/2026
+## Hướng dẫn thực thi đã đối chiếu ngày 12/11/2026
 
 Áp dụng [evidence protocol](evidence-protocol.md), [catalog](../api/endpoint-catalog.json), [UC](../review/uc-operation-review.md) và [AC](../userstories/acceptance-criteria.md). Đây là DOCUMENT_CLARIFIED, không evidence chạy backend.
 

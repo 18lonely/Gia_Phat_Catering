@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-006-MD
-title: UC-AIN-006 — Gửi đề xuất về Gia Phát
+title: "UC-AIN-006: Gửi đề xuất về Gia Phát"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-006 — Gửi đề xuất về Gia Phát
+# UC-AIN-006: Gửi đề xuất về Gia Phát
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-SEND-001 / FEAT-062 / US-AIN-006.
 
 Trigger: Khách hài lòng với nháp đã kiểm và xác nhận gửi phương án cho Gia Phát xem xét.
 
-Tiền điều kiện — nghiệp vụ: Candidate thuộc chủ thể, có evidence kiểm còn hiệu lực; khách có thông tin liên hệ tối thiểu và consent theo nội dung được duyệt.
-Tiền điều kiện — gate còn mở: E9-Q06, E9-Q10, E9-Q13 chưa chốt đầu nhận, consent và receipt/ghi bền vững. O-03 vẫn đóng đối với sức khỏe.
+Tiền điều kiện (nghiệp vụ): Candidate thuộc chủ thể, có evidence kiểm còn hiệu lực; khách có thông tin liên hệ tối thiểu và consent theo nội dung được duyệt.
+Tiền điều kiện (gate còn mở): E9-Q06, E9-Q10, E9-Q13 chưa chốt đầu nhận, consent và receipt/ghi bền vững. O-03 vẫn đóng đối với sức khỏe.
 
 Luồng chính:
 1. Khách rà candidateRef/revision tại UI-AIN-04, nguồn kênh và thông tin liên hệ được phép gửi.

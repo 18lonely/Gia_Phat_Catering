@@ -1,4 +1,4 @@
-# Rà tài liệu hạ nguồn và evidence QA — 12/11/2026
+# Rà tài liệu hạ nguồn và evidence QA ngày 12/11/2026
 
 DOCUMENT_CLARIFIED, chỉ BA. Workspace D:/BA không có Git; không tìm thấy AGENTS.md kể cả tìm file ẩn trong workspace và D:/. Đã đọc năm mốc người dùng yêu cầu trước sửa. Skill user-flow/test-checklist: đọc rule/template tại .claude/ba-kit. Không chạy generator.
 

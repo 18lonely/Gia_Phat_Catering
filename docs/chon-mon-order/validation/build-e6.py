@@ -103,9 +103,9 @@ for i,(r,c) in enumerate(zip(rows,cases),1):
  num=f'{i:03}'; uc=f'UC-ORD-{num}'; us=f'US-E6-{num}'
  apis=', '.join('API-ORD-'+a if a.isdigit() else a for a in api.split(','))
  acids=[f'AC-E6-{num}-{j}' for j in range(1,4)]; tcids=[f'TC-E6-{num}-{j}' for j in range(1,4)]
- scope+=f'| {feat.split(" / ")[0]} | {fr} | {feat.split(" / ")[1]} | {title}: {out} | {gate}; '+('GATED toàn nghiệp vụ' if i in (17,18) else 'PARTIAL — thiết kế có điều kiện')+' |\n'
+ scope+=f'| {feat.split(" / ")[0]} | {fr} | {feat.split(" / ")[1]} | {title}: {out} | {gate}; '+('GATED toàn nghiệp vụ' if i in (17,18) else 'PARTIAL (thiết kế có điều kiện)')+' |\n'
  rtm+=f'| {feat} | {fr} | [{uc}](../usecases/{uc}.md) | {apis} | {data} | [UI-ORD-{screen}](../ui/screen-catalog.md) | {us} | '+', '.join(acids)+' | '+', '.join(tcids)+f' | {gate} |\n'
- ucbody=f'''- **ID / mức:** {uc} / {'Fish — kiểm cổng' if i in (17,18) else 'Sea — mục tiêu nghiệp vụ'}.
+ ucbody=f'''- **ID / mức:** {uc} / {'Fish (kiểm cổng)' if i in (17,18) else 'Sea (mục tiêu nghiệp vụ)'}.
 - **Truy vết:** {feat}; {fr}; {us}; {apis}; UI-ORD-{screen}.
 - **Actor chính:** {actor.split(';')[-1].strip()}. Actor hỗ trợ: AUTH/SYS kiểm quyền/audit; MENU cung cấp bản công bố; các port trong API.
 - **Bên quan tâm:** người ăn cần giữ đúng lựa chọn; người đặt tổng cần số suất giải thích được; bếp cần nguồn phiên bản; BA cần không che điểm mở.
@@ -124,24 +124,24 @@ for i,(r,c) in enumerate(zip(rows,cases),1):
 
 ## Nhánh rẽ và ngoại lệ
 
-- **2a — đầu vào/quyền nghiệp vụ:** Given {n[0]}; When {n[1]}; Then {n[2]}.
-- **3a — biên/đồng thời:** Given {e[0]}; When {e[1]}; Then {e[2]}.
-- **3b — quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
-- **4a — mất phản hồi:** không khẳng định thất bại hay tự đổi key; đọc biên nhận/resource trước retry cùng key. Gate O-03 không có write contract để retry.
-- **4b — version đổi:** ERR-ORD-409-01; tải lại, hiển thị khác biệt, người dùng quyết định gửi lại. Không tự ghi đè.
-- **4c — phụ thuộc gián đoạn:** ERR-ORD-503-01; không báo thành công khi chưa có commit; đối soát bằng requestId.
+- **2a. Đầu vào/quyền nghiệp vụ:** Given {n[0]}; When {n[1]}; Then {n[2]}.
+- **3a. Biên/đồng thời:** Given {e[0]}; When {e[1]}; Then {e[2]}.
+- **3b. Quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
+- **4a. Mất phản hồi:** không khẳng định thất bại hay tự đổi key; đọc biên nhận/resource trước retry cùng key. Gate O-03 không có write contract để retry.
+- **4b. Version đổi:** ERR-ORD-409-01; tải lại, hiển thị khác biệt, người dùng quyết định gửi lại. Không tự ghi đè.
+- **4c. Phụ thuộc gián đoạn:** ERR-ORD-503-01; không báo thành công khi chưa có commit; đối soát bằng requestId.
 
 ## Quy tắc, dữ liệu và kiểm thử
 
 [BR và nhánh vận hành](../srs/operational-rules.md), [SRS capability](../srs/spec.md), [API](../api/api-spec.md), [data dictionary](../srs/data-dictionary.md).
 Dữ liệu: {data}. Bộ ba AC: {', '.join(acids)}; test: {', '.join(tcids)}. Gate {gate} giữ CHỜ XÁC NHẬN.
 '''
- write(f'usecases/{uc}.md',f'{uc} — {title}',ucbody)
- index+=f'- [{uc} — {title}](../usecases/{uc}.md): {fr}.\n'
- ac+=f'\n## {us} — {title}\n\n{fr}; {feat}; gate {gate}.\n'
- tests+=f'\n## {us} / {uc}\n\nAPI/port: {apis}; UI-ORD-{screen}. Priority {feat.split(" / ")[1]}.\n\n| TC / AC | Given — fixture / tiền điều kiện | When — thao tác | Then — expected | Status |\n| :--- | :--- | :--- | :--- | :--- |\n'
+ write(f'usecases/{uc}.md',f'{uc}: {title}',ucbody)
+ index+=f'- [{uc}: {title}](../usecases/{uc}.md): {fr}.\n'
+ ac+=f'\n## {us}: {title}\n\n{fr}; {feat}; gate {gate}.\n'
+ tests+=f'\n## {us} / {uc}\n\nAPI/port: {apis}; UI-ORD-{screen}. Priority {feat.split(" / ")[1]}.\n\n| TC / AC | Given (fixture / tiền điều kiện) | When (thao tác) | Then (expected) | Status |\n| :--- | :--- | :--- | :--- | :--- |\n'
  for j,(label,s) in enumerate(zip(['Thành công có điều kiện / gate','Lỗi nghiệp vụ','Biên và bảo mật'],[h,n,e]),1):
-  ac+=f'\n### {acids[j-1]} — {label}\n\n```gherkin\nScenario: {title} — {label}\n  Given {s[0]}\n  When {s[1]}\n  Then {s[2]}\n```\n'
+  ac+=f'\n### {acids[j-1]}: {label}\n\n```gherkin\nScenario: {title} ({label})\n  Given {s[0]}\n  When {s[1]}\n  Then {s[2]}\n```\n'
   status='BLOCKED '+gate if j==1 and i not in (16,17,18) or 'chờ' in s[2] or 'ORD-Q' in s[2] or i in (17,18) and j==3 else 'NOT RUN'
   tests+=f'| {tcids[j-1]} / {acids[j-1]} | {s[0]} | {s[1]} | {s[2]} | {status} |\n'
 write('review/scope-assessment.md','Đối chiếu phạm vi FEAT-030–048',scope+'''\n## Ngoài phạm vi phiên này

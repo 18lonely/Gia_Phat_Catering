@@ -27,7 +27,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | E7 | Điểm nối kiểm trước giao, số giao/nhận và căn cứ doanh thu | Q-13/E7-Q01–08 chưa chốt; QC không là nhận hàng của khách, công nợ NCC không là phải thu khách; không tự lấy doanh thu làm mẫu số BO-02 |
 | E1 | Quyền theo cơ sở, audit, files, approvals; DBML 65 bảng | E1-Q01–05/O-06 giữ mở; file MIME JPG/PNG/WEBP/PDF ≤ 10 MB, signed link 15 phút theo nguồn; chính sách ảnh E11-Q05 chưa chọn |
 
-> Chờ E7-Q07 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-11](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E7-Q07: XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-11](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Nguồn đọc: [E2](../../thuc-don-dinh-luong/srs/spec.md), [E3](../../cost/srs/spec.md), [kế toán](../../cost/accounting/business-rules.md), [PriceInput](../../cost/api/api-spec.md), [E6](../../chon-mon-order/srs/spec.md), [CG](../../chon-mon-order/review/contract-gap-register.md), [E7](../../giao-nhan-doanh-thu/srs/spec.md), [E1](../../nen-tang/srs/spec.md), [ERD](../../nen-tang/srs/erd.md), [DBML](../../nen-tang/srs/schema.dbml).
 

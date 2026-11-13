@@ -60,8 +60,8 @@ Toàn bộ input minh họa **synthetic**, không phải bộ nghiệm thu đã 
 | TC-AIN-013-02 | AC-AIN-013-02 | FR-AIN-LOG-001 | Fixture synthetic; usage missing/provider lỗi | xem báo cáo | UNKNOWN cùng reservation, không báo còn đủ tiền giả | NOT RUN |  |  |
 | TC-AIN-013-03 | AC-AIN-013-03 | FR-AIN-LOG-001 | Fixture synthetic; sự kiện trùng/đến muộn qua ranh giới ngày | đối soát | một lần theo eventId; gắn ngày theo policy được duyệt; không reset debt | NOT RUN |  |  |
 
-## Bổ sung gate — XC-05
+## Bổ sung gate (XC-05)
 
-> Chờ E9-Q15 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E9-Q15: XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Ca liên quan: TC-AIN-006-03, TC-AIN-007-01, TC-AIN-007-02. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

@@ -34,7 +34,7 @@ for mod,folder in [('NUTR','dinh-duong'),('AIO','agent-noi-bo')]:
         for text,label in [(rtm,'RTM'),(backlog,'backlog'),(tc,'test'),(api,'API')]: check(fr in text,fr+' missing in '+label)
     for code in re.findall(r'^\| ((?:BR|NFR|ERR)-[\w-]+) \|',srs,re.M): check(code in tc,code+' without test')
     for aid in acs: check(aid in tc and aid in rtm,aid+' orphan')
-    for story in stories: check(len(re.findall(r'^## AC-.* — '+story+r',',ac,re.M))>=3,story+' AC missing')
+    for story in stories: check(len(re.findall(r'^## AC-.*: '+story+r',',ac,re.M))>=3,story+' AC missing')
     for uc in re.findall(r'\[(UC-[\w-]+)\]',backlog): check((base/'usecases'/f'{uc}.md').is_file(),uc+' missing')
     catalog=json.loads((base/'api/endpoint-catalog.json').read_text(encoding='utf-8'))
     for ep in catalog:

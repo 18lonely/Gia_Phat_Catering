@@ -25,7 +25,7 @@ Khách vãng lai FEAT-045 đọc phần công bố qua mặt tiền E8; không d
 ## 2. Số suất và tổ hợp
 
 - D-04: chọn 1 trong 3 MAIN. Cơm/món phụ/rau/canh cố định thuộc cơ cấu suất; giá kiểm **toàn tổ hợp**, không chỉ giá MAIN. Tổ hợp bằng định mức được phép, vượt 1đ bị chặn; dữ liệu thiếu không suy giá 0. Đổi quota/giá/menu giữa ngày chờ ORD-Q04.
-- `S` đếm lựa chọn cá nhân hợp lệ trong điểm/ngày/ca; mỗi identity một suất là mô hình D-04. `C` đề xuất là số bổ sung cho người chưa có lựa chọn, không phải tổng theo món thay thế S. C chưa có identity phải có xác nhận nguồn/phạm vi; không thể tự chứng minh không trùng người — ORD-Q06.
+- `S` đếm lựa chọn cá nhân hợp lệ trong điểm/ngày/ca; mỗi identity một suất là mô hình D-04. `C` đề xuất là số bổ sung cho người chưa có lựa chọn, không phải tổng theo món thay thế S. C chưa có identity phải có xác nhận nguồn/phạm vi; không thể tự chứng minh không trùng người (ORD-Q06).
 - `T` là tổng suất người đặt tổng xác nhận. `D=T-S-C` chỉ là **công thức đề xuất ORD-Q06**; không thay bằng số tài khoản đăng ký. `unselectedRegisteredEaters` và `remainingServings` là hai số khác nhau, đều có nhãn.
 - Ví dụ **synthetic**: S=60,C=10,T=100 → D=30; T=70 → D=0; T=65 → đề xuất lỗi, không xóa 5 lựa chọn. T=0 chỉ hợp lệ toán học nếu S=C=0; có phải hủy bữa hay vẫn order 0 chờ ORD-Q13.
 - Không cộng số MAIN với SIDE/VEG/SOUP thành tổng suất. Dữ liệu kế hoạch dùng `quantity` + `unit` + `role` + `recipe/portion/version` để tránh cộng hai định lượng khác nhau. Quy đổi món phụ chờ ORD-Q10 và O-02; FR-MENU-RCP-007 vẫn bị chặn.
@@ -98,7 +98,7 @@ NFR-ORD-001/002/003 giữ [SRS](spec.md). 1000 người đồng thời trong 10 
 
 Thiết kế UI kiểm 360/390/1440px, bàn phím, label và thông báo aria-live; không coi kiểm viewport là chứng nhận WCAG. NFR bảo mật kế thừa nền, thử IDOR/revocation/token log/data allowlist. Không thêm SLA/TPS từ template khác thay chỉ tiêu dự án.
 ''')
-append('review/questions.md','''## Câu hỏi phát hiện khi hoàn thiện E6 — tất cả CHỜ XÁC NHẬN
+append('review/questions.md','''## Câu hỏi phát hiện khi hoàn thiện E6: tất cả CHỜ XÁC NHẬN
 
 | Mã | Câu hỏi | Vai trò cần xác nhận | Tác động | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- |
@@ -158,7 +158,7 @@ erDiagram
   customer_qr_codes ||--o{ qr_sessions : proposed
 ```
 ''')
-write('ui/user-flow.md','User flow E6 — chọn, chốt và phát hành','''[19 UC](../srs/usecase-diagram.md) là nguồn nhánh chi tiết; [quy tắc](../srs/operational-rules.md) chứa guard. Mọi nhánh đề xuất chờ mã câu hỏi tương ứng.
+write('ui/user-flow.md','User flow E6: chọn, chốt và phát hành','''[19 UC](../srs/usecase-diagram.md) là nguồn nhánh chi tiết; [quy tắc](../srs/operational-rules.md) chứa guard. Mọi nhánh đề xuất chờ mã câu hỏi tương ứng.
 
 ```mermaid
 flowchart TD
@@ -188,7 +188,7 @@ Nhánh tuần: tài khoản → chọn từng ngày → preview kết quả → 
 
 Nhánh dữ liệu rỗng: chưa có menu/định mức → không có nút lưu khả dụng; thiếu dinh dưỡng → “Chưa có dữ liệu”, vẫn phân biệt với món không đủ điều kiện chọn. Mất mạng sau gửi → “Chưa xác nhận kết quả”, giữ request key để đối soát; không hiển thị thành công giả.
 ''')
-append('srs/states.md','''## Bổ sung 0.2.0 — job, đề nghị và kế hoạch
+append('srs/states.md','''## Bổ sung 0.2.0: job, đề nghị và kế hoạch
 
 ```mermaid
 stateDiagram-v2
@@ -232,7 +232,7 @@ sequenceDiagram
   end
 ```
 ''')
-append('userstories/backlog.md','''## Bổ sung 0.2.0 — điều kiện review
+append('userstories/backlog.md','''## Bổ sung 0.2.0: điều kiện review
 
 19 mã story trên được giữ để không phá truy vết. [57 AC](acceptance-criteria.md), [19 UC](../srs/usecase-diagram.md), [RTM đầy đủ liên kết](../test/traceability.md) và [57 ca bổ sung](../test/review-test-cases.md) thay nhận định “chỉ có AC chọn/chốt”. Nội dung chi tiết mỗi story nằm ở UC/AC tương ứng số thứ tự; chưa story point hay nhãn sprint-ready. Story 017/018 chỉ đặc tả gate, chưa có happy path sức khỏe được duyệt.
 

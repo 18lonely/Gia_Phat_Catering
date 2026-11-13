@@ -1,4 +1,4 @@
-# Rà soát tiến độ BA Gia Phát — 11/11/2026
+# Rà soát tiến độ BA Gia Phát ngày 11/11/2026
 
 Đơn vị đo chính là **feature có thiết kế nháp**, không phải công sức, chất lượng đầy đủ hoặc nghiệm thu. Chưa có trọng số effort/baseline được phê duyệt để tính một tỷ lệ “hoàn tất dự án” chung.
 
@@ -29,48 +29,48 @@ E6-EVID-001 xác nhận có danh sách/người quản lý. E6-EVID-002 chủ đ
 
 [Prompt phiên tiếp theo](next-session-prompt.md) tập trung phần độc lập với quyết định đang mở: consistency API/data, nhánh lỗi/phiên bản, bộ mẫu QA synthetic, cập nhật traceability và báo cáo. [Dashboard](../../project-dashboard.md) · [E6 handoff](../../chon-mon-order/review/handoff.md).
 
-## Phiên bổ sung độc lập — 11/11/2026
+## Phiên bổ sung độc lập ngày 11/11/2026
 
 Thêm12ca invariant NOT RUN, không sửa57AC hoặc trạng thái8ca DR. Inventory hiện tại99mô tả (10gốc+57theoAC+12hệ thống+8DR+12INV), có overlap. Đã thiết kế12/12ca trong bộ bổ sung; thực thi backend0/12, không phải PASS. Bộ57ca thực thi0/57;29NOT RUN/28BLOCKED.0/8finding RV được xác nhận đóng. Độ phủ thiết kế vẫn40/78≈51,3%; E6 vẫn17/19≈89,5%, RTM19/19.
 
 [Handoff mới](../../chon-mon-order/review/independent-handoff.md) và [báo cáo kiểm phiên](../../chon-mon-order/validation/independent-report.md) là mốc hiện hành; giữ nguyên snapshot handoff/report trước. Fixture synthetic không thay dữ liệu thật hoặc chứng minh tải/pilot. Bộ26HTTP/2port,65bảng,13màn giữ nguyên.
 
-## Review contract tiếp nối — 11/11/2026
+## Review contract tiếp nối ngày 11/11/2026
 
 [Mốc review delta/evidence](../../chon-mon-order/review/contract-handoff.md): không tăng mẫu số hoặc tử số feature/test;40/78 và17/19giữ nguyên.12/12ca INV có hướng dẫn evidence bổ sung,0/12được chạy backend;0/8RV đóng.99mô tả ca có overlap. [Báo cáo kiểm mới](../../chon-mon-order/validation/contract-report.md).
 
-## Adapter/validation E6 — 11/11/2026
+## Adapter/validation E6 ngày 11/11/2026
 
 [Adapter/validation](../../chon-mon-order/review/adapter-handoff.md):26/26route có dòng rà, không đo bằng số route đã build;0/26thực thi phiên này. Feature40/78, E6 17/19, RV0/8đóng;99mô tả ca overlap giữ nguyên. [Kiểm mới](../../chon-mon-order/validation/adapter-report.md).
 
-## Hợp nhất gap/DTO E6 — 11/11/2026
+## Hợp nhất gap/DTO E6 ngày 11/11/2026
 
 [Sổ gap và DTO](../../chon-mon-order/review/dto-handoff.md):34/34DTO rà hiện diện,14/14nhóm gap có vai trò/điều kiện đóng,0/14đóng. Các tỷ lệ chỉ đo độ phủ review, không readiness/build.40/78feature,17/19E6,0/8RV đóng và99mô tả ca overlap giữ nguyên. [Kiểm phiên](../../chon-mon-order/validation/dto-report.md).
 
-## Rà UC — 12/11/2026
+## Rà UC ngày 12/11/2026
 
 [19/19 UC](../../chon-mon-order/review/uc-operation-review.md) được rà và sửa ranh giới đọc/ghi/worker/gate. Đây là độ phủ review tài liệu, không thêm feature hoặc test đã chạy:40/78feature (51,3%),17/19E6 (89,5%),19/19RTM.34/34DTO review giữ nguyên.14/14gap vẫn OPEN,0/14đóng;0/8RVđóng.99mô tả overlap;57ca29NOT RUN/28BLOCKED,12INV NOT RUN,8DR BLOCKED;0backend. Không thay lịch sử handoff/report hoặc E6-EVID-001/002. [Báo cáo kiểm mới](../../chon-mon-order/validation/uc-review-report.md).
 
-## Tài liệu hạ nguồn và evidence QA — 12/11/2026
+## Tài liệu hạ nguồn và evidence QA ngày 12/11/2026
 
 DOCUMENT_CLARIFIED: đã rà backlog/checklist/user-flow,8/8sơ đồ hiện có và hướng dẫn QA theo ranh giới UC; không lặp review19UC/34DTO. [Kết quả và file thay đổi](../../chon-mon-order/validation/downstream-report.md).40/78feature thiết kế nháp (51,3%),17/19capability E6 có điều kiện (89,5%),19/19RTM;19UC/57AC/26HTTP/2port/13màn/8sơ đồ/65bảng giữ nguyên.99mô tả ca overlap;57ca29NOT RUN/28BLOCKED,12INV NOT RUN,8DR BLOCKED;0backend.14/14gap OPEN,0/14CG và0/8RVđóng. Chặn theo sổ gap hiện hành; E6-EVID-001/002, Cost/VAT/chiết khấu và O-02/O-03 không đổi.
 
-## Rà ca gốc và hệ thống — 12/11/2026
+## Rà ca gốc và hệ thống ngày 12/11/2026
 
 DOCUMENT_CLARIFIED: đã đối chiếu10/10ca gốc và12/12ca hệ thống (22/22) với SRS/API/catalog/UC/AC/evidence-protocol; sửa ranh giới GET/ghi/PORT-LOCK/worker/PORT-REM, scope synthetic và tách evidence producer/read trong cùng mã ca. Không thêm ca, không đổi Status/Actual/Evidence.40/78feature nháp (51,3%),17/19E6 có điều kiện (89,5%),19/19RTM;99mô tả ca có overlap,0backend. Bộ57ca29NOT RUN/28BLOCKED;12INV NOT RUN;8DR BLOCKED.14/14gap OPEN,0/14CG và0/8RVđóng;34/34DTO và19/19UC đã rà từ trước, không rà lại. Các ràng buộc E6-EVID-001/002, Cost và O-02/O-03 giữ nguyên. [Kết quả và manifest](../../chon-mon-order/validation/case-review-report.md).
 
-## Đối chiếu fixture E6 — 12/11/2026
+## Đối chiếu fixture E6 ngày 12/11/2026
 
 DOCUMENT_CLARIFIED: đọc4/4file fixture (README +3JSON), đối chiếu phạm vi áp dụng cho22/22ca gốc/hệ thống; sửa README tách replay HTTP/worker, reset từng fault và evidence producer/read. Không cần sửa3JSON số học/oracle; không thêm ca hoặc seed runtime.40/78feature nháp (51,3%),17/19E6 có điều kiện (89,5%),19/19RTM;99mô tả ca overlap,0backend. Gốc2NOT RUN/8BLOCKED; hệ thống5NOT RUN/7BLOCKED;57ca29NOT RUN/28BLOCKED,12INV NOT RUN,8DR BLOCKED.14/14CG OPEN,0/14CG và0/8RVđóng.34/34DTO,19/19UC và22/22ca đã rà từ trước; phiên này chỉ kiểm ánh xạ fixture. Status/Actual/Evidence, E6-EVID-001/002, Cost và O-02/O-03 giữ nguyên.
 
 [Báo cáo phiên fixture](../../chon-mon-order/validation/fixture-review-report.md).
 
-## Đề xuất chờ người dùng duyệt — 12/11/2026
+## Đề xuất chờ người dùng duyệt ngày 12/11/2026
 
 DOCUMENT_CLARIFIED: theo yêu cầu mới, đã bổ sung phương án khuyến nghị, lựa chọn khác và tác động trong [sổ CG duy nhất](../../chon-mon-order/review/contract-gap-register.md), mục “Đề xuất trình người dùng duyệt”. Chưa có phương án được duyệt; không thay API/schema/UC/ca/fixture/wireframe. CG02/03 và ba nội dung E6-EVID-002 giữ mở, không hỏi lại. Ưu tiên duyệt hướng CG01/08/05/06 rồi từng phần CG12; CG04/07/09/10/11 cần review kỹ thuật tiếp. Giữ 40/78 feature nháp, 17/19 E6 có điều kiện, 19/19 RTM, 99 mô tả ca overlap, 0 backend; 14/14 CG OPEN, 0/14 CG và 0/8 RV đóng.
 
 
-## Mốc hiện hành — mở gói BA nháp E7, 12/11/2026
+## Mốc hiện hành: mở gói BA nháp E7, 12/11/2026
 
 Theo xác nhận người dùng 12/11/2026, mở **chỉ E7**; chỉ dẫn này thay phạm vi cũ “không mở E7–E13” đối với E7. E8–E13 chưa mở. E6 dừng chờ trả lời CG01/08/05/06, không hỏi lại/tự điền/đặc tả tiếp phần phụ thuộc;14/14 CG OPEN. Các mục phía trên là lịch sử và được giữ nguyên.
 
@@ -81,7 +81,7 @@ E7 FEAT-049→053:5/5 feature có thiết kế nháp có điều kiện,0 featur
 Độ phủ tài liệu nháp **45/78≈57,7%** =23 E1–E5 +17 E6 +5 E7; tách riêng2 feature E6 gate-only O-03. Đây không phải BA được duyệt hoặc tiến độ phần mềm.65 bảng giữ nguyên;0 backend/migration/UAT. E6 vẫn99 mô tả ca overlap,0/14 CG đóng; E6-EVID-001/002, Cost/VAT/CK, CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002 và O-02/O-03/O-04 không đổi.
 
 
-## Mốc hiện hành — gói BA nháp E8, 12/11/2026
+## Mốc hiện hành: gói BA nháp E8, 12/11/2026
 
 Theo thay đổi phạm vi người dùng xác nhận12/11/2026, mở **chỉ E8**; thay chỉ dẫn lịch sử “không mở E8–E13” chỉ đối với E8. E9–E13 chưa mở. E6 CG01/08/05/06 và E7 Q-13/E7-Q01–08 giữ CHỜ TRẢ LỜI, không hỏi lại/tự điền/đặc tả tiếp phần phụ thuộc.14/14CG E6 OPEN; E6-EVID-001/002 còn hiệu lực. Các mục phía trên là lịch sử.
 
@@ -94,7 +94,7 @@ E8 FEAT-054→059:6/6feature có thiết kế nháp có điều kiện (5P0; FEA
 531file E1–E7 và PRD/roadmap bảo toàn SHA256;65bảng giữ nguyên;4file tổng quan chỉ append. Kiểm cấu trúc/liên kết/render và UI mock E8, đã xem ảnh desktop/mobile; không dùng mock PASS thay test sản phẩm.0backend/migration/UAT. Cost gồm VAT phải trả NCC; cờ không yêu cầu hóa đơn riêng không là VAT0%; CK%/tiền suất riêng theo đơn không giảm phải trả. CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002, O-02/O-03/O-04 không đổi.
 
 
-## Mốc hiện hành — gói BA nháp E9, 12/11/2026
+## Mốc hiện hành: gói BA nháp E9, 12/11/2026
 
 Theo thay đổi phạm vi người dùng xác nhận 12/11/2026, chỉ mở E9; thay chỉ dẫn lịch sử “không mở E9–E13” đối với E9. E10–E13 chưa mở. E6 CG01/08/05/06, E7 Q-13/E7-Q01–08 và E8-Q01–12 giữ CHỜ TRẢ LỜI: không hỏi lại, tự điền hoặc đặc tả tiếp phần phụ thuộc. Các mục trên giữ nguyên là lịch sử.
 
@@ -111,7 +111,7 @@ E9 đúng FEAT-060→065: 5 P0 có thiết kế nháp có điều kiện; FEAT-0
 14/14 CG E6 OPEN; E6-EVID-001/002 còn hiệu lực. O-02/O-03/O-04, AIO-Q01–06 không đóng. Cost nguyên liệu gồm VAT phải trả NCC; không yêu cầu hóa đơn là cờ riêng, không VAT0%; CK%/tiền suất khoản riêng theo đơn, không giảm phải trả. CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002 không đổi.
 
 
-## Mốc hiện hành — chỉnh diễn đạt UC E7–E9, 12/11/2026
+## Mốc hiện hành: chỉnh diễn đạt UC E7–E9, 12/11/2026
 
 Đã viết lại 38/38 UC (E7: 13/13; E8: 12/12; E9: 13/13), làm rõ actor, trigger, điều kiện, bước xử lý và ngoại lệ; sửa số dính chữ trong phạm vi được phép và viết lại 3 handoff. Đây chỉ là phiên chỉnh diễn đạt, không thêm phạm vi. Độ phủ giữ 56/78 ≈ 71,8%; số FR/AC/ca/endpoint/màn/sơ đồ và Status/Actual/Evidence giữ nguyên. FEAT-063 vẫn chỉ gate; không mở E10–E13.
 

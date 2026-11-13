@@ -656,10 +656,10 @@
     {
       "sourceCode": "H-3",
       "epic": "E2",
-      "question": "Danh sách nhóm nguyên liệu chính để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
+      "question": "Danh sách nhóm nguyên liệu chính để máy so trùng: đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
       "sourceFile": "docs/gia-phat/brainstorms/quy-tac-thuc-don.md",
       "sourceLine": 122,
-      "sourceText": "Danh sách **nhóm nguyên liệu chính** để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
+      "sourceText": "Danh sách **nhóm nguyên liệu chính** để máy so trùng: đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
       "decisionGroup": "DEC-41",
       "decisionOwner": "Người soạn docx",
       "blockedReleases": [
@@ -761,10 +761,10 @@
     {
       "sourceCode": "H-8",
       "epic": "E2",
-      "question": "Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
+      "question": "Danh sách phương pháp chế biến: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
       "sourceFile": "docs/gia-phat/brainstorms/quy-tac-thuc-don.md",
       "sourceLine": 127,
-      "sourceText": "Danh sách **phương pháp chế biến** — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
+      "sourceText": "Danh sách **phương pháp chế biến**: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
       "decisionGroup": "DEC-44",
       "decisionOwner": "Người soạn docx",
       "blockedReleases": [
@@ -1213,7 +1213,7 @@
       ],
       "priority": "P-MVP",
       "blockedCount": "2 ca (gate trực tiếp)",
-      "recommendation": "Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.",
+      "recommendation": "Ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.",
       "answer": "",
       "alternatives": "",
       "effects": "Không trả Infinity/NaN, không biến delta% thành0 gây hiểu nhầm.",
@@ -4906,7 +4906,7 @@
       "id": "DEC-40"
     },
     {
-      "title": "Danh sách nhóm nguyên liệu chính để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
+      "title": "Danh sách nhóm nguyên liệu chính để máy so trùng: đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?",
       "members": [
         "H-3"
       ],
@@ -4927,7 +4927,7 @@
       "id": "DEC-43"
     },
     {
-      "title": "Danh sách phương pháp chế biến — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
+      "title": "Danh sách phương pháp chế biến: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?",
       "members": [
         "H-8"
       ],

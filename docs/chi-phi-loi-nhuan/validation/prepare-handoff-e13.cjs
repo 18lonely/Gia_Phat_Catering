@@ -53,7 +53,7 @@ last_updated: 2026-11-12
 
 Độ phủ **thiết kế tài liệu nháp (74 + 1) / 78 = 75/78 ≈ 96,2 %**. Ba feature FEAT-046/047/063 chỉ gate O-03 ghi riêng. Không phải BA được duyệt, effort hoặc tiến độ phần mềm. E13 là epic cuối theo PRD; việc tiếp theo là review/chốt câu hỏi với stakeholder. R13 cần R7/R11 xong và Giám đốc duyệt nguyên tắc phân bổ; chưa có bằng chứng cả ba, chưa nghiệm thu.
 
-## Bước 0 — Nguồn đã đọc
+## Bước 0: Nguồn đã đọc
 
 Đọc nguồn theo mục nghiệp vụ và mã liên quan E13; không coi nháp là hợp đồng được duyệt. Đã xem cây thư mục E12 và các script validation; không chạy generator lịch sử. Danh sách chi tiết máy đọc: [source-register.json](source-register.json).
 

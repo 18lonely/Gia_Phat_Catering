@@ -1,4 +1,4 @@
-# Manifest phiên hạ nguồn — 12/11/2026
+# Manifest phiên hạ nguồn ngày 12/11/2026
 
 So SHA256 trước phiên; không Git. Các file render là đầu ra tái sinh. Mọi file có trước phiên ngoài phạm vi cho phép phải giữ hash, gồm UC/API/AC/RTM, các bộ ca và evidence, schema/Cost, wireframe và snapshot handoff/report cũ.
 

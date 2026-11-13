@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-DLV-001-MD
-title: UC-DLV-001 — Lập phiếu giao nhận
+title: "UC-DLV-001: Lập phiếu giao nhận"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-DLV-001 — Lập phiếu giao nhận
+# UC-DLV-001: Lập phiếu giao nhận
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Bếp trưởng hoặc quản lý cơ sở phụ
 
 Trigger: Bếp trưởng ghi nhận số suất thực giao của chuyến hàng theo kế hoạch sản xuất.
 
-Tiền điều kiện — nghiệp vụ: Người lập có phiên và quyền tại cơ sở; đơn hàng và bản kế hoạch nguồn tồn tại.
-Tiền điều kiện — gate còn mở: E6-CG-05/06/08 và E7-Q02 chưa có quyết định/evidence cho luồng thành công; chỉ mô tả xử lý khi đầu vào được xác nhận hợp lệ.
+Tiền điều kiện (nghiệp vụ): Người lập có phiên và quyền tại cơ sở; đơn hàng và bản kế hoạch nguồn tồn tại.
+Tiền điều kiện (gate còn mở): E6-CG-05/06/08 và E7-Q02 chưa có quyết định/evidence cho luồng thành công; chỉ mô tả xử lý khi đầu vào được xác nhận hợp lệ.
 
 Luồng chính:
 1. Bếp trưởng chọn đơn hàng tại UI-E7-01; hệ thống hiển thị khách, điểm, ngày/ca và số chốt từ nguồn được phép đọc.

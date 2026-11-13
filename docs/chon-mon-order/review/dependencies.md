@@ -21,7 +21,7 @@ Draft · 11/11/2026 · Chưa phê duyệt nghiệp vụ / chưa triển khai bac
 
 Đã thêm liên kết ngược từ SRS E1–E5 và ERD nền tới gói E6. Không sửa công thức Cost, schema DBML, CK/DATA-COST hoặc thuật toán Agent. API/port đều đề xuất, chưa server hoặc migration. NFR-COST-002 giữ cost món≤1đ và cost% ngày≤0,01 điểm phần trăm.
 
-## Cổng customer/account tối thiểu cho E6 — 11/11/2026
+## Cổng customer/account tối thiểu cho E6 ngày 11/11/2026
 
 Đọc [API nền](../../nen-tang/api/api-spec.md) và [mapping E6](../api/data-mapping.md): API-CORE-007 tạo user, CORE-008 đổi trạng thái, CORE-009 gán role, CORE-014 tra user là hợp đồng nháp hiện có; không chứng minh đã hỗ trợ đầy đủ principal khách/guest.
 
@@ -35,6 +35,6 @@ Draft · 11/11/2026 · Chưa phê duyệt nghiệp vụ / chưa triển khai bac
 
 Trình tự review: có customer reference → account hợp lệ → grant → service context/quota/menu → identity policy → cho chọn/chốt. Nếu account tạo thành công nhưng grant lỗi, giữ account chưa có quyền E6, retry grant bằng key/receipt; không tự xóa account hoặc cấp role rộng để bù. Chưa định nghĩa distributed transaction giữa AUTH/E6. QA dùng ID synthetic qua adapter test, không phải bản ghi khách thật hoặc migration. Không mở CRM E10, hợp đồng thương mại hay dữ liệu sức khỏe.
 
-## Review adapter — 11/11/2026
+## Review adapter ngày 11/11/2026
 
 [Adapter E1/MENU/NUTR→E6](../api/adapter-contract-review.md) chỉ ra envelope chưa thống nhất, Calculation provenance đa revision và thiếu cơ chế refresh/cache được duyệt. GET E6 không ngầm tạo Calculation qua POST nội bộ; principal/quyền service và mapping lỗi dependency cần review. NUTR-Q03/E1-Q01/ORD-Q04/12 tiếp tục mở.

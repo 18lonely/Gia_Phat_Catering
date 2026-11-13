@@ -20,7 +20,7 @@ Nháp · 13/11/2026 · Chưa có quyết định mới.
 
 Phân loại không thay quyết định nghiệp vụ. XC-04 chỉ hoàn thành quy ước trình bày; phần contract tiếp tục BLOCKED. XC-08 và XC-12 là loại C vì nguồn ghi rõ đề xuất chưa chọn.
 
-## XC-01 — A — ĐÃ SỬA
+## XC-01: A (ĐÃ SỬA)
 
 Chỉ sửa VAT đầu vào theo ACC-CONF-02; giữ O-01 mở.
 
@@ -30,7 +30,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E7-Q08, E8-Q
 - [docs/cost/review/accountant-input.md](../../../../cost/review/accountant-input.md)
 - [docs/chi-phi-loi-nhuan/review/dependencies.md](../../../../chi-phi-loi-nhuan/review/dependencies.md)
 
-## XC-02 — C — CHỜ QUYẾT ĐỊNH
+## XC-02: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -40,7 +40,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E11-Q08; E12
 - [docs/phan-hoi-bao-cao/review/questions.md](../../../../phan-hoi-bao-cao/review/questions.md)
 - [docs/chi-phi-loi-nhuan/review/questions.md](../../../../chi-phi-loi-nhuan/review/questions.md)
 
-## XC-03 — C — CHỜ QUYẾT ĐỊNH
+## XC-03: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -49,7 +49,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E7-Q03, E7-Q
 - [docs/giao-nhan-doanh-thu/review/questions.md](../../../../giao-nhan-doanh-thu/review/questions.md)
 - [docs/chi-phi-loi-nhuan/review/dependencies.md](../../../../chi-phi-loi-nhuan/review/dependencies.md)
 
-## XC-04 — B — ĐÃ SỬA
+## XC-04: B (ĐÃ SỬA)
 
 Đã thống nhất cách mô tả; mapping wire vẫn BLOCKED theo câu contract E7–E13.
 
@@ -70,7 +70,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E7-Q08, E8-Q
 - [docs/chi-phi-loi-nhuan/srs/data-dictionary.md](../../../../chi-phi-loi-nhuan/srs/data-dictionary.md)
 - [docs/chi-phi-loi-nhuan/api/api-spec.md](../../../../chi-phi-loi-nhuan/api/api-spec.md)
 
-## XC-05 — C — CHỜ QUYẾT ĐỊNH
+## XC-05: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -90,7 +90,7 @@ Câu mới: E8-Q13, E9-Q15, E10-Q16. Câu nguồn: E8-Q13; E9-Q15; E10-Q16.
 - [docs/crm-ban-hang/test/traceability.md](../../../../crm-ban-hang/test/traceability.md)
 - [docs/gia-phat/review/decision-pack/meeting-agenda.md](../meeting-agenda.md)
 
-## XC-06 — C — CHỜ QUYẾT ĐỊNH
+## XC-06: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -98,7 +98,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E12-Q15, E12
 
 - [docs/phan-hoi-bao-cao/review/dependencies.md](../../../../phan-hoi-bao-cao/review/dependencies.md)
 
-## XC-07 — C — CHỜ QUYẾT ĐỊNH
+## XC-07: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -108,7 +108,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E11-Q02, O-0
 - [docs/chi-phi-loi-nhuan/review/questions.md](../../../../chi-phi-loi-nhuan/review/questions.md)
 - [docs/crm-ban-hang/review/questions.md](../../../../crm-ban-hang/review/questions.md)
 
-## XC-08 — C — CHỜ QUYẾT ĐỊNH
+## XC-08: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -117,7 +117,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E8-Q05, E9-Q
 - [docs/website-cong-khai/review/questions.md](../../../../website-cong-khai/review/questions.md)
 - [docs/agent-dinh-duong-vien/review/questions.md](../../../../agent-dinh-duong-vien/review/questions.md)
 
-## XC-09 — C — CHỜ QUYẾT ĐỊNH
+## XC-09: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -127,7 +127,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E11-Q14; E13
 - [docs/chi-phi-loi-nhuan/review/questions.md](../../../../chi-phi-loi-nhuan/review/questions.md)
 - [docs/crm-ban-hang/srs/data-dictionary.md](../../../../crm-ban-hang/srs/data-dictionary.md)
 
-## XC-10 — C — CHỜ QUYẾT ĐỊNH
+## XC-10: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -135,7 +135,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E13-Q08, CK-
 
 - [docs/chi-phi-loi-nhuan/review/dependencies.md](../../../../chi-phi-loi-nhuan/review/dependencies.md)
 
-## XC-11 — C — CHỜ QUYẾT ĐỊNH
+## XC-11: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 
@@ -145,7 +145,7 @@ Câu mới: Không; tái dùng câu tương đương. Câu nguồn: E7-Q07; E13-
 - [docs/mua-hang-san-xuat/review/dependencies.md](../../../../mua-hang-san-xuat/review/dependencies.md)
 - [docs/chi-phi-loi-nhuan/review/questions.md](../../../../chi-phi-loi-nhuan/review/questions.md)
 
-## XC-12 — C — CHỜ QUYẾT ĐỊNH
+## XC-12: C (CHỜ QUYẾT ĐỊNH)
 
 Không chọn phương án; câu tương đương hiện có được tái dùng, không tạo mã trùng.
 

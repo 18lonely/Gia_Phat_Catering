@@ -1,4 +1,4 @@
-# Gia Phát — Tổng quan tiến độ tài liệu
+# Tổng quan tiến độ tài liệu Gia Phát
 
 Phiên bản: 0.9.0 · Ngày: 11/11/2026 · Trạng thái: Draft.
 
@@ -23,12 +23,12 @@ Phạm vi theo [PRD](gia-phat/01-prd.md) và [roadmap](gia-phat/02-roadmap.md): 
 | Nhóm | Kết quả có trên workspace | Việc còn lại |
 | :--- | :--- | :--- |
 | Tổng quan | Kế hoạch, BRD, URD, PRD, roadmap nháp | Chốt điểm mở, duyệt phạm vi, ước lượng công sức và lịch |
-| E1 — Nền tảng | [SRS v0.2.1](nen-tang/srs/spec.md); [ERD v0.5.0](nen-tang/srs/erd.md); [DBML v0.5.0](nen-tang/srs/schema.dbml) | Duyệt thiết kế, đặc tả triển khai và migration |
-| E2 — Thực đơn | [SRS v0.3.3](thuc-don-dinh-luong/srs/spec.md), 13 use case, flow, backlog/AC, test case; wireframe soạn tuần có cost theo cơ sở | DL-01 và các điểm mở; phần test quy tắc chưa đầy đủ; chưa chạy test phần mềm |
-| E3 — Cost | [Epic v0.6.0](cost/epic-spec.md), [SRS v0.3.2](cost/srs/spec.md); **9/9 mục đồng bộ phụ thuộc đã xử lý**; [16 use case và ma trận FR](cost/srs/usecase-diagram.md); [user flow](cost/ui/user-flow.md) ; [API 37 endpoint](cost/api/api-spec.md); [wireframe 18 màn](cost/html-wireframe/cost-workbench.html) ; [28 story](cost/userstories/backlog.md), [108 AC/test](cost/test/test-cases.md) | BA/QA review, chốt điểm mở, có môi trường và dữ liệu kế toán để chạy test |
-| E4 — Dinh dưỡng | [SRS](dinh-duong/srs/spec.md), 5 UC/story, ERD, 7 API, 3 wireframe ASCII, 28 ca thiết kế | NUTR-Q01–04, DATA-NUTR-Q01; chưa dữ liệu đối soát 5 suất hoặc backend |
-| E5 — Agent Nội bộ | [SRS](agent-noi-bo/srs/spec.md), 6 UC/story, ERD, 6 API, 3 wireframe ASCII, 32 ca thiết kế | AIO-Q01–06, O-04, baseline thời gian và 20 yêu cầu thử; chưa model/backend |
-| E6 — Chọn món/order | [Gói review v0.2](chon-mon-order/preview.html):19UC,57AC,26endpoint,13màn,RTM | 17capability có điều kiện;2gate O-03; ORD-Q01–15 chờ; chưa backend |
+| E1: Nền tảng | [SRS v0.2.1](nen-tang/srs/spec.md); [ERD v0.5.0](nen-tang/srs/erd.md); [DBML v0.5.0](nen-tang/srs/schema.dbml) | Duyệt thiết kế, đặc tả triển khai và migration |
+| E2: Thực đơn | [SRS v0.3.3](thuc-don-dinh-luong/srs/spec.md), 13 use case, flow, backlog/AC, test case; wireframe soạn tuần có cost theo cơ sở | DL-01 và các điểm mở; phần test quy tắc chưa đầy đủ; chưa chạy test phần mềm |
+| E3: Cost | [Epic v0.6.0](cost/epic-spec.md), [SRS v0.3.2](cost/srs/spec.md); **9/9 mục đồng bộ phụ thuộc đã xử lý**; [16 use case và ma trận FR](cost/srs/usecase-diagram.md); [user flow](cost/ui/user-flow.md) ; [API 37 endpoint](cost/api/api-spec.md); [wireframe 18 màn](cost/html-wireframe/cost-workbench.html) ; [28 story](cost/userstories/backlog.md), [108 AC/test](cost/test/test-cases.md) | BA/QA review, chốt điểm mở, có môi trường và dữ liệu kế toán để chạy test |
+| E4: Dinh dưỡng | [SRS](dinh-duong/srs/spec.md), 5 UC/story, ERD, 7 API, 3 wireframe ASCII, 28 ca thiết kế | NUTR-Q01–04, DATA-NUTR-Q01; chưa dữ liệu đối soát 5 suất hoặc backend |
+| E5: Agent Nội bộ | [SRS](agent-noi-bo/srs/spec.md), 6 UC/story, ERD, 6 API, 3 wireframe ASCII, 32 ca thiết kế | AIO-Q01–06, O-04, baseline thời gian và 20 yêu cầu thử; chưa model/backend |
+| E6: Chọn món/order | [Gói review v0.2](chon-mon-order/preview.html):19UC,57AC,26endpoint,13màn,RTM | 17capability có điều kiện;2gate O-03; ORD-Q01–15 chờ; chưa backend |
 | E7–E13 | Có phạm vi trong PRD/roadmap | Chưa có SRS riêng trong workspace |
 
 ## Đợt đồng bộ Cost ngày 11/11/2026
@@ -84,20 +84,20 @@ Dinh dưỡng kế thừa công thức khung từ ERD nhưng phải chốt ý ng
 
 E6 đã bắt đầu soạn tài liệu, chưa tăng số tính năng được coi là đặc tả đầy đủ. Schema tổng vẫn65bảng; deltaE6 chưa merge. Phần mềm/migration/UAT vẫn chưa triển khai trong workspace này. Thứ tự tiếp theo: review điểm mở/gap E1–E5 và tiếp tục UC/API/UI/AC/RTM E6 theo phần đủ căn cứ.
 
-## Hoàn thiện gói E6 để review — 11/11/2026
+## Hoàn thiện gói E6 để review ngày 11/11/2026
 
 [Preview E6](chon-mon-order/preview.html) · [Báo cáo kiểm tra](chon-mon-order/validation/report.md) · [Bàn giao](chon-mon-order/review/handoff.md). Đã bổ sung19UC,57AC,26HTTP endpoint,2port,13màn vàRTM19feature. Giữ10ca gốc, thêm57ca theoAC và12ca hệ thống; không cộng thành79 mục tiêu độc lập. 17capability có thiết kế có điều kiện,2feature chỉgate O-03. ORD-Q01–10 không đóng, bổ sung ORD-Q11–15; schema65bảng không thay. Chưa backend/migration/UAT. Các mục “E6 khởi đầu” phía trên là mốc lịch sử, không phản ánh inventory hiện tại. Tiếp theo review E6 trước mở E7–E13.
 
-## Review quyết định E6 — 11/11/2026
+## Review quyết định E6 ngày 11/11/2026
 
 [DR-01–04](chon-mon-order/review/decision-review.md) đã rà identity/scope, số suất, khóa hạn và kế hoạch. Có xác nhận đầu vào danh sách/người quản lý, chưa chốt cơ chế identity. 8phát hiện; sửa các mâu thuẫn tài liệu có căn cứ, bổ sung8ca review riêng. Chưa freeze schema/API, chưa backend; không mở E7–E13. [Kết quả kiểm](chon-mon-order/validation/decision-review-report.md).
 
-## Bổ sung E6 độc lập — 11/11/2026
+## Bổ sung E6 độc lập ngày 11/11/2026
 
 [Bàn giao bổ sung E6 độc lập](chon-mon-order/review/independent-handoff.md) cập nhật consistency, khóa/plan và dependency Nền tảng; thêm12ca invariant NOT RUN cùng fixture synthetic. Tổng99mô tả ca có overlap, không99mục tiêu độc lập;40/78feature có thiết kế nháp,17/19capability E6 có điều kiện; chưa backend/migration/UAT.
 
 
-## Mốc hiện hành — mở gói BA nháp E7, 12/11/2026
+## Mốc hiện hành: mở gói BA nháp E7, 12/11/2026
 
 Theo xác nhận người dùng 12/11/2026, mở **chỉ E7**; chỉ dẫn này thay phạm vi cũ “không mở E7–E13” đối với E7. E8–E13 chưa mở. E6 dừng chờ trả lời CG01/08/05/06, không hỏi lại/tự điền/đặc tả tiếp phần phụ thuộc;14/14 CG OPEN. Các mục phía trên là lịch sử và được giữ nguyên.
 
@@ -108,7 +108,7 @@ E7 FEAT-049→053:5/5 feature có thiết kế nháp có điều kiện,0 featur
 Độ phủ tài liệu nháp **45/78≈57,7%** =23 E1–E5 +17 E6 +5 E7; tách riêng2 feature E6 gate-only O-03. Đây không phải BA được duyệt hoặc tiến độ phần mềm.65 bảng giữ nguyên;0 backend/migration/UAT. E6 vẫn99 mô tả ca overlap,0/14 CG đóng; E6-EVID-001/002, Cost/VAT/CK, CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002 và O-02/O-03/O-04 không đổi.
 
 
-## Mốc hiện hành — gói BA nháp E8, 12/11/2026
+## Mốc hiện hành: gói BA nháp E8, 12/11/2026
 
 Theo thay đổi phạm vi người dùng xác nhận12/11/2026, mở **chỉ E8**; thay chỉ dẫn lịch sử “không mở E8–E13” chỉ đối với E8. E9–E13 chưa mở. E6 CG01/08/05/06 và E7 Q-13/E7-Q01–08 giữ CHỜ TRẢ LỜI, không hỏi lại/tự điền/đặc tả tiếp phần phụ thuộc.14/14CG E6 OPEN; E6-EVID-001/002 còn hiệu lực. Các mục phía trên là lịch sử.
 
@@ -121,7 +121,7 @@ E8 FEAT-054→059:6/6feature có thiết kế nháp có điều kiện (5P0; FEA
 531file E1–E7 và PRD/roadmap bảo toàn SHA256;65bảng giữ nguyên;4file tổng quan chỉ append. Kiểm cấu trúc/liên kết/render và UI mock E8, đã xem ảnh desktop/mobile; không dùng mock PASS thay test sản phẩm.0backend/migration/UAT. Cost gồm VAT phải trả NCC; cờ không yêu cầu hóa đơn riêng không là VAT0%; CK%/tiền suất riêng theo đơn không giảm phải trả. CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002, O-02/O-03/O-04 không đổi.
 
 
-## Mốc hiện hành — gói BA nháp E9, 12/11/2026
+## Mốc hiện hành: gói BA nháp E9, 12/11/2026
 
 Theo thay đổi phạm vi người dùng xác nhận 12/11/2026, chỉ mở E9; thay chỉ dẫn lịch sử “không mở E9–E13” đối với E9. E10–E13 chưa mở. E6 CG01/08/05/06, E7 Q-13/E7-Q01–08 và E8-Q01–12 giữ CHỜ TRẢ LỜI: không hỏi lại, tự điền hoặc đặc tả tiếp phần phụ thuộc. Các mục trên giữ nguyên là lịch sử.
 
@@ -138,16 +138,16 @@ E9 đúng FEAT-060→065: 5 P0 có thiết kế nháp có điều kiện; FEAT-0
 14/14 CG E6 OPEN; E6-EVID-001/002 còn hiệu lực. O-02/O-03/O-04, AIO-Q01–06 không đóng. Cost nguyên liệu gồm VAT phải trả NCC; không yêu cầu hóa đơn là cờ riêng, không VAT0%; CK%/tiền suất khoản riêng theo đơn, không giảm phải trả. CK-Q01–10/DATA-COST-Q01–06/NFR-COST-002 không đổi.
 
 
-## Mốc hiện hành — chỉnh diễn đạt UC E7–E9, 12/11/2026
+## Mốc hiện hành: chỉnh diễn đạt UC E7–E9, 12/11/2026
 
 Đã viết lại 38/38 UC (E7: 13/13; E8: 12/12; E9: 13/13), làm rõ actor, trigger, điều kiện, bước xử lý và ngoại lệ; sửa số dính chữ trong phạm vi được phép và viết lại 3 handoff. Đây chỉ là phiên chỉnh diễn đạt, không thêm phạm vi. Độ phủ giữ 56/78 ≈ 71,8%; số FR/AC/ca/endpoint/màn/sơ đồ và Status/Actual/Evidence giữ nguyên. FEAT-063 vẫn chỉ gate; không mở E10–E13.
 
 Mọi câu hỏi mở giữ nguyên, cột trả lời để trống: E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8-Q01–12; E9-Q01–14; O-01 đến O-05; CK-Q01–10/DATA-COST-Q01–06; AIO-Q01–06/NUTR-Q01–04. Không backend, migration, gọi mô hình AI, thay PRD/roadmap hoặc schema 65 bảng.
 
 
-## Mốc hiện hành — gói BA nháp E10, 12/11/2026
+## Mốc hiện hành: gói BA nháp E10, 12/11/2026
 
-Theo yêu cầu người dùng ngày 12/11/2026, chỉ mở tài liệu E10 — CRM và bán hàng cho FEAT-070–073, đều P1. Chỉ dẫn lịch sử “E10–E13 chưa mở” được thay đối với E10; E11–E13 vẫn chưa mở. FEAT-084 không có đặc tả hoặc công cụ AI mới. Các mục phía trên giữ nguyên là lịch sử.
+Theo yêu cầu người dùng ngày 12/11/2026, chỉ mở tài liệu E10: CRM và bán hàng cho FEAT-070–073, đều P1. Chỉ dẫn lịch sử “E10–E13 chưa mở” được thay đối với E10; E11–E13 vẫn chưa mở. FEAT-084 không có đặc tả hoặc công cụ AI mới. Các mục phía trên giữ nguyên là lịch sử.
 
 [Preview E10](crm-ban-hang/preview.html) · [Bàn giao](crm-ban-hang/review/handoff.md) · [Câu hỏi](crm-ban-hang/review/questions.md) · [Phụ thuộc](crm-ban-hang/review/dependencies.md) · [Báo cáo kiểm](crm-ban-hang/validation/report.md).
 
@@ -164,9 +164,9 @@ Các câu vẫn chờ: E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13, E7-
 Cost nguyên liệu gồm VAT phải trả nhà cung cấp; cờ không yêu cầu hóa đơn là cờ riêng, không VAT 0%. CK% và tiền suất riêng theo đơn không giảm số phải trả nhà cung cấp; không tự khấu trừ số khách phải trả. NFR-COST-002 giữ nguyên. Không backend, migration, gọi mô hình AI hoặc UAT; không commit hoặc xóa file.
 
 
-## Mốc hiện hành — gói BA nháp E11, 12/11/2026
+## Mốc hiện hành: gói BA nháp E11, 12/11/2026
 
-Theo yêu cầu người dùng, chỉ mở tài liệu E11 — Mua hàng và sản xuất cho FEAT-074–078, đều P1. Chỉ dẫn lịch sử “E11–E13 chưa mở” được thay riêng đối với E11; E12/E13 chưa mở. Không đặc tả FEAT-082/083. Các mục phía trên giữ nguyên byte và là lịch sử.
+Theo yêu cầu người dùng, chỉ mở tài liệu E11: Mua hàng và sản xuất cho FEAT-074–078, đều P1. Chỉ dẫn lịch sử “E11–E13 chưa mở” được thay riêng đối với E11; E12/E13 chưa mở. Không đặc tả FEAT-082/083. Các mục phía trên giữ nguyên byte và là lịch sử.
 
 [Preview E11](mua-hang-san-xuat/preview.html) · [Bàn giao](mua-hang-san-xuat/review/handoff.md) · [Câu hỏi](mua-hang-san-xuat/review/questions.md) · [Phụ thuộc](mua-hang-san-xuat/review/dependencies.md) · [Báo cáo kiểm](mua-hang-san-xuat/validation/report.md).
 
@@ -183,9 +183,9 @@ Giữ chờ E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8
 Baseline gồm 873 file cũ; schema 65 bảng giữ nguyên. Chỉ hai tổng quan này được append; kết quả hash và kiểm tài liệu/UI cuối ở báo cáo E11. Không backend, migration, gọi mô hình AI, commit hoặc xóa file.
 
 
-## Mốc hiện hành — gói BA nháp E12, 12/11/2026
+## Mốc hiện hành: gói BA nháp E12, 12/11/2026
 
-Theo yêu cầu người dùng, chỉ mở tài liệu E12 — Phản hồi và báo cáo cho FEAT-079–087: 7 P1 và 2 P2. Chỉ dẫn lịch sử “E12/E13 chưa mở” được thay riêng đối với E12; E13/FEAT-088 chưa mở. Các mục phía trên giữ nguyên byte và là lịch sử.
+Theo yêu cầu người dùng, chỉ mở tài liệu E12: Phản hồi và báo cáo cho FEAT-079–087: 7 P1 và 2 P2. Chỉ dẫn lịch sử “E12/E13 chưa mở” được thay riêng đối với E12; E13/FEAT-088 chưa mở. Các mục phía trên giữ nguyên byte và là lịch sử.
 
 [Preview E12](phan-hoi-bao-cao/preview.html) · [Bàn giao](phan-hoi-bao-cao/review/handoff.md) · [Câu hỏi](phan-hoi-bao-cao/review/questions.md) · [Phụ thuộc](phan-hoi-bao-cao/review/dependencies.md) · [Báo cáo kiểm](phan-hoi-bao-cao/validation/report.md).
 
@@ -204,9 +204,9 @@ Giữ chờ E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8
 Baseline chụp 945 file cũ trước viết E12; schema giữ 65 bảng. Chỉ hai tổng quan được append; kết quả bốn checker và ảnh desktop/mobile tại báo cáo E12. Không backend, migration, gọi mô hình AI, system prompt thật, chọn nhà cung cấp/model AI, commit hoặc xóa file.
 
 
-## Mốc hiện hành — gói BA nháp E13, 12/11/2026
+## Mốc hiện hành: gói BA nháp E13, 12/11/2026
 
-Theo yêu cầu người dùng, mở riêng tài liệu E13 — Chi phí và lợi nhuận cho FEAT-088, EXP / M10, P2, PER-07/PER-08. Chỉ dẫn lịch sử “E13 chưa mở” được thay đối với E13; mọi byte trước mục này giữ nguyên là lịch sử. Đây là epic cuối theo PRD; việc tiếp theo là review/chốt câu hỏi với stakeholder trên bằng chứng, không coi các release đã nghiệm thu.
+Theo yêu cầu người dùng, mở riêng tài liệu E13: Chi phí và lợi nhuận cho FEAT-088, EXP / M10, P2, PER-07/PER-08. Chỉ dẫn lịch sử “E13 chưa mở” được thay đối với E13; mọi byte trước mục này giữ nguyên là lịch sử. Đây là epic cuối theo PRD; việc tiếp theo là review/chốt câu hỏi với stakeholder trên bằng chứng, không coi các release đã nghiệm thu.
 
 [Preview E13](chi-phi-loi-nhuan/preview.html) · [Bàn giao](chi-phi-loi-nhuan/review/handoff.md) · [Câu hỏi](chi-phi-loi-nhuan/review/questions.md) · [Phụ thuộc](chi-phi-loi-nhuan/review/dependencies.md) · [Báo cáo kiểm](chi-phi-loi-nhuan/validation/report.md).
 
@@ -225,7 +225,7 @@ Giữ chờ E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8
 Baseline E13 chụp 1070 file cũ, lần đối chiếu ngay sau không phát hiện thay đổi. Bốn checker và ảnh desktop/mobile tại báo cáo E13; hai tổng quan chỉ append, schema giữ 65 bảng. Không sửa bằng chứng hash lịch sử E12. Không backend, migration, gọi mô hình AI, commit hoặc xóa file.
 
 
-## Mốc hiện hành — gói quyết định, 13/11/2026
+## Mốc hiện hành: gói quyết định, 13/11/2026
 
 Theo yêu cầu người dùng, chuẩn bị gói quyết định cho 13 epic và PRD; không mở epic hoặc viết thêm đặc tả. Các mốc phía trên giữ nguyên byte và là lịch sử.
 
@@ -240,7 +240,7 @@ Rà liên epic ghi 12 phát hiện cần xác nhận; không sửa nguồn. Cost
 Baseline gói chụp 1175 file cũ trong docs trước khi viết; chỉ hai tổng quan được append, schema giữ 65 bảng. Bốn sai lệch hash E12 do commit 71e2a4c đã được giải thích trong báo cáo, không khôi phục hoặc chụp lại baseline E12. Phiên sau chỉ xử lý từng DEC theo quyết định đã ký có nguồn, phân tích tác động bằng skill cr. Không backend, migration, gọi AI, commit hoặc xóa file.
 
 
-## Mốc hiện hành — rà tiếp gói quyết định, 13/11/2026
+## Mốc hiện hành: rà tiếp gói quyết định, 13/11/2026
 
 Độ phủ thiết kế tài liệu nháp giữ **75/78**. **0 câu được trả lời**, 0 feature được duyệt, 0 ca sản phẩm đã chạy; đây không phải BA được duyệt. 224 mã nguồn gồm 219 câu gốc và 5 câu mới; 196 nhóm DEC. Thẩm quyền còn thiếu và 4 gate release chưa rõ đã có BA-Q; không chọn thay stakeholder. 12 XC có trạng thái, phần phụ thuộc tiếp tục BLOCKED.
 

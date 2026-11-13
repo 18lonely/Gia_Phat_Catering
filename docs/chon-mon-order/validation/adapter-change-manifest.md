@@ -1,8 +1,8 @@
-# Manifest E6 adapter/validation — 11/11/2026
+# Manifest E6 adapter/validation ngày 11/11/2026
 
 So hash baseline trước phiên; không Git. Bao gồm preview artifact, không phải số tính năng mới.
 
-## File mới — 9
+## File mới: 9
 
 - `docs/chon-mon-order/api/adapter-contract-review.md`
 - `docs/chon-mon-order/api/route-validation-review.md`
@@ -14,7 +14,7 @@ So hash baseline trước phiên; không Git. Bao gồm preview artifact, không
 - `docs/chon-mon-order/validation/adapter-report.md`
 - `docs/chon-mon-order/validation/check-adapter-review.py`
 
-## File thay đổi — 11
+## File thay đổi: 11
 
 - `docs/chon-mon-order/api/api-spec.md`
 - `docs/chon-mon-order/gap-analysis.md`

@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-008-MD
-title: UC-EXP-008 — Tra cứu lợi nhuận theo khách
+title: "UC-EXP-008: Tra cứu lợi nhuận theo khách"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-008 — Tra cứu lợi nhuận theo khách
+# UC-EXP-008: Tra cứu lợi nhuận theo khách
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: doanh thu chưa đối soát hoặc không có căn cứ thành phần lợi nhuận; khi mở báo cáo khách thì ERR-EXP-422-02; BLOCKED, không gọi chênh thu trừ nguyên liệu là lợi nhuận.
-- **4d — biên**: khách có nguồn ở hai cơ sở; khi lọc theo từng cơ sở rồi tổng khách thì không trộn khóa; không cộng nguồn trùng; chỉ tổng khi từng phần đủ căn cứ.
+- **4c. Đặc thù**: doanh thu chưa đối soát hoặc không có căn cứ thành phần lợi nhuận; khi mở báo cáo khách thì ERR-EXP-422-02; BLOCKED, không gọi chênh thu trừ nguyên liệu là lợi nhuận.
+- **4d. Biên**: khách có nguồn ở hai cơ sở; khi lọc theo từng cơ sở rồi tổng khách thì không trộn khóa; không cộng nguồn trùng; chỉ tổng khi từng phần đủ căn cứ.
 
 ## Quy tắc và truy vết
 

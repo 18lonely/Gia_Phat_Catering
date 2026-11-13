@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-005-MD
-title: UC-EXP-005 — Soạn phiên bản phương pháp phân bổ
+title: "UC-EXP-005: Soạn phiên bản phương pháp phân bổ"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-005 — Soạn phiên bản phương pháp phân bổ
+# UC-EXP-005: Soạn phiên bản phương pháp phân bổ
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: bản phương pháp đã APPROVED; khi sửa nội dung trên cùng version thì ERR-EXP-409-01; cần phiên bản mới.
-- **4d — biên**: chưa chọn phương pháp nào; khi mở form mới thì không có driver mặc định, không tính tỷ trọng hoặc lợi nhuận.
+- **4c. Đặc thù**: bản phương pháp đã APPROVED; khi sửa nội dung trên cùng version thì ERR-EXP-409-01; cần phiên bản mới.
+- **4d. Biên**: chưa chọn phương pháp nào; khi mở form mới thì không có driver mặc định, không tính tỷ trọng hoặc lợi nhuận.
 
 ## Quy tắc và truy vết
 

@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-010-MD
-title: UC-EXP-010 — Lập điều chỉnh sau khóa có phê duyệt
+title: "UC-EXP-010: Lập điều chỉnh sau khóa có phê duyệt"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-010 — Lập điều chỉnh sau khóa có phê duyệt
+# UC-EXP-010: Lập điều chỉnh sau khóa có phê duyệt
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: đề nghị không có lý do hoặc người duyệt hợp lệ; khi yêu cầu ghi nhận điều chỉnh thì ERR-EXP-422-04; kỳ và số liệu gốc không đổi.
-- **4d — biên**: đề nghị đã được ghi nhận; khi gửi lại cùng khóa nghiệp vụ thì không ghi bút toán lần hai; trả receipt hoặc conflict theo contract đã duyệt.
+- **4c. Đặc thù**: đề nghị không có lý do hoặc người duyệt hợp lệ; khi yêu cầu ghi nhận điều chỉnh thì ERR-EXP-422-04; kỳ và số liệu gốc không đổi.
+- **4d. Biên**: đề nghị đã được ghi nhận; khi gửi lại cùng khóa nghiệp vụ thì không ghi bút toán lần hai; trả receipt hoặc conflict theo contract đã duyệt.
 
 ## Quy tắc và truy vết
 

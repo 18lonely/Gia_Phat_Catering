@@ -3,9 +3,9 @@ const fs=require('fs'),path=require('path'),crypto=require('crypto'),root=path.r
 const baseline=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline.json'),'utf8'));
 const text=`
 
-## Mốc hiện hành — gói BA nháp E12, 12/11/2026
+## Mốc hiện hành (gói BA nháp E12, 12/11/2026
 
-Theo yêu cầu người dùng, chỉ mở tài liệu E12 — Phản hồi và báo cáo cho FEAT-079–087: 7 P1 và 2 P2. Chỉ dẫn lịch sử “E12/E13 chưa mở” được thay riêng đối với E12; E13/FEAT-088 chưa mở. Các mục phía trên giữ nguyên byte và là lịch sử.
+Theo yêu cầu người dùng, chỉ mở tài liệu E12) Phản hồi và báo cáo cho FEAT-079–087: 7 P1 và 2 P2. Chỉ dẫn lịch sử “E12/E13 chưa mở” được thay riêng đối với E12; E13/FEAT-088 chưa mở. Các mục phía trên giữ nguyên byte và là lịch sử.
 
 [Preview E12](phan-hoi-bao-cao/preview.html) · [Bàn giao](phan-hoi-bao-cao/review/handoff.md) · [Câu hỏi](phan-hoi-bao-cao/review/questions.md) · [Phụ thuộc](phan-hoi-bao-cao/review/dependencies.md) · [Báo cáo kiểm](phan-hoi-bao-cao/validation/report.md).
 
@@ -24,5 +24,5 @@ Giữ chờ E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13/E7-Q01–08; E8
 Baseline chụp 945 file cũ trước viết E12; schema giữ 65 bảng. Chỉ hai tổng quan được append; kết quả bốn checker và ảnh desktop/mobile tại báo cáo E12. Không backend, migration, gọi mô hình AI, system prompt thật, chọn nhà cung cấp/model AI, commit hoặc xóa file.
 `;
 const drift=JSON.parse(fs.readFileSync(path.join(__dirname,'pre-append-drift.json'),'utf8'));
-for(const rel of ['docs/OVERVIEW.md','docs/project-dashboard.md']){const p=path.join(root,rel),bytes=fs.readFileSync(p),entry=drift.files.find(f=>f.path===rel);if(bytes.toString('utf8').includes('## Mốc hiện hành — gói BA nháp E12'))throw Error('E12 milestone already exists: '+rel);if(bytes.length!==entry.observedBytes||crypto.createHash('sha256').update(bytes).digest('hex')!==entry.observedSha256)throw Error('File changed again before append: '+rel);fs.appendFileSync(p,text,'utf8')}
+for(const rel of ['docs/OVERVIEW.md','docs/project-dashboard.md']){const p=path.join(root,rel),bytes=fs.readFileSync(p),entry=drift.files.find(f=>f.path===rel);if(bytes.toString('utf8').includes('## Mốc hiện hành: gói BA nháp E12'))throw Error('E12 milestone already exists: '+rel);if(bytes.length!==entry.observedBytes||crypto.createHash('sha256').update(bytes).digest('hex')!==entry.observedSha256)throw Error('File changed again before append: '+rel);fs.appendFileSync(p,text,'utf8')}
 console.log('Appended E12 milestone to two overviews; old bytes retained.');

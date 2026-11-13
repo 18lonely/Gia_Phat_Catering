@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Có khoản được duyệt để tính tương lai hoặc quyết định trả lại; không tính đồng thời khoản chung và riêng cùng tên.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-MEAL-004`.
-- **Điểm chạm:** SCR-COST-11 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-11, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

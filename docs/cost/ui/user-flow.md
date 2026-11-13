@@ -1,4 +1,4 @@
-# User flow — Epic E3 Cost
+# User flow: Epic E3 Cost
 
 Phiên bản: 0.1.2 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review nghiệp vụ.
 
@@ -61,7 +61,7 @@ Giá trị mặc định DAT_NHAT/KHONG/CANH_BAO, danh sách khoản khoán, VAT
 
 Mã trong cột Use case là hậu tố của UC-COST-xxx; danh mục liên kết nằm ở sơ đồ use case. Tên đường dẫn URL và endpoint chưa được chốt trong tài liệu này.
 
-## Luồng 1 — Nhập giá và khắc phục thiếu giá
+## Luồng 1: Nhập giá và khắc phục thiếu giá
 
 ```mermaid
 flowchart TD
@@ -88,7 +88,7 @@ Lưới và XLSX ghi tất cả hoặc không gì cả; kiểm tệp E2 tối đ
 
 Huỷ giá tương lai và đổi tham chiếu chỉ trong phạm vi đã cho phép. Giá đã hiệu lực không sửa tiền/ngày; E3-Q14 giữ mở cho đổi cờ tham chiếu. Huỷ tham chiếu tương lai cần chọn lại giá nào vẫn là FLOW-COST-Q01.
 
-## Luồng 2 — Bảng tính món đặc thù
+## Luồng 2: Bảng tính món đặc thù
 
 ```mermaid
 flowchart TD
@@ -103,12 +103,12 @@ flowchart TD
  V -->|"Duyệt"| Y["APPROVED + approvals + audit"]
  V -->|"Trả lại, đủ lý do"| N["REJECTED; lập bản mới để sửa"]
  N --> D
- Y --> Z["Kiểm hiệu lực khi dùng vào thực đơn — E3-Q16 cần chốt"]
+ Y --> Z["Kiểm hiệu lực khi dùng vào thực đơn: E3-Q16 cần chốt"]
 ```
 
 Không xem việc có bản APPROVED là đủ cho mọi cơ sở/ngày. Quy tắc mốc tuổi và dùng chéo cơ sở chưa chốt; bản chụp cũ không được sửa để biến thành mới.
 
-## Luồng 3 — Khoản khoán và tham số
+## Luồng 3: Khoản khoán và tham số
 
 ```mermaid
 flowchart TD
@@ -127,7 +127,7 @@ flowchart TD
 
 Hai luồng dùng quyền khác nhau: kế toán đề nghị khoản khoán không mặc nhiên được quản lý tham số SYS. Khoản riêng loại suất ưu tiên khoản chung cùng tên; không cộng hai lần. Không tự điền VAT khi chưa có giá trị được chốt.
 
-## Luồng 4 — Soạn, kiểm và duyệt thực đơn
+## Luồng 4: Soạn, kiểm và duyệt thực đơn
 
 ```mermaid
 flowchart TD
@@ -153,7 +153,7 @@ flowchart TD
 
 Đường thành công giả định đầu vào không thay đổi giữa kiểm và duyệt; FLOW-COST-Q06 là nhánh chưa chốt, không có nghĩa bỏ kiểm tại duyệt cuối. `CANH_BAO` không cấp ngoại lệ cho thiếu giá/VAT. Cổng MENU vẫn kiểm các điều kiện ngoài Cost. Màn 12 phân biệt **cost đang tính** và **snapshot lúc duyệt**, không ghi đè một số lên số kia.
 
-## Luồng 5 — Dự toán và xuất cho bếp
+## Luồng 5: Dự toán và xuất cho bếp
 
 ```mermaid
 flowchart TD
@@ -175,7 +175,7 @@ flowchart TD
 
 Lưu một ngày nguyên tử. Chính sách toàn tuần khi một ngày lỗi chờ FLOW-COST-Q07; không suy ra giao dịch toàn tuần từ mũi tên trên. Mỗi lần lập lại giữ bản cũ. Bếp trưởng chỉ xem lượng thuộc cơ sở mình; không cho tệp xuất giữ cột tiền ẩn hay sheet nội bộ chứa cost.
 
-## Luồng 6 — Giá đổi sau khi thực đơn được duyệt
+## Luồng 6: Giá đổi sau khi thực đơn được duyệt
 
 ```mermaid
 flowchart TD
@@ -194,7 +194,7 @@ flowchart TD
 
 Thông báo không phải lệnh thay thực đơn tự động. Người đọc cảnh báo không đương nhiên có quyền sửa/thu hồi MENU. Đóng tay không biến kết quả vượt thành đạt. Chặn chuyển bếp vẫn chờ E3-Q10, không nối thêm một bước tự chặn trong R3.
 
-## Luồng 7 — Dịch vụ ngân sách cho agent phía khách
+## Luồng 7: Dịch vụ ngân sách cho agent phía khách
 
 ```mermaid
 flowchart TD

@@ -384,7 +384,7 @@
     "decision": null,
     "approvedBy": null,
     "approvedAt": null,
-    "proposal": "Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.",
+    "proposal": "Ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.",
     "tradeoff": "Không trả Infinity/NaN, không biến delta% thành0 gây hiểu nhầm.",
     "updateTargets": "API Decimal nullable, bảng phân rã/so sánh, AC",
     "explicitBlockedTests": [

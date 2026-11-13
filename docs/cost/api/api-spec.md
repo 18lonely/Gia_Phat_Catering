@@ -1,4 +1,4 @@
-# Hợp đồng API — Epic E3 Cost
+# Hợp đồng API: Epic E3 Cost
 
 Phiên bản 0.2.0 · 11/11/2026 · Draft thiết kế, chưa triển khai backend.
 
@@ -33,7 +33,7 @@ Dùng `/v1` theo SRS nền tảng; không thêm `/api` chỉ vì template dùng 
 | Phân quyền | Thiếu quyền 403 ERR-AUTH-403-02; ngoài phạm vi hoặc không tồn tại 404 ERR-SYS-404-01; lấy phạm vi từ token/DB, không chỉ filter client |
 | Cache | Phản hồi cost/giá/tệp dùng Cache-Control: private, no-store; không cache công khai; log của budget-check không có con số cost |
 
-### Chống gửi lặp và đối soát — kế thừa và đề xuất cho FLOW-COST-Q02
+### Chống gửi lặp và đối soát: kế thừa và đề xuất cho FLOW-COST-Q02
 
 SRS nền tảng **đã chốt cơ chế thiết kế**: lệnh tạo có `Idempotency-Key`, trong 24 giờ cùng khoá trả kết quả cũ. Phần cần cụ thể hoá: dùng scope `(actorId,method,canonicalPath,key)` và hash body chuẩn hoá; lưu khoá và kết quả commit nguyên tử với nghiệp vụ (đề xuất cần Tech lead review).
 
@@ -45,9 +45,9 @@ SRS nền tảng **đã chốt cơ chế thiết kế**: lệnh tạo có `Idemp
 
 ## 3. Danh mục endpoint
 
-Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi trường. Dấu `—` ở điểm mở chỉ nghĩa không có câu hỏi bổ sung cho cấu trúc endpoint, không nghĩa toàn bộ nghiệp vụ đã duyệt.
+Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi trường. Điểm mở ghi “Không có” nghĩa là không có câu hỏi bổ sung cho cấu trúc endpoint, không nghĩa toàn bộ nghiệp vụ đã duyệt.
 
-### API-COST-001 — Liệt kê NCC
+### API-COST-001: Liệt kê NCC
 
 - **HTTP:** `GET /v1/cost/suppliers`.
 - **Quyền:** cost.supplier.read.
@@ -55,10 +55,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<Supplier> (khuôn mục 2, trừ binary).
 - **Hành vi:** Lọc tên/loại/trạng thái; phân trang nền tảng.
 - **Truy vết:** `FR-COST-SUP-003`; UC-COST hậu tố 001; màn Cost 01.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-002 — Tạo NCC
+### API-COST-002: Tạo NCC
 
 - **HTTP:** `POST /v1/cost/suppliers`.
 - **Quyền:** cost.supplier.write.
@@ -66,10 +66,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Supplier (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; chuẩn hoá tên, trùng trả ERR-COST-409-01; ACTIVE; audit.
 - **Truy vết:** `FR-COST-SUP-001`; UC-COST hậu tố 001; màn Cost 02.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-003 — Sửa hoặc ngừng NCC
+### API-COST-003: Sửa hoặc ngừng NCC
 
 - **HTTP:** `PATCH /v1/cost/suppliers/{id}`.
 - **Quyền:** cost.supplier.write.
@@ -80,7 +80,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q03: cách lưu cảnh báo nguyên liệu.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-004 — Bảng giá và lịch sử
+### API-COST-004: Bảng giá và lịch sử
 
 - **HTTP:** `GET /v1/cost/prices`.
 - **Quyền:** cost.price.read.
@@ -88,10 +88,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<Price> (khuôn mục 2, trừ binary).
 - **Hành vi:** kitchenId=GLOBAL chỉ giá chung; bỏ filter là danh sách trong quyền, không có nghĩa GLOBAL.
 - **Truy vết:** `FR-COST-PRC-006`; UC-COST hậu tố 002,005; màn Cost 03,07.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-005 — Nhập một giá
+### API-COST-005: Nhập một giá
 
 - **HTTP:** `POST /v1/cost/prices`.
 - **Quyền:** cost.price.write.
@@ -99,10 +99,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Price (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; >0 nguyên đồng; ngày trong khoảng; giá lệch cần confirmationToken; không có bước duyệt; một tham chiếu/phạm vi/ngày.
 - **Truy vết:** `FR-COST-PRC-001`, `FR-COST-PRC-010`, `FR-COST-PRC-011`; UC-COST hậu tố 002; màn Cost 04.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-006 — Lưu lưới giá
+### API-COST-006: Lưu lưới giá
 
 - **HTTP:** `POST /v1/cost/price-batches`.
 - **Quyền:** cost.price.write.
@@ -110,10 +110,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** PriceBatchResult (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; toàn lô nguyên tử, bỏ dòng không đổi; lỗi phải trả rowKey/path; không lưu một phần.
 - **Truy vết:** `FR-COST-PRC-004`, `FR-COST-PRC-010`, `FR-COST-PRC-011`; UC-COST hậu tố 003; màn Cost 03.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-007 — Kiểm giá lệch trước lưu
+### API-COST-007: Kiểm giá lệch trước lưu
 
 - **HTTP:** `POST /v1/cost/price-confirmations`.
 - **Quyền:** cost.price.write.
@@ -121,10 +121,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** PriceConfirmation (khuôn mục 2, trừ binary).
 - **Hành vi:** 200; kiểm payload nhưng chưa ghi giá; token đề xuất ràng buộc actor, hash dòng và giá nền, hết hạn 5 phút; giá nền đổi phải xác nhận lại.
 - **Truy vết:** `FR-COST-PRC-010`; UC-COST hậu tố 002,003; màn Cost 03,04.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-008 — Chọn tham chiếu
+### API-COST-008: Chọn tham chiếu
 
 - **HTTP:** `POST /v1/cost/prices/{id}/reference-selections`.
 - **Quyền:** cost.price.write.
@@ -135,7 +135,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** E3-Q14: giá đã hiệu lực chưa chốt quyền đổi cờ.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-009 — Huỷ giá tương lai
+### API-COST-009: Huỷ giá tương lai
 
 - **HTTP:** `POST /v1/cost/prices/{id}/cancellations`.
 - **Quyền:** cost.price.write.
@@ -146,7 +146,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q01 nếu huỷ dòng tham chiếu còn báo giá khác.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-010 — Tra giá theo ngày/cơ sở
+### API-COST-010: Tra giá theo ngày/cơ sở
 
 - **HTTP:** `GET /v1/cost/reference-prices`.
 - **Quyền:** cost.price.read.
@@ -154,10 +154,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Price (khuôn mục 2, trừ binary).
 - **Hành vi:** Ưu tiên giá riêng có ngày mới nhất ≤ date, rồi mới fallback GLOBAL; không có trả ERR-COST-404-02.
 - **Truy vết:** `FR-COST-PRC-003`; UC-COST hậu tố 002,006; màn Cost 07,08.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-011 — Theo dõi thiếu/cũ
+### API-COST-011: Theo dõi thiếu/cũ
 
 - **HTTP:** `GET /v1/cost/price-health`.
 - **Quyền:** cost.price.read.
@@ -165,10 +165,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<PriceHealth> (khuôn mục 2, trừ binary).
 - **Hành vi:** Chỉ nguyên liệu trong công thức ACTIVE, dùng hôm nay nghiệp vụ; API đọc không tự tạo cảnh báo; worker riêng.
 - **Truy vết:** `FR-COST-PRC-008`, `FR-COST-PRC-009`; UC-COST hậu tố 005; màn Cost 06.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-012 — Tải mẫu XLSX
+### API-COST-012: Tải mẫu XLSX
 
 - **HTTP:** `GET /v1/cost/price-import-template`.
 - **Quyền:** cost.price.write.
@@ -176,10 +176,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Tệp XLSX (khuôn mục 2, trừ binary).
 - **Hành vi:** 200 binary application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; mẫu giá nhập, không phải mẫu giá bán.
 - **Truy vết:** `FR-COST-PRC-005`; UC-COST hậu tố 004; màn Cost 05.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-013 — Kiểm file nhập
+### API-COST-013: Kiểm file nhập
 
 - **HTTP:** `POST /v1/cost/price-import-validations`.
 - **Quyền:** cost.price.write.
@@ -187,10 +187,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** ImportValidation (khuôn mục 2, trừ binary).
 - **Hành vi:** 201 bản kiểm tạm; ≤2.000 dòng; chưa ghi giá; lỗi 422 ERR-MENU-422-20, 413/415 theo khung MENU; không dùng upload chứng từ SYS để từ chối XLSX hợp lệ.
 - **Truy vết:** `FR-COST-PRC-005`; UC-COST hậu tố 004; màn Cost 05.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-014 — Thực hiện nhập
+### API-COST-014: Thực hiện nhập
 
 - **HTTP:** `POST /v1/cost/price-imports`.
 - **Quyền:** cost.price.write.
@@ -198,10 +198,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** ImportResult (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; kiểm lại dữ liệu và hash bản kiểm; hết lỗi mới ghi cả lô. Giá nhập không vào PENDING như giá bán E2.
 - **Truy vết:** `FR-COST-PRC-005`; UC-COST hậu tố 004; màn Cost 05.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-015 — Tính/phân rã món
+### API-COST-015: Tính/phân rã món
 
 - **HTTP:** `POST /v1/cost/dish-calculations`.
 - **Quyền:** cost.cost.read; chi tiết giá yêu cầu cost.price.read.
@@ -209,10 +209,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** DishCost (khuôn mục 2, trừ binary).
 - **Hành vi:** 200; chỉ tính, không lưu; thiếu giá ERR-COST-422-03; dùng cỡ/ngày/cơ sở; API danh mục MENU gọi nội bộ cho cột cost, không N+1 bắt buộc phía client.
 - **Truy vết:** `FR-COST-DISH-001`, `FR-COST-DISH-002`, `FR-COST-DISH-003`, `FR-COST-DISH-004`; UC-COST hậu tố 006; màn Cost 08.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-016 — So sánh công thức P1
+### API-COST-016: So sánh công thức P1
 
 - **HTTP:** `POST /v1/cost/recipe-comparisons`.
 - **Quyền:** cost.cost.read; chi tiết giá yêu cầu cost.price.read.
@@ -223,7 +223,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q04: null tỷ lệ là đề xuất.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-017 — Gợi ý nhóm cost P1
+### API-COST-017: Gợi ý nhóm cost P1
 
 - **HTTP:** `POST /v1/cost/dish-tier-suggestions`.
 - **Quyền:** cost.cost.read.
@@ -234,7 +234,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** E3-Q7: ngưỡng chưa chốt, có thể trả NOT_CONFIGURED.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-018 — Danh sách bảng tính
+### API-COST-018: Danh sách bảng tính
 
 - **HTTP:** `GET /v1/cost/sheets`.
 - **Quyền:** cost.cost.read hoặc cost.sheet.approve trong phạm vi.
@@ -242,10 +242,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<SheetSummary> (khuôn mục 2, trừ binary).
 - **Hành vi:** Danh sách không tự mở quyền đọc giá; chi tiết theo API kế tiếp.
 - **Truy vết:** `FR-COST-DISH-006`, `FR-COST-DISH-007`; UC-COST hậu tố 007; màn Cost 09,10.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-019 — Chi tiết bảng đã chụp
+### API-COST-019: Chi tiết bảng đã chụp
 
 - **HTTP:** `GET /v1/cost/sheets/{id}`.
 - **Quyền:** cost.cost.read và cost.price.read cho giá.
@@ -253,10 +253,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Sheet (khuôn mục 2, trừ binary).
 - **Hành vi:** 200 dữ liệu chụp, không tính lại từ giá mới; scope cả món và cơ sở.
 - **Truy vết:** `FR-COST-DISH-006`, `FR-COST-DISH-007`; UC-COST hậu tố 007; màn Cost 09.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-020 — Lập và gửi bảng đặc thù
+### API-COST-020: Lập và gửi bảng đặc thù
 
 - **HTTP:** `POST /v1/cost/sheets`.
 - **Quyền:** cost.sheet.write.
@@ -267,7 +267,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** E3-Q16 chỉ ảnh hưởng kiểm hiệu lực khi dùng bảng.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-021 — Duyệt/trả lại bảng tính
+### API-COST-021: Duyệt/trả lại bảng tính
 
 - **HTTP:** `POST /v1/cost/sheets/{id}/decisions`.
 - **Quyền:** cost.sheet.approve.
@@ -275,10 +275,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** SheetSummary (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; khoá trạng thái PENDING; người tạo/sửa không tự duyệt; REJECTED cần lý do; approvals + trạng thái cùng giao dịch.
 - **Truy vết:** `FR-COST-DISH-007`; UC-COST hậu tố 007; màn Cost 10.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-022 — Xem khoản khoán
+### API-COST-022: Xem khoản khoán
 
 - **HTTP:** `GET /v1/cost/allowances`.
 - **Quyền:** Đề xuất: cost.allowance.write hoặc cost.allowance.approve; chưa chốt.
@@ -289,7 +289,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q05: quyền đọc.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-023 — Đề nghị khoản khoán
+### API-COST-023: Đề nghị khoản khoán
 
 - **HTTP:** `POST /v1/cost/allowances`.
 - **Quyền:** cost.allowance.write.
@@ -297,10 +297,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Allowance (khuôn mục 2, trừ binary).
 - **Hành vi:** 201 PENDING, thêm phiên bản mới; tiền nguyên ≥0, ngày và lý do bắt buộc; không tự áp dụng.
 - **Truy vết:** `FR-COST-MEAL-004`; UC-COST hậu tố 008; màn Cost 11.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-024 — Duyệt khoản khoán
+### API-COST-024: Duyệt khoản khoán
 
 - **HTTP:** `POST /v1/cost/allowances/{id}/decisions`.
 - **Quyền:** cost.allowance.approve.
@@ -308,10 +308,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Allowance (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; không tự duyệt; check duy nhất tên chuẩn hoá/phạm vi/ngày của APPROVED; khoản riêng thắng chung.
 - **Truy vết:** `FR-COST-MEAL-004`; UC-COST hậu tố 008; màn Cost 11.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-025 — Kiểm ngân sách nội bộ
+### API-COST-025: Kiểm ngân sách nội bộ
 
 - **HTTP:** `POST /v1/cost/menu-calculations`.
 - **Quyền:** Quyền MENU xem nội dung; con số chỉ khi cost.cost.read.
@@ -319,10 +319,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** MenuCost hoặc MenuCostRedacted (khuôn mục 2, trừ binary).
 - **Hành vi:** 200 cho nội dung hợp lệ; kết quả theo ngày/cơ sở; clientRevision echo tránh hiển thị kết quả cũ. Thiếu giá/VAT trả 422 nếu không tính được tổng; phần hiển thị từng ngày có status. Không dành cho agent phía khách.
 - **Truy vết:** `FR-COST-MEAL-001`, `FR-COST-MEAL-002`, `FR-COST-MEAL-003`, `FR-COST-RUL-001`, `FR-COST-RUL-002`; UC-COST hậu tố 009; màn Cost 12.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-026 — Xem cost lúc duyệt
+### API-COST-026: Xem cost lúc duyệt
 
 - **HTTP:** `GET /v1/cost/menu-snapshots`.
 - **Quyền:** cost.cost.read.
@@ -330,10 +330,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** List<MenuSnapshot> (khuôn mục 2, trừ binary).
 - **Hành vi:** Chỉ bản APPROVED đã ghi bởi hook MENU, không có POST cho client tự tạo snapshot; lọc quyền từng cơ sở.
 - **Truy vết:** `FR-COST-MEAL-006`; UC-COST hậu tố 010; màn Cost 12.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-027 — Lập dự toán ngày
+### API-COST-027: Lập dự toán ngày
 
 - **HTTP:** `POST /v1/cost/estimates`.
 - **Quyền:** cost.estimate.write.
@@ -344,7 +344,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** E3-Q15 khi main_pick >1.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-028 — Lập tuần
+### API-COST-028: Lập tuần
 
 - **HTTP:** `POST /v1/cost/estimate-batches`.
 - **Quyền:** cost.estimate.write.
@@ -355,7 +355,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q07: transaction/status toàn tuần.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-029 — Lịch sử dự toán
+### API-COST-029: Lịch sử dự toán
 
 - **HTTP:** `GET /v1/cost/estimates`.
 - **Quyền:** cost.estimate.read hoặc cost.estimate.qty.
@@ -363,10 +363,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<EstimateSummary> (khuôn mục 2, trừ binary).
 - **Hành vi:** Chỉ metadata cho quyền qty: id, ngày, cơ sở, version, số suất, thời điểm/người lập; không tiền trong summary.
 - **Truy vết:** `FR-COST-EST-006`; UC-COST hậu tố 013; màn Cost 15.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-030 — Xem phiên bản
+### API-COST-030: Xem phiên bản
 
 - **HTTP:** `GET /v1/cost/estimates/{id}`.
 - **Quyền:** cost.estimate.read hoặc cost.estimate.qty.
@@ -374,10 +374,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** EstimateFull hoặc EstimateQuantity (khuôn mục 2, trừ binary).
 - **Hành vi:** Server chọn projection theo quyền; không nhận includePrices=true để mở quyền; snapshot không đổi.
 - **Truy vết:** `FR-COST-EST-004`, `FR-COST-EST-005`; UC-COST hậu tố 013; màn Cost 15.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-031 — Xuất dự toán P1
+### API-COST-031: Xuất dự toán P1
 
 - **HTTP:** `GET /v1/cost/estimates/{id}/export`.
 - **Quyền:** cost.estimate.read hoặc cost.estimate.qty.
@@ -385,10 +385,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Tệp theo quyền (khuôn mục 2, trừ binary).
 - **Hành vi:** 200 binary; kiểm lại quyền lúc tải; Cache-Control private,no-store; XLSX không chứa sheet/cột tiền ẩn ở bản qty; xuất không tính lại.
 - **Truy vết:** `FR-COST-EST-007`; UC-COST hậu tố 013; màn Cost 15.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-032 — Liệt kê cảnh báo thực đơn
+### API-COST-032: Liệt kê cảnh báo thực đơn
 
 - **HTTP:** `GET /v1/cost/alerts`.
 - **Quyền:** cost.alert.read.
@@ -396,10 +396,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** Page<CostAlert> (khuôn mục 2, trừ binary).
 - **Hành vi:** Một đầu mục/ngày; cost chỉ theo quyền. Không dùng bảng này cho cảnh báo nguyên liệu thiếu/cũ.
 - **Truy vết:** `FR-COST-ALR-002`, `FR-COST-ALR-003`; UC-COST hậu tố 014; màn Cost 16.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-033 — Chi tiết cảnh báo
+### API-COST-033: Chi tiết cảnh báo
 
 - **HTTP:** `GET /v1/cost/alerts/{id}`.
 - **Quyền:** cost.alert.read; con số cost cần cost.cost.read.
@@ -407,10 +407,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** CostAlertDetail (khuôn mục 2, trừ binary).
 - **Hành vi:** Có snapshot gốc và lần tính lại mới nhất từng cơ sở; không làm thay đổi cảnh báo.
 - **Truy vết:** `FR-COST-ALR-002`, `FR-COST-ALR-003`; UC-COST hậu tố 014; màn Cost 17.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-034 — Đóng tay cảnh báo
+### API-COST-034: Đóng tay cảnh báo
 
 - **HTTP:** `POST /v1/cost/alerts/{id}/closures`.
 - **Quyền:** cost.alert.read theo SRS hiện hành.
@@ -418,10 +418,10 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** CostAlert (khuôn mục 2, trừ binary).
 - **Hành vi:** 201; OPEN→CLOSED, audit lý do ≥10 ký tự; không thay cost thành DAT, không cho quyền sửa MENU.
 - **Truy vết:** `FR-COST-ALR-003`; UC-COST hậu tố 014; màn Cost 17.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-035 — Mô phỏng giá P2
+### API-COST-035: Mô phỏng giá P2
 
 - **HTTP:** `POST /v1/cost/price-simulations`.
 - **Quyền:** Đề xuất: cost.price.read + cost.cost.read.
@@ -432,7 +432,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q10: quyền/phạm vi ngày và trạng thái.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-036 — Dịch vụ ngân sách agent
+### API-COST-036: Dịch vụ ngân sách agent
 
 - **HTTP:** `POST /v1/cost/budget-checks`.
 - **Quyền:** Chỉ svc-agent-dinh-duong-vien; allowlist công cụ.
@@ -443,7 +443,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Điểm mở:** FLOW-COST-Q09 khi vừa vượt vừa thiếu dữ liệu.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
-### API-COST-037 — Đối soát lệnh ghi
+### API-COST-037: Đối soát lệnh ghi
 
 - **HTTP:** `GET /v1/cost/requests/{key}`.
 - **Quyền:** Đúng actor đã gửi; kiểm lại quyền endpoint gốc.
@@ -451,7 +451,7 @@ Path `{id}` có kiểu Id; quyền ghi không tự suy ra quyền đọc mọi t
 - **Response:** RequestStatus (khuôn mục 2, trừ binary).
 - **Hành vi:** Đề xuất Q02: trả PENDING/COMPLETED/FAILED và resourceRefs đã lọc quyền; không lộ kết quả actor khác; ngoài cửa sổ lưu trả 404, không chứng minh lệnh chưa chạy.
 - **Truy vết:** `FR-COST-PRC-001`, `FR-COST-PRC-004`, `FR-COST-EST-006`; UC-COST hậu tố 002,003,012; màn Cost 03,15.
-- **Điểm mở:** —.
+- **Điểm mở:** không có.
 - **Lỗi:** áp ma trận mục 6 theo điều kiện; 401/403/404/500/503 chung, lỗi validation đúng miền. Không trả lỗi không có điều kiện tương ứng.
 
 ## 4. Hợp đồng kiểu dữ liệu

@@ -18,10 +18,10 @@ errors=[]
 if set(changed)-allowed:errors.append('Protected changes: '+str(set(changed)-allowed))
 if set(new)-new_allowed:errors.append('Unexpected new files: '+str(set(new)-new_allowed))
 reg=(r/'docs/chon-mon-order/review/contract-gap-register.md').read_text(encoding='utf-8')
-proposal=reg.split('## Đề xuất trình người dùng duyệt — 12/11/2026')[1]
+proposal=reg.split('## Đề xuất trình người dùng duyệt ngày 12/11/2026')[1]
 for phrase in ['CHỜ DUYỆT, chưa có hiệu lực','14/14 OPEN','CG02','CG03','E6-EVID-002','Không ghi tất cả CG CLOSED','thời gian cache','retention','scope người đặt tổng một/nhiều công ty']:
  if phrase not in proposal:errors.append('Missing proposal guard: '+phrase)
-rows=[line for line in proposal.splitlines() if re.match(r'^\| CG[0-9]{2} —',line)]
+rows=[line for line in proposal.splitlines() if re.match(r'^\| CG[0-9]{2}:',line)]
 if len(rows)!=10:errors.append('Expected ten proposal rows')
 if 'Đề xuất trình người dùng duyệt' not in (r/'docs/chon-mon-order/preview.html').read_text(encoding='utf-8'):errors.append('Preview missing proposal')
 check=json.loads((v/'check-e6-result.json').read_text(encoding='utf-8'))

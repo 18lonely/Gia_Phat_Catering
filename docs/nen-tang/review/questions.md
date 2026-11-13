@@ -9,7 +9,7 @@ last_updated: 2026-11-13
 ---
 # Câu hỏi thiết kế nền tảng
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -29,4 +29,4 @@ Giữ N-01–04, O-04, O-06, Q-14, Q-18 tại SRS. Các câu mới đều CHỜ 
 
 NFR-PERF-003 nói ký tự đầu≤5 giây nhưng E5 dùng polling2 giây: đề xuất coi đây là phản hồi tiến trình đầu tiên, không phải token AI đầu tiên; cần xác nhận cùng AIO-Q01, không tự đổi NFR gốc.
 
-> Chờ E1-Q06 — XC-12. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-12](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E1-Q06: XC-12. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-12](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.

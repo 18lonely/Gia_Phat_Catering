@@ -1,4 +1,4 @@
-# Danh mục User Story & Backlog — Epic E2 · Thực đơn & Định lượng
+# Danh mục User Story & Backlog: Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
@@ -26,7 +26,7 @@
 
 ---
 
-## Lát R2.1 — Danh mục
+## Lát R2.1: Danh mục
 
 | Story ID | User Story | FR | UC | SP | Ưu tiên | Chặn bởi | Nghiệm thu chính |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :--- |
@@ -38,19 +38,19 @@
 | `US-MENU-06` | Là một **Dinh dưỡng viên**, tôi muốn **quản lý danh sách phương pháp chế biến và đánh dấu phương pháp nào là chiên, phương pháp nào ít dầu mỡ** để **hệ thống kiểm được quy tắc về món chiên và món Healthy**. | `FR-MENU-DISH-007` | `UC-MENU-002` | 2 | P0 | [H-1], [H-8] | Mỗi phương pháp có 2 cờ; tên không trùng |
 | `US-MENU-07` | Là một **Dinh dưỡng viên**, tôi muốn **tạo một món ở trạng thái nháp với đủ 12 thuộc tính và chất gây dị ứng** để **món có đủ thông tin cho bộ kiểm quy tắc**. | `FR-MENU-DISH-001` | `UC-MENU-002` | 5 | P0 | | Tên trùng bị từ chối; không gắn được Healthy với phương pháp không ít dầu mỡ; món gốc phải cùng vai trò; mỗi thuộc tính có chú giải và ví dụ trên màn hình |
 | `US-MENU-08` | Là một **Dinh dưỡng viên**, tôi muốn **khai các cặp món không được xếp cùng ngày** để **hệ thống chặn những tổ hợp như nem và nộm**. | `FR-MENU-DISH-008` | `UC-MENU-002` | 2 | P0 | [H-4] | Hai món của cặp phải khác nhau; cặp không trùng |
-| `US-MENU-09` | Là một **Nhân viên nội bộ**, tôi muốn **tìm và lọc món theo tên, vai trò, nhóm nguyên liệu, phương pháp, Healthy, trạng thái** để **xem nhanh danh mục món hiện có**. | `FR-MENU-DISH-006` | — | 2 | P0 | | Vai trò chỉ xem không thấy nút sửa; món có đề nghị chờ duyệt hiện nhãn |
+| `US-MENU-09` | Là một **Nhân viên nội bộ**, tôi muốn **tìm và lọc món theo tên, vai trò, nhóm nguyên liệu, phương pháp, Healthy, trạng thái** để **xem nhanh danh mục món hiện có**. | `FR-MENU-DISH-006` | Chưa có | 2 | P0 | | Vai trò chỉ xem không thấy nút sửa; món có đề nghị chờ duyệt hiện nhãn |
 | `US-MENU-10` | Là một **Dinh dưỡng viên**, tôi muốn **gửi duyệt một hoặc nhiều món nháp** để **món được đưa vào sử dụng sau khi có người thứ hai kiểm tra**. | `FR-MENU-DISH-003` | `UC-MENU-002` | 2 | P0 | | Bị chặn nếu món chưa có công thức chờ duyệt hoặc đang hiệu lực; người duyệt nhận thông báo |
 | `US-MENU-11` | Là một **Người duyệt**, tôi muốn **duyệt hoặc trả lại món, từng món hoặc nhiều món một lần** để **chỉ những món gắn thuộc tính đúng mới vào được thực đơn**. | `FR-MENU-DISH-004` | `UC-MENU-010` | 3 | P0 | [O-06] | Không tự duyệt món mình tạo hoặc sửa; trả lại bắt buộc lý do; không duyệt được món chưa có công thức đã duyệt, trừ khi duyệt cùng lúc |
 | `US-MENU-12` | Là một **Dinh dưỡng viên**, tôi muốn **tải mẫu bảng tính và kiểm tra tệp đã điền trước khi nhập** để **biết chính xác dòng nào sai mà chưa ghi gì vào hệ thống**. | `FR-MENU-IMP-001`, `002` | `UC-MENU-012` | 5 | P0 | | Lỗi báo theo số dòng và cột; tệp sai mẫu hoặc quá 2.000 dòng bị từ chối; kiểm quá 5 giây thì chạy nền. Phạm vi lát này: nguyên liệu và món |
 | `US-MENU-13` | Là một **Dinh dưỡng viên**, tôi muốn **nhập toàn bộ tệp đã kiểm sạch trong một lần** để **đưa dữ liệu gốc vào hệ thống mà không gõ tay từng dòng**. | `FR-MENU-IMP-003` | `UC-MENU-012` | 3 | P0 | [E2-Q10] | Tất cả hoặc không gì cả; món vào trạng thái nháp, không tự hiệu lực |
 
-## Lát R2.2 — Công thức, giá bán, loại suất
+## Lát R2.2: Công thức, giá bán, loại suất
 
 | Story ID | User Story | FR | UC | SP | Ưu tiên | Chặn bởi | Nghiệm thu chính |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :--- |
 | `US-MENU-14` | Là một **Dinh dưỡng viên**, tôi muốn **lập công thức nháp cho một món với định lượng sống tối thiểu – chuẩn – tối đa của từng nguyên liệu** để **ghi lại định mức theo bảng chuẩn của Gia Phát**. | `FR-MENU-RCP-001`, `002` | `UC-MENU-004` | 5 | P0 | [O-02], [E2-Q5] | Phải có ≥ 1 nguyên liệu chính, không lặp nguyên liệu; tối thiểu ≤ chuẩn ≤ tối đa; món chính và món phụ phải có nguyên liệu chính thuộc nhóm của món; đơn vị tự lấy theo nguyên liệu |
 | `US-MENU-15` | Là một **Dinh dưỡng viên**, tôi muốn **tạo nguyên liệu còn thiếu ngay trong lúc soạn công thức** để **không mất các dòng đã nhập**. | `FR-MENU-ING-001` | `UC-MENU-004` | 2 | P0 | | Nguyên liệu mới xuất hiện ngay trong công thức đang soạn; các dòng khác giữ nguyên |
-| `US-MENU-16` | Là một **Người duyệt**, tôi muốn **duyệt hoặc trả lại công thức** để **không ai tự quyết định lượng — thứ quyết định cost — của chính mình**. | `FR-MENU-RCP-003` | `UC-MENU-010` | 5 | P0 | [O-06] | Người tạo không tự duyệt; công thức đã gửi duyệt không sửa được; khi duyệt, phiên bản cũ chuyển "đã thay thế" đúng vào ngày hiệu lực của phiên bản mới |
+| `US-MENU-16` | Là một **Người duyệt**, tôi muốn **duyệt hoặc trả lại công thức** để **không ai tự quyết định lượng (thứ quyết định cost) của chính mình**. | `FR-MENU-RCP-003` | `UC-MENU-010` | 5 | P0 | [O-06] | Người tạo không tự duyệt; công thức đã gửi duyệt không sửa được; khi duyệt, phiên bản cũ chuyển "đã thay thế" đúng vào ngày hiệu lực của phiên bản mới |
 | `US-MENU-17` | Là một **Dinh dưỡng viên**, tôi muốn **tạo phiên bản mới từ công thức đang hiệu lực, có lý do và ngày hiệu lực** để **điều chỉnh định lượng mà không làm thay đổi các thực đơn đã dùng phiên bản cũ**. | `FR-MENU-RCP-004` | `UC-MENU-004` | 3 | P0 | | Phiên bản mới là bản nháp sao chép các dòng; phiên bản cũ vẫn hiệu lực đến khi bản mới được duyệt và đến ngày hiệu lực |
 | `US-MENU-18` | Là một **Dinh dưỡng viên**, tôi muốn **hệ thống luôn dùng đúng công thức có hiệu lực vào ngày phục vụ** để **cost và dinh dưỡng của một ngày không bị tính bằng định lượng của ngày khác**. | `FR-MENU-RCP-005` | `UC-MENU-007` | 2 | P0 | | Với mỗi món và ngày có đúng 1 công thức hiệu lực; không có thì báo lỗi rõ tên món và ngày |
 | `US-MENU-19` | Là một **Người duyệt**, tôi muốn **xem bảng so sánh giữa phiên bản công thức đề nghị và phiên bản đang hiệu lực** để **thấy ngay định lượng nào đổi**. | `FR-MENU-RCP-006` | `UC-MENU-004`, `010` | 3 | P1 | | Hiện dòng thêm, bớt, đổi định lượng |
@@ -66,7 +66,7 @@
 | `US-MENU-29` | Là một **Dinh dưỡng viên**, tôi muốn **gắn ảnh cho món** để **khách thấy hình món khi chọn**. | `FR-MENU-DISH-009` | `UC-MENU-002` | 2 | P1 | | JPG, PNG, WEBP; tối đa 10 MB |
 | `US-MENU-30` | Là một **Dinh dưỡng viên**, tôi muốn **nhập công thức và giá bán từ bảng tính** để **đưa định lượng và giá của các món ban đầu vào một lần**. | `FR-MENU-IMP-001` → `003` | `UC-MENU-012` | 5 | P0 | [O-02] | Dòng tham chiếu món hoặc nguyên liệu chưa có bị báo lỗi; công thức vào trạng thái nháp, giá vào trạng thái chờ duyệt |
 
-## Lát R2.3 — Thực đơn và bộ kiểm quy tắc
+## Lát R2.3: Thực đơn và bộ kiểm quy tắc
 
 | Story ID | User Story | FR | UC | SP | Ưu tiên | Chặn bởi | Nghiệm thu chính |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :--- |
@@ -84,7 +84,7 @@
 | `US-MENU-42` | Là một **Nhân viên nội bộ**, tôi muốn **xem danh mục quy tắc với loại, điểm phạt, phạm vi và con số hiện hành** để **biết thực đơn đang được kiểm theo tiêu chuẩn nào**. | `FR-MENU-RUL-005` | `UC-MENU-013` | 2 | P0 | DL-01 | Danh mục nạp từ bảng quy tắc đã duyệt; hiện câu gốc trong file quy chuẩn |
 | `US-MENU-43` | Là một **Dinh dưỡng viên**, tôi muốn **đề nghị bật/tắt, đổi loại, đổi điểm phạt hoặc con số của một quy tắc, kèm lý do** để **điều chỉnh tiêu chuẩn khi thực tế thay đổi mà không cần sửa phần mềm**. | `FR-MENU-RUL-006` | `UC-MENU-013` | 5 | P0 | [E2-Q11] | Có hiệu lực sau khi duyệt; thực đơn nháp dùng quy tắc mới từ lần kiểm kế tiếp; thực đơn từ chờ duyệt trở đi giữ kết quả cũ; không thêm được quy tắc mới qua giao diện |
 
-## Lát R2.4 — Duyệt, công bố và phần P1
+## Lát R2.4: Duyệt, công bố và phần P1
 
 | Story ID | User Story | FR | UC | SP | Ưu tiên | Chặn bởi | Nghiệm thu chính |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- | :--- |
@@ -111,7 +111,7 @@
 | R2.4 Duyệt, công bố, P1 | 10 | 6 | 4 | 30 |
 | **Cộng** | **53** | **44** | **9** | **160** |
 
-Yêu cầu chức năng chưa thành story: `FR-MENU-RCP-007` (nhiều cỡ định lượng) — chờ [O-02] quyết có làm hay không.
+Yêu cầu chức năng chưa thành story: `FR-MENU-RCP-007` (nhiều cỡ định lượng): chờ [O-02] quyết có làm hay không.
 
 ## Kiểm INVEST
 
@@ -130,11 +130,11 @@ Giữ nguyên trạng thái mở. Xếp theo mức độ ảnh hưởng.
 
 | Điểm mở | Story bị chặn | Hệ quả nếu chưa có câu trả lời |
 | :--- | :--- | :--- |
-| DL-01 — duyệt 43 quy tắc | `36`, `37`, `38`, `42` | Không có con số để viết ca kiểm thử; lát R2.3 không nghiệm thu được |
-| [O-06] — ai duyệt | `11`, `16`, `21`, `27`, `45`, `46`, `50` | Dựng được chức năng nhưng không cấu hình được người dùng thật; `50` có thể phải bỏ |
-| [E2-Q1] — cách kiểm ngưỡng giá | `20`, `39` | Chưa rõ giá từng món dùng để làm gì; `39` có thể đổi hẳn |
-| [O-02] — một hay nhiều cỡ định lượng | `14`, `30` | Mẫu bảng tính và màn hình soạn công thức có thêm cột hay không |
-| [E2-Q5] — bảng định lượng chuẩn | `14` | Có thêm một bảng chuẩn và một bước kiểm khi lưu công thức hay không |
+| DL-01: duyệt 43 quy tắc | `36`, `37`, `38`, `42` | Không có con số để viết ca kiểm thử; lát R2.3 không nghiệm thu được |
+| [O-06]: ai duyệt | `11`, `16`, `21`, `27`, `45`, `46`, `50` | Dựng được chức năng nhưng không cấu hình được người dùng thật; `50` có thể phải bỏ |
+| [E2-Q1]: cách kiểm ngưỡng giá | `20`, `39` | Chưa rõ giá từng món dùng để làm gì; `39` có thể đổi hẳn |
+| [O-02]: một hay nhiều cỡ định lượng | `14`, `30` | Mẫu bảng tính và màn hình soạn công thức có thêm cột hay không |
+| [E2-Q5]: bảng định lượng chuẩn | `14` | Có thêm một bảng chuẩn và một bước kiểm khi lưu công thức hay không |
 | [H-1], [H-3], [H-4], [H-8] | `04`, `06`, `08` | Chức năng làm được; chỉ thiếu dữ liệu khởi tạo |
 | [E2-Q2], [H-2] | `37` | Quy tắc tuần có đọc dữ liệu tuần trước hay không |
 | [E2-Q3], [E2-Q4] | `31` | Số cột của lưới; một hay nhiều thực đơn mỗi loại suất |

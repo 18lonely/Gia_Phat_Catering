@@ -9,7 +9,7 @@ last_updated: 2026-11-11
 ---
 # Truy vết API MENU
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -50,7 +50,7 @@ last_updated: 2026-11-11
 | FR-MENU-MNU-001 | API-MENU-035 | Draft; P0 |
 | FR-MENU-MNU-002 | API-MENU-036 | Draft; P0 |
 | FR-MENU-MNU-003 | API-MENU-037 | Draft; P0 |
-| FR-MENU-MNU-004 | Port/guard — xem API mục port | Draft; P0 |
+| FR-MENU-MNU-004 | Port/guard: xem API mục port | Draft; P0 |
 | FR-MENU-MNU-005 | API-MENU-038 | Draft; P1 |
 | FR-MENU-MNU-006 | API-MENU-039 | Draft; P1 |
 | FR-MENU-MNU-007 | API-MENU-040, API-MENU-057 | Draft; P0 |
@@ -62,13 +62,13 @@ last_updated: 2026-11-11
 | FR-MENU-RUL-004 | API-MENU-046 | Draft; P0 |
 | FR-MENU-RUL-005 | API-MENU-047 | Draft; P0 |
 | FR-MENU-RUL-006 | API-MENU-048 | Draft; P0 |
-| FR-MENU-RUL-007 | Port/guard — xem API mục port | Draft; P1 |
+| FR-MENU-RUL-007 | Port/guard: xem API mục port | Draft; P1 |
 | FR-MENU-APV-001 | API-MENU-049 | Draft; P0 |
 | FR-MENU-APV-002 | API-MENU-050 | Draft; P0 |
 | FR-MENU-APV-003 | API-MENU-051 | Draft; P0 |
 | FR-MENU-APV-004 | API-MENU-052 | Draft; P0 |
 | FR-MENU-APV-005 | API-MENU-053 | Draft; P0 |
-| FR-MENU-APV-006 | Port/guard — xem API mục port | Draft; P0 |
+| FR-MENU-APV-006 | Port/guard: xem API mục port | Draft; P0 |
 | FR-MENU-IMP-001 | API-MENU-054 | Draft; P0 |
 | FR-MENU-IMP-002 | API-MENU-055 | Draft; P0 |
 | FR-MENU-IMP-003 | API-MENU-056 | Draft; P0 |

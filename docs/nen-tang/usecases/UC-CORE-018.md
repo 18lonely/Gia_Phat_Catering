@@ -1,15 +1,15 @@
 ---
 id: DOC-NEN-TANG-USECASES-UC-CORE-018
-title: UC-CORE-018 — Huỷ thay cho xoá
+title: "UC-CORE-018: Huỷ thay cho xoá"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# UC-CORE-018 — Huỷ thay cho xoá
+# UC-CORE-018: Huỷ thay cho xoá
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

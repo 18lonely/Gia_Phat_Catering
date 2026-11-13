@@ -1,15 +1,15 @@
 ---
 id: DOC-CHON-MON-ORDER-SRS-ERD
-title: ERD E6 — kế thừa và delta cần thiết
+title: "ERD E6: kế thừa và delta cần thiết"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# ERD E6 — kế thừa và delta cần thiết
+# ERD E6: kế thừa và delta cần thiết
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ Nguồn cột/PK/FK/enum hiện hữu: [DBML tổng](../../nen-tang/srs/schema.d
 | Người/lựa chọn | eaters,meal_selections,selection_counters | Unique(eater,date,shift); counter cùng transaction; user_id unique chưa giải quyết guest duplicate ORD-Q01 |
 | Order | orders,order_dish_lines | Unique(point,date,shift); tổngMAIN=T chỉ với1MAIN/suất; current version không đủ lịch sử đổi sau khóa |
 
-## Delta đề xuất — chưa merge schema
+## Delta đề xuất: chưa merge schema
 
 - `order_revisions`: PK id; order_id FK,revision_no int unique(order_id,revision_no),base_revision_id?,menu/quota/price snapshot JSON,deadline snapshot,total_servings int>=0,status,created_at/by,reason. Bất biến khi khóa.
 - `order_revision_lines`: PK id; revision_id FK,dish_id FK,recipe_id FK,portion_code,role,selected/default/coordinator int>=0; unique(revision_id,dish_id,recipe_id,portion_code). Không suy tổng món phụ bằng tổng suấtMAIN.

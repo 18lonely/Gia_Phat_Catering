@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-011-MD
-title: UC-FIN-011 — Đề nghị mở lại kỳ
+title: "UC-FIN-011: Đề nghị mở lại kỳ"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-011 — Đề nghị mở lại kỳ
+# UC-FIN-011: Đề nghị mở lại kỳ
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán phát hiện nội dung cần sửa trong kỳ đối soát đã khóa.
 
-Tiền điều kiện — nghiệp vụ: Kỳ đang LOCKED; kế toán có quyền lập đề nghị và bằng chứng cho nội dung cần sửa.
-Tiền điều kiện — gate còn mở: E7-Q05 về mở lại/tái đối soát; O-06 về ủy quyền giữ mở, không tự cấp người duyệt thay.
+Tiền điều kiện (nghiệp vụ): Kỳ đang LOCKED; kế toán có quyền lập đề nghị và bằng chứng cho nội dung cần sửa.
+Tiền điều kiện (gate còn mở): E7-Q05 về mở lại/tái đối soát; O-06 về ủy quyền giữ mở, không tự cấp người duyệt thay.
 
 Luồng chính:
 1. Kế toán chọn periodId tại UI-E7-07 và xem snapshot khóa cùng version kỳ.

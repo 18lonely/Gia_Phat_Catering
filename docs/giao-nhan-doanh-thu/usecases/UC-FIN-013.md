@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-013-MD
-title: UC-FIN-013 — Chuẩn bị và yêu cầu xuất MISA
+title: "UC-FIN-013: Chuẩn bị và yêu cầu xuất MISA"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-013 — Chuẩn bị và yêu cầu xuất MISA
+# UC-FIN-013: Chuẩn bị và yêu cầu xuất MISA
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán cần chuyển số liệu kỳ đối soát sang MISA theo mẫu nhập đã được xác nhận.
 
-Tiền điều kiện — nghiệp vụ: Có kỳ/revision để xuất và quyền xuất của kế toán; mẫu nhập cùng mapping phải được xác nhận trước khi có file.
-Tiền điều kiện — gate còn mở: E7-Q07/08 về mẫu, mapping và hợp đồng xuất; E7-Q05 về kỳ được phép xuất. Hiện chưa có căn cứ tạo cột hoặc thử nhập thực tế.
+Tiền điều kiện (nghiệp vụ): Có kỳ/revision để xuất và quyền xuất của kế toán; mẫu nhập cùng mapping phải được xác nhận trước khi có file.
+Tiền điều kiện (gate còn mở): E7-Q07/08 về mẫu, mapping và hợp đồng xuất; E7-Q05 về kỳ được phép xuất. Hiện chưa có căn cứ tạo cột hoặc thử nhập thực tế.
 
 Luồng chính:
 1. Kế toán chọn periodId và revision tại UI-E7-08 để rà nguồn kỳ.

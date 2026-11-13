@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-USECASES-UC-CRM-010-MD
-title: UC-CRM-010 — Soạn phiên bản báo giá
+title: "UC-CRM-010: Soạn phiên bản báo giá"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-CRM-010 — Soạn phiên bản báo giá
+# UC-CRM-010: Soạn phiên bản báo giá
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 
@@ -20,7 +20,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 ## Phạm vi và tác nhân
 
-Phạm vi: E10, FEAT-072. Cấp độ: Sea level — mục tiêu người dùng.
+Phạm vi: E10, FEAT-072. Cấp độ: Sea level (mục tiêu người dùng).
 
 Tác nhân chính: Dinh dưỡng viên kiêm chăm sóc khách hàng. Tác nhân hỗ trợ: dịch vụ xác thực/audit E1; chủ dữ liệu nguồn trong bảng phụ thuộc. Bên quan tâm: nhân viên cần đàm phán giá mà vẫn biết khách đã nhận phiên bản nào; khách cần dữ liệu đúng phạm vi; kế toán cần lịch sử giá và giao dịch không bị thay đổi ngoài thẩm quyền.
 

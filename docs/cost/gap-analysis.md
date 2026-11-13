@@ -15,7 +15,7 @@ Phạm vi: SRS v0.1.4, API v0.1.0, use case/user flow, wireframe v0.1.0 và 108 
 | GAP-COST-07 | NFR-COST-002 yêu cầu bảng tính kế toán; workspace mới có fixture giả | Cao: chưa có oracle thực tế độc lập | Đã tạo [phiếu cung cấp](review/accountant-input.md); vẫn chờ dữ liệu có nguồn và xác nhận |
 | GAP-COST-08 | [108 test case](test/test-cases.md): có RBAC/redaction/schema tests, chưa có bộ ca chuyên biệt SQL injection/stored XSS qua tên/ghi chú và tệp xuất | Trung bình: coverage chưa bao trùm mọi kiểu đầu vào độc hại | QA bổ sung sau thiết kế backend/UI: chuỗi SQL không thay logic truy vấn; HTML/JS hiển thị như dữ liệu, không thực thi; không cấm toàn bộ dấu tiếng Việt/ký tự đặc biệt |
 | GAP-COST-09 | Wireframe chỉ giữ dữ liệu bộ nhớ, import/export giả; test tài liệu không gọi dịch vụ | Cao nếu nhầm là đã triển khai | Đã ghi giới hạn trong [hướng dẫn](html-wireframe/README.md); cần môi trường thật để chạy chức năng và lỗi mạng/timeout |
-| GAP-COST-10 | Q04 mẫu số0; Q09 vừa vượt vừa không tính được | Trung bình/Cao: oracle số/trạng thái chưa chốt | Đề xuất — cho tỷ lệ không áp dụng; thảo luận ưu tiên KHONG_XAC_DINH; chưa ghi thành BR đã duyệt |
+| GAP-COST-10 | Q04 mẫu số0; Q09 vừa vượt vừa không tính được | Trung bình/Cao: oracle số/trạng thái chưa chốt | Đề xuất: cho tỷ lệ không áp dụng; thảo luận ưu tiên KHONG_XAC_DINH; chưa ghi thành BR đã duyệt |
 
 ## Đã chuẩn bị trong đợt này
 

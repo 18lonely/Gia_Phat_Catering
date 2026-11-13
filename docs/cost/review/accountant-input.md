@@ -27,50 +27,50 @@ Mục đích: chuẩn bị đầu vào cho NFR-COST-002 và TC-COST-010-06. Cầ
 
 | Mẫu | Món/ngày thực tế và cơ sở | File nguồn | Expected tính tay | Người xác nhận | Tình trạng |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| REAL-DISH-01 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-02 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-03 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-04 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-05 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-06 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-07 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-08 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-09 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DISH-10 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-01 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-02 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-03 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-04 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-05 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-06 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-07 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-08 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-09 | Chưa cung cấp | — | — | — | Chưa nhận |
-| REAL-DAY-10 | Chưa cung cấp | — | — | — | Chưa nhận |
+| REAL-DISH-01 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-02 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-03 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-04 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-05 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-06 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-07 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-08 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-09 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DISH-10 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-01 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-02 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-03 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-04 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-05 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-06 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-07 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-08 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-09 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
+| REAL-DAY-10 | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa nhận |
 
-## Phiếu chi tiết mỗi món — sao chép cho 10 mẫu
+## Phiếu chi tiết mỗi món: sao chép cho 10 mẫu
 
 Mã mẫu: …; mã/tên món: …; cỡ định lượng: …; mã/phiên bản công thức: …; ngày hiệu lực công thức: …; ngày tính: …; cơ sở: …; trạng thái thực đơn nếu công thức đã gắn: …
 
 | Nguyên liệu | Chính/phụ | Định lượng chuẩn | Đơn vị dùng | Đơn vị mua | Hệ số mua→dùng | Hao hụt% | Tính cost? | NCC | Giá/đơn vị mua | Ngày hiệu lực giá | Riêng/chung | Nguồn |
 | :--- | :--- | ---: | :--- | :--- | ---: | ---: | :--- | :--- | ---: | :--- | :--- | :--- |
-| Chưa cung cấp | — | — | — | — | — | — | — | — | — | — | — | — |
+| Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có | Chưa có |
 
 Expected từng dòng trước làm tròn: …; tổng cost chính xác: …; số hiển thị sau làm tròn: …; cách tính tay/file ô nguồn: …; người kiểm: …
 
 Không điền giá 0 cho nguyên liệu thiếu giá. Tách rõ nguyên liệu không tính cost và nguyên liệu cần tính nhưng chưa có giá. Với hao hụt, ghi rõ đã áp vào định lượng hay chưa để tránh áp hai lần.
 
-## Phiếu chi tiết mỗi ngày — sao chép cho 10 mẫu
+## Phiếu chi tiết mỗi ngày: sao chép cho 10 mẫu
 
 Mã mẫu: …; ngày phục vụ/cơ sở: …; loại suất/giá: …; VAT: …; K: …; phương pháp chính: …; món mặc định: …; ngưỡng có hiệu lực: …
 
 | Vai trò món/khoản | Mã món hoặc tên khoản | Công thức/phiên bản | Cost chưa làm tròn | Nguồn cost | Phạm vi khoản khoán/ngày hiệu lực |
 | :--- | :--- | :--- | ---: | :--- | :--- |
-| Món chính (liệt kê tất cả, kể cả Healthy) | Chưa cung cấp | — | — | — | — |
-| Món phụ | Chưa cung cấp | — | — | — | — |
-| Rau | Chưa cung cấp | — | — | — | — |
-| Canh | Chưa cung cấp | — | — | — | — |
-| Khoản khoán (mỗi khoản một dòng) | Chưa cung cấp | — | — | — | — |
+| Món chính (liệt kê tất cả, kể cả Healthy) | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có |
+| Món phụ | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có |
+| Rau | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có |
+| Canh | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có |
+| Khoản khoán (mỗi khoản một dòng) | Chưa cung cấp | Chưa có | Chưa có | Chưa có | Chưa có |
 
 Expected: phần chính A=…; phụ/rau/canh B=…; khoán E=…; cost suất=…; doanh thu chưa VAT=…; cost% chưa làm tròn=…; cost% sau làm tròn=…; đạt/vượt=…; dư/vượt tiền=…
 
@@ -86,7 +86,7 @@ Theo NFR-COST-002: lệch cost món không quá 1đ và cost% không quá 0,01 �
 
 Theo xác nhận mới, cost nguyên liệu gồm VAT phải trả. Với mỗi giá, bổ sung giá báo, đã/chưa gồm VAT, VAT phải trả và giá cuối; không để giá trướcVAT đi vào cột giá cost. Với khách, tách cờ yêu cầu hóa đơn khỏi cách ghi giá/VAT. Nếu có chiết khấu, ghi khoản riêng liên kết đơn, không trừ tiền phải trả; bổ sung điều kiện%, tiền/suất và trạng thái xử lý. Xem [nghiệp vụ kế toán](../accounting/business-rules.md).
 
-## Câu hỏi dữ liệu thực tế — CHỜ CUNG CẤP
+## Câu hỏi dữ liệu thực tế: CHỜ CUNG CẤP
 
 Người dùng xác nhận trong phiên11/11/2026: **chưa có dữ liệu, đặt câu hỏi trong tài liệu**. Đã kiểm workspace D:/BA, chưa có bảng giá/chứng từ/bảng tính10 món10 ngày thực tế. Không thay thế bằng dữ liệu giả để đóng NFR-COST-002.
 

@@ -69,7 +69,7 @@ const r7=roadmap.split('\n').find(x=>x.startsWith('| '+String.fromCharCode(96)+'
 const gnext=roadmap.split('\n').find(x=>x.startsWith('**Cổng G-Next**'));
 
 
-md('epic-spec.md','E7 — Giao nhận & doanh thu',[
+md('epic-spec.md','E7: Giao nhận & doanh thu',[
 '## Mục tiêu và phạm vi',
 'Khép vòng từ order đến đối soát theo [PRD](../gia-phat/01-prd.md) và [roadmap](../gia-phat/02-roadmap.md). Chỉ dẫn người dùng 12/11/2026 mở tài liệu E7 thay lệnh cũ không mở E7–E13 **chỉ đối với E7**. E8–E13 chưa mở. E6 dừng chờ CG01/08/05/06, không đặc tả tiếp producer hoặc giả contract freeze.',
 table(['Feature','Tên','P0 theo PRD','P1'],features.map(f=>['FEAT-'+f[0],f[1],f[2],'Không có trong PRD; không tự thêm'])),
@@ -120,13 +120,13 @@ const br=[
 ['BR-E7-010','KHI thiếu nguồn/policy THÌ ghi BLOCKED kèm mã, không dùng synthetic thay evidence thật','Chỉ dẫn 12/11/2026'],
 ['BR-E7-011','KHI xuất MISA THÌ dùng mẫu được xác nhận/giữ revision nguồn; thiếu mẫu không tự tạo cột','FEAT-053/R7; E7-Q07']
 ];
-md('srs/spec.md','SRS E7 — Giao nhận, doanh thu và đối soát',[
+md('srs/spec.md','SRS E7: Giao nhận, doanh thu và đối soát',[
 '## 1. Giới thiệu',
 '[PRD](../../gia-phat/01-prd.md) · [Epic](../epic-spec.md) · [Nền tảng](../../nen-tang/srs/spec.md) · [Kế toán](../../cost/accounting/business-rules.md).\n\nPhiếu ghi sự kiện giao/nhận theo suất. Kỳ đối soát là tập dữ liệu một khách/khoảng ngày. Revision là bản nguồn; version là token thay đổi, không tráo hai khái niệm.',
 '## 2. Tổng quan',
 'Bếp/vận hành ghi giao, đại diện khách xác nhận, kế toán đối soát/thu tiền, Giám đốc duyệt mở lại. [Quyền/UI](../ui/screens.md) là đề xuất, không tự cấp quyền chỉ vì role đã có. Web desktop/mobile; phiên này HTML offline. [Phụ thuộc](../review/dependencies.md) chặn E6/auth/link; [câu hỏi](../review/questions.md) chặn Q-13, căn cứ tiền, mẫu MISA. CG01/08/05/06 chỉ là cổng đầu vào, không đặc tả cách producer vượt cổng.',
-'## 3.1 FR — tất cả P0 theo PRD',
-table(['FR / Feature','Tên / actor','Input logic','Xử lý','Output','Gate'],rows.map(r=>[r.fr+' / '+r.feat,r.title+' — '+r.actor,r.input,r.logic,r.output,r.gate])),
+'## 3.1 FR: tất cả P0 theo PRD',
+table(['FR / Feature','Tên / actor','Input logic','Xử lý','Output','Gate'],rows.map(r=>[r.fr+' / '+r.feat,r.title+': '+r.actor,r.input,r.logic,r.output,r.gate])),
 'BR-E7-001/002/003/010 áp mọi FR. ACK/DIFF/RES thêm004; REV/VIEW/REC/AGRE thêm005/006/007; RCPT thêm008; LOCK/RREQ/RDEC thêm009; MISA thêm011. [Lỗi](error-matrix.md) và [RTM](../test/traceability.md).',
 '## 3.2 Business rules',table(['Mã','KHI → THÌ; ngoại lệ','Căn cứ / trạng thái'],br),
 '## 3.3 Giao diện ngoài','[API](../api/api-spec.md), [mapping](../api/data-mapping.md), [wireframe](../html-wireframe/revenue-workbench.html). MISA là file theo mẫu, không thêm webhook/connector.',
@@ -159,7 +159,7 @@ md('srs/error-matrix.md','Ma trận lỗi E7',table(['Mã','HTTP','Trigger / log
 let ucLinks=[],stories=[],acs=[],tests=[],rtm=[];
 for(const r of rows){
  const cs=r.cases.map((c,j)=>({id:'AC-E7-'+String(r.n).padStart(3,'0')+'-'+(j+1),tc:'TC-E7-'+String(r.n).padStart(3,'0')+'-'+(j+1),c,status:j===0||c.join(' ').includes('BLOCKED')?'BLOCKED':'NOT RUN'}));
- md('usecases/'+r.uc+'.md',r.uc+' — '+r.title,[
+ md('usecases/'+r.uc+'.md',r.uc+': '+r.title,[
  'FR: '+r.fr+' · '+r.feat+' · [SRS](../srs/spec.md) · [API](../api/api-spec.md) · '+r.ui+'.',
  'Level: Sea level. Actor chính: '+r.actor+'. Bên quan tâm: khách cần đúng số nhận/phải trả, kế toán cần truy nguồn, vận hành cần bằng chứng. Trigger: actor chọn “'+r.title+'”.',
  'Tiền điều kiện: phiên/scope hợp lệ, nguồn tồn tại; '+r.gate+' có quyết định phù hợp cho happy path. Đây là giả định, chưa có evidence thực tế.',
@@ -168,15 +168,15 @@ for(const r of rows){
  'Extensions:\n- 3a. '+r.cases[1][0]+' → '+r.cases[1][2]+'.\n- 3b. '+r.cases[2][0]+' → '+r.cases[2][2]+'.\n- 3c. Hết phiên ERR-E7-401-01; thiếu quyền ERR-E7-403-01; ngoài scope ERR-E7-404-01; thiếu nguồn/policy ERR-E7-503-01. Dừng nhánh, không tự mở gate.\n- 4a. Mất phản hồi: kết quả chưa rõ; đối chiếu chứng từ/version trước lệnh mới, replay E7-Q08 BLOCKED.',
  'BR-E7-001/002/003/010 và BR miền tại SRS. [AC](../userstories/acceptance-criteria.md): '+cs.map(c=>c.id).join(', ')+'. [Test](../test/test-cases.md) cùng 3 mục tiêu, không cộng thành 6.'
  ].join('\n\n'));
- ucLinks.push('['+r.uc+' — '+r.title+']('+r.uc+'.md)');
+ ucLinks.push('['+r.uc+': '+r.title+']('+r.uc+'.md)');
  stories.push([r.us,r.fr,r.uc,'Là '+r.actor+', tôi muốn '+r.title.toLowerCase()+' để '+r.output.toLowerCase()+'.','P0',r.gate]);
- acs.push('## '+r.us+' / '+r.fr+'\n\n'+cs.map((c,j)=>'### '+c.id+' — '+['Thành công có điều kiện','Lỗi nghiệp vụ','Biên / an toàn'][j]+'\n\n'+String.fromCharCode(96).repeat(3)+'gherkin\nGiven '+c.c[0]+'\nWhen '+c.c[1]+'\nThen '+c.c[2]+'\n'+String.fromCharCode(96).repeat(3)+'\n\nTrạng thái kiểm: '+c.status+'. Gate happy path: '+r.gate+'.').join('\n\n'));
+ acs.push('## '+r.us+' / '+r.fr+'\n\n'+cs.map((c,j)=>'### '+c.id+': '+['Thành công có điều kiện','Lỗi nghiệp vụ','Biên / an toàn'][j]+'\n\n'+String.fromCharCode(96).repeat(3)+'gherkin\nGiven '+c.c[0]+'\nWhen '+c.c[1]+'\nThen '+c.c[2]+'\n'+String.fromCharCode(96).repeat(3)+'\n\nTrạng thái kiểm: '+c.status+'. Gate happy path: '+r.gate+'.').join('\n\n'));
  for(const c of cs)tests.push([c.tc,r.fr+' / '+r.us+' / '+c.id,c.c[0]+'; synthetic','1. Mở '+r.ui+' bằng '+r.actor+'. 2. '+c.c[1]+'. 3. Đọc kết quả, đối chiếu before/after/audit hoặc read-only.',c.c[2],c.status,'','']);
  rtm.push([r.feat,r.fr,'['+r.uc+'](../usecases/'+r.uc+'.md)',r.us,cs.map(x=>x.id).join(', '),r.api,r.ui,cs.map(x=>x.tc).join(', '),r.gate]);
 }
 md('usecases/index.md','Danh mục use case E7',ucLinks.map(x=>'- '+x).join('\n'));
 md('userstories/backlog.md','Backlog E7',table(['Story','FR','UC','Story','Ưu tiên','Phụ thuộc'],stories)+'\n\n13 story nháp, chưa sprint-ready: I/E/T của INVEST phụ thuộc policy/contract/dữ liệu/môi trường; N/V có mô tả, S cần refinement. Không gán story point/ngày/người phụ trách. [AC](acceptance-criteria.md) · [RTM](../test/traceability.md).');
-md('userstories/acceptance-criteria.md','Acceptance criteria E7 — Given / When / Then',acs.join('\n\n'));
+md('userstories/acceptance-criteria.md','Acceptance criteria E7 (Given / When / Then)',acs.join('\n\n'));
 md('test/test-cases.md','Test cases E7','39 ca theo 39 AC, không cộng thành 78. NOT RUN = oracle độc lập đã mô tả, chưa chạy sản phẩm; BLOCKED = cần policy/contract/dữ liệu. Actual/Evidence trống; HTML mock pass không thay status.\n\n'+table(['Test','FR / Story / AC','Tiền điều kiện / dữ liệu','Bước chạy','Expected','Status','Actual','Evidence'],tests));
 md('test/traceability.md','RTM E7',table(['Feature','FR','UC','Story','AC','API','UI','Test','Gate'],rtm)+'\n\n13/13 FR có luồng có UC/story/3AC/API/UI/test; 5/5 feature có thiết kế nháp có điều kiện; 0 feature E7 chỉ gate. FEAT-053 có preflight/yêu cầu xuất nhưng file mapping BLOCKED E7-Q07. Hai feature E6 FEAT-046/047 chỉ gate O-03 tính riêng. Độ phủ nháp (23 E1–E5 +17 E6 +5 E7)/78 =45/78≈57,7%; không phải BA duyệt hay tiến độ phần mềm.');
 const reads=[
@@ -219,7 +219,7 @@ fence+'mermaid\nstateDiagram-v2\n [*] --> DRAFT\n DRAFT --> RECONCILING: lập t
 fence+'mermaid\nstateDiagram-v2\n [*] --> REQUESTED: kỳ khóa và lý do hợp lệ\n REQUESTED --> APPROVED: Giám đốc khác lập và sửa cuối\n REQUESTED --> REJECTED: từ chối\n REQUESTED --> REQUESTED: chưa duyệt - kỳ vẫn khóa\n APPROVED --> [*]: kỳ REOPENED - giữ snapshot cũ\n REJECTED --> [*]: kỳ vẫn LOCKED\n'+fence,
 'Kiểm version tại ghi; quyết định cũ không mở kỳ mới. O-06 không tự cấp người thay. File đã xuất giữ revision cũ/cần rà lại, không sửa bytes hoặc auto tái xuất. [Q05/07/08](../review/questions.md).'
 ].join('\n\n'));
-md('ui/user-flow.md','User flow E7 — happy/error/edge',[
+md('ui/user-flow.md','User flow E7: happy/error/edge',[
 fence+'mermaid\nflowchart TD\n A[UI01 Phiếu giao - nguồn có điều kiện] --> B{Nguồn và quyền đủ?}\n B -->|Không| X[Hiện gate CG - không ghi]\n B -->|Có| C[UI02 Khách xác nhận link]\n C --> D{Khách trả lời?}\n D -->|Không| Q[BLOCKED Q13 - giữ chờ]\n D -->|Có| E{Có chênh lệch?}\n E -->|Có| F[UI03 Biên bản và thỏa thuận]\n E -->|Không| G[UI04 Số tính tiền và giá chụp]\n F --> G\n G --> H{Đủ căn cứ tính?}\n H -->|Không| Y[BLOCKED Q03 Q04]\n H -->|Có| I[UI05 Đối soát đúng revision]\n I --> J[UI06 Thu tiền riêng]\n I --> K[UI05 Khóa có điều kiện]\n K --> L[UI07 Yêu cầu mở lại]\n L --> M{Giám đốc duyệt?}\n M -->|Chưa hoặc từ chối| K\n M -->|Có| I\n I --> N[UI08 Kiểm mẫu MISA]\n N --> O{Mẫu được duyệt?}\n O -->|Không| P[BLOCKED Q07 - không file giả]\n O -->|Có| R[Xuất và thử nhập - chưa thực thi]\n'+fence,
 table(['Tình huống','UI / phản hồi','Hậu điều kiện'],[
 ['Happy có điều kiện','01→02→04→05, 03 khi chênh; 06 thu riêng; 08 theo mẫu','Giữ evidence/nguồn, không auto PAID'],
@@ -272,7 +272,7 @@ table(['API logical field','Schema hiện có / delta đề xuất','UI','Chuy�
 ]),
 'API đọc bổ sung014–018 dùng cùng mapping, không tạo dữ liệu. DTO tiền dùng chuỗi decimal đề xuất, số suất int; ID chuỗi. Kiểu/length/nullability wire chi tiết E7-Q08 chưa freeze. Không serialize inputs_snapshot/secret/cost vào projection khách.'
 ].join('\n\n'));
-md('srs/data-dictionary.md','Delta dữ liệu E7 — đề xuất chưa merge',[
+md('srs/data-dictionary.md','Delta dữ liệu E7: đề xuất chưa merge',[
 '65 bảng chung giữ nguyên. DBML có orders.status DELIVERED/CONFIRMED/DISPUTED/RECONCILED nhưng chưa có thực thể phiếu/kỳ/thu/MISA, không đủ làm bằng chứng persistence. Không sửa orders.status từ E7 khi chưa có contract tác động nguồn. [Mapping](../api/data-mapping.md).',
 table(['Thực thể delta','Trường logic / kiểu đề xuất','Quan hệ / ràng buộc / null','Gate'],[
 ['e7_delivery_notes','id ID; orderId ID; orderRevisionRef/planRevisionRef opaque; deliveredServings int; state; version int; evidenceRef','PK id; orderId→orders; số giao≥0; nguồn bắt buộc theo policy đã xác nhận; không dùng thiếu=0','CG05/06/08; Q02'],
@@ -316,7 +316,7 @@ md('test/evidence-protocol.md','Protocol bằng chứng E7',[
 'Giữ E6 CG/EVID, CK/DATA-COST và các snapshot lịch sử. Mỗi lần kiểm tài liệu ghi scope và công cụ riêng trong validation E7.'
 ].join('\n\n'));
 fs.mkdirSync(path.join(base,'test/fixtures'),{recursive:true});
-fs.writeFileSync(path.join(base,'test/fixtures/synthetic.json'),JSON.stringify({label:'synthetic — not real accounting or production data',orderedServings:100,deliveredServings:98,receivedServings:null,billableServings:100,billableBasis:'ASSUMED AGREEMENT FOR ARITHMETIC ONLY; E7-Q03 OPEN',quotedUnitPrice:'40000',salePriceBasis:'INCLUSIVE',vatRatePct:'8',invoiceRequested:false,amountDue:'4000000',discountSeparate:'200000',receivedPayment:'1000000',remainingDue:'3000000',note:'VAT8% chỉ số thử; không tự suy billable=ordered; Q13 unresolved'},null,2));
+fs.writeFileSync(path.join(base,'test/fixtures/synthetic.json'),JSON.stringify({label:'synthetic: not real accounting or production data',orderedServings:100,deliveredServings:98,receivedServings:null,billableServings:100,billableBasis:'ASSUMED AGREEMENT FOR ARITHMETIC ONLY; E7-Q03 OPEN',quotedUnitPrice:'40000',salePriceBasis:'INCLUSIVE',vatRatePct:'8',invoiceRequested:false,amountDue:'4000000',discountSeparate:'200000',receivedPayment:'1000000',remainingDue:'3000000',note:'VAT8% chỉ số thử; không tự suy billable=ordered; Q13 unresolved'},null,2));
 md('test/fixtures/README.md','Fixture synthetic E7','[synthetic.json](synthetic.json) chỉ kiểm số học/tách khoản:100×40000=4000000; CK200000 không giảm phải trả; thu1000000 còn3000000. Số tính tiền100 là giả định thỏa thuận riêng, không suy từ giao98/nhận chưa biết. VAT8% là số thử. Không có seed/runtime hoặc dữ liệu thật. Doanh thu chưa VAT=4000000/1.08 trước làm tròn; rounding E7-Q04 chưa chốt.');
 md('review/handoff.md','Bàn giao BA nháp E7',[
 'Nguồn mở E7: người dùng12/11/2026. E8–E13 chưa mở. E6 dừng chờ CG01/08/05/06,14/14 CG OPEN; không sửa E6. Thiết kế consumer có điều kiện, không giải quyết thay producer.',

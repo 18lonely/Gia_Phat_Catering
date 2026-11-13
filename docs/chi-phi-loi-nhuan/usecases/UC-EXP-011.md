@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-011-MD
-title: UC-EXP-011 — Bảo vệ lương và đầu ra nội bộ
+title: "UC-EXP-011: Bảo vệ lương và đầu ra nội bộ"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-011 — Bảo vệ lương và đầu ra nội bộ
+# UC-EXP-011: Bảo vệ lương và đầu ra nội bộ
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: người ngoài PER-07/PER-08 hoặc phiên phía khách; khi truy cập chi tiết công/lương/lợi nhuận hoặc xuất thì ERR-EXP-403-01; không lộ qua payload, lỗi, log, cache, file hoặc metadata.
-- **4d — biên**: người vừa bị thu hồi quyền nhưng có runRef đã biết; khi đọc lại hoặc yêu cầu bản xuất thì từ chối theo quyền hiện tại; không dùng cache quyền cũ.
+- **4c. Đặc thù**: người ngoài PER-07/PER-08 hoặc phiên phía khách; khi truy cập chi tiết công/lương/lợi nhuận hoặc xuất thì ERR-EXP-403-01; không lộ qua payload, lỗi, log, cache, file hoặc metadata.
+- **4d. Biên**: người vừa bị thu hồi quyền nhưng có runRef đã biết; khi đọc lại hoặc yêu cầu bản xuất thì từ chối theo quyền hiện tại; không dùng cache quyền cũ.
 
 ## Quy tắc và truy vết
 

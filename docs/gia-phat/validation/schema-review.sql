@@ -195,7 +195,7 @@ CREATE TABLE `ingredient_groups` (
   `id` bigint PRIMARY KEY AUTO_INCREMENT,
   `code` varchar(32) UNIQUE NOT NULL,
   `name` varchar(80) NOT NULL COMMENT 'Lợn, gà, bò, ếch, tôm, cá... Danh sách: điểm mở H-3',
-  `protein_source` varchar(24) COMMENT 'MEAT | FISH | EGG | SEAFOOD | BEAN — dùng cho BR-MENU-050',
+  `protein_source` varchar(24) COMMENT 'MEAT | FISH | EGG | SEAFOOD | BEAN: dùng cho BR-MENU-050',
   `created_at` datetime(3) NOT NULL,
   `created_by` bigint,
   `updated_at` datetime(3) NOT NULL,
@@ -1122,7 +1122,7 @@ CREATE UNIQUE INDEX `agent_tool_events_index_70` ON `agent_tool_events` (`run_id
 
 ALTER TABLE `kitchens` COMMENT = 'Cơ sở (bếp): Hoàng Đạo Thành, Phúc Diễn';
 
-ALTER TABLE `users` COMMENT = 'Tài khoản — 4 loại định danh (SRS nền tảng mục 2.3)';
+ALTER TABLE `users` COMMENT = 'Tài khoản: 4 loại định danh (SRS nền tảng mục 2.3)';
 
 ALTER TABLE `login_logs` COMMENT = 'Thời gian lưu: điểm mở N-03 (đề xuất 1 năm)';
 
@@ -1132,7 +1132,7 @@ ALTER TABLE `audit_logs` COMMENT = 'Bất biến (BR-AUD-002): tài khoản ứn
 
 ALTER TABLE `agent_runs` COMMENT = 'Nhật ký lượt chạy agent (FEAT-023)';
 
-ALTER TABLE `change_requests` COMMENT = 'Giá trị đề nghị cho bản ghi đang hiệu lực, chờ duyệt (FR-MENU-DISH-002, FR-MENU-RUL-006). Tối đa 1 đề nghị PENDING mỗi bản ghi — kiểm ở tầng ứng dụng';
+ALTER TABLE `change_requests` COMMENT = 'Giá trị đề nghị cho bản ghi đang hiệu lực, chờ duyệt (FR-MENU-DISH-002, FR-MENU-RUL-006). Tối đa 1 đề nghị PENDING mỗi bản ghi: kiểm ở tầng ứng dụng';
 
 ALTER TABLE `approvals` COMMENT = 'Mỗi dòng là một quyết định của một người duyệt; cho phép nhiều người duyệt (BR-MNU-008). Cột approved_by trên các bảng nghiệp vụ = người duyệt cuối, ghi cùng giao dịch';
 
@@ -1144,7 +1144,7 @@ ALTER TABLE `recipes` COMMENT = 'Công thức ACTIVE không sửa; thay đổi t
 
 ALTER TABLE `meal_types` COMMENT = 'Loại suất do dinh dưỡng viên tự tạo (D-20)';
 
-ALTER TABLE `menus` COMMENT = 'Duy nhất theo (meal_type_id, customer_id, week_start) trong các bản không huỷ — kiểm ở tầng ứng dụng';
+ALTER TABLE `menus` COMMENT = 'Duy nhất theo (meal_type_id, customer_id, week_start) trong các bản không huỷ: kiểm ở tầng ứng dụng';
 
 ALTER TABLE `ingredient_prices` COMMENT = 'Giá nhập do nội bộ nhập (D-13). Không sửa đè: giá mới là dòng mới';
 
@@ -1174,7 +1174,7 @@ ALTER TABLE `cost_estimate_components` COMMENT = 'Phân rã dòng nguyên liệu
 
 ALTER TABLE `cost_estimate_allowances` COMMENT = 'Khoản khoán tách khỏi dòng nguyên liệu; không tính trùng khoản chung và riêng cùng tên.';
 
-ALTER TABLE `eater_health_profiles` COMMENT = 'Chỉ chính người ăn đọc được. Xoá cứng khi người ăn yêu cầu (NFR-PRIV-001) — ngoại lệ duy nhất của quy tắc không xoá cứng';
+ALTER TABLE `eater_health_profiles` COMMENT = 'Chỉ chính người ăn đọc được. Xoá cứng khi người ăn yêu cầu (NFR-PRIV-001): ngoại lệ duy nhất của quy tắc không xoá cứng';
 
 ALTER TABLE `customer_quotas` COMMENT = 'Định mức suất chung của công ty (D-21)';
 

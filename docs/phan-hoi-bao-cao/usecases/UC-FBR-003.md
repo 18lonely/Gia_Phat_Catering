@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-003-MD
-title: UC-FBR-003 — Xem tỷ lệ được chọn theo món
+title: "UC-FBR-003: Xem tỷ lệ được chọn theo món"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-003 — Xem tỷ lệ được chọn theo món
+# UC-FBR-003: Xem tỷ lệ được chọn theo món
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-080; màn UI-FBR-03.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-05; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần số lựa chọn có nguồn khi đủ căn cứ; tỷ lệ chưa xác định; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào ngày, khách, điểm, ca, dishRef, selectionSourceRef. Nhánh nghiệp vụ thật cần E12-Q04; E6 CG01–14, ORD-Q01–15, E6-EVID-001/002. Các gate chưa được coi là đạt.

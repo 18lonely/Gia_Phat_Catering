@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-012-MD
-title: UC-PUR-012 — Ghi sổ mẫu lưu theo bữa
+title: "UC-PUR-012: Ghi sổ mẫu lưu theo bữa"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-012 — Ghi sổ mẫu lưu theo bữa
+# UC-PUR-012: Ghi sổ mẫu lưu theo bữa
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Thiếu mã bữa hoặc cơ sở: Chặn bản ghi không truy được nguồn (ERR-PUR-422-22).
-- Bước 4 — Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu: Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ.
-- Bước 4 — thiếu policy/nguồn tại E11-Q11; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Thiếu mã bữa hoặc cơ sở: Chặn bản ghi không truy được nguồn (ERR-PUR-422-22).
+- Bước 4: Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu: Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ.
+- Bước 4: thiếu policy/nguồn tại E11-Q11; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

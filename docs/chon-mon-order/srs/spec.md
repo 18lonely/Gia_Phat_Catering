@@ -1,15 +1,15 @@
 ---
 id: DOC-CHON-MON-ORDER-SRS-SPEC
-title: SRS E6 để review — Chọn món và Order
+title: "SRS E6 để review: Chọn món và Order"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# SRS E6 để review — Chọn món và Order
+# SRS E6 để review: Chọn món và Order
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -88,10 +88,10 @@ API ban đầu: [contract luồng chọn/chốt](../api/api-spec.md); mô hình 
 
 [ORD-Q01–10](../review/questions.md), O-02/O-03/O-06,Q-14/Q-16. Chưa bắt đầu triển khai. Chi tiết bổ sung: [quy tắc vận hành](operational-rules.md), [UC](usecase-diagram.md), [data dictionary](data-dictionary.md), [RTM](../test/traceability.md), [wireframe](../html-wireframe/order-workbench.html), [AC](../userstories/acceptance-criteria.md). Các câu hỏi mở vẫn chặn baseline/triển khai; không lấy số liên kết làm độ hoàn tất nghiệp vụ.
 
-## Bổ sung consistency độc lập — 11/11/2026
+## Bổ sung consistency độc lập ngày 11/11/2026
 
 Xem [mapping consistency](../api/data-mapping.md) và [khóa/kế hoạch](lock-plan-review.md). Phân biệt token tổng, version order, revision order/plan; lock thành công không hứa plan đã sẵn sàng. Các trường completeness/ack/publish vẫn là delta review, chưa thêm vào catalog hoặc wireframe; không thay E6-EVID-001/002.
 
-## Ranh giới thực thi UC — 12/11/2026
+## Ranh giới thực thi UC ngày 12/11/2026
 
 [Ma trận 19 UC](../review/uc-operation-review.md) phân loại theo catalog. FR-ORD-DEF-001 là bước trong PORT-LOCK của FR-ORD-LOCK-001, không commit/job thứ hai. FR-ORD-REM-001 do scheduler/worker khởi tạo; GET reminder-runs chỉ theo dõi. FR-PLAN-MEAL-001 tách worker tạo snapshot từ event với GET của bếp: đọc không build/publish/ack/start-production. FR-NUTR-DSP-001 không tạo Calculation qua GET; hai FR sức khỏe chỉ hiển thị gate. Input ở bảng là mô tả nghiệp vụ, wire shape theo API và mapping, không defaults/nullability mới. Grant cho A là phạm vi yêu cầu synthetic, không kết luận người đặt tổng chỉ thuộc một công ty.

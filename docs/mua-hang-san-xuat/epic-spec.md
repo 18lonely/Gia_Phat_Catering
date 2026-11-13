@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-EPIC-SPEC-MD
-title: E11 — Mua hàng và sản xuất
+title: "E11: Mua hàng và sản xuất"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# E11 — Mua hàng và sản xuất
+# E11: Mua hàng và sản xuất
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

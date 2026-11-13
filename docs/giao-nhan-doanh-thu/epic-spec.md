@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-EPIC-SPEC-MD
-title: E7 — Giao nhận & doanh thu
+title: "E7: Giao nhận & doanh thu"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# E7 — Giao nhận & doanh thu
+# E7: Giao nhận & doanh thu
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 

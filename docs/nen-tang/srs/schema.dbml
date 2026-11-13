@@ -1,12 +1,12 @@
 // =====================================================================
-// Nền tảng Gia Phát — Schema CSDL (DBML)
+// Nền tảng Gia Phát: Schema CSDL (DBML)
 // Phiên bản 0.5.0 · 2026-11-11 · Trạng thái: Draft
 // Nguồn: docs/nen-tang/srs/erd.md v0.5.0
 // v0.5.0: E4/E5, 4 bảng bổ sung; chưa chạy migration; xem ERD phân hệ.
 // v0.3.0: đồng bộ SRS Cost; bản chụp theo cơ sở, khoản khoán, dự toán và cảnh báo.
 // v0.2.0: thêm change_requests, approvals (nhóm sys)
 // Phạm vi: AUTH, SYS, MENU, COST, NUTR (đợt Now) + CUS, ORD (R6)
-// Chưa gồm: PLAN, DLV, FIN, PUB, SALE, PUR, FB — viết ở epic tương ứng
+// Chưa gồm: PLAN, DLV, FIN, PUB, SALE, PUR, FB, viết ở epic tương ứng
 //
 // Quy ước (chi tiết ở erd.md mục 1):
 //  - MySQL 8, InnoDB, utf8mb4. Mọi cột bigint là BIGINT UNSIGNED.
@@ -21,7 +21,7 @@
 
 Project gia_phat {
   database_type: 'MySQL'
-  Note: 'Nền tảng Gia Phát — bản nháp v0.5.0. Tên bảng, cột, kiểu, độ dài là đề xuất, chưa duyệt.'
+  Note: 'Nền tảng Gia Phát: bản nháp v0.5.0. Tên bảng, cột, kiểu, độ dài là đề xuất, chưa duyệt.'
 }
 
 // ============================ AUTH ============================
@@ -65,7 +65,7 @@ Table users {
     customer_id
     (user_type, status)
   }
-  Note: 'Tài khoản — 4 loại định danh (SRS nền tảng mục 2.3)'
+  Note: 'Tài khoản: 4 loại định danh (SRS nền tảng mục 2.3)'
 }
 
 Table user_roles {
@@ -250,7 +250,7 @@ Table change_requests {
     (entity, entity_key, status)
     (status, requested_at)
   }
-  Note: 'Giá trị đề nghị cho bản ghi đang hiệu lực, chờ duyệt (FR-MENU-DISH-002, FR-MENU-RUL-006). Tối đa 1 đề nghị PENDING mỗi bản ghi — kiểm ở tầng ứng dụng'
+  Note: 'Giá trị đề nghị cho bản ghi đang hiệu lực, chờ duyệt (FR-MENU-DISH-002, FR-MENU-RUL-006). Tối đa 1 đề nghị PENDING mỗi bản ghi: kiểm ở tầng ứng dụng'
 }
 
 Table approvals {
@@ -276,7 +276,7 @@ Table ingredient_groups {
   id bigint [pk, increment]
   code varchar(32) [not null, unique]
   name varchar(80) [not null, note: 'Lợn, gà, bò, ếch, tôm, cá... Danh sách: điểm mở H-3']
-  protein_source varchar(24) [note: 'MEAT | FISH | EGG | SEAFOOD | BEAN — dùng cho BR-MENU-050']
+  protein_source varchar(24) [note: 'MEAT | FISH | EGG | SEAFOOD | BEAN: dùng cho BR-MENU-050']
   created_at datetime(3) [not null]
   created_by bigint
   updated_at datetime(3) [not null]
@@ -507,7 +507,7 @@ Table menus {
     (meal_type_id, customer_id, week_start)
     (status, week_start)
   }
-  Note: 'Duy nhất theo (meal_type_id, customer_id, week_start) trong các bản không huỷ — kiểm ở tầng ứng dụng'
+  Note: 'Duy nhất theo (meal_type_id, customer_id, week_start) trong các bản không huỷ: kiểm ở tầng ứng dụng'
 }
 
 Table menu_days {
@@ -880,7 +880,7 @@ Table eater_health_profiles {
   consent_at datetime(3) [not null]
   consent_version varchar(16) [not null]
   updated_at datetime(3) [not null]
-  Note: 'Chỉ chính người ăn đọc được. Xoá cứng khi người ăn yêu cầu (NFR-PRIV-001) — ngoại lệ duy nhất của quy tắc không xoá cứng'
+  Note: 'Chỉ chính người ăn đọc được. Xoá cứng khi người ăn yêu cầu (NFR-PRIV-001): ngoại lệ duy nhất của quy tắc không xoá cứng'
 }
 
 // ============================ CUS + ORD (R6) ============================
@@ -1231,7 +1231,7 @@ TableGroup accounting_extension {
   order_discount_events
 }
 
-// E4_E5_MVP_EXTENSION — Draft 0.1.0, 2026-11-11. Notes are not enforced CHECK constraints.
+// E4_E5_MVP_EXTENSION: Draft 0.1.0, 2026-11-11. Notes are not enforced CHECK constraints.
 
 Table nutrient_value_revisions {
   id bigint [pk, increment]

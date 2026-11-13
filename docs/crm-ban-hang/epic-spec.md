@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-EPIC-SPEC-MD
-title: E10 — CRM và bán hàng
+title: "E10: CRM và bán hàng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# E10 — CRM và bán hàng
+# E10: CRM và bán hàng
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 

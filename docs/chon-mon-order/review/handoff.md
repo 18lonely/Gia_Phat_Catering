@@ -48,7 +48,7 @@ Cost gồmVAT phải trảNCC; không hóa đơn không nghĩaVAT0%; chiết kh�
 3. QA review expected synthetic, chuẩn bị profile1000CCU và dữ liệu pilot2khách/2tuần; chuyển BLOCKED→NOT RUN khi đủ đầu vào, không chuyển PASS vì tài liệu đã có.
 4. Chỉ sau review E6 mới xem xét mở rộng E7–E13; chưa triển khai backend trong phạm vi công việc này.
 
-## Review quyết định tiếp nối — 11/11/2026
+## Review quyết định tiếp nối ngày 11/11/2026
 
 [DR-01–04](decision-review.md) · [Findings](decision-findings.md) · [Báo cáo](../validation/decision-review-report.md). E6-EVID-001 xác nhận có danh sách/người quản lý; ORD-Q01 chỉ xác nhận một phần đầu vào, cơ chế chưa chốt. Tiếp theo lấy quyết định về credential/scope, C→S/S vượt T, ngoại lệ sau hạn và completeness/ack/start-production; chưa freeze schema/API hoặc mở E7–E13.
 

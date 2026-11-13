@@ -1,4 +1,4 @@
-# Báo cáo E6 — review contract tiếp nối
+# Báo cáo E6: review contract tiếp nối
 
 11/11/2026 · Chỉ BA/tài liệu. Baseline hash riêng contract-baseline-sha256.json; không Git, không chạy generator build/extend/api/finalize, không ghi đè handoff/report cũ.
 

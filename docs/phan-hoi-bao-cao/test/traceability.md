@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-TEST-TRACEABILITY-MD
-title: RTM E12 — chuỗi đầy đủ
+title: "RTM E12: chuỗi đầy đủ"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# RTM E12 — chuỗi đầy đủ
+# RTM E12: chuỗi đầy đủ
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

@@ -1,15 +1,15 @@
 ---
 id: DOC-CHON-MON-ORDER-EPIC-SPEC
-title: E6 — Chọn món và Order: gói BA để review
+title: "E6: Chọn món và Order: gói BA để review"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# E6 — Chọn món và Order: gói BA để review
+# E6: Chọn món và Order: gói BA để review
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

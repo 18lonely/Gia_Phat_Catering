@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-015-MD
-title: UC-PUR-015 — Kiểm cổng chuyển duyệt MENU
+title: "UC-PUR-015: Kiểm cổng chuyển duyệt MENU"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-015 — Kiểm cổng chuyển duyệt MENU
+# UC-PUR-015: Kiểm cổng chuyển duyệt MENU
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Quy tắc cứng vi phạm hoặc thiếu cost: Không được chuyển như đã đạt; giữ ứng viên (ERR-PUR-422-25).
-- Bước 4 — Nguồn thay đổi giữa kiểm và chuyển: Từ chối dùng kết quả cũ; yêu cầu kiểm lại, không bỏ qua MENU.
-- Bước 4 — thiếu policy/nguồn tại E11-Q12/13; DL-01; E6 CG05/06/07: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Quy tắc cứng vi phạm hoặc thiếu cost: Không được chuyển như đã đạt; giữ ứng viên (ERR-PUR-422-25).
+- Bước 4: Nguồn thay đổi giữa kiểm và chuyển: Từ chối dùng kết quả cũ; yêu cầu kiểm lại, không bỏ qua MENU.
+- Bước 4: thiếu policy/nguồn tại E11-Q12/13; DL-01; E6 CG05/06/07: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

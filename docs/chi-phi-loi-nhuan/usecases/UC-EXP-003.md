@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-003-MD
-title: UC-EXP-003 — Ghi giờ công thực tế theo ca
+title: "UC-EXP-003: Ghi giờ công thực tế theo ca"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-003 — Ghi giờ công thực tế theo ca
+# UC-EXP-003: Ghi giờ công thực tế theo ca
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: chỉ có phân ca E11, không có giờ thực tế; khi yêu cầu xác nhận chấm công thì ERR-EXP-422-02; không suy đã làm đủ giờ.
-- **4d — biên**: một người có hai dòng cùng nguồn ca; khi gửi lại dòng chấm công thì không cộng đôi giờ; conflict hoặc receipt theo contract được duyệt.
+- **4c. Đặc thù**: chỉ có phân ca E11, không có giờ thực tế; khi yêu cầu xác nhận chấm công thì ERR-EXP-422-02; không suy đã làm đủ giờ.
+- **4d. Biên**: một người có hai dòng cùng nguồn ca; khi gửi lại dòng chấm công thì không cộng đôi giờ; conflict hoặc receipt theo contract được duyệt.
 
 ## Quy tắc và truy vết
 

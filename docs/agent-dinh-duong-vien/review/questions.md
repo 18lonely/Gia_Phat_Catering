@@ -36,6 +36,6 @@ Tất cả **CHỜ TRẢ LỜI**. Cột trả lời và nguồn/người/ngày �
 | E9-Q14 | Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không? | Giữ gate đóng; sau quyết định mới review phạm vi persona, consent/quyền và contract FEAT-047; không xây nhánh gợi ý trước | Toàn bộ gợi ý cá nhân/đọc hồ sơ/thu hoặc suy luận sức khỏe | O-03; FR-NUTR-PROF-001/REC-001 |  |  |
 | E9-Q15 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. XC-05; DEC-201. Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | XC-05; DEC-201 |  |  |
 
-> Chờ E9-Q11, E8-Q05 — XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E9-Q11, E8-Q05: XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Chỉ cập nhật khi có phản hồi có nguồn/phạm vi; không đóng câu hỏi vì kiểm tài liệu đạt. E6 CG01/08/05/06, E7 Q-13/E7-Q01–08, E8-Q01–12 giữ CHỜ TRẢ LỜI.

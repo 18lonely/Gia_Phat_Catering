@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-EPIC-SPEC-MD
-title: E12 — Phản hồi và báo cáo
+title: "E12: Phản hồi và báo cáo"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# E12 — Phản hồi và báo cáo
+# E12: Phản hồi và báo cáo
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

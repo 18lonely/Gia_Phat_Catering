@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-005-MD
-title: UC-AIN-005 — Chỉnh thực đơn và kiểm lại
+title: "UC-AIN-005: Chỉnh thực đơn và kiểm lại"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-005 — Chỉnh thực đơn và kiểm lại
+# UC-AIN-005: Chỉnh thực đơn và kiểm lại
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-EDIT-001 / FEAT-061 / US-AIN-005.
 
 Trigger: Sau khi xem phương án, khách muốn đổi món hoặc vị trí món trong một ngày của tuần.
 
-Tiền điều kiện — nghiệp vụ: Có candidateRef và baseRevision thuộc phiên; chỉ dẫn chỉ rõ ngày/vị trí/món cần đổi.
-Tiền điều kiện — gate còn mở: E9-Q03, E9-Q05, E9-Q12, E9-Q13 chặn đầu vào, nhánh kinh tế, nguồn và contract. O-03 không mở cá nhân hóa sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có candidateRef và baseRevision thuộc phiên; chỉ dẫn chỉ rõ ngày/vị trí/món cần đổi.
+Tiền điều kiện (gate còn mở): E9-Q03, E9-Q05, E9-Q12, E9-Q13 chặn đầu vào, nhánh kinh tế, nguồn và contract. O-03 không mở cá nhân hóa sức khỏe.
 
 Luồng chính:
 1. Khách gửi candidateRef, baseRevision và chỉ dẫn chỉnh ngày/vị trí/món tại UI-AIN-03.

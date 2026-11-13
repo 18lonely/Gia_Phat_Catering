@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-USECASES-UC-CRM-004-MD
-title: UC-CRM-004 — Lập đề nghị rà khách nghi trùng
+title: "UC-CRM-004: Lập đề nghị rà khách nghi trùng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-CRM-004 — Lập đề nghị rà khách nghi trùng
+# UC-CRM-004: Lập đề nghị rà khách nghi trùng
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 
@@ -20,7 +20,7 @@ Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng
 
 ## Phạm vi và tác nhân
 
-Phạm vi: E10, FEAT-070. Cấp độ: Sea level — mục tiêu người dùng.
+Phạm vi: E10, FEAT-070. Cấp độ: Sea level (mục tiêu người dùng).
 
 Tác nhân chính: Dinh dưỡng viên kiêm chăm sóc khách hàng. Tác nhân hỗ trợ: dịch vụ xác thực/audit E1; chủ dữ liệu nguồn trong bảng phụ thuộc. Bên quan tâm: nhân viên cần tránh đánh đồng hai doanh nghiệp chỉ vì giống thông tin liên hệ; khách cần dữ liệu đúng phạm vi; kế toán cần lịch sử giá và giao dịch không bị thay đổi ngoài thẩm quyền.
 

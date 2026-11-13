@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-006-MD
-title: UC-PUB-006 — Dựng thử thực đơn tuần
+title: "UC-PUB-006: Dựng thử thực đơn tuần"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-006 — Dựng thử thực đơn tuần
+# UC-PUB-006: Dựng thử thực đơn tuần
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai khảo sát thực đơn tập 
 
 Trigger: Khách muốn thử một tuần ăn theo loại suất, số suất và nguyên liệu cần kiêng trước khi liên hệ tư vấn.
 
-Tiền điều kiện — nghiệp vụ: Có danh mục loại suất/kiêng nguyên liệu được phép công khai; không sử dụng hồ sơ sức khỏe cá nhân.
-Tiền điều kiện — gate còn mở: E8-Q05/04 chưa chốt cách dựng, giới hạn và nguồn; không tự chọn engine hoặc gọi Agent E9.
+Tiền điều kiện (nghiệp vụ): Có danh mục loại suất/kiêng nguyên liệu được phép công khai; không sử dụng hồ sơ sức khỏe cá nhân.
+Tiền điều kiện (gate còn mở): E8-Q05/04 chưa chốt cách dựng, giới hạn và nguồn; không tự chọn engine hoặc gọi Agent E9.
 
 Luồng chính:
 1. Khách chọn loại suất công khai, nhập số suất và lựa chọn kiêng nguyên liệu tại UI-PUB-04.

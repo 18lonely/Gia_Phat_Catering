@@ -426,7 +426,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 25,
       "entity": "expense_periods",
-      "fields": "| kitchen ref | kitchen_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK kitchens | Scope cơ sở |\n| from date / to date | from_date / to_date | DATE | — | Không | — | Biên ngày chờ Q02 |\n| status | status | ENUM | — | Không | — | OPEN / LOCKED |\n| locked snapshot ref | locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Bắt buộc khi khóa |\n",
+      "fields": "| kitchen ref | kitchen_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK kitchens | Scope cơ sở |\n| from date / to date | from_date / to_date | DATE | Không áp dụng | Không | Không áp dụng | Biên ngày chờ Q02 |\n| status | status | ENUM | Không áp dụng | Không | Không áp dụng | OPEN / LOCKED |\n| locked snapshot ref | locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Bắt buộc khi khóa |\n",
       "existingNames": []
     },
     {
@@ -434,7 +434,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 34,
       "entity": "expense_entries",
-      "fields": "| period ref | period_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Kỳ mở |\n| type version ref | type_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Danh mục Q01 chưa chọn |\n| amount | amount | DECIMAL | Chờ Q09 | Không | — | Tiền có đơn vị và căn cứ; không float |\n| customer ref | customer_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK customers | Bắt buộc với trực tiếp; null với chung |\n| source key / evidence ref | source_key / evidence_ref | STRING | Chờ Q12 | Không | Unique scope | Chống trùng với E3/E11 |\n",
+      "fields": "| period ref | period_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Kỳ mở |\n| type version ref | type_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Danh mục Q01 chưa chọn |\n| amount | amount | DECIMAL | Chờ Q09 | Không | Không áp dụng | Tiền có đơn vị và căn cứ; không float |\n| customer ref | customer_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK customers | Bắt buộc với trực tiếp; null với chung |\n| source key / evidence ref | source_key / evidence_ref | STRING | Chờ Q12 | Không | Unique scope | Chống trùng với E3/E11 |\n",
       "existingNames": []
     },
     {
@@ -442,7 +442,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 44,
       "entity": "attendance_sheets",
-      "fields": "| person ref | person_ref | STRING | Chờ Q03 | Không | Tham chiếu nguồn | Không mặc định người lao động có tài khoản users |\n| shift revision ref | shift_revision_ref | STRING | Chờ E11 | Không | Nguồn E11 | Phân ca không chứng minh đã làm |\n| kitchen ref / work date | kitchen_ref / work_date | BIGINT UNSIGNED / DATE | 20 chữ số / — | Không | FK kitchens | Theo cơ sở/ca |\n| hours | hours | DECIMAL | Chờ Q03 | Có | — | Null khi thiếu; 0 chỉ khi có xác nhận 0 giờ |\n| evidence ref / status | evidence_ref / status | STRING / ENUM | Chờ Q03 | Không | — | DRAFT / SUBMITTED / CONFIRMED / RETURNED |\n",
+      "fields": "| person ref | person_ref | STRING | Chờ Q03 | Không | Tham chiếu nguồn | Không mặc định người lao động có tài khoản users |\n| shift revision ref | shift_revision_ref | STRING | Chờ E11 | Không | Nguồn E11 | Phân ca không chứng minh đã làm |\n| kitchen ref / work date | kitchen_ref / work_date | BIGINT UNSIGNED / DATE | 20 chữ số /: | Không | FK kitchens | Theo cơ sở/ca |\n| hours | hours | DECIMAL | Chờ Q03 | Có | Không áp dụng | Null khi thiếu; 0 chỉ khi có xác nhận 0 giờ |\n| evidence ref / status | evidence_ref / status | STRING / ENUM | Chờ Q03 | Không | Không áp dụng | DRAFT / SUBMITTED / CONFIRMED / RETURNED |\n",
       "existingNames": []
     },
     {
@@ -450,7 +450,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 54,
       "entity": "labor_cost_refs",
-      "fields": "| attendance version ref | attendance_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Bản công xác nhận |\n| rate version ref / payroll amount ref | rate_version_ref / payroll_amount_ref | STRING | Chờ Q04 | Có | Nguồn lương | Một cách tính được duyệt; không cộng hai nguồn |\n| amount | amount | DECIMAL | Chờ Q09 | Có | — | Null nếu thiếu nguồn; dữ liệu nhạy cảm |\n",
+      "fields": "| attendance version ref | attendance_version_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Bản công xác nhận |\n| rate version ref / payroll amount ref | rate_version_ref / payroll_amount_ref | STRING | Chờ Q04 | Có | Nguồn lương | Một cách tính được duyệt; không cộng hai nguồn |\n| amount | amount | DECIMAL | Chờ Q09 | Có | Không áp dụng | Null nếu thiếu nguồn; dữ liệu nhạy cảm |\n",
       "existingNames": []
     },
     {
@@ -458,7 +458,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 62,
       "entity": "allocation_method_versions",
-      "fields": "| method ref / revision | method_ref / revision | BIGINT UNSIGNED / INTEGER | 20 chữ số / — | Không | Unique cặp | Phiên bản bất biến sau duyệt |\n| proposed basis / driver definition refs | proposed_basis / driver_definition_refs | JSON | Chờ Q05 | Có | — | Dữ liệu mô tả; không có default hoặc code thực thi |\n| scope / effective range | scope / effective_range | JSON | Chờ Q05 | Không | — | Cơ sở/kỳ; không tự xử lý chồng hiệu lực |\n| status | status | ENUM | — | Không | — | DRAFT / SUBMITTED / APPROVED / RETURNED |\n| approver ref / approved at / approval evidence ref / content hash | approver_ref / approved_at / approval_evidence_ref / content_hash | BIGINT UNSIGNED / TIME / STRING | Chờ Q12 | Có | Tham chiếu duyệt | Bắt buộc đủ khi APPROVED; khác lập/sửa cuối |\n",
+      "fields": "| method ref / revision | method_ref / revision | BIGINT UNSIGNED / INTEGER | 20 chữ số /: | Không | Unique cặp | Phiên bản bất biến sau duyệt |\n| proposed basis / driver definition refs | proposed_basis / driver_definition_refs | JSON | Chờ Q05 | Có | Không áp dụng | Dữ liệu mô tả; không có default hoặc code thực thi |\n| scope / effective range | scope / effective_range | JSON | Chờ Q05 | Không | Không áp dụng | Cơ sở/kỳ; không tự xử lý chồng hiệu lực |\n| status | status | ENUM | Không áp dụng | Không | Không áp dụng | DRAFT / SUBMITTED / APPROVED / RETURNED |\n| approver ref / approved at / approval evidence ref / content hash | approver_ref / approved_at / approval_evidence_ref / content_hash | BIGINT UNSIGNED / TIME / STRING | Chờ Q12 | Có | Tham chiếu duyệt | Bắt buộc đủ khi APPROVED; khác lập/sửa cuối |\n",
       "existingNames": []
     },
     {
@@ -466,7 +466,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 72,
       "entity": "profit_runs",
-      "fields": "| period snapshot ref / source manifest ref | period_snapshot_ref / source_manifest_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Cùng phạm vi, nguồn có version |\n| method version ref | method_version_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Null chỉ khi BLOCKED vì chưa có duyệt |\n| status / blocked reasons | status / blocked_reasons | ENUM / JSON | — | Không | — | DRAFT / BLOCKED / READY / RECONCILED |\n| facility result ref / definition version ref | facility_result_ref / definition_version_ref | STRING | Chờ Q08 | Có | Nguồn chuẩn | Không dùng tổng khách tự tạo làm số chuẩn |\n| customer results / unallocated effect / reconciliation delta | customer_results / unallocated_effect / reconciliation_delta | JSON / DECIMAL | Chờ Q09 | Có | — | Null nếu BLOCKED; tách từng cơ sở/khách; không gộp thiếu nguồn |\n",
+      "fields": "| period snapshot ref / source manifest ref | period_snapshot_ref / source_manifest_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Cùng phạm vi, nguồn có version |\n| method version ref | method_version_ref | BIGINT UNSIGNED | 20 chữ số | Có | FK đề xuất | Null chỉ khi BLOCKED vì chưa có duyệt |\n| status / blocked reasons | status / blocked_reasons | ENUM / JSON | Không áp dụng | Không | Không áp dụng | DRAFT / BLOCKED / READY / RECONCILED |\n| facility result ref / definition version ref | facility_result_ref / definition_version_ref | STRING | Chờ Q08 | Có | Nguồn chuẩn | Không dùng tổng khách tự tạo làm số chuẩn |\n| customer results / unallocated effect / reconciliation delta | customer_results / unallocated_effect / reconciliation_delta | JSON / DECIMAL | Chờ Q09 | Có | Không áp dụng | Null nếu BLOCKED; tách từng cơ sở/khách; không gộp thiếu nguồn |\n",
       "existingNames": []
     },
     {
@@ -474,7 +474,7 @@
       "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
       "line": 82,
       "entity": "expense_adjustments",
-      "fields": "| original entry ref / locked snapshot ref | original_entry_ref / locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Giữ nguồn gốc bất biến |\n| adjustment amount / target period ref | adjustment_amount / target_period_ref | DECIMAL / BIGINT UNSIGNED | Chờ Q09/10 | Có | FK đề xuất | Dấu tăng/giảm; kỳ đích chưa chọn |\n| reason / evidence ref / approver ref | reason / evidence_ref / approver_ref | STRING / BIGINT UNSIGNED | Chờ Q10 | Có | — | Bắt buộc đủ trước POSTED |\n| status | status | ENUM | — | Không | — | PENDING / REJECTED / POSTED |\n",
+      "fields": "| original entry ref / locked snapshot ref | original_entry_ref / locked_snapshot_ref | BIGINT UNSIGNED | 20 chữ số | Không | FK đề xuất | Giữ nguồn gốc bất biến |\n| adjustment amount / target period ref | adjustment_amount / target_period_ref | DECIMAL / BIGINT UNSIGNED | Chờ Q09/10 | Có | FK đề xuất | Dấu tăng/giảm; kỳ đích chưa chọn |\n| reason / evidence ref / approver ref | reason / evidence_ref / approver_ref | STRING / BIGINT UNSIGNED | Chờ Q10 | Có | Không áp dụng | Bắt buộc đủ trước POSTED |\n| status | status | ENUM | Không áp dụng | Không | Không áp dụng | PENDING / REJECTED / POSTED |\n",
       "existingNames": []
     }
   ],

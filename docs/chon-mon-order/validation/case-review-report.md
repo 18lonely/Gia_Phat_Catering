@@ -1,4 +1,4 @@
-# Rà10ca gốc và12ca hệ thống — 12/11/2026
+# Rà10ca gốc và12ca hệ thống ngày 12/11/2026
 
 DOCUMENT_CLARIFIED · Chỉ BA, chưa backend/migration/E7–E13. Đã kiểm workspace D:/BA, không Git/AGENTS.md; đọc năm tài liệu yêu cầu trước sửa. Dùng skill test-cases; đọc rule/template tại .claude/ba-kit. Không chạy generator hoặc lặp review34DTO/19UC/downstream.
 

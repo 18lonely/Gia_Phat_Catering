@@ -1,4 +1,4 @@
-# Mapping consistency E6 — bổ sung review 11/11/2026
+# Mapping consistency E6: bổ sung review 11/11/2026
 
 Draft; thiết kế logic chưa freeze/persistence. Bổ sung [API](api-spec.md), [delta](../srs/data-dictionary.md) và [quy tắc](../srs/operational-rules.md); không thêm endpoint. E6-EVID-001/002 giữ nguyên.
 

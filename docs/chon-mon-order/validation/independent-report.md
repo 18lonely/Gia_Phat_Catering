@@ -1,4 +1,4 @@
-# Báo cáo phiên E6 độc lập — 11/11/2026
+# Báo cáo phiên E6 độc lập ngày 11/11/2026
 
 Chỉ kiểm tài liệu và số học fixture synthetic; không test backend/UAT, không phê duyệt policy. Workspace D:/BA không có Git; dùng independent-baseline-sha256.json ghi trước sửa để lập manifest cuối phiên. Không chạy build-e6.py, extend-e6.py, api-e6.py hoặc finalize-e6.py.
 

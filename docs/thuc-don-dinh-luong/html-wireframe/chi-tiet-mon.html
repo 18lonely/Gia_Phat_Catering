@@ -87,7 +87,7 @@ code{font-family:Consolas,monospace;font-size:11.5px}
 <body>
 
 <div class="wfbar" role="note">
- <b>WIREFRAME · SCR-MENU-05 / 06 / 02</b><span>Chi tiết món — dữ liệu là <u>minh họa</u></span>
+ <b>WIREFRAME · SCR-MENU-05 / 06 / 02</b><span>Chi tiết món: dữ liệu là <u>minh họa</u></span>
  <span class="sp"></span><span>Xem tình huống:</span>
  <button data-st="new" class="on">Món mới (nháp)</button>
  <button data-st="active">Món đang dùng</button>
@@ -206,7 +206,7 @@ code{font-family:Consolas,monospace;font-size:11.5px}
 
 <script>
 'use strict';
-/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+/* ====== DỮ LIỆU MINH HỌA: không phải dữ liệu thật của Gia Phát ====== */
 const TODAY='2026-11-10';
 const GROUPS=['Lợn','Gà','Bò','Ếch','Tôm','Cá','Sườn','Trứng','Đậu','Giò chả','Củ quả','Rau','Khác'];
 const METHODS=[['Luộc',1],['Hấp',1],['Kho',0],['Rang',0],['Xào',0],['Sốt',0],['Chiên',0],['Áp chảo',0],['Nướng',0],['Trộn',0],['Nấu',0]]; // [tên, ít dầu mỡ]
@@ -217,7 +217,7 @@ const NEWDISH={name:'',desc:'',role:'MAIN',grp:'Cá',mth:'Chiên',base:'',tex:'N
 const ACTDISH={name:'Cá sốt cà chua',desc:'Cá trắm cắt khúc rán sơ, sốt cà chua.',role:'MAIN',grp:'Cá',mth:'Sốt',base:'',tex:'SAUCE',tier:'HIGH',healthy:false,sour:false,light:false,complex:false,trans:true,bulk:true,special:true,allergen:'Cá'};
 const ACTRCP=[{v:1,st:'SUPERSEDED',from:'2026-08-01',rows:[['Cá trắm',1,130,140,140],['Cà chua',0,30,30,35],['Dầu ăn',0,8,10,10]]},{v:2,st:'ACTIVE',from:'2026-10-01',rows:[['Cá trắm',1,130,135,140],['Cà chua',0,30,35,40],['Hành khô',0,3,3,5],['Dầu ăn',0,8,8,10]]}];
 const ACTPRC=[['2026-08-01',21000,'APPROVED','Người duyệt 1'],['2026-10-01',22000,'APPROVED','Người duyệt 1']];
-const ACTLOG=[['01/10/2026 08:02','Người duyệt 1','Duyệt','Công thức v2 → đang hiệu lực','—'],['28/09/2026 16:40','Dinh dưỡng viên','Tạo phiên bản','Công thức v2 từ v1','Điều chỉnh theo giá cà chua và bảng định lượng mới'],['28/09/2026 16:45','Dinh dưỡng viên','Tạo','Giá bán 22.000đ từ 01/10/2026','—'],['01/08/2026 07:55','Người duyệt 1','Duyệt','Món → đang dùng','—']];
+const ACTLOG=[['01/10/2026 08:02','Người duyệt 1','Duyệt','Công thức v2 → đang hiệu lực','Không áp dụng'],['28/09/2026 16:40','Dinh dưỡng viên','Tạo phiên bản','Công thức v2 từ v1','Điều chỉnh theo giá cà chua và bảng định lượng mới'],['28/09/2026 16:45','Dinh dưỡng viên','Tạo','Giá bán 22.000đ từ 01/10/2026','Không áp dụng'],['01/08/2026 07:55','Người duyệt 1','Duyệt','Món → đang dùng','Không áp dụng']];
 
 let mode='new', dish, saved=false, status='DRAFT', recipes=[], curV=null, prices=[], log=[], pending=null, dlgCb=null;
 const $=id=>document.getElementById(id);
@@ -236,12 +236,12 @@ function fillSelects(){
  $('aGrp').innerHTML=GROUPS.map(g=>`<option>${g}</option>`).join('');$('iGrp').innerHTML=$('aGrp').innerHTML;
  $('aMth').innerHTML=METHODS.map(m=>`<option value="${m[0]}">${m[0]}${m[1]?' (ít dầu mỡ)':''}</option>`).join('');
 }
-function fillBase(){const r=$('aRole').value;$('aBase').innerHTML='<option value="">— Không có —</option>'+OTHER.filter(o=>o[1]===r&&o[0]!==dish.name).map(o=>`<option>${o[0]}</option>`).join('');}
+function fillBase(){const r=$('aRole').value;$('aBase').innerHTML='<option value="">Không có</option>'+OTHER.filter(o=>o[1]===r&&o[0]!==dish.name).map(o=>`<option>${o[0]}</option>`).join('');}
 function readForm(){return {name:$('aName').value.trim(),desc:$('aDesc').value.trim(),role:$('aRole').value,grp:$('aGrp').value,mth:$('aMth').value,base:$('aBase').value,tex:$('aTex').value,tier:$('aTier').value,healthy:$('aHealthy').checked,sour:$('aSour').checked,light:$('aLight').checked,complex:$('aComplex').checked,trans:$('aTrans').checked,bulk:$('aBulk').checked,special:$('aSpecial').checked,allergen:$('aAllergen').value.trim()};}
 function writeForm(d){$('aName').value=d.name;$('aDesc').value=d.desc;$('aRole').value=d.role;fillBase();$('aGrp').value=d.grp;$('aMth').value=d.mth;$('aBase').value=d.base;$('aTex').value=d.tex;$('aTier').value=d.tier;
  $('aHealthy').checked=d.healthy;$('aSour').checked=d.sour;$('aLight').checked=d.light;$('aComplex').checked=d.complex;$('aTrans').checked=d.trans;$('aBulk').checked=d.bulk;$('aSpecial').checked=d.special;$('aAllergen').value=d.allergen;}
 const KEYMAP={aRole:'role',aGrp:'grp',aMth:'mth',aBase:'base',aTex:'tex',aTier:'tier',aHealthy:'healthy',aSour:'sour',aLight:'light',aComplex:'complex',aTrans:'trans',aBulk:'bulk',aSpecial:'special'};
-const show=v=>v===true?'Có':v===false?'Không':v===''?'—':({MAIN:'Món chính',SIDE:'Món phụ',VEG:'Rau',SOUP:'Canh',NEUTRAL:'Trung tính',DRY:'Khô',SAUCE:'Có nước sốt',LOW:'Thấp',HIGH:'Cao'}[v]||v);
+const show=v=>v===true?'Có':v===false?'Không':v===''?'Không áp dụng':({MAIN:'Món chính',SIDE:'Món phụ',VEG:'Rau',SOUP:'Canh',NEUTRAL:'Trung tính',DRY:'Khô',SAUCE:'Có nước sốt',LOW:'Thấp',HIGH:'Cao'}[v]||v);
 function ruleDiff(f){return RULE_FIELDS.filter(id=>f[KEYMAP[id]]!==dish[KEYMAP[id]]).map(id=>[$(id).dataset.r,show(dish[KEYMAP[id]]),show(f[KEYMAP[id]]),KEYMAP[id]]);}
 function validateAttr(f){let ok=true;err('eName','','aName');err('eBase','','aBase');err('eHealthy','');
  if(!f.name){err('eName','Vui lòng nhập tên món.','aName');ok=false;}
@@ -260,7 +260,7 @@ function refreshAttrUi(){
  $('attrHint').textContent=mode==='view'?'Bạn chỉ có quyền xem.':status==='PENDING'?'Món đang chờ duyệt nên không sửa được.':pending?'Đang có đề nghị chờ duyệt; rút đề nghị để sửa tiếp.':act?(d.length?`Đổi ${d.length} thuộc tính ảnh hưởng quy tắc → cần duyệt; món giữ giá trị cũ đến khi duyệt.`:'Sửa tên, mô tả, dị ứng được lưu ngay. Sửa thuộc tính có nhãn "quy tắc" cần duyệt.'):'';
  $('pendBadge').style.display=pending?'':'none';
  $('pendBox').style.display=pending?'block':'none';
- if(pending)$('pendBox').innerHTML=`<b>Đề nghị thay đổi đang chờ duyệt</b> — gửi ${pending.at}. Món vẫn dùng giá trị cũ.<div class="tblwrap" style="margin:8px 0"><table><thead><tr><th>Thuộc tính</th><th>Hiện tại</th><th>Đề nghị</th></tr></thead><tbody>${pending.diff.map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td><td><b>${x[2]}</b></td></tr>`).join('')}</tbody></table></div><div class="help">Lý do: ${pending.reason}</div>${mode==='view'?'':'<div style="margin-top:8px"><button class="sm" id="btnWithdraw">Rút đề nghị</button></div>'}`;
+ if(pending)$('pendBox').innerHTML=`<b>Đề nghị thay đổi đang chờ duyệt</b>: gửi ${pending.at}. Món vẫn dùng giá trị cũ.<div class="tblwrap" style="margin:8px 0"><table><thead><tr><th>Thuộc tính</th><th>Hiện tại</th><th>Đề nghị</th></tr></thead><tbody>${pending.diff.map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td><td><b>${x[2]}</b></td></tr>`).join('')}</tbody></table></div><div class="help">Lý do: ${pending.reason}</div>${mode==='view'?'':'<div style="margin-top:8px"><button class="sm" id="btnWithdraw">Rút đề nghị</button></div>'}`;
  $('title').textContent=dish.name||'Món mới';$('crumb').textContent=dish.name||'Món mới';
  $('stBadge').textContent=ST[status];$('stBadge').classList.toggle('fill',status==='ACTIVE');
  $('btnDeact').style.display=act&&mode!=='view'?'':'none';
@@ -269,7 +269,7 @@ $('fAttr').addEventListener('input',()=>{if(status==='ACTIVE')refreshAttrUi();})
 $('fAttr').addEventListener('change',e=>{if(e.target.id==='aRole')fillBase();if(status==='ACTIVE')refreshAttrUi();});
 $('btnSaveAttr').onclick=()=>{
  const f=readForm();if(!validateAttr(f))return;
- if(status!=='ACTIVE'){dish=f;saved=true;log.unshift(['10/11/2026 '+new Date().toTimeString().slice(0,5),'Dinh dưỡng viên','Lưu nháp','Thuộc tính món','—']);renderLog();refreshAttrUi();showMsg('Đã lưu nháp. Tiếp theo: thêm công thức ở thẻ <b>Công thức</b> rồi gửi duyệt.');return;}
+ if(status!=='ACTIVE'){dish=f;saved=true;log.unshift(['10/11/2026 '+new Date().toTimeString().slice(0,5),'Dinh dưỡng viên','Lưu nháp','Thuộc tính món','Không áp dụng']);renderLog();refreshAttrUi();showMsg('Đã lưu nháp. Tiếp theo: thêm công thức ở thẻ <b>Công thức</b> rồi gửi duyệt.');return;}
  const d=ruleDiff(f);
  if(!d.length){dish=f;refreshAttrUi();showMsg('Đã lưu. Thay đổi không ảnh hưởng quy tắc nên có hiệu lực ngay.');return;}
  const r=$('aReason').value.trim();if(r.length<10){err('eReason','ERR-SYS-422-01 · Vui lòng nhập lý do (ít nhất 10 ký tự).','aReason');return;}err('eReason','','aReason');
@@ -283,11 +283,11 @@ $('btnSendDish').onclick=()=>{
  if(!recipes.some(r=>r.st==='PENDING'||r.st==='ACTIVE')){showMsg('ERR-MENU-422-06 · Món cần có công thức trước khi duyệt. Hãy thêm công thức và gửi duyệt công thức trước.',true);tab('rcp');return;}
  status='PENDING';refreshAttrUi();refreshRcpUi();showMsg('Đã gửi duyệt món. Người duyệt đã nhận thông báo.');
 };
-$('btnDeact').onclick=()=>ask('Ngừng dùng món',()=>showMsg('ERR-SYS-409-01 · Không thể ngừng dùng vì món đang nằm trong 1 thực đơn đã công bố sắp phục vụ: Suất 40.000đ — tuần 16/11/2026.',true));
+$('btnDeact').onclick=()=>ask('Ngừng dùng món',()=>showMsg('ERR-SYS-409-01 · Không thể ngừng dùng vì món đang nằm trong 1 thực đơn đã công bố sắp phục vụ: Suất 40.000đ, tuần 16/11/2026.',true));
 
 /* ====== Công thức ====== */
 function unitOf(n){const i=ING.find(x=>x[0]===n);return i?i[2]:'';}
-function rowHtml(r,ro){return `<tr><td><select data-k="ing"${ro?' disabled':''}><option value="">— chọn —</option>${ING.map(i=>`<option${i[0]===r[0]?' selected':''}>${i[0]}</option>`).join('')}</select></td><td class="c"><input type="checkbox" data-k="main"${r[1]?' checked':''}${ro?' disabled':''} aria-label="Nguyên liệu chính"></td><td class="q"><input type="number" data-k="min" value="${r[2]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="std" value="${r[3]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="max" value="${r[4]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="u">${unitOf(r[0])}</td><td class="x">${ro?'':'<button type="button" class="sm" data-del="1" aria-label="Xoá dòng">×</button>'}</td></tr>`;}
+function rowHtml(r,ro){return `<tr><td><select data-k="ing"${ro?' disabled':''}><option value="">Chọn nguyên liệu</option>${ING.map(i=>`<option${i[0]===r[0]?' selected':''}>${i[0]}</option>`).join('')}</select></td><td class="c"><input type="checkbox" data-k="main"${r[1]?' checked':''}${ro?' disabled':''} aria-label="Nguyên liệu chính"></td><td class="q"><input type="number" data-k="min" value="${r[2]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="std" value="${r[3]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="q"><input type="number" data-k="max" value="${r[4]??''}" min="0" step="any"${ro?' disabled':''}></td><td class="u">${unitOf(r[0])}</td><td class="x">${ro?'':'<button type="button" class="sm" data-del="1" aria-label="Xoá dòng">×</button>'}</td></tr>`;}
 function readRows(){return [...$('rRows').children].map(tr=>{const g=k=>tr.querySelector(`[data-k=${k}]`);return [g('ing').value,g('main').checked?1:0,g('min').value===''?null:+g('min').value,g('std').value===''?null:+g('std').value,g('max').value===''?null:+g('max').value];});}
 function cur(){return recipes.find(r=>r.v===curV);}
 function refreshRcpUi(){
@@ -338,7 +338,7 @@ $('dwSave').onclick=()=>{let ok=true;const n=$('iName').value.trim(),cv=+$('iCon
 
 /* ====== Giá bán ====== */
 function refreshPrc(){$('prcEmpty').style.display=prices.length?'none':'block';$('prcTblWrap').style.display=prices.length?'block':'none';
- $('prcRows').innerHTML=[...prices].sort((a,b)=>b[0].localeCompare(a[0])).map(p=>`<tr><td>${dmy(p[0])}</td><td>${fmt(p[1])}</td><td>${ST[p[2]]}${p[2]==='APPROVED'&&p[0]<=TODAY&&!prices.some(q=>q[2]==='APPROVED'&&q[0]<=TODAY&&q[0]>p[0])?' · <b>đang áp dụng</b>':''}</td><td>${p[3]||'—'}</td></tr>`).join('');
+ $('prcRows').innerHTML=[...prices].sort((a,b)=>b[0].localeCompare(a[0])).map(p=>`<tr><td>${dmy(p[0])}</td><td>${fmt(p[1])}</td><td>${ST[p[2]]}${p[2]==='APPROVED'&&p[0]<=TODAY&&!prices.some(q=>q[2]==='APPROVED'&&q[0]<=TODAY&&q[0]>p[0])?' · <b>đang áp dụng</b>':''}</td><td>${p[3]||'Không áp dụng'}</td></tr>`).join('');
  $('fPrc').style.display=mode==='view'?'none':'block';}
 $('btnSendPrc').onclick=()=>{const v=$('pVal').value,d=$('pFrom').value;let ok=true;err('eVal','','pVal');err('eFrom','','pFrom');
  if(v===''||+v<0||+v%100!==0||!Number.isInteger(+v)){err('eVal','ERR-MENU-422-11 · Giá bán phải là số không âm, bội số của 100 đồng.','pVal');ok=false;}

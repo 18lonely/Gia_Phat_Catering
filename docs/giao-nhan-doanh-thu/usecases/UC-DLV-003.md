@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-DLV-003-MD
-title: UC-DLV-003 — Lập biên bản chênh lệch
+title: "UC-DLV-003: Lập biên bản chênh lệch"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-DLV-003 — Lập biên bản chênh lệch
+# UC-DLV-003: Lập biên bản chênh lệch
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH được cấp qu
 
 Trigger: Dinh dưỡng viên nhận phản ánh số suất nhận khác số giao trên phiếu.
 
-Tiền điều kiện — nghiệp vụ: Có phiếu giao để tham chiếu; người lập có quyền tại khách/cơ sở liên quan.
-Tiền điều kiện — gate còn mở: E7-Q02 và E6-CG-08 chặn phần chưa có quyền/quy trình và nguồn được xác nhận.
+Tiền điều kiện (nghiệp vụ): Có phiếu giao để tham chiếu; người lập có quyền tại khách/cơ sở liên quan.
+Tiền điều kiện (gate còn mở): E7-Q02 và E6-CG-08 chặn phần chưa có quyền/quy trình và nguồn được xác nhận.
 
 Luồng chính:
 1. Dinh dưỡng viên chọn deliveryId tại UI-E7-03 và xem số giao, số nhận cùng bằng chứng nguồn.

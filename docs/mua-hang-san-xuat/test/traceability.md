@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-TEST-TRACEABILITY-MD
-title: RTM E11 — FR đến màn hình
+title: "RTM E11: FR đến màn hình"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# RTM E11 — FR đến màn hình
+# RTM E11: FR đến màn hình
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

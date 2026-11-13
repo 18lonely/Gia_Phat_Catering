@@ -37,7 +37,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 
 ## 3. Danh mục và payload
 
-### API-EXP-001 — POST /v1/expense-periods
+### API-EXP-001: POST /v1/expense-periods
 
 - FR: FR-EXP-PER-001; màn UI-EXP-01.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -46,7 +46,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q02. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-002 — POST /v1/expense-entries
+### API-EXP-002: POST /v1/expense-entries
 
 - FR: FR-EXP-COST-001; màn UI-EXP-02.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -55,7 +55,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q01. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-003 — POST /v1/attendance-sheets
+### API-EXP-003: POST /v1/attendance-sheets
 
 - FR: FR-EXP-TIME-001; màn UI-EXP-03.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -64,7 +64,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q03; E11-Q09. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-004 — POST /v1/labor-cost-references
+### API-EXP-004: POST /v1/labor-cost-references
 
 - FR: FR-EXP-LAB-001; màn UI-EXP-03.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -73,7 +73,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q03/04. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-005 — POST /v1/allocation-method-versions
+### API-EXP-005: POST /v1/allocation-method-versions
 
 - FR: FR-EXP-METH-001; màn UI-EXP-04.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -82,7 +82,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05/09. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-006 — POST /v1/allocation-method-versions/{id}/decisions
+### API-EXP-006: POST /v1/allocation-method-versions/{id}/decisions
 
 - FR: FR-EXP-APRV-001; màn UI-EXP-04.
 - Quyền: PER-08 + quyền hành động + scope cơ sở.
@@ -91,7 +91,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05; O-06. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-007 — POST /v1/allocation-runs
+### API-EXP-007: POST /v1/allocation-runs
 
 - FR: FR-EXP-ALLOC-001; màn UI-EXP-05.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -100,7 +100,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05/06/09/12. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-008 — GET /v1/profit-runs/{id}/customers
+### API-EXP-008: GET /v1/profit-runs/{id}/customers
 
 - FR: FR-EXP-PROF-001; màn UI-EXP-06.
 - Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.
@@ -109,7 +109,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-009 — GET /v1/profit-runs/{id}/reconciliation
+### API-EXP-009: GET /v1/profit-runs/{id}/reconciliation
 
 - FR: FR-EXP-RECON-001; màn UI-EXP-07.
 - Quyền: PER-08 + quyền hành động + scope cơ sở.
@@ -118,7 +118,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q06/08/09/14. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-010 — POST /v1/expense-adjustments
+### API-EXP-010: POST /v1/expense-adjustments
 
 - FR: FR-EXP-ADJ-001; màn UI-EXP-08.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -127,7 +127,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q10; O-06. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-011 — GET /v1/profit-runs/{id}/internal-projection
+### API-EXP-011: GET /v1/profit-runs/{id}/internal-projection
 
 - FR: FR-EXP-SAFE-001; màn UI-EXP-06.
 - Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.
@@ -136,7 +136,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q11/12; E12-Q07. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-012 — GET /v1/profit-runs/{id}/sources
+### API-EXP-012: GET /v1/profit-runs/{id}/sources
 
 - FR: FR-EXP-SRC-001; màn UI-EXP-05.
 - Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.
@@ -145,7 +145,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q12/13. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-013 — POST /v1/expense-periods/{id}/locks
+### API-EXP-013: POST /v1/expense-periods/{id}/locks
 
 - FR: FR-EXP-PER-001; màn UI-EXP-01.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -154,7 +154,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q02. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-014 — POST /v1/attendance-sheets/{id}/submissions
+### API-EXP-014: POST /v1/attendance-sheets/{id}/submissions
 
 - FR: FR-EXP-TIME-001; màn UI-EXP-03.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -163,7 +163,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q03; E11-Q09. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-015 — POST /v1/allocation-method-versions/{id}/submissions
+### API-EXP-015: POST /v1/allocation-method-versions/{id}/submissions
 
 - FR: FR-EXP-METH-001; màn UI-EXP-04.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -172,7 +172,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05/09. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-016 — POST /v1/expense-adjustments/{id}/decisions
+### API-EXP-016: POST /v1/expense-adjustments/{id}/decisions
 
 - FR: FR-EXP-ADJ-001; màn UI-EXP-08.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -181,7 +181,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q10; O-06. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-017 — POST /v1/profit-runs
+### API-EXP-017: POST /v1/profit-runs
 
 - FR: FR-EXP-PROF-001; màn UI-EXP-06.
 - Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.
@@ -190,7 +190,7 @@ GET dùng path/query theo request bên dưới, không GET body. POST tạo nhá
 - Điều kiện: E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15. Không tự triển khai nhánh chưa chốt.
 - Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.
 
-### API-EXP-018 — GET /v1/expense-periods/{id}/direct-costs
+### API-EXP-018: GET /v1/expense-periods/{id}/direct-costs
 
 - FR: FR-EXP-COST-001; màn UI-EXP-02.
 - Quyền: PER-07 + quyền hành động + scope cơ sở.
@@ -205,8 +205,8 @@ API-EXP-006 chỉ PER-08 khác lập/sửa cuối; API-EXP-016 người duyệt 
 
 [Mapping](data-mapping.md) · [Catalog máy đọc](endpoint-catalog.json) · [RTM](../test/traceability.md).
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E13-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E13-Q12: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

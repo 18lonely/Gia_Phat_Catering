@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-014-MD
-title: UC-FBR-014 — Hỏi đáp số liệu theo quyền
+title: "UC-FBR-014: Hỏi đáp số liệu theo quyền"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-014 — Hỏi đáp số liệu theo quyền
+# UC-FBR-014: Hỏi đáp số liệu theo quyền
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-085; màn UI-FBR-10.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-07, PER-08; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần câu trả lời nháp chờ người thật rà, kèm số nguồn hoặc không đủ dữ liệu; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào câu hỏi về chỉ số, dateRange, customerRef, metricDefinitionRef. Nhánh nghiệp vụ thật cần AIO-Q01–06; E12-Q06/07/08/12; E10-Q15. Các gate chưa được coi là đạt.

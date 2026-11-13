@@ -1,15 +1,15 @@
 ---
 id: DOC-THUC-DON-DINH-LUONG-SRS-STATES
-title: Trạng thái — Thực đơn và định lượng
+title: "Trạng thái: Thực đơn và định lượng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Trạng thái — Thực đơn và định lượng
+# Trạng thái: Thực đơn và định lượng
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

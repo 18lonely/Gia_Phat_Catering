@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-UI-USER-FLOW-MD
-title: User flow E7 — happy/error/edge
+title: "User flow E7: happy/error/edge"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# User flow E7 — happy/error/edge
+# User flow E7: happy/error/edge
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 

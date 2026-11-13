@@ -39,7 +39,7 @@ Trạng thái tất cả: CHỜ TRẢ LỜI. Cột Trả lời để trống. Kh
 | E11-Q14 | Nhận hàng có cập nhật giá E3 không; chọn ngày hiệu lực, nguồn xác nhận VAT và giá có phần lẻ thế nào? | Đối chiếu PriceInput; không ghi đè giá hiệu lực hoặc tự đặt giá tham chiếu. | Port giá chỉ ranh giới; CK/DATA-COST và rounding chưa chốt. |  |
 | E11-Q15 | Căn cứ dị ứng dùng cho kiểm thay món là gì khi không mở hồ sơ sức khỏe cá nhân? | Dùng nhãn chất gây dị ứng của món và ràng buộc thực đơn đã được phép; thiếu căn cứ thì chặn. | Không tạo form sức khỏe; kiểm thay món thực BLOCKED khi thiếu dữ liệu/rule đã duyệt. |  |
 
-> Chờ E11-Q02, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-07](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E11-Q02, O-06: XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-07](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
-> Chờ E11-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-02](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E11-Q08: XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-02](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 

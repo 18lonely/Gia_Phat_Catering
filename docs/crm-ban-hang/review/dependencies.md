@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-REVIEW-DEPENDENCIES-MD
-title: Phụ thuộc E10 — chỉ nhận/đọc nguồn có điều kiện
+title: "Phụ thuộc E10: chỉ nhận/đọc nguồn có điều kiện"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# Phụ thuộc E10 — chỉ nhận/đọc nguồn có điều kiện
+# Phụ thuộc E10: chỉ nhận/đọc nguồn có điều kiện
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 

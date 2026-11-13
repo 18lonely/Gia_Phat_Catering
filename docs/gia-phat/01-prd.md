@@ -1,11 +1,11 @@
-# Product Requirements Document (PRD) — Nền tảng Gia Phát
+# Product Requirements Document (PRD): Nền tảng Gia Phát
 
 ## Metadata
 
 - **Product Name**: Nền tảng Gia Phát (website công khai · cổng khách hàng và người ăn · quản trị nội bộ · 2 AI agent)
 - **Document Version**: 0.1.2
 - **Status**: Draft
-- **Product Owner**: [Chưa chỉ định — phụ thuộc điểm mở O-06]
+- **Product Owner**: [Chưa chỉ định, phụ thuộc điểm mở O-06]
 - **Lead BA**: [Chưa chỉ định]
 - **Last Updated**: 2026-11-11
 - **Tài liệu liên quan**: [BRD](06-brd.md) · [URD](05-urd.md) · [Kế hoạch tổng thể](00-ke-hoach-tong-the.md) · [Bảng quy tắc thực đơn](brainstorms/quy-tac-thuc-don.md)
@@ -36,20 +36,20 @@ Khác với cách làm hiện tại, cost được biết **trước** khi chố
 
 Mức mục tiêu là [ĐỀ XUẤT], lấy từ mục 3 của BRD.
 
-- **O1 — Kiểm soát cost trước khi nấu**
+- **O1. Kiểm soát cost trước khi nấu**
   - **KR1.1**: 100% ngày phục vụ có cost dự toán ≤ 52% doanh thu suất ăn (BO-01)
   - **KR1.2**: Chênh lệch cost thực mua so với dự toán ≤ 3 điểm phần trăm theo ngày và cơ sở (BO-02)
-- **O2 — Thực đơn đúng chuẩn, không phụ thuộc một người**
+- **O2. Thực đơn đúng chuẩn, không phụ thuộc một người**
   - **KR2.1**: 100% thực đơn công bố không vi phạm quy tắc cứng (BO-04)
   - **KR2.2**: Thời gian dinh dưỡng viên dựng một thực đơn tuần giảm ≥ 50% so với hiện tại (BO-03)
-- **O3 — Người ăn tự chọn món, order chạy trên hệ thống**
+- **O3. Người ăn tự chọn món, order chạy trên hệ thống**
   - **KR3.1**: ≥ 70% suất có lựa chọn của người ăn trước hạn chốt, tính trên các công ty bật tính năng (BO-05)
   - **KR3.2**: ≥ 90% order ghi nhận qua cổng thay vì Zalo (BO-06)
   - **KR3.3**: Khách ký biên bản đối soát trong ≤ 5 ngày làm việc sau kỳ (BO-07)
-- **O4 — Website sinh khách hàng tiềm năng đo được**
+- **O4. Website sinh khách hàng tiềm năng đo được**
   - **KR4.1**: 100% lead có nguồn ghi trong CRM (BO-08)
   - **KR4.2**: Số phiên truy cập tự nhiên sau 60 ngày chuyển đổi ≥ 90% mức trước đó (BO-09)
-- **O5 — Chịu tải giờ chốt**
+- **O5. Chịu tải giờ chốt**
   - **KR5.1**: 1000 người dùng đồng thời với p95 API ≤ 300 ms (đọc) và ≤ 800 ms (ghi), không tính AI (BO-10)
 
 ---
@@ -68,8 +68,8 @@ Chi tiết ở mục 2 của URD. Cột "Hành vi công nghệ" chưa có dữ l
 | `PER-06` | A-07, A-08 | Quản lý cơ sở, bếp trưởng | Chính / Hỗ trợ | Biết số suất từng món ngay sau hạn chốt | Ghi giấy, số đến qua Zalo | [CẦN PHỎNG VẤN] |
 | `PER-07` | A-09 | Kế toán | Chính | Nhập giá một lần, doanh thu tự sinh | Nhập lại số liệu, đối soát tay | [CẦN PHỎNG VẤN] |
 | `PER-08` | A-10 | Giám đốc | Chính | Thấy cost %, doanh thu, công nợ theo ngày và khách | Số liệu rải rác | [CẦN PHỎNG VẤN] |
-| `PER-09` | A-11 | Agent Dinh dưỡng viên | Hệ thống | Tạo thực đơn nháp cho khách | — | — |
-| `PER-10` | A-12 | Agent Nội bộ | Hệ thống | Hỗ trợ dựng thực đơn, mua hàng, CRM, số liệu | — | — |
+| `PER-09` | A-11 | Agent Dinh dưỡng viên | Hệ thống | Tạo thực đơn nháp cho khách | Không có | Không áp dụng |
+| `PER-10` | A-12 | Agent Nội bộ | Hệ thống | Hỗ trợ dựng thực đơn, mua hàng, CRM, số liệu | Không có | Không áp dụng |
 
 ---
 
@@ -110,9 +110,9 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `FEAT-001` | AUTH | AUTH-01 | Đăng nhập nội bộ và phân quyền | P0 | PER-05 → 08 | Phân quyền theo vai trò × cơ sở |
 | `FEAT-002` | AUTH | AUTH-06 | Quản lý tài khoản | P0 | PER-05 → 08 | Nhật ký đăng nhập, khoá, đặt lại mật khẩu |
-| `FEAT-003` | SYS | — | Nhật ký thay đổi | P0 | PER-08 | Ghi người, thời điểm, giá trị cũ → mới, lý do cho mọi thay đổi số liệu, giá, công thức |
-| `FEAT-004` | SYS | — | Tham số hệ thống | P0 | PER-05, PER-08 | Ngưỡng cost, hạn chốt, ngưỡng điểm quy tắc là tham số, không viết cứng |
-| `FEAT-005` | SYS | — | Trung tâm thông báo nội bộ | P0 | PER-05 → 08 | Cảnh báo có trạng thái mới / đã xem / đã xử lý |
+| `FEAT-003` | SYS | Không áp dụng | Nhật ký thay đổi | P0 | PER-08 | Ghi người, thời điểm, giá trị cũ → mới, lý do cho mọi thay đổi số liệu, giá, công thức |
+| `FEAT-004` | SYS | Không áp dụng | Tham số hệ thống | P0 | PER-05, PER-08 | Ngưỡng cost, hạn chốt, ngưỡng điểm quy tắc là tham số, không viết cứng |
+| `FEAT-005` | SYS | Không áp dụng | Trung tâm thông báo nội bộ | P0 | PER-05 → 08 | Cảnh báo có trạng thái mới / đã xem / đã xử lý |
 | `FEAT-006` | MENU | MENU-01 | Danh mục nguyên liệu | P0 | PER-05, PER-07 | Đơn vị mua, đơn vị dùng (gram, bìa, quả), hệ số quy đổi, tỷ lệ hao hụt, mùa vụ |
 | `FEAT-007` | MENU | MENU-02 | Danh mục món và thuộc tính | P0 | PER-05 | 12 thuộc tính phục vụ kiểm quy tắc (danh sách ở cuối bảng quy tắc) |
 | `FEAT-008` | MENU | MENU-03 | Công thức có phiên bản | P0 | PER-05 | Định lượng sống min–max, nguyên liệu chính và phụ, người duyệt khác người tạo, ngày hiệu lực. Một hay nhiều cỡ định lượng: [O-02] |
@@ -130,7 +130,7 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | `FEAT-020` | NUTR | NUTR-02 | Tính dinh dưỡng món và suất | P0 | PER-05 | 4 chỉ số: năng lượng, đạm, béo, bột đường; ghi nhãn "ước tính từ định lượng sống" |
 | `FEAT-021` | AIO | AIO-01 | Agent Nội bộ dựng thực đơn | P0 | PER-05 | Đầu vào: loại suất, tuần, kiêng kỵ. Đầu ra: thực đơn nháp đạt FEAT-012 và FEAT-016, kèm bảng kiểm |
 | `FEAT-022` | AIO | AIO-01 | Chỉnh thực đơn bằng lời | P0 | PER-05 | "Đổi cá thứ Tư" → agent đổi và kiểm lại |
-| `FEAT-023` | AIO | — | Nhật ký lượt chạy agent | P0 | PER-08 | Ai hỏi, công cụ nào được gọi, kết quả, chi phí |
+| `FEAT-023` | AIO | Không áp dụng | Nhật ký lượt chạy agent | P0 | PER-08 | Ai hỏi, công cụ nào được gọi, kết quả, chi phí |
 
 ### 4.2 Đợt Next
 
@@ -139,8 +139,8 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | `FEAT-030` | AUTH | AUTH-02 | Tài khoản người đặt tổng | P0 | PER-02 | Gia Phát cấp theo hợp đồng |
 | `FEAT-031` | AUTH | AUTH-03 | Đăng ký người ăn bằng QR công ty | P0 | PER-03 | Quét QR công ty để xác minh rồi tạo tài khoản [D-19] |
 | `FEAT-032` | AUTH | AUTH-04 | Phiên chọn món qua QR | P0 | PER-04 | Không cần tài khoản; cách chống một người chọn nhiều lần chốt ở SRS |
-| `FEAT-033` | AUTH | — | Quản lý QR và danh sách người ăn | P0 | PER-02 | Người đặt tổng gỡ tài khoản, đổi mã QR (BRD R-08) |
-| `FEAT-034` | CUS | — | Công ty, điểm phục vụ, lịch phục vụ, người ăn | P0 | PER-05 | Dữ liệu tối thiểu để chạy order |
+| `FEAT-033` | AUTH | Không áp dụng | Quản lý QR và danh sách người ăn | P0 | PER-02 | Người đặt tổng gỡ tài khoản, đổi mã QR (BRD R-08) |
+| `FEAT-034` | CUS | Không áp dụng | Công ty, điểm phục vụ, lịch phục vụ, người ăn | P0 | PER-05 | Dữ liệu tối thiểu để chạy order |
 | `FEAT-035` | ORD | D-21 | Định mức suất của công ty | P0 | PER-02 | Một định mức chung: giá suất, số món chính, số món phụ |
 | `FEAT-036` | ORD | ORD-01 | Người ăn chọn món | P0 | PER-03, PER-04 | Chọn 1 trong 3 món chính mỗi ngày; chặn tổ hợp vượt định mức (BR-COST-012) |
 | `FEAT-037` | ORD | ORD-01 | Chọn trước cả tuần | P1 | PER-03 | Chỉ cho người có tài khoản |
@@ -154,7 +154,7 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | `FEAT-045` | NUTR | NUTR-03 | Hiển thị định lượng, dinh dưỡng, dị ứng | P0 | PER-01 → 04 | Trên mọi mặt tiền phía khách |
 | `FEAT-046` | NUTR | NUTR-04 | Hồ sơ dinh dưỡng cá nhân | P1 | PER-03 | Tự nguyện, có đồng ý, xoá được. Phạm vi bệnh lý: [O-03] |
 | `FEAT-047` | NUTR | NUTR-05 | Gợi ý chọn món theo hồ sơ | P1 | PER-03 | Nên chọn món nào trong 3 món |
-| `FEAT-048` | PLAN | — | Kế hoạch sản xuất theo món | P0 | PER-06 | Số chốt theo cơ sở × ca × món; phiếu sản xuất xem trên điện thoại |
+| `FEAT-048` | PLAN | Không áp dụng | Kế hoạch sản xuất theo món | P0 | PER-06 | Số chốt theo cơ sở × ca × món; phiếu sản xuất xem trên điện thoại |
 | `FEAT-049` | DLV | M7 | Giao hàng và xác nhận nhận | P0 | PER-02, PER-06 | Theo suất; xác nhận bằng link |
 | `FEAT-050` | DLV | M7 | Biên bản chênh lệch | P0 | PER-05 | Giao bù, giảm trừ theo thoả thuận |
 | `FEAT-051` | FIN | M9 | Doanh thu ghi nhận | P0 | PER-07 | Số tính tiền × giá chụp tại thời điểm order |
@@ -170,8 +170,8 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | `FEAT-061` | AIN | AIN-02, 03 | Giải thích và chỉnh thực đơn | P0 | PER-01, PER-02 | Kiểm lại quy tắc sau mỗi lần chỉnh |
 | `FEAT-062` | AIN | AIN-04 | Gửi nháp về Gia Phát / tạo lead | P0 | PER-01, PER-02 | Người thật duyệt trước khi áp dụng |
 | `FEAT-063` | AIN | AIN-05 | Gợi ý cá nhân qua agent | P1 | PER-03, PER-04 | Dùng FEAT-047 |
-| `FEAT-064` | AIN | — | Giới hạn lượt và ngân sách | P0 | PER-08 | Theo nhóm người dùng; trần chi phí theo ngày |
-| `FEAT-065` | AIN | — | Chặn truy cập cost | P0 | — | Agent phía khách không có công cụ và quyền đọc giá nhập, cost (BN-16) |
+| `FEAT-064` | AIN | Không áp dụng | Giới hạn lượt và ngân sách | P0 | PER-08 | Theo nhóm người dùng; trần chi phí theo ngày |
+| `FEAT-065` | AIN | Không áp dụng | Chặn truy cập cost | P0 | Không áp dụng | Agent phía khách không có công cụ và quyền đọc giá nhập, cost (BN-16) |
 
 ### 4.3 Đợt Later
 
@@ -184,13 +184,13 @@ Cột "Mã cũ" là mã dùng trong kế hoạch tổng thể và BRD. Mã `FR-[
 | `FEAT-074` | PUR | M5 | Nhu cầu nguyên liệu và đơn mua | P1 | PER-07 | Lô chỉ quản lý cho hàng đông lạnh và khô |
 | `FEAT-075` | PUR | M5 | Nhận hàng, công nợ nhà cung cấp | P1 | PER-06, PER-07 | Ảnh chứng từ |
 | `FEAT-076` | COST | COST-07 | Đối chiếu dự toán với thực mua | P1 | PER-07, PER-08 | Theo ngày và cơ sở |
-| `FEAT-077` | PLAN | M6 | Phân ca, kiểm tra trước giao, sổ mẫu lưu | P1 | PER-06 | — |
+| `FEAT-077` | PLAN | M6 | Phân ca, kiểm tra trước giao, sổ mẫu lưu | P1 | PER-06 | Chưa có |
 | `FEAT-078` | MENU | MENU-08 | Món thay thế khi thiếu hàng | P1 | PER-05 | Cùng vai trò, kiểm lại dị ứng, quy tắc, cost |
-| `FEAT-079` | FB | M8 | Đánh giá bữa ăn, khiếu nại | P1 | PER-02 → 05 | — |
+| `FEAT-079` | FB | M8 | Đánh giá bữa ăn, khiếu nại | P1 | PER-02 → 05 | Chưa có |
 | `FEAT-080` | FB | M8 | Phân tích món và đề xuất thực đơn | P1 | PER-05 | Tỷ lệ được chọn tính từ lựa chọn thật của người ăn |
-| `FEAT-081` | RPT | — | Dashboard theo vai trò | P1 | PER-05 → 08 | Thêm cost % theo ngày và theo khách |
+| `FEAT-081` | RPT | Không áp dụng | Dashboard theo vai trò | P1 | PER-05 → 08 | Thêm cost % theo ngày và theo khách |
 | `FEAT-082` | AIO | AIO-02 | Rà soát thực đơn khi giá đổi | P1 | PER-05, PER-08 | Đề xuất đổi món hoặc định lượng |
-| `FEAT-083` | AIO | AIO-03, 04 | Dự toán, nhu cầu nguyên liệu, cảnh báo giá lệch | P1 | PER-07 | — |
+| `FEAT-083` | AIO | AIO-03, 04 | Dự toán, nhu cầu nguyên liệu, cảnh báo giá lệch | P1 | PER-07 | Chưa có |
 | `FEAT-084` | AIO | AIO-05 | Hỗ trợ CRM | P1 | PER-05, PER-08 | Tóm tắt khách, nhắc việc, nháp báo giá |
 | `FEAT-085` | AIO | AIO-06 | Hỏi đáp số liệu | P2 | PER-07, PER-08 | Chỉ đọc, theo quyền người hỏi |
 | `FEAT-086` | NUTR | NUTR-06 | Mục tiêu dinh dưỡng theo nhóm người ăn | P1 | PER-05 | Kiểm thực đơn theo mục tiêu |
@@ -256,7 +256,7 @@ Giữ nguyên trạng thái mở.
 
 Điểm phát sinh từ URD, chốt ở SRS epic `chon-mon-order`: xử lý thế nào khi người đặt tổng chốt tổng số suất nhỏ hơn số người đã tự chọn (FEAT-038).
 
-## Liên kết đặc tả MVP hiện hành — E4/E5
+## Liên kết đặc tả MVP hiện hành (E4/E5)
 
 - E4/R4: [SRS Dinh dưỡng](../dinh-duong/srs/spec.md), [câu hỏi nguồn/dung sai/dữ liệu](../dinh-duong/review/questions.md).
 - E5/R5: [SRS Agent Nội bộ](../agent-noi-bo/srs/spec.md), [câu hỏi vận hành và nghiệm thu](../agent-noi-bo/review/questions.md).
@@ -264,7 +264,7 @@ Giữ nguyên trạng thái mở.
 
 NUTR-Q04 cần chốt ý nghĩa “khớp” của 5 suất R4; không mượn dung sai Cost. AIO-Q02 cần xác nhận hành vi agent khi Cost ở CANH_BAO; tiêu chí R5 không vượt ngưỡng vẫn giữ, không đổi cổng gửi duyệt MENU. R5 vẫn phụ thuộc R2/R3 theo roadmap; R4 thuộc cổng G-Now, không tự thêm phụ thuộc cứng vào generation. O-04 và các điểm mở khác không tự đóng.
 
-## Tiến độ hồ sơ BA sau bổ sung — 11/11/2026
+## Tiến độ hồ sơ BA sau bổ sung ngày 11/11/2026
 
 [Dashboard](../project-dashboard.md) và [bàn giao](review/ba-completion-handoff.md) ghi chi tiết E1–E5; [E6 gói review v0.2](../chon-mon-order/preview.html) đã bổ sung UC/API/UI/AC/RTM; còn gate nghiệp vụ và chưa triển khai release. Phạm vi/ưu tiên, G-Now và tiêu chí nghiệm thu roadmap giữ nguyên. O-03 vẫn gated FEAT-046/047, không tự mở thu thập sức khỏe.
 

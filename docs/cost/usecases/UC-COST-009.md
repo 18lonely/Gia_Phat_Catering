@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Có kết quả ngân sách đúng phiên bản nội dung và phạm vi; chưa tạo snapshot duyệt.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-MEAL-001`, `FR-COST-MEAL-002`, `FR-COST-MEAL-003`, `FR-COST-RUL-001`, `FR-COST-RUL-002`.
-- **Điểm chạm:** SCR-MENU-10, SCR-COST-12 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-MENU-10, SCR-COST-12, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

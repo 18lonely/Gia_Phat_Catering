@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-007-MD
-title: UC-EXP-007 — Kiểm cổng và lập lần phân bổ
+title: "UC-EXP-007: Kiểm cổng và lập lần phân bổ"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-007 — Kiểm cổng và lập lần phân bổ
+# UC-EXP-007: Kiểm cổng và lập lần phân bổ
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: không có phương pháp APPROVED; khi yêu cầu lợi nhuận theo khách thì ERR-EXP-422-03 và BLOCKED; chỉ xem chi phí trực tiếp.
-- **4d — biên**: driver thiếu hoặc tổng driver bằng 0; khi yêu cầu phân bổ thì không chia 0, không dồn cho khách bất kỳ; giữ khoản chưa phân bổ và lý do.
+- **4c. Đặc thù**: không có phương pháp APPROVED; khi yêu cầu lợi nhuận theo khách thì ERR-EXP-422-03 và BLOCKED; chỉ xem chi phí trực tiếp.
+- **4d. Biên**: driver thiếu hoặc tổng driver bằng 0; khi yêu cầu phân bổ thì không chia 0, không dồn cho khách bất kỳ; giữ khoản chưa phân bổ và lý do.
 
 ## Quy tắc và truy vết
 

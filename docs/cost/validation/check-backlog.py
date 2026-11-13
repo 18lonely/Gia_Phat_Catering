@@ -39,7 +39,7 @@ ac=(B/'userstories/acceptance-criteria.md').read_text(encoding='utf-8')
 tc=(B/'test/test-cases.md').read_text(encoding='utf-8')
 assert ac.count('Scenario: ')==len(cases)
 for c in cases:
-    assert f"### {c['ac']} " in ac and f"### {c['tc']} " in tc
+    assert f"### {c['ac']}:" in ac and f"### {c['tc']}:" in tc
     assert c['tc'] in (B/'test/traceability.md').read_text(encoding='utf-8')
 for p in [* (B/'userstories').glob('*.md'),* (B/'test').glob('*.md')]:
     for target in re.findall(r'\]\(([^)]+)\)',p.read_text(encoding='utf-8')):

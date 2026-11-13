@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-001-MD
-title: UC-FBR-001 — Gửi đánh giá bữa ăn
+title: "UC-FBR-001: Gửi đánh giá bữa ăn"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-001 — Gửi đánh giá bữa ăn
+# UC-FBR-001: Gửi đánh giá bữa ăn
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-079; màn UI-FBR-01.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-02, PER-03, PER-04, PER-05; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần đánh giá có receipt và trạng thái tiếp nhận; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào mealRef, ratingScaleRef, ratingValue, sourceScope. Nhánh nghiệp vụ thật cần E12-Q01/02; E6 CG01/08. Các gate chưa được coi là đạt.

@@ -26,11 +26,11 @@
           "refs": [
             "BR-PRC-001"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-001-01",
           "tc": "TC-COST-001-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Tên trùng sau chuẩn hóa",
@@ -42,11 +42,11 @@
             "BR-CAT-001",
             "ERR-COST-409-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-001-02",
           "tc": "TC-COST-001-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Ngừng không xóa giá cũ",
@@ -61,7 +61,7 @@
           "kind": "Functional",
           "ac": "AC-COST-001-03",
           "tc": "TC-COST-001-03",
-          "status": "BLOCKED — FLOW-COST-Q03"
+          "status": "BLOCKED (chờ FLOW-COST-Q03)"
         }
       ],
       "apis": [
@@ -97,11 +97,11 @@
             "BR-PRC-002",
             "BR-PRC-005"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-002-01",
           "tc": "TC-COST-002-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Giá không hợp lệ",
@@ -112,11 +112,11 @@
             "BR-PRC-002",
             "ERR-COST-422-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-002-02",
           "tc": "TC-COST-002-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Biên ngày và khóa trùng",
@@ -133,7 +133,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-002-03",
           "tc": "TC-COST-002-03",
-          "status": "BLOCKED — E3-Q13"
+          "status": "BLOCKED (chờ E3-Q13)"
         },
         {
           "title": "Tham chiếu không tồn tại",
@@ -143,11 +143,11 @@
           "refs": [
             "ERR-COST-404-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-002-04",
           "tc": "TC-COST-002-04",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Schema và trường do server quản lý",
@@ -161,7 +161,7 @@
           "kind": "Contract",
           "ac": "AC-COST-002-05",
           "tc": "TC-COST-002-05",
-          "status": "BLOCKED — review API"
+          "status": "BLOCKED (review API)"
         },
         {
           "title": "NCC inactive có hai mã lỗi trong SRS",
@@ -176,7 +176,7 @@
           "kind": "Contract",
           "ac": "AC-COST-002-06",
           "tc": "TC-COST-002-06",
-          "status": "BLOCKED — QA-COST-Q01: BA/Tech lead thống nhất mã"
+          "status": "BLOCKED (QA-COST-Q01: BA/Tech lead thống nhất mã)"
         }
       ],
       "apis": [
@@ -212,11 +212,11 @@
             "BR-PRC-006",
             "BR-COST-004"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-003-01",
           "tc": "TC-COST-003-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Không dùng giá tương lai",
@@ -227,11 +227,11 @@
             "BR-PRC-006",
             "ERR-COST-404-02"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-003-02",
           "tc": "TC-COST-003-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Chuyển cờ trong cùng nhóm tương lai",
@@ -245,7 +245,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-003-03",
           "tc": "TC-COST-003-03",
-          "status": "BLOCKED — E3-Q4; E3-Q14"
+          "status": "BLOCKED (chờ E3-Q4); E3-Q14"
         }
       ],
       "apis": [
@@ -269,7 +269,7 @@
       "uc": "003",
       "priority": "P0",
       "points": 3,
-      "gates": "—",
+      "gates": "Không có",
       "cases": [
         {
           "title": "Bỏ qua dòng không đổi",
@@ -277,11 +277,11 @@
           "when": "lọc nhóm/bảo quản/đang dùng; đổi I1 thành 110000, giữ I2; lưu ngày hợp lệ",
           "then": "tạo đúng một giá I1; I2 không thêm lịch sử",
           "refs": [],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-004-01",
           "tc": "TC-COST-004-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Một dòng sai rollback",
@@ -292,11 +292,11 @@
             "BR-PRC-002",
             "ERR-COST-422-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-004-02",
           "tc": "TC-COST-004-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Mất phản hồi sau commit",
@@ -308,7 +308,7 @@
           "kind": "Integration",
           "ac": "AC-COST-004-03",
           "tc": "TC-COST-004-03",
-          "status": "BLOCKED — FLOW-COST-Q02"
+          "status": "BLOCKED (chờ FLOW-COST-Q02)"
         },
         {
           "title": "Hiệu năng lưới200 dòng",
@@ -322,7 +322,7 @@
           "kind": "Performance",
           "ac": "AC-COST-004-04",
           "tc": "TC-COST-004-04",
-          "status": "BLOCKED — môi trường backend"
+          "status": "BLOCKED (môi trường backend)"
         },
         {
           "title": "Key cùng body khác và đang xử lý",
@@ -337,7 +337,7 @@
           "kind": "Contract",
           "ac": "AC-COST-004-05",
           "tc": "TC-COST-004-05",
-          "status": "BLOCKED — FLOW-COST-Q02"
+          "status": "BLOCKED (chờ FLOW-COST-Q02)"
         }
       ],
       "apis": [
@@ -360,7 +360,7 @@
       "uc": "004",
       "priority": "P0",
       "points": 5,
-      "gates": "—",
+      "gates": "Không có",
       "cases": [
         {
           "title": "Đọc đúng tên cột",
@@ -370,11 +370,11 @@
           "refs": [
             "BR-CAT-023"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-005-01",
           "tc": "TC-COST-005-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Tệp lỗi không ghi",
@@ -385,11 +385,11 @@
             "BR-CAT-023",
             "ERR-MENU-422-20"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-005-02",
           "tc": "TC-COST-005-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Giới hạn dòng và đọc số",
@@ -400,11 +400,11 @@
             "BR-CAT-023",
             "ERR-MENU-422-20"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-005-03",
           "tc": "TC-COST-005-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Import đã kiểm bị đổi",
@@ -418,7 +418,7 @@
           "kind": "Contract",
           "ac": "AC-COST-005-04",
           "tc": "TC-COST-005-04",
-          "status": "BLOCKED — review API"
+          "status": "BLOCKED (review API)"
         },
         {
           "title": "Số dạng văn bản và trang tính",
@@ -428,11 +428,11 @@
           "refs": [
             "BR-CAT-023"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-005-05",
           "tc": "TC-COST-005-05",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [
@@ -468,11 +468,11 @@
             "BR-PRC-004",
             "BR-AUD-001"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-006-01",
           "tc": "TC-COST-006-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Giá đã hiệu lực",
@@ -483,11 +483,11 @@
             "BR-PRC-004",
             "ERR-COST-409-03"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-006-02",
           "tc": "TC-COST-006-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Phạm vi lịch sử",
@@ -497,11 +497,11 @@
           "refs": [
             "ERR-SYS-404-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-006-03",
           "tc": "TC-COST-006-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [
@@ -538,11 +538,11 @@
           "refs": [
             "BR-PRC-006"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-007-01",
           "tc": "TC-COST-007-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Chạy lại không nhân cảnh báo",
@@ -557,7 +557,7 @@
           "kind": "Functional",
           "ac": "AC-COST-007-02",
           "tc": "TC-COST-007-02",
-          "status": "BLOCKED — FLOW-COST-Q03"
+          "status": "BLOCKED (chờ FLOW-COST-Q03)"
         },
         {
           "title": "Biên tuổi giá",
@@ -572,7 +572,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-007-03",
           "tc": "TC-COST-007-03",
-          "status": "BLOCKED — DL-01"
+          "status": "BLOCKED (chờ DL-01)"
         }
       ],
       "apis": [
@@ -605,11 +605,11 @@
           "refs": [
             "BR-PRC-009"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-008-01",
           "tc": "TC-COST-008-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Hủy xác nhận",
@@ -619,11 +619,11 @@
           "refs": [
             "BR-PRC-009"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-008-02",
           "tc": "TC-COST-008-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Đúng ngưỡng và giá đầu tiên",
@@ -633,11 +633,11 @@
           "refs": [
             "BR-PRC-009"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-008-03",
           "tc": "TC-COST-008-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Token xác nhận stale",
@@ -651,7 +651,7 @@
           "kind": "Contract",
           "ac": "AC-COST-008-04",
           "tc": "TC-COST-008-04",
-          "status": "BLOCKED — review API"
+          "status": "BLOCKED (review API)"
         }
       ],
       "apis": [
@@ -676,7 +676,7 @@
       "uc": "002",
       "priority": "P1",
       "points": 2,
-      "gates": "—",
+      "gates": "Không có",
       "cases": [
         {
           "title": "Gắn PDF hợp lệ",
@@ -684,11 +684,11 @@
           "when": "upload rồi gắn vào giá hoặc một lô; mở bằng quyền hợp lệ",
           "then": "truy lại cùng chứng từ; URL nội bộ có chữ ký hết hạn 15 phút",
           "refs": [],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-009-01",
           "tc": "TC-COST-009-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Sai nội dung và quá dung lượng",
@@ -699,11 +699,11 @@
             "ERR-SYS-415-01",
             "ERR-SYS-413-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-009-02",
           "tc": "TC-COST-009-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Thu hồi quyền và URL hết hạn",
@@ -711,11 +711,11 @@
           "when": "thử tải bằng QL A; thử tải URL hết hạn",
           "then": "không trả bytes chứng từ; không rò qua URL tải hoặc thông báo lỗi",
           "refs": [],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-009-03",
           "tc": "TC-COST-009-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [
@@ -754,11 +754,11 @@
             "BR-CALC-002",
             "BR-CALC-006"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-010-01",
           "tc": "TC-COST-010-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Không trả tổng thiếu",
@@ -770,11 +770,11 @@
             "BR-CALC-003",
             "ERR-COST-422-03"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-010-02",
           "tc": "TC-COST-010-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Công thức theo ngày và quyền",
@@ -785,11 +785,11 @@
             "BR-CALC-001",
             "BR-CAT-014"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-010-03",
           "tc": "TC-COST-010-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Món không tồn tại",
@@ -799,11 +799,11 @@
           "refs": [
             "ERR-MENU-404-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-010-04",
           "tc": "TC-COST-010-04",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Hao hụt đúng một lần",
@@ -817,7 +817,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-010-05",
           "tc": "TC-COST-010-05",
-          "status": "BLOCKED — E3-Q2"
+          "status": "BLOCKED (chờ E3-Q2)"
         },
         {
           "title": "Đối soát bộ kế toán",
@@ -831,7 +831,7 @@
           "kind": "Accuracy",
           "ac": "AC-COST-010-06",
           "tc": "TC-COST-010-06",
-          "status": "BLOCKED — O-01; dữ liệu kế toán"
+          "status": "BLOCKED (chờ O-01); dữ liệu kế toán"
         },
         {
           "title": "Decimal và không làm tròn trung gian",
@@ -842,11 +842,11 @@
             "NFR-COST-008",
             "BR-CALC-006"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Accuracy",
           "ac": "AC-COST-010-07",
           "tc": "TC-COST-010-07",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Tổng cost0 không chia cho0",
@@ -860,7 +860,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-010-08",
           "tc": "TC-COST-010-08",
-          "status": "BLOCKED — FLOW-COST-Q04"
+          "status": "BLOCKED (chờ FLOW-COST-Q04)"
         }
       ],
       "apis": [
@@ -890,11 +890,11 @@
           "when": "so sánh R1 và R2",
           "then": "chênh1000 và10%; không ghi giá hay tự duyệt công thức",
           "refs": [],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-011-01",
           "tc": "TC-COST-011-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Một bản thiếu giá",
@@ -904,11 +904,11 @@
           "refs": [
             "ERR-COST-422-03"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-011-02",
           "tc": "TC-COST-011-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Cost gốc bằng0",
@@ -920,7 +920,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-011-03",
           "tc": "TC-COST-011-03",
-          "status": "BLOCKED — FLOW-COST-Q04"
+          "status": "BLOCKED (chờ FLOW-COST-Q04)"
         }
       ],
       "apis": [
@@ -952,11 +952,11 @@
           "refs": [
             "BR-CALC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-012-01",
           "tc": "TC-COST-012-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Sai loại món",
@@ -966,11 +966,11 @@
           "refs": [
             "ERR-COST-422-04"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-012-02",
           "tc": "TC-COST-012-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Thiếu một giá",
@@ -981,11 +981,11 @@
             "BR-CALC-003",
             "ERR-COST-422-03"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-012-03",
           "tc": "TC-COST-012-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [
@@ -1021,11 +1021,11 @@
             "BR-SEC-008",
             "BR-CALC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-013-01",
           "tc": "TC-COST-013-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Không tự duyệt hoặc thiếu lý do",
@@ -1037,11 +1037,11 @@
             "ERR-SYS-403-01",
             "ERR-SYS-422-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-013-02",
           "tc": "TC-COST-013-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Hiệu lực và cơ sở",
@@ -1056,7 +1056,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-013-03",
           "tc": "TC-COST-013-03",
-          "status": "BLOCKED — E3-Q16"
+          "status": "BLOCKED (chờ E3-Q16)"
         },
         {
           "title": "Hai quyết định cạnh tranh",
@@ -1071,7 +1071,7 @@
           "kind": "Contract",
           "ac": "AC-COST-013-04",
           "tc": "TC-COST-013-04",
-          "status": "BLOCKED — review API và concurrency token"
+          "status": "BLOCKED (review API và concurrency token)"
         }
       ],
       "apis": [
@@ -1108,7 +1108,7 @@
           "kind": "Functional",
           "ac": "AC-COST-014-01",
           "tc": "TC-COST-014-01",
-          "status": "BLOCKED — E3-Q7"
+          "status": "BLOCKED (chờ E3-Q7)"
         },
         {
           "title": "Thiếu giá không phân nhóm",
@@ -1122,7 +1122,7 @@
           "kind": "Functional",
           "ac": "AC-COST-014-02",
           "tc": "TC-COST-014-02",
-          "status": "BLOCKED — E3-Q7"
+          "status": "BLOCKED (chờ E3-Q7)"
         },
         {
           "title": "Biên phân nhóm",
@@ -1134,7 +1134,7 @@
           "kind": "Boundary",
           "ac": "AC-COST-014-03",
           "tc": "TC-COST-014-03",
-          "status": "BLOCKED — E3-Q7"
+          "status": "BLOCKED (chờ E3-Q7)"
         }
       ],
       "apis": [
@@ -1175,7 +1175,7 @@
           "kind": "Functional",
           "ac": "AC-COST-015-01",
           "tc": "TC-COST-015-01",
-          "status": "BLOCKED — O-01; E2-Q1"
+          "status": "BLOCKED (chờ O-01); E2-Q1"
         },
         {
           "title": "VAT thiếu hoặc mẫu số0",
@@ -1186,11 +1186,11 @@
             "BR-CALC-005",
             "ERR-COST-422-05"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-015-02",
           "tc": "TC-COST-015-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Làm tròn rồi so ngưỡng",
@@ -1201,11 +1201,11 @@
             "BR-CALC-006",
             "BR-COST-001"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-015-03",
           "tc": "TC-COST-015-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Ba phương pháp món chính",
@@ -1219,7 +1219,7 @@
           "kind": "Functional",
           "ac": "AC-COST-015-04",
           "tc": "TC-COST-015-04",
-          "status": "BLOCKED — E3-Q1; E3-Q12"
+          "status": "BLOCKED (chờ E3-Q1); E3-Q12"
         },
         {
           "title": "Ngày chưa đủ món và phản hồi cũ",
@@ -1231,7 +1231,7 @@
           "kind": "Integration",
           "ac": "AC-COST-015-05",
           "tc": "TC-COST-015-05",
-          "status": "BLOCKED — FLOW-COST-Q02"
+          "status": "BLOCKED (chờ FLOW-COST-Q02)"
         },
         {
           "title": "Hiệu năng tính thực đơn",
@@ -1245,7 +1245,7 @@
           "kind": "Performance",
           "ac": "AC-COST-015-06",
           "tc": "TC-COST-015-06",
-          "status": "BLOCKED — môi trường backend"
+          "status": "BLOCKED (môi trường backend)"
         }
       ],
       "apis": [
@@ -1278,11 +1278,11 @@
             "BR-CALC-008",
             "BR-SEC-008"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-016-01",
           "tc": "TC-COST-016-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Khoản sai không nhận",
@@ -1293,11 +1293,11 @@
             "BR-CALC-008",
             "ERR-COST-422-06"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-016-02",
           "tc": "TC-COST-016-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Số0 và người đề nghị",
@@ -1309,11 +1309,11 @@
             "BR-SEC-008",
             "ERR-SYS-403-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-016-03",
           "tc": "TC-COST-016-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Khoản trùng khi duyệt",
@@ -1327,7 +1327,7 @@
           "kind": "Contract",
           "ac": "AC-COST-016-04",
           "tc": "TC-COST-016-04",
-          "status": "BLOCKED — review API"
+          "status": "BLOCKED (review API)"
         }
       ],
       "apis": [
@@ -1361,11 +1361,11 @@
           "refs": [
             "BR-CALC-009"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-017-01",
           "tc": "TC-COST-017-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Một cơ sở vượt",
@@ -1377,11 +1377,11 @@
             "BR-COST-001",
             "ERR-COST-422-07"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-017-02",
           "tc": "TC-COST-017-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Cảnh báo không bỏ qua dữ liệu thiếu",
@@ -1395,11 +1395,11 @@
             "ERR-COST-422-04",
             "ERR-COST-422-05"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-017-03",
           "tc": "TC-COST-017-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [],
@@ -1433,7 +1433,7 @@
           "kind": "Functional",
           "ac": "AC-COST-018-01",
           "tc": "TC-COST-018-01",
-          "status": "BLOCKED — FLOW-COST-Q02"
+          "status": "BLOCKED (chờ FLOW-COST-Q02)"
         },
         {
           "title": "Giá đổi trong lúc chờ",
@@ -1447,7 +1447,7 @@
           "kind": "Functional",
           "ac": "AC-COST-018-02",
           "tc": "TC-COST-018-02",
-          "status": "BLOCKED — FLOW-COST-Q06"
+          "status": "BLOCKED (chờ FLOW-COST-Q06)"
         },
         {
           "title": "Bất biến và rollback",
@@ -1461,7 +1461,7 @@
           "kind": "Integration",
           "ac": "AC-COST-018-03",
           "tc": "TC-COST-018-03",
-          "status": "BLOCKED — FLOW-COST-Q02"
+          "status": "BLOCKED (chờ FLOW-COST-Q02)"
         }
       ],
       "apis": [
@@ -1483,7 +1483,7 @@
       "uc": "011",
       "priority": "P0",
       "points": 2,
-      "gates": "—",
+      "gates": "Không có",
       "cases": [
         {
           "title": "Duyệt thay đổi SYS",
@@ -1494,11 +1494,11 @@
             "BR-SYS-002",
             "BR-SEC-008"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-019-01",
           "tc": "TC-COST-019-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Tự duyệt bị cấm",
@@ -1509,11 +1509,11 @@
             "BR-SEC-008",
             "ERR-SYS-403-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-019-02",
           "tc": "TC-COST-019-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Hiệu lực tương lai",
@@ -1524,11 +1524,11 @@
             "BR-SYS-002",
             "BR-CALC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-019-03",
           "tc": "TC-COST-019-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [],
@@ -1566,7 +1566,7 @@
           "kind": "Functional",
           "ac": "AC-COST-020-01",
           "tc": "TC-COST-020-01",
-          "status": "BLOCKED — DL-01; E3-Q7"
+          "status": "BLOCKED (chờ DL-01); E3-Q7"
         },
         {
           "title": "Không lộ tiền trong lỗi",
@@ -1576,11 +1576,11 @@
           "refs": [
             "ERR-COST-422-07"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-020-02",
           "tc": "TC-COST-020-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Quyền thay đổi và agent nội bộ",
@@ -1590,11 +1590,11 @@
           "refs": [
             "BR-SEC-009"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-020-03",
           "tc": "TC-COST-020-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Hồi quy quy tắc đã thuộc MENU",
@@ -1611,7 +1611,7 @@
           "kind": "Integration",
           "ac": "AC-COST-020-04",
           "tc": "TC-COST-020-04",
-          "status": "BLOCKED — E2-Q5"
+          "status": "BLOCKED (chờ E2-Q5)"
         }
       ],
       "apis": [
@@ -1644,11 +1644,11 @@
             "BR-CALC-011",
             "BR-SEC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-021-01",
           "tc": "TC-COST-021-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Thực đơn lỗi",
@@ -1658,11 +1658,11 @@
           "refs": [
             "ERR-MENU-422-14"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-021-02",
           "tc": "TC-COST-021-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Quota lời gọi31",
@@ -1672,11 +1672,11 @@
           "refs": [
             "ERR-COST-429-01"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-021-03",
           "tc": "TC-COST-021-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Thiếu giá và trạng thái hỗn hợp",
@@ -1690,7 +1690,7 @@
           "kind": "Functional",
           "ac": "AC-COST-021-04",
           "tc": "TC-COST-021-04",
-          "status": "BLOCKED — FLOW-COST-Q09"
+          "status": "BLOCKED (chờ FLOW-COST-Q09)"
         },
         {
           "title": "Không rò dữ liệu toàn API",
@@ -1704,7 +1704,7 @@
           "kind": "Security",
           "ac": "AC-COST-021-05",
           "tc": "TC-COST-021-05",
-          "status": "BLOCKED — E3-Q11"
+          "status": "BLOCKED (chờ E3-Q11)"
         },
         {
           "title": "Quyền DB agent khách",
@@ -1719,7 +1719,7 @@
           "kind": "Security",
           "ac": "AC-COST-021-06",
           "tc": "TC-COST-021-06",
-          "status": "BLOCKED — môi trường backend"
+          "status": "BLOCKED (môi trường backend)"
         },
         {
           "title": "Log budget không chứa số",
@@ -1734,7 +1734,7 @@
           "kind": "Security",
           "ac": "AC-COST-021-07",
           "tc": "TC-COST-021-07",
-          "status": "BLOCKED — môi trường backend"
+          "status": "BLOCKED (môi trường backend)"
         }
       ],
       "apis": [
@@ -1768,11 +1768,11 @@
             "BR-EST-002",
             "BR-EST-003"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-022-01",
           "tc": "TC-COST-022-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Số suất sai",
@@ -1783,11 +1783,11 @@
             "BR-EST-001",
             "ERR-COST-422-08"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-022-02",
           "tc": "TC-COST-022-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Làm tròn lên lượng mua",
@@ -1797,11 +1797,11 @@
           "refs": [
             "BR-EST-002"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Boundary",
           "ac": "AC-COST-022-03",
           "tc": "TC-COST-022-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "K lớn hơn1",
@@ -1815,7 +1815,7 @@
           "kind": "Functional",
           "ac": "AC-COST-022-04",
           "tc": "TC-COST-022-04",
-          "status": "BLOCKED — E3-Q15"
+          "status": "BLOCKED (chờ E3-Q15)"
         }
       ],
       "apis": [
@@ -1853,7 +1853,7 @@
           "kind": "Functional",
           "ac": "AC-COST-023-01",
           "tc": "TC-COST-023-01",
-          "status": "BLOCKED — FLOW-COST-Q07"
+          "status": "BLOCKED (chờ FLOW-COST-Q07)"
         },
         {
           "title": "Một ngày thiếu giá",
@@ -1868,7 +1868,7 @@
           "kind": "Functional",
           "ac": "AC-COST-023-02",
           "tc": "TC-COST-023-02",
-          "status": "BLOCKED — FLOW-COST-Q07"
+          "status": "BLOCKED (chờ FLOW-COST-Q07)"
         },
         {
           "title": "Retry tuần và phiên bản",
@@ -1882,7 +1882,7 @@
           "kind": "Integration",
           "ac": "AC-COST-023-03",
           "tc": "TC-COST-023-03",
-          "status": "BLOCKED — FLOW-COST-Q02; FLOW-COST-Q07"
+          "status": "BLOCKED (chờ FLOW-COST-Q02); FLOW-COST-Q07"
         }
       ],
       "apis": [
@@ -1917,11 +1917,11 @@
             "BR-EST-004",
             "BR-CALC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-024-01",
           "tc": "TC-COST-024-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Bếp không xem cơ sở khác",
@@ -1935,7 +1935,7 @@
           "kind": "Security",
           "ac": "AC-COST-024-02",
           "tc": "TC-COST-024-02",
-          "status": "BLOCKED — E3-Q11"
+          "status": "BLOCKED (chờ E3-Q11)"
         },
         {
           "title": "Không có cột tiền ẩn",
@@ -1949,7 +1949,7 @@
           "kind": "Security",
           "ac": "AC-COST-024-03",
           "tc": "TC-COST-024-03",
-          "status": "BLOCKED — E3-Q11"
+          "status": "BLOCKED (chờ E3-Q11)"
         }
       ],
       "apis": [
@@ -1984,11 +1984,11 @@
           "refs": [
             "BR-CALC-010"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-025-01",
           "tc": "TC-COST-025-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Quyền bị thu hồi trước tải",
@@ -1996,11 +1996,11 @@
           "when": "tải tệp và retry URL cũ",
           "then": "không tải được dữ liệu ngoài quyền; phản hồi lỗi không chứa tiền",
           "refs": [],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Security",
           "ac": "AC-COST-025-02",
           "tc": "TC-COST-025-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Bản chỉ lượng không giấu tiền trong tệp",
@@ -2012,7 +2012,7 @@
           "kind": "Security",
           "ac": "AC-COST-025-03",
           "tc": "TC-COST-025-03",
-          "status": "BLOCKED — E3-Q11"
+          "status": "BLOCKED (chờ E3-Q11)"
         }
       ],
       "apis": [
@@ -2047,11 +2047,11 @@
             "BR-CALC-010",
             "NFR-COST-004"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-026-01",
           "tc": "TC-COST-026-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Không tính lại ngày đã qua",
@@ -2061,11 +2061,11 @@
           "refs": [
             "BR-COST-011"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-026-02",
           "tc": "TC-COST-026-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Không trùng cảnh báo",
@@ -2079,7 +2079,7 @@
           "kind": "Integration",
           "ac": "AC-COST-026-03",
           "tc": "TC-COST-026-03",
-          "status": "BLOCKED — FLOW-COST-Q08"
+          "status": "BLOCKED (chờ FLOW-COST-Q08)"
         }
       ],
       "apis": [
@@ -2103,7 +2103,7 @@
       "uc": "014",
       "priority": "P1",
       "points": 3,
-      "gates": "—",
+      "gates": "Không có",
       "cases": [
         {
           "title": "Đóng tay có audit",
@@ -2113,11 +2113,11 @@
           "refs": [
             "BR-AUD-001"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-027-01",
           "tc": "TC-COST-027-01",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Lý do ngắn hoặc thiếu quyền",
@@ -2129,11 +2129,11 @@
             "ERR-SYS-422-01",
             "ERR-AUTH-403-02"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Functional",
           "ac": "AC-COST-027-02",
           "tc": "TC-COST-027-02",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         },
         {
           "title": "Đóng theo sự kiện nghiệp vụ",
@@ -2143,11 +2143,11 @@
           "refs": [
             "BR-AUD-001"
           ],
-          "gate": "—",
+          "gate": "Không có",
           "kind": "Integration",
           "ac": "AC-COST-027-03",
           "tc": "TC-COST-027-03",
-          "status": "NOT RUN — chưa có backend"
+          "status": "NOT RUN (chưa có backend)"
         }
       ],
       "apis": [
@@ -2184,7 +2184,7 @@
           "kind": "Functional",
           "ac": "AC-COST-028-01",
           "tc": "TC-COST-028-01",
-          "status": "BLOCKED — FLOW-COST-Q10"
+          "status": "BLOCKED (chờ FLOW-COST-Q10)"
         },
         {
           "title": "Giá giả định sai",
@@ -2199,7 +2199,7 @@
           "kind": "Functional",
           "ac": "AC-COST-028-02",
           "tc": "TC-COST-028-02",
-          "status": "BLOCKED — FLOW-COST-Q10"
+          "status": "BLOCKED (chờ FLOW-COST-Q10)"
         },
         {
           "title": "Phạm vi và thiếu giá khác",
@@ -2213,7 +2213,7 @@
           "kind": "Security",
           "ac": "AC-COST-028-03",
           "tc": "TC-COST-028-03",
-          "status": "BLOCKED — FLOW-COST-Q10"
+          "status": "BLOCKED (chờ FLOW-COST-Q10)"
         }
       ],
       "apis": [

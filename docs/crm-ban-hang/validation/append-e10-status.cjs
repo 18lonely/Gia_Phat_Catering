@@ -1,9 +1,9 @@
 // Chỉ nối thêm hai file được phép, kiểm hash trước ghi và không chạy lặp.
 const fs=require('fs'),path=require('path'),crypto=require('crypto');const root=path.resolve(__dirname,'../../..'),baseline=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline.json'))),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
-const marker='## Mốc hiện hành — gói BA nháp E10, 12/11/2026';
+const marker='## Mốc hiện hành: gói BA nháp E10, 12/11/2026';
 const text=`\n\n${marker}
 
-Theo yêu cầu người dùng ngày 12/11/2026, chỉ mở tài liệu E10 — CRM và bán hàng cho FEAT-070–073, đều P1. Chỉ dẫn lịch sử “E10–E13 chưa mở” được thay đối với E10; E11–E13 vẫn chưa mở. FEAT-084 không có đặc tả hoặc công cụ AI mới. Các mục phía trên giữ nguyên là lịch sử.
+Theo yêu cầu người dùng ngày 12/11/2026, chỉ mở tài liệu E10: CRM và bán hàng cho FEAT-070–073, đều P1. Chỉ dẫn lịch sử “E10–E13 chưa mở” được thay đối với E10; E11–E13 vẫn chưa mở. FEAT-084 không có đặc tả hoặc công cụ AI mới. Các mục phía trên giữ nguyên là lịch sử.
 
 [Preview E10](crm-ban-hang/preview.html) · [Bàn giao](crm-ban-hang/review/handoff.md) · [Câu hỏi](crm-ban-hang/review/questions.md) · [Phụ thuộc](crm-ban-hang/review/dependencies.md) · [Báo cáo kiểm](crm-ban-hang/validation/report.md).
 

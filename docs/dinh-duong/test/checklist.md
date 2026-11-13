@@ -1,15 +1,15 @@
 ---
 id: DOC-DINH-DUONG-TEST-CHECKLIST
-title: Checklist — Dinh dưỡng
+title: "Checklist: Dinh dưỡng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Checklist — Dinh dưỡng
+# Checklist: Dinh dưỡng
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

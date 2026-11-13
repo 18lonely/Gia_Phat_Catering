@@ -34,6 +34,6 @@ Tất cả **CHỜ TRẢ LỜI**. Trả lời và nguồn/người/ngày để t
 | E8-Q12 | Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì? | Kế thừa nền khi tương thích; E4 dùng cursor/envelope khác nên adapter cần review, không tự freeze TTL/retry | Wire contract, cache/CDN, tải và fault tolerance |  |  |
 | E8-Q13 | Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại? | Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. | BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. XC-05; DEC-200. Đối chiếu khóa nguồn và receipt trong delta; giữ từng vòng đời, chưa gộp bảng. |  |  |
 
-> Chờ E8-Q05, E9-Q11 — XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E8-Q05, E9-Q11: XC-08. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-08](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Chỉ đồng bộ khi có nguồn quyết định và phạm vi áp dụng, không tự đóng từ kiểm tài liệu. [Phụ thuộc](dependencies.md). E6/E7 giữ nguyên chờ trả lời tại sổ gốc, không tạo câu hỏi thay thế.

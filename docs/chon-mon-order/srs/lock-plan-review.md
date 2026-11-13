@@ -1,4 +1,4 @@
-# Khóa, ngoại lệ và vòng đời kế hoạch — phương án review
+# Khóa, ngoại lệ và vòng đời kế hoạch: phương án review
 
 11/11/2026 · Draft. Phân rã FR-ORD-DEF-001, FR-ORD-LOCK-001, FR-ORD-CHG-001, FR-PLAN-MEAL-001; không bổ sung quyền hoặc API đã duyệt. [Mapping](../api/data-mapping.md) · [Câu hỏi](../review/questions.md).
 

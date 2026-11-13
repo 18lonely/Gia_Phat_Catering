@@ -1,13 +1,13 @@
 ---
 id: DOC-E6-UI-USER-FLOW
-title: User flow E6 — chọn, chốt và phát hành
+title: "User flow E6: chọn, chốt và phát hành"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# User flow E6 — chọn, chốt và phát hành
+# User flow E6: chọn, chốt và phát hành
 
 **Draft để review · 11/11/2026 · Chưa phê duyệt nghiệp vụ / chưa triển khai backend.**
 
@@ -50,7 +50,7 @@ Nhánh tuần: tài khoản → chọn từng ngày → preview kết quả → 
 
 Nhánh dữ liệu rỗng: chưa có menu/định mức → không có nút lưu khả dụng; thiếu dinh dưỡng → “Chưa có dữ liệu”, vẫn phân biệt với món không đủ điều kiện chọn. Mất mạng sau lệnh ghi có key theo route → “Chưa xác nhận kết quả”, giữ request key để đối soát; không hiển thị thành công giả.
 
-## Ranh giới đọc và trạng thái màn — 12/11/2026
+## Ranh giới đọc và trạng thái màn ngày 12/11/2026
 
 Luồng trên là thiết kế có điều kiện, không sự kiện publish/ack/start-production. UC010/011 cùng PORT-LOCK; scheduler/worker không mở UI. GET020 của vận hành/bếp và GET025 revisions chỉ đọc; GET023 không kích hoạt PORT-REM. GET001 xem món không tạo Calculation hoặc receipt. Không retry GET bằng Idempotency-Key; tải lại dữ liệu không phải phục hồi lệnh ghi.
 

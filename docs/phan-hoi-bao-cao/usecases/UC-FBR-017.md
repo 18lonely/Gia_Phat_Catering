@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-017-MD
-title: UC-FBR-017 — Đồng ý dùng nhật ký bữa đã ăn
+title: "UC-FBR-017: Đồng ý dùng nhật ký bữa đã ăn"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-017 — Đồng ý dùng nhật ký bữa đã ăn
+# UC-FBR-017: Đồng ý dùng nhật ký bữa đã ăn
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-087; màn UI-FBR-12.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-03; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần đồng ý có phiên bản hoặc nhật ký chưa bật; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào consentPolicyRef, explicitAgreement. Nhánh nghiệp vụ thật cần E12-Q15/16; E6 CG01/08; E1 NFR-PRIV-001. Các gate chưa được coi là đạt.

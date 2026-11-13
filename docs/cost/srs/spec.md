@@ -1,14 +1,14 @@
-# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS) — Epic E3 · Cost
+# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS): Epic E3 · Cost
 
 ## Metadata
 
 | Trường | Giá trị |
 | :--- | :--- |
-| Epic | E3 · `cost` — đợt phát hành R3 (v0.3.0) |
+| Epic | E3 · `cost`: đợt phát hành R3 (v0.3.0) |
 | Phân hệ | COST |
 | Tính năng PRD | `FEAT-014` → `FEAT-018` |
 | Phiên bản | 0.3.2 |
-| Trạng thái | Draft — **công thức ở mục 3.3 viết dưới dạng tham số**: bốn lựa chọn chưa chốt (O-01, E3-Q1, E3-Q2, E3-Q4) được đặc tả thành tham số cấu hình, giá trị mặc định là đề xuất |
+| Trạng thái | Draft: **công thức ở mục 3.3 viết dưới dạng tham số**: bốn lựa chọn chưa chốt (O-01, E3-Q1, E3-Q2, E3-Q4) được đặc tả thành tham số cấu hình, giá trị mặc định là đề xuất |
 | Ngày | 2026-11-11 |
 | Tiêu chuẩn | IEEE Std 830-1998 / ISO/IEC/IEEE 29148 |
 
@@ -48,7 +48,7 @@ Bốn lựa chọn quyết định công thức chưa có câu trả lời. Thay
 | :--- | :--- | :--- | :--- |
 | E3-Q1 | `COST_MON_CHINH_CACH_TINH` | `DAT_NHAT` · `BINH_QUAN` · `MAC_DINH` | `DAT_NHAT` |
 | E3-Q2 | `COST_AP_HAO_HUT` | `KHONG` · `CO` | `KHONG` |
-| E3-Q4 | (không phải tham số) | Kế toán đánh dấu giá tham chiếu | — |
+| E3-Q4 | (không phải tham số) | Kế toán đánh dấu giá tham chiếu | Chưa xác định |
 | O-01 | `VAT_PCT`; danh sách khoản khoán; cờ "tính vào cost" của từng nguyên liệu | Xem `FR-COST-MEAL-004` | Chưa có giá trị |
 
 Lý do chọn mặc định: `DAT_NHAT` không bao giờ cho kết quả thấp hơn thực tế, nên không có ngày nào "đạt trên giấy, vượt ngoài bếp". `KHONG` khớp cách đọc trực tiếp chữ "định lượng món sống" của docx.
@@ -92,21 +92,21 @@ Dịch vụ COST cung cấp cho module khác:
 
 | Quyền | `DINH_DUONG_VIEN` | `KT_MUA_HANG` | `KT_DOANH_THU` | `GIAM_DOC` | `QL_CO_SO` | `BEP_TRUONG` |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `cost.supplier.read` | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| `cost.supplier.write` | — | ✓ | — | — | — | — |
-| `cost.price.read` — xem giá nhập | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | — |
-| `cost.price.write` — nhập giá | — | ✓ | — | — | — | — |
-| `cost.cost.read` — xem cost món, cost suất, cost % | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | — |
-| `cost.sheet.write` — lập bảng tính cost món đặc thù | ✓ | — | — | — | — | — |
-| `cost.sheet.approve` — duyệt bảng tính cost | — | — | — | ✓ | — | — |
-| `cost.estimate.write` — lập bảng dự toán | ✓ | ✓ | — | — | — | — |
-| `cost.estimate.read` — xem bảng dự toán có giá | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | — |
-| `cost.estimate.qty` — xem dự toán chỉ có số lượng, không có giá | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | Cơ sở mình |
-| `cost.allowance.write` — đề nghị sửa khoản khoán | — | ✓ | — | — | — | — |
-| `cost.allowance.approve` — duyệt khoản khoán | — | — | — | ✓ | — | — |
-| `cost.alert.read` — xem cảnh báo cost | ✓ | ✓ | — | ✓ | — | — |
+| `cost.supplier.read` | ✓ | ✓ | ✓ | ✓ | ✓ | Không |
+| `cost.supplier.write` | Không | ✓ | Không | Không | Không | Không |
+| `cost.price.read`: xem giá nhập | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | Không |
+| `cost.price.write`: nhập giá | Không | ✓ | Không | Không | Không | Không |
+| `cost.cost.read`: xem cost món, cost suất, cost % | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | Không |
+| `cost.sheet.write`: lập bảng tính cost món đặc thù | ✓ | Không | Không | Không | Không | Không |
+| `cost.sheet.approve`: duyệt bảng tính cost | Không | Không | Không | ✓ | Không | Không |
+| `cost.estimate.write`: lập bảng dự toán | ✓ | ✓ | Không | Không | Không | Không |
+| `cost.estimate.read`: xem bảng dự toán có giá | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | Không |
+| `cost.estimate.qty`: xem dự toán chỉ có số lượng, không có giá | ✓ | ✓ | ✓ | ✓ | Cơ sở mình | Cơ sở mình |
+| `cost.allowance.write`: đề nghị sửa khoản khoán | Không | ✓ | Không | Không | Không | Không |
+| `cost.allowance.approve`: duyệt khoản khoán | Không | Không | Không | ✓ | Không | Không |
+| `cost.alert.read`: xem cảnh báo cost | ✓ | ✓ | Không | ✓ | Không | Không |
 
-Bếp trưởng không xem giá và cost là [ĐỀ XUẤT] — [E3-Q11]. Người duyệt: [O-06].
+Bếp trưởng không xem giá và cost là [ĐỀ XUẤT]: [E3-Q11]. Người duyệt: [O-06].
 
 Tài khoản dịch vụ: `svc-agent-noi-bo` nhận quyền theo người đang dùng (`BR-SEC-009`). `svc-agent-dinh-duong-vien` **chỉ** có quyền gọi `FR-COST-RUL-003` và không có quyền nào ở bảng trên (`BR-SEC-010`).
 
@@ -127,89 +127,89 @@ Theo mục 2.5 của epic-spec: R2; DL-01, DL-02, DL-06; bảng tính tay của 
 
 ### 3.1 Yêu cầu chức năng
 
-#### Nhà cung cấp — `FEAT-014`
+#### Nhà cung cấp: `FEAT-014`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-COST-SUP-001` | Tạo, sửa nhà cung cấp | P0 | Bản tối thiểu để gắn với giá nhập. | tên, loại (thường xuyên / tiểu thương), số điện thoại, ghi chú | Nhà cung cấp `ACTIVE` | `BR-PRC-001` | `ERR-COST-409-01` |
-| `FR-COST-SUP-002` | Ngừng nhà cung cấp | P0 | Chuyển `INACTIVE`. Giá đã nhập của nhà cung cấp này vẫn giữ và vẫn dùng được cho các ngày đã qua; không nhập được giá mới. Giá tham chiếu đang trỏ tới nhà cung cấp này sinh cảnh báo. | mã, lý do | Trạng thái mới | `BR-PRC-007` | — |
-| `FR-COST-SUP-003` | Danh sách nhà cung cấp | P0 | Lọc theo tên, loại, trạng thái. | bộ lọc | Danh sách | — | — |
+| `FR-COST-SUP-002` | Ngừng nhà cung cấp | P0 | Chuyển `INACTIVE`. Giá đã nhập của nhà cung cấp này vẫn giữ và vẫn dùng được cho các ngày đã qua; không nhập được giá mới. Giá tham chiếu đang trỏ tới nhà cung cấp này sinh cảnh báo. | mã, lý do | Trạng thái mới | `BR-PRC-007` | Không áp dụng |
+| `FR-COST-SUP-003` | Danh sách nhà cung cấp | P0 | Lọc theo tên, loại, trạng thái. | bộ lọc | Danh sách | Không áp dụng | Không áp dụng |
 
-#### Giá nhập — `FEAT-014`
+#### Giá nhập: `FEAT-014`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-COST-PRC-001` | Nhập một giá | P0 | Tạo một dòng giá cho nguyên liệu `ACTIVE`: giá trên một **đơn vị mua** của nguyên liệu. Cơ sở để trống = áp dụng cả hai cơ sở. | nguyên liệu, nhà cung cấp, cơ sở (tuỳ chọn), giá, ngày hiệu lực, đánh dấu tham chiếu | Dòng giá | `BR-PRC-002` → `006` | `ERR-COST-422-01`, `ERR-COST-422-02`, `ERR-COST-409-02`, `ERR-COST-404-01` |
-| `FR-COST-PRC-002` | Đặt giá tham chiếu | P0 | Với mỗi nguyên liệu, cơ sở và ngày hiệu lực có đúng một dòng được đánh dấu tham chiếu. Đánh dấu dòng mới thì bỏ đánh dấu dòng cũ cùng ngày hiệu lực. Dòng đầu tiên của một nguyên liệu tự là tham chiếu. | mã dòng giá | — | `BR-PRC-005` | — |
+| `FR-COST-PRC-002` | Đặt giá tham chiếu | P0 | Với mỗi nguyên liệu, cơ sở và ngày hiệu lực có đúng một dòng được đánh dấu tham chiếu. Đánh dấu dòng mới thì bỏ đánh dấu dòng cũ cùng ngày hiệu lực. Dòng đầu tiên của một nguyên liệu tự là tham chiếu. | mã dòng giá | Không áp dụng | `BR-PRC-005` | Không áp dụng |
 | `FR-COST-PRC-003` | Lấy giá tham chiếu | P0 | Trả giá tham chiếu của một nguyên liệu tại một cơ sở và một ngày, theo thứ tự ưu tiên ở `BR-PRC-006`. | nguyên liệu, cơ sở, ngày | Giá, nhà cung cấp, ngày hiệu lực của giá | `BR-PRC-006` | `ERR-COST-404-02` |
 | `FR-COST-PRC-004` | Nhập giá dạng lưới | P0 | Một màn hình liệt kê nguyên liệu (lọc theo nhóm, loại bảo quản, "đang dùng trong công thức hiệu lực") với giá tham chiếu hiện tại; kế toán gõ giá mới và ngày hiệu lực cho nhiều dòng rồi lưu một lần. Dòng không đổi bị bỏ qua. Lưu tất cả hoặc không gì cả. | danh sách (nguyên liệu, nhà cung cấp, cơ sở, giá, ngày hiệu lực) | Số dòng đã tạo | Như `001` | Như `001`, báo theo dòng |
 | `FR-COST-PRC-005` | Nhập giá từ bảng tính | P0 | Dùng khung nhập của E2 (`FR-MENU-IMP-001` → `003`) với mẫu "giá nhập": tải mẫu, kiểm tệp, nhập. | tệp `.xlsx` | Số dòng đã tạo | `BR-CAT-023`, `BR-PRC-002` → `005` | `ERR-MENU-422-20` |
-| `FR-COST-PRC-006` | Lịch sử giá | P0 | Danh sách giá của một nguyên liệu theo ngày hiệu lực, nhà cung cấp, cơ sở; đánh dấu dòng tham chiếu và dòng đang áp dụng hôm nay. | nguyên liệu | Danh sách | — | — |
-| `FR-COST-PRC-007` | Huỷ một giá chưa hiệu lực | P0 | Chỉ huỷ được dòng có ngày hiệu lực sau hôm nay. Dòng đã hiệu lực không sửa, không huỷ. | mã dòng, lý do | — | `BR-PRC-004` | `ERR-COST-409-03` |
-| `FR-COST-PRC-008` | Nguyên liệu chưa có giá | P0 | Liệt kê nguyên liệu nằm trong công thức `ACTIVE` mà không lấy được giá tham chiếu cho hôm nay, theo từng cơ sở. | cơ sở | Danh sách kèm số món bị ảnh hưởng | — | — |
-| `FR-COST-PRC-009` | Cảnh báo giá cũ | P0 | Tác vụ hằng ngày: nguyên liệu đang dùng trong công thức `ACTIVE` có giá tham chiếu với ngày hiệu lực cũ hơn ngưỡng của loại bảo quản thì sinh một cảnh báo cho `KT_MUA_HANG`. Một nguyên liệu chỉ có một cảnh báo đang mở. | — | Cảnh báo | `BR-PRC-008`; `BR-COST-005` | — |
-| `FR-COST-PRC-010` | Cảnh báo giá lệch bất thường | P1 | Khi nhập giá mới lệch quá `GIA_NHAP_LECH_CANH_BAO_PCT` so với giá tham chiếu liền trước: hỏi xác nhận trước khi lưu; không chặn. | — | Hộp xác nhận | `BR-PRC-009` | — |
-| `FR-COST-PRC-011` | Đính kèm chứng từ | P1 | Gắn một ảnh hoặc PDF cho một dòng giá hoặc cho cả một lần nhập lưới. | tệp | — | — | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
+| `FR-COST-PRC-006` | Lịch sử giá | P0 | Danh sách giá của một nguyên liệu theo ngày hiệu lực, nhà cung cấp, cơ sở; đánh dấu dòng tham chiếu và dòng đang áp dụng hôm nay. | nguyên liệu | Danh sách | Không áp dụng | Không áp dụng |
+| `FR-COST-PRC-007` | Huỷ một giá chưa hiệu lực | P0 | Chỉ huỷ được dòng có ngày hiệu lực sau hôm nay. Dòng đã hiệu lực không sửa, không huỷ. | mã dòng, lý do | Không áp dụng | `BR-PRC-004` | `ERR-COST-409-03` |
+| `FR-COST-PRC-008` | Nguyên liệu chưa có giá | P0 | Liệt kê nguyên liệu nằm trong công thức `ACTIVE` mà không lấy được giá tham chiếu cho hôm nay, theo từng cơ sở. | cơ sở | Danh sách kèm số món bị ảnh hưởng | Không áp dụng | Không áp dụng |
+| `FR-COST-PRC-009` | Cảnh báo giá cũ | P0 | Tác vụ hằng ngày: nguyên liệu đang dùng trong công thức `ACTIVE` có giá tham chiếu với ngày hiệu lực cũ hơn ngưỡng của loại bảo quản thì sinh một cảnh báo cho `KT_MUA_HANG`. Một nguyên liệu chỉ có một cảnh báo đang mở. | Không áp dụng | Cảnh báo | `BR-PRC-008`; `BR-COST-005` | Không áp dụng |
+| `FR-COST-PRC-010` | Cảnh báo giá lệch bất thường | P1 | Khi nhập giá mới lệch quá `GIA_NHAP_LECH_CANH_BAO_PCT` so với giá tham chiếu liền trước: hỏi xác nhận trước khi lưu; không chặn. | Không áp dụng | Hộp xác nhận | `BR-PRC-009` | Không áp dụng |
+| `FR-COST-PRC-011` | Đính kèm chứng từ | P1 | Gắn một ảnh hoặc PDF cho một dòng giá hoặc cho cả một lần nhập lưới. | tệp | Không áp dụng | Không áp dụng | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
 
 Giá nhập có cần người thứ hai duyệt không: [E3-Q6]. SRS này **không** có bước duyệt giá nhập.
 
-#### Cost món — `FEAT-015`
+#### Cost món: `FEAT-015`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-COST-DISH-001` | Tính cost món | P0 | Tính cost một suất của một món theo công thức hiệu lực và giá tham chiếu tại ngày tính và cơ sở. Công thức ở mục 3.3.1. Không lưu kết quả. | món, cỡ định lượng, ngày tính, cơ sở | Cost món (đồng), bảng phân rã | `BR-CALC-001` → `003`, `006` | `ERR-COST-422-03`, `ERR-MENU-404-01` |
-| `FR-COST-DISH-002` | Bảng phân rã cost món | P0 | Mỗi dòng: nguyên liệu, là nguyên liệu chính hay không, định lượng chuẩn, đơn vị, giá một đơn vị dùng, thành tiền, tỷ trọng %, nhà cung cấp và ngày hiệu lực của giá đã dùng. | như `001` | Bảng | — | — |
-| `FR-COST-DISH-003` | Thiếu giá | P0 | Nếu một nguyên liệu có cờ "tính vào cost" không có giá tham chiếu: không trả cost; trả danh sách nguyên liệu thiếu giá. | — | Danh sách thiếu | `BR-CALC-003` | `ERR-COST-422-03` |
-| `FR-COST-DISH-004` | Cost trong danh sách món và hộp chọn món | P0 | Với người có `cost.cost.read`: danh sách món và hộp chọn món của màn soạn thực đơn hiện cost món tại ngày tương ứng (hôm nay; ngày phục vụ của ô). Món thiếu giá hiện "thiếu giá". Người không có quyền không nhận trường này trong phản hồi API. | — | Cột cost | — | — |
-| `FR-COST-DISH-005` | So sánh cost hai phiên bản công thức | P1 | Cost của phiên bản đang hiệu lực và phiên bản đề nghị tại cùng ngày tính, kèm chênh lệch đồng và %. Hiện ở màn duyệt công thức. | 2 mã công thức, ngày, cơ sở | Bảng so sánh | — | `ERR-COST-422-03` |
+| `FR-COST-DISH-002` | Bảng phân rã cost món | P0 | Mỗi dòng: nguyên liệu, là nguyên liệu chính hay không, định lượng chuẩn, đơn vị, giá một đơn vị dùng, thành tiền, tỷ trọng %, nhà cung cấp và ngày hiệu lực của giá đã dùng. | như `001` | Bảng | Không áp dụng | Không áp dụng |
+| `FR-COST-DISH-003` | Thiếu giá | P0 | Nếu một nguyên liệu có cờ "tính vào cost" không có giá tham chiếu: không trả cost; trả danh sách nguyên liệu thiếu giá. | Không áp dụng | Danh sách thiếu | `BR-CALC-003` | `ERR-COST-422-03` |
+| `FR-COST-DISH-004` | Cost trong danh sách món và hộp chọn món | P0 | Với người có `cost.cost.read`: danh sách món và hộp chọn món của màn soạn thực đơn hiện cost món tại ngày tương ứng (hôm nay; ngày phục vụ của ô). Món thiếu giá hiện "thiếu giá". Người không có quyền không nhận trường này trong phản hồi API. | Không áp dụng | Cột cost | Không áp dụng | Không áp dụng |
+| `FR-COST-DISH-005` | So sánh cost hai phiên bản công thức | P1 | Cost của phiên bản đang hiệu lực và phiên bản đề nghị tại cùng ngày tính, kèm chênh lệch đồng và %. Hiện ở màn duyệt công thức. | 2 mã công thức, ngày, cơ sở | Bảng so sánh | Không áp dụng | `ERR-COST-422-03` |
 | `FR-COST-DISH-006` | Lập bảng tính cost món đặc thù | P0 | Với món có cờ "đặc thù": dinh dưỡng viên chụp lại bảng phân rã cost tại một ngày, ghi chú, gửi duyệt. | món, ngày tính, cơ sở, ghi chú | Bảng tính `PENDING` | `BR-CALC-007` | `ERR-COST-422-03`, `ERR-COST-422-04` |
 | `FR-COST-DISH-007` | Duyệt bảng tính cost món đặc thù | P0 | Duyệt → `APPROVED`; trả lại kèm lý do. Người duyệt khác người lập. | mã, quyết định, lý do | Trạng thái mới | `BR-SEC-008`, `BR-CALC-007` | `ERR-SYS-403-01`, `ERR-SYS-422-01` |
-| `FR-COST-DISH-008` | Gợi ý nhóm cost của món | P1 | Từ cost món, gợi ý nhóm "thấp" hoặc "cao" khi tạo hoặc sửa món. Không tự ghi; người dùng quyết. Ngưỡng phân nhóm: [E3-Q7] | món | Gợi ý | — | — |
+| `FR-COST-DISH-008` | Gợi ý nhóm cost của món | P1 | Từ cost món, gợi ý nhóm "thấp" hoặc "cao" khi tạo hoặc sửa món. Không tự ghi; người dùng quyết. Ngưỡng phân nhóm: [E3-Q7] | món | Gợi ý | Không áp dụng | Không áp dụng |
 
-#### Cost suất và ngưỡng — `FEAT-016`
+#### Cost suất và ngưỡng: `FEAT-016`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-COST-MEAL-001` | Tính cost suất và cost % của một ngày | P0 | Theo mục 3.3.2. Dùng cho thực đơn đã lưu và thực đơn chưa lưu. | thực đơn hoặc nội dung thực đơn, ngày, cơ sở | Cost suất, doanh thu chưa VAT, cost %, ngưỡng, đạt / không đạt, phân rã | `BR-CALC-004` → `006`; `BR-COST-001` → `004` | `ERR-COST-422-03`, `ERR-COST-422-05` |
-| `FR-COST-MEAL-002` | Cost % trên màn soạn thực đơn | P0 | Mỗi cột ngày hiện cost % và nhãn đạt / vượt; cập nhật sau mỗi lần đổi món, cùng lượt với bộ kiểm quy tắc. Ngày chưa đủ món hiện cost của phần đã có và ghi "chưa đủ món". Ngày có món thiếu giá hiện "thiếu giá". | — | — | — | — |
-| `FR-COST-MEAL-003` | Phân rã cost của một ngày | P0 | Phần món chính (kèm cost từng món chính và cách tính đang dùng), từng món phụ, rau, canh, từng khoản khoán; tổng; doanh thu chưa VAT; cost %; số tiền còn dư hoặc vượt so với ngưỡng. | thực đơn, ngày, cơ sở | Bảng | — | — |
+| `FR-COST-MEAL-002` | Cost % trên màn soạn thực đơn | P0 | Mỗi cột ngày hiện cost % và nhãn đạt / vượt; cập nhật sau mỗi lần đổi món, cùng lượt với bộ kiểm quy tắc. Ngày chưa đủ món hiện cost của phần đã có và ghi "chưa đủ món". Ngày có món thiếu giá hiện "thiếu giá". | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-COST-MEAL-003` | Phân rã cost của một ngày | P0 | Phần món chính (kèm cost từng món chính và cách tính đang dùng), từng món phụ, rau, canh, từng khoản khoán; tổng; doanh thu chưa VAT; cost %; số tiền còn dư hoặc vượt so với ngưỡng. | thực đơn, ngày, cơ sở | Bảng | Không áp dụng | Không áp dụng |
 | `FR-COST-MEAL-004` | Quản lý khoản khoán | P0 | Danh sách khoản khoán trên một suất: tên, số tiền, loại suất áp dụng (hoặc mọi loại suất), ngày hiệu lực. Thay đổi là đề nghị chờ duyệt. Danh sách khoản ban đầu: [O-01] | tên, số tiền, loại suất, ngày hiệu lực, lý do | Đề nghị `PENDING` | `BR-CALC-008`, `BR-SEC-008` | `ERR-COST-422-06`, `ERR-SYS-403-01` |
 | `FR-COST-MEAL-005` | Kiểm cost ở cổng gửi duyệt thực đơn | P0 | Đăng ký vào `FR-MENU-APV-006`. Khi gửi duyệt: tính cost % mọi ngày theo cơ sở kiểm (`BR-CALC-009`); có ngày vượt ngưỡng ở chế độ `CHAN`, hoặc thiếu giá/VAT, hoặc có món đặc thù chưa có bảng tính đã duyệt → không cho gửi duyệt, trả chi tiết từng ngày theo quyền. Ở `CANH_BAO`, vượt ngưỡng chỉ cảnh báo theo `FR-COST-MEAL-008`, không bỏ qua lỗi thiếu đầu vào. | mã thực đơn | Đạt / không đạt + chi tiết | `BR-COST-001`, `007`; `BR-CALC-009` | `ERR-COST-422-07`, `ERR-COST-422-03`, `ERR-COST-422-04` |
-| `FR-COST-MEAL-006` | Chụp kết quả khi duyệt | P0 | Khi thực đơn chuyển `APPROVED`: lưu cho từng ngày cost suất, cost %, ngưỡng, giá trị các tham số cách tính, và danh sách (nguyên liệu, giá, ngày hiệu lực của giá) đã dùng. Kết quả chụp không đổi khi giá hoặc tham số đổi sau. | — | Bản chụp | `BR-CALC-010` | — |
-| `FR-COST-MEAL-007` | Ngoại lệ vượt ngưỡng | Chưa xếp | Cho phép người có thẩm quyền duyệt một thực đơn có ngày vượt ngưỡng, kèm lý do. Có làm hay không: [E3-Q9]. SRS này **chặn tuyệt đối khi chế độ là `CHAN`**; `CANH_BAO` theo `FR-COST-MEAL-008` không phải cơ chế duyệt ngoại lệ. | — | — | — | — |
-| `FR-COST-MEAL-008` | Chế độ chỉ cảnh báo | P0 | Tham số `COST_CHE_DO_KIEM` có hai giá trị: `CANH_BAO` (ngày vượt ngưỡng hiện cảnh báo nhưng không chặn gửi duyệt) và `CHAN`. Mặc định `CANH_BAO`; chuyển sang `CHAN` cần Giám đốc duyệt. Dùng cho giai đoạn chạy thử (rủi ro E3-R4). | giá trị, lý do | Tham số mới | `BR-SYS-002` | — |
+| `FR-COST-MEAL-006` | Chụp kết quả khi duyệt | P0 | Khi thực đơn chuyển `APPROVED`: lưu cho từng ngày cost suất, cost %, ngưỡng, giá trị các tham số cách tính, và danh sách (nguyên liệu, giá, ngày hiệu lực của giá) đã dùng. Kết quả chụp không đổi khi giá hoặc tham số đổi sau. | Không áp dụng | Bản chụp | `BR-CALC-010` | Không áp dụng |
+| `FR-COST-MEAL-007` | Ngoại lệ vượt ngưỡng | Chưa xếp | Cho phép người có thẩm quyền duyệt một thực đơn có ngày vượt ngưỡng, kèm lý do. Có làm hay không: [E3-Q9]. SRS này **chặn tuyệt đối khi chế độ là `CHAN`**; `CANH_BAO` theo `FR-COST-MEAL-008` không phải cơ chế duyệt ngoại lệ. | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-COST-MEAL-008` | Chế độ chỉ cảnh báo | P0 | Tham số `COST_CHE_DO_KIEM` có hai giá trị: `CANH_BAO` (ngày vượt ngưỡng hiện cảnh báo nhưng không chặn gửi duyệt) và `CHAN`. Mặc định `CANH_BAO`; chuyển sang `CHAN` cần Giám đốc duyệt. Dùng cho giai đoạn chạy thử (rủi ro E3-R4). | giá trị, lý do | Tham số mới | `BR-SYS-002` | Không áp dụng |
 
-#### Quy tắc cost trong bộ kiểm — `FEAT-016`
+#### Quy tắc cost trong bộ kiểm: `FEAT-016`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-COST-RUL-001` | Đăng ký quy tắc cost vào bộ kiểm | P0 | Đăng ký `BR-COST-001`, `005`, `006`, `007` thành quy tắc của bộ kiểm quy tắc E2, để vi phạm hiện trong bảng kiểm cùng các quy tắc thực đơn. `BR-COST-002` → `004` là cách tính, không phải quy tắc kiểm. `BR-COST-011` hiện thực ở `FR-COST-ALR-001`. Cách tính ở mục 3.3.3. | — | Kết quả trong bảng kiểm | `BR-COST-001`, `005`, `006`, `007` | — |
-| `FR-COST-RUL-002` | Ẩn con số với người không có quyền | P0 | Kết quả của các quy tắc cost trong bảng kiểm: người có `cost.cost.read` thấy cost % và số tiền; người không có quyền chỉ thấy "đạt / không đạt". | — | — | — | — |
+| `FR-COST-RUL-001` | Đăng ký quy tắc cost vào bộ kiểm | P0 | Đăng ký `BR-COST-001`, `005`, `006`, `007` thành quy tắc của bộ kiểm quy tắc E2, để vi phạm hiện trong bảng kiểm cùng các quy tắc thực đơn. `BR-COST-002` → `004` là cách tính, không phải quy tắc kiểm. `BR-COST-011` hiện thực ở `FR-COST-ALR-001`. Cách tính ở mục 3.3.3. | Không áp dụng | Kết quả trong bảng kiểm | `BR-COST-001`, `005`, `006`, `007` | Không áp dụng |
+| `FR-COST-RUL-002` | Ẩn con số với người không có quyền | P0 | Kết quả của các quy tắc cost trong bảng kiểm: người có `cost.cost.read` thấy cost % và số tiền; người không có quyền chỉ thấy "đạt / không đạt". | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
 | `FR-COST-RUL-003` | Dịch vụ đạt / không đạt ngân sách | P0 | Nhận nội dung một thực đơn (loại suất, tuần, món theo ngày); trả cho **cả thực đơn** một giá trị: `DAT`, `KHONG_DAT`, hoặc `KHONG_XAC_DINH` (thiếu giá). Không trả cost, cost %, ngưỡng, ngày nào vượt, hay món nào gây vượt. Giới hạn 30 lời gọi mỗi phiên trò chuyện. | nội dung thực đơn | Một giá trị | `BR-SEC-010`, `BR-CALC-011` | `ERR-COST-429-01`, `ERR-MENU-422-14` |
 
-`FR-COST-RUL-003` trả theo cả thực đơn thay vì từng ngày để khó dò ngược ra cost hơn (rủi ro E3-R6); đây là [ĐỀ XUẤT] và làm agent phía khách kém hữu ích hơn khi sửa thực đơn — cần cân nhắc khi thiết kế E9.
+`FR-COST-RUL-003` trả theo cả thực đơn thay vì từng ngày để khó dò ngược ra cost hơn (rủi ro E3-R6); đây là [ĐỀ XUẤT] và làm agent phía khách kém hữu ích hơn khi sửa thực đơn: cần cân nhắc khi thiết kế E9.
 
-#### Bảng dự toán — `FEAT-017`
+#### Bảng dự toán: `FEAT-017`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-COST-EST-001` | Lập bảng dự toán một ngày | P0 | Cho một ngày của thực đơn (trạng thái bất kỳ), một cơ sở, và số suất theo từng món chính: sinh các dòng dự toán theo mục 3.3.4. Lưu thành một bản có số thứ tự. | thực đơn, ngày, cơ sở, số suất từng món chính | Bảng dự toán | `BR-EST-001` → `004` | `ERR-COST-422-03`, `ERR-COST-422-08` |
-| `FR-COST-EST-002` | Nhập số suất dự kiến | P0 | Số suất nhập cho từng món chính của ngày; tổng là số suất của ngày. Món phụ, rau, canh tính theo tổng. Nguồn số suất trước khi có order: [E3-Q8] | số nguyên ≥ 0 cho từng món chính | — | `BR-EST-001` | `ERR-COST-422-08` |
+| `FR-COST-EST-002` | Nhập số suất dự kiến | P0 | Số suất nhập cho từng món chính của ngày; tổng là số suất của ngày. Món phụ, rau, canh tính theo tổng. Nguồn số suất trước khi có order: [E3-Q8] | số nguyên ≥ 0 cho từng món chính | Không áp dụng | `BR-EST-001` | `ERR-COST-422-08` |
 | `FR-COST-EST-003` | Dự toán cả tuần | P0 | Lập cho mọi ngày của thực đơn trong một lần; thêm bảng gộp theo nguyên liệu cho cả tuần. | thực đơn, cơ sở, số suất theo ngày và món chính | Bảng theo ngày + bảng gộp tuần | `BR-EST-003` | Như `001` |
-| `FR-COST-EST-004` | Các cột của bảng dự toán | P0 | Mỗi dòng: tên nguyên liệu, nhà cung cấp, giá nhập trên đơn vị mua, định lượng trên một suất (theo từng món dùng nó), số suất, tổng định lượng theo đơn vị dùng, lượng cần mua theo đơn vị mua, thành tiền. Cuối bảng: tổng chi phí, doanh thu chưa VAT, cost %. | — | — | Docx mục IV | — |
-| `FR-COST-EST-005` | Xem dự toán không có giá | P0 | Với quyền `cost.estimate.qty`: cùng bảng nhưng không có cột giá, thành tiền, tổng chi phí, cost %. Dùng cho bếp trưởng. | — | — | — | — |
-| `FR-COST-EST-006` | Lập lại và lịch sử | P0 | Lập lại cho cùng thực đơn, ngày, cơ sở tạo bản mới; bản cũ giữ nguyên. Mỗi bản ghi thời điểm lập, người lập, số suất, các giá đã dùng. | — | Danh sách các bản | `BR-EST-004` | — |
-| `FR-COST-EST-007` | Xuất bảng dự toán | P1 | Xuất `.xlsx` và PDF. Bản không có giá khi người xuất chỉ có quyền `cost.estimate.qty`. | mã bảng | Tệp | — | — |
+| `FR-COST-EST-004` | Các cột của bảng dự toán | P0 | Mỗi dòng: tên nguyên liệu, nhà cung cấp, giá nhập trên đơn vị mua, định lượng trên một suất (theo từng món dùng nó), số suất, tổng định lượng theo đơn vị dùng, lượng cần mua theo đơn vị mua, thành tiền. Cuối bảng: tổng chi phí, doanh thu chưa VAT, cost %. | Không áp dụng | Không áp dụng | Docx mục IV | Không áp dụng |
+| `FR-COST-EST-005` | Xem dự toán không có giá | P0 | Với quyền `cost.estimate.qty`: cùng bảng nhưng không có cột giá, thành tiền, tổng chi phí, cost %. Dùng cho bếp trưởng. | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-COST-EST-006` | Lập lại và lịch sử | P0 | Lập lại cho cùng thực đơn, ngày, cơ sở tạo bản mới; bản cũ giữ nguyên. Mỗi bản ghi thời điểm lập, người lập, số suất, các giá đã dùng. | Không áp dụng | Danh sách các bản | `BR-EST-004` | Không áp dụng |
+| `FR-COST-EST-007` | Xuất bảng dự toán | P1 | Xuất `.xlsx` và PDF. Bản không có giá khi người xuất chỉ có quyền `cost.estimate.qty`. | mã bảng | Tệp | Không áp dụng | Không áp dụng |
 
-#### Cảnh báo khi giá biến động — `FEAT-018`
+#### Cảnh báo khi giá biến động: `FEAT-018`
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-COST-ALR-001` | Tính lại thực đơn khi có giá mới | P1 | Khi một giá tham chiếu mới được tạo hoặc đến ngày hiệu lực: tác vụ nền tính lại cost % của mọi ngày phục vụ từ hôm nay trở đi thuộc thực đơn `APPROVED` hoặc `PUBLISHED` có dùng nguyên liệu đó. Bản chụp lúc duyệt không bị sửa; kết quả mới lưu riêng. Hoàn tất trong ≤ 5 phút. | — | Kết quả tính lại | `BR-COST-011` | — |
-| `FR-COST-ALR-002` | Cảnh báo thực đơn vượt ngưỡng do giá mới | P1 | Ngày nào chuyển từ đạt sang vượt ngưỡng thì sinh cảnh báo cho `DINH_DUONG_VIEN` và `GIAM_DOC`: thực đơn, ngày, cost % lúc duyệt → hiện tại, nguyên liệu và giá gây ra. Mỗi (thực đơn, ngày) chỉ có một cảnh báo đang mở; cập nhật nếu giá đổi tiếp. | — | Cảnh báo + thông báo | `BR-COST-011` | — |
-| `FR-COST-ALR-003` | Danh sách và xử lý cảnh báo | P1 | Liệt kê cảnh báo đang mở. Một cảnh báo đóng khi: thực đơn được thu hồi và sửa; hoặc giá đổi lại làm ngày đó đạt; hoặc người có `cost.alert.read` đóng tay kèm lý do. | bộ lọc; mã, lý do | — | `BR-AUD-001` | `ERR-SYS-422-01` |
-| `FR-COST-ALR-004` | Chặn chuyển bếp | Chưa xếp | Docx: "rà soát… trước khi triển khai". R3 chưa có bước chuyển bếp. Hiện thực ở đợt nào và chặn hay chỉ cảnh báo: [E3-Q10] | — | — | — | — |
-| `FR-COST-ALR-005` | Xem trước tác động của một giá | P2 | Nhập giá giả định cho một nguyên liệu; trả danh sách ngày thực đơn sẽ vượt ngưỡng. Không lưu gì. | nguyên liệu, giá, cơ sở | Danh sách | — | — |
+| `FR-COST-ALR-001` | Tính lại thực đơn khi có giá mới | P1 | Khi một giá tham chiếu mới được tạo hoặc đến ngày hiệu lực: tác vụ nền tính lại cost % của mọi ngày phục vụ từ hôm nay trở đi thuộc thực đơn `APPROVED` hoặc `PUBLISHED` có dùng nguyên liệu đó. Bản chụp lúc duyệt không bị sửa; kết quả mới lưu riêng. Hoàn tất trong ≤ 5 phút. | Không áp dụng | Kết quả tính lại | `BR-COST-011` | Không áp dụng |
+| `FR-COST-ALR-002` | Cảnh báo thực đơn vượt ngưỡng do giá mới | P1 | Ngày nào chuyển từ đạt sang vượt ngưỡng thì sinh cảnh báo cho `DINH_DUONG_VIEN` và `GIAM_DOC`: thực đơn, ngày, cost % lúc duyệt → hiện tại, nguyên liệu và giá gây ra. Mỗi (thực đơn, ngày) chỉ có một cảnh báo đang mở; cập nhật nếu giá đổi tiếp. | Không áp dụng | Cảnh báo + thông báo | `BR-COST-011` | Không áp dụng |
+| `FR-COST-ALR-003` | Danh sách và xử lý cảnh báo | P1 | Liệt kê cảnh báo đang mở. Một cảnh báo đóng khi: thực đơn được thu hồi và sửa; hoặc giá đổi lại làm ngày đó đạt; hoặc người có `cost.alert.read` đóng tay kèm lý do. | bộ lọc; mã, lý do | Không áp dụng | `BR-AUD-001` | `ERR-SYS-422-01` |
+| `FR-COST-ALR-004` | Chặn chuyển bếp | Chưa xếp | Docx: "rà soát… trước khi triển khai". R3 chưa có bước chuyển bếp. Hiện thực ở đợt nào và chặn hay chỉ cảnh báo: [E3-Q10] | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-COST-ALR-005` | Xem trước tác động của một giá | P2 | Nhập giá giả định cho một nguyên liệu; trả danh sách ngày thực đơn sẽ vượt ngưỡng. Không lưu gì. | nguyên liệu, giá, cơ sở | Danh sách | Không áp dụng | Không áp dụng |
 
 ### 3.2 Quy tắc nghiệp vụ của dữ liệu và cách tính
 
@@ -217,30 +217,30 @@ Quy tắc từ docx (`BR-COST-001` → `012`) nằm ở [bảng quy tắc](../..
 
 | Mã BR | Tên quy tắc | Phát biểu (KHI – THÌ) | Ngoại lệ |
 | :--- | :--- | :--- | :--- |
-| `BR-PRC-001` | Tên nhà cung cấp không trùng | So trùng như `BR-CAT-001` | — |
+| `BR-PRC-001` | Tên nhà cung cấp không trùng | So trùng như `BR-CAT-001` | Không áp dụng |
 | `BR-PRC-002` | Giá nhập hợp lệ | Giá là số nguyên đồng > 0, tính trên **một đơn vị mua** của nguyên liệu | Giá 0 không được nhận; nguyên liệu không mất tiền thì bỏ cờ "tính vào cost" |
-| `BR-PRC-003` | Ngày hiệu lực của giá nhập | Ngày hiệu lực được ở quá khứ tối đa `GIA_NHAP_HOI_TO_NGAY` ngày (mặc định 7) và không quá 30 ngày ở tương lai | — |
+| `BR-PRC-003` | Ngày hiệu lực của giá nhập | Ngày hiệu lực được ở quá khứ tối đa `GIA_NHAP_HOI_TO_NGAY` ngày (mặc định 7) và không quá 30 ngày ở tương lai | Không áp dụng |
 | `BR-PRC-004` | Giá đã hiệu lực là bất biến | KHI giá có ngày hiệu lực ≤ hôm nay THÌ không sửa, không huỷ; sửa bằng cách nhập dòng mới | Nhập giá hồi tố theo `BR-PRC-003` không sửa dòng cũ mà thêm dòng |
-| `BR-PRC-005` | Một giá tham chiếu | Với mỗi (nguyên liệu, cơ sở hoặc "cả hai", ngày hiệu lực) có đúng một dòng tham chiếu; không trùng (nguyên liệu, nhà cung cấp, cơ sở, ngày hiệu lực) | — |
-| `BR-PRC-006` | Thứ tự chọn giá tham chiếu | Giá tham chiếu tại (nguyên liệu, cơ sở C, ngày D) = dòng tham chiếu có ngày hiệu lực lớn nhất ≤ D, ưu tiên dòng riêng của cơ sở C; nếu cơ sở C không có dòng riêng nào ≤ D thì dùng dòng "cả hai cơ sở" | — |
-| `BR-PRC-007` | Nhà cung cấp ngừng | KHI nhà cung cấp `INACTIVE` THÌ không nhập được giá mới cho nhà cung cấp đó; giá cũ vẫn dùng để tính | — |
+| `BR-PRC-005` | Một giá tham chiếu | Với mỗi (nguyên liệu, cơ sở hoặc "cả hai", ngày hiệu lực) có đúng một dòng tham chiếu; không trùng (nguyên liệu, nhà cung cấp, cơ sở, ngày hiệu lực) | Không áp dụng |
+| `BR-PRC-006` | Thứ tự chọn giá tham chiếu | Giá tham chiếu tại (nguyên liệu, cơ sở C, ngày D) = dòng tham chiếu có ngày hiệu lực lớn nhất ≤ D, ưu tiên dòng riêng của cơ sở C; nếu cơ sở C không có dòng riêng nào ≤ D thì dùng dòng "cả hai cơ sở" | Không áp dụng |
+| `BR-PRC-007` | Nhà cung cấp ngừng | KHI nhà cung cấp `INACTIVE` THÌ không nhập được giá mới cho nhà cung cấp đó; giá cũ vẫn dùng để tính | Không áp dụng |
 | `BR-PRC-008` | Ngưỡng giá cũ | Giá tham chiếu bị coi là cũ khi (hôm nay − ngày hiệu lực) > `GIA_NHAP_CU_TUOI_NGAY` với nguyên liệu tươi, > `GIA_NHAP_CU_KHO_NGAY` với nguyên liệu khô và đông lạnh | `BR-COST-005`; con số chờ DL-01 |
 | `BR-PRC-009` | Ngưỡng lệch bất thường | Giá mới lệch quá `GIA_NHAP_LECH_CANH_BAO_PCT` % (mặc định 30) so với giá tham chiếu liền trước cùng cơ sở thì hỏi xác nhận | Nguyên liệu chưa có giá trước đó |
 | `BR-CALC-001` | Công thức và giá theo ngày tính | Cost tại ngày D dùng công thức hiệu lực tại D (`BR-CAT-014`) và giá tham chiếu tại D (`BR-PRC-006`) | Thực đơn đã gửi duyệt dùng công thức đã gắn vào ô, không lấy lại |
 | `BR-CALC-002` | Nguyên liệu tính vào cost | Chỉ cộng các dòng công thức có nguyên liệu mang cờ "tính vào cost" | Danh sách nguyên liệu không tính: [O-01] |
-| `BR-CALC-003` | Không tính thiếu | KHI một nguyên liệu cần tính không có giá tham chiếu THÌ không trả cost của món, của ngày và của mọi tổng chứa nó; trả danh sách thiếu | — |
+| `BR-CALC-003` | Không tính thiếu | KHI một nguyên liệu cần tính không có giá tham chiếu THÌ không trả cost của món, của ngày và của mọi tổng chứa nó; trả danh sách thiếu | Không áp dụng |
 | `BR-CALC-004` | Cost phần món chính | Theo tham số `COST_MON_CHINH_CACH_TINH`: `DAT_NHAT` = cost lớn nhất trong các món chính của ngày × số món chính được chọn; `BINH_QUAN` = trung bình cộng cost các món chính × số món chính được chọn; `MAC_DINH` = cost của món mặc định × số món chính được chọn | [E3-Q1]. Giá trị `THEO_TY_LE` (theo lựa chọn thật) để dành cho sau R6 |
 | `BR-CALC-005` | Doanh thu chưa VAT | Doanh thu chưa VAT của suất = ngưỡng giá của loại suất ÷ (1 + `VAT_PCT` ÷ 100) | [O-01]; `BR-COST-002`. Khi `VAT_PCT` chưa được đặt thì không tính được cost %: `ERR-COST-422-05` |
-| `BR-CALC-006` | Làm tròn | Phép tính trung gian không làm tròn. Cost món và cost suất hiển thị làm tròn đến đồng (nửa lên). Cost % làm tròn 2 chữ số thập phân (nửa lên). **So với ngưỡng bằng giá trị cost % đã làm tròn**: đạt khi ≤ ngưỡng | — |
+| `BR-CALC-006` | Làm tròn | Phép tính trung gian không làm tròn. Cost món và cost suất hiển thị làm tròn đến đồng (nửa lên). Cost % làm tròn 2 chữ số thập phân (nửa lên). **So với ngưỡng bằng giá trị cost % đã làm tròn**: đạt khi ≤ ngưỡng | Không áp dụng |
 | `BR-CALC-007` | Bảng tính cost món đặc thù | KHI món có cờ "đặc thù" THÌ chỉ được coi là đủ điều kiện vào thực đơn khi có ít nhất một bảng tính cost `APPROVED` lập trong vòng `COST_BANG_TINH_HIEU_LUC_NGAY` ngày (mặc định 90) tính đến ngày phục vụ | `BR-COST-007` |
-| `BR-CALC-008` | Khoản khoán | Số tiền là số nguyên đồng ≥ 0; có ngày hiệu lực; khoản áp dụng cho một loại suất ưu tiên hơn khoản áp dụng cho mọi loại suất cùng tên | — |
+| `BR-CALC-008` | Khoản khoán | Số tiền là số nguyên đồng ≥ 0; có ngày hiệu lực; khoản áp dụng cho một loại suất ưu tiên hơn khoản áp dụng cho mọi loại suất cùng tên | Không áp dụng |
 | `BR-CALC-009` | Cơ sở dùng để kiểm ngưỡng | Thực đơn dùng chung cho cả hai cơ sở được kiểm theo **từng cơ sở**; một ngày đạt khi đạt ở mọi cơ sở có giá. Cơ sở không có giá riêng dùng giá chung | [E3-Q3] |
-| `BR-CALC-010` | Bản chụp là bất biến | Bản chụp lúc duyệt và bảng dự toán đã lưu không bị sửa bởi thay đổi giá, công thức, tham số về sau | — |
-| `BR-CALC-011` | Kết quả ngân sách cho agent phía khách | `DAT` khi mọi ngày của thực đơn đạt ở mọi cơ sở; `KHONG_DAT` khi có ít nhất một ngày vượt; `KHONG_XAC_DINH` khi không tính được | — |
-| `BR-EST-001` | Số suất | Số suất mỗi món chính là số nguyên ≥ 0; tổng > 0. Số suất món phụ, rau, canh = tổng số suất các món chính ÷ số món chính được chọn | — |
+| `BR-CALC-010` | Bản chụp là bất biến | Bản chụp lúc duyệt và bảng dự toán đã lưu không bị sửa bởi thay đổi giá, công thức, tham số về sau | Không áp dụng |
+| `BR-CALC-011` | Kết quả ngân sách cho agent phía khách | `DAT` khi mọi ngày của thực đơn đạt ở mọi cơ sở; `KHONG_DAT` khi có ít nhất một ngày vượt; `KHONG_XAC_DINH` khi không tính được | Không áp dụng |
+| `BR-EST-001` | Số suất | Số suất mỗi món chính là số nguyên ≥ 0; tổng > 0. Số suất món phụ, rau, canh = tổng số suất các món chính ÷ số món chính được chọn | Không áp dụng |
 | `BR-EST-002` | Lượng cần mua | Tổng định lượng theo đơn vị dùng = Σ (định lượng chuẩn × số suất của món). Lượng cần mua = tổng định lượng ÷ hệ số quy đổi; nếu `COST_AP_HAO_HUT` = `CO` thì chia thêm cho (1 − hao hụt % ÷ 100). Làm tròn lên 2 chữ số thập phân của đơn vị mua | [E3-Q2] |
-| `BR-EST-003` | Gộp theo nguyên liệu | Một nguyên liệu dùng ở nhiều món, nhiều ngày được gộp thành một dòng ở bảng tuần, giữ được phân rã theo món và ngày | — |
-| `BR-EST-004` | Dự toán là bản chụp | Mỗi bản dự toán lưu giá và công thức tại thời điểm lập; lập lại tạo bản mới | — |
+| `BR-EST-003` | Gộp theo nguyên liệu | Một nguyên liệu dùng ở nhiều món, nhiều ngày được gộp thành một dòng ở bảng tuần, giữ được phân rã theo món và ngày | Không áp dụng |
+| `BR-EST-004` | Dự toán là bản chụp | Mỗi bản dự toán lưu giá và công thức tại thời điểm lập; lập lại tạo bản mới | Không áp dụng |
 
 ### 3.3 Cách tính
 
@@ -298,7 +298,7 @@ Ví dụ minh họa: loại suất 40.000 đồng, `VAT_PCT` = 8 → doanh thu c
 Đầu vào: ngày D, cơ sở C, số suất n_m cho từng món chính m; N = Σ n_m ÷ K
 Số suất của món: món chính m → n_m; món phụ, rau, canh → N
 Với mỗi (món, dòng công thức i):
-  định lượng/suất = q_i                      (đã gồm hao hụt nếu COST_AP_HAO_HUT = CO — xem ghi chú)
+  định lượng/suất = q_i                      (đã gồm hao hụt nếu COST_AP_HAO_HUT = CO: xem ghi chú)
   tổng định lượng = q_i × số suất của món
 Gộp theo nguyên liệu:
   tổng định lượng nguyên liệu = Σ qua các món
@@ -343,7 +343,7 @@ Ghi chú hao hụt: khi `COST_AP_HAO_HUT` = `CO`, hao hụt được áp một l
 | `ERR-COST-422-06` | 422 | Khoản khoán có số tiền âm, không phải số nguyên, hoặc thiếu ngày hiệu lực | `cost.allowance_invalid` | "Khoản khoán không hợp lệ." | Medium | Sửa |
 | `ERR-COST-422-07` | 422 | Gửi duyệt thực đơn có ngày vượt ngưỡng khi `COST_CHE_DO_KIEM` = `CHAN` | `cost.over_threshold` | "Thực đơn có {n} ngày vượt ngưỡng cost: {ngày và cost %}." | High | Đổi món hoặc định lượng |
 | `ERR-COST-422-08` | 422 | Số suất âm, không phải số nguyên, hoặc tổng bằng 0 | `cost.servings_invalid` | "Số suất không hợp lệ." | Medium | Sửa số suất |
-| `ERR-COST-429-01` | 429 | Vượt giới hạn gọi dịch vụ ngân sách trong một phiên | `cost.budget_rate_limited` | (không hiện cho người dùng cuối; agent trả lời rằng cần gửi thực đơn cho Gia Phát xem) | Low | — |
+| `ERR-COST-429-01` | 429 | Vượt giới hạn gọi dịch vụ ngân sách trong một phiên | `cost.budget_rate_limited` | (không hiện cho người dùng cuối; agent trả lời rằng cần gửi thực đơn cho Gia Phát xem) | Low | Không áp dụng |
 
 Người không có `cost.cost.read` nhận `ERR-COST-422-07` với thông báo rút gọn "Thực đơn có {n} ngày vượt ngân sách", không có cost %.
 
@@ -440,11 +440,11 @@ ERD dùng một cảnh báo đầu mục/ngày với nhiều chi tiết cơ sở
 
 User flow ghi nhận 10 câu hỏi FLOW-COST-Q01 → Q10. Đây là khoảng trống cần review, không phải thay đổi đã duyệt của SRS; đặc biệt cần chốt xử lý giá đổi trong thời gian PENDING, giao dịch dự toán tuần và quyền đọc khoản khoán trước khi hoàn thiện API. Không đổi trạng thái các điểm mở tại 4.4–4.5.
 
-## Phụ lục — Thiết kế API và giao diện
+## Phụ lục: Thiết kế API và giao diện
 
 [API v0.1.0](../api/api-spec.md): 37 endpoint đề xuất, truy vết 45 FR qua API, hook nội bộ hoặc hoãn. [Wireframe 18 màn](../html-wireframe/cost-workbench.html) dùng dữ liệu giả; [hướng dẫn và giới hạn](../html-wireframe/README.md). Mã lỗi kỹ thuật bổ sung, concurrency token và outbox trong API còn là đề xuất triển khai; chưa bổ sung vào schema hiện tại. [Báo cáo kiểm tra](../validation/api-wireframe-report.md).
 
-## Phụ lục — Backlog và kiểm thử
+## Phụ lục: Backlog và kiểm thử
 
 [28 user story](../userstories/backlog.md) · [108 AC](../userstories/acceptance-criteria.md) · [Checklist](../test/checklist.md) · [Test case](../test/test-cases.md) · [RTM](../test/traceability.md). Đây là kịch bản đã viết, chưa chạy backend. Hai FR hoãn vẫn chưa có story/test thực thi.
 
@@ -466,14 +466,14 @@ Công thức3.3.2 dùng giá suất đã gồm VAT vẫn áp dụng cho fixture 
 
 Làm rõ BR-PRC-002 trong extension: giá nhập nguyên đồng là `price_vnd` cuối sau chuẩn hóa. Giá báo nguồn là Decimal riêng, chưa dùng thẳng tính cost. Gross phần lẻ chưa có chính sách làm tròn thì không ghi; lỗi normalization và mapping ca cũ xem [API kế toán](../api/accounting-contract.md).
 
-## Phụ thuộc E4/E5 — bản thiết kế ngày 11/11/2026
+## Phụ thuộc E4/E5: bản thiết kế ngày 11/11/2026
 
 [Dinh dưỡng](../../dinh-duong/srs/spec.md) đọc recipe_items.qty_std và nguồn dinh dưỡng; không dùng COST_AP_HAO_HUT để đổi công thức. [Agent Nội bộ](../../agent-noi-bo/api/api-spec.md) gọi FR-MENU-RUL-002 và API-COST-025 với cùng candidate/version; apply chỉ tạo DRAFT, không tự duyệt/công bố. Adapter MENU và tính nguyên tử chờ AIO-Q06. Đề xuất chỉ trả candidate VALID khi cost không vượt kể cả CANH_BAO (AIO-Q02 còn mở); cổng MENU hiện hành vẫn giữ nguyên. Chưa có API/worker/backend triển khai trong gói này.
 
-## Hồ sơ bổ sung để review — 11/11/2026
+## Hồ sơ bổ sung để review ngày 11/11/2026
 
 [Preview toàn hồ sơ](../preview.html) · [API](../api/api-spec.md) · [Luồng tuần tự](flows.md) · [Trạng thái](states.md) · [Gap](../gap-analysis.md). Gói bổ sung không tự đóng câu hỏi, thay quy tắc nghiệp vụ hoặc chứng minh backend đã triển khai. [Bàn giao](../../gia-phat/review/ba-completion-handoff.md).
 
-## Liên kết phụ thuộc E6 — bổ sung 11/11/2026
+## Liên kết phụ thuộc E6: bổ sung 11/11/2026
 
 [Gói E6 để review](../../chon-mon-order/preview.html) · [Hợp đồng phụ thuộc](../../chon-mon-order/review/dependencies.md) · [Đối chiếu schema](../../chon-mon-order/srs/data-dictionary.md). E6 giữ nguồn công bố/quyền và quy tắc của phân hệ này; delta chưa merge, không thay gate hoặc chứng minh phần mềm đã triển khai.

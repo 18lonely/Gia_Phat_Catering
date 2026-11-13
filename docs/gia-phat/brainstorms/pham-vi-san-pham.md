@@ -25,7 +25,7 @@ Nguồn ưu tiên: xác nhận trực tiếp của người dùng → PRD/roadma
 | Next | E6–E9,36 tính năng | E6 có gói BA review v0.2 còn gate; E7–E9 chưa có SRS riêng |
 | Later | E10–E13,19 tính năng | Phạm vi PRD/roadmap; chưa SRS riêng |
 
-## Quyết định đã có nguồn — không hỏi lại như chưa từng chốt
+## Quyết định đã có nguồn: không hỏi lại như chưa từng chốt
 
 | Chủ đề | Nguồn | Nội dung giữ nguyên |
 | :--- | :--- | :--- |

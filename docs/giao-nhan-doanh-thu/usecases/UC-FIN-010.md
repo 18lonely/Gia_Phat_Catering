@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-010-MD
-title: UC-FIN-010 — Khóa kỳ đối soát
+title: "UC-FIN-010: Khóa kỳ đối soát"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-010 — Khóa kỳ đối soát
+# UC-FIN-010: Khóa kỳ đối soát
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán hoàn tất đối chiếu kỳ và yêu cầu khóa bản số liệu đủ điều kiện.
 
-Tiền điều kiện — nghiệp vụ: Có kỳ đã thống nhất và nguồn quyết định khóa; kế toán có quyền khóa kỳ.
-Tiền điều kiện — gate còn mở: E7-Q05 và Q-13 chưa chốt điều kiện khóa, xử lý phiếu khách im lặng; luồng thành công chưa có evidence thực tế.
+Tiền điều kiện (nghiệp vụ): Có kỳ đã thống nhất và nguồn quyết định khóa; kế toán có quyền khóa kỳ.
+Tiền điều kiện (gate còn mở): E7-Q05 và Q-13 chưa chốt điều kiện khóa, xử lý phiếu khách im lặng; luồng thành công chưa có evidence thực tế.
 
 Luồng chính:
 1. Kế toán chọn periodId tại UI-E7-05 và rà tổng, tập nguồn cùng trạng thái thống nhất.

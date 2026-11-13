@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-012-MD
-title: UC-AIN-012 — Giữ ranh giới câu hỏi bệnh lý
+title: "UC-AIN-012: Giữ ranh giới câu hỏi bệnh lý"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-012 — Giữ ranh giới câu hỏi bệnh lý
+# UC-AIN-012: Giữ ranh giới câu hỏi bệnh lý
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-MED-001 / FEAT-065 / US-AIN-012.
 
 Trigger: Yêu cầu gửi tới agent chứa câu hỏi bệnh lý, mục tiêu điều trị hoặc thông tin sức khỏe xen trong nội dung đổi món.
 
-Tiền điều kiện — nghiệp vụ: Nội dung đi qua biên an toàn trước lưu/chuyển tool/model; O-03 còn đóng với cá nhân hóa sức khỏe.
-Tiền điều kiện — gate còn mở: E9-Q03, E9-Q09, E9-Q10, E9-Q14 chưa chốt xử lý nội dung, lời nhắc/rubric và dữ liệu. Runtime nhánh này vẫn BLOCKED trước khi lời nhắc được duyệt.
+Tiền điều kiện (nghiệp vụ): Nội dung đi qua biên an toàn trước lưu/chuyển tool/model; O-03 còn đóng với cá nhân hóa sức khỏe.
+Tiền điều kiện (gate còn mở): E9-Q03, E9-Q09, E9-Q10, E9-Q14 chưa chốt xử lý nội dung, lời nhắc/rubric và dữ liệu. Runtime nhánh này vẫn BLOCKED trước khi lời nhắc được duyệt.
 
 Luồng chính:
 1. Biên an toàn kiểm yêu cầu trước khi đưa nội dung vào công cụ/model hoặc lưu hội thoại.

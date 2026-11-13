@@ -9,7 +9,7 @@ last_updated: 2026-11-13
 ---
 # RTM E1
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -31,23 +31,23 @@ last_updated: 2026-11-13
 | FR-AUTH-RBAC-001 | US-CORE-011 | UC-CORE-011 | API-CORE-013 | UI-CORE-02 | AC-CORE-011-1/2/3 | TC-CORE-011-1/2/3 |
 | FR-AUTH-RBAC-002 | US-CORE-012 | UC-CORE-012 | API-CORE-011 | UI-CORE-02 | AC-CORE-012-1/2/3 | TC-CORE-012-1/2/3 |
 | FR-AUTH-RBAC-003 | US-CORE-013 | UC-CORE-013 | API-CORE-012 | UI-CORE-02 | AC-CORE-013-1/2/3 | TC-CORE-013-1/2/3 |
-| FR-AUTH-SVC-001 | US-CORE-014 | UC-CORE-014 | Port nội bộ — API mục3 | UI-CORE-02 | AC-CORE-014-1/2/3 | TC-CORE-014-1/2/3 |
-| FR-SYS-AUD-001 | US-CORE-015 | UC-CORE-015 | Port nội bộ — API mục3 | UI-CORE-03 | AC-CORE-015-1/2/3 | TC-CORE-015-1/2/3 |
+| FR-AUTH-SVC-001 | US-CORE-014 | UC-CORE-014 | Port nội bộ: API mục3 | UI-CORE-02 | AC-CORE-014-1/2/3 | TC-CORE-014-1/2/3 |
+| FR-SYS-AUD-001 | US-CORE-015 | UC-CORE-015 | Port nội bộ: API mục3 | UI-CORE-03 | AC-CORE-015-1/2/3 | TC-CORE-015-1/2/3 |
 | FR-SYS-AUD-002 | US-CORE-016 | UC-CORE-016 | API-CORE-015 | UI-CORE-03 | AC-CORE-016-1/2/3 | TC-CORE-016-1/2/3 |
-| FR-SYS-AUD-003 | US-CORE-017 | UC-CORE-017 | Port nội bộ — API mục3 | UI-CORE-03 | AC-CORE-017-1/2/3 | TC-CORE-017-1/2/3 |
-| FR-SYS-AUD-004 | US-CORE-018 | UC-CORE-018 | Port nội bộ — API mục3 | UI-CORE-03 | AC-CORE-018-1/2/3 | TC-CORE-018-1/2/3 |
+| FR-SYS-AUD-003 | US-CORE-017 | UC-CORE-017 | Port nội bộ: API mục3 | UI-CORE-03 | AC-CORE-017-1/2/3 | TC-CORE-017-1/2/3 |
+| FR-SYS-AUD-004 | US-CORE-018 | UC-CORE-018 | Port nội bộ: API mục3 | UI-CORE-03 | AC-CORE-018-1/2/3 | TC-CORE-018-1/2/3 |
 | FR-SYS-PRM-001 | US-CORE-019 | UC-CORE-019 | API-CORE-016, API-CORE-017 | UI-CORE-04 | AC-CORE-019-1/2/3 | TC-CORE-019-1/2/3 |
 | FR-SYS-PRM-002 | US-CORE-020 | UC-CORE-020 | API-CORE-018 | UI-CORE-04 | AC-CORE-020-1/2/3 | TC-CORE-020-1/2/3 |
-| FR-SYS-NTF-001 | US-CORE-021 | UC-CORE-021 | Port nội bộ — API mục3 | UI-CORE-05 | AC-CORE-021-1/2/3 | TC-CORE-021-1/2/3 |
+| FR-SYS-NTF-001 | US-CORE-021 | UC-CORE-021 | Port nội bộ: API mục3 | UI-CORE-05 | AC-CORE-021-1/2/3 | TC-CORE-021-1/2/3 |
 | FR-SYS-NTF-002 | US-CORE-022 | UC-CORE-022 | API-CORE-019, API-CORE-020 | UI-CORE-05 | AC-CORE-022-1/2/3 | TC-CORE-022-1/2/3 |
-| FR-SYS-NTF-003 | US-CORE-023 | UC-CORE-023 | Port nội bộ — API mục3 | UI-CORE-05 | AC-CORE-023-1/2/3 | TC-CORE-023-1/2/3 |
+| FR-SYS-NTF-003 | US-CORE-023 | UC-CORE-023 | Port nội bộ: API mục3 | UI-CORE-05 | AC-CORE-023-1/2/3 | TC-CORE-023-1/2/3 |
 | FR-SYS-FILE-001 | US-CORE-024 | UC-CORE-024 | API-CORE-021, API-CORE-022 | UI-CORE-06 | AC-CORE-024-1/2/3 | TC-CORE-024-1/2/3 |
 | FR-SYS-JOB-001 | US-CORE-025 | UC-CORE-025 | API-CORE-023, API-CORE-024 | UI-CORE-06 | AC-CORE-025-1/2/3 | TC-CORE-025-1/2/3 |
 | FR-SYS-HLT-001 | US-CORE-026 | UC-CORE-026 | API-CORE-025 | UI-CORE-06 | AC-CORE-026-1/2/3 | TC-CORE-026-1/2/3 |
 
-## Bổ sung gate — XC-12
+## Bổ sung gate (XC-12)
 
-> Chờ E1-Q06 — XC-12. BLOCKED kết luận đạt phép đo phản hồi đầu E1/E5. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E1-Q06: XC-12. BLOCKED kết luận đạt phép đo phản hồi đầu E1/E5. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Phép đo/tích hợp này chưa có ca độc lập được xác nhận; cần truy vết sau quyết định. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
 

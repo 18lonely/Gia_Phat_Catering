@@ -1,15 +1,15 @@
 ---
 id: DOC-NEN-TANG-USECASES-UC-CORE-009
-title: UC-CORE-009 — Sửa vai trò và cơ sở
+title: "UC-CORE-009: Sửa vai trò và cơ sở"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# UC-CORE-009 — Sửa vai trò và cơ sở
+# UC-CORE-009: Sửa vai trò và cơ sở
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

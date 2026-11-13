@@ -3,7 +3,7 @@
 Phiên bản 0.1.0 · 2026-11-10 · Draft · [Sơ đồ use case](../srs/usecase-diagram.md) · [SRS](../srs/spec.md)
 
 - **Tác nhân chính**: Dinh dưỡng viên.
-- **Phạm vi**: Trang quản trị nội bộ — phân hệ MENU.
+- **Phạm vi**: Trang quản trị nội bộ, phân hệ MENU.
 - **Cấp độ**: Sea level.
 - **Các bên liên quan & kỳ vọng**:
   - Dinh dưỡng viên: sửa được thuộc tính gắn sai mà không làm món biến mất khỏi danh mục.

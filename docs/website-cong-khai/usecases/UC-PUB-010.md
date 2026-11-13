@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-010-MD
-title: UC-PUB-010 — Xem trước nội dung
+title: "UC-PUB-010: Xem trước nội dung"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-010 — Xem trước nội dung
+# UC-PUB-010: Xem trước nội dung
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò ng
 
 Trigger: Người soạn cần kiểm tra cách hiển thị của revision vừa chuẩn bị trước khi xin công bố.
 
-Tiền điều kiện — nghiệp vụ: Có contentId và revision nháp; người xem có phiên và quyền xem trước nội dung.
-Tiền điều kiện — gate còn mở: E8-Q08 chưa chốt vai trò/quy trình; không tự coi đường dẫn preview là quyền truy cập.
+Tiền điều kiện (nghiệp vụ): Có contentId và revision nháp; người xem có phiên và quyền xem trước nội dung.
+Tiền điều kiện (gate còn mở): E8-Q08 chưa chốt vai trò/quy trình; không tự coi đường dẫn preview là quyền truy cập.
 
 Luồng chính:
 1. Người soạn chọn contentId và revision cần xem trước tại UI-PUB-06.

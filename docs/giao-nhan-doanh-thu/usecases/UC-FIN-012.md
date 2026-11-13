@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-012-MD
-title: UC-FIN-012 — Duyệt hoặc từ chối mở lại kỳ
+title: "UC-FIN-012: Duyệt hoặc từ chối mở lại kỳ"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-012 — Duyệt hoặc từ chối mở lại kỳ
+# UC-FIN-012: Duyệt hoặc từ chối mở lại kỳ
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Giám đốc. Bên quan tâm: kế toán cần q
 
 Trigger: Giám đốc nhận đề nghị mở lại kỳ có lý do và bằng chứng từ kế toán.
 
-Tiền điều kiện — nghiệp vụ: Có yêu cầu mở lại chờ quyết định và kỳ khóa; Giám đốc khác người lập/sửa cuối theo BR-SEC-008.
-Tiền điều kiện — gate còn mở: E7-Q05 về vòng mở lại; O-06 không tự cấp người thay. Luồng không xác nhận các policy này đã được duyệt.
+Tiền điều kiện (nghiệp vụ): Có yêu cầu mở lại chờ quyết định và kỳ khóa; Giám đốc khác người lập/sửa cuối theo BR-SEC-008.
+Tiền điều kiện (gate còn mở): E7-Q05 về vòng mở lại; O-06 không tự cấp người thay. Luồng không xác nhận các policy này đã được duyệt.
 
 Luồng chính:
 1. Giám đốc xem yêu cầu tại UI-E7-07, gồm lý do, nội dung sửa, bằng chứng và người lập/sửa cuối.

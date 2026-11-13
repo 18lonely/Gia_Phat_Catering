@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-005-MD
-title: UC-FIN-005 — Tính doanh thu từ số tính tiền
+title: "UC-FIN-005: Tính doanh thu từ số tính tiền"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-005 — Tính doanh thu từ số tính tiền
+# UC-FIN-005: Tính doanh thu từ số tính tiền
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán có căn cứ số suất tính tiền của đơn giao và cần lập bản tính doanh thu để đối soát.
 
-Tiền điều kiện — nghiệp vụ: Có order revision, giá chụp và bằng chứng số tính tiền; kế toán có quyền tại khách tương ứng.
-Tiền điều kiện — gate còn mở: E7-Q03/04, Q-13, E6-CG-04/05/07 chưa chốt căn cứ/nguồn và cách xử lý thuế, làm tròn. Luồng thành công chỉ có điều kiện.
+Tiền điều kiện (nghiệp vụ): Có order revision, giá chụp và bằng chứng số tính tiền; kế toán có quyền tại khách tương ứng.
+Tiền điều kiện (gate còn mở): E7-Q03/04, Q-13, E6-CG-04/05/07 chưa chốt căn cứ/nguồn và cách xử lý thuế, làm tròn. Luồng thành công chỉ có điều kiện.
 
 Luồng chính:
 1. Kế toán chọn đơn tại UI-E7-04 và tham chiếu orderRevisionRef, pricingSnapshotId.

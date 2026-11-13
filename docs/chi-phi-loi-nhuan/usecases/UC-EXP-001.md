@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-001-MD
-title: UC-EXP-001 — Quản lý và khóa kỳ chi phí
+title: "UC-EXP-001: Quản lý và khóa kỳ chi phí"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-001 — Quản lý và khóa kỳ chi phí
+# UC-EXP-001: Quản lý và khóa kỳ chi phí
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: kỳ đã LOCKED; khi gửi sửa trực tiếp kỳ thì ERR-EXP-409-01; không đổi byte dữ liệu gốc.
-- **4d — biên**: hai thao tác cùng version cũ; khi gửi khóa đồng thời với ghi chi phí thì chỉ một version hợp lệ; thao tác còn lại ERR-EXP-409-02.
+- **4c. Đặc thù**: kỳ đã LOCKED; khi gửi sửa trực tiếp kỳ thì ERR-EXP-409-01; không đổi byte dữ liệu gốc.
+- **4d. Biên**: hai thao tác cùng version cũ; khi gửi khóa đồng thời với ghi chi phí thì chỉ một version hợp lệ; thao tác còn lại ERR-EXP-409-02.
 
 ## Quy tắc và truy vết
 

@@ -31,7 +31,7 @@ Toàn bộ fixture synthetic; **Actual/Evidence: chưa có**. Các bước chạ
 Phạm vi ba bộ này:57 ca theo AC +10 ca gốc +12 ca hệ thống = **79 mô tả test**, có overlap. Inventory hiện hành gồm thêm8DR +12INV = **99 mô tả ca có overlap**, không phải99 mục tiêu độc lập. Không có test backend đã chạy, không dùng kết quả kiểm HTML làm actual các ca trên.
 
 
-## Hướng dẫn thực thi đã đối chiếu — 12/11/2026
+## Hướng dẫn thực thi đã đối chiếu ngày 12/11/2026
 
 DOCUMENT_CLARIFIED, v0.2.1. Dùng [evidence protocol](evidence-protocol.md), [API](../api/api-spec.md), [catalog](../api/endpoint-catalog.json), [UC](../review/uc-operation-review.md) và [AC](../userstories/acceptance-criteria.md); giữ12mã ca và Status/Actual/Evidence.
 

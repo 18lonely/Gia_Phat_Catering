@@ -1,4 +1,4 @@
-# Gia Phát — Kế hoạch tổng thể: tính năng & thứ tự viết tài liệu (khung ba-kit)
+# Kế hoạch tổng thể: tính năng & thứ tự viết tài liệu (khung ba-kit) Gia Phát
 
 ## Metadata
 
@@ -26,7 +26,7 @@
 
 ---
 
-## Trạng thái hiện hành — 11/11/2026
+## Trạng thái hiện hành ngày 11/11/2026
 
 - E1–E5 đã có các loại hồ sơ BA theo chuỗi mục6.2, gồm preview HTML và sơ đồ; mức chi tiết/gate khác nhau, không coi là baseline đã duyệt. Các khoảng trống nghiệp vụ còn lại ghi ở gap-analysis từng epic.
 - Bước1 có [sổ phạm vi](brainstorms/pham-vi-san-pham.md), nhưng điều kiện “không còn câu hỏi chặn” chưa đạt. Bước2 vẫn chờ DL-01; các bước3–8 là bản nháp đã có, không phải đã nghiệm thu.
@@ -47,7 +47,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 | D-06 | Agent Dinh dưỡng viên tư vấn **cả hai mức**: thực đơn cho tập thể và gợi ý cá nhân cho người ăn tự khai thông tin. | Vòng 2 |
 | D-07 | Agent Nội bộ làm 4 việc: dựng thực đơn + kiểm cost · mua hàng & nguyên liệu · hỗ trợ CRM/CSKH · hỏi đáp số liệu. | Vòng 2 |
 | D-08 | Quy chuẩn thực đơn, bảng định lượng (mức 40k/suất) và ngưỡng cost 52% theo file docx là nguồn quy tắc nghiệp vụ. | Yêu cầu gốc |
-| D-09 | Các quyết định ngày 04/11/2026 trong bản HTML (2 cơ sở, HĐ nguyên tắc năm, ghi nhận doanh thu khi khách xác nhận, MISA dùng riêng…) giữ nguyên, **trừ** điểm "mỗi công ty một người đặt tổng nhập số" — bị D-03/D-04 thay đổi. | Bản HTML + vòng 2 |
+| D-09 | Các quyết định ngày 04/11/2026 trong bản HTML (2 cơ sở, HĐ nguyên tắc năm, ghi nhận doanh thu khi khách xác nhận, MISA dùng riêng…) giữ nguyên, **trừ** điểm "mỗi công ty một người đặt tổng nhập số": bị D-03/D-04 thay đổi. | Bản HTML + vòng 2 |
 
 | D-10 | Khách vãng lai **được thấy giá suất** trên website công khai. (Q-01) | Vòng 3 |
 | D-11 | Người ăn có form **đăng ký / đăng nhập và phải xác minh** trước khi dùng. Cách xác minh cụ thể còn mở (Q-02b). | Vòng 3 |
@@ -69,7 +69,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 1. **Số ĐẶT không còn do một người nhập.** Nó là tổng lựa chọn cá nhân theo từng món chính, cộng phần người đặt tổng nhập cho những người không tự chọn. Cần quy tắc cho người không chọn trước hạn [CHỜ Q-03].
 2. **Người ăn không còn ẩn danh.** Bản cũ chỉ có "nhóm người ăn"; nay cần thực thể Người ăn (có tài khoản) và Phiên QR (không tài khoản) → phát sinh nghĩa vụ bảo vệ dữ liệu cá nhân, nhất là dữ liệu sức khoẻ ở D-06.
 3. **Kế hoạch sản xuất theo món**, còn giao/nhận/tính tiền theo suất. Bảy loại số lượng phải ghi rõ cấp nào theo món, cấp nào theo suất.
-4. **Điểm tải cao nhất** là lúc người ăn dồn vào chọn món sát hạn chốt — đây mới là chỗ mục tiêu 1000 CCU có ý nghĩa.
+4. **Điểm tải cao nhất** là lúc người ăn dồn vào chọn món sát hạn chốt: đây mới là chỗ mục tiêu 1000 CCU có ý nghĩa.
 
 ---
 
@@ -83,9 +83,9 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 | Cổng khách hàng | `app.comgiaphat.com` | Người đặt tổng, người nhận | Thực đơn kỳ, tổng hợp lựa chọn, chốt số, xác nhận nhận hàng, đối soát |
 | Cổng người ăn | Cùng app với cổng khách hàng; QR mở thẳng trang chọn món | Người ăn có tài khoản / qua QR | Chọn 1 trong 3 món chính, xem định lượng – dinh dưỡng – dị ứng, hồ sơ cá nhân, đánh giá bữa ăn |
 | Quản trị nội bộ | `admin.comgiaphat.com` | Giám đốc, dinh dưỡng viên/CSKH, quản lý cơ sở, bếp trưởng, kế toán | Toàn bộ phân hệ M1–M10 của bản HTML + thực đơn/cost + Agent Nội bộ |
-| **Lõi** | `api.comgiaphat.com` | — | Một API NestJS, một MySQL, dùng chung cho cả bốn mặt tiền |
+| **Lõi** | `api.comgiaphat.com` | Không áp dụng | Một API NestJS, một MySQL, dùng chung cho cả bốn mặt tiền |
 
-### 2.2 Tác nhân (actor) — đầu vào cho `rules/17-actor-role-definition.md`
+### 2.2 Tác nhân (actor): đầu vào cho `rules/17-actor-role-definition.md`
 
 | Mã | Tác nhân | Đăng nhập | Ghi chú |
 |---|---|---|---|
@@ -112,8 +112,8 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 |---|---|---|
 | Website công khai | **Next.js (React)** có SSR/ISR | Site công khai và blog cần SEO; React thuần render phía trình duyệt sẽ mất thứ hạng tìm kiếm hiện có. Giữ nguyên URL bài viết cũ hoặc chuyển hướng 301. |
 | Cổng khách/người ăn + quản trị | **React SPA** (Vite), 2 bản build riêng | Không cần SEO; tách bản quản trị để không lộ mã nội bộ ra ngoài. |
-| API | **NestJS, modular monolith** — mỗi phân hệ một module, chạy ≥ 2 bản sau bộ cân bằng tải | Đội nhỏ, một cơ sở mã; không tách microservice. API không giữ trạng thái nên nhân bản được. |
-| Worker | NestJS + **BullMQ** (tiến trình riêng) | Chạy AI agent, gửi thông báo, chốt số tại hạn chốt, tính nhu cầu nguyên liệu, xuất file — không chạy trong luồng xử lý yêu cầu web. |
+| API | **NestJS, modular monolith**: mỗi phân hệ một module, chạy ≥ 2 bản sau bộ cân bằng tải | Đội nhỏ, một cơ sở mã; không tách microservice. API không giữ trạng thái nên nhân bản được. |
+| Worker | NestJS + **BullMQ** (tiến trình riêng) | Chạy AI agent, gửi thông báo, chốt số tại hạn chốt, tính nhu cầu nguyên liệu, xuất file: không chạy trong luồng xử lý yêu cầu web. |
 | Cơ sở dữ liệu | **MySQL 8**: 1 primary + 1 read replica | Ghi vào primary; trang thực đơn, báo cáo, hỏi đáp số liệu đọc từ replica. |
 | Bộ nhớ đệm / hàng đợi | **Redis** | Cache thực đơn đã công bố, phiên đăng nhập, giới hạn tần suất, hàng đợi BullMQ. |
 | Tệp | Lưu trữ đối tượng tương thích S3 + CDN | Ảnh món, ảnh chứng từ, mẫu lưu, tệp hợp đồng. |
@@ -126,7 +126,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 | **Dồn chọn món sát hạn chốt** (hàng trăm người ghi cùng lúc) | Thực đơn ngày đọc từ Redis; mỗi lựa chọn là một lệnh ghi nhỏ có khoá duy nhất `(người ăn, ngày, ca)` và khoá chống gửi lặp; tổng theo món cập nhật bằng bộ đếm, không `COUNT` lại mỗi lần; hạn chốt do một job duy nhất khoá và chụp số. |
 | **Lời gọi AI** (chậm vài giây đến vài chục giây, tốn tiền theo lượt) | Luôn qua hàng đợi, trả kết quả dạng luồng (streaming); giới hạn số lượt chạy song song và ngân sách theo ngày cho từng nhóm người dùng; khách vãng lai giới hạn theo IP/phiên; khi quá tải thì xếp hàng chứ không làm chậm việc chọn món. |
 
-### 3.3 Chỉ tiêu phi chức năng — đầu vào cho `rules/04-nfr-standards.md` (con số [ĐỀ XUẤT], chốt ở SRS)
+### 3.3 Chỉ tiêu phi chức năng: đầu vào cho `rules/04-nfr-standards.md` (con số [ĐỀ XUẤT], chốt ở SRS)
 
 | Mã | Chỉ tiêu | Mục tiêu |
 |---|---|---|
@@ -143,7 +143,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 
 ## 4. Danh mục tính năng
 
-### 4.1 PUB — Website công khai (thay WordPress)
+### 4.1 PUB: Website công khai (thay WordPress)
 
 | Mã | Tính năng | Tác nhân | Ưu tiên |
 |---|---|---|---|
@@ -157,7 +157,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 
 Có hiện giá/báo giá sơ bộ cho khách vãng lai hay không: [CHỜ Q-01].
 
-### 4.2 AUTH — Tài khoản & phân quyền
+### 4.2 AUTH: Tài khoản & phân quyền
 
 | Mã | Tính năng | Ưu tiên |
 |---|---|---|
@@ -168,7 +168,7 @@ Có hiện giá/báo giá sơ bộ cho khách vãng lai hay không: [CHỜ Q-01]
 | AUTH-05 | Đồng ý xử lý dữ liệu cá nhân/sức khoẻ; rút đồng ý; xoá dữ liệu | P0 (nếu làm D-06 mức cá nhân) |
 | AUTH-06 | Nhật ký đăng nhập, khoá tài khoản, đặt lại mật khẩu | P0 |
 
-### 4.3 MENU — Món, công thức, định lượng, thực đơn
+### 4.3 MENU: Món, công thức, định lượng, thực đơn
 
 Đây là phân hệ lõi mới. Bản HTML đặt nó ở "M3 cơ bản"; nay phải làm đầy đủ ngay từ đầu vì cả hai agent và việc chọn món đều đứng trên nó.
 
@@ -185,9 +185,9 @@ Có hiện giá/báo giá sơ bộ cho khách vãng lai hay không: [CHỜ Q-01]
 | MENU-09 | Rau theo mùa: lịch mùa vụ và ưu tiên khi dựng thực đơn | P1 |
 | MENU-10 | **Bộ tính giá suất tuỳ biến** [ĐÃ CHỐT D-12]: cấu hình định mức (giá suất, số món chính, số món phụ) theo khách; khi chọn món tự do thì tính giá suất theo món đã chọn, hoặc chặn lựa chọn làm vượt định mức. Cách tính giá từng món và ai được tuỳ biến: [CHỜ Q-20, Q-21] | P0 |
 
-Quy tắc trong docx cần chuyển thành `BR-MENU-xxx` (số lượng sơ bộ: ~30 quy tắc). Phần lớn đang ở dạng định tính ("hạn chế tối đa", "không nên", "hài hoà") — phải phân loại cứng/mềm và gắn con số trước khi viết SRS [CHỜ Q-06].
+Quy tắc trong docx cần chuyển thành `BR-MENU-xxx` (số lượng sơ bộ: ~30 quy tắc). Phần lớn đang ở dạng định tính ("hạn chế tối đa", "không nên", "hài hoà"): phải phân loại cứng/mềm và gắn con số trước khi viết SRS [CHỜ Q-06].
 
-### 4.4 COST — Giá nguyên liệu, dự toán, ngưỡng 52%
+### 4.4 COST: Giá nguyên liệu, dự toán, ngưỡng 52%
 
 | Mã | Tính năng | Ưu tiên |
 |---|---|---|
@@ -198,15 +198,15 @@ Quy tắc trong docx cần chuyển thành `BR-MENU-xxx` (số lượng sơ bộ
 | COST-05 | Tính lại định lượng khi đổi mức giá suất (từ bảng chuẩn 40k) [CHỜ Q-07] | P0 |
 | COST-06 | Cảnh báo khi giá nhập biến động làm thực đơn đã duyệt vượt ngưỡng | P1 |
 | COST-07 | Đối chiếu cost dự toán với chi phí thực mua theo ngày/cơ sở | P1 |
-| COST-08 | Cân đối món phụ theo cost món chính (món chính cao → món phụ thấp) — thành quy tắc mềm trong MENU-06 | P1 |
+| COST-08 | Cân đối món phụ theo cost món chính (món chính cao → món phụ thấp): thành quy tắc mềm trong MENU-06 | P1 |
 
 Công thức 52% tính trên doanh thu trước hay sau VAT, gồm những khoản nào (gạo, gia vị, dầu, gas, hộp/khay): [CHỜ Q-04]. Cost và giá nhập **không bao giờ** hiển thị ở cổng khách.
 
-### 4.5 NUTR — Dinh dưỡng
+### 4.5 NUTR: Dinh dưỡng
 
 | Mã | Tính năng | Ưu tiên |
 |---|---|---|
-| NUTR-01 | Bảng thành phần dinh dưỡng theo nguyên liệu (năng lượng, đạm, béo, bột đường, xơ, muối…) — nguồn dữ liệu [CHỜ Q-08] | P0 |
+| NUTR-01 | Bảng thành phần dinh dưỡng theo nguyên liệu (năng lượng, đạm, béo, bột đường, xơ, muối…): nguồn dữ liệu [CHỜ Q-08] | P0 |
 | NUTR-02 | Tính dinh dưỡng món và suất từ định lượng sống (có hệ số phần ăn được) | P0 |
 | NUTR-03 | Hiển thị cho khách: định lượng, thành phần, dinh dưỡng, dị ứng của từng món/suất | P0 |
 | NUTR-04 | Hồ sơ dinh dưỡng cá nhân (tự nguyện): chiều cao, cân nặng, mục tiêu, dị ứng, kiêng kỵ; phạm vi bệnh lý [CHỜ Q-10] | P1 |
@@ -214,18 +214,18 @@ Công thức 52% tính trên doanh thu trước hay sau VAT, gồm những kho�
 | NUTR-06 | Mục tiêu dinh dưỡng theo nhóm người ăn (lao động nặng, văn phòng…) và kiểm thực đơn theo mục tiêu | P1 |
 | NUTR-07 | Nhật ký dinh dưỡng cá nhân theo các bữa đã ăn | P2 |
 
-### 4.6 ORD — Chọn món, order, chốt số
+### 4.6 ORD: Chọn món, order, chốt số
 
 | Mã | Tính năng | Tác nhân | Ưu tiên |
 |---|---|---|---|
 | ORD-01 | Người ăn chọn 1 trong 3 món chính cho từng ngày (đặt trước cả tuần được) | A-04, A-05 | P0 |
 | ORD-02 | Người đặt tổng xem tổng lựa chọn theo món, bổ sung số cho người chưa chọn, chốt | A-02 | P0 |
-| ORD-03 | Quy tắc cho người không chọn trước hạn (món mặc định / chia theo tỷ lệ / người đặt tổng quyết) [CHỜ Q-03] | — | P0 |
+| ORD-03 | Quy tắc cho người không chọn trước hạn (món mặc định / chia theo tỷ lệ / người đặt tổng quyết) [CHỜ Q-03] | Không áp dụng | P0 |
 | ORD-04 | Hạn chốt theo khách/điểm/ca; hệ thống khoá và phát hành kế hoạch v1 | Hệ thống | P0 |
 | ORD-05 | Đổi sau chốt: tính chênh lệch, duyệt theo ngưỡng, tạo phiên bản kế hoạch mới | A-02, A-06, A-07, A-10 | P0 |
 | ORD-06 | Nhập hộ khi khách gửi qua Zalo/điện thoại, ghi nguồn và bằng chứng | A-06 | P0 |
 | ORD-07 | Nhắc người chưa chọn trước hạn chốt | Hệ thống | P1 |
-| ORD-08 | Chế độ không cho chọn (công ty muốn một người đặt như cũ) — cấu hình theo khách | A-02 | P1 |
+| ORD-08 | Chế độ không cho chọn (công ty muốn một người đặt như cũ): cấu hình theo khách | A-02 | P1 |
 
 Có cho người ăn chọn cả món phụ/rau/canh không, hay chỉ món chính: [CHỜ Q-05]. Người ăn có tự trả tiền không: [CHỜ Q-11].
 
@@ -259,11 +259,11 @@ Giữ nội dung bản HTML, sửa theo [bản phân tích](../../GiaPhat_PhanTi
 5. **Tách hoàn toàn hai agent**: lời nhắc hệ thống, bộ công cụ, tài khoản dịch vụ, hàng đợi, hạn mức chi phí, nhật ký đều riêng. Việc agent phía khách không thấy cost được chặn ở tầng công cụ và quyền cơ sở dữ liệu, không dựa vào lời nhắc.
 6. **Mọi lượt chạy đều ghi lại**: ai hỏi, hỏi gì, công cụ nào được gọi, kết quả, chi phí.
 
-### 5.2 AIN — Agent Dinh dưỡng viên (phía khách)
+### 5.2 AIN: Agent Dinh dưỡng viên (phía khách)
 
 | Mã | Khả năng | Người dùng | Ưu tiên |
 |---|---|---|---|
-| AIN-01 | Tạo thực đơn tuần cho tập thể theo mức giá suất, số suất, khẩu vị, kiêng kỵ — đúng quy chuẩn docx | A-01 (mẫu), A-02 | P0 |
+| AIN-01 | Tạo thực đơn tuần cho tập thể theo mức giá suất, số suất, khẩu vị, kiêng kỵ: đúng quy chuẩn docx | A-01 (mẫu), A-02 | P0 |
 | AIN-02 | Giải thích thực đơn: vì sao chọn món, định lượng, dinh dưỡng từng suất | A-01, A-02, A-04 | P0 |
 | AIN-03 | Chỉnh theo yêu cầu ("đổi cá thứ Tư", "bớt món chiên") và kiểm lại quy tắc | A-02 | P0 |
 | AIN-04 | Gửi thực đơn nháp cho Gia Phát duyệt; với khách vãng lai thì chuyển thành lead | A-01, A-02 | P0 |
@@ -274,7 +274,7 @@ Công cụ được phép: tra món đã duyệt · lấy định lượng theo 
 
 Giới hạn bắt buộc: không chẩn đoán, không tư vấn điều trị, không thay lời bác sĩ; có lời nhắc rõ ràng khi người dùng nêu bệnh lý; không lộ giá nhập, cost, biên lợi nhuận; không cam kết giá hay hợp đồng; khách vãng lai bị giới hạn số lượt.
 
-### 5.3 AIO — Agent Nội bộ
+### 5.3 AIO: Agent Nội bộ
 
 | Mã | Khả năng | Người dùng | Ưu tiên |
 |---|---|---|---|
@@ -293,21 +293,21 @@ Giới hạn bắt buộc: quyền của agent = quyền của người đang d�
 
 ## 6. Thứ tự viết tài liệu theo ba-kit
 
-### 6.1 Tầng sản phẩm — viết một lần, theo đúng thứ tự
+### 6.1 Tầng sản phẩm: viết một lần, theo đúng thứ tự
 
 | Bước | Lệnh | File đầu ra | Nội dung phải có | Điều kiện để sang bước sau |
 |---|---|---|---|---|
-| 0 | — | `docs/gia-phat/00-ke-hoach-tong-the.md` | File này | Anh trả lời mục 9 |
+| 0 | Không áp dụng | `docs/gia-phat/00-ke-hoach-tong-the.md` | File này | Anh trả lời mục 9 |
 | 1 ✅ nháp v0.1.0 (11/11/2026), gate chưa đạt | `/brainstorm` | `docs/gia-phat/brainstorms/pham-vi-san-pham.md` | Chốt các câu hỏi mở Q-01 → Q-19, ghi quyết định và lý do | Không còn mục [CHỜ] chặn P0 |
 | 2 | `/brainstorm` | `docs/gia-phat/brainstorms/quy-tac-thuc-don.md` | Chuyển từng câu trong docx thành quy tắc cứng/mềm có con số, cùng dinh dưỡng viên | Mỗi quy tắc có mã, loại, ngưỡng |
 | 3 ✅ nháp v0.1.0 (10/11/2026) | `/brd` | [`docs/gia-phat/06-brd.md`](06-brd.md) | Mục tiêu kinh doanh, phạm vi, rủi ro, chi phí–lợi ích (gồm chi phí AI và hạ tầng) | Giám đốc duyệt |
-| 4 ✅ nháp v0.1.0 (10/11/2026) | `/urd` | [`docs/gia-phat/05-urd.md`](05-urd.md) | Chân dung và hành trình của A-01 → A-10 | — |
-| 5 ✅ nháp v0.1.0 (10/11/2026) | `/prd` | [`docs/gia-phat/01-prd.md`](01-prd.md) | Tầm nhìn, phạm vi, bảng bóc tách tính năng (lấy từ mục 4, 5) | — |
-| 6 ✅ nháp v0.1.0 (10/11/2026) | `/roadmap` | [`docs/gia-phat/02-roadmap.md`](02-roadmap.md) | Now / Next / Later (lấy từ mục 7) | — |
+| 4 ✅ nháp v0.1.0 (10/11/2026) | `/urd` | [`docs/gia-phat/05-urd.md`](05-urd.md) | Chân dung và hành trình của A-01 → A-10 | Không áp dụng |
+| 5 ✅ nháp v0.1.0 (10/11/2026) | `/prd` | [`docs/gia-phat/01-prd.md`](01-prd.md) | Tầm nhìn, phạm vi, bảng bóc tách tính năng (lấy từ mục 4, 5) | Không áp dụng |
+| 6 ✅ nháp v0.1.0 (10/11/2026) | `/roadmap` | [`docs/gia-phat/02-roadmap.md`](02-roadmap.md) | Now / Next / Later (lấy từ mục 7) | Không áp dụng |
 | 7 ✅ nháp v0.1.0 (10/11/2026) | `/srs` | [`docs/nen-tang/srs/spec.md`](../nen-tang/srs/spec.md) | NFR toàn hệ thống, kiến trúc mục 3, phân quyền, nhật ký | NFR có con số đo được |
 | 8 ✅ nháp v0.1.0 (10/11/2026) | `/erd` → `/dbdiagram` | [`docs/nen-tang/srs/erd.md`](../nen-tang/srs/erd.md), [`schema.dbml`](../nen-tang/srs/schema.dbml) | Mô hình dữ liệu tổng (bổ sung các thực thể thiếu đã nêu trong bản phân tích) | Mọi epic sau dùng chung mô hình này |
 
-### 6.2 Tầng epic — lặp lại cho từng epic
+### 6.2 Tầng epic: lặp lại cho từng epic
 
 Chuỗi chuẩn cho một epic (`{feature}` = tên thư mục epic):
 
@@ -335,17 +335,17 @@ Xếp theo phụ thuộc dữ liệu: epic sau dùng dữ liệu của epic trư
 
 | # | Epic (`{feature}`) | Gồm phân hệ | Phụ thuộc | Vì sao ở vị trí này |
 |---|---|---|---|---|
-| E1 | [`nen-tang` — hồ sơ nháp](../nen-tang/preview.html) | AUTH, SYS | — | Tài khoản, phân quyền, nhật ký là nền của mọi thứ |
-| E2 | `thuc-don-dinh-luong` — [epic-spec nháp v0.1.0](../thuc-don-dinh-luong/epic-spec.md) (10/11/2026) | MENU | E1 | Món, công thức, định lượng, bộ kiểm quy tắc — lõi dữ liệu |
-| E3 | `cost` — [epic-spec nháp v0.1.0](../cost/epic-spec.md) (11/11/2026) | COST | E2 | Cần công thức và định lượng mới tính được cost |
-| E4 | [`dinh-duong` — hồ sơ nháp](../dinh-duong/preview.html) | NUTR | E2 | Cần định lượng mới tính được dinh dưỡng |
-| E5 | [`agent-noi-bo` — FEAT-021–023](../agent-noi-bo/preview.html) | AIO | E2, E3 | Giúp dinh dưỡng viên dựng thực đơn sớm, giảm điểm nghẽn một người |
-| E6 | [`chon-mon-order` — gói BA review](../chon-mon-order/preview.html) | ORD, CUS (phần người ăn), PLAN (phần kế hoạch) | E1, E2 | Điểm tải cao nhất; cần thực đơn đã công bố |
+| E1 | [`nen-tang`: hồ sơ nháp](../nen-tang/preview.html) | AUTH, SYS | Không có | Tài khoản, phân quyền, nhật ký là nền của mọi thứ |
+| E2 | `thuc-don-dinh-luong`: [epic-spec nháp v0.1.0](../thuc-don-dinh-luong/epic-spec.md) (10/11/2026) | MENU | E1 | Món, công thức, định lượng, bộ kiểm quy tắc: lõi dữ liệu |
+| E3 | `cost`: [epic-spec nháp v0.1.0](../cost/epic-spec.md) (11/11/2026) | COST | E2 | Cần công thức và định lượng mới tính được cost |
+| E4 | [`dinh-duong`: hồ sơ nháp](../dinh-duong/preview.html) | NUTR | E2 | Cần định lượng mới tính được dinh dưỡng |
+| E5 | [`agent-noi-bo`: FEAT-021–023](../agent-noi-bo/preview.html) | AIO | E2, E3 | Giúp dinh dưỡng viên dựng thực đơn sớm, giảm điểm nghẽn một người |
+| E6 | [`chon-mon-order`: gói BA review](../chon-mon-order/preview.html) | ORD, CUS (phần người ăn), PLAN (phần kế hoạch) | E1, E2 | Điểm tải cao nhất; cần thực đơn đã công bố |
 | E7 | `giao-nhan-doanh-thu` | DLV, FIN | E6 | Khép vòng tiền |
 | E8 | `website-cong-khai` | PUB | E2, E4 | Cần thực đơn mẫu và dinh dưỡng để hiển thị |
 | E9 | `agent-dinh-duong-vien` | AIN | E2, E4, E6, E8 | Cần dữ liệu đã duyệt và các mặt tiền để gắn vào |
 | E10 | `crm-ban-hang` | CUS, SALE | E1, E8 | Nhận lead từ website |
-| E11 | `mua-hang-san-xuat` | PUR, PLAN (phân ca, QC) | E3, E6 | — |
+| E11 | `mua-hang-san-xuat` | PUR, PLAN (phân ca, QC) | E3, E6 | Không áp dụng |
 | E12 | `phan-hoi-bao-cao` | FB, RPT, AIO-03 → 06 | E6, E7, E10, E11 | Cần dữ liệu vận hành tích luỹ |
 | E13 | `chi-phi-loi-nhuan` | EXP | E7, E11 | Như giai đoạn 3 của bản HTML |
 
@@ -379,7 +379,7 @@ Không ghi thời lượng vì chưa biết quy mô đội phát triển [CHỜ 
 
 ## 9. Câu hỏi cần anh trả lời (chưa tự suy đoán)
 
-**Chặn P0 — cần trước khi viết BRD/PRD**
+**Chặn P0: cần trước khi viết BRD/PRD**
 
 | Mã | Câu hỏi |
 |---|---|
@@ -394,7 +394,7 @@ Không ghi thời lượng vì chưa biết quy mô đội phát triển [CHỜ 
 
 Trạng thái sau vòng 3 (10/11/2026): Q-01 đã chốt (D-10) · Q-05 đã chốt hướng (D-12) · Q-02 chốt một nửa (D-11) · Q-03, Q-04, Q-06, Q-08 đã giải thích và có phương án đề xuất, chờ anh xác nhận · Q-07 chưa trả lời.
 
-Trạng thái sau vòng 4 (10/11/2026): đã chốt Q-02b, Q-03, Q-06, Q-07, Q-08, Q-20 (D-14 → D-20). **Còn mở trong nhóm P0**: Q-04 phần "cost gồm những khoản nào" và thuế suất VAT (chuyển thành H-6, H-7 trong bảng quy tắc) · Q-21 · Q-22 (mới: một món một định lượng hay nhiều cỡ định lượng — H-9 trong bảng quy tắc).
+Trạng thái sau vòng 4 (10/11/2026): đã chốt Q-02b, Q-03, Q-06, Q-07, Q-08, Q-20 (D-14 → D-20). **Còn mở trong nhóm P0**: Q-04 phần "cost gồm những khoản nào" và thuế suất VAT (chuyển thành H-6, H-7 trong bảng quy tắc) · Q-21 · Q-22 (mới: một món một định lượng hay nhiều cỡ định lượng, H-9 trong bảng quy tắc).
 
 **Phát sinh từ vòng 3**
 
@@ -414,17 +414,17 @@ Trạng thái sau vòng 4 (10/11/2026): đã chốt Q-02b, Q-03, Q-06, Q-07, Q-0
 | Q-12 | Hạ tầng: chạy trên máy chủ nào (VPS trong nước, AWS, Google Cloud…)? Ai vận hành sau khi lên? |
 | Q-15 | Đội phát triển gồm mấy người, kỹ năng gì, thời hạn mong muốn cho bản đầu? |
 
-**Kế thừa từ bản HTML — vẫn đang là "giả định"**
+**Kế thừa từ bản HTML: vẫn đang là "giả định"**
 
 | Mã | Câu hỏi |
 |---|---|
 | Q-13 | Khách không xác nhận số nhận: có chấp nhận quy tắc "quá N ngày không phản đối thì lấy số giao làm số tạm tính, chốt lại khi đối soát tháng" không? N bằng bao nhiêu? |
 | Q-14 | Gia Phát đã có **Zalo OA** chưa? Kênh thông báo cho người đặt tổng và người ăn là gì (Zalo ZNS, SMS, email, thông báo trong app)? |
 | Q-16 | Hạn chốt ca trưa 15:00 ngày D-1 và ngưỡng đổi sau chốt (5% / 10 suất / trước 06:00) có đúng thực tế không? Ngưỡng là "nhỏ hơn trong hai" hay "lớn hơn trong hai"? |
-| Q-17 | Vai trò Giám đốc trong bản HTML là giả định — ai là người duyệt ngoại lệ, và ai thay khi vắng? |
+| Q-17 | Vai trò Giám đốc trong bản HTML là giả định: ai là người duyệt ngoại lệ, và ai thay khi vắng? |
 | Q-18 | Số khách doanh nghiệp đang phục vụ, tổng số người ăn mỗi ngày, số điểm giao là bao nhiêu? (Website ghi 125+ đối tác, dashboard mẫu ghi 26 khách.) |
 | Q-19 | Trường học, bệnh viện, tiệc cỗ có nằm trong phạm vi bản đầu không? (Trường học và bệnh viện có yêu cầu dinh dưỡng riêng.) |
 
-## Cập nhật E6 — 11/11/2026
+## Cập nhật E6 ngày 11/11/2026
 
 Hoàn thiện gói tài liệu để review theo [bàn giao E6](../chon-mon-order/review/handoff.md), chưa chốt baseline hoặc release. Có UC/flow/state/data/API/wireframe/story/AC/test/RTM/preview. ORD-Q01–15 và O-03 còn chờ; delta schema không merge; không triển khai backend/E7–E13. Các nhãn gói khởi đầu trong lịch sử là mốc trước phiên này.

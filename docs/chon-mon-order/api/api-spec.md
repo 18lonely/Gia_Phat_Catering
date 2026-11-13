@@ -9,7 +9,7 @@ last_updated: 2026-11-11
 ---
 # Hợp đồng API E6 để review
 
-**Draft — 26 HTTP endpoint + 2 port nội bộ. Chưa backend; không endpoint ghi sức khỏe.**
+**Draft: 26 HTTP endpoint + 2 port nội bộ. Chưa backend; không endpoint ghi sức khỏe.**
 
 | Phiên bản | Ngày | Nội dung |
 | :--- | :--- | :--- |
@@ -145,13 +145,13 @@ AUTH authorize/audit cùng transaction; MENU chỉ bản PUBLISHED và event WIT
 
 Cost nguyên liệu gồm VAT phải trả nhà cung cấp; cờ không yêu cầu hóa đơn không suy VAT0%; chiết khấu khách theo % hoặc tiền/suất là khoản riêng theo order, không giảm amountDue. CK-Q01–10 và DATA-COST-Q01–06 không đổi; không dùng order_dish_lines làm số suất thanh toán. NFR-COST-002 vẫn ≤1đ cho món và ≤0,01 điểm phần trăm cho cost% ngày.
 
-## Review concurrency và readiness — 11/11/2026
+## Review concurrency và readiness ngày 11/11/2026
 
 `Summary.version` là token revision của snapshot tổng hợp; client truyền nguyên giá trị đó vào `SubmissionInput.summaryVersion`. Nó **không** phải `orders.version` hoặc version của một selection. Đề xuất mọi mutation làm thay S/C/T, countsByDish hoặc nguồn/phạm vi dùng để chốt đều tăng token trong cùng giao dịch; POST submissions kiểm token tại lúc ghi, stale trả ERR-ORD-409-01. Store/lock/CAS chưa có trong DBML, cần Tech lead chốt. E6-RV-04 là làm rõ contract đề xuất, không tuyên bố persistence đã có.
 
 [Review quyết định DR-01–04](../review/decision-review.md) là cổng trước freeze: `coordinatorLines` gộp chưa xử lý người đã chọn hộ quay lại tự chọn; PUT selection chưa có policy được duyệt khi S+C vượt T đã gửi; PlanSummary chưa chứng minh đủ toàn bộ điểm phục vụ; identityProof chưa xác định cách chứng minh người dùng. Không coi26endpoint là hợp đồng cuối. Không thêm customer/health/ack/start-production endpoint trong review này.
 
-## Bổ sung consistency độc lập — 11/11/2026
+## Bổ sung consistency độc lập ngày 11/11/2026
 
 Xem [mapping consistency](data-mapping.md) và [lifecycle review](../srs/lock-plan-review.md). Phân biệt token tổng, version order, revision order/plan; lock thành công không hứa plan đã sẵn sàng. Các trường completeness/ack/publish vẫn là delta review, chưa thêm vào catalog hoặc wireframe; không thay E6-EVID-001/002.
 

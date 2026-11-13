@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Người dùng xác định được nguồn giá và các món bị ảnh hưởng; cảnh báo tác vụ không bị nhân đôi.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-PRC-006`, `FR-COST-PRC-008`, `FR-COST-PRC-009`.
-- **Điểm chạm:** SCR-COST-06, SCR-COST-07 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-06, SCR-COST-07, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

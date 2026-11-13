@@ -32,7 +32,7 @@ for(const [file,epic,pattern,ownerCol,recCol] of configs){
  const tests=field('Test bị chặn có gate nêu đích danh').match(/TC-[A-Z0-9-]+/g)||[];blocked=tests.length?`${new Set(tests).size} ca (gate trực tiếp)`:'';
  }
  if(id.startsWith('E6-CG-')){
- const n=id.slice(-2);const proposal=tableRows(file).find(x=>new RegExp('^CG'+n+'(?: —|$)').test(x.cells[0])&&x.line>50&&x.cells.length>=4);
+ const n=id.slice(-2);const proposal=tableRows(file).find(x=>new RegExp('^CG'+n+'(?::|$)').test(x.cells[0])&&x.line>50&&x.cells.length>=4);
  if(proposal){recommendation=proposal.cells[1];alternatives=proposal.cells.length===5?proposal.cells[3]:proposal.cells[2];effects=proposal.cells.length===5?proposal.cells[2]:proposal.cells[3];}
  }
  if(id==='DL-01')blocked='86 ca rule; 2 ca Cost (khác bộ)';

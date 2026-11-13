@@ -22,7 +22,7 @@ Phiên bản 0.1.0 · 11/11/2026 · Draft.
 
 Đây là đề xuất tổ chức, chưa gửi lời mời hay giao việc cho ai. Ngày họp, người phụ trách cụ thể và hạn hoàn thành còn trống.
 
-## Biên bản quyết định — sao chép cho từng mã
+## Biên bản quyết định: sao chép cho từng mã
 
 | Trường | Nội dung |
 | :--- | :--- |

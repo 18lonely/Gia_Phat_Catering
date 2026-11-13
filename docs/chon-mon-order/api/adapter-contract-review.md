@@ -1,4 +1,4 @@
-# Adapter E6 — dữ liệu công bố, provenance và lỗi
+# Adapter E6: dữ liệu công bố, provenance và lỗi
 
 11/11/2026 · Draft BA. Nguồn đối chiếu: [E1](../../nen-tang/api/api-spec.md), [MENU](../../thuc-don-dinh-luong/api/api-spec.md), [NUTR](../../dinh-duong/api/api-spec.md), [API E6](api-spec.md). Không thống nhất envelope thay E1-Q01; không cấp người ăn quyền API tính nội bộ.
 

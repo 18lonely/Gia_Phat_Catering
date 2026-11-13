@@ -73,8 +73,8 @@ Mỗi AC đúng một ca; 21 BLOCKED, 27 NOT RUN. Actual/Evidence để trống.
 | TC-CRM-016-03 | AC-CRM-016-03 | FR-SALE-PRIC-001 | Fixture synthetic TC-CRM-016-03; đơn lịch sử đã có pricingSnapshot và sau đó có phụ lục mới | 1. Chuẩn bị tiền điều kiện riêng của ca. 2. xem hồ sơ đơn cũ qua API-CRM-016 / UI-CRM-09. 3. Đối chiếu response, nguồn, trạng thái và audit với oracle. | vẫn dùng snapshot đúng order/version từ E6/Cost; không thay bằng kết quả tra giá hiện tại | Không cần quyết định còn mở để xác định invariant của ca này | NOT RUN |  |  |
 
 
-## Bổ sung gate — XC-05
+## Bổ sung gate (XC-05)
 
-> Chờ E10-Q16 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E10-Q16: XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Ca liên quan: TC-CRM-003-01, TC-CRM-003-02, TC-CRM-003-03. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.

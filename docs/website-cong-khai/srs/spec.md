@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-SRS-SPEC-MD
-title: SRS E8 — Website công khai
+title: "SRS E8: Website công khai"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# SRS E8 — Website công khai
+# SRS E8: Website công khai
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -38,7 +38,7 @@ Khách không cần tài khoản để xem nội dung/form; người quản tr�
 
 BR-PUB-001/010/012 áp mọi FR; quy tắc còn lại ghi phạm vi trong bảng dưới. Lỗi theo [ma trận](error-matrix.md); mỗi route có lỗi trong [catalog](../api/endpoint-catalog.json). Không dùng BLOCKED như HTTP chuẩn: đó là trạng thái tài liệu; runtime đề xuất lỗi nguồn/policy ERR-PUB-422-02 hoặc503-01 tùy nguyên nhân.
 
-### Làm rõ chuyển bài cũ — FR-PUB-URLM-001 / FEAT-055
+### Làm rõ chuyển bài cũ (FR-PUB-URLM-001 / FEAT-055)
 
 Ngoài URL, gói DL-08 cần đối chiếu nội dung bài: mã bài gốc, tiêu đề, body, media tham chiếu, ngày công bố gốc, trạng thái và URL nguồn. Không tự lấy dữ liệu từ website thật trong phiên. Quy trình đề xuất: nhận bản xuất có provenance → lập inventory → chuyển body/media sang nháp E8, làm sạch HTML → so nội dung/ảnh/liên kết với bản nguồn → rà slug/canonical và mapping KEEP/301 → người có quyền xác nhận → chờ cutover. Cách import CMS hoặc thao tác thủ công chờ E8-Q01/08/09; không viết importer hay migration.
 

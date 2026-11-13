@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-EPIC-SPEC-MD
-title: E9 — Agent Dinh dưỡng viên
+title: "E9: Agent Dinh dưỡng viên"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# E9 — Agent Dinh dưỡng viên
+# E9: Agent Dinh dưỡng viên
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -21,14 +21,14 @@ Khách PER-01 (khách tiềm năng) và PER-02 (người đặt tổng) yêu c�
 | FEAT-061 | AIN-02, AIN-03 | Giải thích và chỉnh thực đơn | P0 | PER-01, PER-02 | Giải thích có nguồn; mỗi lần chỉnh kiểm lại toàn phương án |
 | FEAT-062 | AIN-04 | Gửi nháp về Gia Phát / tạo lead | P0 | PER-01, PER-02 | Tiếp nhận đề xuất có nguồn; người thật duyệt trước áp dụng |
 | FEAT-063 | AIN-05 | Gợi ý cá nhân qua agent | P1 | PER-03, PER-04 | GATE-ONLY: dùng FEAT-047; không có thiết kế gợi ý |
-| FEAT-064 | — | Giới hạn lượt và ngân sách | P0 | PER-08 | Theo nhóm người dùng; trần chi phí AI theo ngày; tham số chưa chọn |
-| FEAT-065 | — | Chặn truy cập cost | P0 | Hệ thống | BN-16: không công cụ/quyền đọc dữ liệu kinh tế nội bộ |
+| FEAT-064 | Không áp dụng | Giới hạn lượt và ngân sách | P0 | PER-08 | Theo nhóm người dùng; trần chi phí AI theo ngày; tham số chưa chọn |
+| FEAT-065 | Không áp dụng | Chặn truy cập cost | P0 | Hệ thống | BN-16: không công cụ/quyền đọc dữ liệu kinh tế nội bộ |
 
 **5 feature có thiết kế nháp có điều kiện; FEAT-063 chỉ gate, không tính vào số có thiết kế.** Toàn dự án 56/78 ≈ 71,8% độ phủ tài liệu nháp (51 + 5); 3 gate-only ghi riêng: FEAT-046/047/063. Không là BA được duyệt hoặc tiến độ phần mềm.
 
 Ngoài phạm vi: backend/migration, gọi AI thật, system prompt sản phẩm, chọn model/provider/hạ tầng, thuật toán gợi ý cá nhân, thu/suy luận sức khỏe, tư vấn y khoa/điều trị, tạo thực đơn chính thức/order/báo giá cam kết, CRM E10 và E10–E13. Không sửa schema 65 bảng.
 
-## R9 và G-Next — nguyên văn roadmap
+## R9 và G-Next: nguyên văn roadmap
 
 | Release | Tên đợt phát hành | Mục tiêu chính | Danh sách Feature ID | Cỡ | Điều kiện bắt đầu | Ngày dự kiến | Tiêu chí nghiệm thu |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

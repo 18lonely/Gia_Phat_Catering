@@ -1,15 +1,15 @@
 ---
 id: DOC-DINH-DUONG-EPIC-SPEC
-title: Đặc tả epic — E4 / R4
+title: Đặc tả epic (E4 / R4)
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Đặc tả epic — E4 / R4
+# Đặc tả epic (E4 / R4)
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

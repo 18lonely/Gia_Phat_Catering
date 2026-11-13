@@ -8,7 +8,7 @@ Phiên bản 0.1.0 · 11/11/2026 · Draft bổ sung cho [CR-COST-2026-001](../cr
 
 12 ca này nằm ngoài108 ca baseline. Tiền/VAT là fixture giả định. NOT RUN nghĩa chưa chạy phần mềm; BLOCKED nghĩa còn thiếu quyết định hoặc hợp đồng. Kiểm script số học không đổi trạng thái các ca này thành PASS.
 
-| Mã | Given — dữ liệu/tiền điều kiện | When — thao tác | Then — kết quả mong đợi | Truy vết | Trạng thái |
+| Mã | Given (dữ liệu/tiền điều kiện) | When (thao tác) | Then (kết quả mong đợi) | Truy vết | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | TC-ACC-001 | Giá báo100000/kg chưa VAT; VAT xác nhận trong fixture8% | Chuẩn hóa giá rồi tính70g | Giá cost108000/kg; dòng cost7560 | ACC-CONF-01/02; PRC001, DISH001 | NOT RUN |
 | TC-ACC-002 | Giá báo108000/kg đã gồm VAT | Chuẩn hóa rồi tính70g | Giữ108000, không thành116640; cost7560 | ACC-CONF-02 | NOT RUN |

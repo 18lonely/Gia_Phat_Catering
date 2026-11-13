@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-SRS-SPEC-MD
-title: SRS — Agent Dinh dưỡng viên E9
+title: "SRS: Agent Dinh dưỡng viên E9"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# SRS — Agent Dinh dưỡng viên E9
+# SRS: Agent Dinh dưỡng viên E9
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -19,7 +19,7 @@ Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; kh�
 
 PER-01/02 dùng mặt tiền khách; PER-08 quản trị khi được cấp quyền. PER-03/04 chỉ thấy gate063. Web desktop/mobile; HTML offline synthetic. Provider/identity/consent/quota chưa chọn; E2/E4/E5/E6/E8 nháp chưa freeze. Hai agent tách identity/queue/tool/hạn mức/cấu hình lời nhắc; không viết system prompt. Không có giao tiếp phần cứng.
 
-## 3.1 FR — input, processing, output
+## 3.1 FR: input, processing, output
 
 | FR / feature | Tên / actor / ưu tiên | Input | Processing | Output | BR | Gate |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -39,7 +39,7 @@ PER-01/02 dùng mặt tiền khách; PER-08 quản trị khi được cấp quy�
 
 Lỗi áp theo điều kiện trong [catalog](../api/endpoint-catalog.json) và [ma trận](error-matrix.md); mọi FR kiểm quyền/scope và projection trước trả. GET của CHK chỉ đọc; worker là bên thực hiện kiểm, GET không chạy model/validator hay sinh dữ liệu. GATE không có POST gợi ý. SAFE/MED/LIMT là bước kiểm bắt buộc trong orchestration, không API để khách tự cấp quyền hoặc gọi model.
 
-### FEAT-063 — điều kiện mở, hiện chưa đạt
+### FEAT-063: điều kiện mở, hiện chưa đạt
 
 Gate chỉ được xét mở khi có quyết định O-03 có nguồn/phạm vi; FEAT-046/047 có đặc tả được duyệt về dữ liệu, consent, quyền/xóa và contract; xác nhận persona PER-03/PER-04 cùng identity được phép; review E9-Q14 và bằng chứng kiểm an toàn trước phát hành. Hiện không điều kiện nào được coi đã đạt chỉ vì có SRS nháp. Chưa thiết kế thuật toán, tiêu chí xếp hạng hoặc endpoint nhận hồ sơ/gợi ý. Khi đóng: chỉ trả CLOSED, không đọc/thu/suy luận sức khỏe, không gọi FEAT-047, không gán gợi ý hoặc tự thay lựa chọn/order. Mở gate trong tương lai cần phiên BA riêng có căn cứ, không bật bằng câu lệnh chat hay flag client.
 

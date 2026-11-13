@@ -1,4 +1,4 @@
-# API và allowlist công cụ — AIN E9
+# API và allowlist công cụ: AIN E9
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
@@ -34,7 +34,7 @@ Mọi lệnh ghi cần idempotency scope=(chủ thể đã xác minh, route, key
 
 Giá suất: **chưa có trường price trong projection mặc định**. Chỉ bổ sung sau E9-Q04/E8-Q03 có quyết định nguồn/hiệu lực/nhãn; `meal_types.price_cap_vnd` không là giá bán. Không suy giá nhập/cost từ giá suất, ngay cả sau khi được hiển thị giá công khai.
 
-## Allowlist model-callable — đề xuất, mặc định từ chối ngoài danh mục
+## Allowlist model-callable: đề xuất, mặc định từ chối ngoài danh mục
 
 | Tool | Input được phép | Output được phép | Điều kiện / side effect |
 | :--- | :--- | :--- | :--- |
@@ -44,7 +44,7 @@ Giá suất: **chưa có trường price trong projection mặc định**. Chỉ
 
 Ba tool trên chỉ được bật khi policy/nguồn đủ và quyền giao hợp lệ. Đối tượng được đọc phải do adapter kiểm lại, không tin ref do model tạo. Không có tool tự gửi nháp: FEAT-062 là lệnh UI có xác nhận của khách qua API-AIN-006, do ứng dụng kiểm và ghi. Không có tool lấy usage/quota chi tiết hoặc log quản trị; control plane tự kiểm trước mỗi bước có chi phí.
 
-## Control port — không model-callable
+## Control port: không model-callable
 
 | Port | Người gọi / trách nhiệm | Hợp đồng tối thiểu |
 | :--- | :--- | :--- |
@@ -63,14 +63,14 @@ PORT-AIN-HANDOFF là điểm nối tối thiểu thuộc FR-AIN-SEND-001, bổ s
 
 Nếu kiểm quy tắc E2 cần cổng Cost nội bộ, E2/orchestrator tin cậy xử lý ngoài model. AIN không được nhận số, ratio, nguyên nhân cost hoặc nhãn phân biệt có thể dùng dò ngưỡng. Nhánh vượt ngưỡng/CANH_BAO giữ BLOCKED E9-Q05/AIO-Q02; không lấy endpoint cost-redacted hiện có làm giấy phép đọc và không thay nguyên tắc E3.
 
-## Admission và quyết toán — invariant, chưa chọn policy
+## Admission và quyết toán: invariant, chưa chọn policy
 
 Trước phát sinh chi phí phải có upper bound thực sự cưỡng chế được cho bước đang nhận (bao gồm chi phí retry/tool phụ nếu provider tính). `confirmed + reservedOutstanding + proposedUpperBound ≤ cap` trong cùng ngày/policy. Không thể xác định/cưỡng chế upper bound thì **không nhận**; chỉ đối soát sau khi chạy không đủ bảo đảm R9. Khi phát sinh xác nhận, chuyển reserve sang confirmed một lần theo eventId; phần chưa rõ giữ chỗ. Timeout không đồng nghĩa provider không tính tiền. Rollover không xóa debt/reserve cũ; ngày hạch toán và xử lý xuyên ngày chờ Q07/13.
 
 Sửa cap không hồi tố; cap mới thấp hơn committed/reserved chặn lượt mới và báo quản trị, không giả tạo hoàn tiền. Không chuyển sang queue/quota AIO hoặc đổi identity/key để vượt trần. Không chọn model, giá token, số lượt, ngân sách, concurrency, TTL hoặc số lần retry trong gói này.
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E9-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E9-Q13: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

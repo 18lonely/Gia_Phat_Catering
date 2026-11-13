@@ -18,14 +18,14 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 12/11/2026 | BA | Mở tài liệu E11; giữ câu hỏi chưa có câu trả lời |
 
-## US-PUR-001 — Lập nhu cầu nguyên liệu
+## US-PUR-001: Lập nhu cầu nguyên liệu
 
 FR-PUR-DEM-001; BR-PUR-001; gate E6 CG06, ORD-Q10/14; E11-Q01.
 
-### AC-PUR-001-1 — Thành công có điều kiện
+### AC-PUR-001-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Lập nhu cầu nguyên liệu — 1
+Scenario: Lập nhu cầu nguyên liệu (trường hợp 1)
   Given Nguồn có 100 suất × 70 g, hệ số 1000 g/kg đã xác nhận
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
@@ -33,10 +33,10 @@ Scenario: Lập nhu cầu nguyên liệu — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-001-2 — Lỗi nghiệp vụ
+### AC-PUR-001-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Lập nhu cầu nguyên liệu — 2
+Scenario: Lập nhu cầu nguyên liệu (trường hợp 2)
   Given Thiếu hệ số g/kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
@@ -44,10 +44,10 @@ Scenario: Lập nhu cầu nguyên liệu — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-001-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-001-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Lập nhu cầu nguyên liệu — 3
+Scenario: Lập nhu cầu nguyên liệu (trường hợp 3)
   Given Kế hoạch đổi revision khi đang xem
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
@@ -55,14 +55,14 @@ Scenario: Lập nhu cầu nguyên liệu — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-002 — Lập đơn mua nháp
+## US-PUR-002: Lập đơn mua nháp
 
 FR-PUR-POD-001; BR-PUR-002; gate E11-Q01/02/13/14.
 
-### AC-PUR-002-1 — Thành công có điều kiện
+### AC-PUR-002-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Lập đơn mua nháp — 1
+Scenario: Lập đơn mua nháp (trường hợp 1)
   Given NCC synthetic do người lập chọn, lượng 2 kg; giá cuối 108000 đ/kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
@@ -70,10 +70,10 @@ Scenario: Lập đơn mua nháp — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-002-2 — Lỗi nghiệp vụ
+### AC-PUR-002-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Lập đơn mua nháp — 2
+Scenario: Lập đơn mua nháp (trường hợp 2)
   Given Số lượng âm hoặc thiếu NCC
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
@@ -81,10 +81,10 @@ Scenario: Lập đơn mua nháp — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-002-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-002-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Lập đơn mua nháp — 3
+Scenario: Lập đơn mua nháp (trường hợp 3)
   Given Giá UNKNOWN hoặc chưa rõ VAT phải trả
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
@@ -92,14 +92,14 @@ Scenario: Lập đơn mua nháp — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-003 — Kiểm cổng phát hành đơn mua
+## US-PUR-003: Kiểm cổng phát hành đơn mua
 
 FR-PUR-POG-001; BR-PUR-003; gate E11-Q02; O-06.
 
-### AC-PUR-003-1 — Thành công có điều kiện
+### AC-PUR-003-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Kiểm cổng phát hành đơn mua — 1
+Scenario: Kiểm cổng phát hành đơn mua (trường hợp 1)
   Given Đơn nháp chưa có chính sách duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
@@ -107,10 +107,10 @@ Scenario: Kiểm cổng phát hành đơn mua — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-003-2 — Lỗi nghiệp vụ
+### AC-PUR-003-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Kiểm cổng phát hành đơn mua — 2
+Scenario: Kiểm cổng phát hành đơn mua (trường hợp 2)
   Given Client tự gắn APPROVED
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
@@ -118,10 +118,10 @@ Scenario: Kiểm cổng phát hành đơn mua — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-003-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-003-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Kiểm cổng phát hành đơn mua — 3
+Scenario: Kiểm cổng phát hành đơn mua (trường hợp 3)
   Given Tải lại cổng nhiều lần
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
@@ -129,14 +129,14 @@ Scenario: Kiểm cổng phát hành đơn mua — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-004 — Kiểm phạm vi quản lý lô
+## US-PUR-004: Kiểm phạm vi quản lý lô
 
 FR-PUR-LOT-001; BR-PUR-004; gate E11-Q03.
 
-### AC-PUR-004-1 — Thành công có điều kiện
+### AC-PUR-004-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Kiểm phạm vi quản lý lô — 1
+Scenario: Kiểm phạm vi quản lý lô (trường hợp 1)
   Given Nguyên liệu thuộc FROZEN hoặc DRY
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
@@ -144,10 +144,10 @@ Scenario: Kiểm phạm vi quản lý lô — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-004-2 — Lỗi nghiệp vụ
+### AC-PUR-004-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Kiểm phạm vi quản lý lô — 2
+Scenario: Kiểm phạm vi quản lý lô (trường hợp 2)
   Given Hàng tươi được gửi yêu cầu quản lý lô
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
@@ -155,10 +155,10 @@ Scenario: Kiểm phạm vi quản lý lô — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-004-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-004-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Kiểm phạm vi quản lý lô — 3
+Scenario: Kiểm phạm vi quản lý lô (trường hợp 3)
   Given Thiếu loại bảo quản
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
@@ -166,14 +166,14 @@ Scenario: Kiểm phạm vi quản lý lô — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-005 — Ghi phiếu nhận hàng nháp
+## US-PUR-005: Ghi phiếu nhận hàng nháp
 
 FR-PUR-RCV-001; BR-PUR-005; gate E11-Q04/13.
 
-### AC-PUR-005-1 — Thành công có điều kiện
+### AC-PUR-005-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Ghi phiếu nhận hàng nháp — 1
+Scenario: Ghi phiếu nhận hàng nháp (trường hợp 1)
   Given Đặt 10 kg, nhận 8 kg; người nhận khai chấp nhận 7 kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
@@ -181,10 +181,10 @@ Scenario: Ghi phiếu nhận hàng nháp — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-005-2 — Lỗi nghiệp vụ
+### AC-PUR-005-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Ghi phiếu nhận hàng nháp — 2
+Scenario: Ghi phiếu nhận hàng nháp (trường hợp 2)
   Given Chấp nhận 9 kg khi chỉ nhận 8 kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
@@ -192,10 +192,10 @@ Scenario: Ghi phiếu nhận hàng nháp — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-005-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-005-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Ghi phiếu nhận hàng nháp — 3
+Scenario: Ghi phiếu nhận hàng nháp (trường hợp 3)
   Given Hai lần nhận cùng đơn
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
@@ -203,14 +203,14 @@ Scenario: Ghi phiếu nhận hàng nháp — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-006 — Gắn ảnh chứng từ vào phiếu
+## US-PUR-006: Gắn ảnh chứng từ vào phiếu
 
 FR-PUR-DOC-001; BR-PUR-006; gate E11-Q05/13; E1-Q01.
 
-### AC-PUR-006-1 — Thành công có điều kiện
+### AC-PUR-006-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Gắn ảnh chứng từ vào phiếu — 1
+Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 1)
   Given Ảnh synthetic thuộc phiếu/cơ sở và MIME hợp lệ theo E1
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
@@ -218,10 +218,10 @@ Scenario: Gắn ảnh chứng từ vào phiếu — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-006-2 — Lỗi nghiệp vụ
+### AC-PUR-006-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Gắn ảnh chứng từ vào phiếu — 2
+Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 2)
   Given File của cơ sở ngoài scope
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
@@ -229,10 +229,10 @@ Scenario: Gắn ảnh chứng từ vào phiếu — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-006-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-006-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Gắn ảnh chứng từ vào phiếu — 3
+Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 3)
   Given Liên kết ảnh hết hạn 15 phút theo E1
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
@@ -240,14 +240,14 @@ Scenario: Gắn ảnh chứng từ vào phiếu — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-007 — Xem công nợ nhà cung cấp
+## US-PUR-007: Xem công nợ nhà cung cấp
 
 FR-PUR-APV-001; BR-PUR-007; gate E11-Q06/04.
 
-### AC-PUR-007-1 — Thành công có điều kiện
+### AC-PUR-007-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Xem công nợ nhà cung cấp — 1
+Scenario: Xem công nợ nhà cung cấp (trường hợp 1)
   Given Có 216000 đ nghĩa vụ và 100000 đ thanh toán có căn cứ, đầu kỳ 0 đã xác nhận
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
@@ -255,10 +255,10 @@ Scenario: Xem công nợ nhà cung cấp — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-007-2 — Lỗi nghiệp vụ
+### AC-PUR-007-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Xem công nợ nhà cung cấp — 2
+Scenario: Xem công nợ nhà cung cấp (trường hợp 2)
   Given Thiếu số dư đầu kỳ
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
@@ -266,10 +266,10 @@ Scenario: Xem công nợ nhà cung cấp — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-007-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-007-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Xem công nợ nhà cung cấp — 3
+Scenario: Xem công nợ nhà cung cấp (trường hợp 3)
   Given Đơn có CK khách 5 %
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
@@ -277,14 +277,14 @@ Scenario: Xem công nợ nhà cung cấp — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-008 — Đối chiếu dự toán và thực mua
+## US-PUR-008: Đối chiếu dự toán và thực mua
 
 FR-COST-BUY-001; BR-PUR-008; gate E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04.
 
-### AC-PUR-008-1 — Thành công có điều kiện
+### AC-PUR-008-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Đối chiếu dự toán và thực mua — 1
+Scenario: Đối chiếu dự toán và thực mua (trường hợp 1)
   Given Fixture minh họa có tỷ lệ cùng mẫu số đã được xác nhận: 50 % và 53 %
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
@@ -292,10 +292,10 @@ Scenario: Đối chiếu dự toán và thực mua — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-008-2 — Lỗi nghiệp vụ
+### AC-PUR-008-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Đối chiếu dự toán và thực mua — 2
+Scenario: Đối chiếu dự toán và thực mua (trường hợp 2)
   Given Thực mua của cơ sở khác hoặc ngày chưa phân bổ
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
@@ -303,10 +303,10 @@ Scenario: Đối chiếu dự toán và thực mua — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-008-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-008-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Đối chiếu dự toán và thực mua — 3
+Scenario: Đối chiếu dự toán và thực mua (trường hợp 3)
   Given Mẫu số bằng 0 hoặc chưa biết
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
@@ -314,14 +314,14 @@ Scenario: Đối chiếu dự toán và thực mua — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-009 — Giải thích nguồn chênh lệch
+## US-PUR-009: Giải thích nguồn chênh lệch
 
 FR-COST-BEX-001; BR-PUR-009; gate E11-Q07/08/14.
 
-### AC-PUR-009-1 — Thành công có điều kiện
+### AC-PUR-009-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Giải thích nguồn chênh lệch — 1
+Scenario: Giải thích nguồn chênh lệch (trường hợp 1)
   Given Hai dòng cùng nguyên liệu và đơn vị có nguồn được phép đọc
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
@@ -329,10 +329,10 @@ Scenario: Giải thích nguồn chênh lệch — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-009-2 — Lỗi nghiệp vụ
+### AC-PUR-009-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Giải thích nguồn chênh lệch — 2
+Scenario: Giải thích nguồn chênh lệch (trường hợp 2)
   Given Người không có cost.cost.read yêu cầu tiền
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
@@ -340,10 +340,10 @@ Scenario: Giải thích nguồn chênh lệch — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-009-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-009-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Giải thích nguồn chênh lệch — 3
+Scenario: Giải thích nguồn chênh lệch (trường hợp 3)
   Given Giá E3 mới có hiệu lực sau bản dự toán
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
@@ -351,14 +351,14 @@ Scenario: Giải thích nguồn chênh lệch — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-010 — Lập phân ca nháp
+## US-PUR-010: Lập phân ca nháp
 
 FR-PLAN-SHF-001; BR-PUR-010; gate E11-Q09; E6 CG06.
 
-### AC-PUR-010-1 — Thành công có điều kiện
+### AC-PUR-010-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Lập phân ca nháp — 1
+Scenario: Lập phân ca nháp (trường hợp 1)
   Given Ca synthetic, phân công công việc cho mã nhân sự giả thuộc scope
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
@@ -366,10 +366,10 @@ Scenario: Lập phân ca nháp — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-010-2 — Lỗi nghiệp vụ
+### AC-PUR-010-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Lập phân ca nháp — 2
+Scenario: Lập phân ca nháp (trường hợp 2)
   Given Nhân sự ngoài cơ sở được phép
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
@@ -377,10 +377,10 @@ Scenario: Lập phân ca nháp — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-010-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-010-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Lập phân ca nháp — 3
+Scenario: Lập phân ca nháp (trường hợp 3)
   Given Plan revision thay đổi
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
@@ -388,14 +388,14 @@ Scenario: Lập phân ca nháp — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-011 — Ghi kiểm tra trước giao
+## US-PUR-011: Ghi kiểm tra trước giao
 
 FR-PLAN-QCG-001; BR-PUR-011; gate E11-Q10; E7-Q02; E6 CG06.
 
-### AC-PUR-011-1 — Thành công có điều kiện
+### AC-PUR-011-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Ghi kiểm tra trước giao — 1
+Scenario: Ghi kiểm tra trước giao (trường hợp 1)
   Given Checklist mẫu có mục kiểm hộp chưa kiểm
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
@@ -403,10 +403,10 @@ Scenario: Ghi kiểm tra trước giao — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-011-2 — Lỗi nghiệp vụ
+### AC-PUR-011-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Ghi kiểm tra trước giao — 2
+Scenario: Ghi kiểm tra trước giao (trường hợp 2)
   Given Client bỏ mục không đạt khỏi yêu cầu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
@@ -414,10 +414,10 @@ Scenario: Ghi kiểm tra trước giao — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-011-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-011-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Ghi kiểm tra trước giao — 3
+Scenario: Ghi kiểm tra trước giao (trường hợp 3)
   Given Tất cả mục mẫu được đánh đạt nhưng policy chưa duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
@@ -425,14 +425,14 @@ Scenario: Ghi kiểm tra trước giao — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-012 — Ghi sổ mẫu lưu theo bữa
+## US-PUR-012: Ghi sổ mẫu lưu theo bữa
 
 FR-PLAN-SMP-001; BR-PUR-012; gate E11-Q11; E6 CG06.
 
-### AC-PUR-012-1 — Thành công có điều kiện
+### AC-PUR-012-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Ghi sổ mẫu lưu theo bữa — 1
+Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 1)
   Given Tập bữa synthetic đã xác nhận có 10 bữa, 9 bữa có bản ghi mẫu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
@@ -440,10 +440,10 @@ Scenario: Ghi sổ mẫu lưu theo bữa — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-012-2 — Lỗi nghiệp vụ
+### AC-PUR-012-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Ghi sổ mẫu lưu theo bữa — 2
+Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 2)
   Given Thiếu mã bữa hoặc cơ sở
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
@@ -451,10 +451,10 @@ Scenario: Ghi sổ mẫu lưu theo bữa — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-012-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-012-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Ghi sổ mẫu lưu theo bữa — 3
+Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 3)
   Given Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
@@ -462,14 +462,14 @@ Scenario: Ghi sổ mẫu lưu theo bữa — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-013 — Lập ứng viên món thay thế
+## US-PUR-013: Lập ứng viên món thay thế
 
 FR-MENU-SUB-001; BR-PUR-013; gate E11-Q12/15; O-02.
 
-### AC-PUR-013-1 — Thành công có điều kiện
+### AC-PUR-013-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Lập ứng viên món thay thế — 1
+Scenario: Lập ứng viên món thay thế (trường hợp 1)
   Given Đổi một món MAIN sang món MAIN đang được phép dùng
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
@@ -477,10 +477,10 @@ Scenario: Lập ứng viên món thay thế — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-013-2 — Lỗi nghiệp vụ
+### AC-PUR-013-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Lập ứng viên món thay thế — 2
+Scenario: Lập ứng viên món thay thế (trường hợp 2)
   Given Đổi món MAIN sang SOUP
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
@@ -488,10 +488,10 @@ Scenario: Lập ứng viên món thay thế — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-013-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-013-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Lập ứng viên món thay thế — 3
+Scenario: Lập ứng viên món thay thế (trường hợp 3)
   Given Món có tên giống nhưng vai trò khác
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
@@ -499,14 +499,14 @@ Scenario: Lập ứng viên món thay thế — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-014 — Kiểm lại ứng viên thay món
+## US-PUR-014: Kiểm lại ứng viên thay món
 
 FR-MENU-SCK-001; BR-PUR-014; gate DL-01; E11-Q15; O-01/O-02; CK/DATA-COST.
 
-### AC-PUR-014-1 — Thành công có điều kiện
+### AC-PUR-014-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Kiểm lại ứng viên thay món — 1
+Scenario: Kiểm lại ứng viên thay món (trường hợp 1)
   Given Ứng viên có đủ nhãn dị ứng, rule và giá trong fixture đã duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
@@ -514,10 +514,10 @@ Scenario: Kiểm lại ứng viên thay món — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-014-2 — Lỗi nghiệp vụ
+### AC-PUR-014-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Kiểm lại ứng viên thay món — 2
+Scenario: Kiểm lại ứng viên thay món (trường hợp 2)
   Given Thiếu giá hoặc thiếu căn cứ dị ứng
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
@@ -525,10 +525,10 @@ Scenario: Kiểm lại ứng viên thay món — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-014-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-014-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Kiểm lại ứng viên thay món — 3
+Scenario: Kiểm lại ứng viên thay món (trường hợp 3)
   Given Người dùng đổi ứng viên sau lần kiểm
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
@@ -536,14 +536,14 @@ Scenario: Kiểm lại ứng viên thay món — 3
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-## US-PUR-015 — Kiểm cổng chuyển duyệt MENU
+## US-PUR-015: Kiểm cổng chuyển duyệt MENU
 
 FR-MENU-SGT-001; BR-PUR-015; gate E11-Q12/13; DL-01; E6 CG05/06/07.
 
-### AC-PUR-015-1 — Thành công có điều kiện
+### AC-PUR-015-1: Thành công có điều kiện
 
 ```gherkin
-Scenario: Kiểm cổng chuyển duyệt MENU — 1
+Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 1)
   Given Kết quả dị ứng, rule, cost đúng phiên bản; MENU vẫn chưa duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu
@@ -551,10 +551,10 @@ Scenario: Kiểm cổng chuyển duyệt MENU — 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-015-2 — Lỗi nghiệp vụ
+### AC-PUR-015-2: Lỗi nghiệp vụ
 
 ```gherkin
-Scenario: Kiểm cổng chuyển duyệt MENU — 2
+Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 2)
   Given Quy tắc cứng vi phạm hoặc thiếu cost
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu
@@ -562,10 +562,10 @@ Scenario: Kiểm cổng chuyển duyệt MENU — 2
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 ```
 
-### AC-PUR-015-3 — Biên hoặc thay đổi nguồn
+### AC-PUR-015-3: Biên hoặc thay đổi nguồn
 
 ```gherkin
-Scenario: Kiểm cổng chuyển duyệt MENU — 3
+Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 3)
   Given Nguồn thay đổi giữa kiểm và chuyển
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu

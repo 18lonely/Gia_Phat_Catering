@@ -1,15 +1,15 @@
 ---
 id: DOC-NEN-TANG-TEST-CHECKLIST
-title: Checklist — Nền tảng
+title: "Checklist: Nền tảng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Checklist — Nền tảng
+# Checklist: Nền tảng
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

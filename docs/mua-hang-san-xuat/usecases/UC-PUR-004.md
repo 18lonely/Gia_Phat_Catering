@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-004-MD
-title: UC-PUR-004 — Kiểm phạm vi quản lý lô
+title: "UC-PUR-004: Kiểm phạm vi quản lý lô"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-004 — Kiểm phạm vi quản lý lô
+# UC-PUR-004: Kiểm phạm vi quản lý lô
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Hàng tươi được gửi yêu cầu quản lý lô: Không tạo lô cho hàng tươi (ERR-PUR-422-14).
-- Bước 4 — Thiếu loại bảo quản: Không suy là hàng khô; hiển thị chưa xác định.
-- Bước 4 — thiếu policy/nguồn tại E11-Q03: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Hàng tươi được gửi yêu cầu quản lý lô: Không tạo lô cho hàng tươi (ERR-PUR-422-14).
+- Bước 4: Thiếu loại bảo quản: Không suy là hàng khô; hiển thị chưa xác định.
+- Bước 4: thiếu policy/nguồn tại E11-Q03: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

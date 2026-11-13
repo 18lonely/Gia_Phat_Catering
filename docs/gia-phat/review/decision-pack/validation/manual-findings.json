@@ -7,7 +7,7 @@
       {
         "file": "docs/nen-tang/srs/erd.md",
         "line": 580,
-        "excerpt": "| Giá nhập | price_vnd | BIGINT | — | Không | — | > 0; trên 1 `buy_unit` | Có gồm VAT đầu vào hay không: [O-01] |"
+        "excerpt": "| Giá nhập | price_vnd | BIGINT | Không áp dụng | Không | Không áp dụng | > 0; trên 1 `buy_unit` | Có gồm VAT đầu vào hay không: [O-01] |"
       },
       {
         "file": "docs/cost/accounting/business-rules.md",
@@ -90,12 +90,12 @@
       {
         "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
         "line": 34,
-        "excerpt": "| Phiên bản | version | Integer | Chờ contract | Không | — | Token kiểm khi ghi | Không tráo revision nguồn |"
+        "excerpt": "| Phiên bản | version | Integer | Chờ contract | Không | Không áp dụng | Token kiểm khi ghi | Không tráo revision nguồn |"
       },
       {
         "file": "docs/phan-hoi-bao-cao/srs/data-dictionary.md",
         "line": 45,
-        "excerpt": "| Phiên bản | version | Opaque token | Chờ Q18 | Không khi sửa | — | So khớp, không mặc định lấy mới nhất | Khác revision bất biến của nguồn |"
+        "excerpt": "| Phiên bản | version | Opaque token | Chờ Q18 | Không khi sửa | Không áp dụng | So khớp, không mặc định lấy mới nhất | Khác revision bất biến của nguồn |"
       },
       {
         "file": "docs/chi-phi-loi-nhuan/srs/data-dictionary.md",
@@ -240,7 +240,7 @@
       {
         "file": "docs/mua-hang-san-xuat/srs/data-dictionary.md",
         "line": 40,
-        "excerpt": "| Giá cost | effective_cost_unit_price | Integer money | Theo E3 | Có khi chưa xác định | — | Server chuẩn hóa gồm VAT; phần lẻ chờ | Không nhận số tin cậy từ client |"
+        "excerpt": "| Giá cost | effective_cost_unit_price | Integer money | Theo E3 | Có khi chưa xác định | Không áp dụng | Server chuẩn hóa gồm VAT; phần lẻ chờ | Không nhận số tin cậy từ client |"
       },
       {
         "file": "docs/chi-phi-loi-nhuan/review/questions.md",
@@ -261,12 +261,12 @@
       {
         "file": "docs/cost/accounting/business-rules.md",
         "line": 95,
-        "excerpt": "| CK-Q05 | Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai? | Cách xử lý khoản riêng, đối tượng và liên kết thanh toán | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN** — chưa trả lời |"
+        "excerpt": "| CK-Q05 | Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai? | Cách xử lý khoản riêng, đối tượng và liên kết thanh toán | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN**: chưa trả lời |"
       },
       {
         "file": "docs/cost/accounting/business-rules.md",
         "line": 99,
-        "excerpt": "| CK-Q09 | Nếu chiết khấu đã chi trả/bù trừ rồi đơn mới đổi hoặc hủy, xử lý phần chênh lệch bằng thu hồi, bù kỳ sau hay khoản điều chỉnh riêng? Ai duyệt và cần chứng từ nào? | Khoản điều chỉnh sau xử lý; không xóa dấu vết giao dịch cũ | Kế toán, Giám đốc | **CHỜ XÁC NHẬN** — chưa trả lời |"
+        "excerpt": "| CK-Q09 | Nếu chiết khấu đã chi trả/bù trừ rồi đơn mới đổi hoặc hủy, xử lý phần chênh lệch bằng thu hồi, bù kỳ sau hay khoản điều chỉnh riêng? Ai duyệt và cần chứng từ nào? | Khoản điều chỉnh sau xử lý; không xóa dấu vết giao dịch cũ | Kế toán, Giám đốc | **CHỜ XÁC NHẬN**: chưa trả lời |"
       },
       {
         "file": "docs/chi-phi-loi-nhuan/review/dependencies.md",

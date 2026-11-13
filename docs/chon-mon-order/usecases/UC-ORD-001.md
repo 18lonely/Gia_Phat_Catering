@@ -1,13 +1,13 @@
 ---
 id: DOC-E6-USECASES-UC-ORD-001
-title: UC-ORD-001 — Cấp quyền người đặt tổng
+title: "UC-ORD-001: Cấp quyền người đặt tổng"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-ORD-001 — Cấp quyền người đặt tổng
+# UC-ORD-001: Cấp quyền người đặt tổng
 
 **Draft để review · cập nhật 12/11/2026 · Chưa duyệt nghiệp vụ, chưa triển khai backend/UAT.**
 
@@ -18,7 +18,7 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 | 0.2.0 | 2026-11-11 | Bổ sung chi tiết E6, giữ gate và mã gốc |
 | 0.2.1 | 2026-11-12 | Phân biệt đọc, ghi, worker và gate theo catalog; giữ policy mở |
 
-- **ID / mức:** UC-ORD-001 / Sea — mục tiêu nghiệp vụ.
+- **ID / mức:** UC-ORD-001 / Sea (mục tiêu nghiệp vụ).
 - **Truy vết:** FEAT-030 / P0; FR-AUTH-EXT-001; US-E6-001; API-ORD-006, API-ORD-007; UI-ORD-01.
 - **Actor chính:** Nhân viên Gia Phát được cấp quyền quản trị khách/phạm vi tương ứng; không phải mọi nhân viên Gia Phát. AUTH kiểm quyền cấp vai trò.
 - **Bên quan tâm:** người ăn cần giữ đúng lựa chọn; người đặt tổng cần số suất giải thích được; bếp cần nguồn phiên bản; BA cần không che điểm mở.
@@ -37,12 +37,12 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 
 ## Nhánh rẽ và ngoại lệ
 
-- **2a — đầu vào/quyền nghiệp vụ:** Given U là người đặt tổng A; When U cấp quyền nội bộ cho mình; Then 403 ERR-ORD-403-01; không thay user_roles.
-- **3a — biên/đồng thời:** Given quản trị chỉ được giao A; When gửi customerId B; Then 404 ERR-ORD-404-01; không tiết lộ B.
-- **3b — quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
-- **4a — mất phản hồi mutation:** chưa xác định kết quả thì giữ cùng Idempotency-Key/body để replay theo contract và quyền hiện tại; đọc resource bằng GET đã có nếu đủ ID/quyền. Không tự tạo endpoint tra receipt hoặc suy requestId là bằng chứng commit. Secret QR không được phát lại trong replay.
-- **4b — version hoặc trạng thái đổi khi ghi:** ERR-ORD-409-01 theo mutation tương ứng; tải lại nguồn hợp lệ, hiển thị khác biệt trước thao tác mới. Không ghi đè hoặc tự đặt version tạo mới ở nhánh chưa chốt.
-- **4c — phụ thuộc gián đoạn khi ghi:** ERR-ORD-503-01; chưa xác định commit thì xử lý như 4a, không báo thất bại/thành công chắc chắn. requestId chỉ phục vụ correlation.
+- **2a. Đầu vào/quyền nghiệp vụ:** Given U là người đặt tổng A; When U cấp quyền nội bộ cho mình; Then 403 ERR-ORD-403-01; không thay user_roles.
+- **3a. Biên/đồng thời:** Given quản trị chỉ được giao A; When gửi customerId B; Then 404 ERR-ORD-404-01; không tiết lộ B.
+- **3b. Quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
+- **4a. Mất phản hồi mutation:** chưa xác định kết quả thì giữ cùng Idempotency-Key/body để replay theo contract và quyền hiện tại; đọc resource bằng GET đã có nếu đủ ID/quyền. Không tự tạo endpoint tra receipt hoặc suy requestId là bằng chứng commit. Secret QR không được phát lại trong replay.
+- **4b. Version hoặc trạng thái đổi khi ghi:** ERR-ORD-409-01 theo mutation tương ứng; tải lại nguồn hợp lệ, hiển thị khác biệt trước thao tác mới. Không ghi đè hoặc tự đặt version tạo mới ở nhánh chưa chốt.
+- **4c. Phụ thuộc gián đoạn khi ghi:** ERR-ORD-503-01; chưa xác định commit thì xử lý như 4a, không báo thất bại/thành công chắc chắn. requestId chỉ phục vụ correlation.
 
 ## Quy tắc, dữ liệu và kiểm thử
 
@@ -54,6 +54,6 @@ Dữ liệu: users,user_roles,customers. Bộ ba AC: AC-E6-001-1, AC-E6-001-2, A
 
 API-ORD-007 là GET: actor có quyền yêu cầu query/path theo catalog, kiểm lại quyền/scope mỗi lần. Kết quả là dữ liệu đọc, không tạo receipt, commit nghiệp vụ hoặc tăng version; không dùng Idempotency-Key. Mất phản hồi có thể đọc lại, không tự chốt số lần/giãn cách retry. Nguồn đổi được trình bày theo version/nguồn trả về; không mặc định lỗi stale-write 409 chỉ vì đọc lại. Timeout không được giả thành danh sách rỗng hoặc dữ liệu đã đủ.
 
-## Kết quả rà UC — 12/11/2026
+## Kết quả rà UC ngày 12/11/2026
 
 Đối chiếu [ma trận rà 19 UC](../review/uc-operation-review.md). Gap liên quan: E6-CG-01, E6-CG-02, E6-CG-08 tại [sổ gap chung](../review/contract-gap-register.md); DOCUMENT_CLARIFIED, chưa đóng gap. Mã FR/US/AC/TC và trạng thái test giữ nguyên.

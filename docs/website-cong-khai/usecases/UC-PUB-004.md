@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-004-MD
-title: UC-PUB-004 — Phục vụ URL cũ
+title: "UC-PUB-004: Phục vụ URL cũ"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-004 — Phục vụ URL cũ
+# UC-PUB-004: Phục vụ URL cũ
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai đi theo URL bài viết cũ. B
 
 Trigger: Khách bấm một liên kết WordPress cũ từ kết quả tìm kiếm hoặc dấu trang.
 
-Tiền điều kiện — nghiệp vụ: URL được gửi tới website; luồng thành công cần mapping đã duyệt và đích công khai hợp lệ.
-Tiền điều kiện — gate còn mở: E8-Q01/02 chưa chốt inventory, mapping và cách xử lý URL ngoại lệ. UI-PUB-07 là màn quản trị mapping để review, không phải màn khách phải chọn.
+Tiền điều kiện (nghiệp vụ): URL được gửi tới website; luồng thành công cần mapping đã duyệt và đích công khai hợp lệ.
+Tiền điều kiện (gate còn mở): E8-Q01/02 chưa chốt inventory, mapping và cách xử lý URL ngoại lệ. UI-PUB-07 là màn quản trị mapping để review, không phải màn khách phải chọn.
 
 Luồng chính:
 1. Trình duyệt khách gửi yêu cầu đọc URL cũ tới website.

@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-006-MD
-title: UC-FBR-006 — Đọc cost % ngày và theo khách
+title: "UC-FBR-006: Đọc cost % ngày và theo khách"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-006 — Đọc cost % ngày và theo khách
+# UC-FBR-006: Đọc cost % ngày và theo khách
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-081; màn UI-FBR-06.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-05, PER-06, PER-07, PER-08 theo quyền riêng; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần cost % ngày có nguồn e3; ô theo khách chưa xác định khi thiếu công thức; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào date, customerRef, kitchenRef, costResultRef. Nhánh nghiệp vụ thật cần E12-Q07/08; O-01; DATA-COST-Q01–06; E11-Q07/08. Các gate chưa được coi là đạt.

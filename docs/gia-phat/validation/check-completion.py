@@ -30,10 +30,10 @@ for line in back.splitlines():
  c=[x.strip() for x in line.split('|')[1:-1]];sid=c[0].strip('`');num=sid.split('-')[-1]
  for fr in expand(c[2]):
   menumap.setdefault(fr,[]).append({'story':sid,'uc':c[3].strip('`'),'ac':sorted(set(re.findall(r'AC-MENU-'+num+r'-\d+',ac))),'test':sorted(set(re.findall(r'TC-MENU-'+num+r'\d{2}\b',tests)))})
-rtm='# RTM MENU — chuẩn hóa tham chiếu hiện có\n\nPhiên bản0.1.0 · 2026-11-11 · Draft. Sinh từ backlog/AC/test hiện có; mở rộng mã rút gọn, không tự bổ sung độ phủ. Ca quy tắc riêng nằm tại [rule-test-cases.md](rule-test-cases.md).\n\n| Phiên bản | Ngày | Nội dung |\n| :--- | :--- | :--- |\n| 0.1.0 | 2026-11-11 | Chuẩn hóa FR–story–AC–test để kiểm coverage |\n\n| FR | Story | UC | AC | TC | Trạng thái |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n'
+rtm='# RTM MENU: chuẩn hóa tham chiếu hiện có\n\nPhiên bản0.1.0 · 2026-11-11 · Draft. Sinh từ backlog/AC/test hiện có; mở rộng mã rút gọn, không tự bổ sung độ phủ. Ca quy tắc riêng nằm tại [rule-test-cases.md](rule-test-cases.md).\n\n| Phiên bản | Ngày | Nội dung |\n| :--- | :--- | :--- |\n| 0.1.0 | 2026-11-11 | Chuẩn hóa FR–story–AC–test để kiểm coverage |\n\n| FR | Story | UC | AC | TC | Trạng thái |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n'
 for fr in sorted(getfr(text(base/'srs/spec.md'))):
  entries=menumap.get(fr,[])
- if not entries:rtm+=f'| {fr} | — | — | — | — | CHƯA CÓ mapping story cụ thể; review phạm vi/hoãn |\n'
+ if not entries:rtm+=f'| {fr} | Chưa có | Chưa có | Chưa có | Chưa có | CHƯA CÓ mapping story cụ thể; review phạm vi/hoãn |\n'
  for e in entries:rtm+=f'| {fr} | {e["story"]} | {e["uc"]} | {", ".join(e["ac"]) or "CHƯA TÌM THẤY"} | {", ".join(e["test"]) or "CHƯA TÌM THẤY"} | Thiết kế; chưa chạy backend |\n'
 (base/'test/traceability.md').write_text(rtm,encoding='utf-8')
 inventory=[]

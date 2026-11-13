@@ -1,10 +1,10 @@
-# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS) — Epic E1 · Nền tảng
+# Tài liệu Đặc tả Yêu cầu Kỹ thuật (SRS): Epic E1 · Nền tảng
 
 ## Metadata
 
 | Trường | Giá trị |
 | :--- | :--- |
-| Epic | E1 · `nen-tang` — đợt phát hành R1 (v0.1.0) |
+| Epic | E1 · `nen-tang`: đợt phát hành R1 (v0.1.0) |
 | Phân hệ | AUTH, SYS + kiến trúc và yêu cầu phi chức năng dùng chung cho toàn hệ thống |
 | Tính năng PRD | `FEAT-001` → `FEAT-005` |
 | Phiên bản | 0.2.1 |
@@ -35,11 +35,11 @@ Quy ước: **[D-xx]** quyết định đã chốt · **[ĐỀ XUẤT]** con s�
 
 | Trong phạm vi tài liệu này | Ngoài phạm vi (viết ở SRS epic khác) |
 | :--- | :--- |
-| Tài khoản và đăng nhập của nhân viên Gia Phát | Tài khoản người đặt tổng, người ăn, phiên QR — epic `chon-mon-order` (R6) |
-| Vai trò, quyền, phạm vi dữ liệu theo cơ sở | Quyền chi tiết trên từng chức năng nghiệp vụ — SRS từng epic |
-| Tài khoản dịch vụ cho 2 AI agent | Hành vi của agent — epic `agent-noi-bo` (R5), `agent-dinh-duong-vien` (R9) |
+| Tài khoản và đăng nhập của nhân viên Gia Phát | Tài khoản người đặt tổng, người ăn, phiên QR: epic `chon-mon-order` (R6) |
+| Vai trò, quyền, phạm vi dữ liệu theo cơ sở | Quyền chi tiết trên từng chức năng nghiệp vụ: SRS từng epic |
+| Tài khoản dịch vụ cho 2 AI agent | Hành vi của agent: epic `agent-noi-bo` (R5), `agent-dinh-duong-vien` (R9) |
 | Nhật ký thay đổi, tham số, thông báo trong hệ thống, tải tệp, tác vụ nền | Nội dung từng thông báo nghiệp vụ |
-| Kiến trúc, quy ước API, NFR toàn hệ thống | Mô hình dữ liệu tổng — `docs/nen-tang/srs/erd.md` (bước kế tiếp) |
+| Kiến trúc, quy ước API, NFR toàn hệ thống | Mô hình dữ liệu tổng: `docs/nen-tang/srs/erd.md` (bước kế tiếp) |
 
 Mô hình định danh ở mục 2.3 đã tính trước chỗ cho người dùng bên ngoài để R6 không phải sửa nền.
 
@@ -120,7 +120,7 @@ API là **modular monolith**: mỗi phân hệ một module NestJS (`auth`, `sys
 
 ### 2.3 Phân loại người dùng
 
-**Loại định danh** — nền tảng hỗ trợ 4 loại ngay từ R1; R1 chỉ hiện thực loại 1 và 4.
+**Loại định danh**: nền tảng hỗ trợ 4 loại ngay từ R1; R1 chỉ hiện thực loại 1 và 4.
 
 | # | Loại định danh | Cách xác thực | Phạm vi dữ liệu | Hiện thực ở |
 | :--- | :--- | :--- | :--- | :--- |
@@ -129,7 +129,7 @@ API là **modular monolith**: mỗi phân hệ một module NestJS (`auth`, `sys
 | 3 | Phiên QR không tài khoản | Mã QR của công ty | Một công ty, một ngày phục vụ | R6 |
 | 4 | Tài khoản dịch vụ | Khoá bí mật nội bộ | Theo danh sách quyền gắn cứng | R1 |
 
-**Vai trò nội bộ** — cố định, không cho tự tạo vai trò mới ở bản đầu.
+**Vai trò nội bộ**: cố định, không cho tự tạo vai trò mới ở bản đầu.
 
 | Mã vai trò | Tác nhân | Phạm vi mặc định |
 | :--- | :--- | :--- |
@@ -139,7 +139,7 @@ API là **modular monolith**: mỗi phân hệ một module NestJS (`auth`, `sys
 | `BEP_TRUONG` | A-08 | Cơ sở được gán |
 | `KT_MUA_HANG` | A-09 | Toàn hệ thống |
 | `KT_DOANH_THU` | A-09 | Toàn hệ thống |
-| `QUAN_TRI` | Quản trị hệ thống — ai giữ vai trò này: [N-02] | Toàn hệ thống, chỉ trên AUTH và SYS |
+| `QUAN_TRI` | Quản trị hệ thống: ai giữ vai trò này: [N-02] | Toàn hệ thống, chỉ trên AUTH và SYS |
 
 Một tài khoản giữ được nhiều vai trò (ví dụ một kế toán giữ cả `KT_MUA_HANG` và `KT_DOANH_THU`).
 
@@ -175,81 +175,81 @@ Một tài khoản giữ được nhiều vai trò (ví dụ một kế toán gi
 
 ### 3.1 Yêu cầu chức năng
 
-#### AUTH — Đăng nhập và phiên
+#### AUTH: Đăng nhập và phiên
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-AUTH-LGN-001` | Đăng nhập nội bộ | P0 | Xác thực nhân viên bằng tên đăng nhập và mật khẩu. Kiểm tra tài khoản đang hoạt động, chưa bị khoá. Ghi nhật ký đăng nhập cả khi thành công lẫn thất bại. Dạng tên đăng nhập: [N-01] | tên đăng nhập, mật khẩu | access token, refresh token (cookie `HttpOnly`), hồ sơ người dùng, danh sách vai trò và phạm vi | `BR-SEC-001`, `002`, `003` | `ERR-AUTH-401-01`, `ERR-AUTH-423-01`, `ERR-AUTH-403-01`, `ERR-AUTH-429-01` |
 | `FR-AUTH-LGN-002` | Làm mới phiên | P0 | Đổi refresh token còn hạn lấy access token mới; refresh token cũ bị vô hiệu ngay (xoay vòng). Dùng lại refresh token đã vô hiệu → thu hồi mọi phiên của tài khoản. | refresh token | access token mới, refresh token mới | `BR-SEC-003`, `005` | `ERR-AUTH-401-02` |
-| `FR-AUTH-LGN-003` | Đăng xuất | P0 | Thu hồi phiên hiện tại; tuỳ chọn thu hồi mọi phiên của mình. | — | Phiên bị vô hiệu | — | — |
-| `FR-AUTH-LGN-004` | Xác thực 2 bước | P1 | Vai trò `GIAM_DOC`, `KT_DOANH_THU`, `QUAN_TRI` nhập thêm mã 6 số từ ứng dụng xác thực. Có làm hay không: [N-04] | mã 6 số | Như `FR-AUTH-LGN-001` | — | `ERR-AUTH-401-03` |
+| `FR-AUTH-LGN-003` | Đăng xuất | P0 | Thu hồi phiên hiện tại; tuỳ chọn thu hồi mọi phiên của mình. | Không áp dụng | Phiên bị vô hiệu | Không áp dụng | Không áp dụng |
+| `FR-AUTH-LGN-004` | Xác thực 2 bước | P1 | Vai trò `GIAM_DOC`, `KT_DOANH_THU`, `QUAN_TRI` nhập thêm mã 6 số từ ứng dụng xác thực. Có làm hay không: [N-04] | mã 6 số | Như `FR-AUTH-LGN-001` | Không áp dụng | `ERR-AUTH-401-03` |
 
-#### AUTH — Mật khẩu
+#### AUTH: Mật khẩu
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-AUTH-PWD-001` | Đổi mật khẩu | P0 | Người dùng đổi mật khẩu của mình; phải nhập đúng mật khẩu hiện tại. Sau khi đổi, mọi phiên khác bị thu hồi. | mật khẩu cũ, mật khẩu mới | Xác nhận | `BR-SEC-001`, `005` | `ERR-AUTH-422-01`, `ERR-AUTH-401-01` |
 | `FR-AUTH-PWD-002` | Cấp lại mật khẩu | P0 | `QUAN_TRI` cấp mật khẩu tạm cho một tài khoản. Mật khẩu tạm hết hạn sau 24 giờ và buộc đổi ở lần đăng nhập đầu. | mã tài khoản, lý do | Mật khẩu tạm hiển thị một lần | `BR-SEC-004`, `005`, `BR-AUD-001` | `ERR-AUTH-404-01` |
 
-#### AUTH — Tài khoản, vai trò, phạm vi
+#### AUTH: Tài khoản, vai trò, phạm vi
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-AUTH-ACC-001` | Tạo tài khoản nội bộ | P0 | `QUAN_TRI` tạo tài khoản, gán ít nhất 1 vai trò; vai trò `QL_CO_SO`, `BEP_TRUONG` bắt buộc gán ít nhất 1 cơ sở. | họ tên, tên đăng nhập, vai trò, cơ sở | Tài khoản ở trạng thái "chờ đổi mật khẩu" | `BR-SEC-004`, `006`, `007` | `ERR-AUTH-409-01`, `ERR-AUTH-422-02` |
 | `FR-AUTH-ACC-002` | Khoá / mở khoá tài khoản | P0 | Khoá làm tài khoản không đăng nhập được và thu hồi mọi phiên trong ≤ 60 giây. | mã tài khoản, lý do | Trạng thái mới | `BR-SEC-005`, `BR-AUD-001` | `ERR-AUTH-404-01` |
 | `FR-AUTH-ACC-003` | Sửa vai trò và cơ sở | P0 | Thay đổi có hiệu lực ở yêu cầu kế tiếp của người dùng, không cần đăng nhập lại. | mã tài khoản, vai trò, cơ sở, lý do | Tài khoản đã cập nhật | `BR-SEC-006`, `007`, `BR-AUD-001` | `ERR-AUTH-422-02` |
-| `FR-AUTH-ACC-004` | Xem nhật ký đăng nhập | P0 | Lọc theo tài khoản, khoảng ngày, kết quả. Mỗi dòng: thời điểm, kết quả, địa chỉ IP, thiết bị. | bộ lọc | Danh sách phân trang | — | — |
+| `FR-AUTH-ACC-004` | Xem nhật ký đăng nhập | P0 | Lọc theo tài khoản, khoảng ngày, kết quả. Mỗi dòng: thời điểm, kết quả, địa chỉ IP, thiết bị. | bộ lọc | Danh sách phân trang | Không áp dụng | Không áp dụng |
 | `FR-AUTH-RBAC-001` | Kiểm quyền mỗi yêu cầu | P0 | Mỗi API khai báo quyền cần có. Hệ thống kiểm (1) tài khoản có quyền đó qua vai trò, (2) bản ghi được yêu cầu nằm trong phạm vi dữ liệu của tài khoản. Thiếu (1) → 403. Thiếu (2) → 404, để không lộ sự tồn tại của bản ghi. | token, tài nguyên | Cho phép / từ chối | `BR-SEC-006`, `007` | `ERR-AUTH-403-02`, `ERR-SYS-404-01` |
-| `FR-AUTH-RBAC-002` | Xem ma trận vai trò – quyền | P0 | Hiển thị vai trò nào có quyền nào. Bản đầu chỉ đọc; thay đổi ma trận qua bản phát hành. | — | Ma trận | — | — |
+| `FR-AUTH-RBAC-002` | Xem ma trận vai trò – quyền | P0 | Hiển thị vai trò nào có quyền nào. Bản đầu chỉ đọc; thay đổi ma trận qua bản phát hành. | Không áp dụng | Ma trận | Không áp dụng | Không áp dụng |
 | `FR-AUTH-RBAC-003` | Uỷ quyền duyệt khi vắng | P1 | Người có quyền duyệt chỉ định người thay trong một khoảng ngày. Người thay nhận đúng các quyền duyệt được uỷ, hết hạn tự thu hồi. Phụ thuộc [O-06] | người được uỷ, quyền, từ ngày, đến ngày | Bản ghi uỷ quyền | `BR-SEC-008`, `BR-AUD-001` | `ERR-AUTH-422-03` |
-| `FR-AUTH-SVC-001` | Tài khoản dịch vụ cho agent | P0 | Hai tài khoản tách biệt: `svc-agent-noi-bo`, `svc-agent-dinh-duong-vien`. Mỗi tài khoản có danh sách quyền gắn cứng, không đăng nhập qua giao diện. | — | — | `BR-SEC-009`, `010` | `ERR-AUTH-403-02` |
+| `FR-AUTH-SVC-001` | Tài khoản dịch vụ cho agent | P0 | Hai tài khoản tách biệt: `svc-agent-noi-bo`, `svc-agent-dinh-duong-vien`. Mỗi tài khoản có danh sách quyền gắn cứng, không đăng nhập qua giao diện. | Không áp dụng | Không áp dụng | `BR-SEC-009`, `010` | `ERR-AUTH-403-02` |
 
-#### SYS — Nhật ký thay đổi
+#### SYS: Nhật ký thay đổi
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-SYS-AUD-001` | Ghi nhật ký thay đổi | P0 | Mọi lệnh tạo, sửa, huỷ, duyệt trên bảng nghiệp vụ sinh 1 bản ghi nhật ký trong cùng giao dịch cơ sở dữ liệu: ai, lúc nào, thực thể, mã bản ghi, hành động, giá trị cũ → mới của từng trường đổi, lý do, mã yêu cầu. Nếu thao tác do agent thực hiện: ghi cả tài khoản dịch vụ và người dùng đang dùng agent. | — (tự động) | Bản ghi nhật ký | `BR-AUD-002` | — |
-| `FR-SYS-AUD-002` | Tra cứu nhật ký | P0 | Lọc theo thực thể, mã bản ghi, người, khoảng ngày, hành động. Xem lịch sử của một bản ghi theo thứ tự thời gian. | bộ lọc | Danh sách phân trang | `BR-SEC-007` | — |
-| `FR-SYS-AUD-003` | Bắt buộc lý do | P0 | Thao tác thuộc danh sách ở `BR-AUD-001` bị từ chối nếu thiếu lý do từ 10 ký tự. | lý do | — | `BR-AUD-001` | `ERR-SYS-422-01` |
+| `FR-SYS-AUD-001` | Ghi nhật ký thay đổi | P0 | Mọi lệnh tạo, sửa, huỷ, duyệt trên bảng nghiệp vụ sinh 1 bản ghi nhật ký trong cùng giao dịch cơ sở dữ liệu: ai, lúc nào, thực thể, mã bản ghi, hành động, giá trị cũ → mới của từng trường đổi, lý do, mã yêu cầu. Nếu thao tác do agent thực hiện: ghi cả tài khoản dịch vụ và người dùng đang dùng agent. | Không áp dụng (tự động) | Bản ghi nhật ký | `BR-AUD-002` | Không áp dụng |
+| `FR-SYS-AUD-002` | Tra cứu nhật ký | P0 | Lọc theo thực thể, mã bản ghi, người, khoảng ngày, hành động. Xem lịch sử của một bản ghi theo thứ tự thời gian. | bộ lọc | Danh sách phân trang | `BR-SEC-007` | Không áp dụng |
+| `FR-SYS-AUD-003` | Bắt buộc lý do | P0 | Thao tác thuộc danh sách ở `BR-AUD-001` bị từ chối nếu thiếu lý do từ 10 ký tự. | lý do | Không áp dụng | `BR-AUD-001` | `ERR-SYS-422-01` |
 | `FR-SYS-AUD-004` | Huỷ thay cho xoá | P0 | Không có API xoá cứng bản ghi nghiệp vụ. Huỷ đặt cờ, giữ dữ liệu, bản ghi huỷ không xuất hiện ở danh sách mặc định. | mã bản ghi, lý do | Bản ghi ở trạng thái huỷ | `BR-AUD-001` | `ERR-SYS-409-01` |
 
-#### SYS — Tham số
+#### SYS: Tham số
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
 | `FR-SYS-PRM-001` | Quản lý tham số | P0 | Mỗi tham số có: mã, kiểu, giá trị, phạm vi áp dụng (toàn hệ thống / cơ sở / công ty khách / điểm phục vụ), ngày hiệu lực từ. Giá trị dùng cho một ngày nghiệp vụ là giá trị có hiệu lực tại ngày đó ở phạm vi hẹp nhất. Danh mục khởi tạo ở Phụ lục 4.3. | mã, giá trị, phạm vi, ngày hiệu lực, lý do | Phiên bản tham số mới | `BR-SYS-001` | `ERR-SYS-422-02` |
 | `FR-SYS-PRM-002` | Duyệt thay đổi tham số | P0 | Tham số gắn cờ "cần duyệt" chỉ có hiệu lực sau khi người có quyền duyệt chấp thuận; người đề nghị không tự duyệt. | mã đề nghị, quyết định, lý do | Trạng thái đề nghị | `BR-SYS-002`, `BR-SEC-008` | `ERR-SYS-403-01` |
 
-#### SYS — Thông báo, tệp, tác vụ nền
+#### SYS: Thông báo, tệp, tác vụ nền
 
 | Mã FR | Tên chức năng | Ưu tiên | Mô tả | Input | Output | BR | Mã lỗi |
 | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- |
-| `FR-SYS-NTF-001` | Tạo thông báo trong hệ thống | P0 | Module nghiệp vụ phát sự kiện; SYS tạo thông báo cho người nhận theo vai trò và phạm vi. Mỗi thông báo: loại, tiêu đề, nội dung, liên kết tới bản ghi, mức độ. | sự kiện | Thông báo | — | — |
-| `FR-SYS-NTF-002` | Trạng thái thông báo | P0 | 3 trạng thái: mới, đã xem, đã xử lý. Danh sách lọc theo trạng thái; hiện số thông báo mới trên thanh điều hướng. | mã thông báo, trạng thái | — | — | — |
-| `FR-SYS-NTF-003` | Gửi qua kênh ngoài | P1 | Giao diện gửi chung cho mọi kênh; gửi qua hàng đợi, thử lại tối đa 3 lần, lưu kết quả từng lần gửi. Kênh cụ thể: [Q-14] | người nhận, mẫu, dữ liệu | Trạng thái gửi | — | `ERR-SYS-502-01` |
-| `FR-SYS-FILE-001` | Tải tệp lên | P0 | Nhận JPG, PNG, WEBP, PDF; tối đa 10 MB mỗi tệp. Kiểm tra loại tệp theo nội dung, không theo đuôi tên. Tệp nội bộ chỉ truy cập qua liên kết có chữ ký, hết hạn sau 15 phút. | tệp, thực thể gắn kèm | Mã tệp | — | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
-| `FR-SYS-JOB-001` | Tác vụ nền | P0 | Hàng đợi có: thử lại với khoảng cách tăng dần, tối đa 5 lần; hàng đợi lỗi cho tác vụ hỏng hẳn; khoá chống chạy trùng cho tác vụ định giờ. `QUAN_TRI` xem được trạng thái và chạy lại tác vụ lỗi. | — | — | — | — |
-| `FR-SYS-HLT-001` | Kiểm tra sức khoẻ | P0 | Điểm kiểm tra `/v1/health` trả trạng thái API, MySQL, Redis, hàng đợi; dùng cho cân bằng tải và giám sát. | — | Trạng thái từng thành phần | — | `ERR-SYS-503-01` |
+| `FR-SYS-NTF-001` | Tạo thông báo trong hệ thống | P0 | Module nghiệp vụ phát sự kiện; SYS tạo thông báo cho người nhận theo vai trò và phạm vi. Mỗi thông báo: loại, tiêu đề, nội dung, liên kết tới bản ghi, mức độ. | sự kiện | Thông báo | Không áp dụng | Không áp dụng |
+| `FR-SYS-NTF-002` | Trạng thái thông báo | P0 | 3 trạng thái: mới, đã xem, đã xử lý. Danh sách lọc theo trạng thái; hiện số thông báo mới trên thanh điều hướng. | mã thông báo, trạng thái | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-SYS-NTF-003` | Gửi qua kênh ngoài | P1 | Giao diện gửi chung cho mọi kênh; gửi qua hàng đợi, thử lại tối đa 3 lần, lưu kết quả từng lần gửi. Kênh cụ thể: [Q-14] | người nhận, mẫu, dữ liệu | Trạng thái gửi | Không áp dụng | `ERR-SYS-502-01` |
+| `FR-SYS-FILE-001` | Tải tệp lên | P0 | Nhận JPG, PNG, WEBP, PDF; tối đa 10 MB mỗi tệp. Kiểm tra loại tệp theo nội dung, không theo đuôi tên. Tệp nội bộ chỉ truy cập qua liên kết có chữ ký, hết hạn sau 15 phút. | tệp, thực thể gắn kèm | Mã tệp | Không áp dụng | `ERR-SYS-413-01`, `ERR-SYS-415-01` |
+| `FR-SYS-JOB-001` | Tác vụ nền | P0 | Hàng đợi có: thử lại với khoảng cách tăng dần, tối đa 5 lần; hàng đợi lỗi cho tác vụ hỏng hẳn; khoá chống chạy trùng cho tác vụ định giờ. `QUAN_TRI` xem được trạng thái và chạy lại tác vụ lỗi. | Không áp dụng | Không áp dụng | Không áp dụng | Không áp dụng |
+| `FR-SYS-HLT-001` | Kiểm tra sức khoẻ | P0 | Điểm kiểm tra `/v1/health` trả trạng thái API, MySQL, Redis, hàng đợi; dùng cho cân bằng tải và giám sát. | Không áp dụng | Trạng thái từng thành phần | Không áp dụng | `ERR-SYS-503-01` |
 
 ### 3.2 Quy tắc nghiệp vụ
 
 | Mã BR | Tên quy tắc | Phát biểu (KHI – THÌ) | Ngoại lệ |
 | :--- | :--- | :--- | :--- |
-| `BR-SEC-001` | Độ mạnh mật khẩu | KHI đặt mật khẩu THÌ phải dài ≥ 10 ký tự, có chữ và số, không trùng tên đăng nhập, không trùng 3 mật khẩu gần nhất | — |
+| `BR-SEC-001` | Độ mạnh mật khẩu | KHI đặt mật khẩu THÌ phải dài ≥ 10 ký tự, có chữ và số, không trùng tên đăng nhập, không trùng 3 mật khẩu gần nhất | Không áp dụng |
 | `BR-SEC-002` | Khoá khi nhập sai | KHI một tài khoản nhập sai mật khẩu 5 lần liên tiếp THÌ khoá đăng nhập 15 phút | `QUAN_TRI` mở khoá sớm được |
 | `BR-SEC-003` | Thời hạn phiên | Access token sống 15 phút; refresh token sống 7 ngày, xoay vòng mỗi lần dùng | Thu hồi ngay theo `BR-SEC-005` |
-| `BR-SEC-004` | Mật khẩu tạm | KHI tài khoản dùng mật khẩu tạm THÌ chỉ gọi được API đổi mật khẩu; mật khẩu tạm hết hạn sau 24 giờ | — |
+| `BR-SEC-004` | Mật khẩu tạm | KHI tài khoản dùng mật khẩu tạm THÌ chỉ gọi được API đổi mật khẩu; mật khẩu tạm hết hạn sau 24 giờ | Không áp dụng |
 | `BR-SEC-005` | Thu hồi phiên | KHI đổi mật khẩu, cấp lại mật khẩu, khoá tài khoản, hoặc phát hiện dùng lại refresh token THÌ thu hồi mọi phiên của tài khoản trong ≤ 60 giây | Đổi mật khẩu giữ lại phiên đang thao tác |
-| `BR-SEC-006` | Nhiều vai trò | KHI tài khoản có nhiều vai trò THÌ quyền là hợp của các vai trò | — |
+| `BR-SEC-006` | Nhiều vai trò | KHI tài khoản có nhiều vai trò THÌ quyền là hợp của các vai trò | Không áp dụng |
 | `BR-SEC-007` | Phạm vi cơ sở | KHI tài khoản chỉ có vai trò `QL_CO_SO` hoặc `BEP_TRUONG` THÌ chỉ đọc và ghi được bản ghi thuộc cơ sở đã gán | Dữ liệu danh mục dùng chung (món, công thức, thực đơn đã công bố) đọc được ở mọi cơ sở |
 | `BR-SEC-008` | Tách tạo và duyệt | KHI một bản ghi cần duyệt THÌ người duyệt phải khác người tạo và khác người sửa cuối | Không có ngoại lệ; nếu thiếu người duyệt thì dùng `FR-AUTH-RBAC-003` |
-| `BR-SEC-009` | Quyền của agent | KHI agent hành động thay một người dùng THÌ quyền hiệu lực là **giao** của quyền tài khoản dịch vụ và quyền người dùng đó | — |
+| `BR-SEC-009` | Quyền của agent | KHI agent hành động thay một người dùng THÌ quyền hiệu lực là **giao** của quyền tài khoản dịch vụ và quyền người dùng đó | Không áp dụng |
 | `BR-SEC-010` | Agent phía khách không đọc cost | Tài khoản `svc-agent-dinh-duong-vien` không có quyền đọc giá nhập, cost, bảng dự toán; đồng thời tài khoản MySQL mà agent này dùng không có quyền `SELECT` trên các bảng đó | Không có ngoại lệ |
-| `BR-AUD-001` | Thao tác bắt buộc lý do | KHI thực hiện: sửa hoặc huỷ bản ghi đã duyệt, sửa giá, sửa công thức đang hiệu lực, sửa tham số, cấp lại mật khẩu, khoá tài khoản, sửa vai trò, uỷ quyền, mở lại kỳ đã khoá THÌ bắt buộc lý do ≥ 10 ký tự | — |
-| `BR-AUD-002` | Nhật ký bất biến | Bản ghi nhật ký không sửa, không xoá được qua bất kỳ API nào; tài khoản MySQL của ứng dụng chỉ có quyền `INSERT` và `SELECT` trên bảng nhật ký | — |
-| `BR-AUD-003` | Thời gian lưu nhật ký | Nhật ký thay đổi lưu 5 năm; nhật ký đăng nhập lưu 1 năm. Con số cần xác nhận: [N-03] | — |
-| `BR-SYS-001` | Tham số theo ngày hiệu lực | KHI sửa tham số THÌ tạo phiên bản mới với ngày hiệu lực ≥ ngày hiện tại; không sửa giá trị đã áp dụng cho ngày trong quá khứ | — |
-| `BR-SYS-002` | Tham số cần duyệt | Mọi tham số có cột "Cần duyệt" = "Có" tại mục 4.3 chỉ đổi khi `GIAM_DOC` duyệt; bao gồm `COST_NGUONG_PCT`, `QUY_TAC_DIEM_TOI_THIEU`, `VAT_PCT`, `COST_MON_CHINH_CACH_TINH`, `COST_AP_HAO_HUT`, `COST_CHE_DO_KIEM`. Người duyệt khác người đề nghị (`BR-SEC-008`). | — |
+| `BR-AUD-001` | Thao tác bắt buộc lý do | KHI thực hiện: sửa hoặc huỷ bản ghi đã duyệt, sửa giá, sửa công thức đang hiệu lực, sửa tham số, cấp lại mật khẩu, khoá tài khoản, sửa vai trò, uỷ quyền, mở lại kỳ đã khoá THÌ bắt buộc lý do ≥ 10 ký tự | Không áp dụng |
+| `BR-AUD-002` | Nhật ký bất biến | Bản ghi nhật ký không sửa, không xoá được qua bất kỳ API nào; tài khoản MySQL của ứng dụng chỉ có quyền `INSERT` và `SELECT` trên bảng nhật ký | Không áp dụng |
+| `BR-AUD-003` | Thời gian lưu nhật ký | Nhật ký thay đổi lưu 5 năm; nhật ký đăng nhập lưu 1 năm. Con số cần xác nhận: [N-03] | Không áp dụng |
+| `BR-SYS-001` | Tham số theo ngày hiệu lực | KHI sửa tham số THÌ tạo phiên bản mới với ngày hiệu lực ≥ ngày hiện tại; không sửa giá trị đã áp dụng cho ngày trong quá khứ | Không áp dụng |
+| `BR-SYS-002` | Tham số cần duyệt | Mọi tham số có cột "Cần duyệt" = "Có" tại mục 4.3 chỉ đổi khi `GIAM_DOC` duyệt; bao gồm `COST_NGUONG_PCT`, `QUY_TAC_DIEM_TOI_THIEU`, `VAT_PCT`, `COST_MON_CHINH_CACH_TINH`, `COST_AP_HAO_HUT`, `COST_CHE_DO_KIEM`. Người duyệt khác người đề nghị (`BR-SEC-008`). | Không áp dụng |
 
 ### 3.3 Giao diện ngoài
 
@@ -340,7 +340,7 @@ Phân loại theo ISO/IEC 25010. Hai chỉ tiêu khác mức mặc định của
 
 ## 4. Phụ lục
 
-### 4.1 Sơ đồ — trạng thái tài khoản
+### 4.1 Sơ đồ: trạng thái tài khoản
 
 ```mermaid
 stateDiagram-v2
@@ -361,14 +361,14 @@ Mô hình dữ liệu của AUTH và SYS nằm trong mô hình dữ liệu tổn
 | Tính năng PRD | Yêu cầu nghiệp vụ / nhu cầu | FR |
 | :--- | :--- | :--- |
 | `FEAT-001` Đăng nhập nội bộ và phân quyền | NFR-SEC của BRD; URD mục 5 | `FR-AUTH-LGN-001` → `004`, `FR-AUTH-RBAC-001` → `003`, `FR-AUTH-SVC-001` |
-| `FEAT-002` Quản lý tài khoản | — | `FR-AUTH-PWD-001`, `002`, `FR-AUTH-ACC-001` → `004` |
+| `FEAT-002` Quản lý tài khoản | Không áp dụng | `FR-AUTH-PWD-001`, `002`, `FR-AUTH-ACC-001` → `004` |
 | `FEAT-003` Nhật ký thay đổi | BN-02; bản HTML "Nhật ký thay đổi" | `FR-SYS-AUD-001` → `004` |
 | `FEAT-004` Tham số hệ thống | BN-04 (ngưỡng là tham số) | `FR-SYS-PRM-001`, `002` |
 | `FEAT-005` Trung tâm thông báo | UN-05 | `FR-SYS-NTF-001` → `003` |
 | (nền cho mọi epic) | BN-16 | `FR-AUTH-SVC-001`, `BR-SEC-009`, `010` |
 | (nền cho mọi epic) | BO-10 | `NFR-PERF-001` → `004`, `NFR-SCAL-001` |
 | (nền cho mọi epic) | BN-19 | `NFR-SEC-003`, `NFR-PRIV-001`, `002` |
-| (nền cho mọi epic) | — | `FR-SYS-FILE-001`, `FR-SYS-JOB-001`, `FR-SYS-HLT-001` |
+| (nền cho mọi epic) | Không áp dụng | `FR-SYS-FILE-001`, `FR-SYS-JOB-001`, `FR-SYS-HLT-001` |
 
 ### 4.3 Danh mục tham số khởi tạo
 
@@ -407,10 +407,10 @@ Giữ nguyên trạng thái mở.
 | Q-14 | Kênh thông báo ngoài (Zalo OA, SMS, email) | Giám đốc | `FR-SYS-NTF-003` |
 | Q-18 | Số người ăn, số công ty, số điểm giao mỗi ngày | Giám đốc | `NFR-CAP-001` |
 
-## Hồ sơ bổ sung để review — 11/11/2026
+## Hồ sơ bổ sung để review ngày 11/11/2026
 
 [Preview toàn hồ sơ](../preview.html) · [API](../api/api-spec.md) · [Luồng tuần tự](flows.md) · [Trạng thái](states.md) · [Gap](../gap-analysis.md). Gói bổ sung không tự đóng câu hỏi, thay quy tắc nghiệp vụ hoặc chứng minh backend đã triển khai. [Bàn giao](../../gia-phat/review/ba-completion-handoff.md).
 
-## Liên kết phụ thuộc E6 — bổ sung 11/11/2026
+## Liên kết phụ thuộc E6: bổ sung 11/11/2026
 
 [Gói E6 để review](../../chon-mon-order/preview.html) · [Hợp đồng phụ thuộc](../../chon-mon-order/review/dependencies.md) · [Đối chiếu schema](../../chon-mon-order/srs/data-dictionary.md). E6 giữ nguồn công bố/quyền và quy tắc của phân hệ này; delta chưa merge, không thay gate hoặc chứng minh phần mềm đã triển khai.

@@ -23,7 +23,7 @@
 - [ ] Đối chiếu response ghi thành công với dữ liệu commit; GET đối chiếu nguồn và không mutation nghiệp vụ; timeout là UNKNOWN, không tự ghi FAIL nghiệp vụ hoặc PASS.
 - [ ] Ghi Actual/Evidence cho từng ca; chưa có môi trường thì giữ NOT RUN hoặc BLOCKED theo policy.
 
-## Profile tải1000CCU — phương án QA chưa duyệt/chưa chạy
+## Profile tải1000CCU: phương án QA chưa duyệt/chưa chạy
 
 Chuẩn bị1000principal synthetic đã bind trong môi trường test, chia500/500 giữa2khách; đây là phân bố test, không chốt scope người đặt tổng. Ramp5phút rồi giữ1000session đồng thời trong10phút trước hạn giả lập, cooldown2phút. Hạn giả lập phải gắn scenario/config version, không coi là cutoff vận hành.
 
@@ -35,11 +35,11 @@ Vòng thao tác đề xuất:70%đọc menu/selection,20%chọn mới,10%đổi 
 
 [delta-synthetic.json](delta-synthetic.json) là mẫu logic review, không payload ghi API: tổng baseline/target đều100 nhưng thay recipe tạo delta-60/+60. Cùng dishId có2dòng làm request dish-only mơ hồ; mixedUnits cố ý chứa suất/g để phát hiện phép cộng sai. Không phải test backend hoặc quyết định hỗ trợ nhiều MAIN; không tăng inventory99ca.
 
-## Review adapter — 11/11/2026
+## Review adapter ngày 11/11/2026
 
 [adapter-synthetic.json](adapter-synthetic.json) gồm6biến thể oracle (không phải6ca mới) cho SYS-05/09 và AC-E6-016: zero,missing,timeout,scope,allergen unknown,list rỗng. Trường source cố ý có chi tiết nội bộ synthetic; expected không được copy chúng. Chưa chạy projection/backend.
 
-## Đối chiếu fixture với 22 ca — 12/11/2026
+## Đối chiếu fixture với 22 ca ngày 12/11/2026
 
 DOCUMENT_CLARIFIED. Đã đọc 4/4 file trong thư mục: README và 3 JSON. JSON là mẫu logic/oracle rời, không phải một database seed nhất quán hoặc payload thực thi đầy đủ; không dùng summary có 2 selection để chứng minh plan 100 suất hay S=60 của ca khác. Không cần sửa 3 JSON: số học, version tách biệt và oracle adapter hiện tại phù hợp mục đích đã ghi. Không thêm ca/fixture; Status/Actual/Evidence của các bộ ca giữ nguyên.
 

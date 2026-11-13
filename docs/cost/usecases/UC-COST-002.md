@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Dòng giá mới và lịch sử/audit tồn tại; việc tính lại không sửa snapshot đã duyệt.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-PRC-001`, `FR-COST-PRC-002`, `FR-COST-PRC-003`, `FR-COST-PRC-007`, `FR-COST-PRC-010`, `FR-COST-PRC-011`.
-- **Điểm chạm:** SCR-COST-03, SCR-COST-04 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-03, SCR-COST-04, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

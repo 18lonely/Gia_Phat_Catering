@@ -75,8 +75,8 @@ API-PUB-003 chuẩn bị inventory/mapping và kết quả đối chiếu nội 
 
 Key public cache chỉ projection công khai đúng revision; không lẫn auth preview hoặc lead. Thu hồi phải ngăn trả bản cũ; cơ chế/p95 purge TTL E8-Q12. Lỗi ghi/audit không được trả thành công một phần; timeout cần đối soát receipt, không giả lưu rồi gửi lại bằng key mới. Lỗi notification độc lập kết quả lưu; không sửa producer E1–E7.
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E8-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E8-Q12: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

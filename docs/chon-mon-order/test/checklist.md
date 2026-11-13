@@ -22,7 +22,7 @@ Draft · 11/11/2026 · Chưa phê duyệt nghiệp vụ / chưa triển khai bac
 - [ ] Regression VAT phải trả/không hóa đơn/chiết khấu riêng; NFR-COST-002; CK và DATA-COST giữ nguyên.
 - [ ] Khi có backend: 1000 CCU trong10 phút,0 mất/trùng; pilot2 khách/2tuần theo roadmap. Chưa đánh dấu đạt.
 
-## Evidence theo thao tác — 12/11/2026
+## Evidence theo thao tác ngày 12/11/2026
 
 - [ ] Dùng [evidence protocol](evidence-protocol.md) ghi actor/principal, trigger và snapshot trước/sau; mọi fixture là synthetic; đây là outline, không thêm TC.
 - [ ] GET menu/plan/kết quả vận hành không tạo Calculation, plan, receipt hoặc commit nghiệp vụ; không Idempotency-Key/retry lệnh ghi.

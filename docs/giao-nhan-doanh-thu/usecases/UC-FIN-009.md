@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-009-MD
-title: UC-FIN-009 — Ghi nhận thu tiền
+title: "UC-FIN-009: Ghi nhận thu tiền"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-009 — Ghi nhận thu tiền
+# UC-FIN-009: Ghi nhận thu tiền
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán nhận chứng từ khách thanh toán cho kỳ đối soát.
 
-Tiền điều kiện — nghiệp vụ: Có kỳ và chứng từ thu thuộc khách; kế toán có quyền ghi khoản thu.
-Tiền điều kiện — gate còn mở: E7-Q06 về thu một phần/thừa, phân bổ và sửa/hủy; E7-Q05 về thu sau khóa. Chưa mở các nhánh thanh toán nâng cao.
+Tiền điều kiện (nghiệp vụ): Có kỳ và chứng từ thu thuộc khách; kế toán có quyền ghi khoản thu.
+Tiền điều kiện (gate còn mở): E7-Q06 về thu một phần/thừa, phân bổ và sửa/hủy; E7-Q05 về thu sau khóa. Chưa mở các nhánh thanh toán nâng cao.
 
 Luồng chính:
 1. Kế toán chọn periodId tại UI-E7-06, đối chiếu khách, phải trả và các khoản đã thu.

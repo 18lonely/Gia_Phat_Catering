@@ -6,7 +6,7 @@ if(fs.existsSync(baseline))throw Error('Already appended; edit current E7 sectio
 fs.writeFileSync(baseline,JSON.stringify(Object.fromEntries(targets.map(p=>[p,fs.readFileSync(path.join(root,p),'utf8')])),null,2));
 for(const p of targets){
  const prefix=p.includes('/review/')?'../../giao-nhan-doanh-thu/':'giao-nhan-doanh-thu/';
- let text='\n\n## Mốc hiện hành — mở gói BA nháp E7, 12/11/2026\n\n';
+ let text='\n\n## Mốc hiện hành: mở gói BA nháp E7, 12/11/2026\n\n';
  text+='Theo xác nhận người dùng 12/11/2026, mở **chỉ E7**; chỉ dẫn này thay phạm vi cũ “không mở E7–E13” đối với E7. E8–E13 chưa mở. E6 dừng chờ trả lời CG01/08/05/06, không hỏi lại/tự điền/đặc tả tiếp phần phụ thuộc;14/14 CG OPEN. Các mục phía trên là lịch sử và được giữ nguyên.\n\n';
  text+='[Preview E7]('+prefix+'preview.html) · [Bàn giao]('+prefix+'review/handoff.md) · [Câu hỏi]('+prefix+'review/questions.md) · [Phụ thuộc E6→E7]('+prefix+'review/dependencies.md) · [Kiểm tra]('+prefix+'validation/report.md).\n\n';
  text+='E7 FEAT-049→053:5/5 feature có thiết kế nháp có điều kiện,0 feature chỉ gate;13 FR/UC/story,39 AC và39 ca tương ứng,8 ca hệ thống có overlap,18 endpoint đề xuất,8 màn HTML,4 sơ đồ flow/state. FEAT-053 có preflight/provenance/luồng xuất, chưa mapping cột và chưa thử nhập MISA. Q-13 CHỜ TRẢ LỜI, cột trả lời trống; nhánh phụ thuộc BLOCKED. Không coi contract E6 đã freeze.\n\n';

@@ -8,11 +8,11 @@ Mỗi nhóm là Gherkin Given/When/Then, gồm thành công, lỗi và biên/quy
 
 <a id="us-cost-001"></a>
 
-## US-COST-001 — Danh mục nhà cung cấp
+## US-COST-001: Danh mục nhà cung cấp
 
-### AC-COST-001-01 — Tạo, sửa và lọc NCC
+### AC-COST-001-01: Tạo, sửa và lọc NCC
 
-Truy vết: FR-COST-SUP-001, FR-COST-SUP-002, FR-COST-SUP-003; BR-PRC-001. Gate: —.
+Truy vết: FR-COST-SUP-001, FR-COST-SUP-002, FR-COST-SUP-003; BR-PRC-001. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-001-01 Tạo, sửa và lọc NCC
@@ -21,9 +21,9 @@ Scenario: AC-COST-001-01 Tạo, sửa và lọc NCC
   Then có đúng một NCC ACTIVE với điện thoại mới, lịch sử ghi người thao tác và nội dung thay đổi
 ```
 
-### AC-COST-001-02 — Tên trùng sau chuẩn hóa
+### AC-COST-001-02: Tên trùng sau chuẩn hóa
 
-Truy vết: FR-COST-SUP-001, FR-COST-SUP-002, FR-COST-SUP-003; BR-PRC-001, BR-CAT-001, ERR-COST-409-01. Gate: —.
+Truy vết: FR-COST-SUP-001, FR-COST-SUP-002, FR-COST-SUP-003; BR-PRC-001, BR-CAT-001, ERR-COST-409-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-001-02 Tên trùng sau chuẩn hóa
@@ -32,7 +32,7 @@ Scenario: AC-COST-001-02 Tên trùng sau chuẩn hóa
   Then HTTP 409 ERR-COST-409-01; không thêm NCC
 ```
 
-### AC-COST-001-03 — Ngừng không xóa giá cũ
+### AC-COST-001-03: Ngừng không xóa giá cũ
 
 Truy vết: FR-COST-SUP-001, FR-COST-SUP-002, FR-COST-SUP-003; BR-PRC-007, ERR-COST-422-02. Gate: FLOW-COST-Q03.
 
@@ -45,11 +45,11 @@ Scenario: AC-COST-001-03 Ngừng không xóa giá cũ
 
 <a id="us-cost-002"></a>
 
-## US-COST-002 — Nhập giá nguyên liệu
+## US-COST-002: Nhập giá nguyên liệu
 
-### AC-COST-002-01 — Giá đầu tiên
+### AC-COST-002-01: Giá đầu tiên
 
-Truy vết: FR-COST-PRC-001; BR-PRC-002, BR-PRC-005. Gate: —.
+Truy vết: FR-COST-PRC-001; BR-PRC-002, BR-PRC-005. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-002-01 Giá đầu tiên
@@ -58,9 +58,9 @@ Scenario: AC-COST-002-01 Giá đầu tiên
   Then tạo một dòng giá, tự đánh dấu tham chiếu, ghi audit; không có bước duyệt giá thứ hai trong thiết kế hiện tại
 ```
 
-### AC-COST-002-02 — Giá không hợp lệ
+### AC-COST-002-02: Giá không hợp lệ
 
-Truy vết: FR-COST-PRC-001; BR-PRC-002, ERR-COST-422-01. Gate: —.
+Truy vết: FR-COST-PRC-001; BR-PRC-002, ERR-COST-422-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-002-02 Giá không hợp lệ
@@ -69,7 +69,7 @@ Scenario: AC-COST-002-02 Giá không hợp lệ
   Then mỗi lần HTTP 422 ERR-COST-422-01; không tạo dòng
 ```
 
-### AC-COST-002-03 — Biên ngày và khóa trùng
+### AC-COST-002-03: Biên ngày và khóa trùng
 
 Truy vết: FR-COST-PRC-001; BR-PRC-003, BR-PRC-005, ERR-COST-422-02, ERR-COST-409-02. Gate: E3-Q13.
 
@@ -80,9 +80,9 @@ Scenario: AC-COST-002-03 Biên ngày và khóa trùng
   Then hai ngày biên hợp lệ; hai ngày ngoài biên trả ERR-COST-422-02; tuple trùng trả ERR-COST-409-02
 ```
 
-### AC-COST-002-04 — Tham chiếu không tồn tại
+### AC-COST-002-04: Tham chiếu không tồn tại
 
-Truy vết: FR-COST-PRC-001; ERR-COST-404-01. Gate: —.
+Truy vết: FR-COST-PRC-001; ERR-COST-404-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-002-04 Tham chiếu không tồn tại
@@ -91,7 +91,7 @@ Scenario: AC-COST-002-04 Tham chiếu không tồn tại
   Then HTTP 404 ERR-COST-404-01; không tạo giá
 ```
 
-### AC-COST-002-05 — Schema và trường do server quản lý
+### AC-COST-002-05: Schema và trường do server quản lý
 
 Truy vết: FR-COST-PRC-001; ERR-COST-400-01. Gate: review API.
 
@@ -102,7 +102,7 @@ Scenario: AC-COST-002-05 Schema và trường do server quản lý
   Then 400 ERR-COST-400-01 theo hợp đồng đề xuất, details.path chỉ field sai; không ghi giá
 ```
 
-### AC-COST-002-06 — NCC inactive có hai mã lỗi trong SRS
+### AC-COST-002-06: NCC inactive có hai mã lỗi trong SRS
 
 Truy vết: FR-COST-PRC-001; ERR-COST-404-01, ERR-COST-422-02. Gate: QA-COST-Q01: BA/Tech lead thống nhất mã.
 
@@ -115,11 +115,11 @@ Scenario: AC-COST-002-06 NCC inactive có hai mã lỗi trong SRS
 
 <a id="us-cost-003"></a>
 
-## US-COST-003 — Chọn và tra giá tham chiếu
+## US-COST-003: Chọn và tra giá tham chiếu
 
-### AC-COST-003-01 — Ưu tiên giá cơ sở
+### AC-COST-003-01: Ưu tiên giá cơ sở
 
-Truy vết: FR-COST-PRC-002, FR-COST-PRC-003; BR-PRC-006, BR-COST-004. Gate: —.
+Truy vết: FR-COST-PRC-002, FR-COST-PRC-003; BR-PRC-006, BR-COST-004. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-003-01 Ưu tiên giá cơ sở
@@ -128,9 +128,9 @@ Scenario: AC-COST-003-01 Ưu tiên giá cơ sở
   Then A nhận 120000 dù giá chung mới hơn; B nhận 100000 kèm NCC/ngày giá
 ```
 
-### AC-COST-003-02 — Không dùng giá tương lai
+### AC-COST-003-02: Không dùng giá tương lai
 
-Truy vết: FR-COST-PRC-002, FR-COST-PRC-003; BR-PRC-006, ERR-COST-404-02. Gate: —.
+Truy vết: FR-COST-PRC-002, FR-COST-PRC-003; BR-PRC-006, ERR-COST-404-02. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-003-02 Không dùng giá tương lai
@@ -139,7 +139,7 @@ Scenario: AC-COST-003-02 Không dùng giá tương lai
   Then HTTP 404 ERR-COST-404-02; không dùng giá tương lai
 ```
 
-### AC-COST-003-03 — Chuyển cờ trong cùng nhóm tương lai
+### AC-COST-003-03: Chuyển cờ trong cùng nhóm tương lai
 
 Truy vết: FR-COST-PRC-002, FR-COST-PRC-003; BR-PRC-005. Gate: E3-Q4; E3-Q14.
 
@@ -152,11 +152,11 @@ Scenario: AC-COST-003-03 Chuyển cờ trong cùng nhóm tương lai
 
 <a id="us-cost-004"></a>
 
-## US-COST-004 — Nhập lưới nguyên tử
+## US-COST-004: Nhập lưới nguyên tử
 
-### AC-COST-004-01 — Bỏ qua dòng không đổi
+### AC-COST-004-01: Bỏ qua dòng không đổi
 
-Truy vết: FR-COST-PRC-004; FR/use case của story. Gate: —.
+Truy vết: FR-COST-PRC-004; FR/use case của story. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-004-01 Bỏ qua dòng không đổi
@@ -165,9 +165,9 @@ Scenario: AC-COST-004-01 Bỏ qua dòng không đổi
   Then tạo đúng một giá I1; I2 không thêm lịch sử
 ```
 
-### AC-COST-004-02 — Một dòng sai rollback
+### AC-COST-004-02: Một dòng sai rollback
 
-Truy vết: FR-COST-PRC-004; BR-PRC-002, ERR-COST-422-01. Gate: —.
+Truy vết: FR-COST-PRC-004; BR-PRC-002, ERR-COST-422-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-004-02 Một dòng sai rollback
@@ -176,7 +176,7 @@ Scenario: AC-COST-004-02 Một dòng sai rollback
   Then báo ERR-COST-422-01 gắn dòng I2; không tạo giá I1 hoặc I2
 ```
 
-### AC-COST-004-03 — Mất phản hồi sau commit
+### AC-COST-004-03: Mất phản hồi sau commit
 
 Truy vết: FR-COST-PRC-004; FR/use case của story. Gate: FLOW-COST-Q02.
 
@@ -187,7 +187,7 @@ Scenario: AC-COST-004-03 Mất phản hồi sau commit
   Then trả kết quả đã lưu; số dòng không tăng lần hai; không tạo key mới chỉ vì timeout
 ```
 
-### AC-COST-004-04 — Hiệu năng lưới200 dòng
+### AC-COST-004-04: Hiệu năng lưới200 dòng
 
 Truy vết: FR-COST-PRC-004; NFR-COST-003. Gate: môi trường backend.
 
@@ -198,7 +198,7 @@ Scenario: AC-COST-004-04 Hiệu năng lưới200 dòng
   Then <=3giây và đủ200 dòng; thời gian và tính nguyên tử cùng đạt
 ```
 
-### AC-COST-004-05 — Key cùng body khác và đang xử lý
+### AC-COST-004-05: Key cùng body khác và đang xử lý
 
 Truy vết: FR-COST-PRC-004; ERR-COST-409-04, ERR-COST-409-05. Gate: FLOW-COST-Q02.
 
@@ -211,11 +211,11 @@ Scenario: AC-COST-004-05 Key cùng body khác và đang xử lý
 
 <a id="us-cost-005"></a>
 
-## US-COST-005 — Nhập XLSX giá
+## US-COST-005: Nhập XLSX giá
 
-### AC-COST-005-01 — Đọc đúng tên cột
+### AC-COST-005-01: Đọc đúng tên cột
 
-Truy vết: FR-COST-PRC-005; BR-CAT-023. Gate: —.
+Truy vết: FR-COST-PRC-005; BR-CAT-023. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-005-01 Đọc đúng tên cột
@@ -224,9 +224,9 @@ Scenario: AC-COST-005-01 Đọc đúng tên cột
   Then kiểm không ghi; bỏ dòng trắng và cảnh báo cột lạ; xác nhận mới tạo hai dòng
 ```
 
-### AC-COST-005-02 — Tệp lỗi không ghi
+### AC-COST-005-02: Tệp lỗi không ghi
 
-Truy vết: FR-COST-PRC-005; BR-CAT-023, ERR-MENU-422-20. Gate: —.
+Truy vết: FR-COST-PRC-005; BR-CAT-023, ERR-MENU-422-20. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-005-02 Tệp lỗi không ghi
@@ -235,9 +235,9 @@ Scenario: AC-COST-005-02 Tệp lỗi không ghi
   Then ERR-MENU-422-20, lỗi có dòng/cột; không tạo giá
 ```
 
-### AC-COST-005-03 — Giới hạn dòng và đọc số
+### AC-COST-005-03: Giới hạn dòng và đọc số
 
-Truy vết: FR-COST-PRC-005; BR-CAT-023, ERR-MENU-422-20. Gate: —.
+Truy vết: FR-COST-PRC-005; BR-CAT-023, ERR-MENU-422-20. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-005-03 Giới hạn dòng và đọc số
@@ -246,7 +246,7 @@ Scenario: AC-COST-005-03 Giới hạn dòng và đọc số
   Then 2000 dòng được kiểm; 2001 trả ERR-MENU-422-20; số nguyên văn bản được đọc; "120,000" là thập phân 120, không được hiểu là 120000
 ```
 
-### AC-COST-005-04 — Import đã kiểm bị đổi
+### AC-COST-005-04: Import đã kiểm bị đổi
 
 Truy vết: FR-COST-PRC-005; ERR-COST-409-07. Gate: review API.
 
@@ -257,9 +257,9 @@ Scenario: AC-COST-005-04 Import đã kiểm bị đổi
   Then ERR-COST-409-07; không nhập một dòng nào; phải kiểm lại
 ```
 
-### AC-COST-005-05 — Số dạng văn bản và trang tính
+### AC-COST-005-05: Số dạng văn bản và trang tính
 
-Truy vết: FR-COST-PRC-005; BR-CAT-023. Gate: —.
+Truy vết: FR-COST-PRC-005; BR-CAT-023. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-005-05 Số dạng văn bản và trang tính
@@ -270,11 +270,11 @@ Scenario: AC-COST-005-05 Số dạng văn bản và trang tính
 
 <a id="us-cost-006"></a>
 
-## US-COST-006 — Lịch sử và hủy giá tương lai
+## US-COST-006: Lịch sử và hủy giá tương lai
 
-### AC-COST-006-01 — Hủy giá tương lai độc lập
+### AC-COST-006-01: Hủy giá tương lai độc lập
 
-Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; BR-PRC-004, BR-AUD-001. Gate: —.
+Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; BR-PRC-004, BR-AUD-001. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-006-01 Hủy giá tương lai độc lập
@@ -283,9 +283,9 @@ Scenario: AC-COST-006-01 Hủy giá tương lai độc lập
   Then dòng được đánh dấu hủy, giữ audit, không còn được chọn khi tra giá; các dòng cũ giữ nguyên
 ```
 
-### AC-COST-006-02 — Giá đã hiệu lực
+### AC-COST-006-02: Giá đã hiệu lực
 
-Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; BR-PRC-004, ERR-COST-409-03. Gate: —.
+Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; BR-PRC-004, ERR-COST-409-03. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-006-02 Giá đã hiệu lực
@@ -294,9 +294,9 @@ Scenario: AC-COST-006-02 Giá đã hiệu lực
   Then HTTP 409 ERR-COST-409-03; dữ liệu và cờ tham chiếu không bị đổi ngầm
 ```
 
-### AC-COST-006-03 — Phạm vi lịch sử
+### AC-COST-006-03: Phạm vi lịch sử
 
-Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; ERR-SYS-404-01. Gate: —.
+Truy vết: FR-COST-PRC-006, FR-COST-PRC-007; ERR-SYS-404-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-006-03 Phạm vi lịch sử
@@ -307,11 +307,11 @@ Scenario: AC-COST-006-03 Phạm vi lịch sử
 
 <a id="us-cost-007"></a>
 
-## US-COST-007 — Theo dõi giá thiếu và giá cũ
+## US-COST-007: Theo dõi giá thiếu và giá cũ
 
-### AC-COST-007-01 — Thiếu giá theo cơ sở
+### AC-COST-007-01: Thiếu giá theo cơ sở
 
-Truy vết: FR-COST-PRC-008, FR-COST-PRC-009; BR-PRC-006. Gate: —.
+Truy vết: FR-COST-PRC-008, FR-COST-PRC-009; BR-PRC-006. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-007-01 Thiếu giá theo cơ sở
@@ -320,7 +320,7 @@ Scenario: AC-COST-007-01 Thiếu giá theo cơ sở
   Then B có I1, số món ảnh hưởng 2; A không liệt kê I1; không lấy giá riêng A cho B
 ```
 
-### AC-COST-007-02 — Chạy lại không nhân cảnh báo
+### AC-COST-007-02: Chạy lại không nhân cảnh báo
 
 Truy vết: FR-COST-PRC-008, FR-COST-PRC-009; BR-PRC-008, BR-COST-005. Gate: FLOW-COST-Q03.
 
@@ -331,7 +331,7 @@ Scenario: AC-COST-007-02 Chạy lại không nhân cảnh báo
   Then một cảnh báo đang mở cho I1 gửi KT; lần hai không tạo cảnh báo mở thứ hai
 ```
 
-### AC-COST-007-03 — Biên tuổi giá
+### AC-COST-007-03: Biên tuổi giá
 
 Truy vết: FR-COST-PRC-008, FR-COST-PRC-009; BR-PRC-008, BR-COST-005. Gate: DL-01.
 
@@ -344,11 +344,11 @@ Scenario: AC-COST-007-03 Biên tuổi giá
 
 <a id="us-cost-008"></a>
 
-## US-COST-008 — Xác nhận biến động giá
+## US-COST-008: Xác nhận biến động giá
 
-### AC-COST-008-01 — Xác nhận rồi lưu
+### AC-COST-008-01: Xác nhận rồi lưu
 
-Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: —.
+Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-008-01 Xác nhận rồi lưu
@@ -357,9 +357,9 @@ Scenario: AC-COST-008-01 Xác nhận rồi lưu
   Then trước xác nhận chưa có dòng mới; sau xác nhận tạo đúng một dòng
 ```
 
-### AC-COST-008-02 — Hủy xác nhận
+### AC-COST-008-02: Hủy xác nhận
 
-Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: —.
+Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-008-02 Hủy xác nhận
@@ -368,9 +368,9 @@ Scenario: AC-COST-008-02 Hủy xác nhận
   Then không tạo dòng giá; có thể sửa dữ liệu nhập
 ```
 
-### AC-COST-008-03 — Đúng ngưỡng và giá đầu tiên
+### AC-COST-008-03: Đúng ngưỡng và giá đầu tiên
 
-Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: —.
+Truy vết: FR-COST-PRC-010; BR-PRC-009. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-008-03 Đúng ngưỡng và giá đầu tiên
@@ -379,7 +379,7 @@ Scenario: AC-COST-008-03 Đúng ngưỡng và giá đầu tiên
   Then đúng 30% không hỏi vì quy tắc là vượt 30%; I2 không có cơ sở so sánh nên không hỏi
 ```
 
-### AC-COST-008-04 — Token xác nhận stale
+### AC-COST-008-04: Token xác nhận stale
 
 Truy vết: FR-COST-PRC-010; ERR-COST-409-06. Gate: review API.
 
@@ -392,11 +392,11 @@ Scenario: AC-COST-008-04 Token xác nhận stale
 
 <a id="us-cost-009"></a>
 
-## US-COST-009 — Chứng từ giá
+## US-COST-009: Chứng từ giá
 
-### AC-COST-009-01 — Gắn PDF hợp lệ
+### AC-COST-009-01: Gắn PDF hợp lệ
 
-Truy vết: FR-COST-PRC-011; FR/use case của story. Gate: —.
+Truy vết: FR-COST-PRC-011; FR/use case của story. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-009-01 Gắn PDF hợp lệ
@@ -405,9 +405,9 @@ Scenario: AC-COST-009-01 Gắn PDF hợp lệ
   Then truy lại cùng chứng từ; URL nội bộ có chữ ký hết hạn 15 phút
 ```
 
-### AC-COST-009-02 — Sai nội dung và quá dung lượng
+### AC-COST-009-02: Sai nội dung và quá dung lượng
 
-Truy vết: FR-COST-PRC-011; ERR-SYS-415-01, ERR-SYS-413-01. Gate: —.
+Truy vết: FR-COST-PRC-011; ERR-SYS-415-01, ERR-SYS-413-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-009-02 Sai nội dung và quá dung lượng
@@ -416,9 +416,9 @@ Scenario: AC-COST-009-02 Sai nội dung và quá dung lượng
   Then tệp giả trả ERR-SYS-415-01; tệp quá cỡ trả ERR-SYS-413-01; không tạo liên kết chứng từ
 ```
 
-### AC-COST-009-03 — Thu hồi quyền và URL hết hạn
+### AC-COST-009-03: Thu hồi quyền và URL hết hạn
 
-Truy vết: FR-COST-PRC-011; FR/use case của story. Gate: —.
+Truy vết: FR-COST-PRC-011; FR/use case của story. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-009-03 Thu hồi quyền và URL hết hạn
@@ -429,11 +429,11 @@ Scenario: AC-COST-009-03 Thu hồi quyền và URL hết hạn
 
 <a id="us-cost-010"></a>
 
-## US-COST-010 — Cost món và bảng phân rã
+## US-COST-010: Cost món và bảng phân rã
 
-### AC-COST-010-01 — Tính chính xác theo đơn vị
+### AC-COST-010-01: Tính chính xác theo đơn vị
 
-Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-001, BR-CALC-002, BR-CALC-006. Gate: —.
+Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-001, BR-CALC-002, BR-CALC-006. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-010-01 Tính chính xác theo đơn vị
@@ -442,9 +442,9 @@ Scenario: AC-COST-010-01 Tính chính xác theo đơn vị
   Then cost 10800; dòng thịt 8400, trứng 2400; có NCC/ngày giá/đơn vị/tỷ trọng; picker cùng ngày khớp 10800
 ```
 
-### AC-COST-010-02 — Không trả tổng thiếu
+### AC-COST-010-02: Không trả tổng thiếu
 
-Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-002, BR-CALC-003, ERR-COST-422-03. Gate: —.
+Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-002, BR-CALC-003, ERR-COST-422-03. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-010-02 Không trả tổng thiếu
@@ -453,9 +453,9 @@ Scenario: AC-COST-010-02 Không trả tổng thiếu
   Then ERR-COST-422-03 liệt kê thịt, không liệt kê nước; không trả 2400 như cost toàn món
 ```
 
-### AC-COST-010-03 — Công thức theo ngày và quyền
+### AC-COST-010-03: Công thức theo ngày và quyền
 
-Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-001, BR-CAT-014. Gate: —.
+Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-001, BR-CAT-014. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-010-03 Công thức theo ngày và quyền
@@ -464,9 +464,9 @@ Scenario: AC-COST-010-03 Công thức theo ngày và quyền
   Then chọn R1 rồi R2 theo ngày; MENU PENDING giữ công thức gắn; picker của người thiếu quyền không có trường tiền
 ```
 
-### AC-COST-010-04 — Món không tồn tại
+### AC-COST-010-04: Món không tồn tại
 
-Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; ERR-MENU-404-01. Gate: —.
+Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; ERR-MENU-404-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-010-04 Món không tồn tại
@@ -475,7 +475,7 @@ Scenario: AC-COST-010-04 Món không tồn tại
   Then ERR-MENU-404-01; không trả kết quả số
 ```
 
-### AC-COST-010-05 — Hao hụt đúng một lần
+### AC-COST-010-05: Hao hụt đúng một lần
 
 Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-EST-002. Gate: E3-Q2.
 
@@ -486,7 +486,7 @@ Scenario: AC-COST-010-05 Hao hụt đúng một lần
   Then cost thịt10500; lượng mua0.88kg sau làm tròn lên từ0.875; thành tiền105600; không chia hao hụt lần hai
 ```
 
-### AC-COST-010-06 — Đối soát bộ kế toán
+### AC-COST-010-06: Đối soát bộ kế toán
 
 Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; NFR-COST-002. Gate: O-01; dữ liệu kế toán.
 
@@ -497,9 +497,9 @@ Scenario: AC-COST-010-06 Đối soát bộ kế toán
   Then sai lệch cost món<=1đ, cost%<=0.01 điểm phần trăm; lặp cùng đầu vào có cùng kết quả; lưu bảng actual/expected
 ```
 
-### AC-COST-010-07 — Decimal và không làm tròn trung gian
+### AC-COST-010-07: Decimal và không làm tròn trung gian
 
-Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; NFR-COST-008, BR-CALC-006. Gate: —.
+Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; NFR-COST-008, BR-CALC-006. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-010-07 Decimal và không làm tròn trung gian
@@ -508,7 +508,7 @@ Scenario: AC-COST-010-07 Decimal và không làm tròn trung gian
   Then tổng chính xác0.3; tổng ba dòng1.2 hiển thị1đ, không làm tròn từng dòng thành0; không dùng float cho tiền/định lượng
 ```
 
-### AC-COST-010-08 — Tổng cost0 không chia cho0
+### AC-COST-010-08: Tổng cost0 không chia cho0
 
 Truy vết: FR-COST-DISH-001, FR-COST-DISH-002, FR-COST-DISH-003, FR-COST-DISH-004; BR-CALC-002. Gate: FLOW-COST-Q04.
 
@@ -521,11 +521,11 @@ Scenario: AC-COST-010-08 Tổng cost0 không chia cho0
 
 <a id="us-cost-011"></a>
 
-## US-COST-011 — So sánh công thức
+## US-COST-011: So sánh công thức
 
-### AC-COST-011-01 — So sánh cùng ngày
+### AC-COST-011-01: So sánh cùng ngày
 
-Truy vết: FR-COST-DISH-005; FR/use case của story. Gate: —.
+Truy vết: FR-COST-DISH-005; FR/use case của story. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-011-01 So sánh cùng ngày
@@ -534,9 +534,9 @@ Scenario: AC-COST-011-01 So sánh cùng ngày
   Then chênh1000 và10%; không ghi giá hay tự duyệt công thức
 ```
 
-### AC-COST-011-02 — Một bản thiếu giá
+### AC-COST-011-02: Một bản thiếu giá
 
-Truy vết: FR-COST-DISH-005; ERR-COST-422-03. Gate: —.
+Truy vết: FR-COST-DISH-005; ERR-COST-422-03. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-011-02 Một bản thiếu giá
@@ -545,7 +545,7 @@ Scenario: AC-COST-011-02 Một bản thiếu giá
   Then ERR-COST-422-03; không suy diễn R2 bằng0 và không trả delta sai
 ```
 
-### AC-COST-011-03 — Cost gốc bằng0
+### AC-COST-011-03: Cost gốc bằng0
 
 Truy vết: FR-COST-DISH-005; FR/use case của story. Gate: FLOW-COST-Q04.
 
@@ -558,11 +558,11 @@ Scenario: AC-COST-011-03 Cost gốc bằng0
 
 <a id="us-cost-012"></a>
 
-## US-COST-012 — Lập bảng món đặc thù
+## US-COST-012: Lập bảng món đặc thù
 
-### AC-COST-012-01 — Chụp bản pending
+### AC-COST-012-01: Chụp bản pending
 
-Truy vết: FR-COST-DISH-006; BR-CALC-010. Gate: —.
+Truy vết: FR-COST-DISH-006; BR-CALC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-012-01 Chụp bản pending
@@ -571,9 +571,9 @@ Scenario: AC-COST-012-01 Chụp bản pending
   Then bảng PENDING giữ công thức, giá, cơ sở, ngày tính và người lập; thay giá sau đó không sửa nội dung chụp
 ```
 
-### AC-COST-012-02 — Sai loại món
+### AC-COST-012-02: Sai loại món
 
-Truy vết: FR-COST-DISH-006; ERR-COST-422-04. Gate: —.
+Truy vết: FR-COST-DISH-006; ERR-COST-422-04. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-012-02 Sai loại món
@@ -582,9 +582,9 @@ Scenario: AC-COST-012-02 Sai loại món
   Then ERR-COST-422-04; không tạo bảng
 ```
 
-### AC-COST-012-03 — Thiếu một giá
+### AC-COST-012-03: Thiếu một giá
 
-Truy vết: FR-COST-DISH-006; BR-CALC-003, ERR-COST-422-03. Gate: —.
+Truy vết: FR-COST-DISH-006; BR-CALC-003, ERR-COST-422-03. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-012-03 Thiếu một giá
@@ -595,11 +595,11 @@ Scenario: AC-COST-012-03 Thiếu một giá
 
 <a id="us-cost-013"></a>
 
-## US-COST-013 — Duyệt bảng món đặc thù
+## US-COST-013: Duyệt bảng món đặc thù
 
-### AC-COST-013-01 — Duyệt bởi người khác
+### AC-COST-013-01: Duyệt bởi người khác
 
-Truy vết: FR-COST-DISH-007; BR-SEC-008, BR-CALC-010. Gate: —.
+Truy vết: FR-COST-DISH-007; BR-SEC-008, BR-CALC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-013-01 Duyệt bởi người khác
@@ -608,9 +608,9 @@ Scenario: AC-COST-013-01 Duyệt bởi người khác
   Then APPROVED, có audit quyết định; dữ liệu chụp không bị tính lại
 ```
 
-### AC-COST-013-02 — Không tự duyệt hoặc thiếu lý do
+### AC-COST-013-02: Không tự duyệt hoặc thiếu lý do
 
-Truy vết: FR-COST-DISH-007; BR-SEC-008, ERR-SYS-403-01, ERR-SYS-422-01. Gate: —.
+Truy vết: FR-COST-DISH-007; BR-SEC-008, ERR-SYS-403-01, ERR-SYS-422-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-013-02 Không tự duyệt hoặc thiếu lý do
@@ -619,7 +619,7 @@ Scenario: AC-COST-013-02 Không tự duyệt hoặc thiếu lý do
   Then tự duyệt trả ERR-SYS-403-01; lý do9 trả ERR-SYS-422-01; lý do10 cho trả lại, giữ bản chụp
 ```
 
-### AC-COST-013-03 — Hiệu lực và cơ sở
+### AC-COST-013-03: Hiệu lực và cơ sở
 
 Truy vết: FR-COST-DISH-007; BR-CALC-007, BR-COST-007. Gate: E3-Q16.
 
@@ -630,7 +630,7 @@ Scenario: AC-COST-013-03 Hiệu lực và cơ sở
   Then ghi nhận kết quả theo bộ lọc được chốt ở E3-Q16 trước khi chạy; không tự coi bảng A dùng được ở B
 ```
 
-### AC-COST-013-04 — Hai quyết định cạnh tranh
+### AC-COST-013-04: Hai quyết định cạnh tranh
 
 Truy vết: FR-COST-DISH-007; ERR-SYS-409-02, ERR-COST-409-07. Gate: review API và concurrency token.
 
@@ -643,9 +643,9 @@ Scenario: AC-COST-013-04 Hai quyết định cạnh tranh
 
 <a id="us-cost-014"></a>
 
-## US-COST-014 — Gợi ý nhóm cost
+## US-COST-014: Gợi ý nhóm cost
 
-### AC-COST-014-01 — Gợi ý không tự ghi
+### AC-COST-014-01: Gợi ý không tự ghi
 
 Truy vết: FR-COST-DISH-008; FR/use case của story. Gate: E3-Q7.
 
@@ -656,7 +656,7 @@ Scenario: AC-COST-014-01 Gợi ý không tự ghi
   Then trả nhóm theo ngưỡng; nhóm đang lưu không đổi cho tới thao tác quyết định của người dùng
 ```
 
-### AC-COST-014-02 — Thiếu giá không phân nhóm
+### AC-COST-014-02: Thiếu giá không phân nhóm
 
 Truy vết: FR-COST-DISH-008; BR-CALC-003. Gate: E3-Q7.
 
@@ -667,7 +667,7 @@ Scenario: AC-COST-014-02 Thiếu giá không phân nhóm
   Then không đưa nhóm thấp do coi giá thiếu là0; trả chưa tính được
 ```
 
-### AC-COST-014-03 — Biên phân nhóm
+### AC-COST-014-03: Biên phân nhóm
 
 Truy vết: FR-COST-DISH-008; FR/use case của story. Gate: E3-Q7.
 
@@ -680,9 +680,9 @@ Scenario: AC-COST-014-03 Biên phân nhóm
 
 <a id="us-cost-015"></a>
 
-## US-COST-015 — Cost ngày trên thực đơn
+## US-COST-015: Cost ngày trên thực đơn
 
-### AC-COST-015-01 — Ngày đủ món
+### AC-COST-015-01: Ngày đủ món
 
 Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-005, BR-CALC-006, BR-COST-002, BR-COST-003. Gate: O-01; E2-Q1.
 
@@ -693,9 +693,9 @@ Scenario: AC-COST-015-01 Ngày đủ món
   Then cost18800; doanh thu chưa VAT=40000/1.08, cost50.76%, đạt; dư hiển thị459đ; có từng phần và cách tính
 ```
 
-### AC-COST-015-02 — VAT thiếu hoặc mẫu số0
+### AC-COST-015-02: VAT thiếu hoặc mẫu số0
 
-Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-005, ERR-COST-422-05. Gate: —.
+Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-005, ERR-COST-422-05. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-015-02 VAT thiếu hoặc mẫu số0
@@ -704,9 +704,9 @@ Scenario: AC-COST-015-02 VAT thiếu hoặc mẫu số0
   Then ERR-COST-422-05; không mặc định VAT0 hay trả cost%0
 ```
 
-### AC-COST-015-03 — Làm tròn rồi so ngưỡng
+### AC-COST-015-03: Làm tròn rồi so ngưỡng
 
-Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-006, BR-COST-001. Gate: —.
+Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-006, BR-COST-001. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-015-03 Làm tròn rồi so ngưỡng
@@ -715,7 +715,7 @@ Scenario: AC-COST-015-03 Làm tròn rồi so ngưỡng
   Then 52.004% làm tròn52.00 đạt;52.005% làm tròn52.01 vượt; trung gian không làm tròn
 ```
 
-### AC-COST-015-04 — Ba phương pháp món chính
+### AC-COST-015-04: Ba phương pháp món chính
 
 Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; BR-CALC-004. Gate: E3-Q1; E3-Q12.
 
@@ -726,7 +726,7 @@ Scenario: AC-COST-015-04 Ba phương pháp món chính
   Then phần chính lần lượt24000,20000,20000; không bỏ Healthy khỏi trung bình
 ```
 
-### AC-COST-015-05 — Ngày chưa đủ món và phản hồi cũ
+### AC-COST-015-05: Ngày chưa đủ món và phản hồi cũ
 
 Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; FR/use case của story. Gate: FLOW-COST-Q02.
 
@@ -737,7 +737,7 @@ Scenario: AC-COST-015-05 Ngày chưa đủ món và phản hồi cũ
   Then hiện chưa đủ món, không gắn nhãn đạt cho ngày hoàn chỉnh; không ghi đè kết quả revision2 bằng revision1
 ```
 
-### AC-COST-015-06 — Hiệu năng tính thực đơn
+### AC-COST-015-06: Hiệu năng tính thực đơn
 
 Truy vết: FR-COST-MEAL-001, FR-COST-MEAL-002, FR-COST-MEAL-003; NFR-COST-001. Gate: môi trường backend.
 
@@ -750,11 +750,11 @@ Scenario: AC-COST-015-06 Hiệu năng tính thực đơn
 
 <a id="us-cost-016"></a>
 
-## US-COST-016 — Khoản khoán
+## US-COST-016: Khoản khoán
 
-### AC-COST-016-01 — Ưu tiên riêng thay chung
+### AC-COST-016-01: Ưu tiên riêng thay chung
 
-Truy vết: FR-COST-MEAL-004; BR-CALC-008, BR-SEC-008. Gate: —.
+Truy vết: FR-COST-MEAL-004; BR-CALC-008, BR-SEC-008. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-016-01 Ưu tiên riêng thay chung
@@ -763,9 +763,9 @@ Scenario: AC-COST-016-01 Ưu tiên riêng thay chung
   Then ngày15 dùng1000; ngày16 dùng1500 thay vì2500; không áp PENDING
 ```
 
-### AC-COST-016-02 — Khoản sai không nhận
+### AC-COST-016-02: Khoản sai không nhận
 
-Truy vết: FR-COST-MEAL-004; BR-CALC-008, ERR-COST-422-06. Gate: —.
+Truy vết: FR-COST-MEAL-004; BR-CALC-008, ERR-COST-422-06. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-016-02 Khoản sai không nhận
@@ -774,9 +774,9 @@ Scenario: AC-COST-016-02 Khoản sai không nhận
   Then mỗi đầu vào trả ERR-COST-422-06; không tạo đề nghị
 ```
 
-### AC-COST-016-03 — Số0 và người đề nghị
+### AC-COST-016-03: Số0 và người đề nghị
 
-Truy vết: FR-COST-MEAL-004; BR-CALC-008, BR-SEC-008, ERR-SYS-403-01. Gate: —.
+Truy vết: FR-COST-MEAL-004; BR-CALC-008, BR-SEC-008, ERR-SYS-403-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-016-03 Số0 và người đề nghị
@@ -785,7 +785,7 @@ Scenario: AC-COST-016-03 Số0 và người đề nghị
   Then đề nghị0 hợp lệ, tự duyệt ERR-SYS-403-01; giá0 của khoản không bị nhầm với giá nguyên liệu
 ```
 
-### AC-COST-016-04 — Khoản trùng khi duyệt
+### AC-COST-016-04: Khoản trùng khi duyệt
 
 Truy vết: FR-COST-MEAL-004; ERR-COST-409-08. Gate: review API.
 
@@ -798,11 +798,11 @@ Scenario: AC-COST-016-04 Khoản trùng khi duyệt
 
 <a id="us-cost-017"></a>
 
-## US-COST-017 — Cổng gửi duyệt
+## US-COST-017: Cổng gửi duyệt
 
-### AC-COST-017-01 — Mọi cơ sở đều đạt
+### AC-COST-017-01: Mọi cơ sở đều đạt
 
-Truy vết: FR-COST-MEAL-005; BR-CALC-009. Gate: —.
+Truy vết: FR-COST-MEAL-005; BR-CALC-009. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-017-01 Mọi cơ sở đều đạt
@@ -811,9 +811,9 @@ Scenario: AC-COST-017-01 Mọi cơ sở đều đạt
   Then Cost cho qua; MENU tiếp tục các điều kiện khác, không tự coi toàn bộ MENU đã được duyệt
 ```
 
-### AC-COST-017-02 — Một cơ sở vượt
+### AC-COST-017-02: Một cơ sở vượt
 
-Truy vết: FR-COST-MEAL-005; BR-CALC-009, BR-COST-001, ERR-COST-422-07. Gate: —.
+Truy vết: FR-COST-MEAL-005; BR-CALC-009, BR-COST-001, ERR-COST-422-07. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-017-02 Một cơ sở vượt
@@ -822,9 +822,9 @@ Scenario: AC-COST-017-02 Một cơ sở vượt
   Then ERR-COST-422-07; không PENDING; server vẫn kiểm đủ cơ sở và trả chi tiết theo quyền
 ```
 
-### AC-COST-017-03 — Cảnh báo không bỏ qua dữ liệu thiếu
+### AC-COST-017-03: Cảnh báo không bỏ qua dữ liệu thiếu
 
-Truy vết: FR-COST-MEAL-005; BR-CALC-003, BR-CALC-007, ERR-COST-422-03, ERR-COST-422-04, ERR-COST-422-05. Gate: —.
+Truy vết: FR-COST-MEAL-005; BR-CALC-003, BR-CALC-007, ERR-COST-422-03, ERR-COST-422-04, ERR-COST-422-05. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-017-03 Cảnh báo không bỏ qua dữ liệu thiếu
@@ -835,9 +835,9 @@ Scenario: AC-COST-017-03 Cảnh báo không bỏ qua dữ liệu thiếu
 
 <a id="us-cost-018"></a>
 
-## US-COST-018 — Snapshot lúc duyệt
+## US-COST-018: Snapshot lúc duyệt
 
-### AC-COST-018-01 — Chụp từng ngày/cơ sở
+### AC-COST-018-01: Chụp từng ngày/cơ sở
 
 Truy vết: FR-COST-MEAL-006; BR-CALC-010. Gate: FLOW-COST-Q02.
 
@@ -848,7 +848,7 @@ Scenario: AC-COST-018-01 Chụp từng ngày/cơ sở
   Then có12 snapshot cho vòng duyệt, chứa giá/nguồn/ngày/params; ghi APPROVED và snapshot cùng giao dịch đề xuất
 ```
 
-### AC-COST-018-02 — Giá đổi trong lúc chờ
+### AC-COST-018-02: Giá đổi trong lúc chờ
 
 Truy vết: FR-COST-MEAL-006; BR-CALC-010. Gate: FLOW-COST-Q06.
 
@@ -859,7 +859,7 @@ Scenario: AC-COST-018-02 Giá đổi trong lúc chờ
   Then chưa xác định oracle số liệu chụp đến khi Q06 chốt chính sách kiểm lại; ca phải BLOCKED, không mặc nhiên chụp kết quả cũ hoặc mới
 ```
 
-### AC-COST-018-03 — Bất biến và rollback
+### AC-COST-018-03: Bất biến và rollback
 
 Truy vết: FR-COST-MEAL-006; BR-CALC-010. Gate: FLOW-COST-Q02.
 
@@ -872,11 +872,11 @@ Scenario: AC-COST-018-03 Bất biến và rollback
 
 <a id="us-cost-019"></a>
 
-## US-COST-019 — Chế độ kiểm Cost
+## US-COST-019: Chế độ kiểm Cost
 
-### AC-COST-019-01 — Duyệt thay đổi SYS
+### AC-COST-019-01: Duyệt thay đổi SYS
 
-Truy vết: FR-COST-MEAL-008; BR-SYS-002, BR-SEC-008. Gate: —.
+Truy vết: FR-COST-MEAL-008; BR-SYS-002, BR-SEC-008. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-019-01 Duyệt thay đổi SYS
@@ -885,9 +885,9 @@ Scenario: AC-COST-019-01 Duyệt thay đổi SYS
   Then trước duyệt vẫn CANH_BAO; sau duyệt CHAN áp dụng từ ngày hiệu lực
 ```
 
-### AC-COST-019-02 — Tự duyệt bị cấm
+### AC-COST-019-02: Tự duyệt bị cấm
 
-Truy vết: FR-COST-MEAL-008; BR-SEC-008, ERR-SYS-403-01. Gate: —.
+Truy vết: FR-COST-MEAL-008; BR-SEC-008, ERR-SYS-403-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-019-02 Tự duyệt bị cấm
@@ -896,9 +896,9 @@ Scenario: AC-COST-019-02 Tự duyệt bị cấm
   Then ERR-SYS-403-01; tham số không thay
 ```
 
-### AC-COST-019-03 — Hiệu lực tương lai
+### AC-COST-019-03: Hiệu lực tương lai
 
-Truy vết: FR-COST-MEAL-008; BR-SYS-002, BR-CALC-010. Gate: —.
+Truy vết: FR-COST-MEAL-008; BR-SYS-002, BR-CALC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-019-03 Hiệu lực tương lai
@@ -909,9 +909,9 @@ Scenario: AC-COST-019-03 Hiệu lực tương lai
 
 <a id="us-cost-020"></a>
 
-## US-COST-020 — Bộ kiểm và ẩn con số
+## US-COST-020: Bộ kiểm và ẩn con số
 
-### AC-COST-020-01 — Đăng ký đúng quy tắc
+### AC-COST-020-01: Đăng ký đúng quy tắc
 
 Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; BR-COST-001, BR-COST-005, BR-COST-006, BR-COST-007. Gate: DL-01; E3-Q7.
 
@@ -922,9 +922,9 @@ Scenario: AC-COST-020-01 Đăng ký đúng quy tắc
   Then có kết quả BR-COST-001/005/006/007 theo loại cấu hình; không đăng ký002/003/004 thành lỗi kiểm độc lập
 ```
 
-### AC-COST-020-02 — Không lộ tiền trong lỗi
+### AC-COST-020-02: Không lộ tiền trong lỗi
 
-Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; ERR-COST-422-07. Gate: —.
+Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; ERR-COST-422-07. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-020-02 Không lộ tiền trong lỗi
@@ -933,9 +933,9 @@ Scenario: AC-COST-020-02 Không lộ tiền trong lỗi
   Then chỉ nhãn đạt/không đạt; ERR-COST-422-07 được rút gọn, không cost%, tiền, breakdown trong details
 ```
 
-### AC-COST-020-03 — Quyền thay đổi và agent nội bộ
+### AC-COST-020-03: Quyền thay đổi và agent nội bộ
 
-Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; BR-SEC-009. Gate: —.
+Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; BR-SEC-009. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-020-03 Quyền thay đổi và agent nội bộ
@@ -944,7 +944,7 @@ Scenario: AC-COST-020-03 Quyền thay đổi và agent nội bộ
   Then không trả dữ liệu B; quyền hiệu lực là giao quyền dịch vụ/người; yêu cầu kế tiếp không replay dữ liệu đã mất quyền
 ```
 
-### AC-COST-020-04 — Hồi quy quy tắc đã thuộc MENU
+### AC-COST-020-04: Hồi quy quy tắc đã thuộc MENU
 
 Truy vết: FR-COST-RUL-001, FR-COST-RUL-002; BR-COST-008, BR-COST-009, BR-COST-010, BR-COST-012. Gate: E2-Q5.
 
@@ -957,11 +957,11 @@ Scenario: AC-COST-020-04 Hồi quy quy tắc đã thuộc MENU
 
 <a id="us-cost-021"></a>
 
-## US-COST-021 — Ngân sách cho agent phía khách
+## US-COST-021: Ngân sách cho agent phía khách
 
-### AC-COST-021-01 — Chỉ một trạng thái
+### AC-COST-021-01: Chỉ một trạng thái
 
-Truy vết: FR-COST-RUL-003; BR-CALC-011, BR-SEC-010. Gate: —.
+Truy vết: FR-COST-RUL-003; BR-CALC-011, BR-SEC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-021-01 Chỉ một trạng thái
@@ -970,9 +970,9 @@ Scenario: AC-COST-021-01 Chỉ một trạng thái
   Then chỉ result DAT; không ngày vượt, ngưỡng, cost, giá, snapshot trong body hoặc log
 ```
 
-### AC-COST-021-02 — Thực đơn lỗi
+### AC-COST-021-02: Thực đơn lỗi
 
-Truy vết: FR-COST-RUL-003; ERR-MENU-422-14. Gate: —.
+Truy vết: FR-COST-RUL-003; ERR-MENU-422-14. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-021-02 Thực đơn lỗi
@@ -981,9 +981,9 @@ Scenario: AC-COST-021-02 Thực đơn lỗi
   Then ERR-MENU-422-14; không trả dữ liệu tiền trong lỗi
 ```
 
-### AC-COST-021-03 — Quota lời gọi31
+### AC-COST-021-03: Quota lời gọi31
 
-Truy vết: FR-COST-RUL-003; ERR-COST-429-01. Gate: —.
+Truy vết: FR-COST-RUL-003; ERR-COST-429-01. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-021-03 Quota lời gọi31
@@ -992,7 +992,7 @@ Scenario: AC-COST-021-03 Quota lời gọi31
   Then lần30 xử lý; lần31 ERR-COST-429-01, không có con số; key mới không reset quota
 ```
 
-### AC-COST-021-04 — Thiếu giá và trạng thái hỗn hợp
+### AC-COST-021-04: Thiếu giá và trạng thái hỗn hợp
 
 Truy vết: FR-COST-RUL-003; BR-CALC-011. Gate: FLOW-COST-Q09.
 
@@ -1003,7 +1003,7 @@ Scenario: AC-COST-021-04 Thiếu giá và trạng thái hỗn hợp
   Then fixture1 KHONG_DAT; fixture2 KHONG_XAC_DINH; fixture3 BLOCKED chờ ưu tiên Q09, không tự chốt
 ```
 
-### AC-COST-021-05 — Không rò dữ liệu toàn API
+### AC-COST-021-05: Không rò dữ liệu toàn API
 
 Truy vết: FR-COST-RUL-003; NFR-COST-005. Gate: E3-Q11.
 
@@ -1014,7 +1014,7 @@ Scenario: AC-COST-021-05 Không rò dữ liệu toàn API
   Then không con số hoặc trường giá/cost ngoài quyền trong mọi đường phản hồi; ghi endpoint x actor x outcome
 ```
 
-### AC-COST-021-06 — Quyền DB agent khách
+### AC-COST-021-06: Quyền DB agent khách
 
 Truy vết: FR-COST-RUL-003; NFR-COST-006, BR-SEC-010. Gate: môi trường backend.
 
@@ -1025,7 +1025,7 @@ Scenario: AC-COST-021-06 Quyền DB agent khách
   Then mọi SELECT trực tiếp bị từ chối; không chỉ kiểm4 bảng cũ
 ```
 
-### AC-COST-021-07 — Log budget không chứa số
+### AC-COST-021-07: Log budget không chứa số
 
 Truy vết: FR-COST-RUL-003; NFR-COST-007, BR-SEC-010. Gate: môi trường backend.
 
@@ -1038,11 +1038,11 @@ Scenario: AC-COST-021-07 Log budget không chứa số
 
 <a id="us-cost-022"></a>
 
-## US-COST-022 — Dự toán ngày
+## US-COST-022: Dự toán ngày
 
-### AC-COST-022-01 — Gộp nguyên liệu và đủ cột
+### AC-COST-022-01: Gộp nguyên liệu và đủ cột
 
-Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-001, BR-EST-002, BR-EST-003. Gate: —.
+Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-001, BR-EST-002, BR-EST-003. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-022-01 Gộp nguyên liệu và đủ cột
@@ -1051,9 +1051,9 @@ Scenario: AC-COST-022-01 Gộp nguyên liệu và đủ cột
   Then thịt0.70kg=84000, trứng30quả=24000, khoán15000; tổng123000, doanh thu400000,cost30.75%; đủ phân rã món/giá/NCC/ngày/công thức
 ```
 
-### AC-COST-022-02 — Số suất sai
+### AC-COST-022-02: Số suất sai
 
-Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-001, ERR-COST-422-08. Gate: —.
+Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-001, ERR-COST-422-08. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-022-02 Số suất sai
@@ -1062,9 +1062,9 @@ Scenario: AC-COST-022-02 Số suất sai
   Then ERR-COST-422-08; không lưu bản dự toán
 ```
 
-### AC-COST-022-03 — Làm tròn lên lượng mua
+### AC-COST-022-03: Làm tròn lên lượng mua
 
-Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-002. Gate: —.
+Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-002. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-022-03 Làm tròn lên lượng mua
@@ -1073,7 +1073,7 @@ Scenario: AC-COST-022-03 Làm tròn lên lượng mua
   Then lượng1.01kg, thành tiền101000; không làm tròn gần nhất thành1.00kg
 ```
 
-### AC-COST-022-04 — K lớn hơn1
+### AC-COST-022-04: K lớn hơn1
 
 Truy vết: FR-COST-EST-001, FR-COST-EST-002, FR-COST-EST-004; BR-EST-001. Gate: E3-Q15.
 
@@ -1086,9 +1086,9 @@ Scenario: AC-COST-022-04 K lớn hơn1
 
 <a id="us-cost-023"></a>
 
-## US-COST-023 — Dự toán tuần
+## US-COST-023: Dự toán tuần
 
-### AC-COST-023-01 — Tuần đủ dữ liệu
+### AC-COST-023-01: Tuần đủ dữ liệu
 
 Truy vết: FR-COST-EST-003; BR-EST-003. Gate: FLOW-COST-Q07.
 
@@ -1099,7 +1099,7 @@ Scenario: AC-COST-023-01 Tuần đủ dữ liệu
   Then có bản ngày; bảng tuần I1 tổng3kg, tiền320000; truy được giá/ngày từng phần, không nhân3kg với một giá duy nhất
 ```
 
-### AC-COST-023-02 — Một ngày thiếu giá
+### AC-COST-023-02: Một ngày thiếu giá
 
 Truy vết: FR-COST-EST-003; BR-CALC-003, ERR-COST-422-03. Gate: FLOW-COST-Q07.
 
@@ -1110,7 +1110,7 @@ Scenario: AC-COST-023-02 Một ngày thiếu giá
   Then báo lỗi ngày2; atomicity và số bản được phép ghi phải theo Q07; chưa chạy với oracle tự đặt
 ```
 
-### AC-COST-023-03 — Retry tuần và phiên bản
+### AC-COST-023-03: Retry tuần và phiên bản
 
 Truy vết: FR-COST-EST-003; BR-EST-004. Gate: FLOW-COST-Q02; FLOW-COST-Q07.
 
@@ -1123,11 +1123,11 @@ Scenario: AC-COST-023-03 Retry tuần và phiên bản
 
 <a id="us-cost-024"></a>
 
-## US-COST-024 — Lịch sử và bản chỉ lượng
+## US-COST-024: Lịch sử và bản chỉ lượng
 
-### AC-COST-024-01 — Lập lại không sửa cũ
+### AC-COST-024-01: Lập lại không sửa cũ
 
-Truy vết: FR-COST-EST-005, FR-COST-EST-006; BR-EST-004, BR-CALC-010. Gate: —.
+Truy vết: FR-COST-EST-005, FR-COST-EST-006; BR-EST-004, BR-CALC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-024-01 Lập lại không sửa cũ
@@ -1136,7 +1136,7 @@ Scenario: AC-COST-024-01 Lập lại không sửa cũ
   Then v2 có người/thời điểm mới, v1 giữ giá100000; không sửa số suất hoặc dữ liệu chụp v1
 ```
 
-### AC-COST-024-02 — Bếp không xem cơ sở khác
+### AC-COST-024-02: Bếp không xem cơ sở khác
 
 Truy vết: FR-COST-EST-005, FR-COST-EST-006; ERR-SYS-404-01. Gate: E3-Q11.
 
@@ -1147,7 +1147,7 @@ Scenario: AC-COST-024-02 Bếp không xem cơ sở khác
   Then ERR-SYS-404-01; không trả dòng của B
 ```
 
-### AC-COST-024-03 — Không có cột tiền ẩn
+### AC-COST-024-03: Không có cột tiền ẩn
 
 Truy vết: FR-COST-EST-005, FR-COST-EST-006; NFR-COST-005. Gate: E3-Q11.
 
@@ -1160,11 +1160,11 @@ Scenario: AC-COST-024-03 Không có cột tiền ẩn
 
 <a id="us-cost-025"></a>
 
-## US-COST-025 — Xuất dự toán
+## US-COST-025: Xuất dự toán
 
-### AC-COST-025-01 — Bản đủ giá
+### AC-COST-025-01: Bản đủ giá
 
-Truy vết: FR-COST-EST-007; BR-CALC-010. Gate: —.
+Truy vết: FR-COST-EST-007; BR-CALC-010. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-025-01 Bản đủ giá
@@ -1173,9 +1173,9 @@ Scenario: AC-COST-025-01 Bản đủ giá
   Then hai tệp đúng v1, đủ dòng/tổng/đơn vị và metadata; số liệu khớp snapshot không tính lại theo giá mới
 ```
 
-### AC-COST-025-02 — Quyền bị thu hồi trước tải
+### AC-COST-025-02: Quyền bị thu hồi trước tải
 
-Truy vết: FR-COST-EST-007; FR/use case của story. Gate: —.
+Truy vết: FR-COST-EST-007; FR/use case của story. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-025-02 Quyền bị thu hồi trước tải
@@ -1184,7 +1184,7 @@ Scenario: AC-COST-025-02 Quyền bị thu hồi trước tải
   Then không tải được dữ liệu ngoài quyền; phản hồi lỗi không chứa tiền
 ```
 
-### AC-COST-025-03 — Bản chỉ lượng không giấu tiền trong tệp
+### AC-COST-025-03: Bản chỉ lượng không giấu tiền trong tệp
 
 Truy vết: FR-COST-EST-007; FR/use case của story. Gate: E3-Q11.
 
@@ -1197,11 +1197,11 @@ Scenario: AC-COST-025-03 Bản chỉ lượng không giấu tiền trong tệp
 
 <a id="us-cost-026"></a>
 
-## US-COST-026 — Tính lại và mở cảnh báo
+## US-COST-026: Tính lại và mở cảnh báo
 
-### AC-COST-026-01 — Tính lại đúng tập
+### AC-COST-026-01: Tính lại đúng tập
 
-Truy vết: FR-COST-ALR-001, FR-COST-ALR-002; BR-COST-011, BR-CALC-010, NFR-COST-004. Gate: —.
+Truy vết: FR-COST-ALR-001, FR-COST-ALR-002; BR-COST-011, BR-CALC-010, NFR-COST-004. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-026-01 Tính lại đúng tập
@@ -1210,9 +1210,9 @@ Scenario: AC-COST-026-01 Tính lại đúng tập
   Then hoàn tất<=5phút; snapshot giữ nguyên; kết quả mới tách riêng; ngày chuyển đạt sang vượt có cảnh báo cho DD/GD
 ```
 
-### AC-COST-026-02 — Không tính lại ngày đã qua
+### AC-COST-026-02: Không tính lại ngày đã qua
 
-Truy vết: FR-COST-ALR-001, FR-COST-ALR-002; BR-COST-011. Gate: —.
+Truy vết: FR-COST-ALR-001, FR-COST-ALR-002; BR-COST-011. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-026-02 Không tính lại ngày đã qua
@@ -1221,7 +1221,7 @@ Scenario: AC-COST-026-02 Không tính lại ngày đã qua
   Then không đưa hai bản đó vào tập tính lại FR-COST-ALR-001; không sửa snapshot của chúng
 ```
 
-### AC-COST-026-03 — Không trùng cảnh báo
+### AC-COST-026-03: Không trùng cảnh báo
 
 Truy vết: FR-COST-ALR-001, FR-COST-ALR-002; BR-COST-011. Gate: FLOW-COST-Q08.
 
@@ -1234,11 +1234,11 @@ Scenario: AC-COST-026-03 Không trùng cảnh báo
 
 <a id="us-cost-027"></a>
 
-## US-COST-027 — Xử lý cảnh báo
+## US-COST-027: Xử lý cảnh báo
 
-### AC-COST-027-01 — Đóng tay có audit
+### AC-COST-027-01: Đóng tay có audit
 
-Truy vết: FR-COST-ALR-003; BR-AUD-001. Gate: —.
+Truy vết: FR-COST-ALR-003; BR-AUD-001. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-027-01 Đóng tay có audit
@@ -1247,9 +1247,9 @@ Scenario: AC-COST-027-01 Đóng tay có audit
   Then CLOSED; audit người/thời điểm/lý do; không biến kết quả vượt thành đạt hoặc sửa snapshot
 ```
 
-### AC-COST-027-02 — Lý do ngắn hoặc thiếu quyền
+### AC-COST-027-02: Lý do ngắn hoặc thiếu quyền
 
-Truy vết: FR-COST-ALR-003; BR-AUD-001, ERR-SYS-422-01, ERR-AUTH-403-02. Gate: —.
+Truy vết: FR-COST-ALR-003; BR-AUD-001, ERR-SYS-422-01, ERR-AUTH-403-02. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-027-02 Lý do ngắn hoặc thiếu quyền
@@ -1258,9 +1258,9 @@ Scenario: AC-COST-027-02 Lý do ngắn hoặc thiếu quyền
   Then thiếu quyền ERR-AUTH-403-02; lý do ngắn ERR-SYS-422-01; giữ OPEN
 ```
 
-### AC-COST-027-03 — Đóng theo sự kiện nghiệp vụ
+### AC-COST-027-03: Đóng theo sự kiện nghiệp vụ
 
-Truy vết: FR-COST-ALR-003; BR-AUD-001. Gate: —.
+Truy vết: FR-COST-ALR-003; BR-AUD-001. Gate: không có.
 
 ```gherkin
 Scenario: AC-COST-027-03 Đóng theo sự kiện nghiệp vụ
@@ -1271,9 +1271,9 @@ Scenario: AC-COST-027-03 Đóng theo sự kiện nghiệp vụ
 
 <a id="us-cost-028"></a>
 
-## US-COST-028 — Mô phỏng giá
+## US-COST-028: Mô phỏng giá
 
-### AC-COST-028-01 — Mô phỏng không ghi
+### AC-COST-028-01: Mô phỏng không ghi
 
 Truy vết: FR-COST-ALR-005; FR/use case của story. Gate: FLOW-COST-Q10.
 
@@ -1284,7 +1284,7 @@ Scenario: AC-COST-028-01 Mô phỏng không ghi
   Then có danh sách ngày vượt trong phạm vi; các bảng nghiệp vụ không đổi; nhãn mô phỏng
 ```
 
-### AC-COST-028-02 — Giá giả định sai
+### AC-COST-028-02: Giá giả định sai
 
 Truy vết: FR-COST-ALR-005; BR-PRC-002, ERR-COST-422-01. Gate: FLOW-COST-Q10.
 
@@ -1295,7 +1295,7 @@ Scenario: AC-COST-028-02 Giá giả định sai
   Then ERR-COST-422-01, không chạy ghi nghiệp vụ
 ```
 
-### AC-COST-028-03 — Phạm vi và thiếu giá khác
+### AC-COST-028-03: Phạm vi và thiếu giá khác
 
 Truy vết: FR-COST-ALR-005; BR-CALC-003. Gate: FLOW-COST-Q10.
 

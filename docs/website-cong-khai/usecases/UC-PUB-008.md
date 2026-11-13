@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-008-MD
-title: UC-PUB-008 — Theo dõi điểm nối lead
+title: "UC-PUB-008: Theo dõi điểm nối lead"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-008 — Theo dõi điểm nối lead
+# UC-PUB-008: Theo dõi điểm nối lead
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH khi được cấ
 
 Trigger: CSKH rà một yêu cầu tư vấn để biết nơi nhận đã xác nhận bàn giao hay còn chờ.
 
-Tiền điều kiện — nghiệp vụ: Có leadRef của bản ghi được tiếp nhận; người tra cứu có phiên và quyền đọc lead.
-Tiền điều kiện — gate còn mở: E8-Q06/07/11 chưa chốt nơi nhận, thông báo và vận hành; không tự cấp quyền cho vai trò CSKH hoặc mở CRM E10.
+Tiền điều kiện (nghiệp vụ): Có leadRef của bản ghi được tiếp nhận; người tra cứu có phiên và quyền đọc lead.
+Tiền điều kiện (gate còn mở): E8-Q06/07/11 chưa chốt nơi nhận, thông báo và vận hành; không tự cấp quyền cho vai trò CSKH hoặc mở CRM E10.
 
 Luồng chính:
 1. CSKH chọn leadRef tại UI-PUB-08 để tra tình trạng bàn giao.

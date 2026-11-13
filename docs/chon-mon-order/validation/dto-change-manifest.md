@@ -1,8 +1,8 @@
-# Manifest E6 gap/DTO — 11/11/2026
+# Manifest E6 gap/DTO ngày 11/11/2026
 
 So hash trước/sau với dto-baseline-sha256.json; không Git. Bao gồm preview artifact, không phải số tính năng mới.
 
-## File mới — 8
+## File mới: 8
 
 - `docs/chon-mon-order/api/dto-presence-review.md`
 - `docs/chon-mon-order/review/contract-gap-register.md`
@@ -13,7 +13,7 @@ So hash trước/sau với dto-baseline-sha256.json; không Git. Bao gồm previ
 - `docs/chon-mon-order/validation/dto-check-result.json`
 - `docs/chon-mon-order/validation/dto-report.md`
 
-## File thay đổi — 8
+## File thay đổi: 8
 
 - `docs/chon-mon-order/api/api-spec.md`
 - `docs/chon-mon-order/api/route-validation-review.md`

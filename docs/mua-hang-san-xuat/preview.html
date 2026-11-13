@@ -1,4 +1,4 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA mua-hang-san-xuat</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>mua-hang-san-xuat</h1><p>35 tài liệu · 7 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/purchase-workbench.html">purchase-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Hợp đồng API đề xuất E11</a><a href="#doc-api-data-mapping-md">Mapping API — dữ liệu — màn E11</a><a href="#doc-epic-spec-md">E11 — Mua hàng và sản xuất</a><a href="#doc-review-dependencies-md">Phụ thuộc E11 và ranh giới chưa chốt</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E11</a><a href="#doc-review-questions-md">Câu hỏi mở E11</a><a href="#doc-srs-data-dictionary-md">Từ điển dữ liệu và delta đề xuất E11</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E11</a><a href="#doc-srs-spec-md">SRS E11 — Mua hàng và sản xuất</a><a href="#doc-srs-states-md">Trạng thái đề xuất E11</a><a href="#doc-test-checklist-md">Checklist kiểm thử E11</a><a href="#doc-test-r11-acceptance-md">Khung nghiệm thu R11</a><a href="#doc-test-system-cases-md">Ca hệ thống E11</a><a href="#doc-test-test-cases-md">Ca kiểm thử chức năng E11</a><a href="#doc-test-traceability-md">RTM E11 — FR đến màn hình</a><a href="#doc-ui-screens-md">Danh mục màn và quyền E11</a><a href="#doc-ui-user-flow-md">Luồng người dùng E11</a><a href="#doc-usecases-index-md">Chỉ mục use case E11</a><a href="#doc-usecases-UC-PUR-001-md">UC-PUR-001 — Lập nhu cầu nguyên liệu</a><a href="#doc-usecases-UC-PUR-002-md">UC-PUR-002 — Lập đơn mua nháp</a><a href="#doc-usecases-UC-PUR-003-md">UC-PUR-003 — Kiểm cổng phát hành đơn mua</a><a href="#doc-usecases-UC-PUR-004-md">UC-PUR-004 — Kiểm phạm vi quản lý lô</a><a href="#doc-usecases-UC-PUR-005-md">UC-PUR-005 — Ghi phiếu nhận hàng nháp</a><a href="#doc-usecases-UC-PUR-006-md">UC-PUR-006 — Gắn ảnh chứng từ vào phiếu</a><a href="#doc-usecases-UC-PUR-007-md">UC-PUR-007 — Xem công nợ nhà cung cấp</a><a href="#doc-usecases-UC-PUR-008-md">UC-PUR-008 — Đối chiếu dự toán và thực mua</a><a href="#doc-usecases-UC-PUR-009-md">UC-PUR-009 — Giải thích nguồn chênh lệch</a><a href="#doc-usecases-UC-PUR-010-md">UC-PUR-010 — Lập phân ca nháp</a><a href="#doc-usecases-UC-PUR-011-md">UC-PUR-011 — Ghi kiểm tra trước giao</a><a href="#doc-usecases-UC-PUR-012-md">UC-PUR-012 — Ghi sổ mẫu lưu theo bữa</a><a href="#doc-usecases-UC-PUR-013-md">UC-PUR-013 — Lập ứng viên món thay thế</a><a href="#doc-usecases-UC-PUR-014-md">UC-PUR-014 — Kiểm lại ứng viên thay món</a><a href="#doc-usecases-UC-PUR-015-md">UC-PUR-015 — Kiểm cổng chuyển duyệt MENU</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria E11</a><a href="#doc-userstories-backlog-md">Backlog E11</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Hợp đồng API đề xuất E11</h1>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA mua-hang-san-xuat</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>mua-hang-san-xuat</h1><p>35 tài liệu · 7 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/purchase-workbench.html">purchase-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Hợp đồng API đề xuất E11</a><a href="#doc-api-data-mapping-md">Mapping API (dữ liệu) màn E11</a><a href="#doc-epic-spec-md">E11: Mua hàng và sản xuất</a><a href="#doc-review-dependencies-md">Phụ thuộc E11 và ranh giới chưa chốt</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E11</a><a href="#doc-review-questions-md">Câu hỏi mở E11</a><a href="#doc-srs-data-dictionary-md">Từ điển dữ liệu và delta đề xuất E11</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E11</a><a href="#doc-srs-spec-md">SRS E11: Mua hàng và sản xuất</a><a href="#doc-srs-states-md">Trạng thái đề xuất E11</a><a href="#doc-test-checklist-md">Checklist kiểm thử E11</a><a href="#doc-test-r11-acceptance-md">Khung nghiệm thu R11</a><a href="#doc-test-system-cases-md">Ca hệ thống E11</a><a href="#doc-test-test-cases-md">Ca kiểm thử chức năng E11</a><a href="#doc-test-traceability-md">RTM E11: FR đến màn hình</a><a href="#doc-ui-screens-md">Danh mục màn và quyền E11</a><a href="#doc-ui-user-flow-md">Luồng người dùng E11</a><a href="#doc-usecases-index-md">Chỉ mục use case E11</a><a href="#doc-usecases-UC-PUR-001-md">UC-PUR-001: Lập nhu cầu nguyên liệu</a><a href="#doc-usecases-UC-PUR-002-md">UC-PUR-002: Lập đơn mua nháp</a><a href="#doc-usecases-UC-PUR-003-md">UC-PUR-003: Kiểm cổng phát hành đơn mua</a><a href="#doc-usecases-UC-PUR-004-md">UC-PUR-004: Kiểm phạm vi quản lý lô</a><a href="#doc-usecases-UC-PUR-005-md">UC-PUR-005: Ghi phiếu nhận hàng nháp</a><a href="#doc-usecases-UC-PUR-006-md">UC-PUR-006: Gắn ảnh chứng từ vào phiếu</a><a href="#doc-usecases-UC-PUR-007-md">UC-PUR-007: Xem công nợ nhà cung cấp</a><a href="#doc-usecases-UC-PUR-008-md">UC-PUR-008: Đối chiếu dự toán và thực mua</a><a href="#doc-usecases-UC-PUR-009-md">UC-PUR-009: Giải thích nguồn chênh lệch</a><a href="#doc-usecases-UC-PUR-010-md">UC-PUR-010: Lập phân ca nháp</a><a href="#doc-usecases-UC-PUR-011-md">UC-PUR-011: Ghi kiểm tra trước giao</a><a href="#doc-usecases-UC-PUR-012-md">UC-PUR-012: Ghi sổ mẫu lưu theo bữa</a><a href="#doc-usecases-UC-PUR-013-md">UC-PUR-013: Lập ứng viên món thay thế</a><a href="#doc-usecases-UC-PUR-014-md">UC-PUR-014: Kiểm lại ứng viên thay món</a><a href="#doc-usecases-UC-PUR-015-md">UC-PUR-015: Kiểm cổng chuyển duyệt MENU</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria E11</a><a href="#doc-userstories-backlog-md">Backlog E11</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Hợp đồng API đề xuất E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -131,166 +131,166 @@
 <td align="left">UI-PUR-09</td>
 </tr>
 </tbody></table></div>
-<h2>API-PUR-001 — Lập nhu cầu nguyên liệu</h2>
+<h2>API-PUR-001: Lập nhu cầu nguyên liệu</h2>
 <ul>
 <li>Request logic: planRef, planRevision, estimateRef, serviceDate, kitchenId. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Đối chiếu đúng bản kế hoạch và dự toán; cộng theo nguyên liệu và đơn vị quy đổi đã có căn cứ; hiển thị nguồn thiếu, không tự trừ tồn hoặc áp hao hụt lần hai.</li>
 <li>Response allowlist: Nhu cầu gộp theo ngày/cơ sở, tách lượng mua ròng chưa xác định; chỉ trường thuộc demand, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-11 — Chặn tổng hợp khác đơn vị; không coi hệ số là 1. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-11, chặn tổng hợp khác đơn vị; không coi hệ số là 1. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Kế toán (PER-07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E6 CG06, ORD-Q10/14; E11-Q01. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Nguồn có 100 suất × 70 g, hệ số 1000 g/kg đã xác nhận → Nhu cầu gộp 7000 g = 7 kg; lượng mua ròng chưa xác định.</li>
 <li>Truy vết: FR-PUR-DEM-001; UC-PUR-001; US-PUR-001; UI-PUR-01.</li>
 </ul>
-<h2>API-PUR-002 — Lập đơn mua nháp</h2>
+<h2>API-PUR-002: Lập đơn mua nháp</h2>
 <ul>
 <li>Request logic: demandRef, supplierId, lines, reason. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Người lập chọn NCC từ danh mục E3, không có tự chọn; nhập lượng/đơn vị và PriceInput có nguồn; tổng tiền chỉ khi giá đã xác định.</li>
 <li>Response allowlist: Đơn DRAFT, nguồn nhu cầu và giá được giữ; chỉ trường thuộc purchaseOrder, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-12 — Từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-12, từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Kế toán (PER-07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q01/02/13/14. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: NCC synthetic do người lập chọn, lượng 2 kg; giá cuối 108000 đ/kg → Nháp có tiền hàng 216000 đ khi căn cứ giá đủ; chưa phát hành.</li>
 <li>Truy vết: FR-PUR-POD-001; UC-PUR-002; US-PUR-002; UI-PUR-02.</li>
 </ul>
-<h2>API-PUR-003 — Kiểm cổng phát hành đơn mua</h2>
+<h2>API-PUR-003: Kiểm cổng phát hành đơn mua</h2>
 <ul>
 <li>Request logic: purchaseOrderRef, version. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Đọc tình trạng nguồn, quyết định duyệt và policy; thiếu E11-Q02 thì trả BLOCKED. Không mô tả người duyệt hay thuật toán hạn mức.</li>
 <li>Response allowlist: Danh sách điều kiện thiếu, không phát hành; chỉ trường thuộc purchaseOrder, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-13 — Không công nhận trạng thái do client tự khai. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-13, không công nhận trạng thái do client tự khai. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Kế toán (PER-07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q02; O-06. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Đơn nháp chưa có chính sách duyệt → Trả BLOCKED kèm E11-Q02; đơn giữ DRAFT.</li>
 <li>Truy vết: FR-PUR-POG-001; UC-PUR-003; US-PUR-003; UI-PUR-02.</li>
 </ul>
-<h2>API-PUR-004 — Kiểm phạm vi quản lý lô</h2>
+<h2>API-PUR-004: Kiểm phạm vi quản lý lô</h2>
 <ul>
 <li>Request logic: ingredientId, storageType, receiptRef. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Đọc phân loại E2; chỉ FROZEN hoặc DRY thuộc phạm vi lô; quy tắc mã/hạn/xuất còn chờ.</li>
 <li>Response allowlist: Kết quả thuộc/không thuộc phạm vi; chưa tạo lô thật; chỉ trường thuộc lotScope, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-14 — Không tạo lô cho hàng tươi. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-14, không tạo lô cho hàng tươi. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Quản lý cơ sở (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q03. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Nguyên liệu thuộc FROZEN hoặc DRY → Hiển thị thuộc phạm vi lô; chi tiết lô còn chờ.</li>
 <li>Truy vết: FR-PUR-LOT-001; UC-PUR-004; US-PUR-004; UI-PUR-03.</li>
 </ul>
-<h2>API-PUR-005 — Ghi phiếu nhận hàng nháp</h2>
+<h2>API-PUR-005: Ghi phiếu nhận hàng nháp</h2>
 <ul>
 <li>Request logic: purchaseOrderRef, lines.receivedQty, lines.acceptedQty, receivedAt, reason. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Giữ lượng đặt, thực nhận và chấp nhận riêng theo dòng; ghi chứng cứ chênh; không tự hoàn tất đơn hay tăng công nợ chính thức.</li>
 <li>Response allowlist: Phiếu DRAFT có phiên bản và chênh lệch hiển thị; chỉ trường thuộc goodsReceipt, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-15 — Chặn dữ liệu mâu thuẫn, không ghi phiếu. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-15, chặn dữ liệu mâu thuẫn, không ghi phiếu. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Quản lý cơ sở (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q04/13. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Đặt 10 kg, nhận 8 kg; người nhận khai chấp nhận 7 kg → Hiện riêng 10/8/7 kg; 1 kg chưa chấp nhận, 2 kg chưa nhận; chưa tự trả hàng.</li>
 <li>Truy vết: FR-PUR-RCV-001; UC-PUR-005; US-PUR-005; UI-PUR-03.</li>
 </ul>
-<h2>API-PUR-006 — Gắn ảnh chứng từ vào phiếu</h2>
+<h2>API-PUR-006: Gắn ảnh chứng từ vào phiếu</h2>
 <ul>
 <li>Request logic: receiptRef, fileRef, version. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Kiểm quyền tệp E1 và cùng phạm vi phiếu; giữ nguồn ảnh và người gắn; mở ảnh không phải xác nhận giá hoặc nhận hàng.</li>
 <li>Response allowlist: Liên kết ảnh nội bộ; trạng thái chứng từ riêng; chỉ trường thuộc receiptEvidence, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-16 — Không lộ nội dung/URL tệp, không gắn chéo. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-16, không lộ nội dung/URL tệp, không gắn chéo. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Quản lý cơ sở (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q05/13; E1-Q01. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Ảnh synthetic thuộc phiếu/cơ sở và MIME hợp lệ theo E1 → Gắn được tham chiếu ảnh; không chuyển phiếu sang đã nhận chính thức.</li>
 <li>Truy vết: FR-PUR-DOC-001; UC-PUR-006; US-PUR-006; UI-PUR-04.</li>
 </ul>
-<h2>API-PUR-007 — Xem công nợ nhà cung cấp</h2>
+<h2>API-PUR-007: Xem công nợ nhà cung cấp</h2>
 <ul>
 <li>Request logic: supplierId, kitchenId, fromDate, toDate. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Đọc số dư và nguồn được xác nhận; thiếu đầu kỳ/ghi nhận/thanh toán thì trả chưa xác định, không biến phiếu nhận thành đã trả.</li>
 <li>Response allowlist: Bảng nghĩa vụ, thanh toán, điều chỉnh riêng và nguồn thiếu; chỉ trường thuộc supplierBalance, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-17 — Không báo tổng công nợ hoàn chỉnh. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-17, không báo tổng công nợ hoàn chỉnh. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Kế toán (PER-07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q06/04. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Có 216000 đ nghĩa vụ và 100000 đ thanh toán có căn cứ, đầu kỳ 0 đã xác nhận → Dư 116000 đ theo fixture đã đủ căn cứ; không giảm bởi CK khách.</li>
 <li>Truy vết: FR-PUR-APV-001; UC-PUR-007; US-PUR-007; UI-PUR-05.</li>
 </ul>
-<h2>API-PUR-008 — Đối chiếu dự toán và thực mua</h2>
+<h2>API-PUR-008: Đối chiếu dự toán và thực mua</h2>
 <ul>
 <li>Request logic: estimateRef, purchaseAllocationRefs, date, kitchenId, measurementBasisRef. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Giữ tiền dự toán và thực mua riêng; chỉ so tỷ lệ khi cùng scope, đủ nguồn và có định nghĩa BO-02 được duyệt; thiếu thì không trả đạt.</li>
 <li>Response allowlist: Hai số tiền, hai tỷ lệ, chênh điểm phần trăm hoặc null có lý do; chỉ trường thuộc comparison, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-18 — Không ghép với dự toán để kết luận đạt. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-18, không ghép với dự toán để kết luận đạt. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Kế toán (PER-07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Fixture minh họa có tỷ lệ cùng mẫu số đã được xác nhận: 50 % và 53 % → Chênh hiển thị 3 điểm phần trăm; không gọi tăng tương đối 6 % là tiêu chí R11.</li>
 <li>Truy vết: FR-COST-BUY-001; UC-PUR-008; US-PUR-008; UI-PUR-06.</li>
 </ul>
-<h2>API-PUR-009 — Giải thích nguồn chênh lệch</h2>
+<h2>API-PUR-009: Giải thích nguồn chênh lệch</h2>
 <ul>
 <li>Request logic: comparisonRef, ingredientId. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Truy về dòng dự toán, dòng nhận/mua và giá gồm VAT; hiển thị lượng/giá/đơn vị và nguồn. Không tự phân rã tác động giá/lượng nếu chưa chốt phương pháp.</li>
 <li>Response allowlist: Chi tiết đối chiếu có provenance, giới hạn và thiếu nguồn; chỉ trường thuộc comparisonLine, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-403-11 — Không trả tiền hoặc cost trong body/lỗi/log hiển thị. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-403-11, không trả tiền hoặc cost trong body/lỗi/log hiển thị. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Giám đốc/Kế toán (PER-08/07) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q07/08/14. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Hai dòng cùng nguyên liệu và đơn vị có nguồn được phép đọc → Hiện lượng và giá hai phía, liên kết chứng từ; không ghi đè dự toán.</li>
 <li>Truy vết: FR-COST-BEX-001; UC-PUR-009; US-PUR-009; UI-PUR-06.</li>
 </ul>
-<h2>API-PUR-010 — Lập phân ca nháp</h2>
+<h2>API-PUR-010: Lập phân ca nháp</h2>
 <ul>
 <li>Request logic: kitchenId, serviceDate, shiftRef, assignments, planRef. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Ghi phân công dự kiến gắn đúng nguồn; không xác nhận đã bắt đầu sản xuất E6, không tự chốt đủ người hoặc giờ ca.</li>
 <li>Response allowlist: Phân ca DRAFT và các điều kiện còn thiếu; chỉ trường thuộc productionShift, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-20 — Từ chối gắn vào ca. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-20, từ chối gắn vào ca. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Bếp trưởng (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q09; E6 CG06. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Ca synthetic, phân công công việc cho mã nhân sự giả thuộc scope → Giữ bản nháp; trạng thái bắt đầu sản xuất E6 không đổi.</li>
 <li>Truy vết: FR-PLAN-SHF-001; UC-PUR-010; US-PUR-010; UI-PUR-07.</li>
 </ul>
-<h2>API-PUR-011 — Ghi kiểm tra trước giao</h2>
+<h2>API-PUR-011: Ghi kiểm tra trước giao</h2>
 <ul>
 <li>Request logic: shiftRef, checklistRef, results, reason. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Ghi kết quả theo mục đã được duyệt; thiếu checklist hoặc còn mục chưa kiểm thì chưa đủ căn cứ giao. QC không ghi số khách nhận hoặc doanh thu.</li>
 <li>Response allowlist: Phiếu QC nháp và cổng chưa sẵn sàng; chỉ trường thuộc qualityCheck, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-21 — Không kết luận đủ dựa trên tập mục thiếu. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-21, không kết luận đủ dựa trên tập mục thiếu. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Bếp trưởng (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q10; E7-Q02; E6 CG06. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Checklist mẫu có mục kiểm hộp chưa kiểm → Hiện chưa đủ căn cứ giao; không tự chuyển E7 sang giao thành công.</li>
 <li>Truy vết: FR-PLAN-QCG-001; UC-PUR-011; US-PUR-011; UI-PUR-08.</li>
 </ul>
-<h2>API-PUR-012 — Ghi sổ mẫu lưu theo bữa</h2>
+<h2>API-PUR-012: Ghi sổ mẫu lưu theo bữa</h2>
 <ul>
 <li>Request logic: mealRef, kitchenId, sampleCode, recordedAt, recordedBy, evidenceRef. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Ghi mẫu và liên kết bữa; phân biệt đã có bản ghi với mẫu hợp lệ theo policy; không tự đặt hạn lưu hay hủy.</li>
 <li>Response allowlist: Sổ mẫu nháp, danh sách bữa thiếu mẫu; chỉ trường thuộc retainedSample, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-22 — Chặn bản ghi không truy được nguồn. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-22, chặn bản ghi không truy được nguồn. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Quản lý cơ sở (PER-06) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q11; E6 CG06. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Tập bữa synthetic đã xác nhận có 10 bữa, 9 bữa có bản ghi mẫu → Độ phủ bản ghi 90 %, liệt kê 1 bữa thiếu; chưa đạt mục tiêu 100 % R11.</li>
 <li>Truy vết: FR-PLAN-SMP-001; UC-PUR-012; US-PUR-012; UI-PUR-08.</li>
 </ul>
-<h2>API-PUR-013 — Lập ứng viên món thay thế</h2>
+<h2>API-PUR-013: Lập ứng viên món thay thế</h2>
 <ul>
 <li>Request logic: menuRef, menuVersion, originalDishId, replacementDishId, reason. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Người dùng chọn món cùng vai trò từ danh mục được phép; ghi thiếu hàng và nguồn; tạo ứng viên DRAFT, không thay thực đơn công bố.</li>
 <li>Response allowlist: Ứng viên nháp có món cũ/mới và vai trò; chỉ trường thuộc substitution, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-23 — Chặn khác vai trò, không tạo thay thế hợp lệ. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-23, chặn khác vai trò, không tạo thay thế hợp lệ. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Dinh dưỡng viên (PER-05) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q12/15; O-02. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Đổi một món MAIN sang món MAIN đang được phép dùng → Tạo ứng viên DRAFT; thực đơn công bố không đổi.</li>
 <li>Truy vết: FR-MENU-SUB-001; UC-PUR-013; US-PUR-013; UI-PUR-09.</li>
 </ul>
-<h2>API-PUR-014 — Kiểm lại ứng viên thay món</h2>
+<h2>API-PUR-014: Kiểm lại ứng viên thay món</h2>
 <ul>
 <li>Request logic: candidateRef, candidateVersion, menuSourceRef. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Mỗi lần thay đều yêu cầu kiểm lại dị ứng, quy tắc E2 và cost E3 trên cùng phiên bản; chỉ hiển thị kết quả có provenance; không dùng lại kết quả món cũ.</li>
 <li>Response allowlist: Bộ kết quả hoặc trạng thái BLOCKED kèm nguồn thiếu; chỉ trường thuộc substitutionCheck, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-24 — BLOCKED; không trả đạt dù quy tắc khác đạt. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-24, BLOCKED; không trả đạt dù quy tắc khác đạt. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Dinh dưỡng viên (PER-05) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: DL-01; E11-Q15; O-01/O-02; CK/DATA-COST. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Ứng viên có đủ nhãn dị ứng, rule và giá trong fixture đã duyệt → Có đủ ba kết quả đúng candidateVersion; vẫn chưa được công bố.</li>
 <li>Truy vết: FR-MENU-SCK-001; UC-PUR-014; US-PUR-014; UI-PUR-09.</li>
 </ul>
-<h2>API-PUR-015 — Kiểm cổng chuyển duyệt MENU</h2>
+<h2>API-PUR-015: Kiểm cổng chuyển duyệt MENU</h2>
 <ul>
 <li>Request logic: candidateRef, candidateVersion, checkRefs. Kiểu/nullability theo <a href="#doc-srs-data-dictionary-md">từ điển</a>; wire shape chưa cố định ở phần thiếu nguồn.</li>
 <li>Xử lý: Kiểm đủ kết quả đúng nguồn và cổng MENU hiện hành. CHAN chặn vượt cost; CANH_BAO giữ cảnh báo và vẫn qua MENU; thiếu đầu vào luôn chặn. Không ghi duyệt/công bố hoặc cập nhật E6.</li>
 <li>Response allowlist: Readiness và lý do chặn; việc chuyển thật chờ adapter nguồn; chỉ trường thuộc substitution, không trả nguyên upstream body.</li>
-<li>Lỗi nghiệp vụ: ERR-PUR-422-25 — Không được chuyển như đã đạt; giữ ứng viên. Lỗi chung và version như mục trên.</li>
+<li>Lỗi nghiệp vụ: ERR-PUR-422-25, không được chuyển như đã đạt; giữ ứng viên. Lỗi chung và version như mục trên.</li>
 <li>Quyền: Dinh dưỡng viên (PER-05) chỉ là vai trò đề xuất; mỗi request kiểm action + kitchen scope.</li>
 <li>Gate: E11-Q12/13; DL-01; E6 CG05/06/07. Phần chưa rõ giữ BLOCKED, không cung cấp thuật toán nguồn.</li>
 <li>Ví dụ synthetic: Kết quả dị ứng, rule, cost đúng phiên bản; MENU vẫn chưa duyệt → Hiện cần qua cổng MENU; không tự công bố hoặc sửa kế hoạch.</li>
@@ -327,12 +327,12 @@
 </tr>
 </tbody></table></div>
 <p>PriceInput giữ ingredientId, supplierId, kitchenId, quotedUnitPrice, priceBasis, căn cứ VAT và pricingEvidence theo E3. Không nhận priceVnd như số client được tin cậy. Chưa rõ phần lẻ thì BLOCKED normalization, không tự làm tròn. <a href="api/endpoint-catalog.json">Catalog máy đọc</a>.</p>
-<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<h2>Quy ước tài liệu liên epic (XC-04)</h2>
 <p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
 <blockquote>
-<p>Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+<p>Chờ E11-Q13: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
 </blockquote>
-</section><section id="doc-api-data-mapping-md" hidden><p><a href="api/data-mapping.md">Mở Markdown nguồn</a> · api/data-mapping.md</p><h1>Mapping API — dữ liệu — màn E11</h1>
+</section><section id="doc-api-data-mapping-md" hidden><p><a href="api/data-mapping.md">Mở Markdown nguồn</a> · api/data-mapping.md</p><h1>Mapping API, dữ liệu và màn E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -538,7 +538,7 @@
 <td align="left">Cùng vai trò E2; kiểm lại ba nhóm đúng version</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E11 — Mua hàng và sản xuất</h1>
+</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E11: Mua hàng và sản xuất</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -670,7 +670,7 @@
 </tr>
 </tbody></table></div>
 <blockquote>
-<p>Chờ E7-Q07 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-11</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E7-Q07: XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-11</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <p>Nguồn đọc: <a href="../thuc-don-dinh-luong/srs/spec.md">E2</a>, <a href="../cost/srs/spec.md">E3</a>, <a href="../cost/accounting/business-rules.md">kế toán</a>, <a href="../cost/api/api-spec.md">PriceInput</a>, <a href="../chon-mon-order/srs/spec.md">E6</a>, <a href="../chon-mon-order/review/contract-gap-register.md">CG</a>, <a href="../giao-nhan-doanh-thu/srs/spec.md">E7</a>, <a href="../nen-tang/srs/spec.md">E1</a>, <a href="../nen-tang/srs/erd.md">ERD</a>, <a href="../nen-tang/srs/schema.dbml">DBML</a>.</p>
 <p>Giữ chờ toàn bộ E8-Q01–12; E9-Q01–14; E10-Q01–15; O-01–O-06; CK-Q01–10; DATA-COST-Q01–06; AIO-Q01–06; NUTR-Q01–04; DL-01; E1-Q01–05. Các câu E8–E10 không là lý do mở producer mới trong E11. Không đặc tả FEAT-082/083, không mở E12/E13.</p>
@@ -844,10 +844,10 @@
 </tr>
 </tbody></table></div>
 <blockquote>
-<p>Chờ E11-Q02, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-07</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E11-Q02, O-06: XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-07</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <blockquote>
-<p>Chờ E11-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E11-Q08: XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 </section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Từ điển dữ liệu và delta đề xuất E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
@@ -916,7 +916,7 @@
 <td align="left">Date</td>
 <td align="left">ISO date</td>
 <td align="left">Tùy thực thể</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không mặc định hôm nay</td>
 <td align="left">Tách ngày nhận và ngày phục vụ</td>
 </tr>
@@ -926,7 +926,7 @@
 <td align="left">Integer</td>
 <td align="left">Chờ contract</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Token kiểm khi ghi</td>
 <td align="left">Không tráo revision nguồn</td>
 </tr>
@@ -946,7 +946,7 @@
 <td align="left">Decimal string</td>
 <td align="left">Chờ độ chính xác</td>
 <td align="left">Có khi chưa biết</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Kèm unit; không âm; null không là 0</td>
 <td align="left">Không cộng kg với suất</td>
 </tr>
@@ -956,7 +956,7 @@
 <td align="left">Decimal string</td>
 <td align="left">Theo PriceInput E3</td>
 <td align="left">Có khi thiếu</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không dùng trực tiếp tính cost</td>
 <td align="left">Giá báo</td>
 </tr>
@@ -966,7 +966,7 @@
 <td align="left">Enum</td>
 <td align="left">Theo E3</td>
 <td align="left">Có khi thiếu</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">INCLUSIVE / EXCLUSIVE / FINAL_CONFIRMED</td>
 <td align="left">Không dùng UNKNOWN như đã chuẩn hóa</td>
 </tr>
@@ -976,7 +976,7 @@
 <td align="left">Decimal string</td>
 <td align="left">Theo E3</td>
 <td align="left">Theo basis</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">EXCLUSIVE cần đúng một căn cứ hợp lệ</td>
 <td align="left">Không tự mặc định 0</td>
 </tr>
@@ -986,7 +986,7 @@
 <td align="left">Integer money</td>
 <td align="left">Theo E3</td>
 <td align="left">Có khi chưa xác định</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Server chuẩn hóa gồm VAT; phần lẻ chờ</td>
 <td align="left">Không nhận số tin cậy từ client</td>
 </tr>
@@ -996,7 +996,7 @@
 <td align="left">Text/reference</td>
 <td align="left">Theo E3</td>
 <td align="left">Không khi xác định giá</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Giữ chứng từ/xác nhận</td>
 <td align="left">Không suy từ cờ hóa đơn</td>
 </tr>
@@ -1016,7 +1016,7 @@
 <td align="left">Enum</td>
 <td align="left">Theo states</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">DRAFT khi tạo nháp</td>
 <td align="left">Không suy được duyệt</td>
 </tr>
@@ -1036,13 +1036,13 @@
 <td align="left">Text</td>
 <td align="left">Theo E1 / chờ Q13</td>
 <td align="left">Không khi sửa số</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không ghi đè lịch sử</td>
 <td align="left">Căn cứ thay đổi</td>
 </tr>
 </tbody></table></div>
 <blockquote>
-<p>Chờ E11-Q14 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-09</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E11-Q14: XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-09</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <h2>Thực thể đề xuất và trường riêng</h2>
 <div class="table-wrap"><table>
@@ -1120,10 +1120,10 @@
 </tr>
 </tbody></table></div>
 <p>Mọi độ dài/precision chưa có nguồn đều chờ E11-Q13, không tự lấy từ mẫu. Giữ nguyên invoiceRequested riêng và khoản chiết khấu theo đơn ở E3/E6; không sao chép hồ sơ sức khỏe. Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu cầu hóa đơn độc lập, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn, không giảm phải trả nhà cung cấp và không tự khấu trừ số khách phải trả. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-02/R11 dùng ≤ 3 điểm phần trăm, không phải sai số tính toán. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chặn O-03, không thu dữ liệu sức khỏe.</p>
-<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<h2>Quy ước tài liệu liên epic (XC-04)</h2>
 <p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
 <blockquote>
-<p>Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+<p>Chờ E11-Q13: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
 </blockquote>
 </section><section id="doc-srs-error-matrix-md" hidden><p><a href="srs/error-matrix.md">Mở Markdown nguồn</a> · srs/error-matrix.md</p><h1>Ma trận lỗi E11</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
@@ -1292,7 +1292,7 @@
 </tr>
 </tbody></table></div>
 <p>Lỗi dùng chung kế thừa E1: 401 hết phiên, 403 thiếu quyền, 404 ngoài scope/không tồn tại; đề xuất ERR-PUR-409-11 khi version đổi, ERR-PUR-503-11 khi nguồn không sẵn sàng, ERR-PUR-422-99 khi policy chưa duyệt. Không trả stack/URL ảnh công khai. Chi tiết envelope và đồng thời chờ E11-Q13/E1-Q01.</p>
-</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E11 — Mua hàng và sản xuất</h1>
+</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E11: Mua hàng và sản xuất</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -1330,7 +1330,7 @@
 </thead>
 <tbody><tr>
 <td align="left">FR-PUR-DEM-001 / FEAT-074</td>
-<td align="left">Lập nhu cầu nguyên liệu — Kế toán (PER-07)</td>
+<td align="left">Lập nhu cầu nguyên liệu: Kế toán (PER-07)</td>
 <td align="left">P1</td>
 <td align="left">planRef, planRevision, estimateRef, serviceDate, kitchenId</td>
 <td align="left">Đối chiếu đúng bản kế hoạch và dự toán; cộng theo nguyên liệu và đơn vị quy đổi đã có căn cứ; hiển thị nguồn thiếu, không tự trừ tồn hoặc áp hao hụt lần hai.</td>
@@ -1340,7 +1340,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-POD-001 / FEAT-074</td>
-<td align="left">Lập đơn mua nháp — Kế toán (PER-07)</td>
+<td align="left">Lập đơn mua nháp: Kế toán (PER-07)</td>
 <td align="left">P1</td>
 <td align="left">demandRef, supplierId, lines, reason</td>
 <td align="left">Người lập chọn NCC từ danh mục E3, không có tự chọn; nhập lượng/đơn vị và PriceInput có nguồn; tổng tiền chỉ khi giá đã xác định.</td>
@@ -1350,7 +1350,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-POG-001 / FEAT-074</td>
-<td align="left">Kiểm cổng phát hành đơn mua — Kế toán (PER-07)</td>
+<td align="left">Kiểm cổng phát hành đơn mua: Kế toán (PER-07)</td>
 <td align="left">P1</td>
 <td align="left">purchaseOrderRef, version</td>
 <td align="left">Đọc tình trạng nguồn, quyết định duyệt và policy; thiếu E11-Q02 thì trả BLOCKED. Không mô tả người duyệt hay thuật toán hạn mức.</td>
@@ -1360,7 +1360,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-LOT-001 / FEAT-074</td>
-<td align="left">Kiểm phạm vi quản lý lô — Quản lý cơ sở (PER-06)</td>
+<td align="left">Kiểm phạm vi quản lý lô: Quản lý cơ sở (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">ingredientId, storageType, receiptRef</td>
 <td align="left">Đọc phân loại E2; chỉ FROZEN hoặc DRY thuộc phạm vi lô; quy tắc mã/hạn/xuất còn chờ.</td>
@@ -1370,7 +1370,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-RCV-001 / FEAT-075</td>
-<td align="left">Ghi phiếu nhận hàng nháp — Quản lý cơ sở (PER-06)</td>
+<td align="left">Ghi phiếu nhận hàng nháp: Quản lý cơ sở (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">purchaseOrderRef, lines.receivedQty, lines.acceptedQty, receivedAt, reason</td>
 <td align="left">Giữ lượng đặt, thực nhận và chấp nhận riêng theo dòng; ghi chứng cứ chênh; không tự hoàn tất đơn hay tăng công nợ chính thức.</td>
@@ -1380,7 +1380,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-DOC-001 / FEAT-075</td>
-<td align="left">Gắn ảnh chứng từ vào phiếu — Quản lý cơ sở (PER-06)</td>
+<td align="left">Gắn ảnh chứng từ vào phiếu: Quản lý cơ sở (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">receiptRef, fileRef, version</td>
 <td align="left">Kiểm quyền tệp E1 và cùng phạm vi phiếu; giữ nguồn ảnh và người gắn; mở ảnh không phải xác nhận giá hoặc nhận hàng.</td>
@@ -1390,7 +1390,7 @@
 </tr>
 <tr>
 <td align="left">FR-PUR-APV-001 / FEAT-075</td>
-<td align="left">Xem công nợ nhà cung cấp — Kế toán (PER-07)</td>
+<td align="left">Xem công nợ nhà cung cấp: Kế toán (PER-07)</td>
 <td align="left">P1</td>
 <td align="left">supplierId, kitchenId, fromDate, toDate</td>
 <td align="left">Đọc số dư và nguồn được xác nhận; thiếu đầu kỳ/ghi nhận/thanh toán thì trả chưa xác định, không biến phiếu nhận thành đã trả.</td>
@@ -1400,7 +1400,7 @@
 </tr>
 <tr>
 <td align="left">FR-COST-BUY-001 / FEAT-076</td>
-<td align="left">Đối chiếu dự toán và thực mua — Kế toán (PER-07)</td>
+<td align="left">Đối chiếu dự toán và thực mua: Kế toán (PER-07)</td>
 <td align="left">P1</td>
 <td align="left">estimateRef, purchaseAllocationRefs, date, kitchenId, measurementBasisRef</td>
 <td align="left">Giữ tiền dự toán và thực mua riêng; chỉ so tỷ lệ khi cùng scope, đủ nguồn và có định nghĩa BO-02 được duyệt; thiếu thì không trả đạt.</td>
@@ -1410,7 +1410,7 @@
 </tr>
 <tr>
 <td align="left">FR-COST-BEX-001 / FEAT-076</td>
-<td align="left">Giải thích nguồn chênh lệch — Giám đốc/Kế toán (PER-08/07)</td>
+<td align="left">Giải thích nguồn chênh lệch: Giám đốc/Kế toán (PER-08/07)</td>
 <td align="left">P1</td>
 <td align="left">comparisonRef, ingredientId</td>
 <td align="left">Truy về dòng dự toán, dòng nhận/mua và giá gồm VAT; hiển thị lượng/giá/đơn vị và nguồn. Không tự phân rã tác động giá/lượng nếu chưa chốt phương pháp.</td>
@@ -1420,7 +1420,7 @@
 </tr>
 <tr>
 <td align="left">FR-PLAN-SHF-001 / FEAT-077</td>
-<td align="left">Lập phân ca nháp — Bếp trưởng (PER-06)</td>
+<td align="left">Lập phân ca nháp: Bếp trưởng (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">kitchenId, serviceDate, shiftRef, assignments, planRef</td>
 <td align="left">Ghi phân công dự kiến gắn đúng nguồn; không xác nhận đã bắt đầu sản xuất E6, không tự chốt đủ người hoặc giờ ca.</td>
@@ -1430,7 +1430,7 @@
 </tr>
 <tr>
 <td align="left">FR-PLAN-QCG-001 / FEAT-077</td>
-<td align="left">Ghi kiểm tra trước giao — Bếp trưởng (PER-06)</td>
+<td align="left">Ghi kiểm tra trước giao: Bếp trưởng (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">shiftRef, checklistRef, results, reason</td>
 <td align="left">Ghi kết quả theo mục đã được duyệt; thiếu checklist hoặc còn mục chưa kiểm thì chưa đủ căn cứ giao. QC không ghi số khách nhận hoặc doanh thu.</td>
@@ -1440,7 +1440,7 @@
 </tr>
 <tr>
 <td align="left">FR-PLAN-SMP-001 / FEAT-077</td>
-<td align="left">Ghi sổ mẫu lưu theo bữa — Quản lý cơ sở (PER-06)</td>
+<td align="left">Ghi sổ mẫu lưu theo bữa: Quản lý cơ sở (PER-06)</td>
 <td align="left">P1</td>
 <td align="left">mealRef, kitchenId, sampleCode, recordedAt, recordedBy, evidenceRef</td>
 <td align="left">Ghi mẫu và liên kết bữa; phân biệt đã có bản ghi với mẫu hợp lệ theo policy; không tự đặt hạn lưu hay hủy.</td>
@@ -1450,7 +1450,7 @@
 </tr>
 <tr>
 <td align="left">FR-MENU-SUB-001 / FEAT-078</td>
-<td align="left">Lập ứng viên món thay thế — Dinh dưỡng viên (PER-05)</td>
+<td align="left">Lập ứng viên món thay thế: Dinh dưỡng viên (PER-05)</td>
 <td align="left">P1</td>
 <td align="left">menuRef, menuVersion, originalDishId, replacementDishId, reason</td>
 <td align="left">Người dùng chọn món cùng vai trò từ danh mục được phép; ghi thiếu hàng và nguồn; tạo ứng viên DRAFT, không thay thực đơn công bố.</td>
@@ -1460,7 +1460,7 @@
 </tr>
 <tr>
 <td align="left">FR-MENU-SCK-001 / FEAT-078</td>
-<td align="left">Kiểm lại ứng viên thay món — Dinh dưỡng viên (PER-05)</td>
+<td align="left">Kiểm lại ứng viên thay món: Dinh dưỡng viên (PER-05)</td>
 <td align="left">P1</td>
 <td align="left">candidateRef, candidateVersion, menuSourceRef</td>
 <td align="left">Mỗi lần thay đều yêu cầu kiểm lại dị ứng, quy tắc E2 và cost E3 trên cùng phiên bản; chỉ hiển thị kết quả có provenance; không dùng lại kết quả món cũ.</td>
@@ -1470,7 +1470,7 @@
 </tr>
 <tr>
 <td align="left">FR-MENU-SGT-001 / FEAT-078</td>
-<td align="left">Kiểm cổng chuyển duyệt MENU — Dinh dưỡng viên (PER-05)</td>
+<td align="left">Kiểm cổng chuyển duyệt MENU: Dinh dưỡng viên (PER-05)</td>
 <td align="left">P1</td>
 <td align="left">candidateRef, candidateVersion, checkRefs</td>
 <td align="left">Kiểm đủ kết quả đúng nguồn và cổng MENU hiện hành. CHAN chặn vượt cost; CANH_BAO giữ cảnh báo và vẫn qua MENU; thiếu đầu vào luôn chặn. Không ghi duyệt/công bố hoặc cập nhật E6.</td>
@@ -2788,7 +2788,7 @@
 <td align="left"></td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-test-traceability-md" hidden><p><a href="test/traceability.md">Mở Markdown nguồn</a> · test/traceability.md</p><h1>RTM E11 — FR đến màn hình</h1>
+</section><section id="doc-test-traceability-md" hidden><p><a href="test/traceability.md">Mở Markdown nguồn</a> · test/traceability.md</p><h1>RTM E11: FR đến màn hình</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3226,7 +3226,7 @@
 <td align="left">UI-PUR-09</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-usecases-UC-PUR-001-md" hidden><p><a href="usecases/UC-PUR-001.md">Mở Markdown nguồn</a> · usecases/UC-PUR-001.md</p><h1>UC-PUR-001 — Lập nhu cầu nguyên liệu</h1>
+</section><section id="doc-usecases-UC-PUR-001-md" hidden><p><a href="usecases/UC-PUR-001.md">Mở Markdown nguồn</a> · usecases/UC-PUR-001.md</p><h1>UC-PUR-001: Lập nhu cầu nguyên liệu</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3265,15 +3265,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Thiếu hệ số g/kg: Chặn tổng hợp khác đơn vị; không coi hệ số là 1 (ERR-PUR-422-11).</li>
-<li>Bước 4 — Kế hoạch đổi revision khi đang xem: Đánh dấu nguồn cũ; không dùng số cũ làm nhu cầu hiện hành.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E6 CG06, ORD-Q10/14; E11-Q01: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Thiếu hệ số g/kg: Chặn tổng hợp khác đơn vị; không coi hệ số là 1 (ERR-PUR-422-11).</li>
+<li>Bước 4: Kế hoạch đổi revision khi đang xem: Đánh dấu nguồn cũ; không dùng số cũ làm nhu cầu hiện hành.</li>
+<li>Bước 4: thiếu policy/nguồn tại E6 CG06, ORD-Q10/14; E11-Q01: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-DEM-001 / FEAT-074 / BR-PUR-001 / US-PUR-001 / AC-PUR-001-1, AC-PUR-001-2, AC-PUR-001-3 / API-PUR-001. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-002-md" hidden><p><a href="usecases/UC-PUR-002.md">Mở Markdown nguồn</a> · usecases/UC-PUR-002.md</p><h1>UC-PUR-002 — Lập đơn mua nháp</h1>
+</section><section id="doc-usecases-UC-PUR-002-md" hidden><p><a href="usecases/UC-PUR-002.md">Mở Markdown nguồn</a> · usecases/UC-PUR-002.md</p><h1>UC-PUR-002: Lập đơn mua nháp</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3312,15 +3312,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Số lượng âm hoặc thiếu NCC: Từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập (ERR-PUR-422-12).</li>
-<li>Bước 4 — Giá UNKNOWN hoặc chưa rõ VAT phải trả: Giữ chưa xác định, không coi giá hoặc VAT bằng 0.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q01/02/13/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Số lượng âm hoặc thiếu NCC: Từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập (ERR-PUR-422-12).</li>
+<li>Bước 4: Giá UNKNOWN hoặc chưa rõ VAT phải trả: Giữ chưa xác định, không coi giá hoặc VAT bằng 0.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q01/02/13/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-POD-001 / FEAT-074 / BR-PUR-002 / US-PUR-002 / AC-PUR-002-1, AC-PUR-002-2, AC-PUR-002-3 / API-PUR-002. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-003-md" hidden><p><a href="usecases/UC-PUR-003.md">Mở Markdown nguồn</a> · usecases/UC-PUR-003.md</p><h1>UC-PUR-003 — Kiểm cổng phát hành đơn mua</h1>
+</section><section id="doc-usecases-UC-PUR-003-md" hidden><p><a href="usecases/UC-PUR-003.md">Mở Markdown nguồn</a> · usecases/UC-PUR-003.md</p><h1>UC-PUR-003: Kiểm cổng phát hành đơn mua</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3359,15 +3359,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Client tự gắn APPROVED: Không công nhận trạng thái do client tự khai (ERR-PUR-422-13).</li>
-<li>Bước 4 — Tải lại cổng nhiều lần: GET không tạo quyết định, không gửi đơn cho NCC.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q02; O-06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Client tự gắn APPROVED: Không công nhận trạng thái do client tự khai (ERR-PUR-422-13).</li>
+<li>Bước 4: Tải lại cổng nhiều lần: GET không tạo quyết định, không gửi đơn cho NCC.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q02; O-06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-POG-001 / FEAT-074 / BR-PUR-003 / US-PUR-003 / AC-PUR-003-1, AC-PUR-003-2, AC-PUR-003-3 / API-PUR-003. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-004-md" hidden><p><a href="usecases/UC-PUR-004.md">Mở Markdown nguồn</a> · usecases/UC-PUR-004.md</p><h1>UC-PUR-004 — Kiểm phạm vi quản lý lô</h1>
+</section><section id="doc-usecases-UC-PUR-004-md" hidden><p><a href="usecases/UC-PUR-004.md">Mở Markdown nguồn</a> · usecases/UC-PUR-004.md</p><h1>UC-PUR-004: Kiểm phạm vi quản lý lô</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3406,15 +3406,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Hàng tươi được gửi yêu cầu quản lý lô: Không tạo lô cho hàng tươi (ERR-PUR-422-14).</li>
-<li>Bước 4 — Thiếu loại bảo quản: Không suy là hàng khô; hiển thị chưa xác định.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q03: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Hàng tươi được gửi yêu cầu quản lý lô: Không tạo lô cho hàng tươi (ERR-PUR-422-14).</li>
+<li>Bước 4: Thiếu loại bảo quản: Không suy là hàng khô; hiển thị chưa xác định.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q03: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-LOT-001 / FEAT-074 / BR-PUR-004 / US-PUR-004 / AC-PUR-004-1, AC-PUR-004-2, AC-PUR-004-3 / API-PUR-004. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-005-md" hidden><p><a href="usecases/UC-PUR-005.md">Mở Markdown nguồn</a> · usecases/UC-PUR-005.md</p><h1>UC-PUR-005 — Ghi phiếu nhận hàng nháp</h1>
+</section><section id="doc-usecases-UC-PUR-005-md" hidden><p><a href="usecases/UC-PUR-005.md">Mở Markdown nguồn</a> · usecases/UC-PUR-005.md</p><h1>UC-PUR-005: Ghi phiếu nhận hàng nháp</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3453,15 +3453,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Chấp nhận 9 kg khi chỉ nhận 8 kg: Chặn dữ liệu mâu thuẫn, không ghi phiếu (ERR-PUR-422-15).</li>
-<li>Bước 4 — Hai lần nhận cùng đơn: Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q04/13: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Chấp nhận 9 kg khi chỉ nhận 8 kg: Chặn dữ liệu mâu thuẫn, không ghi phiếu (ERR-PUR-422-15).</li>
+<li>Bước 4: Hai lần nhận cùng đơn: Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q04/13: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-RCV-001 / FEAT-075 / BR-PUR-005 / US-PUR-005 / AC-PUR-005-1, AC-PUR-005-2, AC-PUR-005-3 / API-PUR-005. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-006-md" hidden><p><a href="usecases/UC-PUR-006.md">Mở Markdown nguồn</a> · usecases/UC-PUR-006.md</p><h1>UC-PUR-006 — Gắn ảnh chứng từ vào phiếu</h1>
+</section><section id="doc-usecases-UC-PUR-006-md" hidden><p><a href="usecases/UC-PUR-006.md">Mở Markdown nguồn</a> · usecases/UC-PUR-006.md</p><h1>UC-PUR-006: Gắn ảnh chứng từ vào phiếu</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3500,15 +3500,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — File của cơ sở ngoài scope: Không lộ nội dung/URL tệp, không gắn chéo (ERR-PUR-422-16).</li>
-<li>Bước 4 — Liên kết ảnh hết hạn 15 phút theo E1: Kiểm quyền để cấp lại liên kết; không công khai ảnh lâu dài.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q05/13; E1-Q01: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: File của cơ sở ngoài scope: Không lộ nội dung/URL tệp, không gắn chéo (ERR-PUR-422-16).</li>
+<li>Bước 4: Liên kết ảnh hết hạn 15 phút theo E1: Kiểm quyền để cấp lại liên kết; không công khai ảnh lâu dài.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q05/13; E1-Q01: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-DOC-001 / FEAT-075 / BR-PUR-006 / US-PUR-006 / AC-PUR-006-1, AC-PUR-006-2, AC-PUR-006-3 / API-PUR-006. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-007-md" hidden><p><a href="usecases/UC-PUR-007.md">Mở Markdown nguồn</a> · usecases/UC-PUR-007.md</p><h1>UC-PUR-007 — Xem công nợ nhà cung cấp</h1>
+</section><section id="doc-usecases-UC-PUR-007-md" hidden><p><a href="usecases/UC-PUR-007.md">Mở Markdown nguồn</a> · usecases/UC-PUR-007.md</p><h1>UC-PUR-007: Xem công nợ nhà cung cấp</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3547,15 +3547,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Thiếu số dư đầu kỳ: Không báo tổng công nợ hoàn chỉnh (ERR-PUR-422-17).</li>
-<li>Bước 4 — Đơn có CK khách 5 %: Không trừ 5 % khỏi phải trả NCC; không tự giảm số khách phải trả.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q06/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Thiếu số dư đầu kỳ: Không báo tổng công nợ hoàn chỉnh (ERR-PUR-422-17).</li>
+<li>Bước 4: Đơn có CK khách 5 %: Không trừ 5 % khỏi phải trả NCC; không tự giảm số khách phải trả.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q06/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PUR-APV-001 / FEAT-075 / BR-PUR-007 / US-PUR-007 / AC-PUR-007-1, AC-PUR-007-2, AC-PUR-007-3 / API-PUR-007. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-008-md" hidden><p><a href="usecases/UC-PUR-008.md">Mở Markdown nguồn</a> · usecases/UC-PUR-008.md</p><h1>UC-PUR-008 — Đối chiếu dự toán và thực mua</h1>
+</section><section id="doc-usecases-UC-PUR-008-md" hidden><p><a href="usecases/UC-PUR-008.md">Mở Markdown nguồn</a> · usecases/UC-PUR-008.md</p><h1>UC-PUR-008: Đối chiếu dự toán và thực mua</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3594,15 +3594,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Thực mua của cơ sở khác hoặc ngày chưa phân bổ: Không ghép với dự toán để kết luận đạt (ERR-PUR-422-18).</li>
-<li>Bước 4 — Mẫu số bằng 0 hoặc chưa biết: Tỷ lệ và chênh null; kết luận chưa xác định.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Thực mua của cơ sở khác hoặc ngày chưa phân bổ: Không ghép với dự toán để kết luận đạt (ERR-PUR-422-18).</li>
+<li>Bước 4: Mẫu số bằng 0 hoặc chưa biết: Tỷ lệ và chênh null; kết luận chưa xác định.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-COST-BUY-001 / FEAT-076 / BR-PUR-008 / US-PUR-008 / AC-PUR-008-1, AC-PUR-008-2, AC-PUR-008-3 / API-PUR-008. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-009-md" hidden><p><a href="usecases/UC-PUR-009.md">Mở Markdown nguồn</a> · usecases/UC-PUR-009.md</p><h1>UC-PUR-009 — Giải thích nguồn chênh lệch</h1>
+</section><section id="doc-usecases-UC-PUR-009-md" hidden><p><a href="usecases/UC-PUR-009.md">Mở Markdown nguồn</a> · usecases/UC-PUR-009.md</p><h1>UC-PUR-009: Giải thích nguồn chênh lệch</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3641,15 +3641,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Người không có cost.cost.read yêu cầu tiền: Không trả tiền hoặc cost trong body/lỗi/log hiển thị (ERR-PUR-403-11).</li>
-<li>Bước 4 — Giá E3 mới có hiệu lực sau bản dự toán: Giữ giá snapshot dự toán; giá mới không sửa lịch sử.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q07/08/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Người không có cost.cost.read yêu cầu tiền: Không trả tiền hoặc cost trong body/lỗi/log hiển thị (ERR-PUR-403-11).</li>
+<li>Bước 4: Giá E3 mới có hiệu lực sau bản dự toán: Giữ giá snapshot dự toán; giá mới không sửa lịch sử.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q07/08/14: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-COST-BEX-001 / FEAT-076 / BR-PUR-009 / US-PUR-009 / AC-PUR-009-1, AC-PUR-009-2, AC-PUR-009-3 / API-PUR-009. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-010-md" hidden><p><a href="usecases/UC-PUR-010.md">Mở Markdown nguồn</a> · usecases/UC-PUR-010.md</p><h1>UC-PUR-010 — Lập phân ca nháp</h1>
+</section><section id="doc-usecases-UC-PUR-010-md" hidden><p><a href="usecases/UC-PUR-010.md">Mở Markdown nguồn</a> · usecases/UC-PUR-010.md</p><h1>UC-PUR-010: Lập phân ca nháp</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3688,15 +3688,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Nhân sự ngoài cơ sở được phép: Từ chối gắn vào ca (ERR-PUR-422-20).</li>
-<li>Bước 4 — Plan revision thay đổi: Đánh dấu cần rà soát phân công; không tự kế thừa xác nhận bản cũ.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q09; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Nhân sự ngoài cơ sở được phép: Từ chối gắn vào ca (ERR-PUR-422-20).</li>
+<li>Bước 4: Plan revision thay đổi: Đánh dấu cần rà soát phân công; không tự kế thừa xác nhận bản cũ.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q09; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PLAN-SHF-001 / FEAT-077 / BR-PUR-010 / US-PUR-010 / AC-PUR-010-1, AC-PUR-010-2, AC-PUR-010-3 / API-PUR-010. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-011-md" hidden><p><a href="usecases/UC-PUR-011.md">Mở Markdown nguồn</a> · usecases/UC-PUR-011.md</p><h1>UC-PUR-011 — Ghi kiểm tra trước giao</h1>
+</section><section id="doc-usecases-UC-PUR-011-md" hidden><p><a href="usecases/UC-PUR-011.md">Mở Markdown nguồn</a> · usecases/UC-PUR-011.md</p><h1>UC-PUR-011: Ghi kiểm tra trước giao</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3735,15 +3735,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Client bỏ mục không đạt khỏi yêu cầu: Không kết luận đủ dựa trên tập mục thiếu (ERR-PUR-422-21).</li>
-<li>Bước 4 — Tất cả mục mẫu được đánh đạt nhưng policy chưa duyệt: Vẫn BLOCKED E11-Q10; không phát sinh phiếu giao.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q10; E7-Q02; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Client bỏ mục không đạt khỏi yêu cầu: Không kết luận đủ dựa trên tập mục thiếu (ERR-PUR-422-21).</li>
+<li>Bước 4: Tất cả mục mẫu được đánh đạt nhưng policy chưa duyệt: Vẫn BLOCKED E11-Q10; không phát sinh phiếu giao.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q10; E7-Q02; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PLAN-QCG-001 / FEAT-077 / BR-PUR-011 / US-PUR-011 / AC-PUR-011-1, AC-PUR-011-2, AC-PUR-011-3 / API-PUR-011. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-012-md" hidden><p><a href="usecases/UC-PUR-012.md">Mở Markdown nguồn</a> · usecases/UC-PUR-012.md</p><h1>UC-PUR-012 — Ghi sổ mẫu lưu theo bữa</h1>
+</section><section id="doc-usecases-UC-PUR-012-md" hidden><p><a href="usecases/UC-PUR-012.md">Mở Markdown nguồn</a> · usecases/UC-PUR-012.md</p><h1>UC-PUR-012: Ghi sổ mẫu lưu theo bữa</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3782,15 +3782,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Thiếu mã bữa hoặc cơ sở: Chặn bản ghi không truy được nguồn (ERR-PUR-422-22).</li>
-<li>Bước 4 — Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu: Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q11; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Thiếu mã bữa hoặc cơ sở: Chặn bản ghi không truy được nguồn (ERR-PUR-422-22).</li>
+<li>Bước 4: Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu: Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q11; E6 CG06: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-PLAN-SMP-001 / FEAT-077 / BR-PUR-012 / US-PUR-012 / AC-PUR-012-1, AC-PUR-012-2, AC-PUR-012-3 / API-PUR-012. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-013-md" hidden><p><a href="usecases/UC-PUR-013.md">Mở Markdown nguồn</a> · usecases/UC-PUR-013.md</p><h1>UC-PUR-013 — Lập ứng viên món thay thế</h1>
+</section><section id="doc-usecases-UC-PUR-013-md" hidden><p><a href="usecases/UC-PUR-013.md">Mở Markdown nguồn</a> · usecases/UC-PUR-013.md</p><h1>UC-PUR-013: Lập ứng viên món thay thế</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3829,15 +3829,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Đổi món MAIN sang SOUP: Chặn khác vai trò, không tạo thay thế hợp lệ (ERR-PUR-422-23).</li>
-<li>Bước 4 — Món có tên giống nhưng vai trò khác: So mã vai trò, không so chuỗi tên món.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q12/15; O-02: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Đổi món MAIN sang SOUP: Chặn khác vai trò, không tạo thay thế hợp lệ (ERR-PUR-422-23).</li>
+<li>Bước 4: Món có tên giống nhưng vai trò khác: So mã vai trò, không so chuỗi tên món.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q12/15; O-02: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-MENU-SUB-001 / FEAT-078 / BR-PUR-013 / US-PUR-013 / AC-PUR-013-1, AC-PUR-013-2, AC-PUR-013-3 / API-PUR-013. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-014-md" hidden><p><a href="usecases/UC-PUR-014.md">Mở Markdown nguồn</a> · usecases/UC-PUR-014.md</p><h1>UC-PUR-014 — Kiểm lại ứng viên thay món</h1>
+</section><section id="doc-usecases-UC-PUR-014-md" hidden><p><a href="usecases/UC-PUR-014.md">Mở Markdown nguồn</a> · usecases/UC-PUR-014.md</p><h1>UC-PUR-014: Kiểm lại ứng viên thay món</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3876,15 +3876,15 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Thiếu giá hoặc thiếu căn cứ dị ứng: BLOCKED; không trả đạt dù quy tắc khác đạt (ERR-PUR-422-24).</li>
-<li>Bước 4 — Người dùng đổi ứng viên sau lần kiểm: Kết quả cũ không hợp lệ; chạy lại cả ba kiểm.</li>
-<li>Bước 4 — thiếu policy/nguồn tại DL-01; E11-Q15; O-01/O-02; CK/DATA-COST: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Thiếu giá hoặc thiếu căn cứ dị ứng: BLOCKED; không trả đạt dù quy tắc khác đạt (ERR-PUR-422-24).</li>
+<li>Bước 4: Người dùng đổi ứng viên sau lần kiểm: Kết quả cũ không hợp lệ; chạy lại cả ba kiểm.</li>
+<li>Bước 4: thiếu policy/nguồn tại DL-01; E11-Q15; O-01/O-02; CK/DATA-COST: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-MENU-SCK-001 / FEAT-078 / BR-PUR-014 / US-PUR-014 / AC-PUR-014-1, AC-PUR-014-2, AC-PUR-014-3 / API-PUR-014. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
-</section><section id="doc-usecases-UC-PUR-015-md" hidden><p><a href="usecases/UC-PUR-015.md">Mở Markdown nguồn</a> · usecases/UC-PUR-015.md</p><h1>UC-PUR-015 — Kiểm cổng chuyển duyệt MENU</h1>
+</section><section id="doc-usecases-UC-PUR-015-md" hidden><p><a href="usecases/UC-PUR-015.md">Mở Markdown nguồn</a> · usecases/UC-PUR-015.md</p><h1>UC-PUR-015: Kiểm cổng chuyển duyệt MENU</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3923,11 +3923,11 @@
 </ol>
 <h2>Ngoại lệ</h2>
 <ul>
-<li>Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
-<li>Bước 3 — Quy tắc cứng vi phạm hoặc thiếu cost: Không được chuyển như đã đạt; giữ ứng viên (ERR-PUR-422-25).</li>
-<li>Bước 4 — Nguồn thay đổi giữa kiểm và chuyển: Từ chối dùng kết quả cũ; yêu cầu kiểm lại, không bỏ qua MENU.</li>
-<li>Bước 4 — thiếu policy/nguồn tại E11-Q12/13; DL-01; E6 CG05/06/07: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
-<li>Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
+<li>Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.</li>
+<li>Bước 3: Quy tắc cứng vi phạm hoặc thiếu cost: Không được chuyển như đã đạt; giữ ứng viên (ERR-PUR-422-25).</li>
+<li>Bước 4: Nguồn thay đổi giữa kiểm và chuyển: Từ chối dùng kết quả cũ; yêu cầu kiểm lại, không bỏ qua MENU.</li>
+<li>Bước 4: thiếu policy/nguồn tại E11-Q12/13; DL-01; E6 CG05/06/07: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.</li>
+<li>Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.</li>
 </ul>
 <h2>Yêu cầu đặc biệt và truy vết</h2>
 <p>FR-MENU-SGT-001 / FEAT-078 / BR-PUR-015 / US-PUR-015 / AC-PUR-015-1, AC-PUR-015-2, AC-PUR-015-3 / API-PUR-015. <a href="#doc-test-traceability-md">RTM</a>. Tần suất và tải chưa có căn cứ, chờ E11-Q13.</p>
@@ -3949,390 +3949,390 @@
 <td align="left">Mở tài liệu E11; giữ câu hỏi chưa có câu trả lời</td>
 </tr>
 </tbody></table></div>
-<h2>US-PUR-001 — Lập nhu cầu nguyên liệu</h2>
+<h2>US-PUR-001: Lập nhu cầu nguyên liệu</h2>
 <p>FR-PUR-DEM-001; BR-PUR-001; gate E6 CG06, ORD-Q10/14; E11-Q01.</p>
-<h3>AC-PUR-001-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu — 1
+<h3>AC-PUR-001-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu (trường hợp 1)
   Given Nguồn có 100 suất × 70 g, hệ số 1000 g/kg đã xác nhận
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
   Then Nhu cầu gộp 7000 g = 7 kg; lượng mua ròng chưa xác định
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-001-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu — 2
+<h3>AC-PUR-001-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu (trường hợp 2)
   Given Thiếu hệ số g/kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
   Then Chặn tổng hợp khác đơn vị; không coi hệ số là 1
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-001-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu — 3
+<h3>AC-PUR-001-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Lập nhu cầu nguyên liệu (trường hợp 3)
   Given Kế hoạch đổi revision khi đang xem
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập nhu cầu nguyên liệu
   Then Đánh dấu nguồn cũ; không dùng số cũ làm nhu cầu hiện hành
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-002 — Lập đơn mua nháp</h2>
+<h2>US-PUR-002: Lập đơn mua nháp</h2>
 <p>FR-PUR-POD-001; BR-PUR-002; gate E11-Q01/02/13/14.</p>
-<h3>AC-PUR-002-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp — 1
+<h3>AC-PUR-002-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp (trường hợp 1)
   Given NCC synthetic do người lập chọn, lượng 2 kg; giá cuối 108000 đ/kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
   Then Nháp có tiền hàng 216000 đ khi căn cứ giá đủ; chưa phát hành
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-002-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp — 2
+<h3>AC-PUR-002-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp (trường hợp 2)
   Given Số lượng âm hoặc thiếu NCC
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
   Then Từ chối lưu nháp không hợp lệ; giữ dữ liệu nhập
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-002-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp — 3
+<h3>AC-PUR-002-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Lập đơn mua nháp (trường hợp 3)
   Given Giá UNKNOWN hoặc chưa rõ VAT phải trả
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập đơn mua nháp
   Then Giữ chưa xác định, không coi giá hoặc VAT bằng 0
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-003 — Kiểm cổng phát hành đơn mua</h2>
+<h2>US-PUR-003: Kiểm cổng phát hành đơn mua</h2>
 <p>FR-PUR-POG-001; BR-PUR-003; gate E11-Q02; O-06.</p>
-<h3>AC-PUR-003-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua — 1
+<h3>AC-PUR-003-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua (trường hợp 1)
   Given Đơn nháp chưa có chính sách duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
   Then Trả BLOCKED kèm E11-Q02; đơn giữ DRAFT
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-003-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua — 2
+<h3>AC-PUR-003-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua (trường hợp 2)
   Given Client tự gắn APPROVED
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
   Then Không công nhận trạng thái do client tự khai
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-003-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua — 3
+<h3>AC-PUR-003-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng phát hành đơn mua (trường hợp 3)
   Given Tải lại cổng nhiều lần
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng phát hành đơn mua
   Then GET không tạo quyết định, không gửi đơn cho NCC
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-004 — Kiểm phạm vi quản lý lô</h2>
+<h2>US-PUR-004: Kiểm phạm vi quản lý lô</h2>
 <p>FR-PUR-LOT-001; BR-PUR-004; gate E11-Q03.</p>
-<h3>AC-PUR-004-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô — 1
+<h3>AC-PUR-004-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô (trường hợp 1)
   Given Nguyên liệu thuộc FROZEN hoặc DRY
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
   Then Hiển thị thuộc phạm vi lô; chi tiết lô còn chờ
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-004-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô — 2
+<h3>AC-PUR-004-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô (trường hợp 2)
   Given Hàng tươi được gửi yêu cầu quản lý lô
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
   Then Không tạo lô cho hàng tươi
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-004-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô — 3
+<h3>AC-PUR-004-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm phạm vi quản lý lô (trường hợp 3)
   Given Thiếu loại bảo quản
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm phạm vi quản lý lô
   Then Không suy là hàng khô; hiển thị chưa xác định
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-005 — Ghi phiếu nhận hàng nháp</h2>
+<h2>US-PUR-005: Ghi phiếu nhận hàng nháp</h2>
 <p>FR-PUR-RCV-001; BR-PUR-005; gate E11-Q04/13.</p>
-<h3>AC-PUR-005-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp — 1
+<h3>AC-PUR-005-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp (trường hợp 1)
   Given Đặt 10 kg, nhận 8 kg; người nhận khai chấp nhận 7 kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
   Then Hiện riêng 10/8/7 kg; 1 kg chưa chấp nhận, 2 kg chưa nhận; chưa tự trả hàng
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-005-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp — 2
+<h3>AC-PUR-005-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp (trường hợp 2)
   Given Chấp nhận 9 kg khi chỉ nhận 8 kg
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
   Then Chặn dữ liệu mâu thuẫn, không ghi phiếu
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-005-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp — 3
+<h3>AC-PUR-005-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Ghi phiếu nhận hàng nháp (trường hợp 3)
   Given Hai lần nhận cùng đơn
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi phiếu nhận hàng nháp
   Then Giữ tham chiếu từng lần; chưa tự quyết hoàn tất khi policy chưa có
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-006 — Gắn ảnh chứng từ vào phiếu</h2>
+<h2>US-PUR-006: Gắn ảnh chứng từ vào phiếu</h2>
 <p>FR-PUR-DOC-001; BR-PUR-006; gate E11-Q05/13; E1-Q01.</p>
-<h3>AC-PUR-006-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu — 1
+<h3>AC-PUR-006-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 1)
   Given Ảnh synthetic thuộc phiếu/cơ sở và MIME hợp lệ theo E1
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
   Then Gắn được tham chiếu ảnh; không chuyển phiếu sang đã nhận chính thức
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-006-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu — 2
+<h3>AC-PUR-006-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 2)
   Given File của cơ sở ngoài scope
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
   Then Không lộ nội dung/URL tệp, không gắn chéo
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-006-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu — 3
+<h3>AC-PUR-006-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Gắn ảnh chứng từ vào phiếu (trường hợp 3)
   Given Liên kết ảnh hết hạn 15 phút theo E1
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện gắn ảnh chứng từ vào phiếu
   Then Kiểm quyền để cấp lại liên kết; không công khai ảnh lâu dài
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-007 — Xem công nợ nhà cung cấp</h2>
+<h2>US-PUR-007: Xem công nợ nhà cung cấp</h2>
 <p>FR-PUR-APV-001; BR-PUR-007; gate E11-Q06/04.</p>
-<h3>AC-PUR-007-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp — 1
+<h3>AC-PUR-007-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp (trường hợp 1)
   Given Có 216000 đ nghĩa vụ và 100000 đ thanh toán có căn cứ, đầu kỳ 0 đã xác nhận
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
   Then Dư 116000 đ theo fixture đã đủ căn cứ; không giảm bởi CK khách
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-007-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp — 2
+<h3>AC-PUR-007-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp (trường hợp 2)
   Given Thiếu số dư đầu kỳ
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
   Then Không báo tổng công nợ hoàn chỉnh
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-007-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp — 3
+<h3>AC-PUR-007-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Xem công nợ nhà cung cấp (trường hợp 3)
   Given Đơn có CK khách 5 %
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện xem công nợ nhà cung cấp
   Then Không trừ 5 % khỏi phải trả NCC; không tự giảm số khách phải trả
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-008 — Đối chiếu dự toán và thực mua</h2>
+<h2>US-PUR-008: Đối chiếu dự toán và thực mua</h2>
 <p>FR-COST-BUY-001; BR-PUR-008; gate E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04.</p>
-<h3>AC-PUR-008-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua — 1
+<h3>AC-PUR-008-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua (trường hợp 1)
   Given Fixture minh họa có tỷ lệ cùng mẫu số đã được xác nhận: 50 % và 53 %
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
   Then Chênh hiển thị 3 điểm phần trăm; không gọi tăng tương đối 6 % là tiêu chí R11
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-008-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua — 2
+<h3>AC-PUR-008-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua (trường hợp 2)
   Given Thực mua của cơ sở khác hoặc ngày chưa phân bổ
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
   Then Không ghép với dự toán để kết luận đạt
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-008-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua — 3
+<h3>AC-PUR-008-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Đối chiếu dự toán và thực mua (trường hợp 3)
   Given Mẫu số bằng 0 hoặc chưa biết
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện đối chiếu dự toán và thực mua
   Then Tỷ lệ và chênh null; kết luận chưa xác định
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-009 — Giải thích nguồn chênh lệch</h2>
+<h2>US-PUR-009: Giải thích nguồn chênh lệch</h2>
 <p>FR-COST-BEX-001; BR-PUR-009; gate E11-Q07/08/14.</p>
-<h3>AC-PUR-009-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch — 1
+<h3>AC-PUR-009-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch (trường hợp 1)
   Given Hai dòng cùng nguyên liệu và đơn vị có nguồn được phép đọc
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
   Then Hiện lượng và giá hai phía, liên kết chứng từ; không ghi đè dự toán
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-009-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch — 2
+<h3>AC-PUR-009-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch (trường hợp 2)
   Given Người không có cost.cost.read yêu cầu tiền
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
   Then Không trả tiền hoặc cost trong body/lỗi/log hiển thị
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-009-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch — 3
+<h3>AC-PUR-009-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Giải thích nguồn chênh lệch (trường hợp 3)
   Given Giá E3 mới có hiệu lực sau bản dự toán
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện giải thích nguồn chênh lệch
   Then Giữ giá snapshot dự toán; giá mới không sửa lịch sử
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-010 — Lập phân ca nháp</h2>
+<h2>US-PUR-010: Lập phân ca nháp</h2>
 <p>FR-PLAN-SHF-001; BR-PUR-010; gate E11-Q09; E6 CG06.</p>
-<h3>AC-PUR-010-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Lập phân ca nháp — 1
+<h3>AC-PUR-010-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Lập phân ca nháp (trường hợp 1)
   Given Ca synthetic, phân công công việc cho mã nhân sự giả thuộc scope
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
   Then Giữ bản nháp; trạng thái bắt đầu sản xuất E6 không đổi
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-010-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Lập phân ca nháp — 2
+<h3>AC-PUR-010-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Lập phân ca nháp (trường hợp 2)
   Given Nhân sự ngoài cơ sở được phép
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
   Then Từ chối gắn vào ca
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-010-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Lập phân ca nháp — 3
+<h3>AC-PUR-010-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Lập phân ca nháp (trường hợp 3)
   Given Plan revision thay đổi
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập phân ca nháp
   Then Đánh dấu cần rà soát phân công; không tự kế thừa xác nhận bản cũ
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-011 — Ghi kiểm tra trước giao</h2>
+<h2>US-PUR-011: Ghi kiểm tra trước giao</h2>
 <p>FR-PLAN-QCG-001; BR-PUR-011; gate E11-Q10; E7-Q02; E6 CG06.</p>
-<h3>AC-PUR-011-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao — 1
+<h3>AC-PUR-011-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao (trường hợp 1)
   Given Checklist mẫu có mục kiểm hộp chưa kiểm
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
   Then Hiện chưa đủ căn cứ giao; không tự chuyển E7 sang giao thành công
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-011-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao — 2
+<h3>AC-PUR-011-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao (trường hợp 2)
   Given Client bỏ mục không đạt khỏi yêu cầu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
   Then Không kết luận đủ dựa trên tập mục thiếu
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-011-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao — 3
+<h3>AC-PUR-011-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Ghi kiểm tra trước giao (trường hợp 3)
   Given Tất cả mục mẫu được đánh đạt nhưng policy chưa duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi kiểm tra trước giao
   Then Vẫn BLOCKED E11-Q10; không phát sinh phiếu giao
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-012 — Ghi sổ mẫu lưu theo bữa</h2>
+<h2>US-PUR-012: Ghi sổ mẫu lưu theo bữa</h2>
 <p>FR-PLAN-SMP-001; BR-PUR-012; gate E11-Q11; E6 CG06.</p>
-<h3>AC-PUR-012-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa — 1
+<h3>AC-PUR-012-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 1)
   Given Tập bữa synthetic đã xác nhận có 10 bữa, 9 bữa có bản ghi mẫu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
   Then Độ phủ bản ghi 90 %, liệt kê 1 bữa thiếu; chưa đạt mục tiêu 100 % R11
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-012-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa — 2
+<h3>AC-PUR-012-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 2)
   Given Thiếu mã bữa hoặc cơ sở
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
   Then Chặn bản ghi không truy được nguồn
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-012-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa — 3
+<h3>AC-PUR-012-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Ghi sổ mẫu lưu theo bữa (trường hợp 3)
   Given Hai mẫu cùng bữa và 1 bữa khác chưa có mẫu
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện ghi sổ mẫu lưu theo bữa
   Then Đếm bữa phân biệt, không lấy số mẫu chia số bữa để báo đủ
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-013 — Lập ứng viên món thay thế</h2>
+<h2>US-PUR-013: Lập ứng viên món thay thế</h2>
 <p>FR-MENU-SUB-001; BR-PUR-013; gate E11-Q12/15; O-02.</p>
-<h3>AC-PUR-013-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế — 1
+<h3>AC-PUR-013-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế (trường hợp 1)
   Given Đổi một món MAIN sang món MAIN đang được phép dùng
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
   Then Tạo ứng viên DRAFT; thực đơn công bố không đổi
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-013-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế — 2
+<h3>AC-PUR-013-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế (trường hợp 2)
   Given Đổi món MAIN sang SOUP
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
   Then Chặn khác vai trò, không tạo thay thế hợp lệ
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-013-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế — 3
+<h3>AC-PUR-013-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Lập ứng viên món thay thế (trường hợp 3)
   Given Món có tên giống nhưng vai trò khác
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện lập ứng viên món thay thế
   Then So mã vai trò, không so chuỗi tên món
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-014 — Kiểm lại ứng viên thay món</h2>
+<h2>US-PUR-014: Kiểm lại ứng viên thay món</h2>
 <p>FR-MENU-SCK-001; BR-PUR-014; gate DL-01; E11-Q15; O-01/O-02; CK/DATA-COST.</p>
-<h3>AC-PUR-014-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món — 1
+<h3>AC-PUR-014-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món (trường hợp 1)
   Given Ứng viên có đủ nhãn dị ứng, rule và giá trong fixture đã duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
   Then Có đủ ba kết quả đúng candidateVersion; vẫn chưa được công bố
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-014-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món — 2
+<h3>AC-PUR-014-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món (trường hợp 2)
   Given Thiếu giá hoặc thiếu căn cứ dị ứng
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
   Then BLOCKED; không trả đạt dù quy tắc khác đạt
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-014-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món — 3
+<h3>AC-PUR-014-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm lại ứng viên thay món (trường hợp 3)
   Given Người dùng đổi ứng viên sau lần kiểm
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm lại ứng viên thay món
   Then Kết quả cũ không hợp lệ; chạy lại cả ba kiểm
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h2>US-PUR-015 — Kiểm cổng chuyển duyệt MENU</h2>
+<h2>US-PUR-015: Kiểm cổng chuyển duyệt MENU</h2>
 <p>FR-MENU-SGT-001; BR-PUR-015; gate E11-Q12/13; DL-01; E6 CG05/06/07.</p>
-<h3>AC-PUR-015-1 — Thành công có điều kiện</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU — 1
+<h3>AC-PUR-015-1: Thành công có điều kiện</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 1)
   Given Kết quả dị ứng, rule, cost đúng phiên bản; MENU vẫn chưa duyệt
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu
   Then Hiện cần qua cổng MENU; không tự công bố hoặc sửa kế hoạch
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-015-2 — Lỗi nghiệp vụ</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU — 2
+<h3>AC-PUR-015-2: Lỗi nghiệp vụ</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 2)
   Given Quy tắc cứng vi phạm hoặc thiếu cost
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu
   Then Không được chuyển như đã đạt; giữ ứng viên
   And Không sửa nguồn E2/E3/E6/E7 hoặc tự đóng câu hỏi mở
 </code></pre>
-<h3>AC-PUR-015-3 — Biên hoặc thay đổi nguồn</h3>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU — 3
+<h3>AC-PUR-015-3: Biên hoặc thay đổi nguồn</h3>
+<pre><code class="language-gherkin">Scenario: Kiểm cổng chuyển duyệt MENU (trường hợp 3)
   Given Nguồn thay đổi giữa kiểm và chuyển
   And Người thao tác có quyền trên cơ sở synthetic, trừ ca chủ ý kiểm thiếu quyền
   When Người thao tác thực hiện kiểm cổng chuyển duyệt menu

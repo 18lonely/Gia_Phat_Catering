@@ -1,6 +1,6 @@
-# Wireframe ASCII — Dinh dưỡng
+# Wireframe ASCII: Dinh dưỡng
 
-Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.0 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -8,7 +8,7 @@ Phiên bản 0.1.0 · 2026-11-11 · **Draft — đề xuất thiết kế để 
 
 Phác thảo review, không phải UI đã chạy. Không có dữ liệu dinh dưỡng thực tế. Đơn vị luôn nằm cạnh số; thao tác lưu/tính chỉ bật khi đủ đầu vào. Quyền ẩn nút không thay kiểm quyền server.
 
-## UI-NUTR-01 — Thành phần và độ phủ (API-NUTR-001/002/006/007)
+## UI-NUTR-01: Thành phần và độ phủ (API-NUTR-001/002/006/007)
 
 ```text
 ┌ DINH DƯỠNG / BẢNG THÀNH PHẦN ──────────────────────────┐
@@ -27,7 +27,7 @@ Phác thảo review, không phải UI đã chạy. Không có dữ liệu dinh d
 
 Không tự điền ediblePct=100; nếu DB legacy có default thì vẫn yêu cầu xác nhận mapping. Hủy nhập chỉ bỏ thay đổi chưa lưu. Lịch sử hiển thị người/ngày/lý do/giá trị cũ mới, không có nút xóa lịch sử. 409 giữ form, hiện giá trị mới để người dùng đối chiếu; không tự ghi đè.
 
-## UI-NUTR-02 — Dinh dưỡng món (API-NUTR-003/005)
+## UI-NUTR-02: Dinh dưỡng món (API-NUTR-003/005)
 
 ```text
 ┌ MÓN / DINH DƯỠNG ──────────────────────────────────────┐
@@ -42,7 +42,7 @@ Không tự điền ediblePct=100; nếu DB legacy có default thì vẫn yêu c
 
 Thiếu dữ liệu thì dấu “--” và danh sách thiếu thay cho 0; không vẽ số tổng từng phần. Nguồn đã đổi không làm mất bản cũ; badge “Cũ” đi kèm thời điểm tính.
 
-## UI-NUTR-03 — Dinh dưỡng tổ hợp suất (API-NUTR-004/005)
+## UI-NUTR-03: Dinh dưỡng tổ hợp suất (API-NUTR-004/005)
 
 ```text
 ┌ SUẤT / CHỌN TỔ HỢP ────────────────────────────────────┐

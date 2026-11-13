@@ -37,4 +37,4 @@ R12 cần R6, R7, R10, R11 xong; G-Next vẫn cần bằng chứng BO-05/06/09. 
 
 FEAT-087 độc lập với O-03 vì không đọc eater_health_profiles, không nhận bệnh lý/chỉ số cơ thể, không suy luận và không gợi ý; chỉ sự kiện bữa đã ăn cùng snapshot suất. Chính sách identity/consent/retention/bằng chứng còn BLOCKED, nhưng không làm feature này chỉ gate. Bất kỳ mở rộng FEAT-046/047 là gate-only O-03, ngoài thiết kế hiện tại.
 
-> Chờ E12-Q15, E12-Q16, E12-Q17 — XC-06. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-06](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E12-Q15, E12-Q16, E12-Q17: XC-06. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-06](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.

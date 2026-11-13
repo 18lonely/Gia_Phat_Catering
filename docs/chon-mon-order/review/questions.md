@@ -9,7 +9,7 @@ last_updated: 2026-11-11
 ---
 # Câu hỏi E6
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ last_updated: 2026-11-11
 
 Ghi quyết định,ví dụ,người/ngày/nguồn rồi cập nhật FR/API/schema/AC. Chưa có trả lời thay stakeholder. O-03 vẫn chặn thiết kế thu thập/gợi ý sức khỏe; Q-14 vẫn chờ kênh nhắc.
 
-## Câu hỏi phát hiện khi hoàn thiện E6 — tất cả CHỜ XÁC NHẬN
+## Câu hỏi phát hiện khi hoàn thiện E6: tất cả CHỜ XÁC NHẬN
 
 | Mã | Câu hỏi | Vai trò cần xác nhận | Tác động | Trạng thái |
 | :--- | :--- | :--- | :--- | :--- |
@@ -43,7 +43,7 @@ Ghi quyết định,ví dụ,người/ngày/nguồn rồi cập nhật FR/API/sc
 ORD-Q01–10 giữ nguyên; không câu nào được đóng trong phiên này. Các câu mới không thay Q-14/Q-16/O-02/O-03/O-06 hoặc E1-Q01/02/04. Phiếu quyết định cần: mã, phương án được chọn, ví dụ, người xác nhận, ngày và nguồn bằng chứng; sau đó sửa đồng bộ FR/UC/API/data/UI/AC/test.
 
 
-## Review quyết định — 11/11/2026
+## Review quyết định ngày 11/11/2026
 
 Nguồn E6-EVID-001: người dùng trả lời trực tiếp **“Có danh sách và người quản lý xác nhận”**. Đã xác nhận đầu vào danh sách và khả năng quản lý xác nhận; chưa chốt credential, mã duy nhất, account/guest binding. ORD-Q01 tiếp tục **CHỜ XÁC NHẬN phần cơ chế**, không đánh dấu đóng toàn bộ.
 
@@ -58,7 +58,7 @@ Bổ sung nội dung cần trả lời trong mã gốc, không tạo số câu h
 Các phương án khuyến nghị trong DR đều CHỜ XÁC NHẬN. ORD-Q02–15 và Q-16/O-06 không được đóng bởi việc review tài liệu.
 
 
-## Phản hồi người dùng E6-EVID-002 — 11/11/2026
+## Phản hồi người dùng E6-EVID-002 ngày 11/11/2026
 
 Nguồn: trả lời trực tiếp ba câu hỏi review trong chat. Người dùng chọn **“Chưa chốt, giữ câu hỏi mở”** cho cả ba nội dung:
 

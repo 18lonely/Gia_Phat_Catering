@@ -1,5 +1,5 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA dinh-duong</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>dinh-duong</h1><p>21 tài liệu · 5 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/nutrition-workbench.html">nutrition-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Hợp đồng API — Dinh dưỡng MVP</a><a href="#doc-epic-spec-md">Đặc tả epic — E4 / R4</a><a href="#doc-gap-analysis-md">Rà khoảng trống — dinh-duong</a><a href="#doc-review-questions-md">Sổ câu hỏi — NUTR</a><a href="#doc-srs-erd-md">ERD và từ điển dữ liệu — NUTR</a><a href="#doc-srs-flows-md">Luồng tuần tự — Dinh dưỡng</a><a href="#doc-srs-spec-md">SRS — Dinh dưỡng E4</a><a href="#doc-srs-states-md">Trạng thái — Dinh dưỡng</a><a href="#doc-srs-usecase-diagram-md">Sơ đồ use case — Dinh dưỡng</a><a href="#doc-test-checklist-md">Checklist — Dinh dưỡng</a><a href="#doc-test-test-cases-md">Test cases — NUTR</a><a href="#doc-test-traceability-md">Ma trận truy vết — NUTR</a><a href="#doc-ui-user-flow-md">User flow — NUTR</a><a href="#doc-ui-wireframe-ascii-md">Wireframe ASCII — Dinh dưỡng</a><a href="#doc-usecases-UC-NUTR-001-md">UC-NUTR-001 — Quản lý bảng thành phần</a><a href="#doc-usecases-UC-NUTR-002-md">UC-NUTR-002 — Kiểm độ phủ nguyên liệu</a><a href="#doc-usecases-UC-NUTR-003-md">UC-NUTR-003 — Tính dinh dưỡng món</a><a href="#doc-usecases-UC-NUTR-004-md">UC-NUTR-004 — Tính dinh dưỡng tổ hợp suất</a><a href="#doc-usecases-UC-NUTR-005-md">UC-NUTR-005 — Xem kết quả và nguồn lịch sử</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria — NUTR</a><a href="#doc-userstories-backlog-md">Backlog MVP — NUTR</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Hợp đồng API — Dinh dưỡng MVP</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA dinh-duong</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>dinh-duong</h1><p>21 tài liệu · 5 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/nutrition-workbench.html">nutrition-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Hợp đồng API: Dinh dưỡng MVP</a><a href="#doc-epic-spec-md">Đặc tả epic (E4 / R4)</a><a href="#doc-gap-analysis-md">Rà khoảng trống: dinh-duong</a><a href="#doc-review-questions-md">Sổ câu hỏi (NUTR)</a><a href="#doc-srs-erd-md">ERD và từ điển dữ liệu (NUTR)</a><a href="#doc-srs-flows-md">Luồng tuần tự: Dinh dưỡng</a><a href="#doc-srs-spec-md">SRS: Dinh dưỡng E4</a><a href="#doc-srs-states-md">Trạng thái: Dinh dưỡng</a><a href="#doc-srs-usecase-diagram-md">Sơ đồ use case: Dinh dưỡng</a><a href="#doc-test-checklist-md">Checklist: Dinh dưỡng</a><a href="#doc-test-test-cases-md">Test cases (NUTR)</a><a href="#doc-test-traceability-md">Ma trận truy vết (NUTR)</a><a href="#doc-ui-user-flow-md">User flow (NUTR)</a><a href="#doc-ui-wireframe-ascii-md">Wireframe ASCII: Dinh dưỡng</a><a href="#doc-usecases-UC-NUTR-001-md">UC-NUTR-001: Quản lý bảng thành phần</a><a href="#doc-usecases-UC-NUTR-002-md">UC-NUTR-002: Kiểm độ phủ nguyên liệu</a><a href="#doc-usecases-UC-NUTR-003-md">UC-NUTR-003: Tính dinh dưỡng món</a><a href="#doc-usecases-UC-NUTR-004-md">UC-NUTR-004: Tính dinh dưỡng tổ hợp suất</a><a href="#doc-usecases-UC-NUTR-005-md">UC-NUTR-005: Xem kết quả và nguồn lịch sử</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria (NUTR)</a><a href="#doc-userstories-backlog-md">Backlog MVP (NUTR)</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Hợp đồng API: Dinh dưỡng MVP</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -150,8 +150,8 @@
 <p>Ví dụ rút gọn bỏ provenance/breakdown để đọc; response thực theo kiểu Calculation phải có đủ hai trường đó và calculatedAt. Không dùng ví dụ rút gọn làm schema bỏ trường. Khi cần đối soát dùng snapshot chưa làm tròn, không cộng displayTotals.</p>
 <h2>Gate review</h2>
 <p><a href="#doc-review-questions-md">NUTR-Q01–04 và DATA-NUTR-Q01</a> còn mở. Không upload/import Excel mới trong hợp đồng MVP này; DL-07 được nhập tay theo từng nguyên liệu. Nếu cần nhập hàng loạt phải bổ sung CR và validation dòng, không suy từ import MENU.</p>
-</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>Đặc tả epic — E4 / R4</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>Đặc tả epic (E4 / R4)</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -196,8 +196,8 @@
 </tr>
 </tbody></table></div>
 <p>Ngày phát hành/Story Point chưa đặt (O-04). Không bổ sung tính năng mới để lấp mẫu tài liệu. <a href="#doc-srs-spec-md">SRS</a>, <a href="#doc-userstories-backlog-md">backlog</a>, <a href="#doc-gap-analysis-md">gap</a>, <a href="preview.html">preview</a>.</p>
-</section><section id="doc-gap-analysis-md" hidden><p><a href="gap-analysis.md">Mở Markdown nguồn</a> · gap-analysis.md</p><h1>Rà khoảng trống — dinh-duong</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-gap-analysis-md" hidden><p><a href="gap-analysis.md">Mở Markdown nguồn</a> · gap-analysis.md</p><h1>Rà khoảng trống: dinh-duong</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -250,8 +250,8 @@
 </tr>
 </tbody></table></div>
 <p>Hủy trước ghi, lỗi mạng, lỗi phụ thuộc, XSS và scope được nêu ở flow/test/wireframe; vẫn cần kiểm trên backend/UI thật. Chủ sở hữu và hạn xử lý cụ thể chưa phân công; câu hỏi không được đóng chỉ vì đã ghi phương án.</p>
-</section><section id="doc-review-questions-md" hidden><p><a href="review/questions.md">Mở Markdown nguồn</a> · review/questions.md</p><h1>Sổ câu hỏi — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-review-questions-md" hidden><p><a href="review/questions.md">Mở Markdown nguồn</a> · review/questions.md</p><h1>Sổ câu hỏi (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -316,8 +316,8 @@
 </tr>
 </tbody></table></div>
 <p>Khi trả lời: ghi lựa chọn, ví dụ/ca biên, người xác nhận, ngày, nguồn và phiên bản tài liệu; cập nhật SRS/API/ERD/UI/AC/test rồi mới đóng. Ca BLOCKED chuyển NOT RUN khi đủ đầu vào, không tự chuyển PASS. Các ca kỹ thuật dùng fixture giả định có thể chuẩn bị độc lập.</p>
-</section><section id="doc-srs-erd-md" hidden><p><a href="srs/erd.md">Mở Markdown nguồn</a> · srs/erd.md</p><h1>ERD và từ điển dữ liệu — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-srs-erd-md" hidden><p><a href="srs/erd.md">Mở Markdown nguồn</a> · srs/erd.md</p><h1>ERD và từ điển dữ liệu (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -477,7 +477,7 @@
 <td align="left">menu_version</td>
 <td align="left">int</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Bắt buộc khi MEAL</td>
 </tr>
 <tr>
@@ -560,8 +560,8 @@
 <li>Migration chưa chạy: phải rà dữ liệu legacy thiếu nguồn/ấn bản/quy đổi, tạo báo cáo thiếu thay vì tự backfill bằng dữ liệu giả. Điền version/revision ban đầu chỉ sau xác nhận nguồn; chưa bật NOT NULL nguồn mới cho dữ liệu cũ không đạt. Không mặc định coi edible_pct=100 cũ là đã được duyệt. Kế hoạch rollout cần Tech lead/BA review.</li>
 <li>Chưa đặt thời hạn lưu/xóa vì cần chính sách nền tảng; chưa có API xóa. Không lưu hồ sơ bệnh lý trong phân hệ này.</li>
 </ol>
-</section><section id="doc-srs-flows-md" hidden><p><a href="srs/flows.md">Mở Markdown nguồn</a> · srs/flows.md</p><h1>Luồng tuần tự — Dinh dưỡng</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-srs-flows-md" hidden><p><a href="srs/flows.md">Mở Markdown nguồn</a> · srs/flows.md</p><h1>Luồng tuần tự: Dinh dưỡng</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -583,8 +583,8 @@
 
 <p>Mất phản hồi sau commit: tra resource/version hoặc replay cùng key theo quyền hiện tại, không tạo mới mù. Hủy thao tác trước xác nhận không gọi lệnh ghi; sau commit phải dùng lifecycle nghiệp vụ, không dùng nút quay lại để rollback. Lỗi DB/audit rollback cả giao dịch. Thiết kế chưa có transaction/backend thực thi.</p>
 <p><a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-api-api-spec-md">API</a> · <a href="#doc-srs-states-md">Trạng thái</a>.</p>
-</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS — Dinh dưỡng E4</h1>
-<p>Phiên bản 0.1.1 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS: Dinh dưỡng E4</h1>
+<p>Phiên bản 0.1.1 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -848,10 +848,10 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </tbody></table></div>
 <h2>4. Điểm mở và bàn giao</h2>
 <p><a href="#doc-review-questions-md">Sổ câu hỏi</a> là nguồn trạng thái; tất cả câu mới CHỜ XÁC NHẬN. <a href="../gia-phat/review/mvp-e4-e5-handoff.md">Gói review</a> có giới hạn kiểm tra và phần còn thiếu.</p>
-<h2>Hồ sơ bổ sung để review — 11/11/2026</h2>
+<h2>Hồ sơ bổ sung để review ngày 11/11/2026</h2>
 <p><a href="preview.html">Preview toàn hồ sơ</a> · <a href="#doc-api-api-spec-md">API</a> · <a href="#doc-srs-flows-md">Luồng tuần tự</a> · <a href="#doc-srs-states-md">Trạng thái</a> · <a href="#doc-gap-analysis-md">Gap</a>. Gói bổ sung không tự đóng câu hỏi, thay quy tắc nghiệp vụ hoặc chứng minh backend đã triển khai. <a href="../gia-phat/review/ba-completion-handoff.md">Bàn giao</a>.</p>
-</section><section id="doc-srs-states-md" hidden><p><a href="srs/states.md">Mở Markdown nguồn</a> · srs/states.md</p><h1>Trạng thái — Dinh dưỡng</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-srs-states-md" hidden><p><a href="srs/states.md">Mở Markdown nguồn</a> · srs/states.md</p><h1>Trạng thái: Dinh dưỡng</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -919,8 +919,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </tbody></table></div>
 <p>COMPLETE/STALE là nhãn giao diện suy ra, không thêm status vào nutrition_calculations. NEW_CALCULATION là id mới; bản cũ vẫn giữ nguyên. Không có bước phê duyệt dinh dưỡng riêng khi NUTR-Q01 chưa quyết.</p>
 <p>Mọi transition ngoài bảng bị từ chối, không tự suy từ nút UI. Version cũ409; quyền thiếu403/ngoài scope404 theo SRS. Các quyền/số liệu chưa chốt giữ trong sổ câu hỏi, không coi state diagram là quyết định duyệt.</p>
-</section><section id="doc-srs-usecase-diagram-md" hidden><p><a href="srs/usecase-diagram.md">Mở Markdown nguồn</a> · srs/usecase-diagram.md</p><h1>Sơ đồ use case — Dinh dưỡng</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-srs-usecase-diagram-md" hidden><p><a href="srs/usecase-diagram.md">Mở Markdown nguồn</a> · srs/usecase-diagram.md</p><h1>Sơ đồ use case: Dinh dưỡng</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -949,27 +949,27 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </thead>
 <tbody><tr>
 <td align="left">UC-NUTR-001</td>
-<td align="left"><a href="#doc-usecases-UC-NUTR-001-md">UC-NUTR-001 — Quản lý bảng thành phần</a></td>
+<td align="left"><a href="#doc-usecases-UC-NUTR-001-md">UC-NUTR-001: Quản lý bảng thành phần</a></td>
 </tr>
 <tr>
 <td align="left">UC-NUTR-002</td>
-<td align="left"><a href="#doc-usecases-UC-NUTR-002-md">UC-NUTR-002 — Kiểm độ phủ nguyên liệu</a></td>
+<td align="left"><a href="#doc-usecases-UC-NUTR-002-md">UC-NUTR-002: Kiểm độ phủ nguyên liệu</a></td>
 </tr>
 <tr>
 <td align="left">UC-NUTR-003</td>
-<td align="left"><a href="#doc-usecases-UC-NUTR-003-md">UC-NUTR-003 — Tính dinh dưỡng món</a></td>
+<td align="left"><a href="#doc-usecases-UC-NUTR-003-md">UC-NUTR-003: Tính dinh dưỡng món</a></td>
 </tr>
 <tr>
 <td align="left">UC-NUTR-004</td>
-<td align="left"><a href="#doc-usecases-UC-NUTR-004-md">UC-NUTR-004 — Tính dinh dưỡng tổ hợp suất</a></td>
+<td align="left"><a href="#doc-usecases-UC-NUTR-004-md">UC-NUTR-004: Tính dinh dưỡng tổ hợp suất</a></td>
 </tr>
 <tr>
 <td align="left">UC-NUTR-005</td>
-<td align="left"><a href="#doc-usecases-UC-NUTR-005-md">UC-NUTR-005 — Xem kết quả và nguồn lịch sử</a></td>
+<td align="left"><a href="#doc-usecases-UC-NUTR-005-md">UC-NUTR-005: Xem kết quả và nguồn lịch sử</a></td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-test-checklist-md" hidden><p><a href="test/checklist.md">Mở Markdown nguồn</a> · test/checklist.md</p><h1>Checklist — Dinh dưỡng</h1>
-<p><strong>Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
+</section><section id="doc-test-checklist-md" hidden><p><a href="test/checklist.md">Mở Markdown nguồn</a> · test/checklist.md</p><h1>Checklist: Dinh dưỡng</h1>
+<p><strong>Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1031,8 +1031,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">Build,môi trường,profile,actual; không chỉ ảnh giao diện</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-test-test-cases-md" hidden><p><a href="test/test-cases.md">Mở Markdown nguồn</a> · test/test-cases.md</p><h1>Test cases — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-test-test-cases-md" hidden><p><a href="test/test-cases.md">Mở Markdown nguồn</a> · test/test-cases.md</p><h1>Test cases (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1049,7 +1049,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">Khởi tạo gói MVP từ PRD/roadmap và thiết kế hiện có</td>
 </tr>
 </tbody></table></div>
-<p>Bộ ca được thiết kế, <strong>0 ca backend đã chạy</strong>. NOT RUN: chưa có backend/môi trường; BLOCKED: còn thiếu quyết định hoặc dữ liệu ngoài việc thiếu môi trường. Actual/evidence hiện “—”. Khi chạy ghi build, môi trường, tài khoản, fixture/version, requestId, thời gian, actual, defect/retest.</p>
+<p>Bộ ca được thiết kế, <strong>0 ca backend đã chạy</strong>. NOT RUN: chưa có backend/môi trường; BLOCKED: còn thiếu quyết định hoặc dữ liệu ngoài việc thiếu môi trường. Actual/evidence hiện “Chưa có”. Khi chạy ghi build, môi trường, tài khoản, fixture/version, requestId, thời gian, actual, defect/retest.</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1071,7 +1071,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. PUT đủ trường với version=0; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">201; version=1; 1 revision và audit; số liệu giữ đúng, không đổi công thức món</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-002</td>
@@ -1081,7 +1081,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. PUT energyKcal=-1 hoặc proteinG=null hoặc thiếu sourceLocator; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">422; ERR-NUTR-422-01; không ghi bất kỳ bảng nào</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-003</td>
@@ -1091,7 +1091,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. người thứ hai PUT version=1; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">409 ERR-NUTR-409-01; giá trị version=2 không bị ghi đè</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-004</td>
@@ -1101,7 +1101,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. POST recipeIds của hai công thức; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">200; complete=2,total=2; không đếm lặp I1</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-005</td>
@@ -1111,7 +1111,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. kiểm độ phủ hai công thức có I2; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">200; complete=1,total=2; missing ghi I2 và cả hai recipeId; không thay null bằng 0</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-006</td>
@@ -1121,7 +1121,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. kiểm I1 rồi gửi lại khi thiếu đăng nhập; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">lần đầu complete=1; lần sau 401 ERR-NUTR-401-01; không trả dữ liệu</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-007</td>
@@ -1131,7 +1131,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. tính món với công thức ACTIVE; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">totals=40.00 kcal,4.00g đạm,0.80g béo,6.00g carb; có nhãn ước tính từ định lượng sống</td>
 <td align="left">BLOCKED: NUTR-Q02</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-008</td>
@@ -1141,7 +1141,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. tính món; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">422 ERR-NUTR-422-02; totals=null; chỉ rõ nguyên liệu thiếu quy đổi, không trả tổng một phần</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-009</td>
@@ -1151,7 +1151,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. tính rồi đổi COST_AP_HAO_HUT và tính lại; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">hai kết quả bằng nhau:40.00/4.00/0.80/6.00; không nhân hao hụt Cost</td>
 <td align="left">BLOCKED: NUTR-Q02</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-010</td>
@@ -1161,7 +1161,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. chọn A và phụ rồi tính; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">50.00 kcal,5.00g đạm,1.00g béo,7.50g carb; không cộng B; lưu danh sách món đã chọn</td>
 <td align="left">BLOCKED: NUTR-Q03</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-011</td>
@@ -1171,7 +1171,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. POST tổ hợp có 2 chính hoặc trùng itemId; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">422 ERR-NUTR-422-03; không tính tổng</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-012</td>
@@ -1181,7 +1181,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. POST menuVersion=2 hoặc itemId thuộc cơ sở không có quyền; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">409 ERR-NUTR-409-01 hoặc 404 ERR-NUTR-404-01 tương ứng; không lộ dữ liệu ngoài quyền</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-013</td>
@@ -1191,7 +1191,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. GET C1; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">200; giữ totals/source version=1; isStale=true; đề nghị tính lại</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-014</td>
@@ -1201,7 +1201,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. GET C1; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">404 ERR-NUTR-404-01; không trả totals hoặc nguồn</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 <tr>
 <td align="left">TC-NUTR-015</td>
@@ -1211,7 +1211,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">1. Seed fixture vào môi trường test; 2. phản hồi C1 tới sau C2; 3. Đối chiếu response, bảng/audit và UI theo expected</td>
 <td align="left">UI giữ C2; lịch sử vẫn xem C1; cả hai có nhãn ước tính từ định lượng sống</td>
 <td align="left">NOT RUN</td>
-<td align="left">—</td>
+<td align="left">Chưa có</td>
 </tr>
 </tbody></table></div>
 <h2>Kiểm lỗi hợp đồng bổ sung</h2>
@@ -1329,8 +1329,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">NOT RUN</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-test-traceability-md" hidden><p><a href="test/traceability.md">Mở Markdown nguồn</a> · test/traceability.md</p><h1>Ma trận truy vết — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-test-traceability-md" hidden><p><a href="test/traceability.md">Mở Markdown nguồn</a> · test/traceability.md</p><h1>Ma trận truy vết (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1544,8 +1544,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 <td align="left">NOT RUN</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-ui-user-flow-md" hidden><p><a href="ui/user-flow.md">Mở Markdown nguồn</a> · ui/user-flow.md</p><h1>User flow — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-ui-user-flow-md" hidden><p><a href="ui/user-flow.md">Mở Markdown nguồn</a> · ui/user-flow.md</p><h1>User flow (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1598,8 +1598,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </tr>
 </tbody></table></div>
 <p>Truy vết màn và trường: <a href="#doc-ui-wireframe-ascii-md">wireframe</a>; <a href="#doc-api-api-spec-md">API</a>; <a href="#doc-test-traceability-md">use case/story/test</a>. Không có test tương tác UI vì đây là wireframe ASCII.</p>
-</section><section id="doc-ui-wireframe-ascii-md" hidden><p><a href="ui/wireframe-ascii.md">Mở Markdown nguồn</a> · ui/wireframe-ascii.md</p><h1>Wireframe ASCII — Dinh dưỡng</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-ui-wireframe-ascii-md" hidden><p><a href="ui/wireframe-ascii.md">Mở Markdown nguồn</a> · ui/wireframe-ascii.md</p><h1>Wireframe ASCII: Dinh dưỡng</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1617,7 +1617,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </tr>
 </tbody></table></div>
 <p>Phác thảo review, không phải UI đã chạy. Không có dữ liệu dinh dưỡng thực tế. Đơn vị luôn nằm cạnh số; thao tác lưu/tính chỉ bật khi đủ đầu vào. Quyền ẩn nút không thay kiểm quyền server.</p>
-<h2>UI-NUTR-01 — Thành phần và độ phủ (API-NUTR-001/002/006/007)</h2>
+<h2>UI-NUTR-01: Thành phần và độ phủ (API-NUTR-001/002/006/007)</h2>
 <pre><code class="language-text">┌ DINH DƯỠNG / BẢNG THÀNH PHẦN ──────────────────────────┐
 │ Tìm nguyên liệu [________]  Công thức [chọn 30 món...]  │
 │ Độ phủ: --/-- [Kiểm độ phủ]   [Chỉ xem còn thiếu]       │
@@ -1632,7 +1632,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 └───────────────────────────────────────────────────────┘
 </code></pre>
 <p>Không tự điền ediblePct=100; nếu DB legacy có default thì vẫn yêu cầu xác nhận mapping. Hủy nhập chỉ bỏ thay đổi chưa lưu. Lịch sử hiển thị người/ngày/lý do/giá trị cũ mới, không có nút xóa lịch sử. 409 giữ form, hiện giá trị mới để người dùng đối chiếu; không tự ghi đè.</p>
-<h2>UI-NUTR-02 — Dinh dưỡng món (API-NUTR-003/005)</h2>
+<h2>UI-NUTR-02: Dinh dưỡng món (API-NUTR-003/005)</h2>
 <pre><code class="language-text">┌ MÓN / DINH DƯỠNG ──────────────────────────────────────┐
 │ Món [ ] Công thức ACTIVE [ ] Ngày phục vụ [ ] [Tính]   │
 │ ƯỚC TÍNH TỪ ĐỊNH LƯỢNG SỐNG                           │
@@ -1643,7 +1643,7 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 └───────────────────────────────────────────────────────┘
 </code></pre>
 <p>Thiếu dữ liệu thì dấu “--” và danh sách thiếu thay cho 0; không vẽ số tổng từng phần. Nguồn đã đổi không làm mất bản cũ; badge “Cũ” đi kèm thời điểm tính.</p>
-<h2>UI-NUTR-03 — Dinh dưỡng tổ hợp suất (API-NUTR-004/005)</h2>
+<h2>UI-NUTR-03: Dinh dưỡng tổ hợp suất (API-NUTR-004/005)</h2>
 <pre><code class="language-text">┌ SUẤT / CHỌN TỔ HỢP ────────────────────────────────────┐
 │ Thực đơn [ ] Version [ ] Ngày [ ] Loại suất [chỉ đọc] │
 │ Món chính: ( ) A  ( ) B   / số món cần chọn: ...        │
@@ -1655,8 +1655,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 └───────────────────────────────────────────────────────┘
 </code></pre>
 <p>Món cố định bắt buộc được đưa vào request, không chọn lặp. Nếu cơm/gia vị chưa được xác định thuộc suất, hiển thị phạm vi đã tính và câu hỏi NUTR-Q03, không gọi đây là số đã nghiệm thu cho suất đầy đủ. Có nhiều món chính thì UI chọn đúng số theo loại suất, không ép luôn một món.</p>
-</section><section id="doc-usecases-UC-NUTR-001-md" hidden><p><a href="usecases/UC-NUTR-001.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-001.md</p><h1>UC-NUTR-001 — Quản lý bảng thành phần</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-usecases-UC-NUTR-001-md" hidden><p><a href="usecases/UC-NUTR-001.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-001.md</p><h1>UC-NUTR-001: Quản lý bảng thành phần</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1698,8 +1698,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 3b. hai người cùng đọc I1 version=1; người thứ nhất đã ghi version=2: 409 ERR-NUTR-409-01; giá trị version=2 không bị ghi đè.
 4a. Mất mạng/phản hồi: giữ dữ liệu nhập; thao tác ghi phải đối soát version/run/key trước khi thử lại; không báo thành công nếu chưa xác định kết quả.</p>
 <p>Kiểm chi tiết: <a href="#doc-userstories-acceptance-criteria-md">AC</a>, <a href="#doc-test-test-cases-md">test</a>, <a href="#doc-api-api-spec-md">API</a>.</p>
-</section><section id="doc-usecases-UC-NUTR-002-md" hidden><p><a href="usecases/UC-NUTR-002.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-002.md</p><h1>UC-NUTR-002 — Kiểm độ phủ nguyên liệu</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-usecases-UC-NUTR-002-md" hidden><p><a href="usecases/UC-NUTR-002.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-002.md</p><h1>UC-NUTR-002: Kiểm độ phủ nguyên liệu</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1741,8 +1741,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 3b. I1 có cả bốn chỉ số bằng 0 và nguồn đầy đủ: lần đầu complete=1; lần sau 401 ERR-NUTR-401-01; không trả dữ liệu.
 4a. Mất mạng/phản hồi: giữ dữ liệu nhập; thao tác ghi phải đối soát version/run/key trước khi thử lại; không báo thành công nếu chưa xác định kết quả.</p>
 <p>Kiểm chi tiết: <a href="#doc-userstories-acceptance-criteria-md">AC</a>, <a href="#doc-test-test-cases-md">test</a>, <a href="#doc-api-api-spec-md">API</a>.</p>
-</section><section id="doc-usecases-UC-NUTR-003-md" hidden><p><a href="usecases/UC-NUTR-003.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-003.md</p><h1>UC-NUTR-003 — Tính dinh dưỡng món</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-usecases-UC-NUTR-003-md" hidden><p><a href="usecases/UC-NUTR-003.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-003.md</p><h1>UC-NUTR-003: Tính dinh dưỡng món</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1784,8 +1784,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 3b. qty=1 quả; gramsPerUnit=50; edible=80%; cùng thành phần I1: hai kết quả bằng nhau:40.00/4.00/0.80/6.00; không nhân hao hụt Cost.
 4a. Mất mạng/phản hồi: giữ dữ liệu nhập; thao tác ghi phải đối soát version/run/key trước khi thử lại; không báo thành công nếu chưa xác định kết quả.</p>
 <p>Kiểm chi tiết: <a href="#doc-userstories-acceptance-criteria-md">AC</a>, <a href="#doc-test-test-cases-md">test</a>, <a href="#doc-api-api-spec-md">API</a>.</p>
-</section><section id="doc-usecases-UC-NUTR-004-md" hidden><p><a href="usecases/UC-NUTR-004.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-004.md</p><h1>UC-NUTR-004 — Tính dinh dưỡng tổ hợp suất</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-usecases-UC-NUTR-004-md" hidden><p><a href="usecases/UC-NUTR-004.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-004.md</p><h1>UC-NUTR-004: Tính dinh dưỡng tổ hợp suất</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1827,8 +1827,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 3b. đang xem menuVersion=2, một người sửa thành 3: 409 ERR-NUTR-409-01 hoặc 404 ERR-NUTR-404-01 tương ứng; không lộ dữ liệu ngoài quyền.
 4a. Mất mạng/phản hồi: giữ dữ liệu nhập; thao tác ghi phải đối soát version/run/key trước khi thử lại; không báo thành công nếu chưa xác định kết quả.</p>
 <p>Kiểm chi tiết: <a href="#doc-userstories-acceptance-criteria-md">AC</a>, <a href="#doc-test-test-cases-md">test</a>, <a href="#doc-api-api-spec-md">API</a>.</p>
-</section><section id="doc-usecases-UC-NUTR-005-md" hidden><p><a href="usecases/UC-NUTR-005.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-005.md</p><h1>UC-NUTR-005 — Xem kết quả và nguồn lịch sử</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-usecases-UC-NUTR-005-md" hidden><p><a href="usecases/UC-NUTR-005.md">Mở Markdown nguồn</a> · usecases/UC-NUTR-005.md</p><h1>UC-NUTR-005: Xem kết quả và nguồn lịch sử</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1870,8 +1870,8 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 3b. C1 và C2 là hai lần tính, clientRevision 1 và 2: UI giữ C2; lịch sử vẫn xem C1; cả hai có nhãn ước tính từ định lượng sống.
 4a. Mất mạng/phản hồi: giữ dữ liệu nhập; thao tác ghi phải đối soát version/run/key trước khi thử lại; không báo thành công nếu chưa xác định kết quả.</p>
 <p>Kiểm chi tiết: <a href="#doc-userstories-acceptance-criteria-md">AC</a>, <a href="#doc-test-test-cases-md">test</a>, <a href="#doc-api-api-spec-md">API</a>.</p>
-</section><section id="doc-userstories-acceptance-criteria-md" hidden><p><a href="userstories/acceptance-criteria.md">Mở Markdown nguồn</a> · userstories/acceptance-criteria.md</p><h1>Acceptance criteria — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-userstories-acceptance-criteria-md" hidden><p><a href="userstories/acceptance-criteria.md">Mở Markdown nguồn</a> · userstories/acceptance-criteria.md</p><h1>Acceptance criteria (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1889,113 +1889,113 @@ Món = tổng component; suất = tổng các món trong tổ hợp cụ thể. 
 </tr>
 </tbody></table></div>
 <p>Expected là hợp đồng nháp; scenario phụ thuộc câu hỏi chưa phải tiêu chí đã duyệt. Dữ liệu I1/I2/A/B và tiền/token thử đều giả định, không phải dữ liệu Gia Phát.</p>
-<h2>AC-NUTR-001 — US-NUTR-001, scenario 1</h2>
-<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần — 1
+<h2>AC-NUTR-001: US-NUTR-001, scenario 1</h2>
+<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần (trường hợp 1)
   Given bảng thử nguyên liệu I1 chưa có, nguồn ghi rõ GIẢ ĐỊNH, kcal=100; đạm=10; béo=2; carb=15; ediblePct=80; unit=g
   When PUT đủ trường với version=0
   Then 201; version=1; 1 revision và audit; số liệu giữ đúng, không đổi công thức món
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-001; BR-NUTR-001; TC-NUTR-001. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-002 — US-NUTR-001, scenario 2</h2>
-<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần — 2
+<h2>AC-NUTR-002: US-NUTR-001, scenario 2</h2>
+<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần (trường hợp 2)
   Given I1 có version=1
   When PUT energyKcal=-1 hoặc proteinG=null hoặc thiếu sourceLocator
   Then 422; ERR-NUTR-422-01; không ghi bất kỳ bảng nào
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-001; BR-NUTR-001; TC-NUTR-002. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-003 — US-NUTR-001, scenario 3</h2>
-<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần — 3
+<h2>AC-NUTR-003: US-NUTR-001, scenario 3</h2>
+<pre><code class="language-gherkin">Scenario: Quản lý bảng thành phần (trường hợp 3)
   Given hai người cùng đọc I1 version=1; người thứ nhất đã ghi version=2
   When người thứ hai PUT version=1
   Then 409 ERR-NUTR-409-01; giá trị version=2 không bị ghi đè
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-001; BR-NUTR-001; TC-NUTR-003. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-004 — US-NUTR-002, scenario 1</h2>
-<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu — 1
+<h2>AC-NUTR-004: US-NUTR-002, scenario 1</h2>
+<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu (trường hợp 1)
   Given hai công thức thử dùng chung I1 và I2 đều đủ dữ liệu
   When POST recipeIds của hai công thức
   Then 200; complete=2,total=2; không đếm lặp I1
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-002; BR-NUTR-002; TC-NUTR-004. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-005 — US-NUTR-002, scenario 2</h2>
-<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu — 2
+<h2>AC-NUTR-005: US-NUTR-002, scenario 2</h2>
+<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu (trường hợp 2)
   Given I2 chưa có bảng thành phần
   When kiểm độ phủ hai công thức có I2
   Then 200; complete=1,total=2; missing ghi I2 và cả hai recipeId; không thay null bằng 0
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-002; BR-NUTR-002; TC-NUTR-005. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-006 — US-NUTR-002, scenario 3</h2>
-<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu — 3
+<h2>AC-NUTR-006: US-NUTR-002, scenario 3</h2>
+<pre><code class="language-gherkin">Scenario: Kiểm độ phủ nguyên liệu (trường hợp 3)
   Given I1 có cả bốn chỉ số bằng 0 và nguồn đầy đủ
   When kiểm I1 rồi gửi lại khi thiếu đăng nhập
   Then lần đầu complete=1; lần sau 401 ERR-NUTR-401-01; không trả dữ liệu
 </code></pre>
 <p>Truy vết: FR-NUTR-REF-002; BR-NUTR-002; TC-NUTR-006. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-007 — US-NUTR-003, scenario 1</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món — 1
+<h2>AC-NUTR-007: US-NUTR-003, scenario 1</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món (trường hợp 1)
   Given fixture I1: qty=50g, edible=80%, kcal=100/P10/F2/C15 trên 100g; chỉ một dòng
   When tính món với công thức ACTIVE
   Then totals=40.00 kcal,4.00g đạm,0.80g béo,6.00g carb; có nhãn ước tính từ định lượng sống
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-001; BR-NUTR-003; TC-NUTR-007. Trạng thái: BLOCKED: NUTR-Q02.</p>
-<h2>AC-NUTR-008 — US-NUTR-003, scenario 2</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món — 2
+<h2>AC-NUTR-008: US-NUTR-003, scenario 2</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món (trường hợp 2)
   Given công thức dùng 1 quả nhưng gramsPerUnit thiếu
   When tính món
   Then 422 ERR-NUTR-422-02; totals=null; chỉ rõ nguyên liệu thiếu quy đổi, không trả tổng một phần
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-001; BR-NUTR-003; TC-NUTR-008. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-009 — US-NUTR-003, scenario 3</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món — 3
+<h2>AC-NUTR-009: US-NUTR-003, scenario 3</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng món (trường hợp 3)
   Given qty=1 quả; gramsPerUnit=50; edible=80%; cùng thành phần I1
   When tính rồi đổi COST_AP_HAO_HUT và tính lại
   Then hai kết quả bằng nhau:40.00/4.00/0.80/6.00; không nhân hao hụt Cost
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-001; BR-NUTR-003; TC-NUTR-009. Trạng thái: BLOCKED: NUTR-Q02.</p>
-<h2>AC-NUTR-010 — US-NUTR-004, scenario 1</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất — 1
+<h2>AC-NUTR-010: US-NUTR-004, scenario 1</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất (trường hợp 1)
   Given suất thử yêu cầu 1 chính; chính A=40/4/0.8/6, B=80/8/1.6/12; phụ cố định=10/1/0.2/1.5
   When chọn A và phụ rồi tính
   Then 50.00 kcal,5.00g đạm,1.00g béo,7.50g carb; không cộng B; lưu danh sách món đã chọn
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-002; BR-NUTR-004; TC-NUTR-010. Trạng thái: BLOCKED: NUTR-Q03.</p>
-<h2>AC-NUTR-011 — US-NUTR-004, scenario 2</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất — 2
+<h2>AC-NUTR-011: US-NUTR-004, scenario 2</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất (trường hợp 2)
   Given suất cần 1 chính, người dùng chọn A và B
   When POST tổ hợp có 2 chính hoặc trùng itemId
   Then 422 ERR-NUTR-422-03; không tính tổng
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-002; BR-NUTR-004; TC-NUTR-011. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-012 — US-NUTR-004, scenario 3</h2>
-<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất — 3
+<h2>AC-NUTR-012: US-NUTR-004, scenario 3</h2>
+<pre><code class="language-gherkin">Scenario: Tính dinh dưỡng tổ hợp suất (trường hợp 3)
   Given đang xem menuVersion=2, một người sửa thành 3
   When POST menuVersion=2 hoặc itemId thuộc cơ sở không có quyền
   Then 409 ERR-NUTR-409-01 hoặc 404 ERR-NUTR-404-01 tương ứng; không lộ dữ liệu ngoài quyền
 </code></pre>
 <p>Truy vết: FR-NUTR-CALC-002; BR-NUTR-004; TC-NUTR-012. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-013 — US-NUTR-005, scenario 1</h2>
-<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử — 1
+<h2>AC-NUTR-013: US-NUTR-005, scenario 1</h2>
+<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử (trường hợp 1)
   Given calculation C1 ghi I1 version=1; I1 đổi thành version=2
   When GET C1
   Then 200; giữ totals/source version=1; isStale=true; đề nghị tính lại
 </code></pre>
 <p>Truy vết: FR-NUTR-SNAP-001; BR-NUTR-005; TC-NUTR-013. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-014 — US-NUTR-005, scenario 2</h2>
-<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử — 2
+<h2>AC-NUTR-014: US-NUTR-005, scenario 2</h2>
+<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử (trường hợp 2)
   Given người dùng không có quyền cơ sở của C1
   When GET C1
   Then 404 ERR-NUTR-404-01; không trả totals hoặc nguồn
 </code></pre>
 <p>Truy vết: FR-NUTR-SNAP-001; BR-NUTR-005; TC-NUTR-014. Trạng thái: NOT RUN.</p>
-<h2>AC-NUTR-015 — US-NUTR-005, scenario 3</h2>
-<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử — 3
+<h2>AC-NUTR-015: US-NUTR-005, scenario 3</h2>
+<pre><code class="language-gherkin">Scenario: Xem kết quả và nguồn lịch sử (trường hợp 3)
   Given C1 và C2 là hai lần tính, clientRevision 1 và 2
   When phản hồi C1 tới sau C2
   Then UI giữ C2; lịch sử vẫn xem C1; cả hai có nhãn ước tính từ định lượng sống
 </code></pre>
 <p>Truy vết: FR-NUTR-SNAP-001; BR-NUTR-005; TC-NUTR-015. Trạng thái: NOT RUN.</p>
-</section><section id="doc-userstories-backlog-md" hidden><p><a href="userstories/backlog.md">Mở Markdown nguồn</a> · userstories/backlog.md</p><h1>Backlog MVP — NUTR</h1>
-<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
+</section><section id="doc-userstories-backlog-md" hidden><p><a href="userstories/backlog.md">Mở Markdown nguồn</a> · userstories/backlog.md</p><h1>Backlog MVP (NUTR)</h1>
+<p>Phiên bản 0.1.0 · 2026-11-11 · <strong>Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>

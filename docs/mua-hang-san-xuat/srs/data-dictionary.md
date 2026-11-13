@@ -31,21 +31,21 @@ Tên physical dưới đây chỉ là đề xuất để review, chưa migration
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Mã | id | Id | Theo E1 | Không | PK đề xuất | Cấp bởi hệ thống; chưa chọn kiểu mới | Định danh |
 | Cơ sở | kitchen_id | Id | Theo E1 | Không | FK logic kitchens | Scope từ quyền hiện tại | Không tin cơ sở client tự khai |
-| Ngày phục vụ | service_date | Date | ISO date | Tùy thực thể | — | Không mặc định hôm nay | Tách ngày nhận và ngày phục vụ |
-| Phiên bản | version | Integer | Chờ contract | Không | — | Token kiểm khi ghi | Không tráo revision nguồn |
+| Ngày phục vụ | service_date | Date | ISO date | Tùy thực thể | Không áp dụng | Không mặc định hôm nay | Tách ngày nhận và ngày phục vụ |
+| Phiên bản | version | Integer | Chờ contract | Không | Không áp dụng | Token kiểm khi ghi | Không tráo revision nguồn |
 | Nguồn | source_refs | Reference[] | Chờ contract | Không | FK logic | Giữ loại, id, revision nguồn | Thiếu thì BLOCKED |
-| Lượng | quantity | Decimal string | Chờ độ chính xác | Có khi chưa biết | — | Kèm unit; không âm; null không là 0 | Không cộng kg với suất |
-| Giá nguồn | quoted_unit_price | Decimal string | Theo PriceInput E3 | Có khi thiếu | — | Không dùng trực tiếp tính cost | Giá báo |
-| Cơ sở giá | price_basis | Enum | Theo E3 | Có khi thiếu | — | INCLUSIVE / EXCLUSIVE / FINAL_CONFIRMED | Không dùng UNKNOWN như đã chuẩn hóa |
-| VAT | vat_rate_pct / vat_unit_amount | Decimal string | Theo E3 | Theo basis | — | EXCLUSIVE cần đúng một căn cứ hợp lệ | Không tự mặc định 0 |
-| Giá cost | effective_cost_unit_price | Integer money | Theo E3 | Có khi chưa xác định | — | Server chuẩn hóa gồm VAT; phần lẻ chờ | Không nhận số tin cậy từ client |
-| Nguồn giá | pricing_evidence | Text/reference | Theo E3 | Không khi xác định giá | — | Giữ chứng từ/xác nhận | Không suy từ cờ hóa đơn |
+| Lượng | quantity | Decimal string | Chờ độ chính xác | Có khi chưa biết | Không áp dụng | Kèm unit; không âm; null không là 0 | Không cộng kg với suất |
+| Giá nguồn | quoted_unit_price | Decimal string | Theo PriceInput E3 | Có khi thiếu | Không áp dụng | Không dùng trực tiếp tính cost | Giá báo |
+| Cơ sở giá | price_basis | Enum | Theo E3 | Có khi thiếu | Không áp dụng | INCLUSIVE / EXCLUSIVE / FINAL_CONFIRMED | Không dùng UNKNOWN như đã chuẩn hóa |
+| VAT | vat_rate_pct / vat_unit_amount | Decimal string | Theo E3 | Theo basis | Không áp dụng | EXCLUSIVE cần đúng một căn cứ hợp lệ | Không tự mặc định 0 |
+| Giá cost | effective_cost_unit_price | Integer money | Theo E3 | Có khi chưa xác định | Không áp dụng | Server chuẩn hóa gồm VAT; phần lẻ chờ | Không nhận số tin cậy từ client |
+| Nguồn giá | pricing_evidence | Text/reference | Theo E3 | Không khi xác định giá | Không áp dụng | Giữ chứng từ/xác nhận | Không suy từ cờ hóa đơn |
 | Tệp | file_ref | Id | Theo E1 | Có ở bản nháp | FK logic files | Quyền theo chủ thể, không public URL | Ảnh chứng từ |
-| Trạng thái | status | Enum | Theo states | Không | — | DRAFT khi tạo nháp | Không suy được duyệt |
+| Trạng thái | status | Enum | Theo states | Không | Không áp dụng | DRAFT khi tạo nháp | Không suy được duyệt |
 | Người/thời điểm | actor_id / recorded_at | Id / Timestamp | Theo E1 | Không khi ghi | FK logic users | Do phiên/server xác định | Audit |
-| Lý do | reason | Text | Theo E1 / chờ Q13 | Không khi sửa số | — | Không ghi đè lịch sử | Căn cứ thay đổi |
+| Lý do | reason | Text | Theo E1 / chờ Q13 | Không khi sửa số | Không áp dụng | Không ghi đè lịch sử | Căn cứ thay đổi |
 
-> Chờ E11-Q14 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ E11-Q14: XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-09](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 ## Thực thể đề xuất và trường riêng
 
@@ -68,8 +68,8 @@ Tên physical dưới đây chỉ là đề xuất để review, chưa migration
 
 Mọi độ dài/precision chưa có nguồn đều chờ E11-Q13, không tự lấy từ mẫu. Giữ nguyên invoiceRequested riêng và khoản chiết khấu theo đơn ở E3/E6; không sao chép hồ sơ sức khỏe. Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ không yêu cầu hóa đơn độc lập, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn, không giảm phải trả nhà cung cấp và không tự khấu trừ số khách phải trả. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-02/R11 dùng ≤ 3 điểm phần trăm, không phải sai số tính toán. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chặn O-03, không thu dữ liệu sức khỏe.
 
-## Quy ước tài liệu liên epic — XC-04
+## Quy ước tài liệu liên epic (XC-04)
 
 [Quy ước tham chiếu và phiên bản](../../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md) phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.
 
-> Chờ E11-Q13 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.
+> Chờ E11-Q13: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.

@@ -1,6 +1,6 @@
-# SRS — Dinh dưỡng E4
+# SRS: Dinh dưỡng E4
 
-Phiên bản 0.1.1 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.1 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -79,10 +79,10 @@ Giao diện: [API](../api/api-spec.md), [wireframe ASCII](../ui/wireframe-ascii.
 
 [Sổ câu hỏi](../review/questions.md) là nguồn trạng thái; tất cả câu mới CHỜ XÁC NHẬN. [Gói review](../../gia-phat/review/mvp-e4-e5-handoff.md) có giới hạn kiểm tra và phần còn thiếu.
 
-## Hồ sơ bổ sung để review — 11/11/2026
+## Hồ sơ bổ sung để review ngày 11/11/2026
 
 [Preview toàn hồ sơ](../preview.html) · [API](../api/api-spec.md) · [Luồng tuần tự](flows.md) · [Trạng thái](states.md) · [Gap](../gap-analysis.md). Gói bổ sung không tự đóng câu hỏi, thay quy tắc nghiệp vụ hoặc chứng minh backend đã triển khai. [Bàn giao](../../gia-phat/review/ba-completion-handoff.md).
 
-## Liên kết phụ thuộc E6 — bổ sung 11/11/2026
+## Liên kết phụ thuộc E6: bổ sung 11/11/2026
 
 [Gói E6 để review](../../chon-mon-order/preview.html) · [Hợp đồng phụ thuộc](../../chon-mon-order/review/dependencies.md) · [Đối chiếu schema](../../chon-mon-order/srs/data-dictionary.md). E6 giữ nguồn công bố/quyền và quy tắc của phân hệ này; delta chưa merge, không thay gate hoặc chứng minh phần mềm đã triển khai.

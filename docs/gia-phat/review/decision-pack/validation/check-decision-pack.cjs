@@ -30,7 +30,7 @@ for(const g of groups){check(groupText.includes('<a id="'+g.id.toLowerCase()+'">
 const consistency=read('docs/gia-phat/review/decision-pack/cross-epic-consistency.md');
 const machine=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/cross-epic-result.json'));
 const manual=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/manual-findings.json'));
-for(const f of [...machine.findings,...manual])check(consistency.includes('## '+f.id+' —'),'Finding absent from report '+f.id);
+for(const f of [...machine.findings,...manual])check(consistency.includes('## '+f.id+':'),'Finding absent from report '+f.id);
 for(const r of rows)if(r.recommendation)check(clean(read(r.sourceFile)).includes(clean(r.recommendation)),'Recommendation not copied from source '+r.sourceCode);
 const manifest=JSON.parse(read('docs/gia-phat/review/decision-pack/validation/files-created.json'));
 for(const p of walk(pack).map(rel))check(manifest.created.includes(p)||p.startsWith(follow)||p.endsWith('/ba-open-questions.md'),'New file not in historical manifest or follow-up '+p);

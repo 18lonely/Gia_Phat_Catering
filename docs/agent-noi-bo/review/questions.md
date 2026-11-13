@@ -1,6 +1,6 @@
-# Sổ câu hỏi — AIO
+# Sổ câu hỏi (AIO)
 
-Phiên bản 0.1.1 · 2026-11-11 · **Draft — đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.1 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
@@ -19,6 +19,6 @@ Không có người/ngày ký thay stakeholder. Đề xuất kỹ thuật không
 | AIO-Q06 | Chốt giao diện adapter MENU kiểm nháp/ghi nháp và giao dịch apply, nơi lưu idempotency/quota, xử lý khóa và rollout? | Tech lead, BA | FR-AIO-APLY-001; hợp đồng port đề xuất, chưa có endpoint MENU được triển khai | CHỜ XÁC NHẬN |  |
 | AIO-Q07 | E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn? | chưa rõ | BLOCKED nghiệm thu phép đo phản hồi đầu; AIO-Q01 và E1-Q06 còn mở. XC-12; DEC-199. Đối chiếu đề xuất E1-Q06; giữ hai chỉ số riêng, chưa chọn cách đo. | CHỜ TRẢ LỜI |  |
 
-> Chờ AIO-Q07, E1-Q06 — XC-12. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-12](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
+> Chờ AIO-Q07, E1-Q06: XC-12. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: [XC-12](../../gia-phat/review/decision-pack/cross-epic-consistency.md) và câu nguồn được dẫn; không coi đề xuất là xác nhận.
 
 Khi trả lời: ghi lựa chọn, ví dụ/ca biên, người xác nhận, ngày, nguồn và phiên bản tài liệu; cập nhật SRS/API/ERD/UI/AC/test rồi mới đóng. Ca BLOCKED chuyển NOT RUN khi đủ đầu vào, không tự chuyển PASS. Các ca kỹ thuật dùng fixture giả định có thể chuẩn bị độc lập.

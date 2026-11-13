@@ -1,13 +1,13 @@
 ---
 id: DOC-E6-USECASES-UC-ORD-016
-title: UC-ORD-016 — Xem thông tin món công bố
+title: "UC-ORD-016: Xem thông tin món công bố"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-ORD-016 — Xem thông tin món công bố
+# UC-ORD-016: Xem thông tin món công bố
 
 **Draft để review · cập nhật 12/11/2026 · Chưa duyệt nghiệp vụ, chưa triển khai backend/UAT.**
 
@@ -18,7 +18,7 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 | 0.2.0 | 2026-11-11 | Bổ sung chi tiết E6, giữ gate và mã gốc |
 | 0.2.1 | 2026-11-12 | Phân biệt đọc, ghi, worker và gate theo catalog; giữ policy mở |
 
-- **ID / mức:** UC-ORD-016 / Sea — mục tiêu nghiệp vụ.
+- **ID / mức:** UC-ORD-016 / Sea (mục tiêu nghiệp vụ).
 - **Truy vết:** FEAT-045 / P0; FR-NUTR-DSP-001; US-E6-016; API-ORD-001; UI-ORD-06.
 - **Actor chính:** Người ăn. Hỗ trợ: AUTH/SYS kiểm quyền và audit theo thao tác; nguồn/port chỉ tham gia khi được nêu trong luồng.
 - **Bên quan tâm:** người ăn cần giữ đúng lựa chọn; người đặt tổng cần số suất giải thích được; bếp cần nguồn phiên bản; BA cần không che điểm mở.
@@ -37,12 +37,12 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 
 ## Nhánh rẽ và ngoại lệ
 
-- **2a — đầu vào/quyền nghiệp vụ:** Given thiếu dữ liệu dinh dưỡng một nguyên liệu; When mở tổ hợp; Then totals=null và lý do thiếu; không hiển thị 0 như kết quả thật.
-- **3a — biên/đồng thời:** Given client dò field cost và id khách khác; When gọi available-meals; Then DTO chỉ allowlist; ngoài scope 404; lỗi không lộ cost/giá nhập.
-- **3b — quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
-- **4a — mất phản hồi GET:** có thể đọc lại với kiểm quyền/scope hiện tại; không cần Idempotency-Key hoặc đối soát receipt ghi; không tự chốt retry limits.
-- **4b — nguồn/version đổi:** đọc lại theo contract query hiện có, hiển thị phiên bản nguồn của kết quả; không suy stale-write409 cho GET. Visibility/current/freshness còn gap, không tự chọn policy.
-- **4c — phụ thuộc gián đoạn:** ERR-ORD-503-01 theo ma trận lỗi; không giả dữ liệu cũ là hiện hành hoặc thiếu dữ liệu là0. requestId chỉ là correlation, không chứng minh commit.
+- **2a. Đầu vào/quyền nghiệp vụ:** Given thiếu dữ liệu dinh dưỡng một nguyên liệu; When mở tổ hợp; Then totals=null và lý do thiếu; không hiển thị 0 như kết quả thật.
+- **3a. Biên/đồng thời:** Given client dò field cost và id khách khác; When gọi available-meals; Then DTO chỉ allowlist; ngoài scope 404; lỗi không lộ cost/giá nhập.
+- **3b. Quyền bị thu hồi:** ERR-ORD-401-01/403-01/404-01 theo [ma trận lỗi](../srs/operational-rules.md); không tiếp tục bằng dữ liệu cache.
+- **4a. Mất phản hồi GET:** có thể đọc lại với kiểm quyền/scope hiện tại; không cần Idempotency-Key hoặc đối soát receipt ghi; không tự chốt retry limits.
+- **4b. Nguồn/version đổi:** đọc lại theo contract query hiện có, hiển thị phiên bản nguồn của kết quả; không suy stale-write409 cho GET. Visibility/current/freshness còn gap, không tự chọn policy.
+- **4c. Phụ thuộc gián đoạn:** ERR-ORD-503-01 theo ma trận lỗi; không giả dữ liệu cũ là hiện hành hoặc thiếu dữ liệu là0. requestId chỉ là correlation, không chứng minh commit.
 
 ## Quy tắc, dữ liệu và kiểm thử
 
@@ -57,6 +57,6 @@ Theo [adapter review](../api/adapter-contract-review.md), totals=null là nghĩa
 
 API-ORD-001 là GET: actor có quyền yêu cầu query/path theo catalog, kiểm lại quyền/scope mỗi lần. Kết quả là dữ liệu đọc, không tạo receipt, commit nghiệp vụ hoặc tăng version; không dùng Idempotency-Key. Mất phản hồi có thể đọc lại, không tự chốt số lần/giãn cách retry. Nguồn đổi được trình bày theo version/nguồn trả về; không mặc định lỗi stale-write 409 chỉ vì đọc lại. Timeout không được giả thành danh sách rỗng hoặc dữ liệu đã đủ.
 
-## Kết quả rà UC — 12/11/2026
+## Kết quả rà UC ngày 12/11/2026
 
 Đối chiếu [ma trận rà 19 UC](../review/uc-operation-review.md). Gap liên quan: E6-CG-09, E6-CG-10 tại [sổ gap chung](../review/contract-gap-register.md); DOCUMENT_CLARIFIED, chưa đóng gap. Mã FR/US/AC/TC và trạng thái test giữ nguyên.

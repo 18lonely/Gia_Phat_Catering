@@ -29,7 +29,7 @@ for f in ['ui/user-flow.md','srs/usecase-diagram.md']:
 new=sorted(p.relative_to(r).as_posix() for p in (r/'docs').rglob('*') if p.is_file() and p.relative_to(r).as_posix() not in baseline)
 result={'kind':'DOCUMENT_PRESERVATION_ONLY','backend_tests_executed':0,'protected_files_checked':protected,'story_ids_checked':len(ids),'changed_existing_files':len(changed),'errors':errors}
 (b/'validation/downstream-check-result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
-out='# Manifest phiên hạ nguồn — 12/11/2026\n\nSo SHA256 trước phiên; không Git. Các file render là đầu ra tái sinh. Mọi file có trước phiên ngoài phạm vi cho phép phải giữ hash, gồm UC/API/AC/RTM, các bộ ca và evidence, schema/Cost, wireframe và snapshot handoff/report cũ.\n\n## File đã thay đổi\n\n'
+out='# Manifest phiên hạ nguồn ngày 12/11/2026\n\nSo SHA256 trước phiên; không Git. Các file render là đầu ra tái sinh. Mọi file có trước phiên ngoài phạm vi cho phép phải giữ hash, gồm UC/API/AC/RTM, các bộ ca và evidence, schema/Cost, wireframe và snapshot handoff/report cũ.\n\n## File đã thay đổi\n\n'
 for f in sorted(changed):out+=f'- [{f}]({Path(__import__("os").path.relpath(r/f,b/"validation")).as_posix()})\n'
 out+='\n## File mới\n\n'
 for f in new:out+=f'- [{f}]({Path(__import__("os").path.relpath(r/f,b/"validation")).as_posix()})\n'

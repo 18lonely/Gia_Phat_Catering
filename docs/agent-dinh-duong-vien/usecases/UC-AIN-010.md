@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-010-MD
-title: UC-AIN-010 — Xem và đề nghị đổi hạn mức
+title: "UC-AIN-010: Xem và đề nghị đổi hạn mức"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-010 — Xem và đề nghị đổi hạn mức
+# UC-AIN-010: Xem và đề nghị đổi hạn mức
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-CONF-001 / FEAT-064 / US-AIN-010.
 
 Trigger: Giám đốc cần điều chỉnh hạn mức của một nhóm sau khi rà chính sách sử dụng và ngân sách AI.
 
-Tiền điều kiện — nghiệp vụ: Có phiên/quyền quản trị, group và policyVersion để đối chiếu; các giá trị đề nghị có căn cứ, không dùng số mặc định.
-Tiền điều kiện — gate còn mở: E9-Q07, E9-Q08, E9-Q13 chưa chốt hạn mức, quyền/duyệt/hiệu lực và contract. O-03 không mở qua cấu hình hạn mức.
+Tiền điều kiện (nghiệp vụ): Có phiên/quyền quản trị, group và policyVersion để đối chiếu; các giá trị đề nghị có căn cứ, không dùng số mặc định.
+Tiền điều kiện (gate còn mở): E9-Q07, E9-Q08, E9-Q13 chưa chốt hạn mức, quyền/duyệt/hiệu lực và contract. O-03 không mở qua cấu hình hạn mức.
 
 Luồng chính:
 1. Giám đốc xem nhóm và policyVersion tại UI-AIN-05, cùng đơn vị và thời gian áp dụng được phép đọc.

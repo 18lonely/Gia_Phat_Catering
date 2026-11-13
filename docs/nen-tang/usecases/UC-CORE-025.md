@@ -1,24 +1,24 @@
 ---
 id: DOC-NEN-TANG-USECASES-UC-CORE-025
-title: UC-CORE-025 — Tác vụ nền
+title: "UC-CORE-025: Tác vụ nền"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# UC-CORE-025 — Tác vụ nền
+# UC-CORE-025: Tác vụ nền
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
 | 0.1.0 | 2026-11-11 | BA | Bổ sung theo kế hoạch; giữ điểm mở và xác nhận đã có |
 
-Mức Sea level (port kỹ thuật: Fish level). Actor: quản trị hoặc người được cấp quyền theo SRS; hệ thống hỗ trợ AUTH/SYS. Bên quan tâm: người vận hành cần đúng quyền và có audit. Trigger: Tác vụ nền. Tiền điều kiện: JobJ1 có eventId và khóa lịch. FR: FR-SYS-JOB-001; BR: —. Thành công: —. Bảo đảm tối thiểu: không ghi nghiệp vụ một phần hoặc lộ bí mật.
+Mức Sea level (port kỹ thuật: Fish level). Actor: quản trị hoặc người được cấp quyền theo SRS; hệ thống hỗ trợ AUTH/SYS. Bên quan tâm: người vận hành cần đúng quyền và có audit. Trigger: Tác vụ nền. Tiền điều kiện: JobJ1 có eventId và khóa lịch. FR: FR-SYS-JOB-001; BR: không áp dụng. Thành công: không áp dụng. Bảo đảm tối thiểu: không ghi nghiệp vụ một phần hoặc lộ bí mật.
 
 1. Actor mở UI-CORE-06 hoặc module gọi port được cấp quyền.
-2. Hệ thống kiểm phiên, quyền và scope; nhận —.
+2. Hệ thống kiểm phiên, quyền và scope; không cần dữ liệu đầu vào.
 3. Hàng đợi có: thử lại với khoảng cách tăng dần, tối đa 5 lần; hàng đợi lỗi cho tác vụ hỏng hẳn; khoá chống chạy trùng cho tác vụ định giờ. `QUAN_TRI` xem được trạng thái và chạy lại tác vụ lỗi.
 4. Trả kết quả, requestId và trạng thái; UI không báo thành công khi mất response.
 

@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-009-MD
-title: UC-AIN-009 — Kiểm và giữ hạn mức lượt/ngân sách
+title: "UC-AIN-009: Kiểm và giữ hạn mức lượt/ngân sách"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-009 — Kiểm và giữ hạn mức lượt/ngân sách
+# UC-AIN-009: Kiểm và giữ hạn mức lượt/ngân sách
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-LIMT-001 / FEAT-064 / US-AIN-009.
 
 Trigger: Một lượt hoặc bước tool/model sắp phát sinh chi phí cần được kiểm hạn mức trước khi chạy.
 
-Tiền điều kiện — nghiệp vụ: Có principal/group đã xác minh từ server, requestKey, policyVersion và upper bound chi phí cưỡng chế được.
-Tiền điều kiện — gate còn mở: E9-Q01, E9-Q07, E9-Q13 chưa chốt provider, nhóm/lượt/cap/đơn vị/ngày và giao dịch; O-03 không được mở qua admission.
+Tiền điều kiện (nghiệp vụ): Có principal/group đã xác minh từ server, requestKey, policyVersion và upper bound chi phí cưỡng chế được.
+Tiền điều kiện (gate còn mở): E9-Q01, E9-Q07, E9-Q13 chưa chốt provider, nhóm/lượt/cap/đơn vị/ngày và giao dịch; O-03 không được mở qua admission.
 
 Luồng chính:
 1. Orchestrator gửi principal/group, policyVersion, requestKey và upper bound của bước cần nhận tới PORT-AIN-ADMISSION.

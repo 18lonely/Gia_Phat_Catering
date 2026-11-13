@@ -1,15 +1,15 @@
 ---
 id: DOC-NEN-TANG-GAP-ANALYSIS
-title: Rà khoảng trống — nen-tang
+title: "Rà khoảng trống: nen-tang"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# Rà khoảng trống — nen-tang
+# Rà khoảng trống: nen-tang
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

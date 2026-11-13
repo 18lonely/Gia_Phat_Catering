@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-API-DATA-MAPPING-MD
-title: Mapping API — dữ liệu — màn E11
+title: "Mapping API, dữ liệu và màn E11"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# Mapping API — dữ liệu — màn E11
+# Mapping API, dữ liệu và màn E11
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 

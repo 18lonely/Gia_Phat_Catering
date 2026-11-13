@@ -334,7 +334,7 @@ Thứ tự phiên review đề xuất: (1) kế toán/Giám đốc chốt O-01, 
 - Nguồn: [ui/user-flow.md](../ui/user-flow.md).
 - Thông tin xác nhận bổ sung: Chưa có xác nhận mới trong đợt kế toán.
 - Hiện tại theo nguồn: Không chia 0; đề xuất hiện không áp dụng, chờ xác nhận
-- Đề xuất để review: Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.
+- Đề xuất để review: Ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.
 - Đánh đổi/cần làm rõ: Không trả Infinity/NaN, không biến delta% thành0 gây hiểu nhầm.
 - Sau quyết định phải cập nhật: API Decimal nullable, bảng phân rã/so sánh, AC.
 - Test bị chặn có gate nêu đích danh: TC-COST-010-08, TC-COST-011-03.

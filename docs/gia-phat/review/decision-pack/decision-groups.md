@@ -27,7 +27,7 @@ Không gộp cost E3, BO-02 E11, cost theo khách E12 và lợi nhuận E13. Kh�
 
 <a id="dec-01"></a>
 
-## DEC-01 — Gợi ý cá nhân có xét bệnh lý không
+## DEC-01: Gợi ý cá nhân có xét bệnh lý không
 
 Cần quyết định: Gợi ý cá nhân có xét bệnh lý không?
 
@@ -55,7 +55,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-02"></a>
 
-## DEC-02 — Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách
+## DEC-02: Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách
 
 Cần quyết định: Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách?
 
@@ -83,7 +83,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-03"></a>
 
-## DEC-03 — Ai duyệt ngoại lệ và ai thay khi vắng
+## DEC-03: Ai duyệt ngoại lệ và ai thay khi vắng
 
 Cần quyết định: Ai duyệt ngoại lệ và ai thay khi vắng?
 
@@ -111,7 +111,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-04"></a>
 
-## DEC-04 — Cỡ định lượng của một món
+## DEC-04: Cỡ định lượng của một món
 
 Cần quyết định: Cỡ định lượng của một món?
 
@@ -159,7 +159,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-05"></a>
 
-## DEC-05 — Thành phần cost và VAT bán ra còn thiếu
+## DEC-05: Thành phần cost và VAT bán ra còn thiếu
 
 Cần quyết định: Thành phần cost và VAT bán ra còn thiếu?
 
@@ -227,7 +227,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-06"></a>
 
-## DEC-06 — Chuẩn envelope giữa các phân hệ
+## DEC-06: Chuẩn envelope giữa các phân hệ
 
 Cần quyết định: Chuẩn envelope giữa các phân hệ?
 
@@ -275,7 +275,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-07"></a>
 
-## DEC-07 — Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?
+## DEC-07: Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?
 
 Cần quyết định: Định danh duy nhất người ăn có tài khoản/QR bằng gì; xử lý nhiều thiết bị/QR chia sẻ và account trùng ra sao?
 
@@ -303,7 +303,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-08"></a>
 
-## DEC-08 — Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?
+## DEC-08: Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?
 
 Cần quyết định: Người đặt tổng có thể quản lý nhiều khách/điểm không; role customer scope và audit QR guest/service lưu thế nào khi user_roles/sessions/audit_logs hiện yêu cầu user?
 
@@ -331,7 +331,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-09"></a>
 
-## DEC-09 — Định lượng sống đã gồm xương, vỏ chưa
+## DEC-09: Định lượng sống đã gồm xương, vỏ chưa
 
 Cần quyết định: Định lượng sống đã gồm xương, vỏ chưa?
 
@@ -359,7 +359,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-10"></a>
 
-## DEC-10 — Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?
+## DEC-10: Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?
 
 Cần quyết định: Ngưỡng đổi sau chốt, vai trò duyệt, delta âm và khi bếp đã sản xuất xử lý thế nào?
 
@@ -387,7 +387,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-11"></a>
 
-## DEC-11 — Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?
+## DEC-11: Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?
 
 Cần quyết định: Bếp phải xác nhận nhận phiên bản kế hoạch mới không; ai phát hành/cho IN_PRODUCTION và xử lý bản in cũ?
 
@@ -415,7 +415,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-12"></a>
 
-## DEC-12 — Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
+## DEC-12: Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
 
 Cần quyết định: Giá suất nào được công khai; ai duyệt, thời hạn hiệu lực và cách ghi VAT/giá tham khảo ra sao?
 
@@ -443,7 +443,7 @@ Thẩm quyền: BA-Q07. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-13"></a>
 
-## DEC-13 — FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
+## DEC-13: FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
 
 Cần quyết định: FEAT-057 sinh mẫu từ thư viện, thuật toán hay cách khác; có phải qua máy kiểm E2; giới hạn loại suất/số suất/kiêng kỵ/ngày/lượt là gì?
 
@@ -471,7 +471,7 @@ Thẩm quyền: BA-Q08. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-14"></a>
 
-## DEC-14 — Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
+## DEC-14: Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
 
 Cần quyết định: Biên lợi nhuận nội bộ trên báo giá dùng công thức, thành phần và nguồn phiên bản nào; ai được xem?
 
@@ -499,7 +499,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-15"></a>
 
-## DEC-15 — Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
+## DEC-15: Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
 
 Cần quyết định: Nguồn E2/E4 ở trạng thái nào đủ điều kiện hiển thị định lượng, 4 chỉ số và dị ứng; làm gì khi stale/thu hồi/thiếu?
 
@@ -527,7 +527,7 @@ Thẩm quyền: BA-Q08. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-16"></a>
 
-## DEC-16 — Trường học, bệnh viện, tiệc cỗ có trong bản đầu không
+## DEC-16: Trường học, bệnh viện, tiệc cỗ có trong bản đầu không
 
 Cần quyết định: Trường học, bệnh viện, tiệc cỗ có trong bản đầu không?
 
@@ -555,7 +555,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-17"></a>
 
-## DEC-17 — Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?
+## DEC-17: Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?
 
 Cần quyết định: Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?
 
@@ -583,7 +583,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-18"></a>
 
-## DEC-18 — MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?
+## DEC-18: MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?
 
 Cần quyết định: MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?
 
@@ -611,7 +611,7 @@ Release: BA-Q44. Trả lời để trống trong [sổ quyết định](decision
 
 <a id="dec-19"></a>
 
-## DEC-19 — Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?
+## DEC-19: Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?
 
 Cần quyết định: Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?
 
@@ -639,7 +639,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-20"></a>
 
-## DEC-20 — Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?
+## DEC-20: Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?
 
 Cần quyết định: Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?
 
@@ -667,7 +667,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-21"></a>
 
-## DEC-21 — Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)
+## DEC-21: Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)
 
 Cần quyết định: Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)?
 
@@ -695,7 +695,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-22"></a>
 
-## DEC-22 — Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?
+## DEC-22: Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?
 
 Cần quyết định: Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?
 
@@ -723,7 +723,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-23"></a>
 
-## DEC-23 — Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)
+## DEC-23: Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)
 
 Cần quyết định: Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)?
 
@@ -751,7 +751,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-24"></a>
 
-## DEC-24 — Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?
+## DEC-24: Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?
 
 Cần quyết định: Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?
 
@@ -779,7 +779,7 @@ Release: BA-Q44. Trả lời để trống trong [sổ quyết định](decision
 
 <a id="dec-25"></a>
 
-## DEC-25 — Kênh thông báo ngoài (Zalo OA, SMS, email)
+## DEC-25: Kênh thông báo ngoài (Zalo OA, SMS, email)
 
 Cần quyết định: Kênh thông báo ngoài (Zalo OA, SMS, email)?
 
@@ -807,7 +807,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-26"></a>
 
-## DEC-26 — Số người ăn, số công ty, số điểm giao mỗi ngày
+## DEC-26: Số người ăn, số công ty, số điểm giao mỗi ngày
 
 Cần quyết định: Số người ăn, số công ty, số điểm giao mỗi ngày?
 
@@ -835,7 +835,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-27"></a>
 
-## DEC-27 — Phiên bản quy tắc được duyệt: biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến
+## DEC-27: Phiên bản quy tắc được duyệt: biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến
 
 Cần quyết định: Bản quy tắc DL-01 nào được duyệt, ghi đủ biên tuần, Healthy, lặp nhóm nguyên liệu, cặp loại trừ và phương pháp chế biến?
 
@@ -925,7 +925,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 [Nguồn, dòng 122](../../brainstorms/quy-tac-thuc-don.md#L122). Nội dung đầy đủ:
 
-> Danh sách **nhóm nguyên liệu chính** để máy so trùng — đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?
+> Danh sách **nhóm nguyên liệu chính** để máy so trùng: đề xuất: lợn, gà, bò, ếch, tôm, cá, sườn, trứng, đậu phụ, giò/chả, khác. Sườn tính riêng hay gộp vào lợn?
 
 Phương án khuyến nghị đã có:
 
@@ -965,7 +965,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 [Nguồn, dòng 127](../../brainstorms/quy-tac-thuc-don.md#L127). Nội dung đầy đủ:
 
-> Danh sách **phương pháp chế biến** — đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
+> Danh sách **phương pháp chế biến**: đề xuất: luộc, hấp, kho, rang, xào, sốt, chiên/rán, áp chảo, nướng, nộm/trộn, cuốn. Thiếu hoặc thừa gì?
 
 Phương án khuyến nghị đã có:
 
@@ -983,7 +983,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-28"></a>
 
-## DEC-28 — Cách kiểm ngưỡng giá suất
+## DEC-28: Cách kiểm ngưỡng giá suất
 
 Cần quyết định: Cách kiểm ngưỡng giá suất?
 
@@ -1011,7 +1011,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-30"></a>
 
-## DEC-30 — Tuần phục vụ gồm những ngày nào
+## DEC-30: Tuần phục vụ gồm những ngày nào
 
 Cần quyết định: Tuần phục vụ gồm những ngày nào?
 
@@ -1039,7 +1039,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-31"></a>
 
-## DEC-31 — Thực đơn chung hay riêng theo khách
+## DEC-31: Thực đơn chung hay riêng theo khách
 
 Cần quyết định: Thực đơn chung hay riêng theo khách?
 
@@ -1067,7 +1067,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-32"></a>
 
-## DEC-32 — Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)
+## DEC-32: Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)
 
 Cần quyết định: Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)?
 
@@ -1095,7 +1095,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-33"></a>
 
-## DEC-33 — Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?
+## DEC-33: Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?
 
 Cần quyết định: Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?
 
@@ -1123,7 +1123,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-34"></a>
 
-## DEC-34 — Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?
+## DEC-34: Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?
 
 Cần quyết định: Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?
 
@@ -1151,7 +1151,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-35"></a>
 
-## DEC-35 — Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)
+## DEC-35: Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)
 
 Cần quyết định: Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)?
 
@@ -1179,7 +1179,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-36"></a>
 
-## DEC-36 — Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)
+## DEC-36: Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)
 
 Cần quyết định: Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)?
 
@@ -1207,7 +1207,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-37"></a>
 
-## DEC-37 — Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)
+## DEC-37: Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)
 
 Cần quyết định: Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)?
 
@@ -1235,7 +1235,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-38"></a>
 
-## DEC-38 — Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?
+## DEC-38: Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?
 
 Cần quyết định: Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?
 
@@ -1263,7 +1263,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-43"></a>
 
-## DEC-43 — Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào?
+## DEC-43: Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào?
 
 Cần quyết định: Có đặt mức năng lượng/đạm tối thiểu cho một suất không? Nếu có thì bao nhiêu, theo nhóm người ăn nào?
 
@@ -1291,7 +1291,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-45"></a>
 
-## DEC-45 — Cost phần món chính
+## DEC-45: Cost phần món chính
 
 Cần quyết định: Cost phần món chính?
 
@@ -1319,7 +1319,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-46"></a>
 
-## DEC-46 — Hai cơ sở mua giá khác nhau; kiểm ngưỡng theo cơ sở nào
+## DEC-46: Hai cơ sở mua giá khác nhau; kiểm ngưỡng theo cơ sở nào
 
 Cần quyết định: Hai cơ sở mua giá khác nhau; kiểm ngưỡng theo cơ sở nào?
 
@@ -1347,7 +1347,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-47"></a>
 
-## DEC-47 — Giá nào là giá tham chiếu
+## DEC-47: Giá nào là giá tham chiếu
 
 Cần quyết định: Giá nào là giá tham chiếu?
 
@@ -1375,7 +1375,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-48"></a>
 
-## DEC-48 — Tần suất cập nhật giá thực tế
+## DEC-48: Tần suất cập nhật giá thực tế
 
 Cần quyết định: Tần suất cập nhật giá thực tế?
 
@@ -1403,7 +1403,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-49"></a>
 
-## DEC-49 — Giá nhập có cần duyệt
+## DEC-49: Giá nhập có cần duyệt
 
 Cần quyết định: Giá nhập có cần duyệt?
 
@@ -1431,7 +1431,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-50"></a>
 
-## DEC-50 — Định nghĩa cost cao / thấp
+## DEC-50: Định nghĩa cost cao / thấp
 
 Cần quyết định: Định nghĩa cost cao / thấp?
 
@@ -1459,7 +1459,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-51"></a>
 
-## DEC-51 — Nguồn số suất trước khi có order
+## DEC-51: Nguồn số suất trước khi có order
 
 Cần quyết định: Nguồn số suất trước khi có order?
 
@@ -1487,7 +1487,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-52"></a>
 
-## DEC-52 — Vượt ngưỡng: chặn tuyệt đối hay cho ngoại lệ
+## DEC-52: Vượt ngưỡng: chặn tuyệt đối hay cho ngoại lệ
 
 Cần quyết định: Vượt ngưỡng: chặn tuyệt đối hay cho ngoại lệ?
 
@@ -1515,7 +1515,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-53"></a>
 
-## DEC-53 — Chặn chuyển bếp
+## DEC-53: Chặn chuyển bếp
 
 Cần quyết định: Chặn chuyển bếp?
 
@@ -1543,7 +1543,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-54"></a>
 
-## DEC-54 — Bếp trưởng có xem giá và cost
+## DEC-54: Bếp trưởng có xem giá và cost
 
 Cần quyết định: Bếp trưởng có xem giá và cost?
 
@@ -1571,7 +1571,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-55"></a>
 
-## DEC-55 — Khi tính BINH_QUAN hoặc DAT_NHAT, món chính Healthy (thường rẻ hơn) có được tính vào không
+## DEC-55: Khi tính BINH_QUAN hoặc DAT_NHAT, món chính Healthy (thường rẻ hơn) có được tính vào không
 
 Cần quyết định: Khi tính BINH_QUAN hoặc DAT_NHAT, món chính Healthy (thường rẻ hơn) có được tính vào không?
 
@@ -1599,7 +1599,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-56"></a>
 
-## DEC-56 — Cho nhập giá hồi tố tối đa mấy ngày; giá hồi tố có làm tính lại các bản chụp không
+## DEC-56: Cho nhập giá hồi tố tối đa mấy ngày; giá hồi tố có làm tính lại các bản chụp không
 
 Cần quyết định: Cho nhập giá hồi tố tối đa mấy ngày; giá hồi tố có làm tính lại các bản chụp không?
 
@@ -1627,7 +1627,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-57"></a>
 
-## DEC-57 — FR-COST-PRC-002 cho đổi cờ tham chiếu nhưng BR-PRC-004 cấm sửa giá đã hiệu lực; có được đổi riêng cờ không?
+## DEC-57: FR-COST-PRC-002 cho đổi cờ tham chiếu nhưng BR-PRC-004 cấm sửa giá đã hiệu lực; có được đổi riêng cờ không?
 
 Cần quyết định: FR-COST-PRC-002 cho đổi cờ tham chiếu nhưng BR-PRC-004 cấm sửa giá đã hiệu lực; có được đổi riêng cờ không?
 
@@ -1655,7 +1655,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-58"></a>
 
-## DEC-58 — Ngày dùng nhiều món chính: FR-COST-EST-002 gọi tổng lượt chọn là tổng suất, nhưng BR-EST-001 yêu cầu chia main_pick
+## DEC-58: Ngày dùng nhiều món chính: FR-COST-EST-002 gọi tổng lượt chọn là tổng suất, nhưng BR-EST-001 yêu cầu chia main_pick
 
 Cần quyết định: Ngày dùng nhiều món chính: FR-COST-EST-002 gọi tổng lượt chọn là tổng suất, nhưng BR-EST-001 yêu cầu chia main_pick?
 
@@ -1683,7 +1683,7 @@ Release: BA-Q46. Trả lời để trống trong [sổ quyết định](decision
 
 <a id="dec-59"></a>
 
-## DEC-59 — Món đặc thù có bảng tính ở cơ sở A có hợp lệ cho cơ sở B không; mốc 90 ngày tính theo ngày lập hay ngày tính giá?
+## DEC-59: Món đặc thù có bảng tính ở cơ sở A có hợp lệ cho cơ sở B không; mốc 90 ngày tính theo ngày lập hay ngày tính giá?
 
 Cần quyết định: Món đặc thù có bảng tính ở cơ sở A có hợp lệ cho cơ sở B không; mốc 90 ngày tính theo ngày lập hay ngày tính giá?
 
@@ -1711,7 +1711,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-60"></a>
 
-## DEC-60 — Huỷ giá tham chiếu tương lai khi cùng ngày còn báo giá khác thì chọn giá thay thế thế nào?
+## DEC-60: Huỷ giá tham chiếu tương lai khi cùng ngày còn báo giá khác thì chọn giá thay thế thế nào?
 
 Cần quyết định: Huỷ giá tham chiếu tương lai khi cùng ngày còn báo giá khác thì chọn giá thay thế thế nào?
 
@@ -1739,7 +1739,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-61"></a>
 
-## DEC-61 — Chống gửi trùng và đối soát khi mất phản hồi: request key/phiên bản/lịch sử trả ra thế nào?
+## DEC-61: Chống gửi trùng và đối soát khi mất phản hồi: request key/phiên bản/lịch sử trả ra thế nào?
 
 Cần quyết định: Chống gửi trùng và đối soát khi mất phản hồi: request key/phiên bản/lịch sử trả ra thế nào?
 
@@ -1767,7 +1767,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-62"></a>
 
-## DEC-62 — Cảnh báo giá cũ/nhà cung cấp ngừng được lưu, đóng và chống trùng thế nào?
+## DEC-62: Cảnh báo giá cũ/nhà cung cấp ngừng được lưu, đóng và chống trùng thế nào?
 
 Cần quyết định: Cảnh báo giá cũ/nhà cung cấp ngừng được lưu, đóng và chống trùng thế nào?
 
@@ -1795,7 +1795,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-63"></a>
 
-## DEC-63 — Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?
+## DEC-63: Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?
 
 Cần quyết định: Cost món hoặc cost phiên bản cũ bằng 0 thì tỷ trọng/chênh lệch % hiện thế nào?
 
@@ -1809,7 +1809,7 @@ Mã nguồn: FLOW-COST-Q04. Người quyết định: Kế toán, UX/BA. Release
 
 Phương án khuyến nghị đã có:
 
-> Hiện dấu — và ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.
+> Ghi Không áp dụng khi mẫu số0; giữ delta tiền nếu tính được.
 
 Phương án khác đã có:
 
@@ -1823,7 +1823,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-64"></a>
 
-## DEC-64 — Ai được đọc danh sách/chi tiết khoản khoán?
+## DEC-64: Ai được đọc danh sách/chi tiết khoản khoán?
 
 Cần quyết định: Ai được đọc danh sách/chi tiết khoản khoán?
 
@@ -1851,7 +1851,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-65"></a>
 
-## DEC-65 — Giá/tham số đổi trong thời gian PENDING: kiểm lại tại duyệt cuối hay chụp bộ giá lúc gửi? Nếu vượt mới thì trả lại thế nào?
+## DEC-65: Giá/tham số đổi trong thời gian PENDING: kiểm lại tại duyệt cuối hay chụp bộ giá lúc gửi? Nếu vượt mới thì trả lại thế nào?
 
 Cần quyết định: Giá/tham số đổi trong thời gian PENDING: kiểm lại tại duyệt cuối hay chụp bộ giá lúc gửi? Nếu vượt mới thì trả lại thế nào?
 
@@ -1879,7 +1879,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-66"></a>
 
-## DEC-66 — Lập tuần có một ngày lỗi thì rollback cả tuần hay lưu ngày hợp lệ?
+## DEC-66: Lập tuần có một ngày lỗi thì rollback cả tuần hay lưu ngày hợp lệ?
 
 Cần quyết định: Lập tuần có một ngày lỗi thì rollback cả tuần hay lưu ngày hợp lệ?
 
@@ -1907,7 +1907,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-67"></a>
 
-## DEC-67 — Thực đơn đã được duyệt vượt ngưỡng ở CANH_BAO: giá tăng tiếp hoặc phục hồi rồi vượt lại thì phát cảnh báo ra sao?
+## DEC-67: Thực đơn đã được duyệt vượt ngưỡng ở CANH_BAO: giá tăng tiếp hoặc phục hồi rồi vượt lại thì phát cảnh báo ra sao?
 
 Cần quyết định: Thực đơn đã được duyệt vượt ngưỡng ở CANH_BAO: giá tăng tiếp hoặc phục hồi rồi vượt lại thì phát cảnh báo ra sao?
 
@@ -1935,7 +1935,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-68"></a>
 
-## DEC-68 — Agent gặp đồng thời ngày vượt và ngày không tính được: ưu tiên trạng thái nào? VAT chưa cấu hình có cùng KHONG_XAC_DINH không?
+## DEC-68: Agent gặp đồng thời ngày vượt và ngày không tính được: ưu tiên trạng thái nào? VAT chưa cấu hình có cùng KHONG_XAC_DINH không?
 
 Cần quyết định: Agent gặp đồng thời ngày vượt và ngày không tính được: ưu tiên trạng thái nào? VAT chưa cấu hình có cùng KHONG_XAC_DINH không?
 
@@ -1963,7 +1963,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-69"></a>
 
-## DEC-69 — Mô phỏng giá P2 cho ai dùng, xét trạng thái và khoảng ngày nào?
+## DEC-69: Mô phỏng giá P2 cho ai dùng, xét trạng thái và khoảng ngày nào?
 
 Cần quyết định: Mô phỏng giá P2 cho ai dùng, xét trạng thái và khoảng ngày nào?
 
@@ -1991,7 +1991,7 @@ Release: BA-Q45. Trả lời để trống trong [sổ quyết định](decision
 
 <a id="dec-70"></a>
 
-## DEC-70 — NCC tồn tại INACTIVE trả 404-01 hay 422-02?
+## DEC-70: NCC tồn tại INACTIVE trả 404-01 hay 422-02?
 
 Cần quyết định: NCC tồn tại INACTIVE trả 404-01 hay 422-02?
 
@@ -2019,7 +2019,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-71"></a>
 
-## DEC-71 — Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?
+## DEC-71: Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?
 
 Cần quyết định: Chiết khấu % tính trên tiền suất đã gồm VAT hay chưa VAT? Cơ sở tính có bao gồm khoản phụ thu nào không?
 
@@ -2047,7 +2047,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-72"></a>
 
-## DEC-72 — Chiết khấu áp dụng mọi suất hay từng loại/dòng; số lượng căn cứ đặt, giao hay khách xác nhận?
+## DEC-72: Chiết khấu áp dụng mọi suất hay từng loại/dòng; số lượng căn cứ đặt, giao hay khách xác nhận?
 
 Cần quyết định: Chiết khấu áp dụng mọi suất hay từng loại/dòng; số lượng căn cứ đặt, giao hay khách xác nhận?
 
@@ -2075,7 +2075,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-73"></a>
 
-## DEC-73 — Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào?
+## DEC-73: Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào?
 
 Cần quyết định: Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào?
 
@@ -2103,7 +2103,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-74"></a>
 
-## DEC-74 — Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai?
+## DEC-74: Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai?
 
 Cần quyết định: Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai?
 
@@ -2131,7 +2131,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-75"></a>
 
-## DEC-75 — Xác nhận/xử lý chiết khấu lúc chốt, giao, thanh toán hay cuối kỳ; xử lý một phần và chứng từ thế nào?
+## DEC-75: Xác nhận/xử lý chiết khấu lúc chốt, giao, thanh toán hay cuối kỳ; xử lý một phần và chứng từ thế nào?
 
 Cần quyết định: Xác nhận/xử lý chiết khấu lúc chốt, giao, thanh toán hay cuối kỳ; xử lý một phần và chứng từ thế nào?
 
@@ -2159,7 +2159,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-76"></a>
 
-## DEC-76 — Đơn đổi suất/giá/loại khi chiết khấu chưa xử lý: tự tính lại, duyệt lại và giữ phiên bản cũ thế nào?
+## DEC-76: Đơn đổi suất/giá/loại khi chiết khấu chưa xử lý: tự tính lại, duyệt lại và giữ phiên bản cũ thế nào?
 
 Cần quyết định: Đơn đổi suất/giá/loại khi chiết khấu chưa xử lý: tự tính lại, duyệt lại và giữ phiên bản cũ thế nào?
 
@@ -2187,7 +2187,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-77"></a>
 
-## DEC-77 — Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không?
+## DEC-77: Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không?
 
 Cần quyết định: Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không?
 
@@ -2215,7 +2215,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-78"></a>
 
-## DEC-78 — Đơn đổi/hủy sau chi trả/bù trừ: thu hồi, bù kỳ sau hay điều chỉnh riêng; ai duyệt, chứng từ nào?
+## DEC-78: Đơn đổi/hủy sau chi trả/bù trừ: thu hồi, bù kỳ sau hay điều chỉnh riêng; ai duyệt, chứng từ nào?
 
 Cần quyết định: Đơn đổi/hủy sau chi trả/bù trừ: thu hồi, bù kỳ sau hay điều chỉnh riêng; ai duyệt, chứng từ nào?
 
@@ -2243,7 +2243,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-79"></a>
 
-## DEC-79 — Một đơn hưởng đồng thời chiết khấu %/tiền mỗi suất hoặc nhiều chương trình được không; cộng dồn, ưu tiên, trần thế nào?
+## DEC-79: Một đơn hưởng đồng thời chiết khấu %/tiền mỗi suất hoặc nhiều chương trình được không; cộng dồn, ưu tiên, trần thế nào?
 
 Cần quyết định: Một đơn hưởng đồng thời chiết khấu %/tiền mỗi suất hoặc nhiều chương trình được không; cộng dồn, ưu tiên, trần thế nào?
 
@@ -2271,7 +2271,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-80"></a>
 
-## DEC-80 — Ai phụ trách cung cấp và xác nhận 10 món/10 ngày thực tế? Khi nào có dữ liệu?
+## DEC-80: Ai phụ trách cung cấp và xác nhận 10 món/10 ngày thực tế? Khi nào có dữ liệu?
 
 Cần quyết định: Ai phụ trách cung cấp và xác nhận 10 món/10 ngày thực tế? Khi nào có dữ liệu?
 
@@ -2299,7 +2299,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-81"></a>
 
-## DEC-81 — File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?
+## DEC-81: File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?
 
 Cần quyết định: File/bảng nguồn ở đâu, thuộc cơ sở và ngày nào, phiên bản nào?
 
@@ -2327,7 +2327,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-82"></a>
 
-## DEC-82 — Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?
+## DEC-82: Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?
 
 Cần quyết định: Mỗi món có công thức, đơn vị/quy đổi, giá báo/giá cuối cóVAT và nguồn giá nào?
 
@@ -2355,7 +2355,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-83"></a>
 
-## DEC-83 — Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?
+## DEC-83: Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?
 
 Cần quyết định: Mỗi ngày dùng VAT bán ra, định mức, cách tính chính, hao hụt và khoản khoán nào?
 
@@ -2383,7 +2383,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-84"></a>
 
-## DEC-84 — Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?
+## DEC-84: Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?
 
 Cần quyết định: Kết quả tính tay chưa/sau làm tròn là bao nhiêu, ai review độc lập?
 
@@ -2411,7 +2411,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-85"></a>
 
-## DEC-85 — Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?
+## DEC-85: Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?
 
 Cần quyết định: Nếu có chiết khấu, đơn gốc và khoản riêng được ghi thế nào; số phải trả và trạng thái xử lý có nguồn nào?
 
@@ -2439,7 +2439,7 @@ Thẩm quyền: BA-Q01. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-86"></a>
 
-## DEC-86 — Ấn bản, trang/mã thực phẩm của Bảng thành phần thực phẩm Việt Nam nào được phép dùng; ai duyệt mapping và sửa số liệu?
+## DEC-86: Ấn bản, trang/mã thực phẩm của Bảng thành phần thực phẩm Việt Nam nào được phép dùng; ai duyệt mapping và sửa số liệu?
 
 Cần quyết định: Ấn bản, trang/mã thực phẩm của Bảng thành phần thực phẩm Việt Nam nào được phép dùng; ai duyệt mapping và sửa số liệu?
 
@@ -2467,7 +2467,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-87"></a>
 
-## DEC-87 — Suất mẫu là tổ hợp chọn cụ thể hay món mặc định? Có gồm cơm/gia vị/đồ uống; ghi ở recipe/item nào để không bỏ sót hoặc đếm đôi?
+## DEC-87: Suất mẫu là tổ hợp chọn cụ thể hay món mặc định? Có gồm cơm/gia vị/đồ uống; ghi ở recipe/item nào để không bỏ sót hoặc đếm đôi?
 
 Cần quyết định: Suất mẫu là tổ hợp chọn cụ thể hay món mặc định? Có gồm cơm/gia vị/đồ uống; ghi ở recipe/item nào để không bỏ sót hoặc đếm đôi?
 
@@ -2495,7 +2495,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-88"></a>
 
-## DEC-88 — Chốt cách làm tròn và dung sai khớp 5 suất tính tay theo R4; đề xuất HALF_UP 2 chữ số ở tổng cuối, không dùng dung sai Cost.
+## DEC-88: Chốt cách làm tròn và dung sai khớp 5 suất tính tay theo R4; đề xuất HALF_UP 2 chữ số ở tổng cuối, không dùng dung sai Cost.
 
 Cần quyết định: Chốt cách làm tròn và dung sai khớp 5 suất tính tay theo R4; đề xuất HALF_UP 2 chữ số ở tổng cuối, không dùng dung sai Cost.?
 
@@ -2523,7 +2523,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-89"></a>
 
-## DEC-89 — Cung cấp mapping nguyên liệu của 30 món, ấn bản/nguồn và 5 suất tính tay độc lập, người lập/ngày/phương pháp.
+## DEC-89: Cung cấp mapping nguyên liệu của 30 món, ấn bản/nguồn và 5 suất tính tay độc lập, người lập/ngày/phương pháp.
 
 Cần quyết định: Cung cấp mapping nguyên liệu của 30 món, ấn bản/nguồn và 5 suất tính tay độc lập, người lập/ngày/phương pháp.?
 
@@ -2551,7 +2551,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-90"></a>
 
-## DEC-90 — Xác nhận R5 chỉ trả VALID nếu cost không vượt kể cả CANH_BAO; có cho người dùng xem phương án chưa đạt để sửa thủ công không?
+## DEC-90: Xác nhận R5 chỉ trả VALID nếu cost không vượt kể cả CANH_BAO; có cho người dùng xem phương án chưa đạt để sửa thủ công không?
 
 Cần quyết định: Xác nhận R5 chỉ trả VALID nếu cost không vượt kể cả CANH_BAO; có cho người dùng xem phương án chưa đạt để sửa thủ công không?
 
@@ -2579,7 +2579,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-91"></a>
 
-## DEC-91 — 20 yêu cầu nghiệm thu gồm nhóm nào, dữ liệu khả thi nào, mẫu đo trước MVP và cách tính giảm 50% thời gian ra sao?
+## DEC-91: 20 yêu cầu nghiệm thu gồm nhóm nào, dữ liệu khả thi nào, mẫu đo trước MVP và cách tính giảm 50% thời gian ra sao?
 
 Cần quyết định: 20 yêu cầu nghiệm thu gồm nhóm nào, dữ liệu khả thi nào, mẫu đo trước MVP và cách tính giảm 50% thời gian ra sao?
 
@@ -2607,7 +2607,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-92"></a>
 
-## DEC-92 — Ai xem prompt/tool arguments, lưu bao lâu, mức che dữ liệu và quyền xuất log thế nào?
+## DEC-92: Ai xem prompt/tool arguments, lưu bao lâu, mức che dữ liệu và quyền xuất log thế nào?
 
 Cần quyết định: Ai xem prompt/tool arguments, lưu bao lâu, mức che dữ liệu và quyền xuất log thế nào?
 
@@ -2635,7 +2635,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-93"></a>
 
-## DEC-93 — Kiêng kỵ diễn đạt tự do được ánh xạ nguyên liệu/món tới mức nào; xử lý nguyên liệu phụ và ghi chú dị ứng chưa đủ thế nào?
+## DEC-93: Kiêng kỵ diễn đạt tự do được ánh xạ nguyên liệu/món tới mức nào; xử lý nguyên liệu phụ và ghi chú dị ứng chưa đủ thế nào?
 
 Cần quyết định: Kiêng kỵ diễn đạt tự do được ánh xạ nguyên liệu/món tới mức nào; xử lý nguyên liệu phụ và ghi chú dị ứng chưa đủ thế nào?
 
@@ -2663,7 +2663,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-94"></a>
 
-## DEC-94 — Chốt giao diện adapter MENU kiểm nháp/ghi nháp và giao dịch apply, nơi lưu idempotency/quota, xử lý khóa và rollout?
+## DEC-94: Chốt giao diện adapter MENU kiểm nháp/ghi nháp và giao dịch apply, nơi lưu idempotency/quota, xử lý khóa và rollout?
 
 Cần quyết định: Chốt giao diện adapter MENU kiểm nháp/ghi nháp và giao dịch apply, nơi lưu idempotency/quota, xử lý khóa và rollout?
 
@@ -2691,7 +2691,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-95"></a>
 
-## DEC-95 — Đổi QR/gỡ người ăn có thu hồi phiên ngay và giữ hay hủy lựa chọn chưa khóa?
+## DEC-95: Đổi QR/gỡ người ăn có thu hồi phiên ngay và giữ hay hủy lựa chọn chưa khóa?
 
 Cần quyết định: Đổi QR/gỡ người ăn có thu hồi phiên ngay và giữ hay hủy lựa chọn chưa khóa?
 
@@ -2719,7 +2719,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-96"></a>
 
-## DEC-96 — Một điểm phục vụ có đổi bếp/ca/lịch giữa kỳ; dữ liệu nào chụp lúc order?
+## DEC-96: Một điểm phục vụ có đổi bếp/ca/lịch giữa kỳ; dữ liệu nào chụp lúc order?
 
 Cần quyết định: Một điểm phục vụ có đổi bếp/ca/lịch giữa kỳ; dữ liệu nào chụp lúc order?
 
@@ -2747,7 +2747,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-97"></a>
 
-## DEC-97 — Ai duyệt định mức; đổi định mức/menu/giá khi đã có lựa chọn xử lý thế nào?
+## DEC-97: Ai duyệt định mức; đổi định mức/menu/giá khi đã có lựa chọn xử lý thế nào?
 
 Cần quyết định: Ai duyệt định mức; đổi định mức/menu/giá khi đã có lựa chọn xử lý thế nào?
 
@@ -2775,7 +2775,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-98"></a>
 
-## DEC-98 — Chọn tuần atomic toàn tuần hay nhận từng ngày; UX trả lỗi từng ngày thế nào?
+## DEC-98: Chọn tuần atomic toàn tuần hay nhận từng ngày; UX trả lỗi từng ngày thế nào?
 
 Cần quyết định: Chọn tuần atomic toàn tuần hay nhận từng ngày; UX trả lỗi từng ngày thế nào?
 
@@ -2803,7 +2803,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-99"></a>
 
-## DEC-99 — T<S+C xử lý bằng tăng tổng hay điều chỉnh lựa chọn ai; C có phải nhập thêm hay tổng thay thế theo món?
+## DEC-99: T<S+C xử lý bằng tăng tổng hay điều chỉnh lựa chọn ai; C có phải nhập thêm hay tổng thay thế theo món?
 
 Cần quyết định: T<S+C xử lý bằng tăng tổng hay điều chỉnh lựa chọn ai; C có phải nhập thêm hay tổng thay thế theo món?
 
@@ -2831,7 +2831,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-100"></a>
 
-## DEC-100 — Đến hạn mà chưa có tổng/default hoặc job lỗi: ai xử lý, có gia hạn/khóa lại, báo bếp ra sao?
+## DEC-100: Đến hạn mà chưa có tổng/default hoặc job lỗi: ai xử lý, có gia hạn/khóa lại, báo bếp ra sao?
 
 Cần quyết định: Đến hạn mà chưa có tổng/default hoặc job lỗi: ai xử lý, có gia hạn/khóa lại, báo bếp ra sao?
 
@@ -2859,7 +2859,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-101"></a>
 
-## DEC-101 — Tắt chọn món có hiệu lực ngay hay từ ngày sau; xử lý các lựa chọn đã ghi?
+## DEC-101: Tắt chọn món có hiệu lực ngay hay từ ngày sau; xử lý các lựa chọn đã ghi?
 
 Cần quyết định: Tắt chọn món có hiệu lực ngay hay từ ngày sau; xử lý các lựa chọn đã ghi?
 
@@ -2887,7 +2887,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-102"></a>
 
-## DEC-102 — R6 luôn 1 MAIN/suất hay hỗ trợ nhiềuMAIN; kế hoạch món phụ/rau/canh phân rã từ suất ra sao?
+## DEC-102: R6 luôn 1 MAIN/suất hay hỗ trợ nhiềuMAIN; kế hoạch món phụ/rau/canh phân rã từ suất ra sao?
 
 Cần quyết định: R6 luôn 1 MAIN/suất hay hỗ trợ nhiềuMAIN; kế hoạch món phụ/rau/canh phân rã từ suất ra sao?
 
@@ -2915,7 +2915,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-103"></a>
 
-## DEC-103 — MENU thu hồi/đổi bản khi có lựa chọn hoặc order khóa thì hủy/chọn lại/thay món thế nào; thứ tự override deadline khách/điểm/ca và biên đúng hạn?
+## DEC-103: MENU thu hồi/đổi bản khi có lựa chọn hoặc order khóa thì hủy/chọn lại/thay món thế nào; thứ tự override deadline khách/điểm/ca và biên đúng hạn?
 
 Cần quyết định: MENU thu hồi/đổi bản khi có lựa chọn hoặc order khóa thì hủy/chọn lại/thay món thế nào; thứ tự override deadline khách/điểm/ca và biên đúng hạn?
 
@@ -2943,7 +2943,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-104"></a>
 
-## DEC-104 — Người ăn có được hủy lựa chọn/đổi điểm cùng ca; T=0 có nghĩa hủy bữa không; giới hạn tối đa suất/ngày?
+## DEC-104: Người ăn có được hủy lựa chọn/đổi điểm cùng ca; T=0 có nghĩa hủy bữa không; giới hạn tối đa suất/ngày?
 
 Cần quyết định: Người ăn có được hủy lựa chọn/đổi điểm cùng ca; T=0 có nghĩa hủy bữa không; giới hạn tối đa suất/ngày?
 
@@ -2971,7 +2971,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-105"></a>
 
-## DEC-105 — C có danh tính/gộp, C→S, vượtT, hủy/zero; RV02/03, ORD-Q06/13, EVID002
+## DEC-105: C có danh tính/gộp, C→S, vượtT, hủy/zero; RV02/03, ORD-Q06/13, EVID002
 
 Cần quyết định: C có danh tính/gộp, C→S, vượtT, hủy/zero; RV02/03, ORD-Q06/13, EVID002?
 
@@ -2999,7 +2999,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-106"></a>
 
-## DEC-106 — Summary token, receipt, outbox transaction/retention; RV04, E1-Q02
+## DEC-106: Summary token, receipt, outbox transaction/retention; RV04, E1-Q02
 
 Cần quyết định: Summary token, receipt, outbox transaction/retention; RV04, E1-Q02?
 
@@ -3027,7 +3027,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-107"></a>
 
-## DEC-107 — Delta line identity, unit/role/portion và món mới; RV07, ORD-Q04/08/10/12, O-02
+## DEC-107: Delta line identity, unit/role/portion và món mới; RV07, ORD-Q04/08/10/12, O-02
 
 Cần quyết định: Delta line identity, unit/role/portion và món mới; RV07, ORD-Q04/08/10/12, O-02?
 
@@ -3055,7 +3055,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-108"></a>
 
-## DEC-108 — Customer master/account/service lifecycle; ORD-Q03/11
+## DEC-108: Customer master/account/service lifecycle; ORD-Q03/11
 
 Cần quyết định: Customer master/account/service lifecycle; ORD-Q03/11?
 
@@ -3083,7 +3083,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-109"></a>
 
-## DEC-109 — NUTR provenance/kind/stale, refresh/cache/fallback; NUTR-Q03/04, ORD-Q04/12
+## DEC-109: NUTR provenance/kind/stale, refresh/cache/fallback; NUTR-Q03/04, ORD-Q04/12
 
 Cần quyết định: NUTR provenance/kind/stale, refresh/cache/fallback; NUTR-Q03/04, ORD-Q04/12?
 
@@ -3111,7 +3111,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-110"></a>
 
-## DEC-110 — Required/optional/null, limits, enum/query, create-version chưa rõ
+## DEC-110: Required/optional/null, limits, enum/query, create-version chưa rõ
 
 Cần quyết định: Required/optional/null, limits, enum/query, create-version chưa rõ?
 
@@ -3139,7 +3139,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-111"></a>
 
-## DEC-111 — Tuần/mode/reminder policy; ORD-Q05/09, Q-14/E1-Q04
+## DEC-111: Tuần/mode/reminder policy; ORD-Q05/09, Q-14/E1-Q04
 
 Cần quyết định: Tuần/mode/reminder policy; ORD-Q05/09, Q-14/E1-Q04?
 
@@ -3167,7 +3167,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-112"></a>
 
-## DEC-112 — Wireframe chỉ mô phỏng một nguồn/version đồng bộ
+## DEC-112: Wireframe chỉ mô phỏng một nguồn/version đồng bộ
 
 Cần quyết định: Wireframe chỉ mô phỏng một nguồn/version đồng bộ?
 
@@ -3195,7 +3195,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-113"></a>
 
-## DEC-113 — Gate sức khỏe và dữ liệu/QA môi trường chưa có
+## DEC-113: Gate sức khỏe và dữ liệu/QA môi trường chưa có
 
 Cần quyết định: Gate sức khỏe và dữ liệu/QA môi trường chưa có?
 
@@ -3223,7 +3223,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-114"></a>
 
-## DEC-114 — Khách không xác nhận số nhận thì xử lý thế nào, sau khoảng chờ nào và ai quyết định số tính tiền?
+## DEC-114: Khách không xác nhận số nhận thì xử lý thế nào, sau khoảng chờ nào và ai quyết định số tính tiền?
 
 Cần quyết định: Khách không xác nhận số nhận thì xử lý thế nào, sau khoảng chờ nào và ai quyết định số tính tiền?
 
@@ -3251,7 +3251,7 @@ Thẩm quyền: BA-Q03. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-115"></a>
 
-## DEC-115 — Ai xác nhận link nhận hàng; cơ chế xác minh, hiệu lực, thu hồi/cấp lại là gì?
+## DEC-115: Ai xác nhận link nhận hàng; cơ chế xác minh, hiệu lực, thu hồi/cấp lại là gì?
 
 Cần quyết định: Ai xác nhận link nhận hàng; cơ chế xác minh, hiệu lực, thu hồi/cấp lại là gì?
 
@@ -3279,7 +3279,7 @@ Thẩm quyền: BA-Q04. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-116"></a>
 
-## DEC-116 — Ai thống nhất chênh lệch; giao nhiều lần/giao bù/nhận thừa/giảm trừ được duyệt và sửa thế nào?
+## DEC-116: Ai thống nhất chênh lệch; giao nhiều lần/giao bù/nhận thừa/giảm trừ được duyệt và sửa thế nào?
 
 Cần quyết định: Ai thống nhất chênh lệch; giao nhiều lần/giao bù/nhận thừa/giảm trừ được duyệt và sửa thế nào?
 
@@ -3307,7 +3307,7 @@ Thẩm quyền: BA-Q03. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-117"></a>
 
-## DEC-117 — Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào?
+## DEC-117: Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào?
 
 Cần quyết định: Số tính tiền dựa số chốt/giao/nhận hay thỏa thuận? Giảm trừ quy ra suất hay tiền thế nào?
 
@@ -3335,7 +3335,7 @@ Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong
 
 <a id="dec-118"></a>
 
-## DEC-118 — Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể?
+## DEC-118: Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể?
 
 Cần quyết định: Doanh thu đối soát trước/sau VAT; làm tròn dòng/đơn/kỳ và chuẩn khớp biên bản cụ thể?
 
@@ -3363,7 +3363,7 @@ Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong
 
 <a id="dec-119"></a>
 
-## DEC-119 — Phạm vi kỳ, chống chồng kỳ, điều kiện khóa, thu sau khóa, mở lại/tái đối soát/tái xuất thế nào?
+## DEC-119: Phạm vi kỳ, chống chồng kỳ, điều kiện khóa, thu sau khóa, mở lại/tái đối soát/tái xuất thế nào?
 
 Cần quyết định: Phạm vi kỳ, chống chồng kỳ, điều kiện khóa, thu sau khóa, mở lại/tái đối soát/tái xuất thế nào?
 
@@ -3391,7 +3391,7 @@ Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong
 
 <a id="dec-120"></a>
 
-## DEC-120 — Thu một phần/thừa, phân bổ nhiều kỳ, sửa/hủy chứng từ và hoàn tiền thế nào?
+## DEC-120: Thu một phần/thừa, phân bổ nhiều kỳ, sửa/hủy chứng từ và hoàn tiền thế nào?
 
 Cần quyết định: Thu một phần/thừa, phân bổ nhiều kỳ, sửa/hủy chứng từ và hoàn tiền thế nào?
 
@@ -3419,7 +3419,7 @@ Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong
 
 <a id="dec-121"></a>
 
-## DEC-121 — Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì?
+## DEC-121: Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì?
 
 Cần quyết định: Sản phẩm/phiên bản MISA nào; mẫu nhập chính thức, mapping/tài khoản/mã khách, evidence nhập thành công là gì?
 
@@ -3447,7 +3447,7 @@ Căn cứ vai trò: docs/gia-phat/06-brd.md:130. Trả lời để trống trong
 
 <a id="dec-122"></a>
 
-## DEC-122 — Envelope, idempotency/receipt/retention, bộ lọc, scope role, audit link, profile tải/xuất dùng chuẩn nào?
+## DEC-122: Envelope, idempotency/receipt/retention, bộ lọc, scope role, audit link, profile tải/xuất dùng chuẩn nào?
 
 Cần quyết định: Envelope, idempotency/receipt/retention, bộ lọc, scope role, audit link, profile tải/xuất dùng chuẩn nào?
 
@@ -3475,7 +3475,7 @@ Thẩm quyền: BA-Q05. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-123"></a>
 
-## DEC-123 — DL-08: danh sách bài viết, URL, media và trạng thái WordPress gốc ở đâu; ai xác nhận inventory đầy đủ?
+## DEC-123: DL-08: danh sách bài viết, URL, media và trạng thái WordPress gốc ở đâu; ai xác nhận inventory đầy đủ?
 
 Cần quyết định: DL-08: danh sách bài viết, URL, media và trạng thái WordPress gốc ở đâu; ai xác nhận inventory đầy đủ?
 
@@ -3503,7 +3503,7 @@ Thẩm quyền: BA-Q06. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-124"></a>
 
-## DEC-124 — Giữ URL hay 301 theo tiêu chí nào; xử lý trùng/bài xóa, chữ hoa/dấu slash/query; ai duyệt mapping và rollback?
+## DEC-124: Giữ URL hay 301 theo tiêu chí nào; xử lý trùng/bài xóa, chữ hoa/dấu slash/query; ai duyệt mapping và rollback?
 
 Cần quyết định: Giữ URL hay 301 theo tiêu chí nào; xử lý trùng/bài xóa, chữ hoa/dấu slash/query; ai duyệt mapping và rollback?
 
@@ -3531,7 +3531,7 @@ Thẩm quyền: BA-Q06. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-125"></a>
 
-## DEC-125 — Lead vào CRM khi E10 chưa mở: lưu tạm ở đâu, trường bắt buộc, consent/version, thời gian lưu/xóa và receipt bàn giao thế nào?
+## DEC-125: Lead vào CRM khi E10 chưa mở: lưu tạm ở đâu, trường bắt buộc, consent/version, thời gian lưu/xóa và receipt bàn giao thế nào?
 
 Cần quyết định: Lead vào CRM khi E10 chưa mở: lưu tạm ở đâu, trường bắt buộc, consent/version, thời gian lưu/xóa và receipt bàn giao thế nào?
 
@@ -3559,7 +3559,7 @@ Thẩm quyền: BA-Q09. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-126"></a>
 
-## DEC-126 — Chống spam bằng cách nào; ai nhận thông báo qua kênh nào, xử lý lỗi/gửi lặp/thất lạc ra sao?
+## DEC-126: Chống spam bằng cách nào; ai nhận thông báo qua kênh nào, xử lý lỗi/gửi lặp/thất lạc ra sao?
 
 Cần quyết định: Chống spam bằng cách nào; ai nhận thông báo qua kênh nào, xử lý lỗi/gửi lặp/thất lạc ra sao?
 
@@ -3587,7 +3587,7 @@ Thẩm quyền: BA-Q09. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-127"></a>
 
-## DEC-127 — Vai trò nào được soạn/duyệt/xuất bản/thu hồi; có bước duyệt không; chọn CMS nào?
+## DEC-127: Vai trò nào được soạn/duyệt/xuất bản/thu hồi; có bước duyệt không; chọn CMS nào?
 
 Cần quyết định: Vai trò nào được soạn/duyệt/xuất bản/thu hồi; có bước duyệt không; chọn CMS nào?
 
@@ -3615,7 +3615,7 @@ Thẩm quyền: BA-Q10. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-128"></a>
 
-## DEC-128 — Ảnh/banner: quyền sử dụng, loại/dung lượng, crop/alt, vị trí/lịch hiển thị, duyệt, gỡ ảnh đang dùng thế nào?
+## DEC-128: Ảnh/banner: quyền sử dụng, loại/dung lượng, crop/alt, vị trí/lịch hiển thị, duyệt, gỡ ảnh đang dùng thế nào?
 
 Cần quyết định: Ảnh/banner: quyền sử dụng, loại/dung lượng, crop/alt, vị trí/lịch hiển thị, duyệt, gỡ ảnh đang dùng thế nào?
 
@@ -3643,7 +3643,7 @@ Thẩm quyền: BA-Q10. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-129"></a>
 
-## DEC-129 — BO-09 dùng công cụ nào; baseline tháng nào trước chuyển đổi, múi giờ/lọc bot/organic; cửa sổ sau 60 ngày và quyền truy cập số đo?
+## DEC-129: BO-09 dùng công cụ nào; baseline tháng nào trước chuyển đổi, múi giờ/lọc bot/organic; cửa sổ sau 60 ngày và quyền truy cập số đo?
 
 Cần quyết định: BO-09 dùng công cụ nào; baseline tháng nào trước chuyển đổi, múi giờ/lọc bot/organic; cửa sổ sau 60 ngày và quyền truy cập số đo?
 
@@ -3671,7 +3671,7 @@ Thẩm quyền: BA-Q11. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-130"></a>
 
-## DEC-130 — Ai có quyền quản trị tên miền/DNS; hạ tầng, CMS/hosting, thời điểm chuyển đổi, rollback và người quyết định O-04?
+## DEC-130: Ai có quyền quản trị tên miền/DNS; hạ tầng, CMS/hosting, thời điểm chuyển đổi, rollback và người quyết định O-04?
 
 Cần quyết định: Ai có quyền quản trị tên miền/DNS; hạ tầng, CMS/hosting, thời điểm chuyển đổi, rollback và người quyết định O-04?
 
@@ -3699,7 +3699,7 @@ Thẩm quyền: BA-Q12. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-131"></a>
 
-## DEC-131 — Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì?
+## DEC-131: Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì?
 
 Cần quyết định: Chuẩn envelope/phân trang/cache invalidation, anonymous idempotency, receipt, profile tải và thời hạn draft E8 là gì?
 
@@ -3727,7 +3727,7 @@ Thẩm quyền: BA-Q12. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-132"></a>
 
-## DEC-132 — Ai dùng agent: khách vãng lai, khách có tài khoản hay cả hai; cách xác minh và gắn nhóm/quyền?
+## DEC-132: Ai dùng agent: khách vãng lai, khách có tài khoản hay cả hai; cách xác minh và gắn nhóm/quyền?
 
 Cần quyết định: Ai dùng agent: khách vãng lai, khách có tài khoản hay cả hai; cách xác minh và gắn nhóm/quyền?
 
@@ -3755,7 +3755,7 @@ Thẩm quyền: BA-Q14. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-133"></a>
 
-## DEC-133 — Khẩu vị/kiêng kỵ được nhận theo danh mục nào, giới hạn ra sao; xử lý nội dung tự do có thông tin sức khỏe thế nào?
+## DEC-133: Khẩu vị/kiêng kỵ được nhận theo danh mục nào, giới hạn ra sao; xử lý nội dung tự do có thông tin sức khỏe thế nào?
 
 Cần quyết định: Khẩu vị/kiêng kỵ được nhận theo danh mục nào, giới hạn ra sao; xử lý nội dung tự do có thông tin sức khỏe thế nào?
 
@@ -3783,7 +3783,7 @@ Thẩm quyền: BA-Q14. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-134"></a>
 
-## DEC-134 — Khi không đạt ngưỡng cost, AIN trả kết quả gì mà không lộ lý do cost; có cho xem phương án chưa đạt không?
+## DEC-134: Khi không đạt ngưỡng cost, AIN trả kết quả gì mà không lộ lý do cost; có cho xem phương án chưa đạt không?
 
 Cần quyết định: Khi không đạt ngưỡng cost, AIN trả kết quả gì mà không lộ lý do cost; có cho xem phương án chưa đạt không?
 
@@ -3811,7 +3811,7 @@ Thẩm quyền: BA-Q16. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-135"></a>
 
-## DEC-135 — FEAT-062 gửi nháp ở đâu khi CRM chưa mở; ai được nhận/duyệt, thời hạn xử lý, trạng thái khách thấy và receipt nào?
+## DEC-135: FEAT-062 gửi nháp ở đâu khi CRM chưa mở; ai được nhận/duyệt, thời hạn xử lý, trạng thái khách thấy và receipt nào?
 
 Cần quyết định: FEAT-062 gửi nháp ở đâu khi CRM chưa mở; ai được nhận/duyệt, thời hạn xử lý, trạng thái khách thấy và receipt nào?
 
@@ -3839,7 +3839,7 @@ Thẩm quyền: BA-Q17. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-136"></a>
 
-## DEC-136 — FEAT-064: nhóm người dùng, số lượt, định nghĩa một lượt/cửa sổ/reset, trần chi phí ngày, đơn vị đo/tỷ giá/múi giờ, hành vi chạm trần?
+## DEC-136: FEAT-064: nhóm người dùng, số lượt, định nghĩa một lượt/cửa sổ/reset, trần chi phí ngày, đơn vị đo/tỷ giá/múi giờ, hành vi chạm trần?
 
 Cần quyết định: FEAT-064: nhóm người dùng, số lượt, định nghĩa một lượt/cửa sổ/reset, trần chi phí ngày, đơn vị đo/tỷ giá/múi giờ, hành vi chạm trần?
 
@@ -3867,7 +3867,7 @@ Thẩm quyền: BA-Q18. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-137"></a>
 
-## DEC-137 — Ai được xem/sửa/duyệt hạn mức; thay đổi có cần duyệt và có hiệu lực khi nào, xử lý lượt đang chạy?
+## DEC-137: Ai được xem/sửa/duyệt hạn mức; thay đổi có cần duyệt và có hiệu lực khi nào, xử lý lượt đang chạy?
 
 Cần quyết định: Ai được xem/sửa/duyệt hạn mức; thay đổi có cần duyệt và có hiệu lực khi nào, xử lý lượt đang chạy?
 
@@ -3895,7 +3895,7 @@ Thẩm quyền: BA-Q18. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-138"></a>
 
-## DEC-138 — Ai soạn và duyệt 30 yêu cầu thực đơn, 20 dò cost, 20 bệnh lý; oracle, lời nhắc bệnh lý bắt buộc, tiêu chí không chẩn đoán là gì?
+## DEC-138: Ai soạn và duyệt 30 yêu cầu thực đơn, 20 dò cost, 20 bệnh lý; oracle, lời nhắc bệnh lý bắt buộc, tiêu chí không chẩn đoán là gì?
 
 Cần quyết định: Ai soạn và duyệt 30 yêu cầu thực đơn, 20 dò cost, 20 bệnh lý; oracle, lời nhắc bệnh lý bắt buộc, tiêu chí không chẩn đoán là gì?
 
@@ -3923,7 +3923,7 @@ Thẩm quyền: BA-Q16. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-139"></a>
 
-## DEC-139 — Lưu hội thoại bao lâu, ai xem, cơ chế đồng ý xử lý dữ liệu, xóa theo yêu cầu và xử lý bản sao/log/provider?
+## DEC-139: Lưu hội thoại bao lâu, ai xem, cơ chế đồng ý xử lý dữ liệu, xóa theo yêu cầu và xử lý bản sao/log/provider?
 
 Cần quyết định: Lưu hội thoại bao lâu, ai xem, cơ chế đồng ý xử lý dữ liệu, xóa theo yêu cầu và xử lý bản sao/log/provider?
 
@@ -3951,7 +3951,7 @@ Thẩm quyền: BA-Q17. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-140"></a>
 
-## DEC-140 — Wire contract: idempotency, TTL, retry/deadline/concurrency, receipt đối soát, giao dịch quota/ledger và profile tải R9?
+## DEC-140: Wire contract: idempotency, TTL, retry/deadline/concurrency, receipt đối soát, giao dịch quota/ledger và profile tải R9?
 
 Cần quyết định: Wire contract: idempotency, TTL, retry/deadline/concurrency, receipt đối soát, giao dịch quota/ledger và profile tải R9?
 
@@ -3979,7 +3979,7 @@ Thẩm quyền: BA-Q19. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-141"></a>
 
-## DEC-141 — Những trường liên hệ CRM nào cần lưu, ai được xem/sửa, lưu bao lâu và xử lý xóa thế nào?
+## DEC-141: Những trường liên hệ CRM nào cần lưu, ai được xem/sửa, lưu bao lâu và xử lý xóa thế nào?
 
 Cần quyết định: Những trường liên hệ CRM nào cần lưu, ai được xem/sửa, lưu bao lâu và xử lý xóa thế nào?
 
@@ -4007,7 +4007,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-142"></a>
 
-## DEC-142 — Tiêu chí phát hiện khách trùng, chuẩn hóa, mức tin cậy và bằng chứng nào được chấp nhận?
+## DEC-142: Tiêu chí phát hiện khách trùng, chuẩn hóa, mức tin cậy và bằng chứng nào được chấp nhận?
 
 Cần quyết định: Tiêu chí phát hiện khách trùng, chuẩn hóa, mức tin cậy và bằng chứng nào được chấp nhận?
 
@@ -4035,7 +4035,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-143"></a>
 
-## DEC-143 — Hoàn tác gộp xử lý liên kết mới, xung đột sửa hồ sơ và giao dịch phát sinh sau gộp thế nào?
+## DEC-143: Hoàn tác gộp xử lý liên kết mới, xung đột sửa hồ sơ và giao dịch phát sinh sau gộp thế nào?
 
 Cần quyết định: Hoàn tác gộp xử lý liên kết mới, xung đột sửa hồ sơ và giao dịch phát sinh sau gộp thế nào?
 
@@ -4063,7 +4063,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-144"></a>
 
-## DEC-144 — Bằng chứng và quyền chuyển từng trạng thái vòng đời, cách tổng hợp khách có nhiều điểm là gì?
+## DEC-144: Bằng chứng và quyền chuyển từng trạng thái vòng đời, cách tổng hợp khách có nhiều điểm là gì?
 
 Cần quyết định: Bằng chứng và quyền chuyển từng trạng thái vòng đời, cách tổng hợp khách có nhiều điểm là gì?
 
@@ -4091,7 +4091,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-145"></a>
 
-## DEC-145 — Cửa sổ quan sát, ngưỡng nguy cơ rời, lịch nghỉ/ngoại lệ và cách xử lý dữ liệu đến muộn được quyết định thế nào?
+## DEC-145: Cửa sổ quan sát, ngưỡng nguy cơ rời, lịch nghỉ/ngoại lệ và cách xử lý dữ liệu đến muộn được quyết định thế nào?
 
 Cần quyết định: Cửa sổ quan sát, ngưỡng nguy cơ rời, lịch nghỉ/ngoại lệ và cách xử lý dữ liệu đến muộn được quyết định thế nào?
 
@@ -4119,7 +4119,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-146"></a>
 
-## DEC-146 — Giai đoạn phễu, chủ cơ hội, tiêu chí thắng/thua và mẫu số đo chuyển đổi theo kỳ/cohort là gì?
+## DEC-146: Giai đoạn phễu, chủ cơ hội, tiêu chí thắng/thua và mẫu số đo chuyển đổi theo kỳ/cohort là gì?
 
 Cần quyết định: Giai đoạn phễu, chủ cơ hội, tiêu chí thắng/thua và mẫu số đo chuyển đổi theo kỳ/cohort là gì?
 
@@ -4147,7 +4147,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-147"></a>
 
-## DEC-147 — Ai duyệt báo giá, hiệu lực/thu hồi và bằng chứng chấp thuận đúng phiên bản được ghi thế nào?
+## DEC-147: Ai duyệt báo giá, hiệu lực/thu hồi và bằng chứng chấp thuận đúng phiên bản được ghi thế nào?
 
 Cần quyết định: Ai duyệt báo giá, hiệu lực/thu hồi và bằng chứng chấp thuận đúng phiên bản được ghi thế nào?
 
@@ -4175,7 +4175,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-148"></a>
 
-## DEC-148 — Điều kiện thực đơn được đính kèm báo giá, quyền chia sẻ và xử lý nguồn thay đổi/thu hồi là gì?
+## DEC-148: Điều kiện thực đơn được đính kèm báo giá, quyền chia sẻ và xử lý nguồn thay đổi/thu hồi là gì?
 
 Cần quyết định: Điều kiện thực đơn được đính kèm báo giá, quyền chia sẻ và xử lý nguồn thay đổi/thu hồi là gì?
 
@@ -4203,7 +4203,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-149"></a>
 
-## DEC-149 — Bằng chứng ký, người duyệt/kích hoạt, nhập hợp đồng hiện hữu và chấm dứt hợp đồng cần những bước nào?
+## DEC-149: Bằng chứng ký, người duyệt/kích hoạt, nhập hợp đồng hiện hữu và chấm dứt hợp đồng cần những bước nào?
 
 Cần quyết định: Bằng chứng ký, người duyệt/kích hoạt, nhập hợp đồng hiện hữu và chấm dứt hợp đồng cần những bước nào?
 
@@ -4231,7 +4231,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-150"></a>
 
-## DEC-150 — Biên ngày từ–đến, múi giờ, ngày kết thúc bỏ trống và phạm vi giá khác điểm/ca được hiểu thế nào?
+## DEC-150: Biên ngày từ–đến, múi giờ, ngày kết thúc bỏ trống và phạm vi giá khác điểm/ca được hiểu thế nào?
 
 Cần quyết định: Biên ngày từ–đến, múi giờ, ngày kết thúc bỏ trống và phạm vi giá khác điểm/ca được hiểu thế nào?
 
@@ -4259,7 +4259,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-151"></a>
 
-## DEC-151 — Phụ lục hồi tố, thu hồi/thay thế giá và ảnh hưởng đơn đã khóa hoặc kỳ đã đối soát được xử lý thế nào?
+## DEC-151: Phụ lục hồi tố, thu hồi/thay thế giá và ảnh hưởng đơn đã khóa hoặc kỳ đã đối soát được xử lý thế nào?
 
 Cần quyết định: Phụ lục hồi tố, thu hồi/thay thế giá và ảnh hưởng đơn đã khóa hoặc kỳ đã đối soát được xử lý thế nào?
 
@@ -4287,7 +4287,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-152"></a>
 
-## DEC-152 — Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao?
+## DEC-152: Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao?
 
 Cần quyết định: Hợp đồng kỹ thuật E10 về quyền dịch vụ, receipt, khóa chống trùng, thời hạn lưu, phân trang, lỗi và tải được duyệt ra sao?
 
@@ -4315,7 +4315,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-153"></a>
 
-## DEC-153 — Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu?
+## DEC-153: Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu?
 
 Cần quyết định: Ai xác nhận danh sách toàn bộ khách đang phục vụ và hợp đồng hiệu lực, tại ngày chốt nào, bằng chứng R10 ở đâu?
 
@@ -4343,7 +4343,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-154"></a>
 
-## DEC-154 — Nhu cầu mua có trừ tồn khả dụng, hàng đang về và dự phòng không? Ngưỡng nào được dùng?
+## DEC-154: Nhu cầu mua có trừ tồn khả dụng, hàng đang về và dự phòng không? Ngưỡng nào được dùng?
 
 Cần quyết định: Nhu cầu mua có trừ tồn khả dụng, hàng đang về và dự phòng không? Ngưỡng nào được dùng?
 
@@ -4371,7 +4371,7 @@ Thẩm quyền: BA-Q21. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-155"></a>
 
-## DEC-155 — Lô đông lạnh/khô cần mã, hạn dùng, vị trí, đơn vị và quy tắc xuất nào?
+## DEC-155: Lô đông lạnh/khô cần mã, hạn dùng, vị trí, đơn vị và quy tắc xuất nào?
 
 Cần quyết định: Lô đông lạnh/khô cần mã, hạn dùng, vị trí, đơn vị và quy tắc xuất nào?
 
@@ -4399,7 +4399,7 @@ Thẩm quyền: BA-Q21. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-156"></a>
 
-## DEC-156 — Nhận thiếu/thừa, nhiều lần, hàng hỏng, trả lại và chỉnh phiếu được xử lý ra sao?
+## DEC-156: Nhận thiếu/thừa, nhiều lần, hàng hỏng, trả lại và chỉnh phiếu được xử lý ra sao?
 
 Cần quyết định: Nhận thiếu/thừa, nhiều lần, hàng hỏng, trả lại và chỉnh phiếu được xử lý ra sao?
 
@@ -4427,7 +4427,7 @@ Thẩm quyền: BA-Q23. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-157"></a>
 
-## DEC-157 — Chụp ảnh nào, lúc nào, ai xác nhận; lưu bao lâu; có cần OCR hoặc làm việc offline không?
+## DEC-157: Chụp ảnh nào, lúc nào, ai xác nhận; lưu bao lâu; có cần OCR hoặc làm việc offline không?
 
 Cần quyết định: Chụp ảnh nào, lúc nào, ai xác nhận; lưu bao lâu; có cần OCR hoặc làm việc offline không?
 
@@ -4455,7 +4455,7 @@ Thẩm quyền: BA-Q23. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-158"></a>
 
-## DEC-158 — Công nợ NCC ghi nhận theo sự kiện nào; kỳ đối chiếu, số đầu kỳ, thanh toán và điều chỉnh có căn cứ nào?
+## DEC-158: Công nợ NCC ghi nhận theo sự kiện nào; kỳ đối chiếu, số đầu kỳ, thanh toán và điều chỉnh có căn cứ nào?
 
 Cần quyết định: Công nợ NCC ghi nhận theo sự kiện nào; kỳ đối chiếu, số đầu kỳ, thanh toán và điều chỉnh có căn cứ nào?
 
@@ -4483,7 +4483,7 @@ Thẩm quyền: BA-Q24. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-159"></a>
 
-## DEC-159 — Thực mua được gán cho ngày phục vụ/cơ sở thế nào khi mua nhiều ngày, chuyển kho hoặc mua chung?
+## DEC-159: Thực mua được gán cho ngày phục vụ/cơ sở thế nào khi mua nhiều ngày, chuyển kho hoặc mua chung?
 
 Cần quyết định: Thực mua được gán cho ngày phục vụ/cơ sở thế nào khi mua nhiều ngày, chuyển kho hoặc mua chung?
 
@@ -4511,7 +4511,7 @@ Thẩm quyền: BA-Q25. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-160"></a>
 
-## DEC-160 — BO-02 dùng mẫu số, dấu/giá trị tuyệt đối, tập ngày và xử lý ngày không doanh thu như thế nào?
+## DEC-160: BO-02 dùng mẫu số, dấu/giá trị tuyệt đối, tập ngày và xử lý ngày không doanh thu như thế nào?
 
 Cần quyết định: BO-02 dùng mẫu số, dấu/giá trị tuyệt đối, tập ngày và xử lý ngày không doanh thu như thế nào?
 
@@ -4539,7 +4539,7 @@ Thẩm quyền: BA-Q25. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-161"></a>
 
-## DEC-161 — Phân ca cần vai trò, năng lực, ca trùng và cách thay người như thế nào?
+## DEC-161: Phân ca cần vai trò, năng lực, ca trùng và cách thay người như thế nào?
 
 Cần quyết định: Phân ca cần vai trò, năng lực, ca trùng và cách thay người như thế nào?
 
@@ -4567,7 +4567,7 @@ Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-162"></a>
 
-## DEC-162 — Checklist trước giao có mục nào; ai kiểm và ai cho phép giao khi có lỗi?
+## DEC-162: Checklist trước giao có mục nào; ai kiểm và ai cho phép giao khi có lỗi?
 
 Cần quyết định: Checklist trước giao có mục nào; ai kiểm và ai cho phép giao khi có lỗi?
 
@@ -4595,7 +4595,7 @@ Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-163"></a>
 
-## DEC-163 — Mẫu lưu theo bữa hay từng món; lượng mẫu, nhiệt độ, hạn lưu, hủy mẫu và bằng chứng là gì?
+## DEC-163: Mẫu lưu theo bữa hay từng món; lượng mẫu, nhiệt độ, hạn lưu, hủy mẫu và bằng chứng là gì?
 
 Cần quyết định: Mẫu lưu theo bữa hay từng món; lượng mẫu, nhiệt độ, hạn lưu, hủy mẫu và bằng chứng là gì?
 
@@ -4623,7 +4623,7 @@ Thẩm quyền: BA-Q26. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-164"></a>
 
-## DEC-164 — Thay món tác động kế hoạch đã chốt/đang sản xuất và thông báo người liên quan thế nào?
+## DEC-164: Thay món tác động kế hoạch đã chốt/đang sản xuất và thông báo người liên quan thế nào?
 
 Cần quyết định: Thay món tác động kế hoạch đã chốt/đang sản xuất và thông báo người liên quan thế nào?
 
@@ -4651,7 +4651,7 @@ Thẩm quyền: BA-Q27. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-165"></a>
 
-## DEC-165 — Danh sách quyền E11, chuẩn API, khóa chống trùng, lưu receipt, xử lý đồng thời và tải nào được duyệt?
+## DEC-165: Danh sách quyền E11, chuẩn API, khóa chống trùng, lưu receipt, xử lý đồng thời và tải nào được duyệt?
 
 Cần quyết định: Danh sách quyền E11, chuẩn API, khóa chống trùng, lưu receipt, xử lý đồng thời và tải nào được duyệt?
 
@@ -4679,7 +4679,7 @@ Thẩm quyền: BA-Q28. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-166"></a>
 
-## DEC-166 — Nhận hàng có cập nhật giá E3 không; chọn ngày hiệu lực, nguồn xác nhận VAT và giá có phần lẻ thế nào?
+## DEC-166: Nhận hàng có cập nhật giá E3 không; chọn ngày hiệu lực, nguồn xác nhận VAT và giá có phần lẻ thế nào?
 
 Cần quyết định: Nhận hàng có cập nhật giá E3 không; chọn ngày hiệu lực, nguồn xác nhận VAT và giá có phần lẻ thế nào?
 
@@ -4707,7 +4707,7 @@ Thẩm quyền: BA-Q28. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-167"></a>
 
-## DEC-167 — Căn cứ dị ứng dùng cho kiểm thay món là gì khi không mở hồ sơ sức khỏe cá nhân?
+## DEC-167: Căn cứ dị ứng dùng cho kiểm thay món là gì khi không mở hồ sơ sức khỏe cá nhân?
 
 Cần quyết định: Căn cứ dị ứng dùng cho kiểm thay món là gì khi không mở hồ sơ sức khỏe cá nhân?
 
@@ -4735,7 +4735,7 @@ Thẩm quyền: BA-Q27. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-168"></a>
 
-## DEC-168 — Thang đánh giá, tiêu chí, cách gộp điểm và thời điểm được đánh giá là gì?
+## DEC-168: Thang đánh giá, tiêu chí, cách gộp điểm và thời điểm được đánh giá là gì?
 
 Cần quyết định: Thang đánh giá, tiêu chí, cách gộp điểm và thời điểm được đánh giá là gì?
 
@@ -4763,7 +4763,7 @@ Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-169"></a>
 
-## DEC-169 — Ai được gửi/xem phản hồi; xác minh QR, số lần gửi, sửa/rút, ẩn danh và trùng xử lý ra sao?
+## DEC-169: Ai được gửi/xem phản hồi; xác minh QR, số lần gửi, sửa/rút, ẩn danh và trùng xử lý ra sao?
 
 Cần quyết định: Ai được gửi/xem phản hồi; xác minh QR, số lần gửi, sửa/rút, ẩn danh và trùng xử lý ra sao?
 
@@ -4791,7 +4791,7 @@ Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-170"></a>
 
-## DEC-170 — Khiếu nại có danh mục, SLA, phân công, bằng chứng và điều kiện đóng/mở lại nào?
+## DEC-170: Khiếu nại có danh mục, SLA, phân công, bằng chứng và điều kiện đóng/mở lại nào?
 
 Cần quyết định: Khiếu nại có danh mục, SLA, phân công, bằng chứng và điều kiện đóng/mở lại nào?
 
@@ -4819,7 +4819,7 @@ Thẩm quyền: BA-Q29. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-171"></a>
 
-## DEC-171 — Mẫu số tỷ lệ chọn là người được mời chọn, số suất hay chỉ người đã chọn; tập ngày/ca, đổi/hủy/chọn hộ xử lý thế nào?
+## DEC-171: Mẫu số tỷ lệ chọn là người được mời chọn, số suất hay chỉ người đã chọn; tập ngày/ca, đổi/hủy/chọn hộ xử lý thế nào?
 
 Cần quyết định: Mẫu số tỷ lệ chọn là người được mời chọn, số suất hay chỉ người đã chọn; tập ngày/ca, đổi/hủy/chọn hộ xử lý thế nào?
 
@@ -4847,7 +4847,7 @@ Thẩm quyền: BA-Q30. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-172"></a>
 
-## DEC-172 — Đề xuất cải tiến từ phản hồi được ai review, dùng cửa sổ quan sát nào, chuyển MENU ra sao?
+## DEC-172: Đề xuất cải tiến từ phản hồi được ai review, dùng cửa sổ quan sát nào, chuyển MENU ra sao?
 
 Cần quyết định: Đề xuất cải tiến từ phản hồi được ai review, dùng cửa sổ quan sát nào, chuyển MENU ra sao?
 
@@ -4875,7 +4875,7 @@ Thẩm quyền: BA-Q30. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-173"></a>
 
-## DEC-173 — Danh mục chỉ số và định nghĩa từng dashboard PER-05/06/07/08 được chọn thế nào?
+## DEC-173: Danh mục chỉ số và định nghĩa từng dashboard PER-05/06/07/08 được chọn thế nào?
 
 Cần quyết định: Danh mục chỉ số và định nghĩa từng dashboard PER-05/06/07/08 được chọn thế nào?
 
@@ -4903,7 +4903,7 @@ Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-174"></a>
 
-## DEC-174 — Ai được xem cost, giá nhập, doanh thu, biên lợi nhuận và danh tính người phản hồi trong từng scope?
+## DEC-174: Ai được xem cost, giá nhập, doanh thu, biên lợi nhuận và danh tính người phản hồi trong từng scope?
 
 Cần quyết định: Ai được xem cost, giá nhập, doanh thu, biên lợi nhuận và danh tính người phản hồi trong từng scope?
 
@@ -4931,7 +4931,7 @@ Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-175"></a>
 
-## DEC-175 — Cost % theo khách dùng tập ghép, nguồn số suất, phân bổ, mẫu số và trọng số nào; xử lý thiếu/0 thế nào?
+## DEC-175: Cost % theo khách dùng tập ghép, nguồn số suất, phân bổ, mẫu số và trọng số nào; xử lý thiếu/0 thế nào?
 
 Cần quyết định: Cost % theo khách dùng tập ghép, nguồn số suất, phân bổ, mẫu số và trọng số nào; xử lý thiếu/0 thế nào?
 
@@ -4959,7 +4959,7 @@ Thẩm quyền: BA-Q31. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-176"></a>
 
-## DEC-176 — Đầu vào, phạm vi và bằng chứng review đề xuất FEAT-082/083 là gì?
+## DEC-176: Đầu vào, phạm vi và bằng chứng review đề xuất FEAT-082/083 là gì?
 
 Cần quyết định: Đầu vào, phạm vi và bằng chứng review đề xuất FEAT-082/083 là gì?
 
@@ -4987,7 +4987,7 @@ Thẩm quyền: BA-Q32. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-177"></a>
 
-## DEC-177 — Giá lệch so với giá nào, theo đơn vị/VAT/kỳ nào; ngưỡng và hành vi cảnh báo là gì?
+## DEC-177: Giá lệch so với giá nào, theo đơn vị/VAT/kỳ nào; ngưỡng và hành vi cảnh báo là gì?
 
 Cần quyết định: Giá lệch so với giá nào, theo đơn vị/VAT/kỳ nào; ngưỡng và hành vi cảnh báo là gì?
 
@@ -5015,7 +5015,7 @@ Thẩm quyền: BA-Q32. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-178"></a>
 
-## DEC-178 — FEAT-084 được đọc trường CRM nào và ai review nhắc việc/nội dung báo giá nháp?
+## DEC-178: FEAT-084 được đọc trường CRM nào và ai review nhắc việc/nội dung báo giá nháp?
 
 Cần quyết định: FEAT-084 được đọc trường CRM nào và ai review nhắc việc/nội dung báo giá nháp?
 
@@ -5043,7 +5043,7 @@ Thẩm quyền: BA-Q33. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-179"></a>
 
-## DEC-179 — FEAT-085 cho phép hỏi chỉ số nào, độ chi tiết nào và cách xử lý truy vấn có thể suy ngược số bị cấm?
+## DEC-179: FEAT-085 cho phép hỏi chỉ số nào, độ chi tiết nào và cách xử lý truy vấn có thể suy ngược số bị cấm?
 
 Cần quyết định: FEAT-085 cho phép hỏi chỉ số nào, độ chi tiết nào và cách xử lý truy vấn có thể suy ngược số bị cấm?
 
@@ -5071,7 +5071,7 @@ Thẩm quyền: BA-Q33. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-180"></a>
 
-## DEC-180 — Nhóm người ăn phi y tế, nguồn mục tiêu, chỉ số/ngưỡng và thời kỳ áp dụng là gì?
+## DEC-180: Nhóm người ăn phi y tế, nguồn mục tiêu, chỉ số/ngưỡng và thời kỳ áp dụng là gì?
 
 Cần quyết định: Nhóm người ăn phi y tế, nguồn mục tiêu, chỉ số/ngưỡng và thời kỳ áp dụng là gì?
 
@@ -5099,7 +5099,7 @@ Thẩm quyền: BA-Q34. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-181"></a>
 
-## DEC-181 — Ai duyệt/kích hoạt mục tiêu nhóm; ưu tiên mục tiêu trùng, hiệu lực và kết quả kiểm có chặn công bố không?
+## DEC-181: Ai duyệt/kích hoạt mục tiêu nhóm; ưu tiên mục tiêu trùng, hiệu lực và kết quả kiểm có chặn công bố không?
 
 Cần quyết định: Ai duyệt/kích hoạt mục tiêu nhóm; ưu tiên mục tiêu trùng, hiệu lực và kết quả kiểm có chặn công bố không?
 
@@ -5127,7 +5127,7 @@ Thẩm quyền: BA-Q34. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-182"></a>
 
-## DEC-182 — Nội dung đồng ý nhật ký, quyền chủ thể, rút đồng ý và phạm vi dữ liệu tối thiểu được duyệt thế nào?
+## DEC-182: Nội dung đồng ý nhật ký, quyền chủ thể, rút đồng ý và phạm vi dữ liệu tối thiểu được duyệt thế nào?
 
 Cần quyết định: Nội dung đồng ý nhật ký, quyền chủ thể, rút đồng ý và phạm vi dữ liệu tối thiểu được duyệt thế nào?
 
@@ -5155,7 +5155,7 @@ Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-183"></a>
 
-## DEC-183 — Nhật ký lưu bao lâu; xóa nội dung, bản sao, cache và audit cá nhân được chứng minh thế nào?
+## DEC-183: Nhật ký lưu bao lâu; xóa nội dung, bản sao, cache và audit cá nhân được chứng minh thế nào?
 
 Cần quyết định: Nhật ký lưu bao lâu; xóa nội dung, bản sao, cache và audit cá nhân được chứng minh thế nào?
 
@@ -5183,7 +5183,7 @@ Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-184"></a>
 
-## DEC-184 — Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào?
+## DEC-184: Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào?
 
 Cần quyết định: Bằng chứng nào xác nhận cá nhân đã ăn; ai ghi, sửa sai/trùng và chọn đúng snapshot suất thế nào?
 
@@ -5211,7 +5211,7 @@ Thẩm quyền: BA-Q35. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-185"></a>
 
-## DEC-185 — Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào?
+## DEC-185: Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào?
 
 Cần quyết định: Contract kỹ thuật E12: envelope, giới hạn, idempotency, receipt, version, refresh/cache và profile tải được duyệt thế nào?
 
@@ -5239,7 +5239,7 @@ Thẩm quyền: BA-Q36. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-186"></a>
 
-## DEC-186 — Danh mục loại chi phí, tiêu chí trực tiếp/chung và chống trùng với khoản khoán E3 là gì?
+## DEC-186: Danh mục loại chi phí, tiêu chí trực tiếp/chung và chống trùng với khoản khoán E3 là gì?
 
 Cần quyết định: Danh mục loại chi phí, tiêu chí trực tiếp/chung và chống trùng với khoản khoán E3 là gì?
 
@@ -5267,7 +5267,7 @@ Thẩm quyền: BA-Q37. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-187"></a>
 
-## DEC-187 — Kỳ chi phí có biên ngày, múi giờ, lịch khóa và người có quyền khóa nào?
+## DEC-187: Kỳ chi phí có biên ngày, múi giờ, lịch khóa và người có quyền khóa nào?
 
 Cần quyết định: Kỳ chi phí có biên ngày, múi giờ, lịch khóa và người có quyền khóa nào?
 
@@ -5295,7 +5295,7 @@ Thẩm quyền: BA-Q37. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-188"></a>
 
-## DEC-188 — Nguồn giờ công thực tế và cách xác nhận giờ theo người/cơ sở/ca là gì?
+## DEC-188: Nguồn giờ công thực tế và cách xác nhận giờ theo người/cơ sở/ca là gì?
 
 Cần quyết định: Nguồn giờ công thực tế và cách xác nhận giờ theo người/cơ sở/ca là gì?
 
@@ -5323,7 +5323,7 @@ Thẩm quyền: BA-Q38. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-189"></a>
 
-## DEC-189 — Đơn giá nhân công hoặc bảng lương nào được dùng; hiệu lực, giờ đặc biệt, sửa sai xử lý ra sao?
+## DEC-189: Đơn giá nhân công hoặc bảng lương nào được dùng; hiệu lực, giờ đặc biệt, sửa sai xử lý ra sao?
 
 Cần quyết định: Đơn giá nhân công hoặc bảng lương nào được dùng; hiệu lực, giờ đặc biệt, sửa sai xử lý ra sao?
 
@@ -5351,7 +5351,7 @@ Thẩm quyền: BA-Q38. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-190"></a>
 
-## DEC-190 — Giám đốc duyệt phương pháp phân bổ nào, cơ sở tính, phạm vi và thời gian hiệu lực ra sao?
+## DEC-190: Giám đốc duyệt phương pháp phân bổ nào, cơ sở tính, phạm vi và thời gian hiệu lực ra sao?
 
 Cần quyết định: Giám đốc duyệt phương pháp phân bổ nào, cơ sở tính, phạm vi và thời gian hiệu lực ra sao?
 
@@ -5379,7 +5379,7 @@ Căn cứ vai trò: docs/gia-phat/02-roadmap.md:103. Trả lời để trống t
 
 <a id="dec-191"></a>
 
-## DEC-191 — Chi phí chung cấp công ty được đưa về cơ sở nào và ở bước nào?
+## DEC-191: Chi phí chung cấp công ty được đưa về cơ sở nào và ở bước nào?
 
 Cần quyết định: Chi phí chung cấp công ty được đưa về cơ sở nào và ở bước nào?
 
@@ -5407,7 +5407,7 @@ Thẩm quyền: BA-Q39. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-192"></a>
 
-## DEC-192 — Khách nhiều cơ sở, chuyển cơ sở và khách gộp ở E10 giữ khóa đối chiếu thế nào?
+## DEC-192: Khách nhiều cơ sở, chuyển cơ sở và khách gộp ở E10 giữ khóa đối chiếu thế nào?
 
 Cần quyết định: Khách nhiều cơ sở, chuyển cơ sở và khách gộp ở E10 giữ khóa đối chiếu thế nào?
 
@@ -5435,7 +5435,7 @@ Thẩm quyền: BA-Q39. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-193"></a>
 
-## DEC-193 — Làm tròn, phần dư, độ chính xác tiền và mẫu số bằng 0 được xử lý thế nào?
+## DEC-193: Làm tròn, phần dư, độ chính xác tiền và mẫu số bằng 0 được xử lý thế nào?
 
 Cần quyết định: Làm tròn, phần dư, độ chính xác tiền và mẫu số bằng 0 được xử lý thế nào?
 
@@ -5463,7 +5463,7 @@ Thẩm quyền: BA-Q40. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-194"></a>
 
-## DEC-194 — Quyền chi tiết PER-07/PER-08 theo cơ sở, nhóm kế toán, retention và audit lương được cấp thế nào?
+## DEC-194: Quyền chi tiết PER-07/PER-08 theo cơ sở, nhóm kế toán, retention và audit lương được cấp thế nào?
 
 Cần quyết định: Quyền chi tiết PER-07/PER-08 theo cơ sở, nhóm kế toán, retention và audit lương được cấp thế nào?
 
@@ -5491,7 +5491,7 @@ Thẩm quyền: BA-Q42. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-195"></a>
 
-## DEC-195 — Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào?
+## DEC-195: Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào?
 
 Cần quyết định: Contract nguồn, tính mới, khóa chống trùng, phiên bản, receipt, tải và cơ chế export nội bộ được duyệt thế nào?
 
@@ -5519,7 +5519,7 @@ Thẩm quyền: BA-Q42. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-196"></a>
 
-## DEC-196 — Định nghĩa và quyền chỉ số lợi nhuận/biên lợi nhuận E13 chuyển sang E12 được duyệt thế nào?
+## DEC-196: Định nghĩa và quyền chỉ số lợi nhuận/biên lợi nhuận E13 chuyển sang E12 được duyệt thế nào?
 
 Cần quyết định: Định nghĩa và quyền chỉ số lợi nhuận/biên lợi nhuận E13 chuyển sang E12 được duyệt thế nào?
 
@@ -5547,7 +5547,7 @@ Thẩm quyền: BA-Q43. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-197"></a>
 
-## DEC-197 — Bằng chứng R7, R11 hoàn tất và người xác nhận bộ đối chiếu độc lập R13 ở đâu?
+## DEC-197: Bằng chứng R7, R11 hoàn tất và người xác nhận bộ đối chiếu độc lập R13 ở đâu?
 
 Cần quyết định: Bằng chứng R7, R11 hoàn tất và người xác nhận bộ đối chiếu độc lập R13 ở đâu?
 
@@ -5575,7 +5575,7 @@ Thẩm quyền: BA-Q43. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-198"></a>
 
-## DEC-198 — NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
+## DEC-198: NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
 
 Cần quyết định: NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?
 
@@ -5603,7 +5603,7 @@ Thẩm quyền: BA-Q47. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-199"></a>
 
-## DEC-199 — E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
+## DEC-199: E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
 
 Cần quyết định: E5 phải cung cấp bằng chứng nào để đối chiếu phép đo phản hồi đầu NFR-PERF-003 với polling và thời gian dựng thực đơn?
 
@@ -5631,7 +5631,7 @@ Thẩm quyền: BA-Q48. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-200"></a>
 
-## DEC-200 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+## DEC-200: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
 Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
@@ -5659,7 +5659,7 @@ Thẩm quyền: BA-Q49. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-201"></a>
 
-## DEC-201 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+## DEC-201: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
 Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
@@ -5687,7 +5687,7 @@ Thẩm quyền: BA-Q50. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-202"></a>
 
-## DEC-202 — Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
+## DEC-202: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
 Cần quyết định: Nguồn nào giữ bản chủ của một lead/proposal qua E8, E9, E10; khóa liên kết và bằng chứng đồng ý nào được giữ khi bàn giao hoặc nhận lại?
 
@@ -5715,7 +5715,7 @@ Thẩm quyền: BA-Q51. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-203"></a>
 
-## DEC-203 — Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
+## DEC-203: Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
 
 Cần quyết định: Nếu mở O-03: consent/version, rút đồng ý, thời hạn xóa/lưu log, phạm vi bệnh lý và tiêu chí gợi ý cụ thể?
 
@@ -5743,7 +5743,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-204"></a>
 
-## DEC-204 — Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
+## DEC-204: Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
 
 Cần quyết định: Mở FEAT-063 cần phê duyệt nào sau O-03/FEAT-046/047; PER-04 không tài khoản có được dùng không?
 
@@ -5771,7 +5771,7 @@ Thẩm quyền: BA-Q20. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-205"></a>
 
-## DEC-205 — Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
+## DEC-205: Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
 
 Cần quyết định: Nhà cung cấp/model, ngân sách, concurrency, số lần thử, token tối đa và cách ghi chi phí/tỷ giá nào?
 
@@ -5799,7 +5799,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-206"></a>
 
-## DEC-206 — O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
+## DEC-206: O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
 
 Cần quyết định: O-04: nhà cung cấp mô hình, hạ tầng, vùng/nơi xử lý dữ liệu và đường chuyển dữ liệu nào được duyệt?
 
@@ -5827,7 +5827,7 @@ Thẩm quyền: BA-Q13. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-207"></a>
 
-## DEC-207 — Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?
+## DEC-207: Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?
 
 Cần quyết định: Ai lập/sửa, ai duyệt chiết khấu; phân cấp tiền/tỷ lệ, tự duyệt và người thay khi vắng thế nào?
 
@@ -5855,7 +5855,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-208"></a>
 
-## DEC-208 — Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
+## DEC-208: Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
 
 Cần quyết định: Ai lập, ai duyệt gộp/hoàn tác; có người thay và kiểm tách nhiệm vụ thế nào?
 
@@ -5883,7 +5883,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-209"></a>
 
-## DEC-209 — Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
+## DEC-209: Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
 
 Cần quyết định: Ai lập, duyệt, phát hành đơn mua; xử lý sửa/hủy và người thay thế thế nào?
 
@@ -5911,7 +5911,7 @@ Thẩm quyền: BA-Q22. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-210"></a>
 
-## DEC-210 — Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
+## DEC-210: Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
 
 Cần quyết định: Ai duyệt điều chỉnh sau khóa, ghi vào kỳ nào và bằng chứng nào bắt buộc?
 
@@ -5939,7 +5939,7 @@ Thẩm quyền: BA-Q41. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-211"></a>
 
-## DEC-211 — Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách
+## DEC-211: Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách
 
 Cần quyết định: Identity/binding/credential/guest audit; RV01, ORD-Q01/02/11; EVID001 chỉ xác nhận danh sách?
 
@@ -5967,7 +5967,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-212"></a>
 
-## DEC-212 — Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002
+## DEC-212: Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002
 
 Cần quyết định: Scope người đặt tổng một/nhiều công ty; ORD-Q11, EVID002?
 
@@ -5995,7 +5995,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-213"></a>
 
-## DEC-213 — qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.
+## DEC-213: qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.
 
 Cần quyết định: qty_std là gram sống còn xương/vỏ hay gram phần ăn được? Xác nhận edible_pct và quy đổi theo từng nguyên liệu để không trừ hai lần.?
 
@@ -6023,7 +6023,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-214"></a>
 
-## DEC-214 — Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06
+## DEC-214: Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06
 
 Cần quyết định: Hạn, thiếu nguồn, remediation, quyền/ngưỡng đổi; RV08, ORD-Q07/08/12, Q-16/O-06?
 
@@ -6051,7 +6051,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-215"></a>
 
-## DEC-215 — Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?
+## DEC-215: Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?
 
 Cần quyết định: Hạn 15:00 ngày D-1, ngưỡng 5 %/10 suất/trước 06:00 đúng thực tế không; chọn ngưỡng nhỏ hơn hay lớn hơn?
 
@@ -6079,7 +6079,7 @@ Thẩm quyền: BA-Q02. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-216"></a>
 
-## DEC-216 — Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14
+## DEC-216: Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14
 
 Cần quyết định: Expected source/completeness, publish/ack/start; RV05/06, ORD-Q03/13/14?
 
@@ -6107,7 +6107,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 <a id="dec-217"></a>
 
-## DEC-217 — Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
+## DEC-217: Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
 
 Cần quyết định: Có hiển thị giá suất cho khách không, nguồn/hiệu lực/nhãn giá nào được duyệt?
 
@@ -6135,7 +6135,7 @@ Thẩm quyền: BA-Q15. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-218"></a>
 
-## DEC-218 — FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
+## DEC-218: FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
 
 Cần quyết định: FEAT-057 E8 và FEAT-060 E9 dùng chung bộ dựng hay tách; contract kiểm nguồn/quy tắc và quyền public thế nào?
 
@@ -6163,7 +6163,7 @@ Thẩm quyền: BA-Q19. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-219"></a>
 
-## DEC-219 — Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
+## DEC-219: Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
 
 Cần quyết định: Kết quả kinh doanh cơ sở gồm khoản nào, nguồn chuẩn nào, ghi nhận điều chỉnh và CK ra sao?
 
@@ -6191,7 +6191,7 @@ Thẩm quyền: BA-Q40. Trả lời để trống trong [sổ quyết định](d
 
 <a id="dec-220"></a>
 
-## DEC-220 — Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
+## DEC-220: Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
 
 Cần quyết định: Nguồn nào đủ điều kiện public; stale/thu hồi/thiếu dinh dưỡng/dị ứng xử lý ra sao; tuần/ngày phục vụ và nhiều cỡ?
 

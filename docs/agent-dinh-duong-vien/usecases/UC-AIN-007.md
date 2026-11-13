@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-007-MD
-title: UC-AIN-007 — Xem trạng thái đề xuất
+title: "UC-AIN-007: Xem trạng thái đề xuất"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-007 — Xem trạng thái đề xuất
+# UC-AIN-007: Xem trạng thái đề xuất
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-STAT-001 / FEAT-062 / US-AIN-007.
 
 Trigger: Sau khi nhận mã tiếp nhận, khách kiểm tra Gia Phát đã nhận/xử lý đề xuất tới đâu.
 
-Tiền điều kiện — nghiệp vụ: Có proposalRef và phiên có quyền sở hữu đề xuất.
-Tiền điều kiện — gate còn mở: E9-Q06, E9-Q13 chặn wording sau tiếp nhận, evidence đầu nhận và contract; không tự cam kết SLA. O-03 vẫn đóng.
+Tiền điều kiện (nghiệp vụ): Có proposalRef và phiên có quyền sở hữu đề xuất.
+Tiền điều kiện (gate còn mở): E9-Q06, E9-Q13 chặn wording sau tiếp nhận, evidence đầu nhận và contract; không tự cam kết SLA. O-03 vẫn đóng.
 
 Luồng chính:
 1. Khách chọn proposalRef tại UI-AIN-04 để tra tình trạng đề xuất.

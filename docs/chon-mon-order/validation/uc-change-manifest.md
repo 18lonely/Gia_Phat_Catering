@@ -1,4 +1,4 @@
-# Manifest phiên rà UC — 12/11/2026
+# Manifest phiên rà UC ngày 12/11/2026
 
 Đối chiếu SHA-256 với [baseline](uc-baseline-sha256.json); không Git. 27file thay đổi, 5file mới (gồm manifest này). Generated SVG/HTML có thể đổi ID render dù nguồn sơ đồ không đổi. Không xóa file nguồn.
 

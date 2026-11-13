@@ -1,4 +1,4 @@
-# Kế hoạch Lộ trình Sản phẩm (Product Roadmap) — Nền tảng Gia Phát
+# Kế hoạch Lộ trình Sản phẩm (Product Roadmap): Nền tảng Gia Phát
 
 ## Metadata
 
@@ -26,7 +26,7 @@ Cột "Cỡ" là so sánh tương đối giữa các đợt theo số tính năn
 
 ```
 ┌───────────────────────────┬───────────────────────────┬───────────────────────────┐
-│  NOW — MVP nội bộ         │  NEXT — Mở ra cho khách   │  LATER — Vận hành đầy đủ  │
+│  NOW: MVP nội bộ          │  NEXT: Mở ra cho khách    │  LATER: Vận hành đầy đủ   │
 │  23 tính năng · E1 → E5   │  36 tính năng · E6 → E9   │  19 tính năng · E10 → E13 │
 ├───────────────────────────┼───────────────────────────┼───────────────────────────┤
 │ • Tài khoản, phân quyền,  │ • Người ăn chọn món qua   │ • CRM 360°, phễu bán hàng,│
@@ -66,7 +66,7 @@ Trong lúc chưa có phần mềm, DL-03 → DL-07 làm trên bảng tính theo 
 
 ## Bảng chi tiết Lộ trình phát hành (Release Plan)
 
-### NOW — MVP nội bộ
+### NOW: MVP nội bộ
 
 | Release | Tên đợt phát hành | Mục tiêu chính | Danh sách Feature ID | Cỡ | Điều kiện bắt đầu | Ngày dự kiến | Tiêu chí nghiệm thu |
 | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
@@ -74,13 +74,13 @@ Trong lúc chưa có phần mềm, DL-03 → DL-07 làm trên bảng tính theo 
 | `R2` · v0.2.0 | Thực đơn & định lượng (E2) | Dựng được thực đơn tuần và máy kiểm quy tắc | `FEAT-006` → `FEAT-013` | XL | R1 xong; DL-01 xong; O-02 có câu trả lời | Chờ O-04 | Đủ 30 món có đủ 12 thuộc tính và công thức đã duyệt (DL-03 → 05); mỗi quy tắc trong số quy tắc được duyệt ở DL-01 có ít nhất 1 ca kiểm thử đạt và 1 ca vi phạm; thực đơn vi phạm quy tắc cứng không gửi duyệt được; công thức không tự duyệt được bởi người tạo |
 | `R3` · v0.3.0 | Cost (E3) | Biết cost % trước khi chốt thực đơn | `FEAT-014` → `FEAT-018` | L | R2 xong; DL-02 xong | Chờ O-04 | Theo NFR-COST-002:10 món lệch không quá1đ,10 ngày cost% lệch không quá0,01 điểm phần trăm so với kế toán; CHAN chặn gửi duyệt khi vượt, CANH_BAO cảnh báo, thiếu đầu vào vẫn chặn; công bố qua cổng MENU; dự toán đủ cột theo SRS EST004 |
 | `R4` · v0.4.0 | Dinh dưỡng (E4) | Có 4 chỉ số dinh dưỡng cho món và suất | `FEAT-019`, `FEAT-020` | S | R2 xong; có nguồn dữ liệu (BRD DP-03) | Chờ O-04 | 100% nguyên liệu của 30 món có đủ 4 chỉ số; dinh dưỡng của 5 suất mẫu do hệ thống tính khớp với số dinh dưỡng viên tính tay; giao diện ghi nhãn "ước tính từ định lượng sống" |
-| `R5` · **v1.0.0** | **MVP — Agent Nội bộ dựng thực đơn (E5)** | Dinh dưỡng viên dựng thực đơn tuần từ bản nháp của agent | `FEAT-021` → `FEAT-023` | L | R2, R3 xong; O-04 chọn xong nhà cung cấp mô hình | Chờ O-04 | Trên 20 yêu cầu thử, 100% thực đơn agent trả về không vi phạm quy tắc cứng và không vượt ngưỡng cost; 0 món ngoài danh mục đã duyệt; thực đơn tuần trả về trong ≤ 60 giây; 100% lượt chạy có nhật ký; thời gian dựng một thực đơn tuần giảm ≥ 50% so với số đo trước MVP (BO-03) |
+| `R5` · **v1.0.0** | **MVP: Agent Nội bộ dựng thực đơn (E5)** | Dinh dưỡng viên dựng thực đơn tuần từ bản nháp của agent | `FEAT-021` → `FEAT-023` | L | R2, R3 xong; O-04 chọn xong nhà cung cấp mô hình | Chờ O-04 | Trên 20 yêu cầu thử, 100% thực đơn agent trả về không vi phạm quy tắc cứng và không vượt ngưỡng cost; 0 món ngoài danh mục đã duyệt; thực đơn tuần trả về trong ≤ 60 giây; 100% lượt chạy có nhật ký; thời gian dựng một thực đơn tuần giảm ≥ 50% so với số đo trước MVP (BO-03) |
 
 R3 và R4 không phụ thuộc nhau, làm song song được nếu đội đủ người.
 
 **Cổng G-Now** (điều kiện để mở đợt Next): dinh dưỡng viên dùng hệ thống dựng thực đơn thật trong 4 tuần liên tiếp; 100% thực đơn công bố trong 4 tuần đó đạt quy tắc cứng và ngưỡng cost (BO-01, BO-04); có thực đơn đã duyệt cho ít nhất 4 tuần tới.
 
-### NEXT — Mở ra cho khách
+### NEXT: Mở ra cho khách
 
 | Release | Tên đợt phát hành | Mục tiêu chính | Danh sách Feature ID | Cỡ | Điều kiện bắt đầu | Ngày dự kiến | Tiêu chí nghiệm thu |
 | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
@@ -89,11 +89,11 @@ R3 và R4 không phụ thuộc nhau, làm song song được nếu đội đủ 
 | `R8` · v1.3.0 | Website công khai (E8) | Thay WordPress, có thực đơn mẫu kèm giá, lead vào CRM | `FEAT-054` → `FEAT-059` | L | R4 xong (cần dinh dưỡng để hiển thị); DL-08 xong; có quyền quản trị tên miền | Chờ O-04 | 100% URL bài viết cũ trả về đúng trang hoặc 301; 100% lead từ form có bản ghi kèm nguồn; trang thực đơn mẫu hiện đủ giá, định lượng, 4 chỉ số, dị ứng |
 | `R9` · v1.4.0 | Agent Dinh dưỡng viên (E9) | Khách tự yêu cầu thực đơn; người ăn được gợi ý | `FEAT-060` → `FEAT-065` | L | R5, R6, R8 xong | Chờ O-04 | Trên 30 yêu cầu thử, 100% thực đơn đạt quy tắc cứng; bộ thử 20 câu dò hỏi cost, giá nhập: 0 lần lộ; bộ thử 20 câu về bệnh lý: 100% có lời nhắc và không chẩn đoán; chi phí AI một ngày không vượt trần đã đặt |
 
-R7 và R8 không phụ thuộc nhau, làm song song được. Phần giới thiệu và blog của R8 (`FEAT-054`, `FEAT-055`, `FEAT-059`) không cần dữ liệu thực đơn, có thể **kéo lên chạy song song với đợt Now** nếu đội đủ người — quyết định khi có O-04.
+R7 và R8 không phụ thuộc nhau, làm song song được. Phần giới thiệu và blog của R8 (`FEAT-054`, `FEAT-055`, `FEAT-059`) không cần dữ liệu thực đơn, có thể **kéo lên chạy song song với đợt Now** nếu đội đủ người: quyết định khi có O-04.
 
 **Cổng G-Next** (điều kiện để mở đợt Later): ≥ 90% order của các công ty đã chuyển lên hệ thống ghi nhận qua cổng (BO-06); ≥ 70% suất có lựa chọn của người ăn trước hạn chốt (BO-05); số phiên truy cập tự nhiên sau 60 ngày ≥ 90% mức trước chuyển đổi (BO-09).
 
-### LATER — Vận hành đầy đủ
+### LATER: Vận hành đầy đủ
 
 | Release | Tên đợt phát hành | Mục tiêu chính | Danh sách Feature ID | Cỡ | Điều kiện bắt đầu | Ngày dự kiến | Tiêu chí nghiệm thu |
 | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
@@ -161,7 +161,7 @@ Câu hỏi vận hành kế thừa bản thiết kế cũ, cần trước các �
 2. Review SRS và mô hình dữ liệu đã có cho E1–E5; chốt các câu hỏi nguồn dữ liệu/AI theo gói bàn giao E4/E5 trước khi triển khai.
 3. Khi O-04 có câu trả lời: ước lượng backlog R1 → R5 và điền cột ngày.
 
-## Liên kết đặc tả MVP hiện hành — E4/E5
+## Liên kết đặc tả MVP hiện hành (E4/E5)
 
 - E4/R4: [SRS Dinh dưỡng](../dinh-duong/srs/spec.md), [câu hỏi nguồn/dung sai/dữ liệu](../dinh-duong/review/questions.md).
 - E5/R5: [SRS Agent Nội bộ](../agent-noi-bo/srs/spec.md), [câu hỏi vận hành và nghiệm thu](../agent-noi-bo/review/questions.md).
@@ -169,7 +169,7 @@ Câu hỏi vận hành kế thừa bản thiết kế cũ, cần trước các �
 
 NUTR-Q04 cần chốt ý nghĩa “khớp” của 5 suất R4; không mượn dung sai Cost. AIO-Q02 cần xác nhận hành vi agent khi Cost ở CANH_BAO; tiêu chí R5 không vượt ngưỡng vẫn giữ, không đổi cổng gửi duyệt MENU. R5 vẫn phụ thuộc R2/R3 theo roadmap; R4 thuộc cổng G-Now, không tự thêm phụ thuộc cứng vào generation. O-04 và các điểm mở khác không tự đóng.
 
-## Tiến độ hồ sơ BA sau bổ sung — 11/11/2026
+## Tiến độ hồ sơ BA sau bổ sung ngày 11/11/2026
 
 [Dashboard](../project-dashboard.md) và [bàn giao](review/ba-completion-handoff.md) ghi chi tiết E1–E5; [E6 gói review v0.2](../chon-mon-order/preview.html) đã bổ sung UC/API/UI/AC/RTM; còn gate nghiệp vụ và chưa triển khai release. Phạm vi/ưu tiên, G-Now và tiêu chí nghiệm thu roadmap giữ nguyên. O-03 vẫn gated FEAT-046/047, không tự mở thu thập sức khỏe.
 

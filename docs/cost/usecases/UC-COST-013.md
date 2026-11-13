@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Người dùng xem/xuất đúng phiên bản và đúng mức quyền; không thay đổi số liệu lịch sử.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-EST-004`, `FR-COST-EST-005`, `FR-COST-EST-006`, `FR-COST-EST-007`.
-- **Điểm chạm:** SCR-COST-15 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-15, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

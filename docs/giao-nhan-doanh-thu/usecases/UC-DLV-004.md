@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-DLV-004-MD
-title: UC-DLV-004 — Ghi thỏa thuận xử lý chênh lệch
+title: "UC-DLV-004: Ghi thỏa thuận xử lý chênh lệch"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-DLV-004 — Ghi thỏa thuận xử lý chênh lệch
+# UC-DLV-004: Ghi thỏa thuận xử lý chênh lệch
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH được cấp qu
 
 Trigger: Khách và Gia Phát có thỏa thuận xử lý phần chênh lệch đã ghi trên biên bản.
 
-Tiền điều kiện — nghiệp vụ: Biên bản chênh lệch và phiếu gốc tồn tại; người ghi có quyền xử lý, có bằng chứng thỏa thuận hai phía.
-Tiền điều kiện — gate còn mở: E7-Q02/03; CK-Q07–09 khi liên quan CK. Luồng có điều kiện, chưa chọn cách duyệt hay quy đổi giảm trừ.
+Tiền điều kiện (nghiệp vụ): Biên bản chênh lệch và phiếu gốc tồn tại; người ghi có quyền xử lý, có bằng chứng thỏa thuận hai phía.
+Tiền điều kiện (gate còn mở): E7-Q02/03; CK-Q07–09 khi liên quan CK. Luồng có điều kiện, chưa chọn cách duyệt hay quy đổi giảm trừ.
 
 Luồng chính:
 1. Dinh dưỡng viên chọn discrepancyId tại UI-E7-03 và đối chiếu phần lệch với phiếu giao/nhận gốc.

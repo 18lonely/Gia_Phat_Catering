@@ -1,4 +1,4 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA website-cong-khai</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>website-cong-khai</h1><p>33 tài liệu · 5 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/public-workbench.html">public-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">API đề xuất E8</a><a href="#doc-api-data-mapping-md">Mapping E8 tới schema hiện có</a><a href="#doc-epic-spec-md">E8 — Website công khai</a><a href="#doc-review-dependencies-md">Phụ thuộc dữ liệu và cổng E8</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E8</a><a href="#doc-review-questions-md">Sổ câu hỏi mở E8</a><a href="#doc-srs-data-dictionary-md">Delta dữ liệu đề xuất E8</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E8</a><a href="#doc-srs-spec-md">SRS E8 — Website công khai</a><a href="#doc-srs-states-md">Trạng thái nội dung, URL và lead</a><a href="#doc-test-checklist-md">Checklist kiểm E8</a><a href="#doc-test-evidence-protocol-md">Protocol bằng chứng QA</a><a href="#doc-test-fixtures-README-md">Fixture synthetic E8</a><a href="#doc-test-system-cases-md">Ca bảo mật, NFR và bất biến</a><a href="#doc-test-test-cases-md">Ca kiểm thử E8</a><a href="#doc-test-traceability-md">RTM feature → FR → UC → story → API → UI → test</a><a href="#doc-ui-screens-md">Màn hình và quyền E8</a><a href="#doc-ui-user-flow-md">Luồng khách truy cập và quản trị</a><a href="#doc-usecases-index-md">Use case E8</a><a href="#doc-usecases-UC-PUB-001-md">UC-PUB-001 — Xem trang giới thiệu</a><a href="#doc-usecases-UC-PUB-002-md">UC-PUB-002 — Xem tin và bài viết</a><a href="#doc-usecases-UC-PUB-003-md">UC-PUB-003 — Chuẩn bị mapping WordPress</a><a href="#doc-usecases-UC-PUB-004-md">UC-PUB-004 — Phục vụ URL cũ</a><a href="#doc-usecases-UC-PUB-005-md">UC-PUB-005 — Xem thực đơn mẫu có giá</a><a href="#doc-usecases-UC-PUB-006-md">UC-PUB-006 — Dựng thử thực đơn tuần</a><a href="#doc-usecases-UC-PUB-007-md">UC-PUB-007 — Gửi form tư vấn</a><a href="#doc-usecases-UC-PUB-008-md">UC-PUB-008 — Theo dõi điểm nối lead</a><a href="#doc-usecases-UC-PUB-009-md">UC-PUB-009 — Soạn và sửa nội dung</a><a href="#doc-usecases-UC-PUB-010-md">UC-PUB-010 — Xem trước nội dung</a><a href="#doc-usecases-UC-PUB-011-md">UC-PUB-011 — Yêu cầu công bố hoặc thu hồi</a><a href="#doc-usecases-UC-PUB-012-md">UC-PUB-012 — Quản lý ảnh và banner</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria Given / When / Then</a><a href="#doc-userstories-backlog-md">Backlog E8</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>API đề xuất E8</h1>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA website-cong-khai</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>website-cong-khai</h1><p>33 tài liệu · 5 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/public-workbench.html">public-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">API đề xuất E8</a><a href="#doc-api-data-mapping-md">Mapping E8 tới schema hiện có</a><a href="#doc-epic-spec-md">E8: Website công khai</a><a href="#doc-review-dependencies-md">Phụ thuộc dữ liệu và cổng E8</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E8</a><a href="#doc-review-questions-md">Sổ câu hỏi mở E8</a><a href="#doc-srs-data-dictionary-md">Delta dữ liệu đề xuất E8</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi E8</a><a href="#doc-srs-spec-md">SRS E8: Website công khai</a><a href="#doc-srs-states-md">Trạng thái nội dung, URL và lead</a><a href="#doc-test-checklist-md">Checklist kiểm E8</a><a href="#doc-test-evidence-protocol-md">Protocol bằng chứng QA</a><a href="#doc-test-fixtures-README-md">Fixture synthetic E8</a><a href="#doc-test-system-cases-md">Ca bảo mật, NFR và bất biến</a><a href="#doc-test-test-cases-md">Ca kiểm thử E8</a><a href="#doc-test-traceability-md">RTM feature → FR → UC → story → API → UI → test</a><a href="#doc-ui-screens-md">Màn hình và quyền E8</a><a href="#doc-ui-user-flow-md">Luồng khách truy cập và quản trị</a><a href="#doc-usecases-index-md">Use case E8</a><a href="#doc-usecases-UC-PUB-001-md">UC-PUB-001: Xem trang giới thiệu</a><a href="#doc-usecases-UC-PUB-002-md">UC-PUB-002: Xem tin và bài viết</a><a href="#doc-usecases-UC-PUB-003-md">UC-PUB-003: Chuẩn bị mapping WordPress</a><a href="#doc-usecases-UC-PUB-004-md">UC-PUB-004: Phục vụ URL cũ</a><a href="#doc-usecases-UC-PUB-005-md">UC-PUB-005: Xem thực đơn mẫu có giá</a><a href="#doc-usecases-UC-PUB-006-md">UC-PUB-006: Dựng thử thực đơn tuần</a><a href="#doc-usecases-UC-PUB-007-md">UC-PUB-007: Gửi form tư vấn</a><a href="#doc-usecases-UC-PUB-008-md">UC-PUB-008: Theo dõi điểm nối lead</a><a href="#doc-usecases-UC-PUB-009-md">UC-PUB-009: Soạn và sửa nội dung</a><a href="#doc-usecases-UC-PUB-010-md">UC-PUB-010: Xem trước nội dung</a><a href="#doc-usecases-UC-PUB-011-md">UC-PUB-011: Yêu cầu công bố hoặc thu hồi</a><a href="#doc-usecases-UC-PUB-012-md">UC-PUB-012: Quản lý ảnh và banner</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria Given / When / Then</a><a href="#doc-userstories-backlog-md">Backlog E8</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>API đề xuất E8</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <h2>Quy ước và ranh giới</h2>
 <p>16 HTTP endpoint đề xuất, không server chạy. REST/JSON UTF-8, prefix /v1, HTTPS; admin AUTH nền và quyền theo thao tác, chưa gán role. Không mở HTTP CRM public. GET không ghi domain (ngoại trừ access telemetry tối thiểu theo policy), preview không cache công khai. Catalog là thiết kế route, URL frontend cũ không phải /v1: handler website ánh xạ nguyên URL và trả200/301 thực ở URL truy cập; API-PUB-004 là giao diện logic cần adapter review E8-Q12.</p>
@@ -304,7 +304,7 @@
 </tbody></table></div>
 <p>WordPress article sourceId/title/body/mediaRefs/originalPublishedAt/status → pub_content_revisions (delta) và pub_url_mappings.inventoryRef/sourceURL/targetPath; giữ provenance sourceId/hash/ngày nguồn riêng ngày chuyển. Không có bảng CMS trong65 bảng để ánh xạ vật lý đã freeze. Media thiếu hoặc trùng sourceId phải rà trước công bố; phương thức chuyển chờ E8-Q01/08/09.</p>
 <p><a href="#doc-srs-data-dictionary-md">Delta dữ liệu</a> · <a href="#doc-review-dependencies-md">Phụ thuộc</a>.</p>
-</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E8 — Website công khai</h1>
+</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E8: Website công khai</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <h2>Mục tiêu và phạm vi</h2>
 <p>Thay WordPress, cung cấp thực đơn mẫu có giá và tiếp nhận lead có nguồn. Căn cứ <a href="../gia-phat/01-prd.md">PRD</a>, <a href="../gia-phat/02-roadmap.md">roadmap</a>, D-10 trong <a href="../gia-phat/00-ke-hoach-tong-the.md">kế hoạch</a>. Chỉ mở E8 theo người dùng 12/11/2026. E9–E13 chưa mở; PUB-05 chat agent thuộc E9, không thêm thành feature thứ bảy.</p>
@@ -816,7 +816,7 @@
 </tr>
 </tbody></table></div>
 <p>HTTP đề xuất; UI thông báo an toàn không tiết lộ giá trị nội bộ hoặc sự tồn tại bản nháp. HTTP301 là kết quả chuyển hướng, không mã lỗi.</p>
-</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E8 — Website công khai</h1>
+</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>SRS E8: Website công khai</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <h2>1. Giới thiệu</h2>
 <p><a href="#doc-epic-spec-md">Phạm vi 6 feature</a>; <a href="#doc-review-dependencies-md">nguồn và trạng thái</a>. Public projection là tập dữ liệu đã lọc được phép công khai, không phải bảng nội bộ. Revision là bản nội dung/nguồn; version là token chống ghi đè. Lead là yêu cầu tư vấn, chưa phải customer CRM.</p>
@@ -945,7 +945,7 @@
 </tr>
 </tbody></table></div>
 <p>BR-PUB-001/010/012 áp mọi FR; quy tắc còn lại ghi phạm vi trong bảng dưới. Lỗi theo <a href="#doc-srs-error-matrix-md">ma trận</a>; mỗi route có lỗi trong <a href="api/endpoint-catalog.json">catalog</a>. Không dùng BLOCKED như HTTP chuẩn: đó là trạng thái tài liệu; runtime đề xuất lỗi nguồn/policy ERR-PUB-422-02 hoặc503-01 tùy nguyên nhân.</p>
-<h3>Làm rõ chuyển bài cũ — FR-PUB-URLM-001 / FEAT-055</h3>
+<h3>Làm rõ chuyển bài cũ (FR-PUB-URLM-001 / FEAT-055)</h3>
 <p>Ngoài URL, gói DL-08 cần đối chiếu nội dung bài: mã bài gốc, tiêu đề, body, media tham chiếu, ngày công bố gốc, trạng thái và URL nguồn. Không tự lấy dữ liệu từ website thật trong phiên. Quy trình đề xuất: nhận bản xuất có provenance → lập inventory → chuyển body/media sang nháp E8, làm sạch HTML → so nội dung/ảnh/liên kết với bản nguồn → rà slug/canonical và mapping KEEP/301 → người có quyền xác nhận → chờ cutover. Cách import CMS hoặc thao tác thủ công chờ E8-Q01/08/09; không viết importer hay migration.</p>
 <p>Mỗi bài cần bảng đối chiếu sourceId → contentRef/revision → targetPath; giữ nguồn/ngày gốc riêng thời điểm chuyển. Không dùng ngày chuyển thay ngày bài gốc. Media thiếu, bài trùng hoặc đã xóa tạo dòng ngoại lệ BLOCKED, không bỏ khỏi mẫu số100% URL. Kiểm lại lần chuyển phải phát hiện sourceId đã có, không nhân đôi bài. Nội dung mới chỉ là nháp cho đến khi qua FR-PUB-PUBL-001; không tự công bố vì import thành công. Xử lý ngày/metadata/slug và tài nguyên ngoài còn cần E8-Q01/02/09 xác nhận.</p>
 <h2>3.2 Business rules</h2>
@@ -1972,13 +1972,13 @@ Biên: hai người sửa cùng revision →409, không overwrite; thay ảnh đ
 <td align="left">E8-Q09/08</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-usecases-UC-PUB-001-md" hidden><p><a href="usecases/UC-PUB-001.md">Mở Markdown nguồn</a> · usecases/UC-PUB-001.md</p><h1>UC-PUB-001 — Xem trang giới thiệu</h1>
+</section><section id="doc-usecases-UC-PUB-001-md" hidden><p><a href="usecases/UC-PUB-001.md">Mở Markdown nguồn</a> · usecases/UC-PUB-001.md</p><h1>UC-PUB-001: Xem trang giới thiệu</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-PAGE-001 · FEAT-054 · P0 · US-PUB-001.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai tìm hiểu dịch vụ Gia Phát. Bên quan tâm: Gia Phát cần chỉ đưa nội dung được phép ra công khai.</p>
 <p>Trigger: Khách tìm hiểu năng lực Gia Phát và truy cập trang giới thiệu, dịch vụ, dự án hoặc đối tác theo đường dẫn trang.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có slug cần tra cứu; khách không cần tài khoản để đọc nội dung công khai.
-Tiền điều kiện — gate còn mở: E8-Q08 chưa chốt quyền/quy trình xuất bản; không coi mọi revision đã có là được công khai.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có slug cần tra cứu; khách không cần tài khoản để đọc nội dung công khai.
+Tiền điều kiện (gate còn mở): E8-Q08 chưa chốt quyền/quy trình xuất bản; không coi mọi revision đã có là được công khai.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Khách truy cập slug trang thuộc UI-PUB-01.</li>
@@ -1997,13 +1997,13 @@ Bảo đảm tối thiểu: GET không công bố revision hay tạo lead; khôn
 <li>4a. Revision nguồn thay đổi trước lúc trả trang: hệ thống kiểm lại bản được phép công khai; không phát tán revision cũ đã bị thu hồi.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-001; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-002-md" hidden><p><a href="usecases/UC-PUB-002.md">Mở Markdown nguồn</a> · usecases/UC-PUB-002.md</p><h1>UC-PUB-002 — Xem tin và bài viết</h1>
+</section><section id="doc-usecases-UC-PUB-002-md" hidden><p><a href="usecases/UC-PUB-002.md">Mở Markdown nguồn</a> · usecases/UC-PUB-002.md</p><h1>UC-PUB-002: Xem tin và bài viết</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-BLOG-001 · FEAT-055 · P0 · US-PUB-002.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai đọc tin Gia Phát. Bên quan tâm: người soạn cần bài chưa công bố không bị tìm thấy qua mặt tiền công khai.</p>
 <p>Trigger: Khách tìm bài viết về Gia Phát qua mục tin tức hoặc đường dẫn bài đã biết.</p>
-<p>Tiền điều kiện — nghiệp vụ: Khách truy cập danh sách hoặc có slug bài; không yêu cầu tài khoản.
-Tiền điều kiện — gate còn mở: E8-Q01/08 về nguồn bài cũ và quyền xuất bản chưa chốt; không lấy bản chuyển nháp làm bài công khai.</p>
+<p>Tiền điều kiện (nghiệp vụ): Khách truy cập danh sách hoặc có slug bài; không yêu cầu tài khoản.
+Tiền điều kiện (gate còn mở): E8-Q01/08 về nguồn bài cũ và quyền xuất bản chưa chốt; không lấy bản chuyển nháp làm bài công khai.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Khách chọn bộ lọc và trang danh sách tại UI-PUB-02.</li>
@@ -2023,13 +2023,13 @@ Bảo đảm tối thiểu: Không trả raw HTML chưa an toàn hoặc metadata
 <li>5a. Dịch vụ không khả dụng: hệ thống trả ERR-PUB-503-01 và thông báo an toàn; dữ liệu bài không đổi.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-002; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-003-md" hidden><p><a href="usecases/UC-PUB-003.md">Mở Markdown nguồn</a> · usecases/UC-PUB-003.md</p><h1>UC-PUB-003 — Chuẩn bị mapping WordPress</h1>
+</section><section id="doc-usecases-UC-PUB-003-md" hidden><p><a href="usecases/UC-PUB-003.md">Mở Markdown nguồn</a> · usecases/UC-PUB-003.md</p><h1>UC-PUB-003: Chuẩn bị mapping WordPress</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-URLM-001 · FEAT-055 · P0 · US-PUB-003.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò quản trị nội dung, chỉ khi được cấp quyền. Bên quan tâm: khách cần đường dẫn cũ còn tới đúng bài; Gia Phát cần bảo toàn nội dung nguồn.</p>
 <p>Trigger: Gia Phát nhận bản xuất WordPress và cần đối chiếu bài/URL trước chuyển website.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có inventoryRef và bản xuất bài/media có provenance để rà; người thực hiện có quyền soạn và chuẩn bị mapping.
-Tiền điều kiện — gate còn mở: E8-Q01/02 chặn inventory và tiêu chí KEEP/REDIRECT; E8-Q01/08/09 chặn cách chuyển nội dung/CMS/media. Không chọn importer hoặc cutover trong UC.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có inventoryRef và bản xuất bài/media có provenance để rà; người thực hiện có quyền soạn và chuẩn bị mapping.
+Tiền điều kiện (gate còn mở): E8-Q01/02 chặn inventory và tiêu chí KEEP/REDIRECT; E8-Q01/08/09 chặn cách chuyển nội dung/CMS/media. Không chọn importer hoặc cutover trong UC.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Người quản trị nạp thông tin inventory tại UI-PUB-07 và đối chiếu từng sourceId, URL nguồn, title/body/media/ngày công bố gốc trong DL-08.</li>
@@ -2052,13 +2052,13 @@ Bảo đảm tối thiểu: Không báo đạt đủ URL khi thiếu inventory; 
 <li>6a. Lỗi ghi/audit hoặc mất phản hồi: hệ thống báo ERR-PUB-500-01, giữ requestId để đối soát; chưa xác định đã ghi hay chưa, không báo hoàn tất.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-003; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-004-md" hidden><p><a href="usecases/UC-PUB-004.md">Mở Markdown nguồn</a> · usecases/UC-PUB-004.md</p><h1>UC-PUB-004 — Phục vụ URL cũ</h1>
+</section><section id="doc-usecases-UC-PUB-004-md" hidden><p><a href="usecases/UC-PUB-004.md">Mở Markdown nguồn</a> · usecases/UC-PUB-004.md</p><h1>UC-PUB-004: Phục vụ URL cũ</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-URLR-001 · FEAT-055 · P0 · US-PUB-004.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai đi theo URL bài viết cũ. Bên quan tâm: Gia Phát cần giữ khả năng truy cập bài sau chuyển đổi.</p>
 <p>Trigger: Khách bấm một liên kết WordPress cũ từ kết quả tìm kiếm hoặc dấu trang.</p>
-<p>Tiền điều kiện — nghiệp vụ: URL được gửi tới website; luồng thành công cần mapping đã duyệt và đích công khai hợp lệ.
-Tiền điều kiện — gate còn mở: E8-Q01/02 chưa chốt inventory, mapping và cách xử lý URL ngoại lệ. UI-PUB-07 là màn quản trị mapping để review, không phải màn khách phải chọn.</p>
+<p>Tiền điều kiện (nghiệp vụ): URL được gửi tới website; luồng thành công cần mapping đã duyệt và đích công khai hợp lệ.
+Tiền điều kiện (gate còn mở): E8-Q01/02 chưa chốt inventory, mapping và cách xử lý URL ngoại lệ. UI-PUB-07 là màn quản trị mapping để review, không phải màn khách phải chọn.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Trình duyệt khách gửi yêu cầu đọc URL cũ tới website.</li>
@@ -2078,13 +2078,13 @@ Bảo đảm tối thiểu: Không dùng phản hồi API logic thay bằng ch�
 <li>4a. Dịch vụ không khả dụng: hệ thống trả ERR-PUB-503-01 với thông báo an toàn; không giả chuyển hướng thành công, dữ liệu giữ nguyên.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-004; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-005-md" hidden><p><a href="usecases/UC-PUB-005.md">Mở Markdown nguồn</a> · usecases/UC-PUB-005.md</p><h1>UC-PUB-005 — Xem thực đơn mẫu có giá</h1>
+</section><section id="doc-usecases-UC-PUB-005-md" hidden><p><a href="usecases/UC-PUB-005.md">Mở Markdown nguồn</a> · usecases/UC-PUB-005.md</p><h1>UC-PUB-005: Xem thực đơn mẫu có giá</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-MENU-001 · FEAT-056 · P0 · US-PUB-005.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai tìm hiểu suất ăn tập thể. Bên quan tâm: khách cần giá và thông tin món có căn cứ; Gia Phát cần bảo vệ giá nội bộ.</p>
 <p>Trigger: Khách xem một thực đơn tuần mẫu để cân nhắc dịch vụ suất ăn.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có publicSampleId và ngày hiển thị cần tra cứu; khách không cần tài khoản.
-Tiền điều kiện — gate còn mở: E8-Q03/04 về giá được phép công khai và nguồn thực đơn/dinh dưỡng chưa chốt; luồng đủ dữ liệu chỉ có điều kiện.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có publicSampleId và ngày hiển thị cần tra cứu; khách không cần tài khoản.
+Tiền điều kiện (gate còn mở): E8-Q03/04 về giá được phép công khai và nguồn thực đơn/dinh dưỡng chưa chốt; luồng đủ dữ liệu chỉ có điều kiện.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Khách chọn mẫu tại UI-PUB-03; hệ thống nhận publicSampleId và ngày hiển thị.</li>
@@ -2103,13 +2103,13 @@ Bảo đảm tối thiểu: Thiếu số liệu không thành 0; danh sách dị
 <li>5a. Nguồn không khả dụng: hệ thống trả ERR-PUB-503-01; chưa có kết quả mẫu hợp lệ, không ghi dữ liệu nghiệp vụ.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-005; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-006-md" hidden><p><a href="usecases/UC-PUB-006.md">Mở Markdown nguồn</a> · usecases/UC-PUB-006.md</p><h1>UC-PUB-006 — Dựng thử thực đơn tuần</h1>
+</section><section id="doc-usecases-UC-PUB-006-md" hidden><p><a href="usecases/UC-PUB-006.md">Mở Markdown nguồn</a> · usecases/UC-PUB-006.md</p><h1>UC-PUB-006: Dựng thử thực đơn tuần</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-TRY-001 · FEAT-057 · P1 · US-PUB-006.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai khảo sát thực đơn tập thể. Bên quan tâm: khách cần mẫu phù hợp nhu cầu; Gia Phát cần phân biệt mẫu thử với đơn hàng.</p>
 <p>Trigger: Khách muốn thử một tuần ăn theo loại suất, số suất và nguyên liệu cần kiêng trước khi liên hệ tư vấn.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có danh mục loại suất/kiêng nguyên liệu được phép công khai; không sử dụng hồ sơ sức khỏe cá nhân.
-Tiền điều kiện — gate còn mở: E8-Q05/04 chưa chốt cách dựng, giới hạn và nguồn; không tự chọn engine hoặc gọi Agent E9.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có danh mục loại suất/kiêng nguyên liệu được phép công khai; không sử dụng hồ sơ sức khỏe cá nhân.
+Tiền điều kiện (gate còn mở): E8-Q05/04 chưa chốt cách dựng, giới hạn và nguồn; không tự chọn engine hoặc gọi Agent E9.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Khách chọn loại suất công khai, nhập số suất và lựa chọn kiêng nguyên liệu tại UI-PUB-04.</li>
@@ -2129,13 +2129,13 @@ Bảo đảm tối thiểu: Không ghi menus/order, không gọi Agent E9, khôn
 <li>5a. Nguồn đổi trước khi trả mẫu: hệ thống kiểm lại revision/nguồn; không trả mẫu phụ thuộc nguồn chưa được phép.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-006; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-007-md" hidden><p><a href="usecases/UC-PUB-007.md">Mở Markdown nguồn</a> · usecases/UC-PUB-007.md</p><h1>UC-PUB-007 — Gửi form tư vấn</h1>
+</section><section id="doc-usecases-UC-PUB-007-md" hidden><p><a href="usecases/UC-PUB-007.md">Mở Markdown nguồn</a> · usecases/UC-PUB-007.md</p><h1>UC-PUB-007: Gửi form tư vấn</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-LEAD-001 · FEAT-058 · P0 · US-PUB-007.</p>
 <p>Level: Sea level. Actor chính: Khách vãng lai cần tư vấn suất ăn. Bên quan tâm: Gia Phát cần yêu cầu có nguồn và consent; khách cần biết yêu cầu đã được tiếp nhận hay chưa.</p>
 <p>Trigger: Sau khi tìm hiểu dịch vụ hoặc xem mẫu thử, khách gửi nhu cầu để Gia Phát liên hệ tư vấn.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có form và nội dung consent để khách đọc; trialRef chỉ có khi khách thực sự đã dựng mẫu.
-Tiền điều kiện — gate còn mở: E8-Q06/07 chưa chốt trường bắt buộc, nơi lưu, consent, chống spam và thông báo. Không giả nơi nhận CRM đã sẵn sàng.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có form và nội dung consent để khách đọc; trialRef chỉ có khi khách thực sự đã dựng mẫu.
+Tiền điều kiện (gate còn mở): E8-Q06/07 chưa chốt trường bắt buộc, nơi lưu, consent, chống spam và thông báo. Không giả nơi nhận CRM đã sẵn sàng.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Khách nhập thông tin liên hệ tối thiểu tại UI-PUB-05, đọc nội dung consent và thể hiện đồng ý theo bản được duyệt.</li>
@@ -2155,13 +2155,13 @@ Bảo đảm tối thiểu: Không có consent thì không ghi lead; không lưu
 <li>5a. Thông báo hoặc bên nhận CRM lỗi sau khi lưu: hệ thống giữ bản ghi/nguồn đã có; không dùng lỗi thông báo để phủ nhận việc lưu hoặc báo đã bàn giao.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-007; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-008-md" hidden><p><a href="usecases/UC-PUB-008.md">Mở Markdown nguồn</a> · usecases/UC-PUB-008.md</p><h1>UC-PUB-008 — Theo dõi điểm nối lead</h1>
+</section><section id="doc-usecases-UC-PUB-008-md" hidden><p><a href="usecases/UC-PUB-008.md">Mở Markdown nguồn</a> · usecases/UC-PUB-008.md</p><h1>UC-PUB-008: Theo dõi điểm nối lead</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-RELY-001 · FEAT-058 · P0 · US-PUB-008.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH khi được cấp quyền xử lý lead. Bên quan tâm: khách cần yêu cầu không thất lạc; Gia Phát cần phân biệt đã lưu và đã bàn giao.</p>
 <p>Trigger: CSKH rà một yêu cầu tư vấn để biết nơi nhận đã xác nhận bàn giao hay còn chờ.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có leadRef của bản ghi được tiếp nhận; người tra cứu có phiên và quyền đọc lead.
-Tiền điều kiện — gate còn mở: E8-Q06/07/11 chưa chốt nơi nhận, thông báo và vận hành; không tự cấp quyền cho vai trò CSKH hoặc mở CRM E10.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có leadRef của bản ghi được tiếp nhận; người tra cứu có phiên và quyền đọc lead.
+Tiền điều kiện (gate còn mở): E8-Q06/07/11 chưa chốt nơi nhận, thông báo và vận hành; không tự cấp quyền cho vai trò CSKH hoặc mở CRM E10.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>CSKH chọn leadRef tại UI-PUB-08 để tra tình trạng bàn giao.</li>
@@ -2181,13 +2181,13 @@ Bảo đảm tối thiểu: Không biến đã lưu thành đã vào CRM, không
 <li>5a. Không đọc được dịch vụ: hệ thống trả ERR-PUB-503-01 và requestId an toàn; dữ liệu lead không bị sửa.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-008; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-009-md" hidden><p><a href="usecases/UC-PUB-009.md">Mở Markdown nguồn</a> · usecases/UC-PUB-009.md</p><h1>UC-PUB-009 — Soạn và sửa nội dung</h1>
+</section><section id="doc-usecases-UC-PUB-009-md" hidden><p><a href="usecases/UC-PUB-009.md">Mở Markdown nguồn</a> · usecases/UC-PUB-009.md</p><h1>UC-PUB-009: Soạn và sửa nội dung</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-EDIT-001 · FEAT-059 · P0 · US-PUB-009.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò người soạn được cấp quyền. Bên quan tâm: khách cần bản công khai ổn định; người soạn cần giữ bản sửa để review.</p>
 <p>Trigger: Người soạn có nội dung trang, bài viết hoặc banner cần bổ sung/chỉnh sửa trước khi công bố.</p>
-<p>Tiền điều kiện — nghiệp vụ: Người soạn có phiên và quyền soạn; khi sửa phải có content và version đang làm việc.
-Tiền điều kiện — gate còn mở: E8-Q08/09 về CMS, quyền và media chưa chốt; persona không tự cấp quyền runtime.</p>
+<p>Tiền điều kiện (nghiệp vụ): Người soạn có phiên và quyền soạn; khi sửa phải có content và version đang làm việc.
+Tiền điều kiện (gate còn mở): E8-Q08/09 về CMS, quyền và media chưa chốt; persona không tự cấp quyền runtime.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Người soạn chọn nội dung tại UI-PUB-06, xem revision/version đang sửa hoặc bắt đầu nháp mới.</li>
@@ -2207,13 +2207,13 @@ Bảo đảm tối thiểu: Không dùng quyền soạn thay quyền công bố;
 <li>5a. Lỗi ghi/audit hoặc mất phản hồi: hệ thống báo ERR-PUB-500-01 và requestId để đối soát; kết quả lưu chưa rõ, không gửi lệnh mới để ghi đè.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-009; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-010-md" hidden><p><a href="usecases/UC-PUB-010.md">Mở Markdown nguồn</a> · usecases/UC-PUB-010.md</p><h1>UC-PUB-010 — Xem trước nội dung</h1>
+</section><section id="doc-usecases-UC-PUB-010-md" hidden><p><a href="usecases/UC-PUB-010.md">Mở Markdown nguồn</a> · usecases/UC-PUB-010.md</p><h1>UC-PUB-010: Xem trước nội dung</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-PREV-001 · FEAT-059 · P0 · US-PUB-010.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò người soạn có quyền xem trước. Bên quan tâm: người review cần đúng bản nháp, khách không được đọc bản chưa công bố.</p>
 <p>Trigger: Người soạn cần kiểm tra cách hiển thị của revision vừa chuẩn bị trước khi xin công bố.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có contentId và revision nháp; người xem có phiên và quyền xem trước nội dung.
-Tiền điều kiện — gate còn mở: E8-Q08 chưa chốt vai trò/quy trình; không tự coi đường dẫn preview là quyền truy cập.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có contentId và revision nháp; người xem có phiên và quyền xem trước nội dung.
+Tiền điều kiện (gate còn mở): E8-Q08 chưa chốt vai trò/quy trình; không tự coi đường dẫn preview là quyền truy cập.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Người soạn chọn contentId và revision cần xem trước tại UI-PUB-06.</li>
@@ -2233,13 +2233,13 @@ Bảo đảm tối thiểu: GET không xuất bản; khách đoán URL không đ
 <li>4a. Dịch vụ không khả dụng: hệ thống trả ERR-PUB-503-01; chưa có preview hợp lệ, revision không đổi.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-010; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-011-md" hidden><p><a href="usecases/UC-PUB-011.md">Mở Markdown nguồn</a> · usecases/UC-PUB-011.md</p><h1>UC-PUB-011 — Yêu cầu công bố hoặc thu hồi</h1>
+</section><section id="doc-usecases-UC-PUB-011-md" hidden><p><a href="usecases/UC-PUB-011.md">Mở Markdown nguồn</a> · usecases/UC-PUB-011.md</p><h1>UC-PUB-011: Yêu cầu công bố hoặc thu hồi</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-PUBL-001 · FEAT-059 · P0 · US-PUB-011.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH chỉ khi được cấp riêng quyền công bố/thu hồi. Bên quan tâm: khách cần đúng bản công khai; người duyệt cần quyết định có dấu vết. Việc gán quyền cho persona còn chờ xác nhận.</p>
 <p>Trigger: Nội dung đã được chuẩn bị để công bố, hoặc Gia Phát cần ngừng cho khách truy cập một revision đang công khai.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có contentId, revision và lý do thao tác; người yêu cầu có quyền tương ứng theo policy được duyệt.
-Tiền điều kiện — gate còn mở: E8-Q08/09/02 về duyệt, media và URL chưa chốt; không coi người soạn mặc nhiên có quyền duyệt/công bố.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có contentId, revision và lý do thao tác; người yêu cầu có quyền tương ứng theo policy được duyệt.
+Tiền điều kiện (gate còn mở): E8-Q08/09/02 về duyệt, media và URL chưa chốt; không coi người soạn mặc nhiên có quyền duyệt/công bố.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Người có quyền chọn nội dung/revision tại UI-PUB-06 và rà bản muốn công bố hoặc thu hồi.</li>
@@ -2260,13 +2260,13 @@ Bảo đảm tối thiểu: Không tự chọn workflow duyệt, TTL/purge hoặ
 <li>5a. Lỗi ghi/audit hoặc mất phản hồi: hệ thống báo ERR-PUB-500-01, giữ requestId để đối soát; chưa xác định hoàn tất, không báo public đã đổi thành công.</li>
 </ul>
 <p><a href="#doc-api-api-spec-md">API</a> API-PUB-011; <a href="#doc-userstories-acceptance-criteria-md">AC</a>; <a href="#doc-test-test-cases-md">test</a>.</p>
-</section><section id="doc-usecases-UC-PUB-012-md" hidden><p><a href="usecases/UC-PUB-012.md">Mở Markdown nguồn</a> · usecases/UC-PUB-012.md</p><h1>UC-PUB-012 — Quản lý ảnh và banner</h1>
+</section><section id="doc-usecases-UC-PUB-012-md" hidden><p><a href="usecases/UC-PUB-012.md">Mở Markdown nguồn</a> · usecases/UC-PUB-012.md</p><h1>UC-PUB-012: Quản lý ảnh và banner</h1>
 <p>Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.</p>
 <p>FR: FR-PUB-MEDI-001 · FEAT-059 · P0 · US-PUB-012.</p>
 <p>Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò quản trị nội dung được cấp quyền media. Bên quan tâm: khách cần ảnh an toàn; Gia Phát cần quyền sử dụng ảnh và biết nơi đang dùng.</p>
 <p>Trigger: Người quản trị chuẩn bị ảnh/banner cho nội dung hoặc cần thay/gỡ ảnh đã gắn vào trang.</p>
-<p>Tiền điều kiện — nghiệp vụ: Có fileRef, thông tin quyền sử dụng và nội dung/vị trí liên quan; người thao tác có phiên và quyền quản lý media.
-Tiền điều kiện — gate còn mở: E8-Q09/08 chưa chốt loại/dung lượng ảnh, vị trí/lịch và quyền public asset; không tự mở loại ảnh mới.</p>
+<p>Tiền điều kiện (nghiệp vụ): Có fileRef, thông tin quyền sử dụng và nội dung/vị trí liên quan; người thao tác có phiên và quyền quản lý media.
+Tiền điều kiện (gate còn mở): E8-Q09/08 chưa chốt loại/dung lượng ảnh, vị trí/lịch và quyền public asset; không tự mở loại ảnh mới.</p>
 <p>Luồng chính:</p>
 <ol>
 <li>Người quản trị chọn ảnh/banner tại UI-PUB-09 và cung cấp fileRef.</li>

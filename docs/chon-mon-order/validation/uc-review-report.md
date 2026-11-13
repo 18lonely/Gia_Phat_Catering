@@ -1,4 +1,4 @@
-# Báo cáo rà UC E6 — 12/11/2026
+# Báo cáo rà UC E6 ngày 12/11/2026
 
 Chỉ BA/tài liệu. Workspace D:\BA không có Git; không tìm thấy AGENTS.md trong workspace hoặc D:\. Baseline hash trước sửa: [uc-baseline-sha256.json](uc-baseline-sha256.json). Đã đọc các mốc tiếp nối/DTO và dùng catalog, SRS, lifecycle, AC/test hiện có; không chạy generator hoặc sửa snapshot handoff/report cũ.
 

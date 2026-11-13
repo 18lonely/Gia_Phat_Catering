@@ -24,7 +24,7 @@ python docs/cost/validation/check-backlog.py
 
 ## Điểm mới cần review
 
-**QA-COST-Q01 — mã lỗi NCC ngừng:** `ERR-COST-404-01` mô tả nguyên liệu/NCC không tồn tại hoặc không còn dùng; `ERR-COST-422-02` cũng mô tả NCC đã ngừng. Cả hai đều cấm nhập giá mới, nhưng mã trả về cho NCC tồn tại ở INACTIVE chưa nhất quán. BA/Tech lead cần chọn mã chính thức và đồng bộ SRS/API; ca TC-COST-002-06 giữ BLOCKED. Báo cáo không tự thay hợp đồng đã viết.
+**QA-COST-Q01: mã lỗi NCC ngừng:** `ERR-COST-404-01` mô tả nguyên liệu/NCC không tồn tại hoặc không còn dùng; `ERR-COST-422-02` cũng mô tả NCC đã ngừng. Cả hai đều cấm nhập giá mới, nhưng mã trả về cho NCC tồn tại ở INACTIVE chưa nhất quán. BA/Tech lead cần chọn mã chính thức và đồng bộ SRS/API; ca TC-COST-002-06 giữ BLOCKED. Báo cáo không tự thay hợp đồng đã viết.
 
 Các ca chờ Q04 (tỷ trọng/delta khi mẫu số 0), Q06 (giá đổi khi PENDING), Q07 (giao dịch dự toán tuần), Q09 (ngân sách vừa vượt vừa thiếu), E3-Q15/Q16 (nhiều món chính/hiệu lực bảng đặc thù) không có kết quả số tự đặt. P1/P2 giữ đúng ưu tiên; ngoại lệ CHAN và chặn chuyển bếp vẫn hoãn.
 

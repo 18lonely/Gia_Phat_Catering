@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-011-MD
-title: UC-AIN-011 — Chặn truy cập dữ liệu kinh tế nội bộ
+title: "UC-AIN-011: Chặn truy cập dữ liệu kinh tế nội bộ"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-011 — Chặn truy cập dữ liệu kinh tế nội bộ
+# UC-AIN-011: Chặn truy cập dữ liệu kinh tế nội bộ
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-SAFE-001 / FEAT-065 / US-AIN-011.
 
 Trigger: Một tool request hoặc kết quả chuẩn bị đi qua biên vào model, API, UI, lỗi, log hoặc cache.
 
-Tiền điều kiện — nghiệp vụ: Có toolName canonical, scope, candidateRef và DTO cần kiểm; tài khoản dịch vụ AIN tách khỏi AIO và không có SELECT bảng cấm.
-Tiền điều kiện — gate còn mở: E9-Q05, E9-Q13 chặn kết quả nhánh kinh tế và contract; O-03 vẫn đóng, không đọc hồ sơ sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có toolName canonical, scope, candidateRef và DTO cần kiểm; tài khoản dịch vụ AIN tách khỏi AIO và không có SELECT bảng cấm.
+Tiền điều kiện (gate còn mở): E9-Q05, E9-Q13 chặn kết quả nhánh kinh tế và contract; O-03 vẫn đóng, không đọc hồ sơ sức khỏe.
 
 Luồng chính:
 1. Registry/API adapter nhận tool request trước truy cập, đối chiếu tên canonical với allowlist.

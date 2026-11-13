@@ -1,13 +1,13 @@
 ---
 id: DOC-E9-USECASES-UC-AIN-013-MD
-title: UC-AIN-013 — Đối soát lượt và chi phí AI
+title: "UC-AIN-013: Đối soát lượt và chi phí AI"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-AIN-013 — Đối soát lượt và chi phí AI
+# UC-AIN-013: Đối soát lượt và chi phí AI
 
 Draft · 12/11/2026 · Chưa duyệt, chưa freeze; 0 backend/migration/UAT; không gọi mô hình AI.
 
@@ -16,8 +16,8 @@ Truy vết: FR-AIN-LOG-001 / FEAT-064 / US-AIN-013.
 
 Trigger: Có sự kiện usage cần đối soát hoặc Giám đốc rà tình trạng lượt/ngân sách AI theo ngày và nhóm.
 
-Tiền điều kiện — nghiệp vụ: Có runRef, sự kiện usage có provenance và policyVersion để đối chiếu; người xem có quyền quản trị.
-Tiền điều kiện — gate còn mở: E9-Q07, E9-Q08, E9-Q10, E9-Q13 chưa chốt ngày/đơn vị, quyền, lưu dữ liệu và ledger; O-03 không mở quyền đọc sức khỏe.
+Tiền điều kiện (nghiệp vụ): Có runRef, sự kiện usage có provenance và policyVersion để đối chiếu; người xem có quyền quản trị.
+Tiền điều kiện (gate còn mở): E9-Q07, E9-Q08, E9-Q10, E9-Q13 chưa chốt ngày/đơn vị, quyền, lưu dữ liệu và ledger; O-03 không mở quyền đọc sức khỏe.
 
 Luồng chính:
 1. Bộ xử lý usage đối chiếu sự kiện theo run/eventId duy nhất với reservation và policyVersion tương ứng.

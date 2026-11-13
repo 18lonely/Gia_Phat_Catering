@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-015-MD
-title: UC-FBR-015 — Lập mục tiêu dinh dưỡng nhóm
+title: "UC-FBR-015: Lập mục tiêu dinh dưỡng nhóm"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-015 — Lập mục tiêu dinh dưỡng nhóm
+# UC-FBR-015: Lập mục tiêu dinh dưỡng nhóm
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-086; màn UI-FBR-11.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-05; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần mục tiêu nhóm nháp có nguồn hoặc danh sách thiếu; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào groupRef phi y tế, mục tiêu có sourceRef, effectiveRange, version. Nhánh nghiệp vụ thật cần NUTR-Q01–04; E12-Q13/14. Các gate chưa được coi là đạt.

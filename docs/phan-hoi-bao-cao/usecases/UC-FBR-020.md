@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-020-MD
-title: UC-FBR-020 — Yêu cầu xóa nhật ký và rút đồng ý
+title: "UC-FBR-020: Yêu cầu xóa nhật ký và rút đồng ý"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-020 — Yêu cầu xóa nhật ký và rút đồng ý
+# UC-FBR-020: Yêu cầu xóa nhật ký và rút đồng ý
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-087; màn UI-FBR-12.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-03; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần receipt yêu cầu xóa; trạng thái có bằng chứng, đồng ý bị rút; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào consentRef, diaryScope, explicitDeleteConfirmation. Nhánh nghiệp vụ thật cần E12-Q15/16; E1 NFR-PRIV-001. Các gate chưa được coi là đạt.

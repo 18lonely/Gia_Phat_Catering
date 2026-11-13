@@ -52,10 +52,10 @@ Mỗi dòng là liên kết tài liệu, không chứng minh tính năng hoàn t
 
 E6-RV-07 → FR-ORD-CHG-001/FR-PLAN-MEAL-001 → UC-ORD-012/019 → API-ORD-005/022/025 + delta_lines/order_revision_lines → UI-ORD-10/13 → AC-E6-012-2/3, AC-E6-019-3 → INV-08/11. [Review delta](../api/delta-contract-review.md) nêu gap chưa duyệt; [evidence](evidence-protocol.md) nối thêm RV04/05/06 với receipt/manifest. Không tăng số AC/test hoặc chuyển trạng thái.
 
-## Review adapter — 11/11/2026
+## Review adapter ngày 11/11/2026
 
 FR-NUTR-DSP-001/FR-ORD-SEL-001 → UC-ORD-016/007 → API-ORD-001/002 → SafeDish/sourceVersion → UI-ORD-06 → AC-E6-016-1/2/3 → SYS-05/09. [Adapter](../api/adapter-contract-review.md), [26route](../api/route-validation-review.md) và [oracle](fixtures/adapter-synthetic.json) bổ sung review, không thêm AC/TC;99mô tả ca có overlap giữ nguyên.
 
-## Hợp nhất gap/DTO — 11/11/2026
+## Hợp nhất gap/DTO ngày 11/11/2026
 
 [34DTO presence](../api/dto-presence-review.md) và [14gap](../review/contract-gap-register.md) tham chiếu contract/route và gate gốc. Review negative absent/null/0/false/[] là tiêu chí so schema tương lai, không thêm34TC;57AC/99mô tả ca có overlap giữ nguyên.

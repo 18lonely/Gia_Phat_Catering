@@ -1,4 +1,4 @@
-# Test Checklist — Epic E2 · Thực đơn & Định lượng
+# Test Checklist: Epic E2 · Thực đơn & Định lượng
 
 ## Metadata
 
@@ -6,7 +6,7 @@
 | :--- | :--- |
 | Template | `42-test-checklist.md` · BA-Kit v1.0 |
 | Phiên bản | 0.1.0 |
-| Trạng thái | Draft — chờ QA và BA rà độ phủ trước khi viết test case chi tiết |
+| Trạng thái | Draft: chờ QA và BA rà độ phủ trước khi viết test case chi tiết |
 | Ngày | 2026-11-11 |
 | Căn cứ | [SRS epic v0.2.0](../srs/spec.md) · [Backlog v0.1.0](../userstories/backlog.md) · [Tiêu chí nghiệm thu v0.1.0](../userstories/acceptance-criteria.md) · [User-flow v0.1.0](../ui/user-flow.md) · [SRS nền tảng](../../nen-tang/srs/spec.md) |
 
@@ -23,18 +23,18 @@ Cách dùng: mỗi dòng có ô ☐. Khi rà, đánh ☑ nếu đồng ý kiểm
 | Nhóm | Mã | Số đề mục | Ghi chú |
 | :--- | :--- | :---: | :--- |
 | Chức năng theo story | `CL-F` | 53 | Dẫn về 239 kịch bản nghiệm thu |
-| Bộ kiểm quy tắc — từng quy tắc | `CL-R` | 35 | **Chờ DL-01**: chưa có con số để viết ca kiểm |
+| Bộ kiểm quy tắc: từng quy tắc | `CL-R` | 35 | **Chờ DL-01**: chưa có con số để viết ca kiểm |
 | Phân quyền và bảo mật | `CL-S` | 22 | |
 | Giao diện và trạng thái màn hình | `CL-U` | 24 | |
 | Dữ liệu biên | `CL-B` | 26 | |
 | Toàn vẹn dữ liệu và đồng thời | `CL-D` | 16 | |
 | Hiệu năng | `CL-P` | 9 | |
 | Tích hợp với phân hệ khác | `CL-I` | 9 | |
-| Nhập bảng tính — ma trận lỗi theo cột | `CL-X` | 14 | |
+| Nhập bảng tính: ma trận lỗi theo cột | `CL-X` | 14 | |
 
 ---
 
-## 2. Chức năng theo story — `CL-F`
+## 2. Chức năng theo story: `CL-F`
 
 Mỗi dòng là một story; kiểm thử chức năng của story đó là chạy các kịch bản nghiệm thu đã liệt kê. Cột H / E / B là số kịch bản thuận lợi / lỗi / biên. Cột "Chờ" lấy từ thẻ `@blocked` của các kịch bản.
 
@@ -97,7 +97,7 @@ Mỗi dòng là một story; kiểm thử chức năng của story đó là ch�
 
 ---
 
-## 3. Bộ kiểm quy tắc — từng quy tắc — `CL-R`
+## 3. Bộ kiểm quy tắc: từng quy tắc (`CL-R`)
 
 Mỗi quy tắc đang bật cần **tối thiểu 4 ca**: (1) đạt, (2) vi phạm, (3) đúng tại giới hạn, (4) vượt giới hạn 1 đơn vị. Quy tắc cấp tuần thêm (5) vi phạm vắt qua ngày nghỉ và (6) biến thể tính theo món gốc, nếu áp dụng. Bảng dưới là khung; cột "Giới hạn" điền khi DL-01 duyệt con số.
 
@@ -105,45 +105,45 @@ Mỗi quy tắc đang bật cần **tối thiểu 4 ca**: (1) đạt, (2) vi ph�
 | :--- | :--- | :---: | :---: | :--- | :--- | :---: |
 | `CL-R-01` | `BR-MENU-001` Số món chính | Ngày | ☐ | Loại suất có 2 và 4 món chính đưa ra | Theo loại suất | ☐ |
 | `CL-R-02` | `BR-MENU-002` Đúng 1 món Healthy | Ngày | ☐ | 0 món Healthy; 2 món Healthy | Chờ DL-01 | ☐ |
-| `CL-R-03` | `BR-MENU-003` Healthy dùng phương pháp ít dầu mỡ | Ngày | ☐ | Món Healthy có phương pháp vừa bị bỏ cờ (không xảy ra được nhờ `BR-CAT-020` — kiểm là không xảy ra) | — | ☐ |
+| `CL-R-03` | `BR-MENU-003` Healthy dùng phương pháp ít dầu mỡ | Ngày | ☐ | Món Healthy có phương pháp vừa bị bỏ cờ (không xảy ra được nhờ `BR-CAT-020`: kiểm là không xảy ra) | Không áp dụng | ☐ |
 | `CL-R-04` | `BR-MENU-004` Đủ rau và canh | Ngày | ☐ | Loại suất không có canh | Theo loại suất | ☐ |
 | `CL-R-05` | `BR-MENU-005` Số món phụ | Ngày | ☐ | Loại suất 0 món phụ | Theo loại suất | ☐ |
-| `CL-R-06` | `BR-MENU-010` Món chính không trùng nhóm | Ngày | ☐ | 3 món cùng nhóm → mấy kết quả | — | ☐ |
-| `CL-R-07` | `BR-MENU-011` Món phụ trùng nhóm món chính | Ngày | ☐ | — | Chờ DL-01 | ☐ |
+| `CL-R-06` | `BR-MENU-010` Món chính không trùng nhóm | Ngày | ☐ | 3 món cùng nhóm → mấy kết quả | Không áp dụng | ☐ |
+| `CL-R-07` | `BR-MENU-011` Món phụ trùng nhóm món chính | Ngày | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
 | `CL-R-08` | `BR-MENU-012` Nhóm nguyên liệu nhiều ngày liền | Tuần | ☐ | Ngày nghỉ ở giữa; có/không dữ liệu tuần trước; thịt lợn nếu có giới hạn riêng | Chờ DL-01, [H-2], [E2-Q2] | ☐ |
 | `CL-R-09` | `BR-MENU-013` Món lặp trong tuần | Tuần | ☐ | Biến thể theo món gốc | Chờ DL-01 | ☐ |
 | `CL-R-10` | `BR-MENU-015` Số nhóm nguyên liệu tối thiểu | Tuần | ☐ | Tuần chỉ có 2 ngày phục vụ | Chờ DL-01 | ☐ |
 | `CL-R-11` | `BR-MENU-016` Rau lặp ngày gần | Tuần | ☐ | Ngày nghỉ ở giữa | Chờ DL-01 | ☐ |
 | `CL-R-12` | `BR-MENU-017` Canh lặp ngày gần | Tuần | ☐ | Ngày nghỉ ở giữa | Chờ DL-01 | ☐ |
-| `CL-R-13` | `BR-MENU-018` Rau trái mùa | Ngày | ☐ | Mùa vắt qua cuối năm; rau không khai mùa | — | ☐ |
+| `CL-R-13` | `BR-MENU-018` Rau trái mùa | Ngày | ☐ | Mùa vắt qua cuối năm; rau không khai mùa | Không áp dụng | ☐ |
 | `CL-R-14` | `BR-MENU-019` Món phụ lặp trong tuần | Tuần | ☐ | Biến thể theo món gốc | Chờ DL-01 | ☐ |
-| `CL-R-15` | `BR-MENU-020` Hai món chính cùng phương pháp | Ngày | ☐ | Món Healthy cùng phương pháp với món không Healthy (không tính) | — | ☐ |
-| `CL-R-16` | `BR-MENU-021` Món phụ chiên | Ngày | ☐ | — | Chờ DL-01 | ☐ |
+| `CL-R-15` | `BR-MENU-020` Hai món chính cùng phương pháp | Ngày | ☐ | Món Healthy cùng phương pháp với món không Healthy (không tính) | Không áp dụng | ☐ |
+| `CL-R-16` | `BR-MENU-021` Món phụ chiên | Ngày | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
 | `CL-R-17` | `BR-MENU-022` Tổng món chiên | Ngày | ☐ | Rau, canh có phương pháp chiên | Chờ DL-01 | ☐ |
 | `CL-R-18` | `BR-MENU-023` Cùng phương pháp | Ngày | ☐ | Rau luộc + món luộc Healthy có tính chung không | Chờ DL-01 | ☐ |
-| `CL-R-19` | `BR-MENU-030` Món vị chua | Ngày | ☐ | — | Chờ DL-01 | ☐ |
-| `CL-R-20` | `BR-MENU-031` Món có sốt | Ngày | ☐ | — | Chờ DL-01 | ☐ |
+| `CL-R-19` | `BR-MENU-030` Món vị chua | Ngày | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
+| `CL-R-20` | `BR-MENU-031` Món có sốt | Ngày | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
 | `CL-R-21` | `BR-MENU-032` Món khô | Ngày | ☐ | Rau khô không tính | Chờ DL-01 | ☐ |
 | `CL-R-22` | `BR-MENU-033` Món thanh nhẹ | Ngày | ☐ | Món Healthy có tự là thanh nhẹ không | Chờ DL-01 | ☐ |
-| `CL-R-23` | `BR-MENU-034` Cặp kỵ | Ngày | ☐ | Biến thể của món trong cặp; cặp khai ngược thứ tự | — | ☐ |
-| `CL-R-24` | `BR-MENU-040` Món cầu kỳ trong ngày | Ngày | ☐ | — | Chờ DL-01 | ☐ |
-| `CL-R-25` | `BR-MENU-041` Món cầu kỳ trong tuần | Tuần | ☐ | — | Chờ DL-01 | ☐ |
-| `CL-R-26` | `BR-MENU-042` Món kém chịu vận chuyển | Ngày | ☐ | R2 chỉ cảnh báo | — | ☐ |
-| `CL-R-27` | `BR-MENU-043` Phù hợp bếp lớn | Ngày | ☐ | — | — | ☐ |
-| `CL-R-28` | `BR-MENU-044` Nguồn cung không ổn định | Ngày | ☐ | Công thức có 2 nguyên liệu chính, 1 không ổn định | — | ☐ |
+| `CL-R-23` | `BR-MENU-034` Cặp kỵ | Ngày | ☐ | Biến thể của món trong cặp; cặp khai ngược thứ tự | Không áp dụng | ☐ |
+| `CL-R-24` | `BR-MENU-040` Món cầu kỳ trong ngày | Ngày | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
+| `CL-R-25` | `BR-MENU-041` Món cầu kỳ trong tuần | Tuần | ☐ | Không áp dụng | Chờ DL-01 | ☐ |
+| `CL-R-26` | `BR-MENU-042` Món kém chịu vận chuyển | Ngày | ☐ | R2 chỉ cảnh báo | Không áp dụng | ☐ |
+| `CL-R-27` | `BR-MENU-043` Phù hợp bếp lớn | Ngày | ☐ | Không áp dụng | Không áp dụng | ☐ |
+| `CL-R-28` | `BR-MENU-044` Nguồn cung không ổn định | Ngày | ☐ | Công thức có 2 nguyên liệu chính, 1 không ổn định | Không áp dụng | ☐ |
 | `CL-R-29` | `BR-MENU-050` Đa dạng nguồn đạm | Tuần | ☐ | Nhóm không có nguồn đạm | Chờ DL-01 | ☐ |
 | `CL-R-30` | `BR-COST-012` Ngưỡng giá suất | Ngày | ☐ | Giá đổi giữa tuần; món thiếu giá | [E2-Q1] | ☐ |
-| `CL-R-31` | `BR-COST-008` Định lượng trong khoảng chuẩn | Khi lưu công thức | ☐ | — | [E2-Q5] | ☐ |
-| `CL-R-32` | `BR-COST-009` Chất độn không vượt mức | Khi lưu công thức | ☐ | — | [E2-Q5] | ☐ |
-| `CL-R-33` | Điểm quy tắc | Thực đơn | ☐ | Nhiều quy tắc cùng vi phạm một ô; quy tắc ngày vi phạm 6 ngày; sàn 0 | — | ☐ |
-| `CL-R-34` | Bật/tắt và đổi loại quy tắc | Danh mục | ☐ | Đổi cứng ↔ mềm; quy tắc tắt không sinh kết quả | — | ☐ |
+| `CL-R-31` | `BR-COST-008` Định lượng trong khoảng chuẩn | Khi lưu công thức | ☐ | Không áp dụng | [E2-Q5] | ☐ |
+| `CL-R-32` | `BR-COST-009` Chất độn không vượt mức | Khi lưu công thức | ☐ | Không áp dụng | [E2-Q5] | ☐ |
+| `CL-R-33` | Điểm quy tắc | Thực đơn | ☐ | Nhiều quy tắc cùng vi phạm một ô; quy tắc ngày vi phạm 6 ngày; sàn 0 | Không áp dụng | ☐ |
+| `CL-R-34` | Bật/tắt và đổi loại quy tắc | Danh mục | ☐ | Đổi cứng ↔ mềm; quy tắc tắt không sinh kết quả | Không áp dụng | ☐ |
 | `CL-R-35` | Thực đơn mẫu thực tế | Thực đơn | ☐ | Chạy bộ kiểm trên 4 thực đơn tuần gần nhất của Gia Phát; ghi số vi phạm (rủi ro E2-R2) | Cần Gia Phát cung cấp thực đơn | ☐ |
 
 `BR-MENU-014` là cách đếm (phủ ở `CL-R-09`, `14`, `23`); `BR-MENU-051` chưa có định nghĩa ([H-5]).
 
 ---
 
-## 4. Phân quyền và bảo mật — `CL-S`
+## 4. Phân quyền và bảo mật: `CL-S`
 
 | Mã | Đề mục | Cách kiểm | Tham chiếu | ☐ |
 | :--- | :--- | :--- | :--- | :---: |
@@ -152,8 +152,8 @@ Mỗi quy tắc đang bật cần **tối thiểu 4 ca**: (1) đạt, (2) vi ph�
 | `CL-S-03` | Ẩn nút không thay cho kiểm quyền | Gọi trực tiếp mọi API ghi bằng tài khoản chỉ xem | `ERR-AUTH-403-02` | ☐ |
 | `CL-S-04` | Thực đơn chưa công bố không lộ cho vai trò chỉ xem | Danh sách, chi tiết, xuất PDF, tìm kiếm | `ERR-SYS-404-01` | ☐ |
 | `CL-S-05` | Giá bán không lộ cho quản lý cơ sở và bếp trưởng | Chi tiết món, API giá, PDF, kết quả kiểm `BR-COST-012` | SRS 2.2 | ☐ |
-| `CL-S-06` | Không tự duyệt — theo người tạo | 5 loại nội dung: món, công thức, giá, đề nghị thay đổi, thực đơn | `BR-SEC-008` | ☐ |
-| `CL-S-07` | Không tự duyệt — theo người sửa cuối | Người A tạo, người B sửa, B duyệt | `BR-SEC-008` | ☐ |
+| `CL-S-06` | Không tự duyệt: theo người tạo | 5 loại nội dung: món, công thức, giá, đề nghị thay đổi, thực đơn | `BR-SEC-008` | ☐ |
+| `CL-S-07` | Không tự duyệt: theo người sửa cuối | Người A tạo, người B sửa, B duyệt | `BR-SEC-008` | ☐ |
 | `CL-S-08` | Không tự duyệt qua duyệt hàng loạt | Tích chọn mục của chính mình trong lô | `ERR-SYS-403-01` | ☐ |
 | `CL-S-09` | Một người không duyệt hai lần cùng vòng | Thực đơn cần 2 người duyệt | `BR-MNU-008` | ☐ |
 | `CL-S-10` | Uỷ quyền duyệt | Còn hạn: duyệt được; hết hạn: bị từ chối; uỷ quyền không gồm quyền đó | `FR-AUTH-RBAC-003` | ☐ |
@@ -172,7 +172,7 @@ Mỗi quy tắc đang bật cần **tối thiểu 4 ca**: (1) đạt, (2) vi ph�
 
 ---
 
-## 5. Giao diện và trạng thái màn hình — `CL-U`
+## 5. Giao diện và trạng thái màn hình: `CL-U`
 
 | Mã | Đề mục | Phạm vi | Tham chiếu | ☐ |
 | :--- | :--- | :--- | :--- | :---: |
@@ -203,7 +203,7 @@ Mỗi quy tắc đang bật cần **tối thiểu 4 ca**: (1) đạt, (2) vi ph�
 
 ---
 
-## 6. Dữ liệu biên — `CL-B`
+## 6. Dữ liệu biên: `CL-B`
 
 Kiểm tại giá trị biên, ngay dưới và ngay trên biên.
 
@@ -238,7 +238,7 @@ Kiểm tại giá trị biên, ngay dưới và ngay trên biên.
 
 ---
 
-## 7. Toàn vẹn dữ liệu và đồng thời — `CL-D`
+## 7. Toàn vẹn dữ liệu và đồng thời: `CL-D`
 
 | Mã | Đề mục | Cách kiểm | Tham chiếu | ☐ |
 | :--- | :--- | :--- | :--- | :---: |
@@ -261,7 +261,7 @@ Kiểm tại giá trị biên, ngay dưới và ngay trên biên.
 
 ---
 
-## 8. Hiệu năng — `CL-P`
+## 8. Hiệu năng: `CL-P`
 
 | Mã | Đề mục | Chỉ tiêu | Dữ liệu | Tham chiếu | ☐ |
 | :--- | :--- | :--- | :--- | :--- | :---: |
@@ -279,7 +279,7 @@ Kiểm tại giá trị biên, ngay dưới và ngay trên biên.
 
 ---
 
-## 9. Tích hợp với phân hệ khác — `CL-I`
+## 9. Tích hợp với phân hệ khác: `CL-I`
 
 | Mã | Đề mục | Cách kiểm | Tham chiếu | ☐ |
 | :--- | :--- | :--- | :--- | :---: |
@@ -295,7 +295,7 @@ Kiểm tại giá trị biên, ngay dưới và ngay trên biên.
 
 ---
 
-## 10. Nhập bảng tính — ma trận lỗi theo cột — `CL-X`
+## 10. Nhập bảng tính: ma trận lỗi theo cột (`CL-X`)
 
 Mỗi loại tệp cần một tệp mẫu sạch và một tệp chứa đủ các lỗi dưới đây, mỗi lỗi một dòng.
 
@@ -327,9 +327,9 @@ Cách xử lý của `CL-X-01`, `02`, `07`, `10`, `14` đã được quy định
 | Bộ dữ liệu nền | 13 nhóm nguyên liệu · 11 phương pháp chế biến · 60 nguyên liệu · 40 món (16 chính, 11 phụ, 6 rau, 7 canh) có công thức và giá hiệu lực · 2 loại suất · thực đơn đã công bố của 4 tuần trước. Dựng được từ dữ liệu mẫu trong ba file wireframe |
 | Tài khoản | 2 dinh dưỡng viên · 2 người duyệt · 1 quản lý cơ sở · 1 bếp trưởng · 2 kế toán · 1 tài khoản vừa tạo vừa duyệt · 2 tài khoản dịch vụ agent |
 | Ngày hệ thống | Cần chỉnh được "hôm nay" của môi trường thử để kiểm ngày hiệu lực, chuyển phiên bản công thức, công bố |
-| Bộ dữ liệu lớn | 2.000 món, 1.000 nguyên liệu, thực đơn 52 tuần — cho nhóm hiệu năng |
+| Bộ dữ liệu lớn | 2.000 món, 1.000 nguyên liệu, thực đơn 52 tuần: cho nhóm hiệu năng |
 | Tệp nhập | 4 tệp sạch + 4 tệp lỗi theo mục 10 + 1 tệp 2.000 dòng + 1 tệp 2.001 dòng |
-| Thực đơn thật | 4 thực đơn tuần gần nhất của Gia Phát, cho `CL-R-35` — Gia Phát cung cấp |
+| Thực đơn thật | 4 thực đơn tuần gần nhất của Gia Phát, cho `CL-R-35`: Gia Phát cung cấp |
 
 ## 12. Điều kiện bắt đầu và kết thúc kiểm thử [ĐỀ XUẤT]
 
@@ -369,7 +369,7 @@ Theo `rules/14`: mỗi yêu cầu chức năng phải có story, tiêu chí nghi
 | `FR-MENU-RCP-004` | Tạo phiên bản mới | `US-MENU-17` | 4 | CL-F, CL-D, CL-B, CL-X | `TC-MENU-1701` → `1704` | Sẵn sàng viết test case |
 | `FR-MENU-RCP-005` | Lấy công thức hiệu lực | `US-MENU-18` | 3 | CL-F, CL-D, CL-B, CL-X | `TC-MENU-1801` → `1803` | Sẵn sàng viết test case |
 | `FR-MENU-RCP-006` | So sánh hai phiên bản | `US-MENU-19` | 3 | CL-F, CL-D, CL-B, CL-X | `TC-MENU-1901` → `1903` | Sẵn sàng viết test case |
-| `FR-MENU-RCP-007` | Nhiều cỡ định lượng | — | 0 | — | — | Chưa thành story — chờ [O-02] |
+| `FR-MENU-RCP-007` | Nhiều cỡ định lượng | Chưa có | 0 | Không áp dụng | Chưa có | Chưa thành story: chờ [O-02] |
 | `FR-MENU-PRC-001` | Đặt giá bán | `US-MENU-20` | 5 | CL-F, CL-S, CL-B, CL-X | `TC-MENU-2001` → `2005` | Chờ E2-Q1 |
 | `FR-MENU-PRC-002` | Duyệt / trả lại giá | `US-MENU-21`, `US-MENU-46` | 11 | CL-F, CL-S, CL-B, CL-X | `TC-MENU-2101` → `2105`, `TC-MENU-4601` → `4606` | Chờ E2-Q7 |
 | `FR-MENU-PRC-003` | Lấy giá hiệu lực | `US-MENU-21` | 5 | CL-F, CL-S, CL-B, CL-X | `TC-MENU-2101` → `2105` | Chờ E2-Q7 |
@@ -416,13 +416,13 @@ Giữ nguyên trạng thái mở.
 
 | Điểm mở | Ảnh hưởng |
 | :--- | :--- |
-| DL-01 — duyệt 43 quy tắc | Toàn bộ nhóm `CL-R` chưa có giới hạn; khoảng 140 ca kiểm (35 đề mục × 4 ca) chưa viết được |
-| [O-04] — đội phát triển, QA, công cụ | Chưa biết ai chạy và tự động hoá đến đâu; mục 11, 12 là đề xuất |
-| [O-06] — ai duyệt | `CL-S-06` → `11`, `CL-D-03` cần tài khoản thật; quy tắc 2 người duyệt có thể bị bỏ |
-| [E2-Q1] — cách kiểm ngưỡng giá | `CL-R-30`, `CL-B-18` có thể đổi hẳn |
-| [E2-Q2], [H-2] — tuần trước, ngày liên tiếp | `CL-R-08`, `09`, `11`, `12` |
-| [E2-Q11] — thực đơn chờ duyệt có kiểm lại | `CL-D-11` |
-| [O-02], [E2-Q5] — cỡ định lượng, bảng chuẩn | `CL-R-31`, `32`; mẫu tệp công thức ở `CL-X` |
+| DL-01: duyệt 43 quy tắc | Toàn bộ nhóm `CL-R` chưa có giới hạn; khoảng 140 ca kiểm (35 đề mục × 4 ca) chưa viết được |
+| [O-04]: đội phát triển, QA, công cụ | Chưa biết ai chạy và tự động hoá đến đâu; mục 11, 12 là đề xuất |
+| [O-06]: ai duyệt | `CL-S-06` → `11`, `CL-D-03` cần tài khoản thật; quy tắc 2 người duyệt có thể bị bỏ |
+| [E2-Q1]: cách kiểm ngưỡng giá | `CL-R-30`, `CL-B-18` có thể đổi hẳn |
+| [E2-Q2], [H-2]: tuần trước, ngày liên tiếp | `CL-R-08`, `09`, `11`, `12` |
+| [E2-Q11]: thực đơn chờ duyệt có kiểm lại | `CL-D-11` |
+| [O-02], [E2-Q5]: cỡ định lượng, bảng chuẩn | `CL-R-31`, `32`; mẫu tệp công thức ở `CL-X` |
 
 ## 15. Lịch sử sửa đổi
 

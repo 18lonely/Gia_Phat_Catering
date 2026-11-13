@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-002-MD
-title: UC-PUB-002 — Xem tin và bài viết
+title: "UC-PUB-002: Xem tin và bài viết"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-002 — Xem tin và bài viết
+# UC-PUB-002: Xem tin và bài viết
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai đọc tin Gia Phát. Bên quan
 
 Trigger: Khách tìm bài viết về Gia Phát qua mục tin tức hoặc đường dẫn bài đã biết.
 
-Tiền điều kiện — nghiệp vụ: Khách truy cập danh sách hoặc có slug bài; không yêu cầu tài khoản.
-Tiền điều kiện — gate còn mở: E8-Q01/08 về nguồn bài cũ và quyền xuất bản chưa chốt; không lấy bản chuyển nháp làm bài công khai.
+Tiền điều kiện (nghiệp vụ): Khách truy cập danh sách hoặc có slug bài; không yêu cầu tài khoản.
+Tiền điều kiện (gate còn mở): E8-Q01/08 về nguồn bài cũ và quyền xuất bản chưa chốt; không lấy bản chuyển nháp làm bài công khai.
 
 Luồng chính:
 1. Khách chọn bộ lọc và trang danh sách tại UI-PUB-02.

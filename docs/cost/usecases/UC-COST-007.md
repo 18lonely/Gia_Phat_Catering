@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Bảng tính có quyết định và người duyệt; dữ liệu tính đã chụp giữ nguyên, không đồng nghĩa thực đơn đã được duyệt.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-DISH-006`, `FR-COST-DISH-007`.
-- **Điểm chạm:** SCR-COST-09, SCR-COST-10 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-09, SCR-COST-10, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

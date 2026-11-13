@@ -1,4 +1,4 @@
-# Báo cáo E6 — adapter/validation
+# Báo cáo E6: adapter/validation
 
 11/11/2026 · BA/tài liệu; baseline adapter-baseline-sha256.json. Không Git, không chạy generator, không thay handoff/report cũ hoặc wireframe.
 

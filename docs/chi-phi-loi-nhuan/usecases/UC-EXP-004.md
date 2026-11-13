@@ -1,6 +1,6 @@
 ---
 id: DOC-E13-USECASES-UC-EXP-004-MD
-title: UC-EXP-004 — Tham chiếu chi phí nhân công
+title: "UC-EXP-004: Tham chiếu chi phí nhân công"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-EXP-004 — Tham chiếu chi phí nhân công
+# UC-EXP-004: Tham chiếu chi phí nhân công
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -44,8 +44,8 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 - **3c**: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.
 - **4a**: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.
 - **4b**: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.
-- **4c — đặc thù**: có giờ công nhưng chưa có đơn giá hay nguồn tiền công; khi yêu cầu tính chi phí thì ERR-EXP-422-02; amount null, không mặc định 0.
-- **4d — biên**: đơn giá nguồn thay phiên bản sau kỳ khóa; khi đọc báo cáo cũ thì giữ phiên bản đã chụp; thay đổi chỉ qua điều chỉnh.
+- **4c. Đặc thù**: có giờ công nhưng chưa có đơn giá hay nguồn tiền công; khi yêu cầu tính chi phí thì ERR-EXP-422-02; amount null, không mặc định 0.
+- **4d. Biên**: đơn giá nguồn thay phiên bản sau kỳ khóa; khi đọc báo cáo cũ thì giữ phiên bản đã chụp; thay đổi chỉ qua điều chỉnh.
 
 ## Quy tắc và truy vết
 

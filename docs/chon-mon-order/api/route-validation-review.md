@@ -1,4 +1,4 @@
-# Validation26route E6 — review độc lập
+# Validation26route E6: review độc lập
 
 11/11/2026 · Phủ26/26route trong catalog hiện có, không phải26route đã chạy hoặc được duyệt. Không thêm field/giới hạn tưởng tượng; cột Gap giữ việc chưa thể freeze. [API](api-spec.md) · [Adapter](adapter-contract-review.md).
 
@@ -43,6 +43,6 @@ Catalog vẫn26HTTP/2port. Các dòng ghi guard hiện có và gap, không quy�
 
 Truy vết feature/FR/UC/AC theo [RTM](../test/traceability.md); matrix không tạo26test case mới. Bộ57AC và99mô tả ca tổng không đổi. Cổng O-03 vẫn không có route ghi; PORT-LOCK/REM là nội bộ, không suy endpoint public từ ma trận này.
 
-## Hợp nhất gap/DTO — 11/11/2026
+## Hợp nhất gap/DTO ngày 11/11/2026
 
 [Ma trận34DTO](dto-presence-review.md) bổ sung required/optional/null; [sổ gap](../review/contract-gap-register.md) quản lý điều kiện đóng. Bảng26route vẫn là review theo từng giao tiếp, không tự đổi contract theo cột gap.

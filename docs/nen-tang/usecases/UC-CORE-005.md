@@ -1,15 +1,15 @@
 ---
 id: DOC-NEN-TANG-USECASES-UC-CORE-005
-title: UC-CORE-005 — Đổi mật khẩu
+title: "UC-CORE-005: Đổi mật khẩu"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-11
 ---
-# UC-CORE-005 — Đổi mật khẩu
+# UC-CORE-005: Đổi mật khẩu
 
-**Draft — thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
+**Draft: thiết kế BA để review; chưa duyệt nghiệp vụ, chưa triển khai phần mềm.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |

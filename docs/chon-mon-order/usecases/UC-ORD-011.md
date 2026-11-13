@@ -1,13 +1,13 @@
 ---
 id: DOC-E6-USECASES-UC-ORD-011
-title: UC-ORD-011 — Khóa tại hạn và phát hành nguồn kế hoạch
+title: "UC-ORD-011: Khóa tại hạn và phát hành nguồn kế hoạch"
 version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-ORD-011 — Khóa tại hạn và phát hành nguồn kế hoạch
+# UC-ORD-011: Khóa tại hạn và phát hành nguồn kế hoạch
 
 **Draft để review · cập nhật 12/11/2026 · Chưa duyệt nghiệp vụ, chưa triển khai backend/UAT.**
 
@@ -18,7 +18,7 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 | 0.2.0 | 2026-11-11 | Bổ sung chi tiết E6, giữ gate và mã gốc |
 | 0.2.1 | 2026-11-12 | Phân biệt đọc, ghi, worker và gate theo catalog; giữ policy mở |
 
-- **ID / mức:** UC-ORD-011 / Sea — mục tiêu nghiệp vụ.
+- **ID / mức:** UC-ORD-011 / Sea (mục tiêu nghiệp vụ).
 - **Truy vết:** FEAT-040 / P0; FR-ORD-LOCK-001; US-E6-011; PORT-LOCK, API-ORD-020; UI-ORD-09.
 - **Actor chính:** Scheduler/service principal có quyền scope gọi PORT-LOCK; worker kế hoạch xử lý outbox riêng. Vận hành chỉ theo dõi UI-ORD-09, không đóng vai scheduler mở UI.
 - **Bên quan tâm:** người ăn cần giữ đúng lựa chọn; người đặt tổng cần số suất giải thích được; bếp cần nguồn phiên bản; BA cần không che điểm mở.
@@ -37,12 +37,12 @@ Mọi tên, mã, ngày phục vụ và con số trong ví dụ dưới đây là
 
 ## Nhánh rẽ và ngoại lệ
 
-- **2a — đầu vào/quyền nghiệp vụ:** Given clock server đúng bằng deadline; When người ăn gửi PUT; Then đề xuất 409 ERR-ORD-409-01; không ghi; biên deadline chờ ORD-Q07.
-- **3a — biên/đồng thời:** Given lock event đã xử lý, worker mất phản hồi; When retry cùng eventKey; Then trả revision cũ; không tăng plan revision lần hai.
-- **3b — service không đủ quyền:** dừng xử lý scope; không mượn phiên người dùng/cache để khóa. Mã ERR là lý do tham chiếu miền; port nội bộ không có HTTP status trực tiếp.
-- **4a — mất kết quả job:** đối soát operation/source hash và eventKey theo mapping; retry cùng sự kiện không tạo revision/outbox đôi. eventKey không phải header Idempotency-Key HTTP; không tự thêm API tra job.
-- **4b — nguồn/version đổi:** dừng khóa trên baseline cũ, ghi outcome để xử lý theo lifecycle; không tự lấy nguồn mới rồi dùng eventKey cũ. Remediation/override vẫn chờ ORD-Q07/12/O-06.
-- **4c — phụ thuộc gián đoạn:** chưa biết commit thì đối soát như 4a; chưa đủ nguồn thì không LOCKED giả. Retry worker plan tách retry lock; không mở lại order đã khóa.
+- **2a. Đầu vào/quyền nghiệp vụ:** Given clock server đúng bằng deadline; When người ăn gửi PUT; Then đề xuất 409 ERR-ORD-409-01; không ghi; biên deadline chờ ORD-Q07.
+- **3a. Biên/đồng thời:** Given lock event đã xử lý, worker mất phản hồi; When retry cùng eventKey; Then trả revision cũ; không tăng plan revision lần hai.
+- **3b. Service không đủ quyền:** dừng xử lý scope; không mượn phiên người dùng/cache để khóa. Mã ERR là lý do tham chiếu miền; port nội bộ không có HTTP status trực tiếp.
+- **4a. Mất kết quả job:** đối soát operation/source hash và eventKey theo mapping; retry cùng sự kiện không tạo revision/outbox đôi. eventKey không phải header Idempotency-Key HTTP; không tự thêm API tra job.
+- **4b. Nguồn/version đổi:** dừng khóa trên baseline cũ, ghi outcome để xử lý theo lifecycle; không tự lấy nguồn mới rồi dùng eventKey cũ. Remediation/override vẫn chờ ORD-Q07/12/O-06.
+- **4c. Phụ thuộc gián đoạn:** chưa biết commit thì đối soát như 4a; chưa đủ nguồn thì không LOCKED giả. Retry worker plan tách retry lock; không mở lại order đã khóa.
 
 ## Quy tắc, dữ liệu và kiểm thử
 
@@ -57,6 +57,6 @@ Dữ liệu: orders,order_revisions,production_plan_revisions (delta). Bộ ba A
 
 API-ORD-020 là GET: actor có quyền yêu cầu query/path theo catalog, kiểm lại quyền/scope mỗi lần. Kết quả là dữ liệu đọc, không tạo receipt, commit nghiệp vụ hoặc tăng version; không dùng Idempotency-Key. Mất phản hồi có thể đọc lại, không tự chốt số lần/giãn cách retry. Nguồn đổi được trình bày theo version/nguồn trả về; không mặc định lỗi stale-write 409 chỉ vì đọc lại. Timeout không được giả thành danh sách rỗng hoặc dữ liệu đã đủ.
 
-## Kết quả rà UC — 12/11/2026
+## Kết quả rà UC ngày 12/11/2026
 
 Đối chiếu [ma trận rà 19 UC](../review/uc-operation-review.md). Gap liên quan: E6-CG-04, E6-CG-05, E6-CG-06 tại [sổ gap chung](../review/contract-gap-register.md); DOCUMENT_CLARIFIED, chưa đóng gap. Mã FR/US/AC/TC và trạng thái test giữ nguyên.

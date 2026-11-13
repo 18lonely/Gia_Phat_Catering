@@ -1,4 +1,4 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA chi-phi-loi-nhuan</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>chi-phi-loi-nhuan</h1><p>32 tài liệu · 7 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/profit-workbench.html">profit-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Đề xuất hợp đồng API EXP</a><a href="#doc-api-data-mapping-md">Mapping ba tầng EXP</a><a href="#doc-epic-spec-md">E13 — Chi phí và lợi nhuận</a><a href="#doc-review-dependencies-md">Điểm nối và phụ thuộc E13</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E13</a><a href="#doc-review-questions-md">Câu hỏi mở E13</a><a href="#doc-srs-data-dictionary-md">Từ điển dữ liệu đề xuất E13</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi EXP</a><a href="#doc-srs-spec-md">Đặc tả E13 — EXP</a><a href="#doc-srs-states-md">Trạng thái và điều kiện chuyển EXP</a><a href="#doc-test-checklist-md">Checklist kiểm thử E13</a><a href="#doc-test-r13-acceptance-md">Khung nghiệm thu R13</a><a href="#doc-test-system-cases-md">Ca hệ thống và lỗi dùng chung E13</a><a href="#doc-test-test-cases-md">Ca chức năng EXP</a><a href="#doc-test-traceability-md">Ma trận truy vết E13</a><a href="#doc-ui-screens-md">Danh mục màn EXP</a><a href="#doc-ui-user-flow-md">Luồng sử dụng EXP</a><a href="#doc-usecases-index-md">Danh mục use case EXP</a><a href="#doc-usecases-UC-EXP-001-md">UC-EXP-001 — Quản lý và khóa kỳ chi phí</a><a href="#doc-usecases-UC-EXP-002-md">UC-EXP-002 — Ghi chi phí theo cơ sở và loại</a><a href="#doc-usecases-UC-EXP-003-md">UC-EXP-003 — Ghi giờ công thực tế theo ca</a><a href="#doc-usecases-UC-EXP-004-md">UC-EXP-004 — Tham chiếu chi phí nhân công</a><a href="#doc-usecases-UC-EXP-005-md">UC-EXP-005 — Soạn phiên bản phương pháp phân bổ</a><a href="#doc-usecases-UC-EXP-006-md">UC-EXP-006 — Ghi duyệt phương pháp của Giám đốc</a><a href="#doc-usecases-UC-EXP-007-md">UC-EXP-007 — Kiểm cổng và lập lần phân bổ</a><a href="#doc-usecases-UC-EXP-008-md">UC-EXP-008 — Tra cứu lợi nhuận theo khách</a><a href="#doc-usecases-UC-EXP-009-md">UC-EXP-009 — Đối chiếu lợi nhuận với từng cơ sở</a><a href="#doc-usecases-UC-EXP-010-md">UC-EXP-010 — Lập điều chỉnh sau khóa có phê duyệt</a><a href="#doc-usecases-UC-EXP-011-md">UC-EXP-011 — Bảo vệ lương và đầu ra nội bộ</a><a href="#doc-usecases-UC-EXP-012-md">UC-EXP-012 — Kiểm nguồn và truy nguyên lần báo cáo</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria EXP</a><a href="#doc-userstories-backlog-md">Backlog FEAT-088</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Đề xuất hợp đồng API EXP</h1>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hồ sơ BA chi-phi-loi-nhuan</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f6f6;color:#191919;font:16px/1.55 Arial,sans-serif}header{padding:22px 30px;background:#fff;border-bottom:2px solid #333}h1{font-size:28px;line-height:1.25}h2{margin-top:32px}a{color:#222;text-underline-offset:3px}main{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1600px;margin:auto}aside{padding:20px;position:sticky;top:0;max-height:100vh;overflow:auto}aside a{display:block;padding:7px 0;overflow-wrap:anywhere}input,select,button{font:inherit;padding:9px;max-width:100%}article{min-width:0;background:white;border-left:1px solid #ccc;padding:30px}section[hidden]{display:none}.table-wrap{overflow:auto}table{border-collapse:collapse;font-size:14px;width:100%}th,td{border:1px solid #ccc;padding:9px;vertical-align:top;min-width:85px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eee;padding:18px}code{overflow-wrap:anywhere}figure{margin:18px 0;border:1px solid #ccc;padding:12px;overflow:auto}figure svg{max-width:none;height:auto}img{max-width:100%}.badge{border:1px solid #333;padding:5px 10px;display:inline-block}.toolbar{display:flex;gap:12px;flex-wrap:wrap}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #444;outline-offset:3px}@media(max-width:700px){header,article{padding:16px}main{display:block}aside{position:static;max-height:240px;border-bottom:1px solid #aaa}article{border-left:0}h1{font-size:24px}}</style></head><body><header><span class="badge">GIA PHÁT · BA REVIEW · DRAFT</span><h1>chi-phi-loi-nhuan</h1><p>32 tài liệu · 7 sơ đồ · Chưa ký duyệt / chưa triển khai backend.</p><div class="toolbar"><a href="../OVERVIEW.md">Tổng quan</a><a href="../project-dashboard.md">Dashboard</a><a href="srs/diagrams/index.html">Gallery sơ đồ</a><a href="html-wireframe/profit-workbench.html">profit-workbench.html</a></div></header><main><aside><label>Tìm tài liệu <input id="search" placeholder="SRS, API, test..."></label><nav><a href="#doc-api-api-spec-md">Đề xuất hợp đồng API EXP</a><a href="#doc-api-data-mapping-md">Mapping ba tầng EXP</a><a href="#doc-epic-spec-md">E13: Chi phí và lợi nhuận</a><a href="#doc-review-dependencies-md">Điểm nối và phụ thuộc E13</a><a href="#doc-review-handoff-md">Bàn giao gói BA nháp E13</a><a href="#doc-review-questions-md">Câu hỏi mở E13</a><a href="#doc-srs-data-dictionary-md">Từ điển dữ liệu đề xuất E13</a><a href="#doc-srs-error-matrix-md">Ma trận lỗi EXP</a><a href="#doc-srs-spec-md">Đặc tả E13 (EXP)</a><a href="#doc-srs-states-md">Trạng thái và điều kiện chuyển EXP</a><a href="#doc-test-checklist-md">Checklist kiểm thử E13</a><a href="#doc-test-r13-acceptance-md">Khung nghiệm thu R13</a><a href="#doc-test-system-cases-md">Ca hệ thống và lỗi dùng chung E13</a><a href="#doc-test-test-cases-md">Ca chức năng EXP</a><a href="#doc-test-traceability-md">Ma trận truy vết E13</a><a href="#doc-ui-screens-md">Danh mục màn EXP</a><a href="#doc-ui-user-flow-md">Luồng sử dụng EXP</a><a href="#doc-usecases-index-md">Danh mục use case EXP</a><a href="#doc-usecases-UC-EXP-001-md">UC-EXP-001: Quản lý và khóa kỳ chi phí</a><a href="#doc-usecases-UC-EXP-002-md">UC-EXP-002: Ghi chi phí theo cơ sở và loại</a><a href="#doc-usecases-UC-EXP-003-md">UC-EXP-003: Ghi giờ công thực tế theo ca</a><a href="#doc-usecases-UC-EXP-004-md">UC-EXP-004: Tham chiếu chi phí nhân công</a><a href="#doc-usecases-UC-EXP-005-md">UC-EXP-005: Soạn phiên bản phương pháp phân bổ</a><a href="#doc-usecases-UC-EXP-006-md">UC-EXP-006: Ghi duyệt phương pháp của Giám đốc</a><a href="#doc-usecases-UC-EXP-007-md">UC-EXP-007: Kiểm cổng và lập lần phân bổ</a><a href="#doc-usecases-UC-EXP-008-md">UC-EXP-008: Tra cứu lợi nhuận theo khách</a><a href="#doc-usecases-UC-EXP-009-md">UC-EXP-009: Đối chiếu lợi nhuận với từng cơ sở</a><a href="#doc-usecases-UC-EXP-010-md">UC-EXP-010: Lập điều chỉnh sau khóa có phê duyệt</a><a href="#doc-usecases-UC-EXP-011-md">UC-EXP-011: Bảo vệ lương và đầu ra nội bộ</a><a href="#doc-usecases-UC-EXP-012-md">UC-EXP-012: Kiểm nguồn và truy nguyên lần báo cáo</a><a href="#doc-userstories-acceptance-criteria-md">Acceptance criteria EXP</a><a href="#doc-userstories-backlog-md">Backlog FEAT-088</a></nav></aside><article><section id="doc-api-api-spec-md" hidden><p><a href="api/api-spec.md">Mở Markdown nguồn</a> · api/api-spec.md</p><h1>Đề xuất hợp đồng API EXP</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -31,7 +31,7 @@
 </code></pre>
 <p>Đọc run bị chặn có thể trả 200 với status BLOCKED, methodVersionRef null, profit null, blockedReasons và directCosts đúng quyền; tuyệt đối không success=true cho hành động phân bổ chưa thực hiện. Mọi trường tiền dùng decimal string và currency; null + reason khác 0. Lỗi chung 401/403/404/503 theo <a href="#doc-srs-error-matrix-md">ma trận</a>, 409 cho bất biến/version/trùng, 422 cho thiếu điều kiện. Log chỉ mã/tham chiếu, không lương hoặc giá trị bị cấm.</p>
 <h2>3. Danh mục và payload</h2>
-<h3>API-EXP-001 — POST /v1/expense-periods</h3>
+<h3>API-EXP-001: POST /v1/expense-periods</h3>
 <ul>
 <li>FR: FR-EXP-PER-001; màn UI-EXP-01.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -40,7 +40,7 @@
 <li>Điều kiện: E13-Q02. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-002 — POST /v1/expense-entries</h3>
+<h3>API-EXP-002: POST /v1/expense-entries</h3>
 <ul>
 <li>FR: FR-EXP-COST-001; màn UI-EXP-02.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -49,7 +49,7 @@
 <li>Điều kiện: E13-Q01. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-003 — POST /v1/attendance-sheets</h3>
+<h3>API-EXP-003: POST /v1/attendance-sheets</h3>
 <ul>
 <li>FR: FR-EXP-TIME-001; màn UI-EXP-03.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -58,7 +58,7 @@
 <li>Điều kiện: E13-Q03; E11-Q09. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-004 — POST /v1/labor-cost-references</h3>
+<h3>API-EXP-004: POST /v1/labor-cost-references</h3>
 <ul>
 <li>FR: FR-EXP-LAB-001; màn UI-EXP-03.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -67,7 +67,7 @@
 <li>Điều kiện: E13-Q03/04. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-005 — POST /v1/allocation-method-versions</h3>
+<h3>API-EXP-005: POST /v1/allocation-method-versions</h3>
 <ul>
 <li>FR: FR-EXP-METH-001; màn UI-EXP-04.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -76,7 +76,7 @@
 <li>Điều kiện: E13-Q05/09. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-006 — POST /v1/allocation-method-versions/{id}/decisions</h3>
+<h3>API-EXP-006: POST /v1/allocation-method-versions/{id}/decisions</h3>
 <ul>
 <li>FR: FR-EXP-APRV-001; màn UI-EXP-04.</li>
 <li>Quyền: PER-08 + quyền hành động + scope cơ sở.</li>
@@ -85,7 +85,7 @@
 <li>Điều kiện: E13-Q05; O-06. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-007 — POST /v1/allocation-runs</h3>
+<h3>API-EXP-007: POST /v1/allocation-runs</h3>
 <ul>
 <li>FR: FR-EXP-ALLOC-001; màn UI-EXP-05.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -94,7 +94,7 @@
 <li>Điều kiện: E13-Q05/06/09/12. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-008 — GET /v1/profit-runs/{id}/customers</h3>
+<h3>API-EXP-008: GET /v1/profit-runs/{id}/customers</h3>
 <ul>
 <li>FR: FR-EXP-PROF-001; màn UI-EXP-06.</li>
 <li>Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.</li>
@@ -103,7 +103,7 @@
 <li>Điều kiện: E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-009 — GET /v1/profit-runs/{id}/reconciliation</h3>
+<h3>API-EXP-009: GET /v1/profit-runs/{id}/reconciliation</h3>
 <ul>
 <li>FR: FR-EXP-RECON-001; màn UI-EXP-07.</li>
 <li>Quyền: PER-08 + quyền hành động + scope cơ sở.</li>
@@ -112,7 +112,7 @@
 <li>Điều kiện: E13-Q06/08/09/14. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-010 — POST /v1/expense-adjustments</h3>
+<h3>API-EXP-010: POST /v1/expense-adjustments</h3>
 <ul>
 <li>FR: FR-EXP-ADJ-001; màn UI-EXP-08.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -121,7 +121,7 @@
 <li>Điều kiện: E13-Q10; O-06. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-011 — GET /v1/profit-runs/{id}/internal-projection</h3>
+<h3>API-EXP-011: GET /v1/profit-runs/{id}/internal-projection</h3>
 <ul>
 <li>FR: FR-EXP-SAFE-001; màn UI-EXP-06.</li>
 <li>Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.</li>
@@ -130,7 +130,7 @@
 <li>Điều kiện: E13-Q11/12; E12-Q07. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-012 — GET /v1/profit-runs/{id}/sources</h3>
+<h3>API-EXP-012: GET /v1/profit-runs/{id}/sources</h3>
 <ul>
 <li>FR: FR-EXP-SRC-001; màn UI-EXP-05.</li>
 <li>Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.</li>
@@ -139,7 +139,7 @@
 <li>Điều kiện: E13-Q12/13. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-013 — POST /v1/expense-periods/{id}/locks</h3>
+<h3>API-EXP-013: POST /v1/expense-periods/{id}/locks</h3>
 <ul>
 <li>FR: FR-EXP-PER-001; màn UI-EXP-01.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -148,7 +148,7 @@
 <li>Điều kiện: E13-Q02. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-014 — POST /v1/attendance-sheets/{id}/submissions</h3>
+<h3>API-EXP-014: POST /v1/attendance-sheets/{id}/submissions</h3>
 <ul>
 <li>FR: FR-EXP-TIME-001; màn UI-EXP-03.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -157,7 +157,7 @@
 <li>Điều kiện: E13-Q03; E11-Q09. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-015 — POST /v1/allocation-method-versions/{id}/submissions</h3>
+<h3>API-EXP-015: POST /v1/allocation-method-versions/{id}/submissions</h3>
 <ul>
 <li>FR: FR-EXP-METH-001; màn UI-EXP-04.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -166,7 +166,7 @@
 <li>Điều kiện: E13-Q05/09. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-016 — POST /v1/expense-adjustments/{id}/decisions</h3>
+<h3>API-EXP-016: POST /v1/expense-adjustments/{id}/decisions</h3>
 <ul>
 <li>FR: FR-EXP-ADJ-001; màn UI-EXP-08.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -175,7 +175,7 @@
 <li>Điều kiện: E13-Q10; O-06. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-017 — POST /v1/profit-runs</h3>
+<h3>API-EXP-017: POST /v1/profit-runs</h3>
 <ul>
 <li>FR: FR-EXP-PROF-001; màn UI-EXP-06.</li>
 <li>Quyền: PER-07/PER-08 + quyền hành động + scope cơ sở.</li>
@@ -184,7 +184,7 @@
 <li>Điều kiện: E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15. Không tự triển khai nhánh chưa chốt.</li>
 <li>Lỗi: ERR-EXP-401-01, ERR-EXP-403-01, ERR-EXP-404-01, ERR-EXP-409-01, ERR-EXP-409-02, ERR-EXP-409-03, ERR-EXP-422-01, ERR-EXP-422-02, ERR-EXP-422-03, ERR-EXP-422-04, ERR-EXP-503-01; dùng đúng trigger, không trả đồng loạt.</li>
 </ul>
-<h3>API-EXP-018 — GET /v1/expense-periods/{id}/direct-costs</h3>
+<h3>API-EXP-018: GET /v1/expense-periods/{id}/direct-costs</h3>
 <ul>
 <li>FR: FR-EXP-COST-001; màn UI-EXP-02.</li>
 <li>Quyền: PER-07 + quyền hành động + scope cơ sở.</li>
@@ -196,10 +196,10 @@
 <h2>4. Duyệt và projection</h2>
 <p>API-EXP-006 chỉ PER-08 khác lập/sửa cuối; API-EXP-016 người duyệt chờ Q10, deny khi chưa cấu hình. API-EXP-008/011 không có personRef/hours/rate trong output theo khách. Chi tiết lương chỉ trả ở tài nguyên công cho PER-07/PER-08 được cấp quyền trường. Tham số purpose=customer không được dùng để xuất E13; từ chối, không dựa vào ẩn CSS. Mọi đường export tương lai phải kiểm lại quyền và allowlist; định dạng chưa chọn.</p>
 <p><a href="#doc-api-data-mapping-md">Mapping</a> · <a href="api/endpoint-catalog.json">Catalog máy đọc</a> · <a href="#doc-test-traceability-md">RTM</a>.</p>
-<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<h2>Quy ước tài liệu liên epic (XC-04)</h2>
 <p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
 <blockquote>
-<p>Chờ E13-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+<p>Chờ E13-Q12: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
 </blockquote>
 </section><section id="doc-api-data-mapping-md" hidden><p><a href="api/data-mapping.md">Mở Markdown nguồn</a> · api/data-mapping.md</p><h1>Mapping ba tầng EXP</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
@@ -314,7 +314,7 @@
 </tr>
 </tbody></table></div>
 <p>Các tên cột là đề xuất trong <a href="#doc-srs-data-dictionary-md">từ điển</a>, không là mapping vật lý đã triển khai. Không thay schema nền.</p>
-</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E13 — Chi phí và lợi nhuận</h1>
+</section><section id="doc-epic-spec-md" hidden><p><a href="epic-spec.md">Mở Markdown nguồn</a> · epic-spec.md</p><h1>E13: Chi phí và lợi nhuận</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -409,14 +409,14 @@
 </tr>
 </tbody></table></div>
 <blockquote>
-<p>Chờ E7-Q03, E7-Q04, E13-Q12 — XC-03. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-03</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E7-Q03, E7-Q04, E13-Q12: XC-03. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-03</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <h2>Nền và điều kiện release</h2>
 <p><a href="../nen-tang/srs/spec.md">Nền SRS</a>, <a href="../nen-tang/srs/erd.md">ERD</a>, <a href="../nen-tang/srs/schema.dbml">DBML</a>: quyền vai trò × cơ sở, tách tạo/duyệt BR-SEC-008, audit, snapshot. 65 bảng giữ nguyên; đề xuất EXP chỉ trong từ điển. XC-01: ERD đã làm rõ theo ACC-CONF-02 tại <a href="../cost/accounting/business-rules.md">nghiệp vụ kế toán</a>; cost gồm VAT phải trả. O-01 về thành phần cost khác và VAT bán ra vẫn mở.</p>
 <p>R7/R11 và Giám đốc duyệt phương pháp: chưa có bằng chứng. Chỉ duyệt tài liệu sau này cũng không tự chứng minh R13 đạt. O-06 chưa có người thay; không tự chỉ định.</p>
 <p>Giữ nguyên các câu đang chờ: E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13, E7-Q01–08; E8-Q01–12; E9-Q01–14; E10-Q01–15; E11-Q01–15; E12-Q01–18; O-01–O-06; CK-Q01–10, DATA-COST-Q01–06; AIO-Q01–06, NUTR-Q01–04; DL-01; E1-Q01–05. Không hỏi lại, tự trả lời hoặc đặc tả tiếp phần producer phụ thuộc các câu này.</p>
 <blockquote>
-<p>Chờ E13-Q08, CK-Q05, CK-Q09 — XC-10. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-10</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E13-Q08, CK-Q05, CK-Q09: XC-10. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-10</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <p>Cost nguyên liệu gồm VAT phải trả nhà cung cấp. Cờ “không yêu cầu hóa đơn” là cờ riêng, không phải VAT 0 %. Chiết khấu % hoặc tiền/suất là khoản riêng theo đơn; không giảm số phải trả nhà cung cấp, không tự khấu trừ số khách phải trả. Chưa quyết định khoản chiết khấu đi vào lợi nhuận thế nào. NFR-COST-002: cost món lệch ≤ 1 đ; cost % ngày lệch ≤ 0,01 điểm phần trăm. BO-01 (cost ≤ 52 % doanh thu) và BO-02 (≤ 3 điểm phần trăm) là mục tiêu kinh doanh, không là dung sai đối chiếu E13. FR-MENU-RCP-007 vẫn chặn O-02; FEAT-046/047/063 vẫn chỉ gate O-03.</p>
 </section><section id="doc-review-handoff-md" hidden><p><a href="review/handoff.md">Mở Markdown nguồn</a> · review/handoff.md</p><h1>Bàn giao gói BA nháp E13</h1>
@@ -582,16 +582,16 @@
 </tr>
 </tbody></table></div>
 <blockquote>
-<p>Chờ E13-Q12 — XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-11</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E13-Q12: XC-11. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-11</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <blockquote>
-<p>Chờ E13-Q09 — XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-09</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E13-Q09: XC-09. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-09</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <blockquote>
-<p>Chờ E13-Q10, O-06 — XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-07</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E13-Q10, O-06: XC-07. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-07</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <blockquote>
-<p>Chờ E13-Q08 — XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
+<p>Chờ E13-Q08: XC-02. Phần phụ thuộc BLOCKED; giữ nguyên các nhánh chưa có quyết định. Căn cứ: <a href="../gia-phat/review/decision-pack/cross-epic-consistency.md">XC-02</a> và câu nguồn được dẫn; không coi đề xuất là xác nhận.</p>
 </blockquote>
 <p>Giữ nguyên các câu đang chờ: E6 CG01–14, ORD-Q01–15, E6-EVID-001/002; E7 Q-13, E7-Q01–08; E8-Q01–12; E9-Q01–14; E10-Q01–15; E11-Q01–15; E12-Q01–18; O-01–O-06; CK-Q01–10, DATA-COST-Q01–06; AIO-Q01–06, NUTR-Q01–04; DL-01; E1-Q01–05. Không hỏi lại, tự trả lời hoặc đặc tả tiếp phần producer phụ thuộc các câu này.</p>
 </section><section id="doc-srs-data-dictionary-md" hidden><p><a href="srs/data-dictionary.md">Mở Markdown nguồn</a> · srs/data-dictionary.md</p><h1>Từ điển dữ liệu đề xuất E13</h1>
@@ -646,18 +646,18 @@
 <td align="left">from date / to date</td>
 <td align="left">from_date / to_date</td>
 <td align="left">DATE</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Biên ngày chờ Q02</td>
 </tr>
 <tr>
 <td align="left">status</td>
 <td align="left">status</td>
 <td align="left">ENUM</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">OPEN / LOCKED</td>
 </tr>
 <tr>
@@ -707,7 +707,7 @@
 <td align="left">DECIMAL</td>
 <td align="left">Chờ Q09</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Tiền có đơn vị và căn cứ; không float</td>
 </tr>
 <tr>
@@ -764,7 +764,7 @@
 <td align="left">kitchen ref / work date</td>
 <td align="left">kitchen_ref / work_date</td>
 <td align="left">BIGINT UNSIGNED / DATE</td>
-<td align="left">20 chữ số / —</td>
+<td align="left">20 chữ số / Không áp dụng</td>
 <td align="left">Không</td>
 <td align="left">FK kitchens</td>
 <td align="left">Theo cơ sở/ca</td>
@@ -775,7 +775,7 @@
 <td align="left">DECIMAL</td>
 <td align="left">Chờ Q03</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Null khi thiếu; 0 chỉ khi có xác nhận 0 giờ</td>
 </tr>
 <tr>
@@ -784,7 +784,7 @@
 <td align="left">STRING / ENUM</td>
 <td align="left">Chờ Q03</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">DRAFT / SUBMITTED / CONFIRMED / RETURNED</td>
 </tr>
 </tbody></table></div>
@@ -825,7 +825,7 @@
 <td align="left">DECIMAL</td>
 <td align="left">Chờ Q09</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Null nếu thiếu nguồn; dữ liệu nhạy cảm</td>
 </tr>
 </tbody></table></div>
@@ -846,7 +846,7 @@
 <td align="left">method ref / revision</td>
 <td align="left">method_ref / revision</td>
 <td align="left">BIGINT UNSIGNED / INTEGER</td>
-<td align="left">20 chữ số / —</td>
+<td align="left">20 chữ số / Không áp dụng</td>
 <td align="left">Không</td>
 <td align="left">Unique cặp</td>
 <td align="left">Phiên bản bất biến sau duyệt</td>
@@ -857,7 +857,7 @@
 <td align="left">JSON</td>
 <td align="left">Chờ Q05</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Dữ liệu mô tả; không có default hoặc code thực thi</td>
 </tr>
 <tr>
@@ -866,16 +866,16 @@
 <td align="left">JSON</td>
 <td align="left">Chờ Q05</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Cơ sở/kỳ; không tự xử lý chồng hiệu lực</td>
 </tr>
 <tr>
 <td align="left">status</td>
 <td align="left">status</td>
 <td align="left">ENUM</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">DRAFT / SUBMITTED / APPROVED / RETURNED</td>
 </tr>
 <tr>
@@ -923,9 +923,9 @@
 <td align="left">status / blocked reasons</td>
 <td align="left">status / blocked_reasons</td>
 <td align="left">ENUM / JSON</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">DRAFT / BLOCKED / READY / RECONCILED</td>
 </tr>
 <tr>
@@ -943,7 +943,7 @@
 <td align="left">JSON / DECIMAL</td>
 <td align="left">Chờ Q09</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Null nếu BLOCKED; tách từng cơ sở/khách; không gộp thiếu nguồn</td>
 </tr>
 </tbody></table></div>
@@ -984,24 +984,24 @@
 <td align="left">STRING / BIGINT UNSIGNED</td>
 <td align="left">Chờ Q10</td>
 <td align="left">Có</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Bắt buộc đủ trước POSTED</td>
 </tr>
 <tr>
 <td align="left">status</td>
 <td align="left">status</td>
 <td align="left">ENUM</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">Không</td>
-<td align="left">—</td>
+<td align="left">Không áp dụng</td>
 <td align="left">PENDING / REJECTED / POSTED</td>
 </tr>
 </tbody></table></div>
 <p>Danh mục loại chi phí có version/effectiveRange/decisionRef đề xuất kèm Q01, chưa điền loại thực tế. Manifest nguồn tối thiểu gồm producer, sourceRef, revision/hash, kitchenRef, periodRange, customerRef nếu có, kind (dự toán/thực mua/doanh thu đối soát), completeness và capturedAt. Không dùng estimate thay actual.</p>
-<h2>Quy ước tài liệu liên epic — XC-04</h2>
+<h2>Quy ước tài liệu liên epic (XC-04)</h2>
 <p><a href="../gia-phat/review/decision-pack/followup-2026-11-13/conventions.md">Quy ước tham chiếu và phiên bản</a> phân biệt kiểu lưu trữ, token khi sửa và revision nguồn. Đây là đề xuất cách mô tả, không thay contract.</p>
 <blockquote>
-<p>Chờ E13-Q12 — XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
+<p>Chờ E13-Q12: XC-04. Mapping tên/kiểu wire của từng producer và consumer còn BLOCKED; không ép token opaque thành số hoặc tự lấy bản mới nhất. Căn cứ chi tiết nằm trong quy ước được dẫn ở trên.</p>
 </blockquote>
 </section><section id="doc-srs-error-matrix-md" hidden><p><a href="srs/error-matrix.md">Mở Markdown nguồn</a> · srs/error-matrix.md</p><h1>Ma trận lỗi EXP</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
@@ -1134,7 +1134,7 @@
 </tr>
 </tbody></table></div>
 <p>401/403/404/503 dùng chung mọi endpoint theo điều kiện. 409 dùng thao tác ghi/version. 422 không chuyển dữ liệu thiếu thành 0. Mapping HTTP là đề xuất chờ E13-Q12.</p>
-</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>Đặc tả E13 — EXP</h1>
+</section><section id="doc-srs-spec-md" hidden><p><a href="srs/spec.md">Mở Markdown nguồn</a> · srs/spec.md</p><h1>Đặc tả E13 (EXP)</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -1172,7 +1172,7 @@
 </thead>
 <tbody><tr>
 <td align="left">FR-EXP-PER-001 / FEAT-088</td>
-<td align="left">Quản lý và khóa kỳ chi phí — PER-07</td>
+<td align="left">Quản lý và khóa kỳ chi phí (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">periodRef, kitchenRef, fromDate, toDate, version, lockDecisionRef</td>
 <td align="left">Kiểm scope, nguồn và quyết định khóa; kỳ mở cho nhập nháp. Chỉ khóa khi chính sách và quyền đã được duyệt; giữ snapshot bất biến.</td>
@@ -1182,7 +1182,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-COST-001 / FEAT-088</td>
-<td align="left">Ghi chi phí theo cơ sở và loại — PER-07</td>
+<td align="left">Ghi chi phí theo cơ sở và loại (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">periodRef, kitchenRef, typeVersionRef, amount, evidenceRef, sourceKey, customerRef?</td>
 <td align="left">Kiểm kỳ mở, căn cứ khoản tiền và loại. Khoản trực tiếp phải có khách và căn cứ gán trực tiếp; khoản chung giữ pool riêng. Không nhận lại cost E3/E11 như khoản mới.</td>
@@ -1192,7 +1192,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-TIME-001 / FEAT-088</td>
-<td align="left">Ghi giờ công thực tế theo ca — PER-07</td>
+<td align="left">Ghi giờ công thực tế theo ca (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">personRef, kitchenRef, shiftRevisionRef, workDate, hours, attendanceEvidenceRef, version</td>
 <td align="left">Đối chiếu người/cơ sở với tham chiếu E11; phân ca là dự kiến, không sinh giờ thực tế. Lưu giờ nháp cùng bằng chứng; nguồn chấm công và xác nhận chính thức còn chờ.</td>
@@ -1202,7 +1202,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-LAB-001 / FEAT-088</td>
-<td align="left">Tham chiếu chi phí nhân công — PER-07</td>
+<td align="left">Tham chiếu chi phí nhân công (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">attendanceVersionRef, rateVersionRef hoặc payrollAmountRef, evidenceRef</td>
 <td align="left">Chỉ dùng nguồn đơn giá/tiền công và giờ đã xác nhận. Hai cách là lựa chọn phải duyệt, không cộng cả hai. Thiếu giá giữ null; không tính bảo hiểm, thuế TNCN, phụ cấp hoặc lương thực lĩnh.</td>
@@ -1212,7 +1212,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-METH-001 / FEAT-088</td>
-<td align="left">Soạn phiên bản phương pháp phân bổ — PER-07</td>
+<td align="left">Soạn phiên bản phương pháp phân bổ (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">methodRef?, baseVersion?, scope, proposedBasis, effectiveRange, sourceDefinitionRefs, rationale</td>
 <td align="left">Lưu phương án nháp, các driver và căn cứ đề xuất dưới dạng dữ liệu có phiên bản. Không mặc định phương pháp nào; không thực thi biểu thức tùy ý. Nội dung thuật toán chỉ đặc tả sau E13-Q05.</td>
@@ -1222,7 +1222,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-APRV-001 / FEAT-088</td>
-<td align="left">Ghi duyệt phương pháp của Giám đốc — PER-08</td>
+<td align="left">Ghi duyệt phương pháp của Giám đốc (PER-08)</td>
 <td align="left">P2</td>
 <td align="left">methodVersionRef, expectedVersion, expectedHash, decision, evidenceRef, reason</td>
 <td align="left">Kiểm quyền Giám đốc, khác người tạo/sửa cuối theo E1; kiểm đủ nội dung và bằng chứng. Quyết định gắn hash và hiệu lực cụ thể. Không suy ủy quyền từ chức danh; O-06 còn mở.</td>
@@ -1232,7 +1232,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-ALLOC-001 / FEAT-088</td>
-<td align="left">Kiểm cổng và lập lần phân bổ — PER-07</td>
+<td align="left">Kiểm cổng và lập lần phân bổ (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">periodSnapshotRef, methodVersionRef, sourceManifestRef</td>
 <td align="left">Kiểm phương pháp được duyệt đúng scope/hiệu lực và bộ nguồn đầy đủ. Chưa có phương pháp: BLOCKED, chỉ hiển thị chi phí trực tiếp, không tạo kết quả giả. Khi đủ quyết định mới triển khai engine theo hợp đồng được duyệt.</td>
@@ -1242,7 +1242,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-PROF-001 / FEAT-088</td>
-<td align="left">Tra cứu lợi nhuận theo khách — PER-07/PER-08</td>
+<td align="left">Tra cứu lợi nhuận theo khách (PER-07/PER-08)</td>
 <td align="left">P2</td>
 <td align="left">runRef, customerRef, kitchenRef, periodRef</td>
 <td align="left">Đọc snapshot có nguồn E7 đã đối soát và cost E3/E11; không tính lại từ suất giao hay giá hiện hành E10. Thiếu bất kỳ căn cứ công thức/nguồn/phương pháp thì lợi nhuận null; báo cáo chỉ phần trực tiếp được phép.</td>
@@ -1252,7 +1252,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-RECON-001 / FEAT-088</td>
-<td align="left">Đối chiếu lợi nhuận với từng cơ sở — PER-08</td>
+<td align="left">Đối chiếu lợi nhuận với từng cơ sở (PER-08)</td>
 <td align="left">P2</td>
 <td align="left">runRef, facilityResultRef, resultDefinitionVersionRef</td>
 <td align="left">Ghép cùng cơ sở/kỳ, cùng bộ thành phần và revision. Tách kết quả các khách, phần chưa phân bổ, chênh so số chuẩn độc lập. Không cộng khách thiếu như 0; không tự cho phép sai số.</td>
@@ -1262,7 +1262,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-ADJ-001 / FEAT-088</td>
-<td align="left">Lập điều chỉnh sau khóa có phê duyệt — PER-07</td>
+<td align="left">Lập điều chỉnh sau khóa có phê duyệt (PER-07)</td>
 <td align="left">P2</td>
 <td align="left">originalEntryRef, lockedSnapshotRef, adjustmentAmount, reason, evidenceRef, approvalRef</td>
 <td align="left">Giữ nguyên bản gốc. Đề nghị điều chỉnh là dòng riêng, lý do và người duyệt bắt buộc trước ghi nhận. Người duyệt/quy tắc kỳ đích chờ Q10; không tự chọn hoặc mở khóa E7.</td>
@@ -1272,7 +1272,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-SAFE-001 / FEAT-088</td>
-<td align="left">Bảo vệ lương và đầu ra nội bộ — PER-07/PER-08</td>
+<td align="left">Bảo vệ lương và đầu ra nội bộ (PER-07/PER-08)</td>
 <td align="left">P2</td>
 <td align="left">runRef, actorScope, purpose, projection</td>
 <td align="left">Kiểm quyền hiện tại ở server và truy cập nguồn; chỉ PER-07/PER-08 có quyền chi tiết lương theo scope. Báo cáo theo khách nội bộ chỉ tổng hợp nhân công, không người/giờ/đơn giá. Tài liệu gửi khách tuyệt đối không có lợi nhuận/biên lợi nhuận/cost/lương.</td>
@@ -1282,7 +1282,7 @@
 </tr>
 <tr>
 <td align="left">FR-EXP-SRC-001 / FEAT-088</td>
-<td align="left">Kiểm nguồn và truy nguyên lần báo cáo — PER-07/PER-08</td>
+<td align="left">Kiểm nguồn và truy nguyên lần báo cáo (PER-07/PER-08)</td>
 <td align="left">P2</td>
 <td align="left">runRef, sourceManifestRef, expectedVersions</td>
 <td align="left">Hiện nguồn E3/E7/E10/E11, định nghĩa chỉ số, thời điểm chụp, phạm vi, phiên bản và thiếu nguồn. Nguồn đổi tạo lần mới; không hồi tố sửa lần cũ. Đầu nối E12 chỉ ranh giới đọc, chưa triển khai adapter.</td>
@@ -2635,42 +2635,42 @@
 <td align="left">Kỳ chi phí</td>
 <td align="left">FR-EXP-PER-001</td>
 <td align="left">Cơ sở synthetic A · Kỳ thử K-A; Chọn phạm vi kỳ; không mặc định lịch khóa.; Kỳ tham chiếu</td>
-<td align="left">OPEN — chính sách khóa chờ E13-Q02</td>
+<td align="left">OPEN (chính sách khóa chờ E13-Q02)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-02</td>
 <td align="left">Chi phí cơ sở</td>
 <td align="left">FR-EXP-COST-001</td>
 <td align="left">Khoản trực tiếp synthetic: 120.000 đ; Khoản trực tiếp gắn khách A; chi phí chung để pool riêng. Không nhập lại nguồn nguyên liệu.; Chứng từ tham chiếu</td>
-<td align="left">DRAFT — danh mục loại chi phí chờ E13-Q01</td>
+<td align="left">DRAFT (danh mục loại chi phí chờ E13-Q01)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-03</td>
 <td align="left">Chấm công và nhân công</td>
 <td align="left">FR-EXP-TIME-001, FR-EXP-LAB-001</td>
 <td align="left">Người synthetic P-A · Ca tham chiếu E11; Phân ca không chứng minh đã làm. Nguồn đơn giá hoặc bảng lương chờ duyệt; chỉ PER-07/PER-08 có quyền chi tiết.; Nguồn chấm công</td>
-<td align="left">DRAFT — chưa có giờ thực tế được xác nhận</td>
+<td align="left">DRAFT (chưa có giờ thực tế được xác nhận)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-04</td>
 <td align="left">Phiên bản phương pháp</td>
 <td align="left">FR-EXP-METH-001, FR-EXP-APRV-001</td>
 <td align="left">Phiên bản nháp synthetic M-A; Không chọn sẵn phân bổ theo suất, doanh thu, giờ công hay diện tích. Người duyệt khác người lập/sửa cuối.; Căn cứ đề xuất</td>
-<td align="left">DRAFT — chưa có bản được Giám đốc duyệt</td>
+<td align="left">DRAFT (chưa có bản được Giám đốc duyệt)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-05</td>
 <td align="left">Nguồn và cổng phân bổ</td>
 <td align="left">FR-EXP-ALLOC-001, FR-EXP-SRC-001</td>
 <td align="left">Manifest synthetic · E3 / E7 / E10 / E11; Doanh thu từ E7 đã đối soát; không lấy số suất giao nhân giá. Thiếu nguồn không bằng 0.; Nguồn cần review</td>
-<td align="left">BLOCKED — thiếu phương pháp đã duyệt</td>
+<td align="left">BLOCKED (thiếu phương pháp đã duyệt)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-06</td>
 <td align="left">Lợi nhuận theo khách</td>
 <td align="left">FR-EXP-PROF-001, FR-EXP-SAFE-001</td>
 <td align="left">Khách synthetic A · Cơ sở A; Chi phí trực tiếp synthetic: 120.000 đ. Lợi nhuận và biên lợi nhuận: chưa xác định. Nhân công trong báo cáo này chỉ tổng hợp. Không gửi tài liệu E13 cho khách.; Ghi chú review</td>
-<td align="left">BLOCKED — chỉ xem chi phí trực tiếp</td>
+<td align="left">BLOCKED (chỉ xem chi phí trực tiếp)</td>
 </tr>
 <tr>
 <td align="left">UI-EXP-07</td>
@@ -2684,7 +2684,7 @@
 <td align="left">Điều chỉnh sau khóa</td>
 <td align="left">FR-EXP-ADJ-001</td>
 <td align="left">Kỳ synthetic K-A đã khóa; Bút toán đề nghị riêng; lý do và người duyệt bắt buộc. Bản gốc và nguồn E7 không thay đổi.; Lý do điều chỉnh</td>
-<td align="left">PENDING — quyền duyệt và kỳ đích chờ E13-Q10</td>
+<td align="left">PENDING (quyền duyệt và kỳ đích chờ E13-Q10)</td>
 </tr>
 </tbody></table></div>
 <p>Tám màn là workspace nội bộ, không có màn dành cho khách. Mỗi màn có Normal/Loading/Empty/Error/Offline/Blocked, kiểm trường trống và hộp review. Màn 07 có ví dụ số học tách rõ khỏi báo cáo hiện hành. Không có nút giả duyệt phương pháp hoặc giả hoàn tất R13.</p>
@@ -2845,7 +2845,7 @@
 <td align="left">PER-07/PER-08</td>
 </tr>
 </tbody></table></div>
-</section><section id="doc-usecases-UC-EXP-001-md" hidden><p><a href="usecases/UC-EXP-001.md">Mở Markdown nguồn</a> · usecases/UC-EXP-001.md</p><h1>UC-EXP-001 — Quản lý và khóa kỳ chi phí</h1>
+</section><section id="doc-usecases-UC-EXP-001-md" hidden><p><a href="usecases/UC-EXP-001.md">Mở Markdown nguồn</a> · usecases/UC-EXP-001.md</p><h1>UC-EXP-001: Quản lý và khóa kỳ chi phí</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -2890,13 +2890,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: kỳ đã LOCKED; khi gửi sửa trực tiếp kỳ thì ERR-EXP-409-01; không đổi byte dữ liệu gốc.</li>
-<li><strong>4d — biên</strong>: hai thao tác cùng version cũ; khi gửi khóa đồng thời với ghi chi phí thì chỉ một version hợp lệ; thao tác còn lại ERR-EXP-409-02.</li>
+<li><strong>4c. Đặc thù</strong>: kỳ đã LOCKED; khi gửi sửa trực tiếp kỳ thì ERR-EXP-409-01; không đổi byte dữ liệu gốc.</li>
+<li><strong>4d. Biên</strong>: hai thao tác cùng version cũ; khi gửi khóa đồng thời với ghi chi phí thì chỉ một version hợp lệ; thao tác còn lại ERR-EXP-409-02.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-001; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-001; AC-EXP-001-1, AC-EXP-001-2, AC-EXP-001-3; TC-EXP-001-1, TC-EXP-001-2, TC-EXP-001-3; API-EXP-001.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-002-md" hidden><p><a href="usecases/UC-EXP-002.md">Mở Markdown nguồn</a> · usecases/UC-EXP-002.md</p><h1>UC-EXP-002 — Ghi chi phí theo cơ sở và loại</h1>
+</section><section id="doc-usecases-UC-EXP-002-md" hidden><p><a href="usecases/UC-EXP-002.md">Mở Markdown nguồn</a> · usecases/UC-EXP-002.md</p><h1>UC-EXP-002: Ghi chi phí theo cơ sở và loại</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -2941,13 +2941,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: dòng chi phí thiếu chứng từ hoặc loại; khi gửi lưu thì ERR-EXP-422-01 và chỉ ra trường thiếu; không ghi dòng.</li>
-<li><strong>4d — biên</strong>: sourceKey đã nằm trong cost E3/E11 của cùng kỳ; khi nhập lại khoản đó thì ERR-EXP-409-03; không cộng hai lần.</li>
+<li><strong>4c. Đặc thù</strong>: dòng chi phí thiếu chứng từ hoặc loại; khi gửi lưu thì ERR-EXP-422-01 và chỉ ra trường thiếu; không ghi dòng.</li>
+<li><strong>4d. Biên</strong>: sourceKey đã nằm trong cost E3/E11 của cùng kỳ; khi nhập lại khoản đó thì ERR-EXP-409-03; không cộng hai lần.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-002; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-002; AC-EXP-002-1, AC-EXP-002-2, AC-EXP-002-3; TC-EXP-002-1, TC-EXP-002-2, TC-EXP-002-3; API-EXP-002.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-003-md" hidden><p><a href="usecases/UC-EXP-003.md">Mở Markdown nguồn</a> · usecases/UC-EXP-003.md</p><h1>UC-EXP-003 — Ghi giờ công thực tế theo ca</h1>
+</section><section id="doc-usecases-UC-EXP-003-md" hidden><p><a href="usecases/UC-EXP-003.md">Mở Markdown nguồn</a> · usecases/UC-EXP-003.md</p><h1>UC-EXP-003: Ghi giờ công thực tế theo ca</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -2992,13 +2992,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: chỉ có phân ca E11, không có giờ thực tế; khi yêu cầu xác nhận chấm công thì ERR-EXP-422-02; không suy đã làm đủ giờ.</li>
-<li><strong>4d — biên</strong>: một người có hai dòng cùng nguồn ca; khi gửi lại dòng chấm công thì không cộng đôi giờ; conflict hoặc receipt theo contract được duyệt.</li>
+<li><strong>4c. Đặc thù</strong>: chỉ có phân ca E11, không có giờ thực tế; khi yêu cầu xác nhận chấm công thì ERR-EXP-422-02; không suy đã làm đủ giờ.</li>
+<li><strong>4d. Biên</strong>: một người có hai dòng cùng nguồn ca; khi gửi lại dòng chấm công thì không cộng đôi giờ; conflict hoặc receipt theo contract được duyệt.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-003; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-003; AC-EXP-003-1, AC-EXP-003-2, AC-EXP-003-3; TC-EXP-003-1, TC-EXP-003-2, TC-EXP-003-3; API-EXP-003.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-004-md" hidden><p><a href="usecases/UC-EXP-004.md">Mở Markdown nguồn</a> · usecases/UC-EXP-004.md</p><h1>UC-EXP-004 — Tham chiếu chi phí nhân công</h1>
+</section><section id="doc-usecases-UC-EXP-004-md" hidden><p><a href="usecases/UC-EXP-004.md">Mở Markdown nguồn</a> · usecases/UC-EXP-004.md</p><h1>UC-EXP-004: Tham chiếu chi phí nhân công</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3043,13 +3043,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: có giờ công nhưng chưa có đơn giá hay nguồn tiền công; khi yêu cầu tính chi phí thì ERR-EXP-422-02; amount null, không mặc định 0.</li>
-<li><strong>4d — biên</strong>: đơn giá nguồn thay phiên bản sau kỳ khóa; khi đọc báo cáo cũ thì giữ phiên bản đã chụp; thay đổi chỉ qua điều chỉnh.</li>
+<li><strong>4c. Đặc thù</strong>: có giờ công nhưng chưa có đơn giá hay nguồn tiền công; khi yêu cầu tính chi phí thì ERR-EXP-422-02; amount null, không mặc định 0.</li>
+<li><strong>4d. Biên</strong>: đơn giá nguồn thay phiên bản sau kỳ khóa; khi đọc báo cáo cũ thì giữ phiên bản đã chụp; thay đổi chỉ qua điều chỉnh.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-004; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-004; AC-EXP-004-1, AC-EXP-004-2, AC-EXP-004-3; TC-EXP-004-1, TC-EXP-004-2, TC-EXP-004-3; API-EXP-004.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-005-md" hidden><p><a href="usecases/UC-EXP-005.md">Mở Markdown nguồn</a> · usecases/UC-EXP-005.md</p><h1>UC-EXP-005 — Soạn phiên bản phương pháp phân bổ</h1>
+</section><section id="doc-usecases-UC-EXP-005-md" hidden><p><a href="usecases/UC-EXP-005.md">Mở Markdown nguồn</a> · usecases/UC-EXP-005.md</p><h1>UC-EXP-005: Soạn phiên bản phương pháp phân bổ</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3094,13 +3094,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: bản phương pháp đã APPROVED; khi sửa nội dung trên cùng version thì ERR-EXP-409-01; cần phiên bản mới.</li>
-<li><strong>4d — biên</strong>: chưa chọn phương pháp nào; khi mở form mới thì không có driver mặc định, không tính tỷ trọng hoặc lợi nhuận.</li>
+<li><strong>4c. Đặc thù</strong>: bản phương pháp đã APPROVED; khi sửa nội dung trên cùng version thì ERR-EXP-409-01; cần phiên bản mới.</li>
+<li><strong>4d. Biên</strong>: chưa chọn phương pháp nào; khi mở form mới thì không có driver mặc định, không tính tỷ trọng hoặc lợi nhuận.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-005; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-005; AC-EXP-005-1, AC-EXP-005-2, AC-EXP-005-3; TC-EXP-005-1, TC-EXP-005-2, TC-EXP-005-3; API-EXP-005.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-006-md" hidden><p><a href="usecases/UC-EXP-006.md">Mở Markdown nguồn</a> · usecases/UC-EXP-006.md</p><h1>UC-EXP-006 — Ghi duyệt phương pháp của Giám đốc</h1>
+</section><section id="doc-usecases-UC-EXP-006-md" hidden><p><a href="usecases/UC-EXP-006.md">Mở Markdown nguồn</a> · usecases/UC-EXP-006.md</p><h1>UC-EXP-006: Ghi duyệt phương pháp của Giám đốc</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3145,13 +3145,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: người duyệt cũng là người lập/sửa cuối; khi gửi chấp thuận thì ERR-EXP-403-01; không có quyết định hiệu lực.</li>
-<li><strong>4d — biên</strong>: hash nội dung thay đổi từ lúc mở màn duyệt; khi gửi duyệt hash cũ thì ERR-EXP-409-02; yêu cầu đọc lại, không duyệt nhầm bản.</li>
+<li><strong>4c. Đặc thù</strong>: người duyệt cũng là người lập/sửa cuối; khi gửi chấp thuận thì ERR-EXP-403-01; không có quyết định hiệu lực.</li>
+<li><strong>4d. Biên</strong>: hash nội dung thay đổi từ lúc mở màn duyệt; khi gửi duyệt hash cũ thì ERR-EXP-409-02; yêu cầu đọc lại, không duyệt nhầm bản.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-006; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-006; AC-EXP-006-1, AC-EXP-006-2, AC-EXP-006-3; TC-EXP-006-1, TC-EXP-006-2, TC-EXP-006-3; API-EXP-006.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-007-md" hidden><p><a href="usecases/UC-EXP-007.md">Mở Markdown nguồn</a> · usecases/UC-EXP-007.md</p><h1>UC-EXP-007 — Kiểm cổng và lập lần phân bổ</h1>
+</section><section id="doc-usecases-UC-EXP-007-md" hidden><p><a href="usecases/UC-EXP-007.md">Mở Markdown nguồn</a> · usecases/UC-EXP-007.md</p><h1>UC-EXP-007: Kiểm cổng và lập lần phân bổ</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3196,13 +3196,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: không có phương pháp APPROVED; khi yêu cầu lợi nhuận theo khách thì ERR-EXP-422-03 và BLOCKED; chỉ xem chi phí trực tiếp.</li>
-<li><strong>4d — biên</strong>: driver thiếu hoặc tổng driver bằng 0; khi yêu cầu phân bổ thì không chia 0, không dồn cho khách bất kỳ; giữ khoản chưa phân bổ và lý do.</li>
+<li><strong>4c. Đặc thù</strong>: không có phương pháp APPROVED; khi yêu cầu lợi nhuận theo khách thì ERR-EXP-422-03 và BLOCKED; chỉ xem chi phí trực tiếp.</li>
+<li><strong>4d. Biên</strong>: driver thiếu hoặc tổng driver bằng 0; khi yêu cầu phân bổ thì không chia 0, không dồn cho khách bất kỳ; giữ khoản chưa phân bổ và lý do.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-007; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-007; AC-EXP-007-1, AC-EXP-007-2, AC-EXP-007-3; TC-EXP-007-1, TC-EXP-007-2, TC-EXP-007-3; API-EXP-007.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-008-md" hidden><p><a href="usecases/UC-EXP-008.md">Mở Markdown nguồn</a> · usecases/UC-EXP-008.md</p><h1>UC-EXP-008 — Tra cứu lợi nhuận theo khách</h1>
+</section><section id="doc-usecases-UC-EXP-008-md" hidden><p><a href="usecases/UC-EXP-008.md">Mở Markdown nguồn</a> · usecases/UC-EXP-008.md</p><h1>UC-EXP-008: Tra cứu lợi nhuận theo khách</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3247,13 +3247,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: doanh thu chưa đối soát hoặc không có căn cứ thành phần lợi nhuận; khi mở báo cáo khách thì ERR-EXP-422-02; BLOCKED, không gọi chênh thu trừ nguyên liệu là lợi nhuận.</li>
-<li><strong>4d — biên</strong>: khách có nguồn ở hai cơ sở; khi lọc theo từng cơ sở rồi tổng khách thì không trộn khóa; không cộng nguồn trùng; chỉ tổng khi từng phần đủ căn cứ.</li>
+<li><strong>4c. Đặc thù</strong>: doanh thu chưa đối soát hoặc không có căn cứ thành phần lợi nhuận; khi mở báo cáo khách thì ERR-EXP-422-02; BLOCKED, không gọi chênh thu trừ nguyên liệu là lợi nhuận.</li>
+<li><strong>4d. Biên</strong>: khách có nguồn ở hai cơ sở; khi lọc theo từng cơ sở rồi tổng khách thì không trộn khóa; không cộng nguồn trùng; chỉ tổng khi từng phần đủ căn cứ.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-008; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-008; AC-EXP-008-1, AC-EXP-008-2, AC-EXP-008-3; TC-EXP-008-1, TC-EXP-008-2, TC-EXP-008-3; API-EXP-008.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-009-md" hidden><p><a href="usecases/UC-EXP-009.md">Mở Markdown nguồn</a> · usecases/UC-EXP-009.md</p><h1>UC-EXP-009 — Đối chiếu lợi nhuận với từng cơ sở</h1>
+</section><section id="doc-usecases-UC-EXP-009-md" hidden><p><a href="usecases/UC-EXP-009.md">Mở Markdown nguồn</a> · usecases/UC-EXP-009.md</p><h1>UC-EXP-009: Đối chiếu lợi nhuận với từng cơ sở</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3298,13 +3298,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: cơ sở 200, tổng khách 250, chưa phân bổ có tác động -50; khi mở đối chiếu thì hiện cầu nối 250 - 50 = 200, nhưng R13 vẫn chưa đạt vì khách chưa phân bổ hết.</li>
-<li><strong>4d — biên</strong>: cơ sở 200, tổng khách 250, phần chưa phân bổ -40; khi mở đối chiếu thì delta -10 hiện rõ; không giấu 10 vào khách cuối, không dùng dung sai Cost.</li>
+<li><strong>4c. Đặc thù</strong>: cơ sở 200, tổng khách 250, chưa phân bổ có tác động -50; khi mở đối chiếu thì hiện cầu nối 250 - 50 = 200, nhưng R13 vẫn chưa đạt vì khách chưa phân bổ hết.</li>
+<li><strong>4d. Biên</strong>: cơ sở 200, tổng khách 250, phần chưa phân bổ -40; khi mở đối chiếu thì delta -10 hiện rõ; không giấu 10 vào khách cuối, không dùng dung sai Cost.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-009; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-009; AC-EXP-009-1, AC-EXP-009-2, AC-EXP-009-3; TC-EXP-009-1, TC-EXP-009-2, TC-EXP-009-3; API-EXP-009.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-010-md" hidden><p><a href="usecases/UC-EXP-010.md">Mở Markdown nguồn</a> · usecases/UC-EXP-010.md</p><h1>UC-EXP-010 — Lập điều chỉnh sau khóa có phê duyệt</h1>
+</section><section id="doc-usecases-UC-EXP-010-md" hidden><p><a href="usecases/UC-EXP-010.md">Mở Markdown nguồn</a> · usecases/UC-EXP-010.md</p><h1>UC-EXP-010: Lập điều chỉnh sau khóa có phê duyệt</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3349,13 +3349,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: đề nghị không có lý do hoặc người duyệt hợp lệ; khi yêu cầu ghi nhận điều chỉnh thì ERR-EXP-422-04; kỳ và số liệu gốc không đổi.</li>
-<li><strong>4d — biên</strong>: đề nghị đã được ghi nhận; khi gửi lại cùng khóa nghiệp vụ thì không ghi bút toán lần hai; trả receipt hoặc conflict theo contract đã duyệt.</li>
+<li><strong>4c. Đặc thù</strong>: đề nghị không có lý do hoặc người duyệt hợp lệ; khi yêu cầu ghi nhận điều chỉnh thì ERR-EXP-422-04; kỳ và số liệu gốc không đổi.</li>
+<li><strong>4d. Biên</strong>: đề nghị đã được ghi nhận; khi gửi lại cùng khóa nghiệp vụ thì không ghi bút toán lần hai; trả receipt hoặc conflict theo contract đã duyệt.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-010; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-010; AC-EXP-010-1, AC-EXP-010-2, AC-EXP-010-3; TC-EXP-010-1, TC-EXP-010-2, TC-EXP-010-3; API-EXP-010.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-011-md" hidden><p><a href="usecases/UC-EXP-011.md">Mở Markdown nguồn</a> · usecases/UC-EXP-011.md</p><h1>UC-EXP-011 — Bảo vệ lương và đầu ra nội bộ</h1>
+</section><section id="doc-usecases-UC-EXP-011-md" hidden><p><a href="usecases/UC-EXP-011.md">Mở Markdown nguồn</a> · usecases/UC-EXP-011.md</p><h1>UC-EXP-011: Bảo vệ lương và đầu ra nội bộ</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3400,13 +3400,13 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: người ngoài PER-07/PER-08 hoặc phiên phía khách; khi truy cập chi tiết công/lương/lợi nhuận hoặc xuất thì ERR-EXP-403-01; không lộ qua payload, lỗi, log, cache, file hoặc metadata.</li>
-<li><strong>4d — biên</strong>: người vừa bị thu hồi quyền nhưng có runRef đã biết; khi đọc lại hoặc yêu cầu bản xuất thì từ chối theo quyền hiện tại; không dùng cache quyền cũ.</li>
+<li><strong>4c. Đặc thù</strong>: người ngoài PER-07/PER-08 hoặc phiên phía khách; khi truy cập chi tiết công/lương/lợi nhuận hoặc xuất thì ERR-EXP-403-01; không lộ qua payload, lỗi, log, cache, file hoặc metadata.</li>
+<li><strong>4d. Biên</strong>: người vừa bị thu hồi quyền nhưng có runRef đã biết; khi đọc lại hoặc yêu cầu bản xuất thì từ chối theo quyền hiện tại; không dùng cache quyền cũ.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-011; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-011; AC-EXP-011-1, AC-EXP-011-2, AC-EXP-011-3; TC-EXP-011-1, TC-EXP-011-2, TC-EXP-011-3; API-EXP-011.</p>
 <p><a href="#doc-test-traceability-md">RTM</a> · <a href="#doc-srs-spec-md">SRS</a> · <a href="#doc-review-questions-md">Câu hỏi</a>.</p>
-</section><section id="doc-usecases-UC-EXP-012-md" hidden><p><a href="usecases/UC-EXP-012.md">Mở Markdown nguồn</a> · usecases/UC-EXP-012.md</p><h1>UC-EXP-012 — Kiểm nguồn và truy nguyên lần báo cáo</h1>
+</section><section id="doc-usecases-UC-EXP-012-md" hidden><p><a href="usecases/UC-EXP-012.md">Mở Markdown nguồn</a> · usecases/UC-EXP-012.md</p><h1>UC-EXP-012: Kiểm nguồn và truy nguyên lần báo cáo</h1>
 <p>Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -3451,8 +3451,8 @@
 <li><strong>3c</strong>: Không tìm thấy tham chiếu trong scope → ERR-EXP-404-01; không tiết lộ dữ liệu ngoài quyền.</li>
 <li><strong>4a</strong>: Nguồn hoặc version thay đổi → ERR-EXP-409-02; đọc lại, không tự retry ghi.</li>
 <li><strong>4b</strong>: Nguồn tạm lỗi → ERR-EXP-503-01; giữ lịch sử, không ghi thành công giả.</li>
-<li><strong>4c — đặc thù</strong>: thiếu một nguồn trong manifest cần thiết; khi yêu cầu đánh dấu đủ dữ liệu thì ERR-EXP-422-02; nguồn thiếu không có giá trị 0 thay thế.</li>
-<li><strong>4d — biên</strong>: nguồn E7 có revision mới sau lần chạy; khi đọc lần chạy cũ và đề nghị làm mới thì bản cũ bất biến; lần mới phải kiểm lại gate và có id khác.</li>
+<li><strong>4c. Đặc thù</strong>: thiếu một nguồn trong manifest cần thiết; khi yêu cầu đánh dấu đủ dữ liệu thì ERR-EXP-422-02; nguồn thiếu không có giá trị 0 thay thế.</li>
+<li><strong>4d. Biên</strong>: nguồn E7 có revision mới sau lần chạy; khi đọc lần chạy cũ và đề nghị làm mới thì bản cũ bất biến; lần mới phải kiểm lại gate và có id khác.</li>
 </ul>
 <h2>Quy tắc và truy vết</h2>
 <p>BR-EXP-012; quyền nền BR-SEC-008 áp dụng khi duyệt. US-EXP-012; AC-EXP-012-1, AC-EXP-012-2, AC-EXP-012-3; TC-EXP-012-1, TC-EXP-012-2, TC-EXP-012-3; API-EXP-012.</p>
@@ -3475,254 +3475,254 @@
 <td align="left">Mở tài liệu FEAT-088; giữ các quyết định còn chờ</td>
 </tr>
 </tbody></table></div>
-<h2>AC-EXP-001-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-001-1: Luồng kỳ vọng</h2>
 <p>US-EXP-001 · FR-EXP-PER-001 · UC-EXP-001 · TC-EXP-001-1 · BLOCKED; E13-Q02.</p>
-<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí — 1
+<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí (trường hợp 1)
   Given kỳ mở có bộ nguồn và quyết định khóa hợp lệ
   When gửi yêu cầu khóa
   Then kỳ LOCKED, snapshot và audit giữ nguyên nguồn
 </code></pre>
-<h2>AC-EXP-001-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-001-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-001 · FR-EXP-PER-001 · UC-EXP-001 · TC-EXP-001-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí — 2
+<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí (trường hợp 2)
   Given kỳ đã LOCKED
   When gửi sửa trực tiếp kỳ
   Then ERR-EXP-409-01; không đổi byte dữ liệu gốc
 </code></pre>
-<h2>AC-EXP-001-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-001-3: Biên và bảo toàn</h2>
 <p>US-EXP-001 · FR-EXP-PER-001 · UC-EXP-001 · TC-EXP-001-3 · BLOCKED; E13-Q02.</p>
-<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí — 3
+<pre><code class="language-gherkin">Scenario: Quản lý và khóa kỳ chi phí (trường hợp 3)
   Given hai thao tác cùng version cũ
   When gửi khóa đồng thời với ghi chi phí
   Then chỉ một version hợp lệ; thao tác còn lại ERR-EXP-409-02
 </code></pre>
-<h2>AC-EXP-002-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-002-1: Luồng kỳ vọng</h2>
 <p>US-EXP-002 · FR-EXP-COST-001 · UC-EXP-002 · TC-EXP-002-1 · BLOCKED; E13-Q01.</p>
-<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại — 1
+<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại (trường hợp 1)
   Given kỳ mở, loại được duyệt, chứng từ synthetic 120000 đ
   When ghi khoản trực tiếp cho khách A tại cơ sở A
   Then dòng nháp giữ 120000 đ, khách/cơ sở/nguồn; không phân bổ lại
 </code></pre>
-<h2>AC-EXP-002-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-002-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-002 · FR-EXP-COST-001 · UC-EXP-002 · TC-EXP-002-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại — 2
+<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại (trường hợp 2)
   Given dòng chi phí thiếu chứng từ hoặc loại
   When gửi lưu
   Then ERR-EXP-422-01 và chỉ ra trường thiếu; không ghi dòng
 </code></pre>
-<h2>AC-EXP-002-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-002-3: Biên và bảo toàn</h2>
 <p>US-EXP-002 · FR-EXP-COST-001 · UC-EXP-002 · TC-EXP-002-3 · BLOCKED; E13-Q01.</p>
-<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại — 3
+<pre><code class="language-gherkin">Scenario: Ghi chi phí theo cơ sở và loại (trường hợp 3)
   Given sourceKey đã nằm trong cost E3/E11 của cùng kỳ
   When nhập lại khoản đó
   Then ERR-EXP-409-03; không cộng hai lần
 </code></pre>
-<h2>AC-EXP-003-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-003-1: Luồng kỳ vọng</h2>
 <p>US-EXP-003 · FR-EXP-TIME-001 · UC-EXP-003 · TC-EXP-003-1 · BLOCKED; E13-Q03; E11-Q09.</p>
-<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca — 1
+<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca (trường hợp 1)
   Given ca E11 và nguồn giờ 8 giờ có căn cứ được duyệt
   When ghi giờ thực tế của người synthetic P-A
   Then giữ người/cơ sở/ca/revision/bằng chứng, không tạo bảng lương
 </code></pre>
-<h2>AC-EXP-003-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-003-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-003 · FR-EXP-TIME-001 · UC-EXP-003 · TC-EXP-003-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca — 2
+<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca (trường hợp 2)
   Given chỉ có phân ca E11, không có giờ thực tế
   When yêu cầu xác nhận chấm công
   Then ERR-EXP-422-02; không suy đã làm đủ giờ
 </code></pre>
-<h2>AC-EXP-003-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-003-3: Biên và bảo toàn</h2>
 <p>US-EXP-003 · FR-EXP-TIME-001 · UC-EXP-003 · TC-EXP-003-3 · BLOCKED; E13-Q03; E11-Q09.</p>
-<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca — 3
+<pre><code class="language-gherkin">Scenario: Ghi giờ công thực tế theo ca (trường hợp 3)
   Given một người có hai dòng cùng nguồn ca
   When gửi lại dòng chấm công
   Then không cộng đôi giờ; conflict hoặc receipt theo contract được duyệt
 </code></pre>
-<h2>AC-EXP-004-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-004-1: Luồng kỳ vọng</h2>
 <p>US-EXP-004 · FR-EXP-LAB-001 · UC-EXP-004 · TC-EXP-004-1 · BLOCKED; E13-Q03/04.</p>
-<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công — 1
+<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công (trường hợp 1)
   Given nguồn chi phí nhân công đã duyệt và cùng cơ sở/kỳ
   When liên kết nguồn với bảng công
   Then giữ amount và sourceVersion; không sinh bảng lương mới
 </code></pre>
-<h2>AC-EXP-004-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-004-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-004 · FR-EXP-LAB-001 · UC-EXP-004 · TC-EXP-004-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công — 2
+<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công (trường hợp 2)
   Given có giờ công nhưng chưa có đơn giá hay nguồn tiền công
   When yêu cầu tính chi phí
   Then ERR-EXP-422-02; amount null, không mặc định 0
 </code></pre>
-<h2>AC-EXP-004-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-004-3: Biên và bảo toàn</h2>
 <p>US-EXP-004 · FR-EXP-LAB-001 · UC-EXP-004 · TC-EXP-004-3 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công — 3
+<pre><code class="language-gherkin">Scenario: Tham chiếu chi phí nhân công (trường hợp 3)
   Given đơn giá nguồn thay phiên bản sau kỳ khóa
   When đọc báo cáo cũ
   Then giữ phiên bản đã chụp; thay đổi chỉ qua điều chỉnh
 </code></pre>
-<h2>AC-EXP-005-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-005-1: Luồng kỳ vọng</h2>
 <p>US-EXP-005 · FR-EXP-METH-001 · UC-EXP-005 · TC-EXP-005-1 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ — 1
+<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ (trường hợp 1)
   Given kế toán có phương án kèm căn cứ
   When lưu nháp phương pháp
   Then tạo DRAFT và revision; không tự APPROVED
 </code></pre>
-<h2>AC-EXP-005-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-005-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-005 · FR-EXP-METH-001 · UC-EXP-005 · TC-EXP-005-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ — 2
+<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ (trường hợp 2)
   Given bản phương pháp đã APPROVED
   When sửa nội dung trên cùng version
   Then ERR-EXP-409-01; cần phiên bản mới
 </code></pre>
-<h2>AC-EXP-005-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-005-3: Biên và bảo toàn</h2>
 <p>US-EXP-005 · FR-EXP-METH-001 · UC-EXP-005 · TC-EXP-005-3 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ — 3
+<pre><code class="language-gherkin">Scenario: Soạn phiên bản phương pháp phân bổ (trường hợp 3)
   Given chưa chọn phương pháp nào
   When mở form mới
   Then không có driver mặc định, không tính tỷ trọng hoặc lợi nhuận
 </code></pre>
-<h2>AC-EXP-006-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-006-1: Luồng kỳ vọng</h2>
 <p>US-EXP-006 · FR-EXP-APRV-001 · UC-EXP-006 · TC-EXP-006-1 · BLOCKED; E13-Q05; O-06.</p>
-<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc — 1
+<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc (trường hợp 1)
   Given Giám đốc độc lập có bằng chứng duyệt đúng hash
   When ghi chấp thuận phiên bản
   Then APPROVED có người duyệt, thời điểm, evidence và phạm vi; không áp vào báo cáo cũ
 </code></pre>
-<h2>AC-EXP-006-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-006-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-006 · FR-EXP-APRV-001 · UC-EXP-006 · TC-EXP-006-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc — 2
+<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc (trường hợp 2)
   Given người duyệt cũng là người lập/sửa cuối
   When gửi chấp thuận
   Then ERR-EXP-403-01; không có quyết định hiệu lực
 </code></pre>
-<h2>AC-EXP-006-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-006-3: Biên và bảo toàn</h2>
 <p>US-EXP-006 · FR-EXP-APRV-001 · UC-EXP-006 · TC-EXP-006-3 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc — 3
+<pre><code class="language-gherkin">Scenario: Ghi duyệt phương pháp của Giám đốc (trường hợp 3)
   Given hash nội dung thay đổi từ lúc mở màn duyệt
   When gửi duyệt hash cũ
   Then ERR-EXP-409-02; yêu cầu đọc lại, không duyệt nhầm bản
 </code></pre>
-<h2>AC-EXP-007-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-007-1: Luồng kỳ vọng</h2>
 <p>US-EXP-007 · FR-EXP-ALLOC-001 · UC-EXP-007 · TC-EXP-007-1 · BLOCKED; E13-Q05/06/09/12.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ — 1
+<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ (trường hợp 1)
   Given phương pháp đã duyệt và nguồn đầy đủ theo manifest
   When lập lần phân bổ
   Then snapshot mới ghi methodVersionRef, từng nguồn và phần chưa phân bổ; không sửa lần cũ
 </code></pre>
-<h2>AC-EXP-007-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-007-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-007 · FR-EXP-ALLOC-001 · UC-EXP-007 · TC-EXP-007-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ — 2
+<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ (trường hợp 2)
   Given không có phương pháp APPROVED
   When yêu cầu lợi nhuận theo khách
   Then ERR-EXP-422-03 và BLOCKED; chỉ xem chi phí trực tiếp
 </code></pre>
-<h2>AC-EXP-007-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-007-3: Biên và bảo toàn</h2>
 <p>US-EXP-007 · FR-EXP-ALLOC-001 · UC-EXP-007 · TC-EXP-007-3 · BLOCKED; E13-Q05/06/09/12.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ — 3
+<pre><code class="language-gherkin">Scenario: Kiểm cổng và lập lần phân bổ (trường hợp 3)
   Given driver thiếu hoặc tổng driver bằng 0
   When yêu cầu phân bổ
   Then không chia 0, không dồn cho khách bất kỳ; giữ khoản chưa phân bổ và lý do
 </code></pre>
-<h2>AC-EXP-008-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-008-1: Luồng kỳ vọng</h2>
 <p>US-EXP-008 · FR-EXP-PROF-001 · UC-EXP-008 · TC-EXP-008-1 · BLOCKED; E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15.</p>
-<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách — 1
+<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách (trường hợp 1)
   Given bộ nguồn được duyệt, doanh thu E7 đã đối soát
   When xem khách trong một cơ sở/kỳ
   Then hiện đúng snapshot và methodVersion; không thay số bằng giá hợp đồng mới
 </code></pre>
-<h2>AC-EXP-008-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-008-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-008 · FR-EXP-PROF-001 · UC-EXP-008 · TC-EXP-008-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách — 2
+<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách (trường hợp 2)
   Given doanh thu chưa đối soát hoặc không có căn cứ thành phần lợi nhuận
   When mở báo cáo khách
   Then ERR-EXP-422-02; BLOCKED, không gọi chênh thu trừ nguyên liệu là lợi nhuận
 </code></pre>
-<h2>AC-EXP-008-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-008-3: Biên và bảo toàn</h2>
 <p>US-EXP-008 · FR-EXP-PROF-001 · UC-EXP-008 · TC-EXP-008-3 · BLOCKED; E13-Q05/07/08/13; E7-Q03/04/05; E10-Q15.</p>
-<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách — 3
+<pre><code class="language-gherkin">Scenario: Tra cứu lợi nhuận theo khách (trường hợp 3)
   Given khách có nguồn ở hai cơ sở
   When lọc theo từng cơ sở rồi tổng khách
   Then không trộn khóa; không cộng nguồn trùng; chỉ tổng khi từng phần đủ căn cứ
 </code></pre>
-<h2>AC-EXP-009-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-009-1: Luồng kỳ vọng</h2>
 <p>US-EXP-009 · FR-EXP-RECON-001 · UC-EXP-009 · TC-EXP-009-1 · BLOCKED; E13-Q06/08/09/14.</p>
-<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở — 1
+<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở (trường hợp 1)
   Given fixture đối chiếu cùng cơ sở: doanh thu 1000, trực tiếp 600, chung 200, mọi khoản đã phân bổ
   When so tổng khách 120 + 80 với kết quả cơ sở 200
   Then delta 0, chưa phân bổ 0; chỉ đủ một điều kiện R13, không tự nghiệm thu
 </code></pre>
-<h2>AC-EXP-009-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-009-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-009 · FR-EXP-RECON-001 · UC-EXP-009 · TC-EXP-009-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở — 2
+<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở (trường hợp 2)
   Given cơ sở 200, tổng khách 250, chưa phân bổ có tác động -50
   When mở đối chiếu
   Then hiện cầu nối 250 - 50 = 200, nhưng R13 vẫn chưa đạt vì khách chưa phân bổ hết
 </code></pre>
-<h2>AC-EXP-009-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-009-3: Biên và bảo toàn</h2>
 <p>US-EXP-009 · FR-EXP-RECON-001 · UC-EXP-009 · TC-EXP-009-3 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở — 3
+<pre><code class="language-gherkin">Scenario: Đối chiếu lợi nhuận với từng cơ sở (trường hợp 3)
   Given cơ sở 200, tổng khách 250, phần chưa phân bổ -40
   When mở đối chiếu
   Then delta -10 hiện rõ; không giấu 10 vào khách cuối, không dùng dung sai Cost
 </code></pre>
-<h2>AC-EXP-010-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-010-1: Luồng kỳ vọng</h2>
 <p>US-EXP-010 · FR-EXP-ADJ-001 · UC-EXP-010 · TC-EXP-010-1 · BLOCKED; E13-Q10; O-06.</p>
-<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt — 1
+<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt (trường hợp 1)
   Given kỳ khóa và chính sách kỳ đích/duyệt đã được xác nhận
   When tạo rồi trình điều chỉnh -20000 đ có chứng từ
   Then dòng riêng gắn nguồn gốc, chỉ ghi nhận sau duyệt; snapshot cũ giữ nguyên
 </code></pre>
-<h2>AC-EXP-010-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-010-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-010 · FR-EXP-ADJ-001 · UC-EXP-010 · TC-EXP-010-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt — 2
+<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt (trường hợp 2)
   Given đề nghị không có lý do hoặc người duyệt hợp lệ
   When yêu cầu ghi nhận điều chỉnh
   Then ERR-EXP-422-04; kỳ và số liệu gốc không đổi
 </code></pre>
-<h2>AC-EXP-010-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-010-3: Biên và bảo toàn</h2>
 <p>US-EXP-010 · FR-EXP-ADJ-001 · UC-EXP-010 · TC-EXP-010-3 · BLOCKED; E13-Q10; O-06.</p>
-<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt — 3
+<pre><code class="language-gherkin">Scenario: Lập điều chỉnh sau khóa có phê duyệt (trường hợp 3)
   Given đề nghị đã được ghi nhận
   When gửi lại cùng khóa nghiệp vụ
   Then không ghi bút toán lần hai; trả receipt hoặc conflict theo contract đã duyệt
 </code></pre>
-<h2>AC-EXP-011-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-011-1: Luồng kỳ vọng</h2>
 <p>US-EXP-011 · FR-EXP-SAFE-001 · UC-EXP-011 · TC-EXP-011-1 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ — 1
+<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ (trường hợp 1)
   Given kế toán được cấp quyền đúng cơ sở
   When xem báo cáo theo khách nội bộ
   Then chỉ tổng nhân công; không có personRef, giờ hay đơn giá trong payload này
 </code></pre>
-<h2>AC-EXP-011-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-011-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-011 · FR-EXP-SAFE-001 · UC-EXP-011 · TC-EXP-011-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ — 2
+<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ (trường hợp 2)
   Given người ngoài PER-07/PER-08 hoặc phiên phía khách
   When truy cập chi tiết công/lương/lợi nhuận hoặc xuất
   Then ERR-EXP-403-01; không lộ qua payload, lỗi, log, cache, file hoặc metadata
 </code></pre>
-<h2>AC-EXP-011-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-011-3: Biên và bảo toàn</h2>
 <p>US-EXP-011 · FR-EXP-SAFE-001 · UC-EXP-011 · TC-EXP-011-3 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ — 3
+<pre><code class="language-gherkin">Scenario: Bảo vệ lương và đầu ra nội bộ (trường hợp 3)
   Given người vừa bị thu hồi quyền nhưng có runRef đã biết
   When đọc lại hoặc yêu cầu bản xuất
   Then từ chối theo quyền hiện tại; không dùng cache quyền cũ
 </code></pre>
-<h2>AC-EXP-012-1 — Luồng kỳ vọng</h2>
+<h2>AC-EXP-012-1: Luồng kỳ vọng</h2>
 <p>US-EXP-012 · FR-EXP-SRC-001 · UC-EXP-012 · TC-EXP-012-1 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo — 1
+<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo (trường hợp 1)
   Given run có manifest và quyền đúng scope
   When mở nguồn báo cáo
   Then hiện từng nguồn/revision/cơ sở/kỳ và methodVersion; không gọi lại số giao để tính thu
 </code></pre>
-<h2>AC-EXP-012-2 — Lỗi nghiệp vụ</h2>
+<h2>AC-EXP-012-2: Lỗi nghiệp vụ</h2>
 <p>US-EXP-012 · FR-EXP-SRC-001 · UC-EXP-012 · TC-EXP-012-2 · NOT RUN; Chưa có sản phẩm để chạy.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo — 2
+<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo (trường hợp 2)
   Given thiếu một nguồn trong manifest cần thiết
   When yêu cầu đánh dấu đủ dữ liệu
   Then ERR-EXP-422-02; nguồn thiếu không có giá trị 0 thay thế
 </code></pre>
-<h2>AC-EXP-012-3 — Biên và bảo toàn</h2>
+<h2>AC-EXP-012-3: Biên và bảo toàn</h2>
 <p>US-EXP-012 · FR-EXP-SRC-001 · UC-EXP-012 · TC-EXP-012-3 · BLOCKED; E13-Q12/13.</p>
-<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo — 3
+<pre><code class="language-gherkin">Scenario: Kiểm nguồn và truy nguyên lần báo cáo (trường hợp 3)
   Given nguồn E7 có revision mới sau lần chạy
   When đọc lần chạy cũ và đề nghị làm mới
   Then bản cũ bất biến; lần mới phải kiểm lại gate và có id khác

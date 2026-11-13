@@ -1,4 +1,4 @@
-# Hợp đồng bổ sung kế toán — v0.2.0
+# Hợp đồng bổ sung kế toán: v0.2.0
 
 Ngày11/11/2026 · Draft thiết kế, chưa triển khai. Nguồn: [nghiệp vụ đã xác nhận](../accounting/business-rules.md), [CR](../cr/CR-COST-2026-001.md), [DBML v0.4.0](../../nen-tang/srs/schema.dbml).
 
@@ -14,7 +14,7 @@ Chuẩn hóa giá dùng `cost.price.write`; người chỉ đọc giá không đ
 
 Không có endpoint xác nhận chiết khấu, thanh toán, bù trừ hay hủy khoản đã xử lý trong extension này. Enum trạng thái dự kiến trong schema không đồng nghĩa có quyền chuyển trạng thái. Không có webhook công khai; sự kiện order nội bộ phải được xác thực bởi worker tin cậy và chống lặp eventKey.
 
-## 2. PriceInput v0.2 — thay hợp đồng nhập giá cũ
+## 2. PriceInput v0.2: thay hợp đồng nhập giá cũ
 
 Áp dụng API-COST-005/006/007 và mẫu nhập/kiểm/commit012–014; không phát sinh endpoint tạo giá thứ hai. Không nhận `priceVnd` từ client để tránh ghi giá trướcVAT như giá cuối. Catalog37 endpoint đã đổi sang PriceInput mới; payload cũ chỉ có priceVnd bị400, không tự gán basis. Đây là thay đổi hợp đồng thiết kế, chưa có client production để migration trong workspace.
 

@@ -1,4 +1,4 @@
-# Delta món và định lượng — ranh giới hợp đồng review
+# Delta món và định lượng: ranh giới hợp đồng review
 
 11/11/2026 · Draft BA. Liên quan E6-RV-07/04/05, FR-ORD-CHG-001, FR-PLAN-MEAL-001, UC-ORD-012/019, API-ORD-005/021/022/025, UI-ORD-10/13; không thay26route hoặc schema65bảng. [Mapping](data-mapping.md) · [Delta data](../srs/data-dictionary.md).
 

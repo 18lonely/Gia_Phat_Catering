@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-REVIEW-HANDOFF-MD
-title: Bàn giao gói BA nháp E10 — 12/11/2026
+title: Bàn giao gói BA nháp E10 ngày 12/11/2026
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# Bàn giao gói BA nháp E10 — 12/11/2026
+# Bàn giao gói BA nháp E10 ngày 12/11/2026
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 

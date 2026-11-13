@@ -1,6 +1,6 @@
 ---
 id: DOC-E12-USECASES-UC-FBR-008-MD
-title: UC-FBR-008 — Kiểm lại đề xuất đổi món hoặc định lượng
+title: "UC-FBR-008: Kiểm lại đề xuất đổi món hoặc định lượng"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FBR-008 — Kiểm lại đề xuất đổi món hoặc định lượng
+# UC-FBR-008: Kiểm lại đề xuất đổi món hoặc định lượng
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -19,7 +19,7 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 | 0.1.0 | 12/11/2026 | BA | Mở riêng tài liệu E12; giữ nguyên câu hỏi chưa trả lời |
 
 - **Phạm vi**: E12, FEAT-082; màn UI-FBR-07.
-- **Cấp độ**: Sea level — mục tiêu người dùng.
+- **Cấp độ**: Sea level (mục tiêu người dùng).
 - **Tác nhân chính**: PER-05, PER-08; quyền phải được cấp theo scope.
 - **Các bên quan tâm**: người yêu cầu cần bảng kiểm có nguồn; dù đủ kiểm vẫn chỉ nháp chờ người thật; chủ nguồn cần dữ liệu gốc không bị sửa; người review cần truy lại căn cứ.
 - **Tiền điều kiện**: phiên hợp lệ, có quyền trên nguồn; đầu vào candidateRef, candidateRevision, menuSourceRef. Nhánh nghiệp vụ thật cần AIO-Q02/05/06; DL-01; E11-Q15; E12-Q09. Các gate chưa được coi là đạt.

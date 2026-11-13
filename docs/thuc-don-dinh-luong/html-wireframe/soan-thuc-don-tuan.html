@@ -117,7 +117,7 @@ body.off .cell,body.off .dfrow select{pointer-events:none;opacity:.55}
 <body>
 
 <div class="wfbar" role="note">
- <b>WIREFRAME · SCR-MENU-10</b><span>Soạn thực đơn tuần — dữ liệu và con số quy tắc là <u>minh họa</u></span>
+ <b>WIREFRAME · SCR-MENU-10</b><span>Soạn thực đơn tuần: dữ liệu và con số quy tắc là <u>minh họa</u></span>
  <span class="sp"></span><span>Xem trạng thái:</span>
  <button data-st="normal" class="on">Bình thường</button>
  <button data-st="empty">Rỗng</button>
@@ -191,7 +191,7 @@ body.off .cell,body.off .dfrow select{pointer-events:none;opacity:.55}
 
 <script>
 'use strict';
-/* ====== DỮ LIỆU MINH HỌA — không phải dữ liệu thật của Gia Phát ====== */
+/* ====== DỮ LIỆU MINH HỌA: không phải dữ liệu thật của Gia Phát ====== */
 const DAYS=[['T2','16/11'],['T3','17/11'],['T4','18/11'],['T5','19/11'],['T6','20/11'],['T7','21/11']];
 const SLOTS=[['M1','Món chính 1','MAIN'],['M2','Món chính 2','MAIN'],['M3','Món chính 3','MAIN'],['S1','Món phụ 1','SIDE'],['S2','Món phụ 2','SIDE'],['V','Rau','VEG'],['C','Canh','SOUP']];
 const CAP=40000;
@@ -333,7 +333,7 @@ function renderGrid(){
  SLOTS.forEach(([s,lb])=>{h+=`<tr><th class="slot" scope="row">${lb}</th>`+DAYS.map(([d])=>{const x=BY[menu[d][s]];const isDef=x&&menu[d].def===x.id;
   return `<td data-d="${d}"${d===curDay?' class="show"':''}><div class="cell ${x?'filled':'empty'}" data-c="${d}:${s}" tabindex="0" role="button" aria-label="${lb} ${d}">${x?`<div class="nm">${x.name}</div><div class="tg">${x.grp} · ${x.mth}${x.healthy?' · Healthy':''}${x.sour?' · chua':''}</div>${isDef?'<span class="df">MẶC ĐỊNH</span>':''}${readOnly?'':'<button class="x" data-x="1" aria-label="Bỏ món">×</button>'}`:'+ Chọn món'}</div></td>`;}).join('')+'</tr>';});
  h+='<tr class="dfrow"><th class="slot" scope="row">Món mặc định</th>'+DAYS.map(([d])=>{const mains=SLOTS.filter(s=>s[2]==='MAIN').map(s=>BY[menu[d][s[0]]]).filter(Boolean);
-  return `<td data-d="${d}"${d===curDay?' class="show"':''}><select data-def="${d}" aria-label="Món mặc định ${d}"${readOnly?' disabled':''} class="${mains.length&&!menu[d].def?'miss':''}"><option value="">— chưa chọn —</option>${mains.map(x=>`<option value="${x.id}"${menu[d].def===x.id?' selected':''}>${x.name}</option>`).join('')}</select></td>`;}).join('')+'</tr>';
+  return `<td data-d="${d}"${d===curDay?' class="show"':''}><select data-def="${d}" aria-label="Món mặc định ${d}"${readOnly?' disabled':''} class="${mains.length&&!menu[d].def?'miss':''}"><option value="">Chưa chọn</option>${mains.map(x=>`<option value="${x.id}"${menu[d].def===x.id?' selected':''}>${x.name}</option>`).join('')}</select></td>`;}).join('')+'</tr>';
  h+='<tr class="costrow"><th class="slot" scope="row">Cost / suất</th>'+DAYS.map(([d])=>`<td data-d="${d}"${d===curDay?' class="show"':''}>${costCell(d)}</td>`).join('')+'</tr></tbody>';
  $('grid').innerHTML=h;
  $('daytabs').innerHTML=DAYS.map(([d,dt])=>`<button data-day="${d}" class="${d===curDay?'on':''}">${d} ${dt}</button>`).join('');
@@ -347,7 +347,7 @@ function renderPanel(){
  if(!any){$('sumline').textContent='';$('vlist').innerHTML='<li class="emptymsg" style="cursor:default">Xếp món để bắt đầu kiểm.</li>';}
  else{
   $('sumline').textContent=`${hard.length} vi phạm bắt buộc · ${soft.length} cảnh báo`+(score<80?' · điểm dưới 80: cần 2 người duyệt':'');
-  $('vlist').innerHTML=lastRes.length?[...hard,...soft].map(r=>`<li data-k="${r.key}"><span class="code">${r.code}</span><span class="typ ${r.type==='HARD'?'hard':'s'+r.pen}">${r.type==='HARD'?'BẮT BUỘC':(r.pen?'CẢNH BÁO −'+r.pen:'CẢNH BÁO')}</span><div><b>${r.name}</b></div><div>${r.detail}</div>${r.type==='SOFT'&&r.pen===3?`<textarea data-w="${r.key}" placeholder="Lý do chấp nhận (từ 10 ký tự) — hoặc đổi món"${readOnly?' disabled':''}>${waiver[r.key]||''}</textarea><div class="hint">Cảnh báo mức nặng cần lý do mới gửi duyệt được (BR-MNU-006)</div>`:''}</li>`).join(''):'<li class="emptymsg" style="cursor:default">Không có vi phạm.</li>';
+  $('vlist').innerHTML=lastRes.length?[...hard,...soft].map(r=>`<li data-k="${r.key}"><span class="code">${r.code}</span><span class="typ ${r.type==='HARD'?'hard':'s'+r.pen}">${r.type==='HARD'?'BẮT BUỘC':(r.pen?'CẢNH BÁO −'+r.pen:'CẢNH BÁO')}</span><div><b>${r.name}</b></div><div>${r.detail}</div>${r.type==='SOFT'&&r.pen===3?`<textarea data-w="${r.key}" placeholder="Lý do chấp nhận (từ 10 ký tự): hoặc đổi món"${readOnly?' disabled':''}>${waiver[r.key]||''}</textarea><div class="hint">Cảnh báo mức nặng cần lý do mới gửi duyệt được (BR-MNU-006)</div>`:''}</li>`).join(''):'<li class="emptymsg" style="cursor:default">Không có vi phạm.</li>';
  }
  Object.keys(waiver).forEach(k=>{if(!lastRes.some(r=>r.key===k))delete waiver[k];}); // UC-MENU-008 9a
  document.querySelectorAll('.cell').forEach(c=>c.classList.remove('bad','hl'));
@@ -388,7 +388,7 @@ $('vlist').addEventListener('input',e=>{const k=e.target.dataset.w;if(k){waiver[
 
 function openPicker(d,s){
  pick={d,s};const slot=SLOTS.find(x=>x[0]===s);
- $('pkTitle').textContent=`Chọn ${slot[1].toLowerCase()} — ${d}`;$('pkSearch').value='';fillPicker();$('picker').showModal();$('pkSearch').focus();
+ $('pkTitle').textContent=`Chọn ${slot[1].toLowerCase()}: ${d}`;$('pkSearch').value='';fillPicker();$('picker').showModal();$('pkSearch').focus();
 }
 function fillPicker(){
  const slot=SLOTS.find(x=>x[0]===pick.s),q=$('pkSearch').value.trim().toLowerCase();

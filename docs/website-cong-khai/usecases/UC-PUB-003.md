@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-003-MD
-title: UC-PUB-003 — Chuẩn bị mapping WordPress
+title: "UC-PUB-003: Chuẩn bị mapping WordPress"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-003 — Chuẩn bị mapping WordPress
+# UC-PUB-003: Chuẩn bị mapping WordPress
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH trong vai trò qu
 
 Trigger: Gia Phát nhận bản xuất WordPress và cần đối chiếu bài/URL trước chuyển website.
 
-Tiền điều kiện — nghiệp vụ: Có inventoryRef và bản xuất bài/media có provenance để rà; người thực hiện có quyền soạn và chuẩn bị mapping.
-Tiền điều kiện — gate còn mở: E8-Q01/02 chặn inventory và tiêu chí KEEP/REDIRECT; E8-Q01/08/09 chặn cách chuyển nội dung/CMS/media. Không chọn importer hoặc cutover trong UC.
+Tiền điều kiện (nghiệp vụ): Có inventoryRef và bản xuất bài/media có provenance để rà; người thực hiện có quyền soạn và chuẩn bị mapping.
+Tiền điều kiện (gate còn mở): E8-Q01/02 chặn inventory và tiêu chí KEEP/REDIRECT; E8-Q01/08/09 chặn cách chuyển nội dung/CMS/media. Không chọn importer hoặc cutover trong UC.
 
 Luồng chính:
 1. Người quản trị nạp thông tin inventory tại UI-PUB-07 và đối chiếu từng sourceId, URL nguồn, title/body/media/ngày công bố gốc trong DL-08.

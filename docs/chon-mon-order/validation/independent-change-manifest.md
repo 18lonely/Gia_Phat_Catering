@@ -1,8 +1,8 @@
-# File thay đổi — phiên E6 độc lập 11/11/2026
+# File thay đổi: phiên E6 độc lập 11/11/2026
 
 So hash trước/sau; không Git. File báo cáo/manifest mô tả trạng thái cuối phiên; bản baseline mới chỉ phục vụ đối chiếu, không thay baseline lịch sử.
 
-## File mới — 10
+## File mới: 10
 
 - `docs/chon-mon-order/api/data-mapping.md`
 - `docs/chon-mon-order/review/independent-handoff.md`
@@ -14,7 +14,7 @@ So hash trước/sau; không Git. File báo cáo/manifest mô tả trạng thái
 - `docs/chon-mon-order/validation/independent-change-manifest.md`
 - `docs/chon-mon-order/validation/independent-check-result.json`
 - `docs/chon-mon-order/validation/independent-report.md`
-## File thay đổi nội dung — 22
+## File thay đổi nội dung: 22
 
 - `docs/OVERVIEW.md`
 - `docs/chon-mon-order/api/api-spec.md`

@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-011-MD
-title: UC-PUB-011 — Yêu cầu công bố hoặc thu hồi
+title: "UC-PUB-011: Yêu cầu công bố hoặc thu hồi"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-011 — Yêu cầu công bố hoặc thu hồi
+# UC-PUB-011: Yêu cầu công bố hoặc thu hồi
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Dinh dưỡng viên kiêm CSKH chỉ khi đượ
 
 Trigger: Nội dung đã được chuẩn bị để công bố, hoặc Gia Phát cần ngừng cho khách truy cập một revision đang công khai.
 
-Tiền điều kiện — nghiệp vụ: Có contentId, revision và lý do thao tác; người yêu cầu có quyền tương ứng theo policy được duyệt.
-Tiền điều kiện — gate còn mở: E8-Q08/09/02 về duyệt, media và URL chưa chốt; không coi người soạn mặc nhiên có quyền duyệt/công bố.
+Tiền điều kiện (nghiệp vụ): Có contentId, revision và lý do thao tác; người yêu cầu có quyền tương ứng theo policy được duyệt.
+Tiền điều kiện (gate còn mở): E8-Q08/09/02 về duyệt, media và URL chưa chốt; không coi người soạn mặc nhiên có quyền duyệt/công bố.
 
 Luồng chính:
 1. Người có quyền chọn nội dung/revision tại UI-PUB-06 và rà bản muốn công bố hoặc thu hồi.

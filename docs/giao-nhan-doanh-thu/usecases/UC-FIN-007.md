@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-007-MD
-title: UC-FIN-007 — Lập kỳ đối soát
+title: "UC-FIN-007: Lập kỳ đối soát"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-007 — Lập kỳ đối soát
+# UC-FIN-007: Lập kỳ đối soát
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán bắt đầu đối soát doanh thu của một khách cho khoảng ngày cần kiểm tra.
 
-Tiền điều kiện — nghiệp vụ: Kế toán có quyền tại khách; các nguồn doanh thu có thể có dòng thiếu hoặc tranh chấp cần liệt kê.
-Tiền điều kiện — gate còn mở: E7-Q05, Q-13 và E6-CG-08 chưa chốt phạm vi/điều kiện kỳ và nguồn; không tự chọn cách chống chồng kỳ.
+Tiền điều kiện (nghiệp vụ): Kế toán có quyền tại khách; các nguồn doanh thu có thể có dòng thiếu hoặc tranh chấp cần liệt kê.
+Tiền điều kiện (gate còn mở): E7-Q05, Q-13 và E6-CG-08 chưa chốt phạm vi/điều kiện kỳ và nguồn; không tự chọn cách chống chồng kỳ.
 
 Luồng chính:
 1. Kế toán chọn khách, fromDate, toDate và revenueRefs tại UI-E7-05.

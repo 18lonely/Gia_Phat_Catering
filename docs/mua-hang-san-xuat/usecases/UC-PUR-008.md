@@ -1,6 +1,6 @@
 ---
 id: DOC-E11-USECASES-UC-PUR-008-MD
-title: UC-PUR-008 — Đối chiếu dự toán và thực mua
+title: "UC-PUR-008: Đối chiếu dự toán và thực mua"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUR-008 — Đối chiếu dự toán và thực mua
+# UC-PUR-008: Đối chiếu dự toán và thực mua
 
 Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
@@ -39,11 +39,11 @@ Nháp có điều kiện · Chưa phê duyệt · 12/11/2026.
 
 ## Ngoại lệ
 
-- Bước 2 — thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
-- Bước 3 — Thực mua của cơ sở khác hoặc ngày chưa phân bổ: Không ghép với dự toán để kết luận đạt (ERR-PUR-422-18).
-- Bước 4 — Mẫu số bằng 0 hoặc chưa biết: Tỷ lệ và chênh null; kết luận chưa xác định.
-- Bước 4 — thiếu policy/nguồn tại E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
-- Bước 5 — kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
+- Bước 2: thiếu quyền: dùng 403/404 theo E1; không hiện bản ghi ngoài scope.
+- Bước 3: Thực mua của cơ sở khác hoặc ngày chưa phân bổ: Không ghép với dự toán để kết luận đạt (ERR-PUR-422-18).
+- Bước 4: Mẫu số bằng 0 hoặc chưa biết: Tỷ lệ và chênh null; kết luận chưa xác định.
+- Bước 4: thiếu policy/nguồn tại E11-Q07/08; O-01; DATA-COST-Q01–06; E7-Q03/04: trả BLOCKED kèm mã, dừng nhánh phụ thuộc; không tạo kết quả đạt giả.
+- Bước 5: kết nối mất sau gửi: chưa xác định kết quả; không gửi lặp như thao tác mới trước đối soát. Cơ chế chờ E11-Q13.
 
 ## Yêu cầu đặc biệt và truy vết
 

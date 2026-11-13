@@ -16,7 +16,7 @@
       "uc": "001",
       "screen": "01",
       "rule": "Lọc tên/loại/trạng thái; phân trang nền tảng.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-002",
@@ -32,7 +32,7 @@
       "uc": "001",
       "screen": "02",
       "rule": "201; chuẩn hoá tên, trùng trả ERR-COST-409-01; ACTIVE; audit.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-003",
@@ -65,7 +65,7 @@
       "uc": "002,005",
       "screen": "03,07",
       "rule": "kitchenId=GLOBAL chỉ giá chung; bỏ filter là danh sách trong quyền, không có nghĩa GLOBAL.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-005",
@@ -83,7 +83,7 @@
       "uc": "002",
       "screen": "04",
       "rule": "201; >0 nguyên đồng; ngày trong khoảng; giá lệch cần confirmationToken; không có bước duyệt; một tham chiếu/phạm vi/ngày. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-006",
@@ -101,7 +101,7 @@
       "uc": "003",
       "screen": "03",
       "rule": "201; toàn lô nguyên tử, bỏ dòng không đổi; lỗi phải trả rowKey/path; không lưu một phần. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-007",
@@ -117,7 +117,7 @@
       "uc": "002,003",
       "screen": "03,04",
       "rule": "200; kiểm payload nhưng chưa ghi giá; token đề xuất ràng buộc actor, hash dòng và giá nền, hết hạn 5 phút; giá nền đổi phải xác nhận lại. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-008",
@@ -165,7 +165,7 @@
       "uc": "002,006",
       "screen": "07,08",
       "rule": "Ưu tiên giá riêng có ngày mới nhất ≤ date, rồi mới fallback GLOBAL; không có trả ERR-COST-404-02.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-011",
@@ -182,7 +182,7 @@
       "uc": "005",
       "screen": "06",
       "rule": "Chỉ nguyên liệu trong công thức ACTIVE, dùng hôm nay nghiệp vụ; API đọc không tự tạo cảnh báo; worker riêng.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-012",
@@ -198,7 +198,7 @@
       "uc": "004",
       "screen": "05",
       "rule": "200 binary application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; mẫu giá nhập, không phải mẫu giá bán. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-013",
@@ -214,7 +214,7 @@
       "uc": "004",
       "screen": "05",
       "rule": "201 bản kiểm tạm; ≤2.000 dòng; chưa ghi giá; lỗi 422 ERR-MENU-422-20, 413/415 theo khung MENU; không dùng upload chứng từ SYS để từ chối XLSX hợp lệ. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-014",
@@ -230,7 +230,7 @@
       "uc": "004",
       "screen": "05",
       "rule": "201; kiểm lại dữ liệu và hash bản kiểm; hết lỗi mới ghi cả lô. Giá nhập không vào PENDING như giá bán E2. Chuẩn hóa theo accounting-contract.md trước kiểm lệch/lưu; import/lưới chung PriceInput v0.2; lỗi một dòng không ghi cả lô.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-015",
@@ -249,7 +249,7 @@
       "uc": "006",
       "screen": "08",
       "rule": "200; chỉ tính, không lưu; thiếu giá ERR-COST-422-03; dùng cỡ/ngày/cơ sở; API danh mục MENU gọi nội bộ cho cột cost, không N+1 bắt buộc phía client.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-016",
@@ -298,7 +298,7 @@
       "uc": "007",
       "screen": "09,10",
       "rule": "Danh sách không tự mở quyền đọc giá; chi tiết theo API kế tiếp.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-019",
@@ -315,7 +315,7 @@
       "uc": "007",
       "screen": "09",
       "rule": "200 dữ liệu chụp, không tính lại từ giá mới; scope cả món và cơ sở.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-020",
@@ -347,7 +347,7 @@
       "uc": "007",
       "screen": "10",
       "rule": "201; khoá trạng thái PENDING; người tạo/sửa không tự duyệt; REJECTED cần lý do; approvals + trạng thái cùng giao dịch.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-022",
@@ -379,7 +379,7 @@
       "uc": "008",
       "screen": "11",
       "rule": "201 PENDING, thêm phiên bản mới; tiền nguyên ≥0, ngày và lý do bắt buộc; không tự áp dụng.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-024",
@@ -395,7 +395,7 @@
       "uc": "008",
       "screen": "11",
       "rule": "201; không tự duyệt; check duy nhất tên chuẩn hoá/phạm vi/ngày của APPROVED; khoản riêng thắng chung.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-025",
@@ -415,7 +415,7 @@
       "uc": "009",
       "screen": "12",
       "rule": "200 cho nội dung hợp lệ; kết quả theo ngày/cơ sở; clientRevision echo tránh hiển thị kết quả cũ. Thiếu giá/VAT trả 422 nếu không tính được tổng; phần hiển thị từng ngày có status. Không dành cho agent phía khách.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-026",
@@ -431,7 +431,7 @@
       "uc": "010",
       "screen": "12",
       "rule": "Chỉ bản APPROVED đã ghi bởi hook MENU, không có POST cho client tự tạo snapshot; lọc quyền từng cơ sở.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-027",
@@ -482,7 +482,7 @@
       "uc": "013",
       "screen": "15",
       "rule": "Chỉ metadata cho quyền qty: id, ngày, cơ sở, version, số suất, thời điểm/người lập; không tiền trong summary.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-030",
@@ -499,7 +499,7 @@
       "uc": "013",
       "screen": "15",
       "rule": "Server chọn projection theo quyền; không nhận includePrices=true để mở quyền; snapshot không đổi.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-031",
@@ -515,7 +515,7 @@
       "uc": "013",
       "screen": "15",
       "rule": "200 binary; kiểm lại quyền lúc tải; Cache-Control private,no-store; XLSX không chứa sheet/cột tiền ẩn ở bản qty; xuất không tính lại.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-032",
@@ -532,7 +532,7 @@
       "uc": "014",
       "screen": "16",
       "rule": "Một đầu mục/ngày; cost chỉ theo quyền. Không dùng bảng này cho cảnh báo nguyên liệu thiếu/cũ.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-033",
@@ -549,7 +549,7 @@
       "uc": "014",
       "screen": "17",
       "rule": "Có snapshot gốc và lần tính lại mới nhất từng cơ sở; không làm thay đổi cảnh báo.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-034",
@@ -565,7 +565,7 @@
       "uc": "014",
       "screen": "17",
       "rule": "201; OPEN→CLOSED, audit lý do ≥10 ký tự; không thay cost thành DAT, không cho quyền sửa MENU.",
-      "gate": "—"
+      "gate": "Không có"
     },
     {
       "id": "API-COST-035",
@@ -615,7 +615,7 @@
       "uc": "002,003,012",
       "screen": "03,15",
       "rule": "Đề xuất Q02: trả PENDING/COMPLETED/FAILED và resourceRefs đã lọc quyền; không lộ kết quả actor khác; ngoài cửa sổ lưu trả 404, không chứng minh lệnh chưa chạy.",
-      "gate": "—"
+      "gate": "Không có"
     }
   ],
   "types": {

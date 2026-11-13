@@ -1,13 +1,13 @@
 ---
 id: DOC-E8-USECASES-UC-PUB-001-MD
-title: UC-PUB-001 — Xem trang giới thiệu
+title: "UC-PUB-001: Xem trang giới thiệu"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-PUB-001 — Xem trang giới thiệu
+# UC-PUB-001: Xem trang giới thiệu
 
 Draft · 12/11/2026 · Thiết kế có điều kiện, chưa phê duyệt; 0 backend/migration/UAT.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Khách vãng lai tìm hiểu dịch vụ Gia Ph�
 
 Trigger: Khách tìm hiểu năng lực Gia Phát và truy cập trang giới thiệu, dịch vụ, dự án hoặc đối tác theo đường dẫn trang.
 
-Tiền điều kiện — nghiệp vụ: Có slug cần tra cứu; khách không cần tài khoản để đọc nội dung công khai.
-Tiền điều kiện — gate còn mở: E8-Q08 chưa chốt quyền/quy trình xuất bản; không coi mọi revision đã có là được công khai.
+Tiền điều kiện (nghiệp vụ): Có slug cần tra cứu; khách không cần tài khoản để đọc nội dung công khai.
+Tiền điều kiện (gate còn mở): E8-Q08 chưa chốt quyền/quy trình xuất bản; không coi mọi revision đã có là được công khai.
 
 Luồng chính:
 1. Khách truy cập slug trang thuộc UI-PUB-01.

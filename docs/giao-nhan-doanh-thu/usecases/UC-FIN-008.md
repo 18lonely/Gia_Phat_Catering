@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-008-MD
-title: UC-FIN-008 — Ghi nhận thống nhất đối soát
+title: "UC-FIN-008: Ghi nhận thống nhất đối soát"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-008 — Ghi nhận thống nhất đối soát
+# UC-FIN-008: Ghi nhận thống nhất đối soát
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Actor hỗ tr
 
 Trigger: Kế toán nhận bằng chứng khách thống nhất biên bản của kỳ đối soát.
 
-Tiền điều kiện — nghiệp vụ: Có kỳ để đối soát và bằng chứng khách gắn với tập nguồn/revision; kế toán có quyền ghi nhận.
-Tiền điều kiện — gate còn mở: E7-Q05, Q-13 và E6-CG-01/08 chưa chốt điều kiện thống nhất, xác minh khách và nguồn.
+Tiền điều kiện (nghiệp vụ): Có kỳ để đối soát và bằng chứng khách gắn với tập nguồn/revision; kế toán có quyền ghi nhận.
+Tiền điều kiện (gate còn mở): E7-Q05, Q-13 và E6-CG-01/08 chưa chốt điều kiện thống nhất, xác minh khách và nguồn.
 
 Luồng chính:
 1. Kế toán chọn periodId tại UI-E7-05; hệ thống hiển thị tổng, version và các nguồn của kỳ.

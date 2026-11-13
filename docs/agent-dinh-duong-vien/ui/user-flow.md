@@ -1,4 +1,4 @@
-# User flow — E9
+# User flow (E9)
 
 Draft · 12/11/2026 · Các nhánh thành công chỉ là thiết kế có điều kiện, chưa mở vận hành.
 

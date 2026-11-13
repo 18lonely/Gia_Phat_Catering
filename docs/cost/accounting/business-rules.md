@@ -80,7 +80,7 @@ Cost% thực đơn hiện lấy định mức loại suất làm mẫu số chư
 
 ## 6. Điểm còn cần quyết định
 
-### 6.1 Câu hỏi nghiệp vụ chiết khấu — CHỜ XÁC NHẬN
+### 6.1 Câu hỏi nghiệp vụ chiết khấu: CHỜ XÁC NHẬN
 
 Theo yêu cầu người dùng, các câu hỏi được lưu tại đây để trả lời sau. **Chưa chọn phương án, chưa gán mặc định và chưa coi là quy tắc đã duyệt.** Các lựa chọn nêu trong câu hỏi chỉ giúp làm rõ nội dung cần trả lời.
 
@@ -88,16 +88,16 @@ Nguyên tắc đã xác nhận vẫn giữ: chiết khấu cho khách theo % ho�
 
 | Mã câu hỏi | Câu hỏi cần trả lời | Ảnh hưởng tới thiết kế | Người cần xác nhận (vai trò đề xuất) | Trạng thái / trả lời |
 | :--- | :--- | :--- | :--- | :--- |
-| CK-Q01 | Chiết khấu % tính trên tiền suất **đã gồm VAT hay chưa VAT**? Cơ sở tính có bao gồm khoản phụ thu nào không? | Công thức và số tiền chiết khấu | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q02 | Khoản chiết khấu áp dụng cho mọi suất trong đơn hay chỉ một số loại suất/dòng? Số suất tính theo đặt hàng, giao thực tế hay số được khách xác nhận? | Dòng đủ điều kiện, số lượng và thời điểm tính | Kế toán, vận hành, người phụ trách khách | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q03 | Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào? | Kết quả số và ca kiểm tra biên | Kế toán | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q04 | Ai được lập/sửa khoản chiết khấu? Ai được duyệt; có phân cấp theo số tiền hoặc tỷ lệ không? Người lập có được tự duyệt không, ai thay khi người duyệt vắng? | Ma trận quyền, quy trình duyệt và nhật ký | Giám đốc, kế toán | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q05 | Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai? | Cách xử lý khoản riêng, đối tượng và liên kết thanh toán | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q06 | Khoản chiết khấu được xác nhận và xử lý vào lúc nào: khi chốt đơn, giao xong, khách thanh toán hay cuối kỳ? Có xử lý một phần không; cần chứng từ gì để ghi đã xử lý? | Trạng thái, ngày ghi nhận, số còn chưa xử lý và chứng từ | Kế toán | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q07 | Nếu đơn đổi số suất, giá hoặc loại suất khi chiết khấu chưa duyệt/đã duyệt nhưng chưa xử lý, có tính lại tự động không? Có phải duyệt lại, và giữ phiên bản cũ thế nào? | Điều chỉnh khoản riêng khi sửa đơn | Kế toán, vận hành, người duyệt | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q08 | Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không? | Hủy/điều chỉnh, lịch sử và quyền thao tác | Kế toán, người duyệt | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q09 | Nếu chiết khấu đã chi trả/bù trừ rồi đơn mới đổi hoặc hủy, xử lý phần chênh lệch bằng thu hồi, bù kỳ sau hay khoản điều chỉnh riêng? Ai duyệt và cần chứng từ nào? | Khoản điều chỉnh sau xử lý; không xóa dấu vết giao dịch cũ | Kế toán, Giám đốc | **CHỜ XÁC NHẬN** — chưa trả lời |
-| CK-Q10 | Một đơn có được hưởng đồng thời chiết khấu % và tiền/suất hoặc nhiều chương trình không? Nếu có, cộng dồn hay ưu tiên chương trình nào; có mức trần không? | Chống tính trùng, thứ tự áp dụng và giới hạn | Người phụ trách thỏa thuận khách, kế toán, Giám đốc | **CHỜ XÁC NHẬN** — chưa trả lời |
+| CK-Q01 | Chiết khấu % tính trên tiền suất **đã gồm VAT hay chưa VAT**? Cơ sở tính có bao gồm khoản phụ thu nào không? | Công thức và số tiền chiết khấu | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q02 | Khoản chiết khấu áp dụng cho mọi suất trong đơn hay chỉ một số loại suất/dòng? Số suất tính theo đặt hàng, giao thực tế hay số được khách xác nhận? | Dòng đủ điều kiện, số lượng và thời điểm tính | Kế toán, vận hành, người phụ trách khách | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q03 | Làm tròn tiền chiết khấu theo từng suất, từng dòng hay tổng đơn? Làm tròn tới đơn vị nào và theo cách nào? | Kết quả số và ca kiểm tra biên | Kế toán | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q04 | Ai được lập/sửa khoản chiết khấu? Ai được duyệt; có phân cấp theo số tiền hoặc tỷ lệ không? Người lập có được tự duyệt không, ai thay khi người duyệt vắng? | Ma trận quyền, quy trình duyệt và nhật ký | Giám đốc, kế toán | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q05 | Khoản riêng được chi tiền, chuyển khoản, bù trừ ở kỳ/đơn sau hay chỉ theo dõi? Người nhận/đối tượng được hưởng là ai? | Cách xử lý khoản riêng, đối tượng và liên kết thanh toán | Kế toán, người phụ trách thỏa thuận khách | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q06 | Khoản chiết khấu được xác nhận và xử lý vào lúc nào: khi chốt đơn, giao xong, khách thanh toán hay cuối kỳ? Có xử lý một phần không; cần chứng từ gì để ghi đã xử lý? | Trạng thái, ngày ghi nhận, số còn chưa xử lý và chứng từ | Kế toán | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q07 | Nếu đơn đổi số suất, giá hoặc loại suất khi chiết khấu chưa duyệt/đã duyệt nhưng chưa xử lý, có tính lại tự động không? Có phải duyệt lại, và giữ phiên bản cũ thế nào? | Điều chỉnh khoản riêng khi sửa đơn | Kế toán, vận hành, người duyệt | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q08 | Nếu đơn bị hủy toàn bộ hoặc một phần, khoản chiết khấu chưa xử lý được hủy/giảm thế nào? Ai xác nhận và có bắt buộc lý do không? | Hủy/điều chỉnh, lịch sử và quyền thao tác | Kế toán, người duyệt | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q09 | Nếu chiết khấu đã chi trả/bù trừ rồi đơn mới đổi hoặc hủy, xử lý phần chênh lệch bằng thu hồi, bù kỳ sau hay khoản điều chỉnh riêng? Ai duyệt và cần chứng từ nào? | Khoản điều chỉnh sau xử lý; không xóa dấu vết giao dịch cũ | Kế toán, Giám đốc | **CHỜ XÁC NHẬN**: chưa trả lời |
+| CK-Q10 | Một đơn có được hưởng đồng thời chiết khấu % và tiền/suất hoặc nhiều chương trình không? Nếu có, cộng dồn hay ưu tiên chương trình nào; có mức trần không? | Chống tính trùng, thứ tự áp dụng và giới hạn | Người phụ trách thỏa thuận khách, kế toán, Giám đốc | **CHỜ XÁC NHẬN**: chưa trả lời |
 
 Khi có câu trả lời, ghi cho từng mã: **nội dung quyết định, ví dụ đầu vào → kết quả, người xác nhận, ngày và nguồn xác nhận**. Sau đó mới cập nhật quy tắc, API, mô hình dữ liệu, luồng và tiêu chí nghiệm thu liên quan. Không đóng câu hỏi chỉ vì đã có phương án đề xuất trong tài liệu.
 

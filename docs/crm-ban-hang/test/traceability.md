@@ -106,9 +106,9 @@ Các dòng sau chỉ liên kết lại ca đã có, không tạo thêm ca hoặc
 | ERR-CRM-500-01 | TC-CRM-S004: lỗi ghi/audit trước hoặc sau commit, chưa xác định kết quả |
 | ERR-CRM-503-01 | TC-CRM-003-02; TC-CRM-006-02 khi policy chưa đủ |
 
-## Bổ sung gate — XC-05
+## Bổ sung gate (XC-05)
 
-> Chờ E10-Q16 — XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
+> Chờ E10-Q16: XC-05. BLOCKED xác nhận liên kết bản chủ và chống nhận trùng xuyên ba epic. Nguồn: [sổ câu hỏi](../review/questions.md).
 
 Ca liên quan: TC-CRM-003-01, TC-CRM-003-02, TC-CRM-003-03. Các ca chứng minh chính sách hoặc tích hợp thật phụ thuộc câu này giữ BLOCKED. Ca kiểm invariant bằng dữ liệu giả vẫn NOT RUN, không chứng minh chính sách được duyệt.
 

@@ -49,8 +49,8 @@ Phiên bản 0.1.0 · 11/11/2026 · Draft để BA/QA/Tech lead review.
 | FR-COST-ALR-002 | US-COST-026 | AC-COST-026-01, AC-COST-026-02, AC-COST-026-03 | TC-COST-026-01, TC-COST-026-02, TC-COST-026-03 | API-COST-032, API-COST-033 | Draft; xem gate từng ca |
 | FR-COST-ALR-003 | US-COST-027 | AC-COST-027-01, AC-COST-027-02, AC-COST-027-03 | TC-COST-027-01, TC-COST-027-02, TC-COST-027-03 | API-COST-032, API-COST-033, API-COST-034 | Draft; xem gate từng ca |
 | FR-COST-ALR-005 | US-COST-028 | AC-COST-028-01, AC-COST-028-02, AC-COST-028-03 | TC-COST-028-01, TC-COST-028-02, TC-COST-028-03 | API-COST-035 | Draft; xem gate từng ca |
-| FR-COST-MEAL-007 | Hoãn — quyết định trong backlog | — | — | — | Chờ E3-Q9/Q10; không tính phủ test |
-| FR-COST-ALR-004 | Hoãn — quyết định trong backlog | — | — | — | Chờ E3-Q9/Q10; không tính phủ test |
+| FR-COST-MEAL-007 | Hoãn: quyết định trong backlog | Chưa có | Chưa có | Chưa có | Chờ E3-Q9/Q10; không tính phủ test |
+| FR-COST-ALR-004 | Hoãn: quyết định trong backlog | Chưa có | Chưa có | Chưa có | Chờ E3-Q9/Q10; không tính phủ test |
 
 ## Quy tắc, mã lỗi và NFR có kịch bản
 

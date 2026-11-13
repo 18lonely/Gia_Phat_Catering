@@ -16,7 +16,7 @@ Phiên bản: 0.1.0 · Ngày: 11/11/2026 · Trạng thái: Draft, chờ review n
 - **Hậu điều kiện thành công:** Người dùng thấy kết quả tính hợp lệ hoặc nguyên nhân chưa tính được; không đổi công thức/giá.
 - **Đảm bảo tối thiểu:** không sửa dữ liệu lịch sử đã chụp; lỗi trước commit không ghi một phần; không trả dữ liệu vượt quyền. Với lệnh ghi mất phản hồi, đối soát thay vì khẳng định chưa lưu.
 - **Truy vết FR:** `FR-COST-DISH-001`, `FR-COST-DISH-002`, `FR-COST-DISH-003`, `FR-COST-DISH-004`, `FR-COST-DISH-005`, `FR-COST-DISH-008`.
-- **Điểm chạm:** SCR-COST-08 — xem [user flow](../ui/user-flow.md).
+- **Điểm chạm:** SCR-COST-08, xem [user flow](../ui/user-flow.md).
 
 ## Luồng sự kiện chính
 

@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-TEST-SYSTEM-CASES-MD
-title: 10 ca hệ thống E10 — có overlap
+title: "10 ca hệ thống E10: có overlap"
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# 10 ca hệ thống E10 — có overlap
+# 10 ca hệ thống E10: có overlap
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 

@@ -1,13 +1,13 @@
 ---
 id: DOC-E7-USECASES-UC-FIN-006-MD
-title: UC-FIN-006 — Tra cứu doanh thu và nguồn
+title: "UC-FIN-006: Tra cứu doanh thu và nguồn"
 version: 0.2.0
 phase: Specification
 domain: Gia Phát
 author: BA
 last_updated: 2026-11-12
 ---
-# UC-FIN-006 — Tra cứu doanh thu và nguồn
+# UC-FIN-006: Tra cứu doanh thu và nguồn
 
 Draft · 12/11/2026 · Thiết kế BA có điều kiện, chưa phê duyệt / chưa triển khai.
 
@@ -17,8 +17,8 @@ Level: Sea level. Actor chính: Kế toán phụ trách doanh thu. Bên quan tâ
 
 Trigger: Kế toán cần rà doanh thu của một khách trong khoảng ngày trước khi chuẩn bị đối soát.
 
-Tiền điều kiện — nghiệp vụ: Kế toán có phiên và quyền đọc doanh thu; khoảng tra cứu có thể chưa có bản tính nào.
-Tiền điều kiện — gate còn mở: E7-Q04/08 và E6-CG-08 còn chặn cách tổng hợp, bộ lọc và nguồn/scope; không coi hợp đồng đã freeze.
+Tiền điều kiện (nghiệp vụ): Kế toán có phiên và quyền đọc doanh thu; khoảng tra cứu có thể chưa có bản tính nào.
+Tiền điều kiện (gate còn mở): E7-Q04/08 và E6-CG-08 còn chặn cách tổng hợp, bộ lọc và nguồn/scope; không coi hợp đồng đã freeze.
 
 Luồng chính:
 1. Kế toán nhập customerId, fromDate, toDate và trạng thái cần lọc tại UI-E7-04.

@@ -1,6 +1,6 @@
 ---
 id: DOC-E10-API-DATA-MAPPING-MD
-title: Mapping API — dữ liệu — màn hình E10
+title: Mapping API, dữ liệu và màn hình E10
 version: 0.1.0
 phase: Specification
 domain: Gia Phát
@@ -10,7 +10,7 @@ related_diagrams: []
 author: BA
 last_updated: 2026-11-12
 ---
-# Mapping API — dữ liệu — màn hình E10
+# Mapping API, dữ liệu và màn hình E10
 
 Nháp có điều kiện · Chưa phê duyệt, chưa cố định hợp đồng giao tiếp.
 

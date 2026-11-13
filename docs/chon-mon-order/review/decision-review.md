@@ -19,11 +19,11 @@ last_updated: 2026-11-11
 | D-14 | Tổng suất do người đặt tổng chốt; phần chưa chọn nhận món mặc định; người đặt tổng được sửa trước hạn | Chưa quyết C là gộp hay theo người, hủy/chuyển suất và khi S vượt T |
 | D-19 | QR công ty là cơ chế xác minh | Không chứng minh một mã QR dùng chung định danh được mỗi người |
 | D-21 | Định mức chung; vượt mức bị chặn; không người ăn tự bù tiền | Không tự quyết policy đổi quota giữa ngày |
-| E6-EVID-001 — người dùng trả lời trực tiếp ngày11/11/2026 | **“Có danh sách và người quản lý xác nhận”** | Chỉ xác nhận sự tồn tại của danh sách và khả năng quản lý xác nhận. Chưa xác nhận mã nhân viên duy nhất/ổn định, phương thức cấp credential, OTP, SLA duyệt hoặc mô hình dữ liệu |
+| E6-EVID-001: người dùng trả lời trực tiếp ngày11/11/2026 | **“Có danh sách và người quản lý xác nhận”** | Chỉ xác nhận sự tồn tại của danh sách và khả năng quản lý xác nhận. Chưa xác nhận mã nhân viên duy nhất/ổn định, phương thức cấp credential, OTP, SLA duyệt hoặc mô hình dữ liệu |
 
 E6-EVID-001 làm ORD-Q01 **có thêm căn cứ**, chưa đủ đóng ORD-Q01. Người xác nhận: người dùng trong chat này; không tự ghi tên/chức danh hoặc biên bản ký. Chưa có dữ liệu danh sách thực được cung cấp, không tạo fixture mang danh tính thật.
 
-## DR-01 — Một người, một liên kết danh tính
+## DR-01: Một người, một liên kết danh tính
 
 **Đề xuất:** dùng một membership người ăn trong danh sách được công ty xác nhận; cả tài khoản và QR guest ánh xạ về membership đó. Không dùng tài khoản hoặc cookie làm khóa nghiệp vụ duy nhất. Mã nhân viên chỉ là mã tra cứu, không phải mật khẩu.
 
@@ -41,7 +41,7 @@ Phương án khuyến nghị chưa chọn cụ thể PIN, link một lần, pass
 
 **Tác động:** FEAT-030–033/036; API-ORD-006–012/002; users.customer_id, eaters.user_id nullable unique chưa đủ canonical membership; cần binding/identity proof và audit actor guest. UC-ORD-001–004/007, UI-ORD-01–03/06, AC-E6-001–004/007 cần cập nhật sau quyết định. **CHỜ ORD-Q01/02/11.**
 
-## DR-02 — Số suất, chọn hộ và chuyển sang tự chọn
+## DR-02: Số suất, chọn hộ và chuyển sang tự chọn
 
 **Đề xuất khuyến nghị:** S là suất người ăn tự chọn; C là suất chọn hộ gắn một người trong danh sách khi có thể; D là phần tổng suất chưa có lựa chọn cụ thể. Trong mô hình1MAIN/suất: `T = S + C + D`. Người ăn tự chọn sau khi đã được chọn hộ thì **chuyển nguồn C→S**, không thêm suất thứ hai.
 
@@ -61,7 +61,7 @@ Phương án thay cho chặn S vượt T: nhận lựa chọn nhưng đánh dấ
 
 **Tác động:** FEAT-036/038/039/042; API-ORD-002/003/004, PORT-LOCK; UC-ORD-007/009/010/013; selection/coordinator allocation/summary revision; UI06/08/11. Không viết hợp đồng `coordinatorLines` gộp như đã giải quyết trùng người. **CHỜ ORD-Q06/13.**
 
-## DR-03 — Khóa hạn và thiếu dữ liệu
+## DR-03: Khóa hạn và thiếu dữ liệu
 
 **Đề xuất:** hạn chốt là mốc server có version theo điểm/ngày/ca, quy đổi UTC; trước hạn cho ghi, đúng/sau hạn không nhận ghi thường. Không dùng15:00D-1 hoặc5%/10suất/06:00 làm mặc định đã duyệt.
 
@@ -77,7 +77,7 @@ Tách ba sự kiện: **đến hạn nhận lựa chọn**, **khóa thành công
 
 **Tác động:** FEAT-039/040/041; PORT-LOCK/API-ORD-004/005/022; job outcome, deadline snapshot, outbox; UC010–012; UI09/10. **CHỜ Q-16/ORD-Q07/08/12 và O-06.**
 
-## DR-04 — Kế hoạch có phiên bản và bếp nhận bản mới
+## DR-04: Kế hoạch có phiên bản và bếp nhận bản mới
 
 **Đề xuất:** mỗi kế hoạch theo bếp/ngày/ca chứa manifest nguồn: đúng một order revision hiện hành cho mỗi order thuộc phạm vi. Dòng món gộp theo dish+recipe+portion+unit; bản cũ bất biến. Không cộng MAIN với món kèm thành tổng suất.
 
@@ -105,7 +105,7 @@ Chưa xác định scope nào đã đủ nguồn để được phát hành chí
 
 Mỗi DR cần: phương án được chọn; ngoại lệ; ví dụ; người/ngày/nguồn xác nhận. Sau đó mới cập nhật schema/API/UC/AC và chuyển test từ BLOCKED sang NOT RUN. Không mở E7–E13 trong đợt này. Quy tắc VAT/chiết khấu, CK-Q01–10, DATA-COST-Q01–06, NFR-COST-002, O-02/O-03 giữ nguyên.
 
-## Phản hồi người dùng E6-EVID-002 — 11/11/2026
+## Phản hồi người dùng E6-EVID-002 ngày 11/11/2026
 
 Nguồn: trả lời trực tiếp ba câu hỏi review trong chat. Người dùng chọn **“Chưa chốt, giữ câu hỏi mở”** cho cả ba nội dung:
 

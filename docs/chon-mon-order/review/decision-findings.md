@@ -30,12 +30,12 @@ last_updated: 2026-11-11
 
 Chưa đủ điều kiện freeze. Identity binding, coordinator allocation, summary concurrency token, plan completeness/ack và phục hồi sau hạn cần quyết định trước DDL/hợp đồng cuối. Giữ26endpoint/2port và65bảng; không thêm endpoint ngầm hoặc migration. Một khách có danh sách người ăn không tự chứng minh đã có đủ mã định danh/đồng bộ nghỉ việc/đổi điểm.
 
-## Rà tiếp phần độc lập — 11/11/2026
+## Rà tiếp phần độc lập ngày 11/11/2026
 
 RV01: bổ sung dependency provisioning, chưa chốt identity/scope. RV02/03: giữ nguyên policy mở, không chọn expected. RV04: mapping và thứ tự replay được làm rõ, persistence chưa duyệt. RV05: sửa thêm SRS/UC hứa plan v1 ngay sau lock, tách PENDING; quyền publish/ack/start vẫn mở. RV06: có mô hình E/I/M/X để review, nguồn kỳ vọng/policy publish chưa chốt. RV07: chỉ ra gap role/unit khi so delta, chưa duyệt quy đổi/DDL. RV08: bổ sung phân biệt retry và sửa nguồn sau hạn, quyền remediation chưa chốt. **0/8 finding được xác nhận đóng**.
 
 [Mapping](../api/data-mapping.md) · [Lifecycle](../srs/lock-plan-review.md) · [12ca invariant](../test/invariant-cases.md). Đây là bổ sung kiểm thiết kế, không thay8ca DR đang BLOCKED.
 
-## Review contract tiếp nối — 11/11/2026
+## Review contract tiếp nối ngày 11/11/2026
 
 RV04/05/07 được bổ sung [delta contract](../api/delta-contract-review.md) và [evidence protocol](../test/evidence-protocol.md): sửa alias tài liệu; payload ambiguous, role/unit, READY và persistence còn gap.0/8finding đóng;12INV sửa mã tham chiếu chuẩn, trạng thái giữ nguyên.
