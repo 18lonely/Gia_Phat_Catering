@@ -1,6 +1,30 @@
 [
   {
     "folder": "giao-nhan-doanh-thu",
+    "source": "srs/erd.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/flows.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/flows.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/flows.md",
+    "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
     "source": "srs/states.md",
     "diagram": 1,
     "status": "RENDERED"
@@ -15,6 +39,12 @@
     "folder": "giao-nhan-doanh-thu",
     "source": "srs/states.md",
     "diagram": 3,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "giao-nhan-doanh-thu",
+    "source": "srs/usecase-diagram.md",
+    "diagram": 1,
     "status": "RENDERED"
   },
   {
