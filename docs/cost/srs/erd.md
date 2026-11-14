@@ -5,7 +5,7 @@ version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-11
+last_updated: 2026-11-16
 ---
 # Mô hình dữ liệu miền Cost: chỉ mục hiện hành
 
@@ -27,3 +27,5 @@ Không tạo lại mô hình đã có. [ERD tổng mục5](../../nen-tang/srs/er
 | Kế toán mở rộng | customer_price_terms,order_pricing_snapshots,order_discount_records,order_discount_events; chiết khấu khoản riêng, không trừ phải trả |
 
 Từ điển chi tiết và ràng buộc không lặp ở đây; [hợp đồng kế toán](../api/accounting-contract.md), [điểm CK](../accounting/business-rules.md). Chưa chạy migration hoặc có dữ liệu10 món/10 ngày thật.
+
+Từ điển dữ liệu của E3 (chuyển từ ERD tổng ngày 16/11/2026): [data-dictionary.md](data-dictionary.md).

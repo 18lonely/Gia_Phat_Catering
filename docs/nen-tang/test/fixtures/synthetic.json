@@ -1,0 +1,25 @@
+{
+  "label": "synthetic: not real accounts or credentials",
+  "kitchens": [
+    {"code": "KITCHEN-A", "name": "Cơ sở A (giả lập)"},
+    {"code": "KITCHEN-B", "name": "Cơ sở B (giả lập)"}
+  ],
+  "users": [
+    {"username": "test.admin", "roles": [{"roleCode": "QUAN_TRI", "kitchen": null}]},
+    {"username": "test.director", "roles": [{"roleCode": "GIAM_DOC", "kitchen": null}]},
+    {"username": "test.manager.a", "roles": [{"roleCode": "QL_CO_SO", "kitchen": "KITCHEN-A"}]},
+    {"username": "test.manager.b", "roles": [{"roleCode": "QL_CO_SO", "kitchen": "KITCHEN-B"}]},
+    {"username": "test.chef.a", "roles": [{"roleCode": "BEP_TRUONG", "kitchen": "KITCHEN-A"}]},
+    {"username": "test.nutritionist", "roles": [{"roleCode": "DINH_DUONG_VIEN", "kitchen": null}]},
+    {"username": "test.purchasing", "roles": [{"roleCode": "KT_MUA_HANG", "kitchen": null}]}
+  ],
+  "serviceAccounts": ["svc-agent-noi-bo", "svc-agent-dinh-duong-vien"],
+  "delegations": [
+    {"from": "test.director", "to": "test.admin", "permission": "parameter.approve", "validDays": 3, "reason": "Vắng mặt (giả lập)"}
+  ],
+  "parameters": [
+    {"code": "COST_CHE_DO_KIEM", "scope": "GLOBAL", "value": "CANH_BAO"}
+  ],
+  "credentials": "Không lưu mật khẩu trong fixture; môi trường test tự cấp và không ghi vào evidence",
+  "note": "Tên đăng nhập là ví dụ; hình thức đăng nhập thật chờ N-01. Vai trò QUAN_TRI chờ N-02"
+}

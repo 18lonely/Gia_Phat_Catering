@@ -1,0 +1,23 @@
+{
+  "label": "synthetic: not real Gia Phat dishes, recipes or prices",
+  "ingredients": [
+    {"code": "ING-01", "name": "Thịt heo mẫu", "buyUnit": "kg", "useUnit": "g", "conversionFactor": "1000", "hasBoneOrShell": false, "wastePct": "0", "storageType": "FROZEN"},
+    {"code": "ING-02", "name": "Cá mẫu", "buyUnit": "kg", "useUnit": "g", "conversionFactor": "1000", "hasBoneOrShell": true, "wastePct": "20", "storageType": "FROZEN"},
+    {"code": "ING-03", "name": "Rau mẫu", "buyUnit": "kg", "useUnit": "g", "conversionFactor": "1000", "hasBoneOrShell": false, "wastePct": "10", "storageType": "FRESH"}
+  ],
+  "dishes": [
+    {"code": "DISH-01", "name": "Thịt kho mẫu", "role": "MAIN", "cookingMethod": "KHO", "isHealthy": false},
+    {"code": "DISH-02", "name": "Cá chiên mẫu", "role": "MAIN", "cookingMethod": "CHIEN", "isHealthy": false},
+    {"code": "DISH-03", "name": "Rau luộc mẫu", "role": "VEG", "cookingMethod": "LUOC", "isHealthy": true}
+  ],
+  "recipes": [
+    {"dish": "DISH-01", "portionCode": "STD", "lines": [{"ingredient": "ING-01", "qtyMin": "60", "qtyStd": "70", "qtyMax": "80", "unit": "g", "isMain": true}]},
+    {"dish": "DISH-02", "portionCode": "STD", "lines": [{"ingredient": "ING-02", "qtyMin": "80", "qtyStd": "90", "qtyMax": "100", "unit": "g", "isMain": true}]},
+    {"dish": "DISH-03", "portionCode": "STD", "lines": [{"ingredient": "ING-03", "qtyMin": "70", "qtyStd": "80", "qtyMax": "90", "unit": "g", "isMain": true}]}
+  ],
+  "mealType": {"code": "MT-STD", "priceCapVnd": "40000", "mainOffered": 3, "mainPick": 1, "sideCount": 1, "hasVeg": true, "hasSoup": true},
+  "ruleExamples": [
+    {"case": "hai món chính cùng chiên một ngày", "day": "Thứ Hai", "mains": ["DISH-02", "một món chính chiên thứ hai, thêm khi chạy ca"], "expected": "Vi phạm nếu quy tắc được duyệt ở DL-01 là quy tắc cứng"}
+  ],
+  "note": "Số liệu quy tắc chờ DL-01; nhiều cỡ định lượng chờ O-02; giá trị enum vai trò, phương pháp chỉ là ví dụ"
+}

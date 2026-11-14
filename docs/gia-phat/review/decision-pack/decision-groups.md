@@ -675,7 +675,7 @@ Mã nguồn: N-01. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### N-01
 
-[Nguồn, dòng 403](../../../nen-tang/srs/spec.md#L403). Nội dung đầy đủ:
+[Nguồn, dòng 403](../../../nen-tang/srs/spec.md#L378). Nội dung đầy đủ:
 
 > Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)
 
@@ -703,7 +703,7 @@ Mã nguồn: N-02. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### N-02
 
-[Nguồn, dòng 404](../../../nen-tang/srs/spec.md#L404). Nội dung đầy đủ:
+[Nguồn, dòng 404](../../../nen-tang/srs/spec.md#L379). Nội dung đầy đủ:
 
 > Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?
 
@@ -731,7 +731,7 @@ Mã nguồn: N-03. Người quyết định: Giám đốc, kế toán. Release: 
 
 ### N-03
 
-[Nguồn, dòng 405](../../../nen-tang/srs/spec.md#L405). Nội dung đầy đủ:
+[Nguồn, dòng 405](../../../nen-tang/srs/spec.md#L380). Nội dung đầy đủ:
 
 > Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)
 
@@ -759,7 +759,7 @@ Mã nguồn: N-04. Người quyết định: Giám đốc. Release: chưa rõ. [
 
 ### N-04
 
-[Nguồn, dòng 406](../../../nen-tang/srs/spec.md#L406). Nội dung đầy đủ:
+[Nguồn, dòng 406](../../../nen-tang/srs/spec.md#L381). Nội dung đầy đủ:
 
 > Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?
 
@@ -787,7 +787,7 @@ Mã nguồn: Q-14. Người quyết định: Giám đốc. Release: R6. [Buổi 
 
 ### Q-14
 
-[Nguồn, dòng 407](../../../nen-tang/srs/spec.md#L407). Nội dung đầy đủ:
+[Nguồn, dòng 407](../../../nen-tang/srs/spec.md#L382). Nội dung đầy đủ:
 
 > Kênh thông báo ngoài (Zalo OA, SMS, email)
 
@@ -815,7 +815,7 @@ Mã nguồn: Q-18. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### Q-18
 
-[Nguồn, dòng 408](../../../nen-tang/srs/spec.md#L408). Nội dung đầy đủ:
+[Nguồn, dòng 408](../../../nen-tang/srs/spec.md#L383). Nội dung đầy đủ:
 
 > Số người ăn, số công ty, số điểm giao mỗi ngày
 
@@ -843,7 +843,7 @@ Mã nguồn: DL-01, E2-Q2, H-1, H-2, H-3, H-4, H-8. Người quyết định: Ng
 
 ### DL-01
 
-[Nguồn, dòng 440](../../../thuc-don-dinh-luong/srs/spec.md#L440). Nội dung đầy đủ:
+[Nguồn, dòng 440](../../../thuc-don-dinh-luong/srs/spec.md#L406). Nội dung đầy đủ:
 
 > Duyệt 43 quy tắc
 
@@ -863,7 +863,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 ### E2-Q2
 
-[Nguồn, dòng 445](../../../thuc-don-dinh-luong/srs/spec.md#L445). Nội dung đầy đủ:
+[Nguồn, dòng 445](../../../thuc-don-dinh-luong/srs/spec.md#L411). Nội dung đầy đủ:
 
 > Quy tắc tuần có xét tuần trước không
 
@@ -991,7 +991,7 @@ Mã nguồn: E2-Q1. Người quyết định: Dinh dưỡng viên, Giám đốc.
 
 ### E2-Q1
 
-[Nguồn, dòng 444](../../../thuc-don-dinh-luong/srs/spec.md#L444). Nội dung đầy đủ:
+[Nguồn, dòng 444](../../../thuc-don-dinh-luong/srs/spec.md#L410). Nội dung đầy đủ:
 
 > Cách kiểm ngưỡng giá suất
 
@@ -1019,7 +1019,7 @@ Mã nguồn: E2-Q3. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q3
 
-[Nguồn, dòng 446](../../../thuc-don-dinh-luong/srs/spec.md#L446). Nội dung đầy đủ:
+[Nguồn, dòng 446](../../../thuc-don-dinh-luong/srs/spec.md#L412). Nội dung đầy đủ:
 
 > Tuần phục vụ gồm những ngày nào
 
@@ -1047,7 +1047,7 @@ Mã nguồn: E2-Q4. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q4
 
-[Nguồn, dòng 447](../../../thuc-don-dinh-luong/srs/spec.md#L447). Nội dung đầy đủ:
+[Nguồn, dòng 447](../../../thuc-don-dinh-luong/srs/spec.md#L413). Nội dung đầy đủ:
 
 > Thực đơn chung hay riêng theo khách
 
@@ -1075,7 +1075,7 @@ Mã nguồn: E2-Q6. Người quyết định: Dinh dưỡng viên, người duy�
 
 ### E2-Q6
 
-[Nguồn, dòng 448](../../../thuc-don-dinh-luong/srs/spec.md#L448). Nội dung đầy đủ:
+[Nguồn, dòng 448](../../../thuc-don-dinh-luong/srs/spec.md#L414). Nội dung đầy đủ:
 
 > Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)
 
@@ -1103,7 +1103,7 @@ Mã nguồn: E2-Q7. Người quyết định: Giám đốc. Release: R2. [Buổi
 
 ### E2-Q7
 
-[Nguồn, dòng 449](../../../thuc-don-dinh-luong/srs/spec.md#L449). Nội dung đầy đủ:
+[Nguồn, dòng 449](../../../thuc-don-dinh-luong/srs/spec.md#L415). Nội dung đầy đủ:
 
 > Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?
 
@@ -1131,7 +1131,7 @@ Mã nguồn: E2-Q8. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q8
 
-[Nguồn, dòng 450](../../../thuc-don-dinh-luong/srs/spec.md#L450). Nội dung đầy đủ:
+[Nguồn, dòng 450](../../../thuc-don-dinh-luong/srs/spec.md#L416). Nội dung đầy đủ:
 
 > Có cần thu hồi và sửa **từng ngày** của thực đơn đã công bố, thay vì cả tuần?
 
@@ -1159,7 +1159,7 @@ Mã nguồn: E2-Q9. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q9
 
-[Nguồn, dòng 451](../../../thuc-don-dinh-luong/srs/spec.md#L451). Nội dung đầy đủ:
+[Nguồn, dòng 451](../../../thuc-don-dinh-luong/srs/spec.md#L417). Nội dung đầy đủ:
 
 > Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)
 
@@ -1187,7 +1187,7 @@ Mã nguồn: E2-Q10. Người quyết định: Dinh dưỡng viên. Release: R2.
 
 ### E2-Q10
 
-[Nguồn, dòng 452](../../../thuc-don-dinh-luong/srs/spec.md#L452). Nội dung đầy đủ:
+[Nguồn, dòng 452](../../../thuc-don-dinh-luong/srs/spec.md#L418). Nội dung đầy đủ:
 
 > Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)
 
@@ -1215,7 +1215,7 @@ Mã nguồn: E2-Q11. Người quyết định: Người duyệt. Release: R2. [B
 
 ### E2-Q11
 
-[Nguồn, dòng 453](../../../thuc-don-dinh-luong/srs/spec.md#L453). Nội dung đầy đủ:
+[Nguồn, dòng 453](../../../thuc-don-dinh-luong/srs/spec.md#L419). Nội dung đầy đủ:
 
 > Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)
 
@@ -1243,7 +1243,7 @@ Mã nguồn: E2-Q5. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q5
 
-[Nguồn, dòng 454](../../../thuc-don-dinh-luong/srs/spec.md#L454). Nội dung đầy đủ:
+[Nguồn, dòng 454](../../../thuc-don-dinh-luong/srs/spec.md#L420). Nội dung đầy đủ:
 
 > Khoảng định lượng chuẩn và mức chất độn cho phép lưu ở đâu: theo từng món (chính là `qty_min`–`qty_max` của công thức, khi đó `BR-COST-008` tự thoả), hay có một **bảng chuẩn theo loại nguyên liệu và kiểu món** như bảng trong docx để mọi công thức phải nằm trong đó?
 

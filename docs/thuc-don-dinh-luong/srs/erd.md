@@ -5,7 +5,7 @@ version: 0.1.0
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-11
+last_updated: 2026-11-16
 ---
 # Mô hình dữ liệu miền MENU
 
@@ -41,3 +41,5 @@ erDiagram
 | menu_rules / menu_rule_results | Rule thay đổi qua change_requests/approvals; kết quả theo rule version; detail Cost lọc quyền |
 
 Import validation store, export jobs và idempotency store chưa có delta DB được duyệt (MENU-API-Q03/E1-Q02). Không coi các note DBML là CHECK đã được thực thi. Ghi menu/audit/cost snapshot theo transaction do MENU sở hữu, AIO không truy cập chéo bảng tùy ý.
+
+Từ điển dữ liệu của E2 (chuyển từ ERD tổng ngày 16/11/2026): [data-dictionary.md](data-dictionary.md).

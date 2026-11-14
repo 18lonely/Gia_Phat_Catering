@@ -1,0 +1,18 @@
+{
+  "label": "synthetic: not real nutrition data, not Gia Phat data",
+  "source": "GIẢ ĐỊNH, không phải Bảng thành phần thực phẩm Việt Nam",
+  "ingredients": [
+    {"id": "I1", "energyKcal": "100", "proteinG": "10", "fatG": "2", "carbG": "15", "ediblePct": "80", "unit": "g", "per": "100 g phần ăn được"},
+    {"id": "I2", "energyKcal": null, "proteinG": null, "fatG": null, "carbG": null, "ediblePct": null, "note": "chưa có bảng thành phần, dùng cho ca thiếu dữ liệu"}
+  ],
+  "recipes": [
+    {"id": "R1", "lines": [{"ingredientId": "I1", "qtyStd": "50", "unit": "g"}]},
+    {"id": "R2", "lines": [{"ingredientId": "I1", "qtyStd": "50", "unit": "g"}, {"ingredientId": "I2", "qtyStd": "30", "unit": "g"}]}
+  ],
+  "expected": {
+    "R1_if_qtyStd_is_raw_with_waste": {"edibleGrams": "40", "energyKcal": "40", "proteinG": "4", "fatG": "0.8", "carbG": "6"},
+    "R1_if_qtyStd_is_edible": {"edibleGrams": "50", "energyKcal": "50", "proteinG": "5", "fatG": "1", "carbG": "7.5"},
+    "R2": {"status": "MISSING", "missingIngredients": ["I2"], "totals": null}
+  },
+  "note": "Hai biến thể R1 tồn tại vì ý nghĩa qty_std chờ NUTR-Q02; làm tròn chờ NUTR-Q04"
+}

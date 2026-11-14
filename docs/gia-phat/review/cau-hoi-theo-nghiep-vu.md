@@ -112,10 +112,10 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | E1-Q02 | [Scope/store/retention idempotency, mã lỗi key reuse và secret một lần được duyệt theo hợp đồng này không?](../../nen-tang/review/questions.md#L24) | Tech lead | R1 | [DEC-17](decision-pack/decision-groups.md#dec-17) | Đề xuất: Không replay mật khẩu tạm; backend store/transaction chưa có |
 | E1-Q04 | [Thông báo có mở lại RESOLVED không; dedupe event và version lưu ở đâu?](../../nen-tang/review/questions.md#L26) | BA, Tech lead | R1 | [DEC-19](decision-pack/decision-groups.md#dec-19) | Đề xuất: Đề xuất NEW→SEEN→RESOLVED; bảng notifications hiện chưa có version/event key; cần delta trước backend |
 | E1-Q05 | [Vai trò nào được đọc audit nhạy cảm, log toàn hệ thống; tự khóa/xóa QUAN_TRI cuối cùng xử lý thế nào?](../../nen-tang/review/questions.md#L27) | Giám đốc | R1 | [DEC-20](decision-pack/decision-groups.md#dec-20) | Đề xuất: Chưa thêm quyền nghiệp vụ cho QUAN_TRI; cần quyết định trước vận hành |
-| N-01 | [Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)](../../nen-tang/srs/spec.md#L403) | Giám đốc | R1 | [DEC-21](decision-pack/decision-groups.md#dec-21) |  |
-| N-02 | [Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?](../../nen-tang/srs/spec.md#L404) | Giám đốc | R1 | [DEC-22](decision-pack/decision-groups.md#dec-22) |  |
-| N-03 | [Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)](../../nen-tang/srs/spec.md#L405) | Giám đốc, kế toán | R1 | [DEC-23](decision-pack/decision-groups.md#dec-23) | Chặn: 1 ca (gate trực tiếp) |
-| Q-18 | [Số người ăn, số công ty, số điểm giao mỗi ngày](../../nen-tang/srs/spec.md#L408) | Giám đốc | R1 | [DEC-26](decision-pack/decision-groups.md#dec-26) | Chặn: 1 ca (gate trực tiếp) |
+| N-01 | [Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)](../../nen-tang/srs/spec.md#L378) | Giám đốc | R1 | [DEC-21](decision-pack/decision-groups.md#dec-21) |  |
+| N-02 | [Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?](../../nen-tang/srs/spec.md#L379) | Giám đốc | R1 | [DEC-22](decision-pack/decision-groups.md#dec-22) |  |
+| N-03 | [Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)](../../nen-tang/srs/spec.md#L380) | Giám đốc, kế toán | R1 | [DEC-23](decision-pack/decision-groups.md#dec-23) | Chặn: 1 ca (gate trực tiếp) |
+| Q-18 | [Số người ăn, số công ty, số điểm giao mỗi ngày](../../nen-tang/srs/spec.md#L383) | Giám đốc | R1 | [DEC-26](decision-pack/decision-groups.md#dec-26) | Chặn: 1 ca (gate trực tiếp) |
 | E1-Q06 | [NFR-PERF-003 đo ký tự nội dung đầu hay phản hồi tiến trình đầu; mốc bắt đầu, kết thúc và cách đo với polling là gì?](../../nen-tang/review/questions.md#L28) | chưa rõ | R5 | [DEC-198](decision-pack/decision-groups.md#dec-198) | Đề xuất: Nguồn đề xuất phản hồi tiến trình đầu; chưa chọn thay NFR gốc. |
 
 ### 🟠 Khá cao: 2 câu
@@ -123,13 +123,13 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | E1-Q03 | [MFA nếu N-04 bật: enrollment, reset thiết bị, recovery và chống replay cụ thể?](../../nen-tang/review/questions.md#L25) | Giám đốc, Tech lead | chưa rõ | [DEC-18](decision-pack/decision-groups.md#dec-18) | Chặn: 3 ca (gate trực tiếp)<br>Đề xuất: P1 gated; không tự triển khai chỉ dựa ô nhập6 số |
-| N-04 | [Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?](../../nen-tang/srs/spec.md#L406) | Giám đốc | chưa rõ | [DEC-24](decision-pack/decision-groups.md#dec-24) | Chặn: 5 ca (gate trực tiếp) |
+| N-04 | [Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?](../../nen-tang/srs/spec.md#L381) | Giám đốc | chưa rõ | [DEC-24](decision-pack/decision-groups.md#dec-24) | Chặn: 5 ca (gate trực tiếp) |
 
 ### 🟡 Trung bình: 1 câu
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Q-14 | [Kênh thông báo ngoài (Zalo OA, SMS, email)](../../nen-tang/srs/spec.md#L407) | Giám đốc | R6 | [DEC-25](decision-pack/decision-groups.md#dec-25) | Chặn: 5 ca (gate trực tiếp) |
+| Q-14 | [Kênh thông báo ngoài (Zalo OA, SMS, email)](../../nen-tang/srs/spec.md#L382) | Giám đốc | R6 | [DEC-25](decision-pack/decision-groups.md#dec-25) | Chặn: 5 ca (gate trực tiếp) |
 
 ## E2 · Thực đơn & định lượng
 
@@ -137,18 +137,18 @@ Dùng để chuẩn bị buổi hỏi: mỗi người cần trả lời những 
 
 | Mã | Câu hỏi | Người quyết định | Release | Nhóm | Ghi chú |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| DL-01 | [Duyệt 43 quy tắc](../../thuc-don-dinh-luong/srs/spec.md#L440) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) | Chặn: 86 ca rule; 2 ca Cost (khác bộ) |
-| E2-Q1 | [Cách kiểm ngưỡng giá suất](../../thuc-don-dinh-luong/srs/spec.md#L444) | Dinh dưỡng viên, Giám đốc | R2 | [DEC-28](decision-pack/decision-groups.md#dec-28) |  |
-| E2-Q2 | [Quy tắc tuần có xét tuần trước không](../../thuc-don-dinh-luong/srs/spec.md#L445) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
-| E2-Q3 | [Tuần phục vụ gồm những ngày nào](../../thuc-don-dinh-luong/srs/spec.md#L446) | Dinh dưỡng viên | R2 | [DEC-30](decision-pack/decision-groups.md#dec-30) |  |
-| E2-Q4 | [Thực đơn chung hay riêng theo khách](../../thuc-don-dinh-luong/srs/spec.md#L447) | Dinh dưỡng viên | R2 | [DEC-31](decision-pack/decision-groups.md#dec-31) |  |
-| E2-Q6 | [Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)](../../thuc-don-dinh-luong/srs/spec.md#L448) | Dinh dưỡng viên, người duyệt | R2 | [DEC-32](decision-pack/decision-groups.md#dec-32) |  |
-| E2-Q7 | [Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?](../../thuc-don-dinh-luong/srs/spec.md#L449) | Giám đốc | R2 | [DEC-33](decision-pack/decision-groups.md#dec-33) |  |
-| E2-Q8 | [Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?](../../thuc-don-dinh-luong/srs/spec.md#L450) | Dinh dưỡng viên | R2 | [DEC-34](decision-pack/decision-groups.md#dec-34) |  |
-| E2-Q9 | [Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)](../../thuc-don-dinh-luong/srs/spec.md#L451) | Dinh dưỡng viên | R2 | [DEC-35](decision-pack/decision-groups.md#dec-35) |  |
-| E2-Q10 | [Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)](../../thuc-don-dinh-luong/srs/spec.md#L452) | Dinh dưỡng viên | R2 | [DEC-36](decision-pack/decision-groups.md#dec-36) |  |
-| E2-Q11 | [Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)](../../thuc-don-dinh-luong/srs/spec.md#L453) | Người duyệt | R2 | [DEC-37](decision-pack/decision-groups.md#dec-37) |  |
-| E2-Q5 | [Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?](../../thuc-don-dinh-luong/srs/spec.md#L454) | Dinh dưỡng viên | R2 | [DEC-38](decision-pack/decision-groups.md#dec-38) |  |
+| DL-01 | [Duyệt 43 quy tắc](../../thuc-don-dinh-luong/srs/spec.md#L406) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) | Chặn: 86 ca rule; 2 ca Cost (khác bộ) |
+| E2-Q1 | [Cách kiểm ngưỡng giá suất](../../thuc-don-dinh-luong/srs/spec.md#L410) | Dinh dưỡng viên, Giám đốc | R2 | [DEC-28](decision-pack/decision-groups.md#dec-28) |  |
+| E2-Q2 | [Quy tắc tuần có xét tuần trước không](../../thuc-don-dinh-luong/srs/spec.md#L411) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
+| E2-Q3 | [Tuần phục vụ gồm những ngày nào](../../thuc-don-dinh-luong/srs/spec.md#L412) | Dinh dưỡng viên | R2 | [DEC-30](decision-pack/decision-groups.md#dec-30) |  |
+| E2-Q4 | [Thực đơn chung hay riêng theo khách](../../thuc-don-dinh-luong/srs/spec.md#L413) | Dinh dưỡng viên | R2 | [DEC-31](decision-pack/decision-groups.md#dec-31) |  |
+| E2-Q6 | [Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)](../../thuc-don-dinh-luong/srs/spec.md#L414) | Dinh dưỡng viên, người duyệt | R2 | [DEC-32](decision-pack/decision-groups.md#dec-32) |  |
+| E2-Q7 | [Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?](../../thuc-don-dinh-luong/srs/spec.md#L415) | Giám đốc | R2 | [DEC-33](decision-pack/decision-groups.md#dec-33) |  |
+| E2-Q8 | [Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?](../../thuc-don-dinh-luong/srs/spec.md#L416) | Dinh dưỡng viên | R2 | [DEC-34](decision-pack/decision-groups.md#dec-34) |  |
+| E2-Q9 | [Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)](../../thuc-don-dinh-luong/srs/spec.md#L417) | Dinh dưỡng viên | R2 | [DEC-35](decision-pack/decision-groups.md#dec-35) |  |
+| E2-Q10 | [Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)](../../thuc-don-dinh-luong/srs/spec.md#L418) | Dinh dưỡng viên | R2 | [DEC-36](decision-pack/decision-groups.md#dec-36) |  |
+| E2-Q11 | [Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)](../../thuc-don-dinh-luong/srs/spec.md#L419) | Người duyệt | R2 | [DEC-37](decision-pack/decision-groups.md#dec-37) |  |
+| E2-Q5 | [Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?](../../thuc-don-dinh-luong/srs/spec.md#L420) | Dinh dưỡng viên | R2 | [DEC-38](decision-pack/decision-groups.md#dec-38) |  |
 | H-1 | [Món Healthy chỉ được luộc, hay hấp / áp chảo ít dầu / nướng cũng được tính?](../brainstorms/quy-tac-thuc-don.md#L120) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
 | H-2 | ["Nhiều ngày liên tiếp" là mấy ngày? Thịt lợn có được nới hơn các nhóm khác không (vì dùng nhiều nhất)?](../brainstorms/quy-tac-thuc-don.md#L121) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |
 | H-3 | [Duyệt danh sách nhóm nguyên liệu chính nào để so trùng; sườn tách riêng hay gộp vào lợn?](../brainstorms/quy-tac-thuc-don.md#L122) | Người soạn docx | R2 | [DEC-27](decision-pack/decision-groups.md#dec-27) |  |

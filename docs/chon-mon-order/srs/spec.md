@@ -5,7 +5,7 @@ version: 0.2.1
 phase: Specification
 domain: Gia Phát
 author: BA
-last_updated: 2026-11-12
+last_updated: 2026-11-16
 ---
 # SRS E6 để review: Chọn món và Order
 
@@ -65,12 +65,7 @@ T=totalServings người đặt tổng xác nhận; S=số suất có lựa ch�
 
 ### 3.2 Lỗi hợp đồng ban đầu
 
-| Mã | HTTP / trigger | Thông báo / xử lý |
-| :--- | :--- | :--- |
-| ERR-ORD-409-01 | 409 version/deadline snapshot đã đổi | “Dữ liệu đã thay đổi hoặc đã khóa. Tải lại trước khi chọn.” Không ghi selection/counter một phần |
-| ERR-ORD-422-01 | 422 tổ hợp/món/định mức không hợp lệ | “Lựa chọn không thuộc thực đơn hoặc vượt định mức.” Chọn lại |
-| ERR-ORD-422-02 | 422 T<S+C | “Tổng suất nhỏ hơn số đã phân bổ.” Người đặt tổng giải quyết, không xóa tự động |
-| ERR-ORD-422-03 | 422 thiếu total/default/định mức tại lúc khóa | “Chưa đủ dữ liệu để khóa.” Chuyển xử lý vận hành theo ORD-Q07 |
+Ma trận lỗi (4 mã) đã chuyển nguyên văn sang [error-matrix.md](error-matrix.md) ngày 16/11/2026; mã và nội dung không đổi.
 
 Lỗi phiên401, quyền403, ngoài scope404, hệ thống500/503 kế thừa AUTH/SYS. Localization key đề xuất tương ứng ord.conflict/invalid_selection/total_too_small/incomplete_lock; severity Medium với422, High với409 khóa. Ma trận hợp nhất nằm tại [quy tắc vận hành mục7](operational-rules.md).
 

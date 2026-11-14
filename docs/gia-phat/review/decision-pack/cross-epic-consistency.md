@@ -35,7 +35,7 @@ Mức: **Cao**. ERD còn hỏi giá nhập có gồm VAT đầu vào; xác nhậ
 
 Nguồn và dòng:
 
-- [docs/nen-tang/srs/erd.md:580](../../../nen-tang/srs/erd.md#L580).
+- [docs/cost/srs/data-dictionary.md, mục 5.1 (trước 16/11/2026 nằm ở docs/nen-tang/srs/erd.md dòng 580)](../../../cost/srs/data-dictionary.md).
 - [docs/cost/accounting/business-rules.md:18](../../../cost/accounting/business-rules.md#L18).
 - [docs/chi-phi-loi-nhuan/review/dependencies.md:31](../../../chi-phi-loi-nhuan/review/dependencies.md#L31).
 
@@ -136,7 +136,7 @@ Nguồn và dòng:
 - [docs/mua-hang-san-xuat/review/questions.md:26](../../../mua-hang-san-xuat/review/questions.md#L26).
 - [docs/chi-phi-loi-nhuan/review/questions.md:34](../../../chi-phi-loi-nhuan/review/questions.md#L34).
 - [docs/crm-ban-hang/review/questions.md:27](../../../crm-ban-hang/review/questions.md#L27).
-- [docs/nen-tang/srs/spec.md:401](../../../nen-tang/srs/spec.md#L401).
+- [docs/nen-tang/srs/spec.md:401](../../../nen-tang/srs/spec.md#L376).
 
 Đề xuất xử lý: Trình ma trận theo nghiệp vụ trong nhóm O-06; ghi phạm vi từng chữ ký. Các vai trò chỉ tham gia review chưa được tính là người có quyền quyết định.
 
