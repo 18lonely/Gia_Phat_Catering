@@ -6,15 +6,16 @@
 |---|---|
 | Sản phẩm | Nền tảng Gia Phát: website công khai + cổng khách hàng/người ăn + quản trị nội bộ + 2 AI agent |
 | `{product_name}` dùng cho ba-kit | `gia-phat` |
-| Phiên bản | v0.2.0 (đồng bộ tài liệu; còn điểm mở, chưa ký baseline) |
-| Ngày | 11/11/2026 |
+| Phiên bản | v0.3.0 (đổi backend sang Rust/Axum theo CR-CORE-2026-001; còn điểm mở, chưa ký baseline) |
+| Ngày | 14/11/2026 |
 | Tài liệu nguồn | `GiaPhat_CMAP_CRM.html` (bản 1.0, 04/11/2026) · `Yêu cầu về thực đơn và cost tp.docx` · comgiaphat.com · [Bản phân tích điểm bất hợp lý](../../GiaPhat_PhanTich_ThietKe.md) |
-| Công nghệ đã chốt | ReactJS · NodeJS/NestJS · MySQL · mục tiêu 1000 người dùng đồng thời |
+| Công nghệ đã chốt | ReactJS · Rust/Axum · MySQL · mục tiêu 1000 người dùng đồng thời (D-22 thay NodeJS/NestJS) |
 
 ## Lịch sử sửa đổi
 
 | Phiên bản | Ngày | Nội dung |
 |---|---|---|
+| v0.3.0 | 14/11/2026 | Đổi backend sang Rust/Axum (D-22), sửa mục 2.1, 3.1, 5.1, thêm R-08; liên kết kiến trúc hệ thống và kiến trúc AI agent. Xem [CR-CORE-2026-001](../nen-tang/cr/CR-CORE-2026-001.md) |
 | v0.2.0 | 11/11/2026 | Đồng bộ E1–E5, thêm sổ phạm vi/dashboard/preview và E6 khởi đầu; giữ lịch sử quyết định và điểm mở |
 | v0.1.0 | 10/11/2026 | Bản khung đầu tiên sau 2 vòng hỏi đáp |
 
@@ -64,6 +65,8 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 
 | D-21 | **Công ty đặt định mức chung** (giá suất, số món chính, số món phụ); người ăn chọn trong định mức, hệ thống chặn lựa chọn vượt định mức. Người ăn không tự dựng suất giá riêng, không phát sinh phần chênh phải tự trả. (Q-21) | Vòng 5 |
 
+| D-22 | Backend viết bằng **Rust với Axum**, thay NodeJS/NestJS; không lai ngôn ngữ. Frontend giữ ReactJS, cơ sở dữ liệu giữ MySQL 8. Tên thư viện cụ thể là [ĐỀ XUẤT]. Xem [CR-CORE-2026-001](../nen-tang/cr/CR-CORE-2026-001.md). | Phiên 14/11/2026 |
+
 ### Hệ quả trực tiếp của D-03 và D-04 lên bản thiết kế cũ
 
 1. **Số ĐẶT không còn do một người nhập.** Nó là tổng lựa chọn cá nhân theo từng món chính, cộng phần người đặt tổng nhập cho những người không tự chọn. Cần quy tắc cho người không chọn trước hạn [CHỜ Q-03].
@@ -83,7 +86,7 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 | Cổng khách hàng | `app.comgiaphat.com` | Người đặt tổng, người nhận | Thực đơn kỳ, tổng hợp lựa chọn, chốt số, xác nhận nhận hàng, đối soát |
 | Cổng người ăn | Cùng app với cổng khách hàng; QR mở thẳng trang chọn món | Người ăn có tài khoản / qua QR | Chọn 1 trong 3 món chính, xem định lượng – dinh dưỡng – dị ứng, hồ sơ cá nhân, đánh giá bữa ăn |
 | Quản trị nội bộ | `admin.comgiaphat.com` | Giám đốc, dinh dưỡng viên/CSKH, quản lý cơ sở, bếp trưởng, kế toán | Toàn bộ phân hệ M1–M10 của bản HTML + thực đơn/cost + Agent Nội bộ |
-| **Lõi** | `api.comgiaphat.com` | Không áp dụng | Một API NestJS, một MySQL, dùng chung cho cả bốn mặt tiền |
+| **Lõi** | `api.comgiaphat.com` | Không áp dụng | Một API Rust (Axum), một MySQL, dùng chung cho cả bốn mặt tiền |
 
 ### 2.2 Tác nhân (actor): đầu vào cho `rules/17-actor-role-definition.md`
 
@@ -106,16 +109,18 @@ Mục1–5 và9 bên dưới giữ bối cảnh các vòng trao đổi trước.
 
 ## 3. Kiến trúc kỹ thuật cho 1000 người dùng đồng thời [ĐỀ XUẤT]
 
+Bản chi tiết có sơ đồ và cấu trúc mã nguồn: [Kiến trúc hệ thống](../nen-tang/srs/architecture.md). Ngôn ngữ backend là [ĐÃ CHỐT D-22]; tên thư viện là [ĐỀ XUẤT].
+
 ### 3.1 Thành phần
 
 | Lớp | Lựa chọn | Lý do |
 |---|---|---|
 | Website công khai | **Next.js (React)** có SSR/ISR | Site công khai và blog cần SEO; React thuần render phía trình duyệt sẽ mất thứ hạng tìm kiếm hiện có. Giữ nguyên URL bài viết cũ hoặc chuyển hướng 301. |
 | Cổng khách/người ăn + quản trị | **React SPA** (Vite), 2 bản build riêng | Không cần SEO; tách bản quản trị để không lộ mã nội bộ ra ngoài. |
-| API | **NestJS, modular monolith**: mỗi phân hệ một module, chạy ≥ 2 bản sau bộ cân bằng tải | Đội nhỏ, một cơ sở mã; không tách microservice. API không giữ trạng thái nên nhân bản được. |
-| Worker | NestJS + **BullMQ** (tiến trình riêng) | Chạy AI agent, gửi thông báo, chốt số tại hạn chốt, tính nhu cầu nguyên liệu, xuất file: không chạy trong luồng xử lý yêu cầu web. |
+| API | **Rust (Axum + Tokio), modular monolith**: mỗi phân hệ một crate trong cùng Cargo workspace, chạy ≥ 2 bản sau bộ cân bằng tải | Đội nhỏ, một cơ sở mã; không tách microservice. API không giữ trạng thái nên nhân bản được. |
+| Worker | Rust + **apalis** trên Redis (tiến trình riêng, dùng chung crate nghiệp vụ với API) | Chạy AI agent, gửi thông báo, chốt số tại hạn chốt, tính nhu cầu nguyên liệu, xuất file: không chạy trong luồng xử lý yêu cầu web. |
 | Cơ sở dữ liệu | **MySQL 8**: 1 primary + 1 read replica | Ghi vào primary; trang thực đơn, báo cáo, hỏi đáp số liệu đọc từ replica. |
-| Bộ nhớ đệm / hàng đợi | **Redis** | Cache thực đơn đã công bố, phiên đăng nhập, giới hạn tần suất, hàng đợi BullMQ. |
+| Bộ nhớ đệm / hàng đợi | **Redis** | Cache thực đơn đã công bố, phiên đăng nhập, giới hạn tần suất, hàng đợi của worker. |
 | Tệp | Lưu trữ đối tượng tương thích S3 + CDN | Ảnh món, ảnh chứng từ, mẫu lưu, tệp hợp đồng. |
 | Mô hình ngôn ngữ | Gọi qua API nhà cung cấp, từ worker [CHỜ Q-09] | Xem mục 5. |
 
@@ -252,6 +257,8 @@ Giữ nội dung bản HTML, sửa theo [bản phân tích](../../GiaPhat_PhanTi
 
 ### 5.1 Nguyên tắc chung
 
+Cấu trúc kỹ thuật của hai agent (agent runtime, công cụ, MCP, RAG, lan can): [Kiến trúc AI agent](../nen-tang/srs/agent-architecture.md).
+
 1. **AI không tự tính số.** Cost, định lượng, dinh dưỡng, kiểm quy tắc đều do hàm xác định trong MENU/COST/NUTR thực hiện; agent gọi các hàm đó như công cụ và chỉ diễn giải kết quả.
 2. **AI chỉ dùng món, công thức đã duyệt.** Không bịa món, không bịa định lượng.
 3. **Đầu ra là bản nháp.** Thực đơn do AI tạo luôn đi qua MENU-07, người thật duyệt mới công bố.
@@ -374,6 +381,7 @@ Không ghi thời lượng vì chưa biết quy mô đội phát triển [CHỜ 
 | R-05 | Chi phí AI tăng theo lượt dùng công khai. | Hạn mức theo ngày, giới hạn khách vãng lai, cache kết quả thực đơn mẫu. |
 | R-06 | Mất SEO khi bỏ WordPress. | Giữ URL, 301, sitemap, kiểm tra trước khi chuyển tên miền. |
 | R-07 | Người ăn không chọn → số đặt thiếu ổn định, ảnh hưởng mua hàng. | Quy tắc mặc định Q-03, nhắc trước hạn, người đặt tổng chốt cuối. |
+| R-08 | Nhân sự Rust khó tuyển hơn NodeJS; đội phát triển chưa xác định (Q-15). Thư viện hàng đợi, MCP và lời gọi mô hình AI phía Rust đổi nhanh. | Trả lời Q-15 trước khi dựng khung mã; ghim phiên bản thư viện; chi tiết ở [CR-CORE-2026-001](../nen-tang/cr/CR-CORE-2026-001.md) mục 3. |
 
 ---
 

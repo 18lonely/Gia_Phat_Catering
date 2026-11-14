@@ -251,3 +251,20 @@ Baseline gói chụp 1175 file cũ trong docs trước khi viết; chỉ hai t�
 | 0.9.1 | 13/11/2026 | BA | Append mốc XC-01–12, DEC-27 và BA-Q |
 
 Hiệu chỉnh số nhóm trong cùng mốc: rà tiêu chí một chữ ký yêu cầu tách 18 câu khỏi nhóm chủ đề cũ. Tổng hiện hành là **214 nhóm DEC**, vẫn 224 câu nguồn và 0 câu trả lời; xem bảng ánh xạ và bảng tách trong gói quyết định.
+
+
+## Mốc hiện hành: đổi backend sang Rust/Axum và kiến trúc AI agent, 14/11/2026
+
+Theo yêu cầu người dùng ngày 14/11/2026, backend đổi từ NodeJS/NestJS sang **Rust với Axum** (quyết định D-22); frontend giữ ReactJS, cơ sở dữ liệu giữ MySQL 8. Phân tích tác động và danh sách file sửa: [CR-CORE-2026-001](nen-tang/cr/CR-CORE-2026-001.md). Các mục phía trên giữ nguyên byte và là lịch sử; chỗ nào phía trên ghi NodeJS/NestJS là mốc trước CR này.
+
+Hai tài liệu mới, trạng thái Draft: [Kiến trúc hệ thống](nen-tang/srs/architecture.md) (kiến trúc chạy, lựa chọn công nghệ, cấu trúc mã nguồn Rust và React, ánh xạ 13 epic sang crate) và [Kiến trúc AI agent](nen-tang/srs/agent-architecture.md) (agent runtime, hai bộ công cụ, hai MCP server, RAG hai chỉ mục, lan can). Ngôn ngữ backend là đã chốt; tên thư viện (SQLx, apalis, utoipa, rmcp), kho vector Qdrant và Next.js cho website công khai là đề xuất.
+
+Đã sửa tên công nghệ trong kế hoạch tổng thể v0.3.0, BRD v0.1.1, PRD v0.1.3, hướng dẫn đọc v0.1.1, bản phân tích gốc, SRS nền tảng v0.3.0 và một câu trong SRS E2 v0.3.4, E3 v0.3.3, E4 v0.1.2. Dựng lại preview và sơ đồ E1 đến E5 bằng `render-review.cjs`: 160 tài liệu, 49 sơ đồ, 0 lỗi render; lần dựng này cũng đưa vào preview các thay đổi Markdown của những phiên trước.
+
+Không đổi: FR, BR, ERR, NFR, use case, story, AC, test case, endpoint, wireframe; schema giữ 65 bảng. Độ phủ thiết kế tài liệu nháp giữ **75/78 ≈ 96,2 %**. **0 câu hỏi được trả lời**, 0 feature được duyệt, 0 ca sản phẩm đã chạy. Q-09, Q-12, Q-15, O-04, AIO-Q01 đến Q06, E9-Q01 đến Q14 và O-03 giữ trạng thái mở. Phát sinh một câu hỏi mới chưa có mã: ai duyệt tài liệu trước khi đưa vào kho RAG; cần đưa vào gói quyết định ở lần rà kế tiếp.
+
+Các file bị sửa lệch hash so với baseline của những đợt trước; đây là thay đổi có chủ đích theo CR, không khôi phục và không chụp lại baseline lịch sử. Không backend, migration, gọi mô hình AI hoặc commit.
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.10.0 | 14/11/2026 | BA | Append mốc D-22, CR-CORE-2026-001 và hai tài liệu kiến trúc |

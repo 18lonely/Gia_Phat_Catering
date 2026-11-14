@@ -6,7 +6,7 @@
 |---|---|
 | Template | `06-brd.md` · BA-Kit v1.0 |
 | Sản phẩm | Website công khai + cổng khách hàng/người ăn + quản trị nội bộ + 2 AI agent |
-| Phiên bản | v0.1.0 |
+| Phiên bản | v0.1.1 |
 | Trạng thái | **Bản nháp chờ duyệt**: chưa có số liệu tài chính (mục 8), còn 6 điểm mở (mục 11) |
 | Ngày | 10/11/2026 |
 | Người duyệt | Giám đốc Gia Phát (xem điểm mở O-06) |
@@ -16,6 +16,7 @@
 
 | Phiên bản | Ngày | Người thực hiện | Tóm tắt thay đổi |
 |---|---|---|---|
+| 0.1.1 | 14/11/2026 | BA | Ràng buộc công nghệ mục 10 đổi sang Rust/Axum theo D-22, CR-CORE-2026-001 |
 | 0.1.0 | 10/11/2026 | BA | Khởi tạo từ 21 quyết định D-01 → D-21 của kế hoạch tổng thể |
 
 Quy ước: **[ĐÃ CHỐT D-xx]** dẫn về quyết định trong kế hoạch tổng thể · **[ĐỀ XUẤT]** chờ duyệt · **[CẦN SỐ LIỆU]** Gia Phát phải cung cấp, tài liệu này không tự ước lượng.
@@ -265,7 +266,7 @@ Thang điểm: khả năng và tác động từ 1 (thấp) đến 3 (cao).
 
 **Ràng buộc** (đã chốt)
 
-- Công nghệ: ReactJS, NodeJS/NestJS, MySQL.
+- Công nghệ: ReactJS, Rust/Axum, MySQL [D-22, thay NodeJS/NestJS theo [CR-CORE-2026-001](../nen-tang/cr/CR-CORE-2026-001.md)].
 - Tải: 1000 người dùng đồng thời.
 - Không tuyển thêm nhân sự vận hành; giữ cơ cấu tổ chức hiện có (bản HTML, mục 0).
 - MISA vẫn là hệ thống kế toán chính thức.

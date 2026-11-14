@@ -76,8 +76,11 @@ Thiếu các thực thể: **Người dùng/vai trò**, **Cơ sở (bếp)**, **
 ---
 
 ## 5. Hướng tối ưu
-- **Tách 3 mặt tiền, 1 lõi**: site công khai (comgiaphat.com) · cổng khách hàng/dinh dưỡng · subdomain quản trị, dùng chung một API NestJS + MySQL.
+
+> Cập nhật 14/11/2026: backend đổi từ NestJS sang Rust/Axum theo quyết định D-22 ([CR-CORE-2026-001](docs/nen-tang/cr/CR-CORE-2026-001.md)). Các gạch đầu dòng bên dưới giữ nguyên hướng kiến trúc, chỉ thay tên công nghệ.
+
+- **Tách 3 mặt tiền, 1 lõi**: site công khai (comgiaphat.com) · cổng khách hàng/dinh dưỡng · subdomain quản trị, dùng chung một API Rust (Axum) + MySQL.
 - **Đưa "Thực đơn – Định lượng – Cost" lên làm phân hệ lõi GĐ1**: nguyên liệu + giá nhập theo thời gian → công thức theo mức giá suất → cost/suất → kiểm tra 52% → thực đơn tuần đã kiểm quy tắc.
 - **AI agent không tự tính số.** Mô hình ngôn ngữ chỉ hiểu yêu cầu và đề xuất tổ hợp món; cost, định lượng, kiểm quy tắc do code xác định (tool) thực hiện; kết quả luôn kèm danh sách quy tắc đạt/vi phạm; chạy qua hàng đợi để không kéo sập API khi đông người.
-- **1000 CCU** với NestJS + MySQL không khó nếu: API stateless chạy nhiều bản, Redis cho cache thực đơn/phiên, đọc–ghi tách, hàng đợi cho AI và thông báo. Điểm nghẽn thật là **giờ chốt order** (ghi dồn) và **lời gọi AI** (chậm, tốn tiền), thiết kế tập trung vào hai chỗ đó.
+- **1000 CCU** với Rust (Axum) + MySQL không khó nếu: API stateless chạy nhiều bản, Redis cho cache thực đơn/phiên, đọc–ghi tách, hàng đợi cho AI và thông báo. Điểm nghẽn thật là **giờ chốt order** (ghi dồn) và **lời gọi AI** (chậm, tốn tiền), thiết kế tập trung vào hai chỗ đó.
 - **Minh bạch** nên chia 2 lớp: lớp cho khách (định lượng, thành phần, dinh dưỡng, dị ứng, lịch sử giao–nhận, đối soát) và lớp nội bộ (giá nhập, cost %, biên lợi nhuận), không lộ lớp sau ra cổng khách.

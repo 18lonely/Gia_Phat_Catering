@@ -1,19 +1,20 @@
 ---
 id: DOC-HUONG-DAN-DOC
 title: Hướng dẫn đọc bộ tài liệu Gia Phát và bảng thuật ngữ
-version: 0.1.0
+version: 0.1.1
 phase: Review
 domain: Gia Phát
 tags: [huong-dan, thuat-ngu, onboarding]
 author: BA
-last_updated: 2026-11-13
+last_updated: 2026-11-14
 ---
 # Hướng dẫn đọc bộ tài liệu Gia Phát và bảng thuật ngữ
 
-Phiên bản 0.1.0 · 13/11/2026 · Người viết: BA.
+Phiên bản 0.1.1 · 14/11/2026 · Người viết: BA.
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 2026-11-14 | BA | Công nghệ đổi sang Rust/Axum theo D-22; thêm hai tài liệu kiến trúc vào lộ trình đọc của Dev |
 | 0.1.0 | 2026-11-13 | BA | Khởi tạo: bản đồ thư mục, lộ trình đọc theo vai trò, 4 ví dụ đọc, cách giải mã mã định danh, bảng thuật ngữ |
 
 File này giúp người mới đọc được kho tài liệu `D:\BA` mà không bị lạc giữa hơn 1.200 file và hàng trăm loại mã. Nó **không thay** nội dung của tài liệu nào; khi có khác biệt, tài liệu gốc được dẫn link là căn cứ.
@@ -29,7 +30,7 @@ File này giúp người mới đọc được kho tài liệu `D:\BA` mà khôn
 - **Quản trị nội bộ**: nguyên liệu, món, công thức định lượng, thực đơn tuần, **cost** (chi phí nguyên liệu) với ngưỡng 52% doanh thu, giao nhận, doanh thu, CRM, mua hàng, báo cáo, lợi nhuận.
 - **Hai AI agent**: Agent Nội bộ (giúp dinh dưỡng viên dựng thực đơn) và Agent Dinh dưỡng viên (phía khách).
 
-Công nghệ đã chốt: ReactJS, NodeJS/NestJS, MySQL; chịu tải 1.000 người dùng đồng thời.
+Công nghệ đã chốt: ReactJS, Rust/Axum, MySQL; chịu tải 1.000 người dùng đồng thời. Backend đổi từ NodeJS/NestJS sang Rust ngày 14/11/2026 theo [CR-CORE-2026-001](nen-tang/cr/CR-CORE-2026-001.md).
 
 > **Điều quan trọng nhất cần nhớ khi đọc:** toàn bộ kho là **tài liệu nháp (Draft)**. Chưa có backend, chưa có migration, chưa có UAT, **0 câu hỏi mở được trả lời, 0 tính năng được phê duyệt, 0 ca kiểm thử sản phẩm đã chạy**. Mọi con số "độ phủ" (ví dụ 75/78 ≈ 96,2%) chỉ đo **tài liệu đã viết**, không đo phần mềm đã làm hay nghiệp vụ đã duyệt.
 
@@ -145,6 +146,8 @@ Mọi epic theo cùng một khuôn (một số epic thiếu vài file hoặc có
 ### 3.3 Dev / Tech lead
 
 1. [SRS nền tảng](nen-tang/srs/spec.md) (NFR toàn hệ thống, phân quyền, nhật ký) và [ERD](nen-tang/srs/erd.md) / [schema.dbml](nen-tang/srs/schema.dbml) (65 bảng).
+   - [Kiến trúc hệ thống](nen-tang/srs/architecture.md): các tầng, cấu trúc mã nguồn Rust và React.
+   - [Kiến trúc AI agent](nen-tang/srs/agent-architecture.md): công cụ, MCP, RAG, lan can.
 2. Với epic được giao: `srs/spec.md` → `api/api-spec.md` → `srs/states.md` → `review/dependencies.md`.
 3. Đọc kỹ cột **Gate / Điểm mở** trong mỗi bảng: phần có gate chưa được phép "đóng băng" (freeze) để code.
 

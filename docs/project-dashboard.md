@@ -251,3 +251,12 @@ Baseline gói chụp 1175 file cũ trong docs trước khi viết; chỉ hai t�
 | 0.1.1 | 13/11/2026 | BA | Append mốc XC-01–12, DEC-27 và BA-Q |
 
 Hiệu chỉnh số nhóm trong cùng mốc: rà tiêu chí một chữ ký yêu cầu tách 18 câu khỏi nhóm chủ đề cũ. Tổng hiện hành là **214 nhóm DEC**, vẫn 224 câu nguồn và 0 câu trả lời; xem bảng ánh xạ và bảng tách trong gói quyết định.
+
+
+## Mốc hiện hành: đổi backend sang Rust/Axum và kiến trúc AI agent, 14/11/2026
+
+Backend đổi sang Rust/Axum theo D-22 và [CR-CORE-2026-001](nen-tang/cr/CR-CORE-2026-001.md). Thêm [Kiến trúc hệ thống](nen-tang/srs/architecture.md) và [Kiến trúc AI agent](nen-tang/srs/agent-architecture.md), đều Draft. Số liệu độ phủ không đổi: **75/78** tính năng có thiết kế tài liệu nháp; số FR, story, AC, test case, endpoint và 65 bảng giữ nguyên. **0 câu được trả lời**, 0 feature được duyệt, 0 ca sản phẩm đã chạy.
+
+| Phiên bản | Ngày | Người thực hiện | Nội dung |
+| :--- | :--- | :--- | :--- |
+| 0.1.2 | 14/11/2026 | BA | Append mốc D-22 và hai tài liệu kiến trúc; không đổi số liệu |

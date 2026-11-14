@@ -7,15 +7,16 @@
 | Epic | E2 · `thuc-don-dinh-luong`: đợt phát hành R2 (v0.2.0) |
 | Phân hệ | MENU |
 | Tính năng PRD | `FEAT-006` → `FEAT-013` |
-| Phiên bản | 0.3.3 |
+| Phiên bản | 0.3.4 |
 | Trạng thái | Draft: **phần 3.3 (bộ kiểm quy tắc) mới có khung và cách tính; con số từng quy tắc chờ DL-01** |
-| Ngày | 2026-11-11 |
+| Ngày | 2026-11-14 |
 | Tiêu chuẩn | IEEE Std 830-1998 / ISO/IEC/IEEE 29148 |
 
 ### Lịch sử sửa đổi
 
 | Phiên bản | Ngày | Người thực hiện | Tóm tắt thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.3.4 | 2026-11-14 | BA | Đổi tên công nghệ backend sang Rust/Axum theo D-22, CR-CORE-2026-001; không đổi FR, BR |
 | 0.3.3 | 2026-11-11 | BA | Liên kết hồ sơ bổ sung E1–E5/E6 khởi đầu; giữ quy tắc và điểm mở |
 | 0.3.2 | 2026-11-11 | BA | Liên kết hợp đồng E4/E5; giữ nguyên FR và cổng duyệt/Cost |
 | 0.3.1 | 2026-11-11 | BA | Đồng bộ quyền xem kết quả cost và điểm tích hợp Cost R3; không chốt các điểm mở. |
@@ -60,7 +61,7 @@ Theo mục 1.4 của [epic-spec](../epic-spec.md). Không gồm: giá nhập và
 
 ### 2.1 Bối cảnh
 
-MENU là một module trong API NestJS. Nó dùng AUTH và SYS của nền tảng (phân quyền, nhật ký, tham số, thông báo, tệp) và cung cấp cho các module sau ba dịch vụ nội bộ:
+MENU là một module (crate) trong API Rust/Axum [D-22, [CR-CORE-2026-001](../../nen-tang/cr/CR-CORE-2026-001.md)]. Nó dùng AUTH và SYS của nền tảng (phân quyền, nhật ký, tham số, thông báo, tệp) và cung cấp cho các module sau ba dịch vụ nội bộ:
 
 | Dịch vụ | Dùng bởi | Nội dung |
 | :--- | :--- | :--- |

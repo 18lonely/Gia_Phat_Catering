@@ -7,15 +7,16 @@
 | Epic | E1 · `nen-tang`: đợt phát hành R1 (v0.1.0) |
 | Phân hệ | AUTH, SYS + kiến trúc và yêu cầu phi chức năng dùng chung cho toàn hệ thống |
 | Tính năng PRD | `FEAT-001` → `FEAT-005` |
-| Phiên bản | 0.2.1 |
+| Phiên bản | 0.3.0 |
 | Trạng thái | Draft |
-| Ngày | 2026-11-11 |
+| Ngày | 2026-11-14 |
 | Tiêu chuẩn | IEEE Std 830-1998 / ISO/IEC/IEEE 29148 · ISO/IEC 25010 cho NFR |
 
 ### Lịch sử sửa đổi
 
 | Phiên bản | Ngày | Người thực hiện | Tóm tắt thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.3.0 | 2026-11-14 | BA | Backend đổi sang Rust/Axum theo D-22 và CR-CORE-2026-001: sửa sơ đồ 2.1, mục 2.2, 2.5; liên kết kiến trúc hệ thống và kiến trúc AI agent. Không đổi FR, BR, ERR, NFR |
 | 0.2.1 | 2026-11-11 | BA | Liên kết hồ sơ bổ sung E1–E5/E6 khởi đầu; giữ quy tắc và điểm mở |
 | 0.2.0 | 2026-11-11 | BA | Bổ sung 6 tham số Cost theo SRS E3; giữ trạng thái đề xuất và VAT chưa chốt. |
 | 0.1.0 | 2026-11-10 | BA | Khởi tạo |
@@ -78,8 +79,8 @@ flowchart TB
   end
   LB[Cân bằng tải + TLS]
   subgraph Loi
-    API[API NestJS · ≥ 2 bản<br/>api.comgiaphat.com]
-    WK[Worker NestJS + BullMQ<br/>AI · thông báo · chốt số · xuất file]
+    API[API Rust Axum · ≥ 2 bản<br/>api.comgiaphat.com]
+    WK[Worker Rust + apalis<br/>AI · thông báo · chốt số · xuất file]
   end
   DB[(MySQL 8 primary)]
   RR[(MySQL read replica)]
@@ -107,7 +108,7 @@ flowchart TB
   WK -.file.-> MISA
 ```
 
-Nhà cung cấp hạ tầng và mô hình AI: [O-04]. Kênh thông báo ngoài: [Q-14].
+Nhà cung cấp hạ tầng và mô hình AI: [O-04]. Kênh thông báo ngoài: [Q-14]. Chi tiết từng tầng và cấu trúc mã nguồn: [Kiến trúc hệ thống](architecture.md). Cấu trúc hai agent, công cụ, MCP và RAG: [Kiến trúc AI agent](agent-architecture.md).
 
 ### 2.2 Phân hệ và tính năng chính
 
@@ -116,7 +117,7 @@ Nhà cung cấp hạ tầng và mô hình AI: [O-04]. Kênh thông báo ngoài: 
 | AUTH | Đăng nhập, phiên, mật khẩu, tài khoản nội bộ, vai trò và phạm vi dữ liệu, tài khoản dịch vụ |
 | SYS | Nhật ký thay đổi, tham số, thông báo, tải tệp, tác vụ nền, kiểm tra sức khoẻ hệ thống |
 
-API là **modular monolith**: mỗi phân hệ một module NestJS (`auth`, `sys`, `menu`, `cost`, `nutr`, `ord`, …), gọi nhau qua giao diện dịch vụ của module, không truy vấn chéo bảng của module khác.
+API là **modular monolith**: mỗi phân hệ một crate Rust trong cùng Cargo workspace (`auth`, `sys`, `menu`, `cost`, `nutr`, `ord`, …), gọi nhau qua giao diện dịch vụ của module, không truy vấn chéo bảng của module khác.
 
 ### 2.3 Phân loại người dùng
 
@@ -155,7 +156,7 @@ Một tài khoản giữ được nhiều vai trò (ví dụ một kế toán gi
 
 ### 2.5 Ràng buộc thiết kế
 
-- ReactJS, NodeJS/NestJS, MySQL [đã chốt].
+- ReactJS, Rust/Axum, MySQL [đã chốt; backend theo D-22, [CR-CORE-2026-001](../cr/CR-CORE-2026-001.md)].
 - Tiền lưu bằng số nguyên đồng (VND), không dùng số thực.
 - Khối lượng lưu bằng số thập phân cố định; mỗi giá trị kèm đơn vị.
 - Mọi bảng nghiệp vụ có: người tạo, thời điểm tạo, người sửa cuối, thời điểm sửa cuối, cờ huỷ. Không xoá cứng.

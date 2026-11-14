@@ -1,9 +1,10 @@
 # SRS: Dinh dưỡng E4
 
-Phiên bản 0.1.1 · 2026-11-11 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
+Phiên bản 0.1.2 · 2026-11-14 · **Draft: đề xuất thiết kế để review, chưa phê duyệt nghiệp vụ; chưa triển khai backend.**
 
 | Phiên bản | Ngày | Người thực hiện | Thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.1.2 | 2026-11-14 | BA | Đổi tên công nghệ backend sang Rust/Axum theo D-22, CR-CORE-2026-001; không đổi FR |
 | 0.1.1 | 2026-11-11 | BA | Liên kết hồ sơ bổ sung E1–E5/E6 khởi đầu; giữ quy tắc và điểm mở |
 | 0.1.0 | 2026-11-11 | BA | Khởi tạo gói MVP từ PRD/roadmap và thiết kế hiện có |
 
@@ -15,7 +16,7 @@ Ngoài MVP: hồ sơ sức khỏe, mục tiêu nhóm người ăn FEAT-086, nh�
 
 ## 2. Tổng quan và phụ thuộc
 
-Web nội bộ theo nền tảng NodeJS/NestJS, MySQL; tên API là thiết kế, không phải xác nhận stack đã chạy. Dùng recipe_items.qty_std (không tự chọn min/max); recipe ACTIVE hiệu lực theo ngày; O-02 về nhiều cỡ vẫn mở, đầu vào phải chỉ rõ recipeId. Gram phần ăn được khác lượng mua có hao hụt trong Cost.
+Web nội bộ theo nền tảng Rust/Axum, MySQL (D-22, [CR-CORE-2026-001](../../nen-tang/cr/CR-CORE-2026-001.md)); tên API là thiết kế, không phải xác nhận stack đã chạy. Dùng recipe_items.qty_std (không tự chọn min/max); recipe ACTIVE hiệu lực theo ngày; O-02 về nhiều cỡ vẫn mở, đầu vào phải chỉ rõ recipeId. Gram phần ăn được khác lượng mua có hao hụt trong Cost.
 
 Quyền **đề xuất chờ NUTR-Q01**: DINH_DUONG_VIEN có nutr.read/write/calculate; GIAM_DOC có nutr.read; vai trò khác chưa cấp mới. Agent chỉ gọi calculate/read qua giao quyền người dùng–dịch vụ; không tự sửa bảng thành phần. Phạm vi menu/cơ sở do quyền nền tảng kiểm, không tin kitchenId client. Mọi sửa số liệu có audit, lý do và version. Chưa thêm cổng chặn công bố MENU vì thiếu dinh dưỡng khi chưa có quyết định nghiệp vụ cho cổng đó.
 

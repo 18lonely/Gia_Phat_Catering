@@ -1,6 +1,24 @@
 [
   {
     "folder": "nen-tang",
+    "source": "srs/agent-architecture.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "nen-tang",
+    "source": "srs/agent-architecture.md",
+    "diagram": 2,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "nen-tang",
+    "source": "srs/architecture.md",
+    "diagram": 1,
+    "status": "RENDERED"
+  },
+  {
+    "folder": "nen-tang",
     "source": "srs/erd.md",
     "diagram": 1,
     "status": "RENDERED"

@@ -3,17 +3,18 @@
 ## Metadata
 
 - **Product Name**: Nền tảng Gia Phát (website công khai · cổng khách hàng và người ăn · quản trị nội bộ · 2 AI agent)
-- **Document Version**: 0.1.2
+- **Document Version**: 0.1.3
 - **Status**: Draft
 - **Product Owner**: [Chưa chỉ định, phụ thuộc điểm mở O-06]
 - **Lead BA**: [Chưa chỉ định]
-- **Last Updated**: 2026-11-11
+- **Last Updated**: 2026-11-14
 - **Tài liệu liên quan**: [BRD](06-brd.md) · [URD](05-urd.md) · [Kế hoạch tổng thể](00-ke-hoach-tong-the.md) · [Bảng quy tắc thực đơn](brainstorms/quy-tac-thuc-don.md)
 
 ### Lịch sử sửa đổi
 
 | Phiên bản | Ngày | Người thực hiện | Tóm tắt thay đổi |
 | :--- | :--- | :--- | :--- |
+| 0.1.3 | 2026-11-14 | BA | Ràng buộc công nghệ mục 5 đổi sang Rust/Axum theo D-22, CR-CORE-2026-001; không đổi tính năng |
 | 0.1.2 | 2026-11-11 | BA | Liên kết hồ sơ bổ sung E1–E5/E6 khởi đầu; giữ quy tắc và điểm mở |
 | 0.1.1 | 2026-11-11 | BA | Liên kết gói BA nháp E4/E5, ghi gate còn mở; không thay phạm vi hay nghiệm thu release |
 | 0.1.0 | 2026-11-10 | BA | Khởi tạo từ BRD v0.1.0, URD v0.1.0 và các quyết định D-01 → D-21 |
@@ -216,7 +217,7 @@ Tổng: 23 tính năng đợt Now · 36 đợt Next · 19 đợt Later.
 
 **Ràng buộc**
 
-- Công nghệ: ReactJS (Next.js cho website công khai [ĐỀ XUẤT]), NodeJS/NestJS, MySQL.
+- Công nghệ: ReactJS (Next.js cho website công khai [ĐỀ XUẤT]), Rust/Axum, MySQL [D-22, thay NodeJS/NestJS theo [CR-CORE-2026-001](../nen-tang/cr/CR-CORE-2026-001.md)].
 - Tải: 1000 người dùng đồng thời.
 - MISA vẫn là sổ kế toán chính thức.
 - Không tuyển thêm nhân sự vận hành.
