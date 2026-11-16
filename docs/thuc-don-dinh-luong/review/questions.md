@@ -22,17 +22,17 @@ Câu hỏi E2 được ghi gốc ở [SRS E2 mục 4.5](../srs/spec.md) và [API
 
 | Mã | Câu hỏi (link về nơi gốc) | Nhóm DEC | Người quyết định | Chặn release | Mức |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| E2-Q1 | [Cách kiểm ngưỡng giá suất](../../thuc-don-dinh-luong/srs/spec.md#L410) | [DEC-28](../../gia-phat/review/decision-pack/decision-groups.md#dec-28) | Dinh dưỡng viên, Giám đốc | R2 | P-MVP |
-| E2-Q2 | [Quy tắc tuần có xét tuần trước không](../../thuc-don-dinh-luong/srs/spec.md#L411) | [DEC-27](../../gia-phat/review/decision-pack/decision-groups.md#dec-27) | Người soạn docx | R2 | P-MVP |
-| E2-Q3 | [Tuần phục vụ gồm những ngày nào](../../thuc-don-dinh-luong/srs/spec.md#L412) | [DEC-30](../../gia-phat/review/decision-pack/decision-groups.md#dec-30) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q4 | [Thực đơn chung hay riêng theo khách](../../thuc-don-dinh-luong/srs/spec.md#L413) | [DEC-31](../../gia-phat/review/decision-pack/decision-groups.md#dec-31) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q5 | [Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?](../../thuc-don-dinh-luong/srs/spec.md#L420) | [DEC-38](../../gia-phat/review/decision-pack/decision-groups.md#dec-38) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q6 | [Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)](../../thuc-don-dinh-luong/srs/spec.md#L414) | [DEC-32](../../gia-phat/review/decision-pack/decision-groups.md#dec-32) | Dinh dưỡng viên, người duyệt | R2 | P-MVP |
-| E2-Q7 | [Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?](../../thuc-don-dinh-luong/srs/spec.md#L415) | [DEC-33](../../gia-phat/review/decision-pack/decision-groups.md#dec-33) | Giám đốc | R2 | P-MVP |
-| E2-Q8 | [Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?](../../thuc-don-dinh-luong/srs/spec.md#L416) | [DEC-34](../../gia-phat/review/decision-pack/decision-groups.md#dec-34) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q9 | [Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)](../../thuc-don-dinh-luong/srs/spec.md#L417) | [DEC-35](../../gia-phat/review/decision-pack/decision-groups.md#dec-35) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q10 | [Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)](../../thuc-don-dinh-luong/srs/spec.md#L418) | [DEC-36](../../gia-phat/review/decision-pack/decision-groups.md#dec-36) | Dinh dưỡng viên | R2 | P-MVP |
-| E2-Q11 | [Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)](../../thuc-don-dinh-luong/srs/spec.md#L419) | [DEC-37](../../gia-phat/review/decision-pack/decision-groups.md#dec-37) | Người duyệt | R2 | P-MVP |
+| E2-Q1 | [Cách kiểm ngưỡng giá suất](../../thuc-don-dinh-luong/srs/spec.md#L411) | [DEC-28](../../gia-phat/review/decision-pack/decision-groups.md#dec-28) | Dinh dưỡng viên, Giám đốc | R2 | P-MVP |
+| E2-Q2 | [Quy tắc tuần có xét tuần trước không](../../thuc-don-dinh-luong/srs/spec.md#L412) | [DEC-27](../../gia-phat/review/decision-pack/decision-groups.md#dec-27) | Người soạn docx | R2 | P-MVP |
+| E2-Q3 | [Tuần phục vụ gồm những ngày nào](../../thuc-don-dinh-luong/srs/spec.md#L413) | [DEC-30](../../gia-phat/review/decision-pack/decision-groups.md#dec-30) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q4 | [Thực đơn chung hay riêng theo khách](../../thuc-don-dinh-luong/srs/spec.md#L414) | [DEC-31](../../gia-phat/review/decision-pack/decision-groups.md#dec-31) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q5 | [Khoảng định lượng và chất độn dùng chuẩn từng món hay bảng theo nguyên liệu/kiểu món; lưu ở đâu?](../../thuc-don-dinh-luong/srs/spec.md#L421) | [DEC-38](../../gia-phat/review/decision-pack/decision-groups.md#dec-38) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q6 | [Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)](../../thuc-don-dinh-luong/srs/spec.md#L415) | [DEC-32](../../gia-phat/review/decision-pack/decision-groups.md#dec-32) | Dinh dưỡng viên, người duyệt | R2 | P-MVP |
+| E2-Q7 | [Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?](../../thuc-don-dinh-luong/srs/spec.md#L416) | [DEC-33](../../gia-phat/review/decision-pack/decision-groups.md#dec-33) | Giám đốc | R2 | P-MVP |
+| E2-Q8 | [Có cần thu hồi và sửa từng ngày của thực đơn đã công bố, thay vì cả tuần?](../../thuc-don-dinh-luong/srs/spec.md#L417) | [DEC-34](../../gia-phat/review/decision-pack/decision-groups.md#dec-34) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q9 | [Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)](../../thuc-don-dinh-luong/srs/spec.md#L418) | [DEC-35](../../gia-phat/review/decision-pack/decision-groups.md#dec-35) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q10 | [Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)](../../thuc-don-dinh-luong/srs/spec.md#L419) | [DEC-36](../../gia-phat/review/decision-pack/decision-groups.md#dec-36) | Dinh dưỡng viên | R2 | P-MVP |
+| E2-Q11 | [Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)](../../thuc-don-dinh-luong/srs/spec.md#L420) | [DEC-37](../../gia-phat/review/decision-pack/decision-groups.md#dec-37) | Người duyệt | R2 | P-MVP |
 
 ## 2. Câu hỏi hợp đồng API E2
 

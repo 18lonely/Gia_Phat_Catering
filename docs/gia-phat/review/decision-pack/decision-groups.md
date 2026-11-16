@@ -35,7 +35,7 @@ Mã nguồn: O-03. Người quyết định: Giám đốc. Release: R6, R9. [Bu�
 
 ### O-03
 
-[Nguồn, dòng 252](../../01-prd.md#L252). Nội dung đầy đủ:
+[Nguồn, dòng 253](../../01-prd.md#L253). Nội dung đầy đủ:
 
 > Gợi ý cá nhân có xét bệnh lý không
 
@@ -63,7 +63,7 @@ Mã nguồn: O-04. Người quyết định: Giám đốc. Release: R1, R5. [Bu�
 
 ### O-04
 
-[Nguồn, dòng 253](../../01-prd.md#L253). Nội dung đầy đủ:
+[Nguồn, dòng 254](../../01-prd.md#L254). Nội dung đầy đủ:
 
 > Đội phát triển, hạ tầng, nhà cung cấp AI, ngân sách
 
@@ -91,7 +91,7 @@ Mã nguồn: O-06. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### O-06
 
-[Nguồn, dòng 255](../../01-prd.md#L255). Nội dung đầy đủ:
+[Nguồn, dòng 256](../../01-prd.md#L256). Nội dung đầy đủ:
 
 > Ai duyệt ngoại lệ và ai thay khi vắng
 
@@ -119,7 +119,7 @@ Mã nguồn: O-02, H-9. Người quyết định: Dinh dưỡng viên. Release: 
 
 ### O-02
 
-[Nguồn, dòng 251](../../01-prd.md#L251). Nội dung đầy đủ:
+[Nguồn, dòng 252](../../01-prd.md#L252). Nội dung đầy đủ:
 
 > Một món một định lượng hay nhiều cỡ định lượng
 
@@ -167,7 +167,7 @@ Mã nguồn: O-01, H-6, H-7. Người quyết định: Kế toán. Release: R3, 
 
 ### O-01
 
-[Nguồn, dòng 250](../../01-prd.md#L250). Nội dung đầy đủ:
+[Nguồn, dòng 251](../../01-prd.md#L251). Nội dung đầy đủ:
 
 > Cost gồm những khoản nào; thuế suất VAT
 
@@ -535,7 +535,7 @@ Mã nguồn: O-05. Người quyết định: Giám đốc. Release: R6. [Buổi 
 
 ### O-05
 
-[Nguồn, dòng 254](../../01-prd.md#L254). Nội dung đầy đủ:
+[Nguồn, dòng 255](../../01-prd.md#L255). Nội dung đầy đủ:
 
 > Trường học, bệnh viện, tiệc cỗ có trong bản đầu không
 
@@ -675,7 +675,7 @@ Mã nguồn: N-01. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### N-01
 
-[Nguồn, dòng 403](../../../nen-tang/srs/spec.md#L378). Nội dung đầy đủ:
+[Nguồn, dòng 379](../../../nen-tang/srs/spec.md#L379). Nội dung đầy đủ:
 
 > Nhân viên đăng nhập bằng số điện thoại, email, hay tên do quản trị đặt? (Bếp trưởng có thể không có email công việc.)
 
@@ -703,7 +703,7 @@ Mã nguồn: N-02. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### N-02
 
-[Nguồn, dòng 404](../../../nen-tang/srs/spec.md#L379). Nội dung đầy đủ:
+[Nguồn, dòng 380](../../../nen-tang/srs/spec.md#L380). Nội dung đầy đủ:
 
 > Ai giữ vai trò quản trị hệ thống: người của Gia Phát hay đội phát triển?
 
@@ -731,7 +731,7 @@ Mã nguồn: N-03. Người quyết định: Giám đốc, kế toán. Release: 
 
 ### N-03
 
-[Nguồn, dòng 405](../../../nen-tang/srs/spec.md#L380). Nội dung đầy đủ:
+[Nguồn, dòng 381](../../../nen-tang/srs/spec.md#L381). Nội dung đầy đủ:
 
 > Thời gian lưu nhật ký thay đổi (đề xuất 5 năm) và nhật ký đăng nhập (đề xuất 1 năm)
 
@@ -759,7 +759,7 @@ Mã nguồn: N-04. Người quyết định: Giám đốc. Release: chưa rõ. [
 
 ### N-04
 
-[Nguồn, dòng 406](../../../nen-tang/srs/spec.md#L381). Nội dung đầy đủ:
+[Nguồn, dòng 382](../../../nen-tang/srs/spec.md#L382). Nội dung đầy đủ:
 
 > Có bắt buộc xác thực 2 bước cho Giám đốc, kế toán doanh thu, quản trị không?
 
@@ -787,7 +787,7 @@ Mã nguồn: Q-14. Người quyết định: Giám đốc. Release: R6. [Buổi 
 
 ### Q-14
 
-[Nguồn, dòng 407](../../../nen-tang/srs/spec.md#L382). Nội dung đầy đủ:
+[Nguồn, dòng 383](../../../nen-tang/srs/spec.md#L383). Nội dung đầy đủ:
 
 > Kênh thông báo ngoài (Zalo OA, SMS, email)
 
@@ -815,7 +815,7 @@ Mã nguồn: Q-18. Người quyết định: Giám đốc. Release: R1. [Buổi 
 
 ### Q-18
 
-[Nguồn, dòng 408](../../../nen-tang/srs/spec.md#L383). Nội dung đầy đủ:
+[Nguồn, dòng 384](../../../nen-tang/srs/spec.md#L384). Nội dung đầy đủ:
 
 > Số người ăn, số công ty, số điểm giao mỗi ngày
 
@@ -863,7 +863,7 @@ Trả lời để trống trong [sổ quyết định](decision-register.md); [s
 
 ### E2-Q2
 
-[Nguồn, dòng 445](../../../thuc-don-dinh-luong/srs/spec.md#L411). Nội dung đầy đủ:
+[Nguồn, dòng 412](../../../thuc-don-dinh-luong/srs/spec.md#L412). Nội dung đầy đủ:
 
 > Quy tắc tuần có xét tuần trước không
 
@@ -991,7 +991,7 @@ Mã nguồn: E2-Q1. Người quyết định: Dinh dưỡng viên, Giám đốc.
 
 ### E2-Q1
 
-[Nguồn, dòng 444](../../../thuc-don-dinh-luong/srs/spec.md#L410). Nội dung đầy đủ:
+[Nguồn, dòng 411](../../../thuc-don-dinh-luong/srs/spec.md#L411). Nội dung đầy đủ:
 
 > Cách kiểm ngưỡng giá suất
 
@@ -1019,7 +1019,7 @@ Mã nguồn: E2-Q3. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q3
 
-[Nguồn, dòng 446](../../../thuc-don-dinh-luong/srs/spec.md#L412). Nội dung đầy đủ:
+[Nguồn, dòng 413](../../../thuc-don-dinh-luong/srs/spec.md#L413). Nội dung đầy đủ:
 
 > Tuần phục vụ gồm những ngày nào
 
@@ -1047,7 +1047,7 @@ Mã nguồn: E2-Q4. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q4
 
-[Nguồn, dòng 447](../../../thuc-don-dinh-luong/srs/spec.md#L413). Nội dung đầy đủ:
+[Nguồn, dòng 414](../../../thuc-don-dinh-luong/srs/spec.md#L414). Nội dung đầy đủ:
 
 > Thực đơn chung hay riêng theo khách
 
@@ -1075,7 +1075,7 @@ Mã nguồn: E2-Q6. Người quyết định: Dinh dưỡng viên, người duy�
 
 ### E2-Q6
 
-[Nguồn, dòng 448](../../../thuc-don-dinh-luong/srs/spec.md#L414). Nội dung đầy đủ:
+[Nguồn, dòng 415](../../../thuc-don-dinh-luong/srs/spec.md#L415). Nội dung đầy đủ:
 
 > Dinh dưỡng viên có được rút lại thực đơn đang chờ duyệt để sửa không? (Hiện: không)
 
@@ -1103,7 +1103,7 @@ Mã nguồn: E2-Q7. Người quyết định: Giám đốc. Release: R2. [Buổi
 
 ### E2-Q7
 
-[Nguồn, dòng 449](../../../thuc-don-dinh-luong/srs/spec.md#L415). Nội dung đầy đủ:
+[Nguồn, dòng 416](../../../thuc-don-dinh-luong/srs/spec.md#L416). Nội dung đầy đủ:
 
 > Người duyệt món, công thức, thực đơn và người duyệt giá bán là một người hay hai người khác nhau?
 
@@ -1131,7 +1131,7 @@ Mã nguồn: E2-Q8. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q8
 
-[Nguồn, dòng 450](../../../thuc-don-dinh-luong/srs/spec.md#L416). Nội dung đầy đủ:
+[Nguồn, dòng 417](../../../thuc-don-dinh-luong/srs/spec.md#L417). Nội dung đầy đủ:
 
 > Có cần thu hồi và sửa **từng ngày** của thực đơn đã công bố, thay vì cả tuần?
 
@@ -1159,7 +1159,7 @@ Mã nguồn: E2-Q9. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q9
 
-[Nguồn, dòng 451](../../../thuc-don-dinh-luong/srs/spec.md#L417). Nội dung đầy đủ:
+[Nguồn, dòng 418](../../../thuc-don-dinh-luong/srs/spec.md#L418). Nội dung đầy đủ:
 
 > Công bố là bước bấm riêng sau khi duyệt, hay tự công bố ngay khi duyệt xong? (Hiện: tách hai bước)
 
@@ -1187,7 +1187,7 @@ Mã nguồn: E2-Q10. Người quyết định: Dinh dưỡng viên. Release: R2.
 
 ### E2-Q10
 
-[Nguồn, dòng 452](../../../thuc-don-dinh-luong/srs/spec.md#L418). Nội dung đầy đủ:
+[Nguồn, dòng 419](../../../thuc-don-dinh-luong/srs/spec.md#L419). Nội dung đầy đủ:
 
 > Nhập bảng tính chỉ tạo mới, hay cần cả cập nhật hàng loạt bản ghi đã có? (Hiện: chỉ tạo mới)
 
@@ -1215,7 +1215,7 @@ Mã nguồn: E2-Q11. Người quyết định: Người duyệt. Release: R2. [B
 
 ### E2-Q11
 
-[Nguồn, dòng 453](../../../thuc-don-dinh-luong/srs/spec.md#L419). Nội dung đầy đủ:
+[Nguồn, dòng 420](../../../thuc-don-dinh-luong/srs/spec.md#L420). Nội dung đầy đủ:
 
 > Thực đơn đang chờ duyệt có kiểm lại khi quy tắc hoặc thuộc tính món đổi không? (Hiện: giữ kết quả lúc gửi duyệt)
 
@@ -1243,7 +1243,7 @@ Mã nguồn: E2-Q5. Người quyết định: Dinh dưỡng viên. Release: R2. 
 
 ### E2-Q5
 
-[Nguồn, dòng 454](../../../thuc-don-dinh-luong/srs/spec.md#L420). Nội dung đầy đủ:
+[Nguồn, dòng 421](../../../thuc-don-dinh-luong/srs/spec.md#L421). Nội dung đầy đủ:
 
 > Khoảng định lượng chuẩn và mức chất độn cho phép lưu ở đâu: theo từng món (chính là `qty_min`–`qty_max` của công thức, khi đó `BR-COST-008` tự thoả), hay có một **bảng chuẩn theo loại nguyên liệu và kiểu món** như bảng trong docx để mọi công thức phải nằm trong đó?
 
@@ -6059,7 +6059,7 @@ Mã nguồn: Q-16. Người quyết định: chưa rõ. Release: R6. [Buổi 4](
 
 ### Q-16
 
-[Nguồn, dòng 423](../../00-ke-hoach-tong-the.md#L423). Nội dung đầy đủ:
+[Nguồn, dòng 431](../../00-ke-hoach-tong-the.md#L431). Nội dung đầy đủ:
 
 > Hạn chốt ca trưa 15:00 ngày D-1 và ngưỡng đổi sau chốt (5% / 10 suất / trước 06:00) có đúng thực tế không? Ngưỡng là "nhỏ hơn trong hai" hay "lớn hơn trong hai"?
 

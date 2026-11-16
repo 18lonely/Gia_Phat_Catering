@@ -39,7 +39,7 @@ for fr in sorted(getfr(text(base/'srs/spec.md'))):
 inventory=[]
 required=['epic-spec.md','srs/spec.md','srs/usecase-diagram.md','srs/flows.md','srs/states.md','srs/erd.md','api/api-spec.md','ui/user-flow.md','userstories/backlog.md','userstories/acceptance-criteria.md','test/checklist.md','test/test-cases.md','gap-analysis.md','preview.html']
 for f in folders:
- b=D/f;srs=text(b/'srs/spec.md');fr=getfr(srs);bk=text(b/'userstories/backlog.md');tc=text(b/'test/test-cases.md');rt=text(b/'test/traceability.md')
+ b=D/f;srs=text(b/'srs/spec.md')+chr(10)+text(b/'srs/error-matrix.md');fr=getfr(srs);bk=text(b/'userstories/backlog.md');tc=text(b/'test/test-cases.md');rt=text(b/'test/traceability.md')
  for p in required:need((b/p).exists(),f+' missing '+p)
  cat=json.loads(text(b/'api/endpoint-catalog.json'))
  if isinstance(cat,dict):cat=cat['endpoints']

@@ -5,7 +5,7 @@ import json,re
 B=Path(__file__).resolve().parents[1]
 d=json.loads((B/'test/scenario-catalog.json').read_text(encoding='utf-8'))
 api=json.loads((B/'api/endpoint-catalog.json').read_text(encoding='utf-8'))
-srs=(B/'srs/spec.md').read_text(encoding='utf-8')
+srs=(B/'srs/spec.md').read_text(encoding='utf-8')+chr(10)+((B/'srs/error-matrix.md').read_text(encoding='utf-8') if (B/'srs/error-matrix.md').exists() else '')
 frs=set(re.findall(r'^\| `(FR-COST-[A-Z]+-\d{3})`',srs,re.M))
 actual={f for s in d['stories'] for f in s['fr']}
 assert len(frs)==45 and len(actual)==43

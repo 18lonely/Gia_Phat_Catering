@@ -56,7 +56,7 @@ Về gắn màn hình: E1 có26/26FR được nối tới nhóm UI hoặc panel 
 
 ## Rà tiến độ theo feature ngày 11/11/2026
 
-Độ phủ thiết kế nháp ngoài gate-only:40/78≈51,3% (23feature E1–E5 +17E6). E6:17/19≈89,5%capability có thiết kế có điều kiện,19/19có dòng RTM; không phải tỷ lệ hoàn tất được duyệt hoặc effort. Chưa có backend/UAT trong gói này. Bộ ca E6 hiện có87mô tả (10+57+12+8), có overlap,0test backend. [Phương pháp và giới hạn](gia-phat/review/progress-assessment.md) · [Prompt làm tiếp](gia-phat/review/next-session-prompt.md).
+Độ phủ thiết kế nháp ngoài gate-only:40/78≈51,3% (23feature E1–E5 +17E6). E6:17/19≈89,5%capability có thiết kế có điều kiện,19/19có dòng RTM; không phải tỷ lệ hoàn tất được duyệt hoặc effort. Chưa có backend/UAT trong gói này. Bộ ca E6 hiện có87mô tả (10+57+12+8), có overlap,0test backend. [Phương pháp và giới hạn](gia-phat/review/progress-assessment.md).
 
 ## Bổ sung E6 độc lập ngày 11/11/2026
 

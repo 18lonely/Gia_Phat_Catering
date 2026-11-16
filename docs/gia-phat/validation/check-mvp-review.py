@@ -16,7 +16,7 @@ counts={}
 allroutes=[]
 for mod,folder in [('NUTR','dinh-duong'),('AIO','agent-noi-bo')]:
     base=DOC/folder
-    srs=(base/'srs/spec.md').read_text(encoding='utf-8')
+    srs=(base/'srs/spec.md').read_text(encoding='utf-8')+chr(10)+((base/'srs/error-matrix.md').read_text(encoding='utf-8') if (base/'srs/error-matrix.md').exists() else '')
     ac=(base/'userstories/acceptance-criteria.md').read_text(encoding='utf-8')
     tc=(base/'test/test-cases.md').read_text(encoding='utf-8')
     rtm=(base/'test/traceability.md').read_text(encoding='utf-8')

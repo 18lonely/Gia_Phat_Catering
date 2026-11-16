@@ -1,7 +1,7 @@
 ---
 id: DOC-REVIEW-OPEN-QUESTIONS-KHUON
 title: Điểm cần BA quyết sau đợt chuẩn hóa khuôn
-version: 0.1.0
+version: 0.1.1
 phase: Review
 domain: Gia Phát
 tags: [review, khuon, error-matrix, data-dictionary, user-guide, knowledge-graph]
@@ -14,6 +14,7 @@ Draft · 16/11/2026 · Ghi lại các chỗ đã tự chọn hướng an toàn t
 
 | Phiên bản | Ngày | Người thực hiện | Nội dung |
 | :--- | :--- | :--- | :--- |
+| 0.1.1 | 2026-11-16 | BA | Sửa KH-01, KH-02, KH-10 (mục 4) |
 | 0.1.0 | 2026-11-16 | BA | Khởi tạo |
 
 ## 1. Đã làm
@@ -45,3 +46,14 @@ Draft · 16/11/2026 · Ghi lại các chỗ đã tự chọn hướng an toàn t
 ## 3. Không có epic nào bị bỏ ở bước user guide
 
 Mọi epic chưa có user guide đều có use case có luồng chính đánh số và có wireframe. E6 chỉ có 4 mã lỗi riêng nên bảng tra cứu sự cố ngắn.
+
+## 4. Đã sửa ngày 16/11/2026
+
+| Mã | Cách sửa | Kiểm |
+| :--- | :--- | :--- |
+| KH-01 | Ba script `check-completion.py`, `check-mvp-review.py`, `check-backlog.py` đọc thêm `srs/error-matrix.md` khi đọc `srs/spec.md` | Biểu thức của từng script đọc lại đúng 24 mã E1, 9 mã E4, 10 mã E5, 14 mã E3 |
+| KH-02 | Liên kết `#Lnnn` trong sổ quyết định, nhóm DEC, câu hỏi theo nghiệp vụ và sổ câu hỏi E2, E3 được tính lại theo dòng thật của mã câu hỏi ở file đích; chữ "Nguồn, dòng N" cập nhật theo | 0 liên kết không tìm thấy mã; chạy lại không đổi thêm. Còn 169 liên kết theo dòng không gắn với mã câu hỏi nên giữ nguyên |
+| KH-10 | Bỏ hai liên kết tới tệp prompt đã xóa trong `project-dashboard.md` và `gia-phat/review/progress-assessment.md` | 0 liên kết hỏng trong `docs/` |
+
+Liên kết theo số dòng vẫn dễ lệch khi file nguồn đổi; KH-02 chỉ sửa trạng thái hiện tại.
+

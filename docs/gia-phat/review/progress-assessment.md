@@ -27,7 +27,7 @@ E6-EVID-001 xác nhận có danh sách/người quản lý. E6-EVID-002 chủ đ
 
 Đã chạy lại `docs/chon-mon-order/validation/check-e6.py`:0lỗi liên kết/mã/catalog và hash nguồn được bảo toàn. Số liệu E1–E5 kế thừa dashboard/báo cáo đã có; chưa tái nghiệm thu nội dung mọi feature của5epic trong lượt rà tiến độ này. Kết quả render/UI dùng lần kiểm gần nhất, không giả đã chạy lại tải/backend.
 
-[Prompt phiên tiếp theo](next-session-prompt.md) tập trung phần độc lập với quyết định đang mở: consistency API/data, nhánh lỗi/phiên bản, bộ mẫu QA synthetic, cập nhật traceability và báo cáo. [Dashboard](../../project-dashboard.md) · [E6 handoff](../../chon-mon-order/review/handoff.md).
+Phiên tiếp theo tập trung phần độc lập với quyết định đang mở: consistency API/data, nhánh lỗi/phiên bản, bộ mẫu QA synthetic, cập nhật traceability và báo cáo. [Dashboard](../../project-dashboard.md) · [E6 handoff](../../chon-mon-order/review/handoff.md).
 
 ## Phiên bổ sung độc lập ngày 11/11/2026
 
